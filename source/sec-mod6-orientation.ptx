@@ -14,7 +14,8 @@
         <p>
           Use the sequential characterization of limits: <m>\lim_{x \to a} f(x) = L</m>
           if and only if <m>f(x_n) \to L</m> for every sequence
-          <m>(x_n)</m> with <m>x_n \to a</m> and <m>x_n \neq a</m>.
+          <m>(x_n)</m> in the domain of <m>f</m> with <m>x_n \to a</m>
+          and <m>x_n \neq a</m>.
         </p>
       </li>
       <li>

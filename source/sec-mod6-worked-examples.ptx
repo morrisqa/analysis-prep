@@ -7,7 +7,7 @@
       is the archetype of an <m>\varepsilon</m>-<m>\delta</m> limit
       proof; Example 2 shows how to prove continuity at every point of
       <m>\R</m> using the same method; Example 3 demonstrates the
-      sequential technique for proving non-uniform continuity; Example 4
+      sequential criterion for proving non-uniform continuity; Example 4
       shows the Lipschitz method for proving uniform continuity on a
       bounded interval.
     </p>
@@ -134,12 +134,13 @@
         <m>2|a| + 1</m> as <m>|a| \to \infty</m> shows only that
         <em>this</em> choice of <m>\delta</m> shrinks as <m>|a|</m>
         grows, not that every choice must. To prove that no single
-        <m>\delta</m> works for all points, you need the sequence
-        technique of <xref ref="ex-mod6-we-3" text="custom">Worked Example 3</xref>;
+        <m>\delta</m> works for all points, you need the sequential
+        criterion (<xref ref="ex-mod6-sg-34-2"/>, used in
+        <xref ref="ex-mod6-we-3" text="custom">Worked Example 3</xref>);
         you will carry it out in <xref ref="ex-mod6-ps-s4"/>.
         On any bounded interval, however,
         <m>2|a| + 1</m> is bounded above, and uniform continuity
-        follows (see Example 4).
+        follows (see <xref ref="ex-mod6-we-4" text="custom">Worked Example 4</xref>).
       </p>
     </solution>
   </exercise>
@@ -165,8 +166,10 @@
         such that for every <m>\delta \gt 0</m>, there exist
         <m>x, y \in (0, 1)</m> with <m>|x - y| \lt \delta</m> but
         <m>|f(x) - f(y)| \geq \varepsilon_0</m>. The cleanest way is
-        to produce explicit sequences with <m>|x_n - y_n| \to 0</m>
-        but <m>|f(x_n) - f(y_n)| \not\to 0</m>.
+        the sequential criterion of <xref ref="ex-mod6-sg-34-2"/>:
+        produce explicit sequences <m>(x_n)</m> and <m>(y_n)</m> in
+        <m>(0, 1)</m> with <m>|x_n - y_n| \to 0</m> but
+        <m>|f(x_n) - f(y_n)| \geq \varepsilon_0</m> for all <m>n</m>.
       </p>
       <p>
         <alert>Proof.</alert>
@@ -224,7 +227,7 @@
         <alert>Strategy.</alert>
       </p>
       <p>
-        On the bounded closed interval <m>[0, 2]</m>, we can bound
+        On the closed bounded interval <m>[0, 2]</m>, we can bound
         <m>|x + y|</m> uniformly for all <m>x, y \in [0, 2]</m>. This
         gives a Lipschitz condition <m>|f(x) - f(y)| \leq K|x - y|</m>
         with a <em>fixed</em> constant <m>K</m>, which immediately
@@ -259,8 +262,9 @@
         not uniformly continuous on <m>\R</m>, because a function can be
         uniformly continuous without satisfying any Lipschitz condition
         (an example follows). The proof that <m>x^2</m> is not uniformly
-        continuous on <m>\R</m> uses the sequence technique of
-        <xref ref="ex-mod6-we-3" text="custom">Worked Example 3</xref>;
+        continuous on <m>\R</m> uses the sequential criterion
+        (<xref ref="ex-mod6-sg-34-2"/>, used in
+        <xref ref="ex-mod6-we-3" text="custom">Worked Example 3</xref>);
         see <xref ref="ex-mod6-ps-s4"/>.
       </p>
       <p>
@@ -268,8 +272,10 @@
         not necessary. The Heine<ndash/>Cantor theorem says that every
         continuous function on a closed bounded interval <m>[a, b]</m>
         is uniformly continuous there; it does not say that such a
-        function satisfies a Lipschitz condition. For example,
-        <m>f(x) = \sqrt{x}</m> is continuous on <m>[0, 1]</m>, so it is
+        function satisfies a Lipschitz condition. The proof of
+        Heine<ndash/>Cantor is a topic for MAT 5610. To see the
+        difference, consider
+        <m>f(x) = \sqrt{x}</m>: it is continuous on <m>[0, 1]</m>, so it is
         uniformly continuous there, but it satisfies no Lipschitz
         condition on <m>[0, 1]</m>: for <m>0 \lt x \leq 1</m>,
         <md>|\sqrt{x} - \sqrt{0}| = \frac{1}{\sqrt{x}}\, |x - 0|,</md>
@@ -281,11 +287,12 @@
         condition: if <m>f</m> is differentiable on <m>[a, b]</m> and
         <m>f'</m> is continuous there, then the Extreme Value Theorem
         applied to <m>|f'|</m> gives a constant <m>K</m> with
-        <m>|f'(t)| \leq K</m> for all <m>t \in [a, b]</m>, and the Mean
-        Value Theorem (<xref ref="ch-mod7" text="custom">Module 7</xref>)
-        gives, for <m>x, y \in [a, b]</m>, a point <m>c</m> between them
-        with <m>|f(x) - f(y)| = |f'(c)|\,|x - y| \leq K|x - y|</m>. The
-        proof of Heine<ndash/>Cantor is a topic for MAT 5610.
+        <m>|f'(t)| \leq K</m> for all <m>t \in [a, b]</m>. If
+        <m>x, y \in [a, b]</m> and <m>x \neq y</m>, the Mean Value
+        Theorem (<xref ref="ch-mod7" text="custom">Module 7</xref>) gives
+        a point <m>c</m> between them with
+        <m>|f(x) - f(y)| = |f'(c)|\,|x - y| \leq K|x - y|</m>; if
+        <m>x = y</m>, the inequality holds trivially.
       </p>
     </solution>
   </exercise>

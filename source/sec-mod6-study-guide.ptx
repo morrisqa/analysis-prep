@@ -60,8 +60,8 @@
         The definition: let <m>f</m> be defined on a set <m>D</m> (its
         domain), and let <m>a</m> be a point such that every open
         interval around <m>a</m> contains points of <m>D</m> other than
-        <m>a</m> (for example, any point of an interval <m>D</m>, or an
-        endpoint of it). Then
+        <m>a</m> (for example, any point of an interval <m>D</m> with
+        more than one point, or an endpoint of it). Then
         <m>\lim_{x \to a} f(x) = L</m> means
         <md>\forall \varepsilon \gt 0\ \exists \delta \gt 0\ \forall x \in D:\
         0 \lt |x - a| \lt \delta \Rightarrow |f(x) - L| \lt \varepsilon.</md>
@@ -118,8 +118,9 @@
       <p>
         Read Zorn's sequential characterization of limits (sometimes
         called the Heine criterion): <m>\lim_{x \to a} f(x) = L</m> if
-        and only if for every sequence <m>(x_n)</m> with
-        <m>x_n \to a</m> and <m>x_n \neq a</m> for all <m>n</m>, we
+        and only if for every sequence <m>(x_n)</m> in the domain of
+        <m>f</m> with <m>x_n \to a</m> and <m>x_n \neq a</m> for all
+        <m>n</m>, we
         have <m>f(x_n) \to L</m>.
         <ol marker="(a)">
           <li>
@@ -217,10 +218,11 @@
       <xref ref="ex-mod6-sg-31-3"/> gave a sequential characterization
       of limits. Continuity has its own version, which you will use in
       <xref ref="ex-mod6-ps-s5"/>. Throughout, <m>f</m> is defined on a
-      set <m>D</m> and <m>a \in D</m>; recall that <m>f</m> is
-      continuous at <m>a</m> if
-      <md>\forall \varepsilon \gt 0\ \exists \delta \gt 0\ \forall x \in D:\
-      |x - a| \lt \delta \Rightarrow |f(x) - f(a)| \lt \varepsilon.</md>
+      set <m>D</m> and <m>a \in D</m>. Recall the definition of
+      continuity at <m>a</m> from <xref ref="ex-mod6-sg-32-1"/>: for
+      every <m>\varepsilon \gt 0</m> there is a <m>\delta \gt 0</m>
+      such that <m>|f(x) - f(a)| \lt \varepsilon</m> for every
+      <m>x \in D</m> with <m>|x - a| \lt \delta</m>.
     </p>
     <p>
       <alert>Sequential characterization of continuity.</alert>
@@ -229,18 +231,20 @@
       <m>D</m> with <m>x_n \to a</m>.
     </p>
     <p>
-      Compare this with the version for limits. The sequences here may
-      take the value <m>a</m> (there is no condition <m>x_n \neq a</m>),
-      and the target is <m>f(a)</m> rather than a separate number
-      <m>L</m>. Both differences mirror the definitions: the condition
-      <m>0 \lt |x - a|</m> does not appear in the definition of
-      continuity, and <m>f(a)</m> plays the role of <m>L</m>.
+      Compare this with the version for limits. In both, the sequences
+      lie in the domain of <m>f</m>. There are two differences. First,
+      the sequences here may take the value <m>a</m> (there is no
+      condition <m>x_n \neq a</m>). Second, <m>a</m> must lie in
+      <m>D</m>, and the target is <m>f(a)</m> rather than a separate
+      number <m>L</m>. Both differences mirror the definitions: the
+      condition <m>0 \lt |x - a|</m> does not appear in the definition
+      of continuity, and <m>f(a)</m> plays the role of <m>L</m>.
     </p>
     <p>
       <em>Proof.</em> Suppose first that <m>f</m> is continuous at
       <m>a</m>, and let <m>(x_n)</m> be a sequence in <m>D</m> with
-      <m>x_n \to a</m>. Let <m>\varepsilon \gt 0</m>. By continuity, we
-      choose <m>\delta \gt 0</m> such that
+      <m>x_n \to a</m>. Let <m>\varepsilon \gt 0</m>. By continuity, there
+      is a <m>\delta \gt 0</m> such that
       <m>|f(x) - f(a)| \lt \varepsilon</m> for every <m>x \in D</m> with
       <m>|x - a| \lt \delta</m>. Since <m>x_n \to a</m>, the definition
       of convergence, applied with <m>\delta</m> in the role of
@@ -264,7 +268,7 @@
       <m>|x_n - a| \lt 1/n \leq 1/N \lt \varepsilon</m> for all
       <m>n \geq N</m>. But <m>|f(x_n) - f(a)| \geq \varepsilon_0</m> for
       every <m>n</m>, so no term of <m>(f(x_n))</m> is within
-      <m>\varepsilon_0</m> of <m>f(a)</m>, and <m>f(x_n)</m> does not
+      <m>\varepsilon_0</m> of <m>f(a)</m>, and <m>(f(x_n))</m> does not
       converge to <m>f(a)</m>. <m>\square</m>
     </p>
   </paragraphs>
@@ -435,15 +439,15 @@
     </statement>
     <answer>
       <p>
-        Let <m>x_n = 1/n</m> and <m>y_n = 1/(n + 1)</m>. Both lie in
-        <m>(0, 1)</m> for <m>n \geq 2</m>. We have
-        <md>|x_n - y_n| = \frac{1}{n} - \frac{1}{n+1} = \frac{1}{n(n+1)} \to 0.</md>
+        Let <m>x_n = 1/(n + 1)</m> and <m>y_n = 1/(n + 2)</m>. Both lie in
+        <m>(0, 1)</m> for every <m>n \in \N</m>. We have
+        <md>|x_n - y_n| = \frac{1}{n+1} - \frac{1}{n+2} = \frac{1}{(n+1)(n+2)} \to 0.</md>
         But
-        <md>|f(x_n) - f(y_n)| = |n - (n+1)| = 1</md>
-        for all <m>n</m>. Since <m>|f(x_n) - f(y_n)| = 1 \not\to 0</m>,
-        the definition of uniform continuity fails for <m>\varepsilon = 1/2</m>
-        (say): no single <m>\delta</m> can prevent <m>|f(x) - f(y)|</m>
-        from exceeding <m>1/2</m> for pairs <m>x, y</m> near 0.
+        <md>|f(x_n) - f(y_n)| = |(n + 1) - (n + 2)| = 1</md>
+        for all <m>n</m>. So <m>|f(x_n) - f(y_n)| \geq \varepsilon_0</m>
+        for all <m>n</m> with <m>\varepsilon_0 = 1</m>, and by the
+        criterion above, <m>f</m> is not uniformly continuous on
+        <m>(0, 1)</m>.
       </p>
     </answer>
   </exercise>
@@ -494,23 +498,40 @@
         <m>|f(x) - f(c)| \lt \varepsilon</m> for all <m>x \in S</m> with
         <m>|x - c| \lt \delta</m>; that is the definition of continuity
         at <m>c</m>. So if continuity fails at even one point of
-        <m>[a, b]</m>, an endpoint included, <m>f</m> cannot be
+        <m>[a, b]</m>, including an endpoint, <m>f</m> cannot be
         uniformly continuous on <m>[a, b]</m>. For example, let
         <m>f(x) = 0</m> for <m>0 \leq x \lt 1</m> and <m>f(1) = 1</m>.
         This <m>f</m> is continuous at every point of <m>[0, 1)</m>, but
-        not at <m>1</m> (with <m>\varepsilon = 1/2</m>, every
+        not at <m>1</m>. Indeed, with <m>\varepsilon = 1/2</m>, every
         <m>\delta \gt 0</m> admits points <m>x \lt 1</m> of
         <m>[0, 1]</m> with <m>|x - 1| \lt \delta</m> and
-        <m>|f(x) - f(1)| = 1</m>), so it is not uniformly continuous on
-        <m>[0, 1]</m>.
+        <m>|f(x) - f(1)| = 1</m>. So <m>f</m> is not uniformly continuous
+        on <m>[0, 1]</m>.
       </p>
       <p>
         (c) The key property is <em>compactness</em> of <m>[a, b]</m>:
         every open cover has a finite subcover (Heine&#x2013;Borel
-        theorem). The proof extracts a finite cover from the family of
-        <m>\delta</m>-neighborhoods that work pointwise, then takes
-        the minimum of the finitely many <m>\delta</m> values.
-        Compactness is developed rigorously in MAT 5610.
+        theorem). Here is a sketch of how the proof uses it. Fix
+        <m>\varepsilon \gt 0</m>. For each <m>x \in [a, b]</m>,
+        continuity at <m>x</m> with <m>\varepsilon/2</m> gives
+        <m>\delta_x \gt 0</m> such that
+        <m>|f(t) - f(x)| \lt \varepsilon/2</m> for every
+        <m>t \in [a, b]</m> with <m>|t - x| \lt \delta_x</m>. The open
+        intervals of radius <m>\delta_x/2</m> centered at the points
+        <m>x</m> cover <m>[a, b]</m>, so finitely many of them, with
+        centers <m>x_1, \ldots, x_k</m>, already cover it. Let
+        <m>\delta</m> be the smallest of the half-radii
+        <m>\delta_{x_1}/2, \ldots, \delta_{x_k}/2</m>. If
+        <m>x, y \in [a, b]</m> and <m>|x - y| \lt \delta</m>, then
+        <m>x</m> lies within <m>\delta_{x_i}/2</m> of some center
+        <m>x_i</m>, and so <m>|y - x_i| \lt \delta_{x_i}/2 + \delta \leq \delta_{x_i}</m>.
+        Both <m>x</m> and <m>y</m> are within <m>\delta_{x_i}</m> of
+        <m>x_i</m>, and the triangle inequality through <m>f(x_i)</m>
+        gives
+        <m>|f(x) - f(y)| \leq |f(x) - f(x_i)| + |f(x_i) - f(y)| \lt \varepsilon</m>.
+        (Halving the radii is what lets <m>x</m> and <m>y</m> share a
+        center.) Compactness and the full proof are developed rigorously
+        in MAT 5610.
       </p>
     </answer>
   </exercise>

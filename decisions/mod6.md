@@ -24,6 +24,17 @@ Source review: [#10 Module 6 comment](https://github.com/morrisqa/analysis-prep/
 | Graded hints: `ex-mod6-as-1`, `-as-2`(ii) and (iii), `-as-r3` | Cut back to the approach (`policies.md`); "set δ = ε²" removed from as-2's required structure; as-r3's "partial answer" replaced. | Policy; the rubric grades finding δ. | Keep them. |
 | Orientation, second paragraph | Rewritten to say what uniform continuity actually does in the integrability proof (after Heine–Cantor); "crucial" removed in the corrected sentence. | The old sentence overstated ("exactly the hypothesis needed"). | |
 
+## After review (PR #31 follow-ups)
+
+| Where | Decision | Why | Alternative |
+|---|---|---|---|
+| `ex-mod6-sg-34-3`(c) | Heine–Cantor sketch corrected: ε/2 at each point, half-radius intervals, δ = the smallest half-radius, triangle inequality through the shared center. | The original "take the minimum of the δ's" is the classic invalid argument (already in Quinn's text). | Say less. |
+| `ex-mod6-sg-31-3`, `obj-mod6` | "in the domain of f" added to the sequential characterization of limits. | f(xₙ) needs xₙ in the domain; the new continuity block made the gap visible. | |
+| `ex-mod6-ps-f3` | The remark now matches the module's definition (continuity at a requires a in the domain); 1/x is continuous at every point of its domain. | The first version contrasted the module with texts that, in fact, it agrees with. | |
+| Whole module | The method for proving non-uniform continuity is called the **sequential criterion** everywhere, in the "≥ ε₀ for all n" form the module proves (`we-2`, `we-3`, `we-4`, `ps-s4`, and Quinn's worked-examples intro). | One name per concept (`policies.md`); the "↛ 0" form needs subsequences. | |
+| Whole module | "closed bounded interval" everywhere (Quinn's majority wording); one "bounded closed" in `we-4` changed. | One name per concept. | "bounded closed". |
+| `par-mod6-sg-32-seq-cont` | The definition of continuity is recalled briefly in prose rather than displayed in full. | The full display restated `sg-32-1`'s answer directly below it; the proof still needs the definition in view. | Bare pointer to the hidden answer. |
+
 ## Unverified citations
 - **Zorn:**
   - "Theorem 3.3 or its analogue" (study-guide intro);
