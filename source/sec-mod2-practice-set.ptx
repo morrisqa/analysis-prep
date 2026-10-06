@@ -291,7 +291,6 @@
         such that <m>n \gt x</m>.
       </p>
       <p>
-        <!-- TODO(quinn): verify against the statement of Bauldry's Theorem 2.3. -->
         (This is the case <m>\varepsilon = 1</m> of Bauldry's Theorem 2.3,
         stated for every real <m>x</m> rather than only <m>x \gt 0</m>.
         Working through the argument yourself before the Bridge Reading will

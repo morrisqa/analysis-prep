@@ -122,7 +122,6 @@
         </answer>
       </exercise>
 
-        <!-- TODO(quinn): paragraph added in #10 (math fixes); confirm or replace. -->
         <p>
           Negating a quantified statement flips each quantifier. Two further
           rules come up whenever you negate a definition from analysis.
