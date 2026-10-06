@@ -249,9 +249,10 @@
           \int_a^b m\,dx \leq \int_a^b f(x)\,dx \leq \int_a^b M\,dx.
         </md>
         Since <m>m</m> and <m>M</m> are constants, their integrals
-        are <m>m(b-a)</m> and <m>M(b-a)</m> respectively (by the
-        assessment, constant functions are integrable with
-        <m>\int_a^b c\,dx = c(b-a)</m>). Hence
+        are <m>m(b-a)</m> and <m>M(b-a)</m> respectively (constant
+        functions are integrable with <m>\int_a^b c\,dx = c(b-a)</m>;
+        see <xref ref="par-mod8-sg-54-props" text="custom">Properties of
+        the Integral Used in the FTC Proofs</xref>). Hence
         <m>m(b-a) \leq \int_a^b f \leq M(b-a)</m>.
       </p>
     </answer>
@@ -314,17 +315,22 @@
   ============================================================ -->
 
   <paragraphs xml:id="par-mod8-ps-c">
-    <title>Challenge Problems</title>
+    <title>Writing Up Study-Guide Proofs</title>
     <p>
-      These problems extend the module's ideas: a proof of FTC Part 2
-      using FTC Part 1 and the Module 7 corollary that a function with
-      zero derivative on an open interval is constant, and a proof that
-      the Dirichlet function is not Riemann integrable on <m>[0,1]</m>.
+      These problems ask you to write out in full two arguments from the
+      study guide: a proof of FTC Part 2 using FTC Part 1 and the
+      Module 7 corollary that a function with zero derivative on an
+      open interval is constant (<xref ref="ex-mod8-sg-54-2"/>), and a
+      proof that the Dirichlet function is not Riemann integrable on
+      <m>[0,1]</m> (<xref ref="ex-mod8-sg-52-2"/>). Both are labeled
+      <m>[\mathbf{S}]</m>: the ideas are in the study guide, and the
+      work is writing a complete proof. Try each one before looking
+      back.
     </p>
   </paragraphs>
 
   <exercise xml:id="ex-mod8-ps-c1">
-    <title><m>[\mathbf{C}]</m> FTC Part 2 from First Principles</title>
+    <title><m>[\mathbf{S}]</m> FTC Part 2 from First Principles</title>
     <statement>
       <p>
         Prove FTC Part 2 in full, using FTC Part 1 as a lemma and
@@ -334,23 +340,31 @@
       <p>
         Your proof must have the following steps: (i) define
         <m>G(x) = \int_a^x f</m> and invoke FTC Part 1 to conclude
-        <m>G' = f = F'</m>; (ii) apply the Module 7 corollary to
-        <m>G - F</m>; (iii) evaluate at <m>x = a</m> to determine
-        the constant; (iv) evaluate at <m>x = b</m> to conclude.
+        <m>G' = f = F'</m> on <m>(a,b)</m>; (ii) apply the Module 7
+        corollary to <m>G - F</m> on <m>(a,b)</m>; (iii) show that
+        <m>G</m> and <m>F</m> are continuous on <m>[a,b]</m>, so that
+        <m>G - F</m> takes the same constant value at <m>a</m> and
+        <m>b</m>; (iv) evaluate at <m>x = a</m> to determine
+        the constant; (v) evaluate at <m>x = b</m> to conclude.
       </p>
     </statement>
     <hint>
       <p>
-        At step (iii): <m>G(a) = \int_a^a f = 0</m> and
+        At step (iii): <m>F</m> is continuous because it is
+        differentiable (<xref ref="ex-mod7-we-2"/>). For <m>G</m>,
+        bound <m>|f|</m> on <m>[a,b]</m> by a constant <m>K</m>, and use
+        additivity and monotonicity to show
+        <m>|G(x) - G(y)| \leq K|x - y|</m>.
+        At step (iv): <m>G(a) = \int_a^a f = 0</m> and
         <m>(G - F)(a) = G(a) - F(a) = -F(a)</m>. So the constant
         is <m>C = -F(a)</m>, giving <m>G(x) = F(x) - F(a)</m>.
-        At step (iv): <m>\int_a^b f = G(b) = F(b) - F(a)</m>.
+        At step (v): <m>\int_a^b f = G(b) = F(b) - F(a)</m>.
       </p>
     </hint>
   </exercise>
 
   <exercise xml:id="ex-mod8-ps-c2">
-    <title><m>[\mathbf{C}]</m> A Non-Integrable Function</title>
+    <title><m>[\mathbf{S}]</m> A Non-Integrable Function</title>
     <statement>
       <p>
         Prove that the Dirichlet function

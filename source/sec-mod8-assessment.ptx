@@ -69,11 +69,9 @@
     </statement>
     <hint>
       <p>
-        This is the simplest possible integrability proof: since
-        <m>f</m> is identically <m>c</m>, the supremum and infimum
-        of <m>f</m> on every subinterval are both equal to <m>c</m>.
-        Therefore <m>U = L</m> for every partition, which is a much
-        stronger condition than the integrability criterion requires.
+        This is the simplest possible integrability proof. Work
+        directly from the definitions of <m>M_k</m> and <m>m_k</m>; no
+        limit and no special choice of partition is needed.
       </p>
     </hint>
   </exercise>
@@ -91,8 +89,9 @@
         <ol marker="(i)">
           <li>
             <em>Applying FTC Part 2.</em> State FTC Part 2 precisely,
-            listing all three hypotheses (continuity of <m>f</m>;
-            existence of an antiderivative <m>F</m>; the relation
+            listing both hypotheses (continuity of <m>f</m> on
+            <m>[a,b]</m>; an antiderivative, that is, a function
+            <m>F</m> differentiable on <m>[a,b]</m> with
             <m>F' = f</m>). Then evaluate <m>\int_1^e (1/x)\,dx</m>
             by: exhibiting an antiderivative <m>F(x)</m> of
             <m>f(x) = 1/x</m>; verifying that <m>F'(x) = 1/x</m>;
