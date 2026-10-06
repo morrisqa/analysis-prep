@@ -70,8 +70,10 @@ rebuild. Do not suppress warnings to make a build pass.
 
 ## PreTeXt conventions
 
-- Inline math `<m>`, single display `<me>`, aligned display `<md><mrow>...</mrow></md>`.
-  Number a display only if it is referenced (`<men>`, or `<mrow xml:id="...">`).
+- Inline math `<m>`; single display `<md>` with no `<mrow>`; multi-line display
+  `<md><mrow>...</mrow></md>`. `<me>` and `<men>` are deprecated (PreTeXt 2.55.0):
+  do not use them. Number a display only if it is referenced (`<md number="yes"
+  xml:id="...">`, or `<mrow xml:id="...">`).
 - Use the macros in `<docinfo><macros>`; add new macros there, never inline
   `\newcommand`. Use `\varepsilon`, not `\epsilon`.
 - Cross-reference with `<xref ref="id"/>`; never type "Section 3.2" by hand.
@@ -114,10 +116,12 @@ Intensive Analysis Prep course materials (Modules 1 to 9).
   |---|---|
   | `module-N` (article) | `ch-modN` (chapter) |
   | `ws-modN-<component>` | `sec-modN-<component>` |
-  | `ex-...` with uppercase (`ex-mod1-ps-F1`) | lowercase (`ex-mod1-ps-f1`) |
+  | `ex-`, `par-`, `obj-` with uppercase (`ex-mod1-ps-F1`, `par-mod1-ps-F`) | lowercase (`ex-mod1-ps-f1`, `par-mod1-ps-f`) |
   | `assess-modN-<x>` (exercises) | `ex-modN-as-<x>` |
   | `assess-modN-rubric` (paragraphs) | `par-modN-as-rubric` |
-  | `par-...`, `obj-...` | unchanged |
+  | other `par-...`, `obj-...` | unchanged |
+
+  The mapping is implemented by `tools/migrate_module.py`.
 - Legacy workarounds from the old `pretextbook` 0.8.3 builds (the `<executables>`
   block, the `extpfeil.sty` stub, post-build CSS injection to hide section
   numbers) should not be carried forward until the publisher confirms the

@@ -7,3 +7,12 @@ __pycache__/
 *.log
 .DS_Store
 .claude/settings.local.json
+
+# CLI build logs (root and incoming/)
+logs/
+.error_schema.log
+
+# Build output left in incoming/Module N/ by the old per-module builds
+compiled-output/
+mod*-main_html/
+.fuse_hidden*

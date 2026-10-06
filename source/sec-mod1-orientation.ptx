@@ -1,0 +1,236 @@
+<section xml:id="sec-mod1-orientation">
+    <title>Module 1: Mathematical Language and Proof Strategies</title>
+
+    <objectives xml:id="obj-mod1">
+      <ul>
+        <li>
+          <p>
+            Correctly read and write mathematical statements using
+            <m>\forall</m> and <m>\exists</m>, including statements
+            with multiple quantifiers.
+          </p>
+        </li>
+        <li>
+          <p>
+            Form the negation of a quantified statement, applying De
+            Morgan's laws and quantifier-negation rules accurately.
+          </p>
+        </li>
+        <li>
+          <p>
+            Identify the hypothesis and conclusion of an implication, and
+            correctly state its converse and contrapositive.
+          </p>
+        </li>
+        <li>
+          <p>
+            Choose and execute an appropriate proof strategy (direct proof,
+            contrapositive, contradiction, or induction) for a given claim.
+          </p>
+        </li>
+        <li>
+          <p>
+            Write proofs that are clear, complete, and in grammatically
+            correct mathematical prose.
+          </p>
+        </li>
+        <li>
+          <p>
+            Read a short passage from Bauldry and identify the logical
+            structure of its definitions and theorems.
+          </p>
+        </li>
+      </ul>
+    </objectives>
+
+    <p>Orientation</p>
+
+    <!-- ============================================================ -->
+
+        <p>
+          Welcome to the first module of <em>Intensive Analysis Prep</em>.
+          Whether you are refreshing skills from a real analysis course
+          taken years ago, or building on a proof-based course from a
+          different area of mathematics, this module starts in the same
+          place for everyone: the language mathematicians use to make
+          precise statements, and the strategies they use to prove them.
+        </p>
+        <p>
+          The self-assessment questions below are <alert>not graded</alert>.
+          They are designed to help you locate yourself within the module
+          and flag concepts that may need extra attention. Write informally;
+          a sentence or two per question is fine.
+        </p>
+
+      <exercise xml:id="ex-mod1-sa-1">
+        <title>Quantifiers</title>
+        <statement>
+          <p>
+            Consider the two statements:
+            <ol marker="(a)">
+              <li>
+                <m>\forall x \in \R \;\; \exists n \in \N
+                \text{ such that } x \lt n</m>
+              </li>
+              <li>
+                <m>\exists n \in \N \text{ such that }
+                \forall x \in \R,\;\; x \lt n</m>
+              </li>
+            </ol>
+            In plain English, what does each statement say?
+            Which is true and which is false?
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="ex-mod1-sa-2">
+        <title>Negation</title>
+        <statement>
+          <p>
+            Write the negation of:
+            <q>For every <m>\varepsilon \gt 0</m> there exists
+            <m>\delta \gt 0</m> such that <m>|x - a| \lt \delta</m>
+            implies <m>|f(x) - L| \lt \varepsilon</m>.</q>
+          </p>
+          <p>
+            (This is the definition of <m>\lim_{x \to a} f(x) = L</m>.
+            Its negation is the statement that the limit does
+            <em>not</em> equal <m>L</m>.)
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="ex-mod1-sa-3">
+        <title>Proof Strategies</title>
+        <statement>
+          <p>
+            For each claim, identify whether you would first try
+            direct proof, proof by contrapositive, or proof by
+            contradiction&#x2014;and say briefly why.
+            <ol marker="(a)">
+              <li>If <m>n^2</m> is odd, then <m>n</m> is odd.</li>
+              <li>There are infinitely many prime numbers.</li>
+              <li>
+                If <m>a</m> and <m>b</m> are rational, then
+                <m>a + b</m> is rational.
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </exercise>
+
+
+    <!-- ============================================================ -->
+
+      <exercise xml:id="ex-mod1-sa-4">
+        <title>Proof by Induction</title>
+        <statement>
+          <p>
+            Recall that a proof by induction on <m>n</m> requires two steps.
+            Name them and state briefly what each requires you to show.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="ex-mod1-sa-5">
+        <title>Your Background</title>
+        <statement>
+          <p>
+            Briefly describe your proof-writing background. Have you taken
+            a formal proofs course (like one using Hirst)? A real analysis
+            course? Neither? How long ago? What felt most comfortable, and
+            what felt hardest?
+          </p>
+        </statement>
+      </exercise>
+
+      <paragraphs xml:id="par-mod1-instructor-note">
+        <title>A Note from the Instructor</title>
+        <p>
+          Graduate real analysis is hard because it demands two things
+          simultaneously: mathematical content (what is true) and logical
+          precision (why it must be true, expressed unambiguously). Most
+          students find the content familiar&#x2014;you have seen sequences,
+          limits, and derivatives before. The challenge in MAT 5610 is the
+          second part: Bauldry's definitions are short but dense, and every
+          word is load-bearing.
+        </p>
+        <p>
+          This module builds the foundation for that precision. The
+          quantifiers <m>\forall</m> and <m>\exists</m> will appear in
+          virtually every definition we encounter this summer. The proof
+          strategies covered here are the exact strategies Bauldry's proofs
+          rely on, often without naming them. If you breeze through the
+          self-assessment above, spend your time on the Bridge Reading and
+          the harder practice problems. If the self-assessment reveals gaps,
+          work through all the materials carefully. Either way, do not skip
+          the Worked Examples.
+        </p>
+      </paragraphs>
+
+      <paragraphs xml:id="par-mod1-pacing">
+        <title>A Note on Pacing</title>
+        <p><alert>A note on pacing.</alert> This module covers material that is foundational for everything that follows, so invest time here even if the topics feel familiar. <em>If you have prior real analysis experience:</em> you may move quickly through the Study Guide and Worked Examples, but spend extra time on the Bridge Reading&#x2014;the goal is not just to recall proof strategies but to see how Bauldry deploys them in a graduate-level context. <em>If your background is in other proof-based courses (but not analysis):</em> work through all components carefully. The quantifier-negation exercises and the induction worked example are especially important; do not skip the Practice Problem Set.</p>
+      </paragraphs>
+
+      <paragraphs xml:id="par-mod1-map">
+        <title>Module Road Map (estimated time: 5 hours)</title>
+        <tabular halign="left">
+          <col width="50%"/>
+          <col width="10%"/>
+          <col width="40%"/>
+          <row header="yes">
+            <cell><p>Component</p></cell>
+            <cell><p>Time</p></cell>
+            <cell><p>Purpose</p></cell>
+          </row>
+          <row>
+            <cell><p>Orientation (this document)</p></cell>
+            <cell><p>15 min</p></cell>
+            <cell><p>Goals, self-assessment, context</p></cell>
+          </row>
+          <row>
+            <cell><p>Video 1: Quantifiers and Language</p></cell>
+            <cell><p>8 min</p></cell>
+            <cell><p>Core instruction via lightboard</p></cell>
+          </row>
+          <row>
+            <cell><p>Video 2: Proof Strategies</p></cell>
+            <cell><p>9 min</p></cell>
+            <cell><p>Core instruction via lightboard</p></cell>
+          </row>
+          <row>
+            <cell><p>Video 3: Mathematical Induction</p></cell>
+            <cell><p>8 min</p></cell>
+            <cell><p>Core instruction via lightboard</p></cell>
+          </row>
+          <row>
+            <cell><p>Companion Reading and Study Guide</p></cell>
+            <cell><p>50 min</p></cell>
+            <cell><p>Hirst Ch. 2&#x2013;3 and Zorn &#xa7;1.4&#x2013;1.5</p></cell>
+          </row>
+          <row>
+            <cell><p>Worked Examples</p></cell>
+            <cell><p>40 min</p></cell>
+            <cell><p>Annotated proof walkthroughs</p></cell>
+          </row>
+          <row>
+            <cell><p>Practice Problem Set</p></cell>
+            <cell><p>90 min</p></cell>
+            <cell><p>Scaffolded practice by difficulty</p></cell>
+          </row>
+          <row>
+            <cell><p>Bridge Reading Guide</p></cell>
+            <cell><p>35 min</p></cell>
+            <cell><p>Connecting Module 1 to Bauldry Ch. 2</p></cell>
+          </row>
+          <row>
+            <cell><p>Module Assessment</p></cell>
+            <cell><p>40 min</p></cell>
+            <cell><p>Submitted proofs and reflection</p></cell>
+          </row>
+        </tabular>
+      </paragraphs>
+
+
+  </section>

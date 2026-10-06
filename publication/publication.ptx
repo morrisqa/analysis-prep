@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Publication settings for Intensive Analysis Prep.                      -->
+<!-- Reference: https://pretextbook.org/doc/guide/html/publisher-file-reference.html -->
+<!-- Settings not listed here use PreTeXt's defaults for a book.            -->
+
+<publication>
+  <common>
+    <!-- One HTML page per section (each module component is a section). -->
+    <chunking level="2" />
+    <tableofcontents level="2" />
+  </common>
+
+  <source>
+    <!-- Generated assets (if any) are written here, relative to source/main.ptx. -->
+    <directories generated="../generated-assets" />
+  </source>
+
+  <numbering>
+    <!-- Number chapters (modules) only; sections (the six components)  -->
+    <!-- are unnumbered.  This replaces the post-build CSS injection the -->
+    <!-- old pretextbook 0.8.3 builds used to hide section numbers.      -->
+    <!-- Exercises are then numbered within the chapter (1.1, 1.2, ...). -->
+    <!-- Quinn to confirm; set level="2" to number sections as well.     -->
+    <divisions level="1" />
+  </numbering>
+
+</publication>

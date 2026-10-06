@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <docinfo>
+    <!-- Static files (images and the like) referenced by the source. -->
+    <directories external="../assets" />
+
+    <macros>
+      \newcommand{\N}{\mathbb{N}}
+      \newcommand{\Z}{\mathbb{Z}}
+      \newcommand{\Q}{\mathbb{Q}}
+      \newcommand{\R}{\mathbb{R}}
+      \newcommand{\C}{\mathbb{C}}
+    </macros>
+  </docinfo>
+
+  <book xml:id="analysis-prep">
+    <title>Intensive Analysis Prep</title>
+
+    <xi:include href="ch-mod1.ptx"/>
+
+  </book>
+
+</pretext>
