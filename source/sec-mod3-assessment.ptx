@@ -95,7 +95,8 @@
         <ol marker="(i)">
           <li>
             Construct an explicit bijection <m>f : \N \to T</m>.
-            (Use the bijection <m>\N \to \Z</m> from Worked Example 4
+            (Use the bijection <m>\varphi : \N \to \Z</m> from
+            <xref ref="ex-mod3-we-4" text="custom">Worked Example 4</xref>
             as a guide, or construct a direct bijection by interleaving
             positive and negative multiples of 3.)
           </li>
@@ -113,10 +114,10 @@
     </statement>
     <hint>
       <p>
-        One approach: define <m>g : \N \to T</m> by
-        <m>g(n) = 3 \cdot f(n)</m>, where <m>f : \N \to \Z</m>
+        One approach: define <m>f : \N \to T</m> by
+        <m>f(n) = 3 \cdot \varphi(n)</m>, where <m>\varphi : \N \to \Z</m>
         is the bijection from Worked Example 4. Then verify that
-        <m>g</m> is a bijection <m>\N \to T</m>.
+        <m>f</m> is a bijection <m>\N \to T</m>.
       </p>
     </hint>
   </exercise>
@@ -157,12 +158,24 @@
     </statement>
     <hint>
       <p>
-        Since <m>A</m> and <m>B</m> are countably infinite, there exist
-        surjections (or bijections) <m>a : \N \to A</m> and
-        <m>b : \N \to B</m>. Define <m>h : \N \to A \cup B</m> by
+        If <m>A = \emptyset</m> or <m>B = \emptyset</m>, then
+        <m>A \cup B</m> is <m>B</m> or <m>A</m>, which is countable.
+        Otherwise <m>A</m> and <m>B</m> are nonempty and countable, so
+        there exist surjections <m>a : \N \to A</m> and
+        <m>b : \N \to B</m> (a bijection if the set is countably
+        infinite; if <m>A = \{x_1, \ldots, x_k\}</m> is finite, take
+        <m>a(n) = x_{\min(n,k)}</m>). Define <m>h : \N \to A \cup B</m> by
         sending even <m>n</m> to <m>a(n/2)</m> and odd <m>n</m>
-        to <m>b((n-1)/2)</m>. Show <m>h</m> is a surjection and
-        apply Proposition 1.17.
+        to <m>b((n+1)/2)</m>. Show <m>h</m> is a surjection. Then turn
+        it into an injection: for each <m>y \in A \cup B</m>, let
+        <m>\iota(y)</m> be the least <m>n \in \N</m> with
+        <m>h(n) = y</m> (every nonempty set of natural numbers has a
+        least element). If <m>\iota(y) = \iota(y')</m>, then
+        <m>y = h(\iota(y)) = h(\iota(y')) = y'</m>, so
+        <m>\iota : A \cup B \to \N</m> is injective. Thus
+        <m>A \cup B</m> is in bijection with the subset
+        <m>\iota(A \cup B)</m> of <m>\N</m>, and Proposition 1.17
+        finishes the proof.
       </p>
     </hint>
   </exercise>
@@ -265,10 +278,10 @@
         <cell><p>Element-chasing structure missing; equality claimed without proof of both directions</p></cell>
       </row>
       <row>
-        <cell><p><alert>Bijection construction (Part 2)</alert></p></cell>
-        <cell><p>Explicit bijection given; both injectivity and surjectivity verified</p></cell>
-        <cell><p>Bijection described informally; one of the two properties verified</p></cell>
-        <cell><p>No explicit bijection; conclusion asserted without construction</p></cell>
+        <cell><p><alert>Function construction (Part 2)</alert></p></cell>
+        <cell><p>Explicit function of the kind the option asks for (a bijection in Option A; a surjection or injection in Option B) given; every property it needs verified</p></cell>
+        <cell><p>Function described informally; only some of the needed properties verified</p></cell>
+        <cell><p>No explicit function; conclusion asserted without construction</p></cell>
       </row>
       <row>
         <cell><p><alert>Mathematical prose</alert></p></cell>

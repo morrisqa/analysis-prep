@@ -128,7 +128,7 @@
     <answer>
       <p>
         (a) Bijective. Every real number has a unique real cube root;
-        <m>f^{-1}(y) = y^{1/3}</m>.
+        <m>f^{-1}(y) = \sqrt[3]{y}</m>.
         (b) Not injective (since <m>g(-1)=g(1)=1</m>), but surjective
         (every nonneg. real is the square of its square root).
         (c) Injective but not surjective: <m>1 \in \N</m> has no
@@ -165,8 +165,9 @@
         (c) Countably infinite (in bijection with <m>\N</m> via
         <m>n \mapsto 1/n</m>).
         (d) Uncountable (bijection with <m>\R</m> via, e.g.,
-        <m>x \mapsto \tan(\pi x - \pi/2)</m>; or directly from
-        Theorem 1.21).
+        <m>x \mapsto \tan(\pi x - \pi/2)</m>, and <m>\R</m> is
+        uncountable by Theorem 1.21; Cantor's diagonal argument in
+        <xref ref="ex-mod3-ps-c2"/> also proves it directly).
         (e) Countably infinite (product of two countable sets by
         Prop. 1.18).
       </p>
@@ -192,8 +193,7 @@
     <statement>
       <p>
         Let <m>A</m>, <m>B</m>, and <m>C</m> be subsets of a universal
-        set <m>U</m>, with complements taken relative to <m>U</m>.
-        Prove:
+        set <m>U</m>. Prove:
         <md>C \setminus (A \cup B) = (C \setminus A) \cap (C \setminus B).</md>
         Your proof must use the element-chasing method: show each set
         is a subset of the other.
@@ -266,7 +266,8 @@
     </statement>
     <hint>
       <p>
-        Use the bijection <m>\N \to \Z</m> from Worked Example 4, then
+        Use the bijection <m>\varphi : \N \to \Z</m> from
+        <xref ref="ex-mod3-we-4" text="custom">Worked Example 4</xref>, then
         compose with <m>n \mapsto 2n</m>. Alternatively, define a direct
         bijection by interleaving positive and negative even integers.
       </p>

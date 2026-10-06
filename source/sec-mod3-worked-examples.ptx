@@ -91,7 +91,7 @@
       </p>
       <p>
         <alert>What to notice.</alert>
-        Every set equality proof follows this template: two subset
+        Most set equality proofs follow this template: two subset
         arguments, each starting with <q>let <m>x \in \ldots</m></q>
         and ending with <q>therefore <m>x \in \ldots</m></q>. The only
         thing that changes from problem to problem is which definitions
@@ -294,8 +294,23 @@
       </p>
       <p>
         In both cases, <m>f(n) = k</m>, so <m>f</m> is surjective.
-        Therefore <m>f</m> is a bijection and <m>\Z \sim \N_0 \sim \N</m>,
-        so <m>\Z</m> is countably infinite. <m>\square</m>
+        Therefore <m>f</m> is a bijection <m>\N_0 \to \Z</m>.
+      </p>
+      <p>
+        <alert>From <m>\N_0</m> to <m>\N</m>.</alert>
+        Countably infinite means in bijection with
+        <m>\N = \{1, 2, 3, \ldots\}</m>, so we shift the index by one.
+        Define <m>\varphi : \N \to \Z</m> by <m>\varphi(n) = f(n - 1)</m>.
+        Explicitly, <m>\varphi(n) = (n-1)/2</m> if <m>n</m> is odd and
+        <m>\varphi(n) = -n/2</m> if <m>n</m> is even, so <m>\varphi</m>
+        lists <m>\Z</m> as <m>0, -1, 1, -2, 2, \ldots</m> starting from
+        <m>\varphi(1) = 0</m>. If <m>\varphi(m) = \varphi(n)</m>, then
+        <m>f(m-1) = f(n-1)</m>, so <m>m - 1 = n - 1</m> by injectivity
+        of <m>f</m>, and <m>m = n</m>. Given <m>k \in \Z</m>, surjectivity
+        of <m>f</m> gives <m>n \in \N_0</m> with <m>f(n) = k</m>, and then
+        <m>n + 1 \in \N</m> satisfies <m>\varphi(n+1) = k</m>. So
+        <m>\varphi : \N \to \Z</m> is a bijection, and <m>\Z</m> is
+        countably infinite. <m>\square</m>
       </p>
       <p>
         <alert>What to notice.</alert>
@@ -304,8 +319,9 @@
         surjectivity follows by applying the definitions. The construction
         here uses even/odd parity to separate two <q>halves</q> of
         <m>\Z</m> and map each half to a separate piece of <m>\N_0</m>.
-        A similar strategy (interleaving two countable sets) appears
-        in the proof that <m>\Q</m> is countable.
+        The same interleaving idea shows that the union of two countable
+        sets is countable (Option B of the assessment,
+        <xref ref="ex-mod3-as-2b"/>).
       </p>
     </solution>
   </exercise>
@@ -364,8 +380,46 @@
         its diagonal (where pairs are ordered by increasing first coordinate).
       </p>
       <p>
-        It can be verified that <m>f</m> is a bijection
-        <m>\N \times \N \to \N</m>. We verify the first few values:
+        <alert>Proof that <m>f</m> is a bijection.</alert>
+        For <m>k \geq 2</m>, let <m>T_k = (k-1)(k-2)/2</m>, the number of
+        pairs on the diagonals before diagonal <m>k</m> (the diagonal
+        <m>i + j = k</m>), so that
+        <m>f(i,j) = T_{i+j} + i</m>. A pair on diagonal <m>k</m> has
+        <m>1 \leq i \leq k-1</m>, so <m>f</m> sends the <m>k - 1</m> pairs
+        on diagonal <m>k</m> to the <m>k - 1</m> consecutive integers
+        <m>T_k + 1, \ldots, T_k + (k-1)</m>. Since
+        <m>T_{k+1} = T_k + (k-1)</m>, this block is
+        <md>B_k = \{n \in \N : T_k \lt n \leq T_{k+1}\},</md>
+        and the blocks follow one another without gaps:
+        <m>B_2 = \{1\}</m>, <m>B_3 = \{2, 3\}</m>,
+        <m>B_4 = \{4, 5, 6\}</m>, and so on.
+      </p>
+      <p>
+        Every <m>n \in \N</m> lies in exactly one block. Since
+        <m>T_2 = 0 \lt n</m> and <m>T_k \geq k - 2</m> (so only finitely
+        many <m>k</m> have <m>T_k \lt n</m>), there is a largest
+        <m>k</m> with <m>T_k \lt n</m>, and for that <m>k</m> we have
+        <m>T_k \lt n \leq T_{k+1}</m>, so <m>n \in B_k</m>. If also
+        <m>n \in B_{k'}</m> with <m>k \lt k'</m>, then
+        <m>n \leq T_{k+1} \leq T_{k'} \lt n</m> (the <m>T_k</m> increase
+        with <m>k</m>), which is impossible.
+      </p>
+      <p>
+        <em>Injectivity.</em> Suppose <m>f(i,j) = f(i',j') = n</m>. Then
+        <m>n</m> lies in the block of the diagonal of <m>(i,j)</m> and in
+        the block of the diagonal of <m>(i',j')</m>, so both pairs lie on
+        the same diagonal <m>k</m>. Then <m>T_k + i = T_k + i'</m> gives
+        <m>i = i'</m>, and <m>j = k - i = k - i' = j'</m>.
+      </p>
+      <p>
+        <em>Surjectivity.</em> Let <m>n \in \N</m>, and let <m>B_k</m> be
+        the block containing <m>n</m>. Set <m>i = n - T_k</m> and
+        <m>j = k - i</m>. Then <m>1 \leq i \leq k - 1</m>, so
+        <m>j \geq 1</m>, <m>(i,j) \in \N \times \N</m>, and
+        <m>f(i,j) = T_k + i = n</m>.
+      </p>
+      <p>
+        We verify the first few values:
         <m>f(1,1) = 0 \cdot 0/2 + 1 = 1</m>,
         <m>f(1,2) = 1 \cdot 2/2 + 1 = 2</m>,
         <m>f(2,1) = 1 \cdot 2/2 + 2 = 3</m>,

@@ -192,7 +192,7 @@
       it belongs to <m>B</m> (giving <m>A \subseteq B</m>), then
       reverse (giving <m>B \subseteq A</m>). The template never changes;
       what changes is the algebra needed to execute each direction.
-      Every set equality proof in this module&#x2014;and in MAT 5610&#x2014;follows
+      Most set equality proofs in this module and in MAT 5610 follow
       this template.
     </p>
   </paragraphs>
