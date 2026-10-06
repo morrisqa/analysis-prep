@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Project manifest for the PreTeXt CLI (pinned in requirements.txt).       -->
+<!-- Defaults: source/main.ptx, publication/publication.ptx, output/<target>. -->
+<!-- See https://pretextbook.org/doc/guide/html/processing-CLI.html           -->
+<project ptx-version="2">
+  <targets>
+    <target name="web" format="html" />
+    <target name="print" format="pdf" output-filename="analysis-prep.pdf" />
+  </targets>
+</project>
