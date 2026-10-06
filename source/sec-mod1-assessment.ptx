@@ -96,6 +96,8 @@
             <md>|a_n - 2| = \left|\frac{2n+1}{n} - 2\right|
             = \left|\frac{1}{n}\right| = \frac{1}{n}.</md>
             To make <m>1/n \lt \varepsilon</m>, you need <m>n \gt 1/\varepsilon</m>.
+            Choose <m>N \in \N</m> with <m>N \gt 1/\varepsilon</m>, so that
+            <m>n \geq N</m> implies <m>n \gt 1/\varepsilon</m>.
             The Archimedean property (Corollary 2.4, Bauldry p. 48) guarantees
             that such an <m>N \in \N</m> exists.
           </p>

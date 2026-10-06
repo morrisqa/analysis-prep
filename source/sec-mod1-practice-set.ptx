@@ -291,7 +291,7 @@
                 specify which values, and the inductive step requires it
                 for <em>all</em> <m>n</m>. This is the fatal step: passing
                 from <m>n = 3</m> to <m>n = 4</m> would need
-                <m>2 \geq 4</m>, and the claim is false at <m>n = 4</m>.
+                <m>2 \geq 4</m>, and the Non-Theorem is false at <m>n = 4</m>.
               </li>
               <li>
                 <alert>Missing base case and incomplete induction framework.</alert>
@@ -300,8 +300,7 @@
                 a base case first, and does not present the induction
                 correctly. Here the base case is in fact true
                 (<m>2^1 = 2 \geq 1 = 1!</m>), so its omission is a defect
-                of the write-up, not the reason the claim fails; the
-                claim fails because of the step in (b).
+                of the write-up, not the reason the Non-Theorem fails.
               </li>
             </ol>
           </p>

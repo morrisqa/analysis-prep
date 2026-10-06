@@ -95,8 +95,8 @@
           </p>
           <p>
             (This is the definition of <m>\lim_{x \to a} f(x) = L</m>.
-            Its negation is the statement that the limit does
-            <em>not</em> equal <m>L</m>.)
+            Its negation is the statement that it is <em>not</em> the
+            case that <m>\lim_{x \to a} f(x) = L</m>.)
           </p>
         </statement>
       </exercise>

@@ -124,21 +124,22 @@
 
         <!-- TODO(quinn): paragraph added in #10 (math fixes); confirm or replace. -->
         <p>
-          Besides the quantifier De Morgan laws, two rules come up whenever
-          you negate a definition from analysis. First, the negation of an
-          implication is not another implication:
+          Negating a quantified statement flips each quantifier. Two further
+          rules come up whenever you negate a definition from analysis.
+          First, the negation of an implication is not another implication:
           <md>
-            \neg(P \Rightarrow Q) \iff P \wedge \neg Q,
+            \neg(P \implies Q) \iff P \wedge \neg Q,
           </md>
           since an implication is false exactly when its hypothesis is true
-          and its conclusion is false. Second, a bounded quantifier keeps its
-          bound under negation:
+          and its conclusion is false. Second, a quantifier with a condition
+          attached, such as <m>\forall \varepsilon \gt 0</m>, keeps its
+          condition under negation:
           <md>
             \neg\bigl(\forall \varepsilon \gt 0,\; P(\varepsilon)\bigr) \iff \exists \varepsilon \gt 0,\; \neg P(\varepsilon).
           </md>
           The reason is that <m>\forall \varepsilon \gt 0,\; P(\varepsilon)</m>
-          abbreviates <m>\forall \varepsilon \bigl(\varepsilon \gt 0 \Rightarrow P(\varepsilon)\bigr)</m>,
-          and by the first rule its negation is
+          is shorthand for <m>\forall \varepsilon \bigl(\varepsilon \gt 0 \implies P(\varepsilon)\bigr)</m>.
+          By the first rule, its negation is
           <m>\exists \varepsilon \bigl(\varepsilon \gt 0 \wedge \neg P(\varepsilon)\bigr)</m>.
           The negation still speaks about positive <m>\varepsilon</m>; it
           does not produce <m>\varepsilon \leq 0</m>.
@@ -328,20 +329,16 @@
         </statement>
         <answer>
           <p>
-            A <term>function</term> maps inputs to outputs; in the
-            single-sorted setting of the text, a function symbol maps the
-            universe to itself (e.g., <m>f(x) = x^2</m> maps reals to reals).
+            In the text's setting, a <term>function</term> maps the universe
+            to itself (e.g., <m>f(x) = x^2</m> maps reals to reals).
             A <term>predicate</term> maps inputs to truth values&#x2014;it
             is a property that a term either satisfies or does not
             (e.g., <m>P(x) \equiv (x \gt 0)</m>). The distinction matters
-            because function symbols build <term>terms</term> (names for
-            objects, such as <m>f(x)</m>), while predicates build
-            <term>formulas</term> (statements that are true or false, such
-            as <m>f(x) = 0</m> or <m>P(f(x))</m>). A quantifier must be
-            followed by a formula, not a bare term: <m>\forall x\, f(x)</m>
-            is meaningless, while <m>\forall x\, \bigl(f(x) = 0\bigr)</m> is
-            a statement. The quantifier binds its variable wherever it occurs
-            in that formula, including inside terms such as <m>f(x)</m>.
+            because a function builds an object (a term such as <m>f(x)</m>),
+            while a predicate builds a formula (such as <m>P(f(x))</m>).
+            A quantifier must be followed by a formula, and it binds its
+            variable wherever it occurs in that formula, including inside
+            <m>f(x)</m>, as in <m>\forall x\, \bigl(f(x) = 0\bigr)</m>.
           </p>
         </answer>
       </exercise>
