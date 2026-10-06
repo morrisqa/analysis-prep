@@ -194,10 +194,10 @@
           <alert>Definitions 2.2 and 2.3: Metric Spaces and Neighborhoods
           (pp. 48&#x2013;49).</alert>
           Bauldry defines a <term>metric space</term> as a set <m>X</m>
-          with a distance function <m>d : X \to \R</m> satisfying
+          with a distance function <m>d : X \times X \to \R</m> satisfying
           three properties, and then defines a <term>neighborhood</term>
           of a point <m>x</m> as
-          <m>N_r(x) = \{y \mid d(x, y) \lt r\}</m> for some <m>r \gt 0</m>.
+          <m>N_r(x) = \{y \in X : d(x, y) \lt r\}</m> for some <m>r \gt 0</m>.
         </p>
 
       <exercise xml:id="ex-mod1-br-8">
@@ -225,11 +225,13 @@
           <p>
             Definition 2.3 defines a point <m>x</m> to be an
             <term>accumulation point</term> (or limit point) of a set
-            <m>E</m> if every deleted neighborhood of <m>x</m> contains
+            <m>E</m> if every <term>deleted neighborhood</term> of <m>x</m> contains
             a point of <m>E</m> different from <m>x</m>; that is,
             <md>
               \forall r \gt 0, \; N_r'(x) \cap E \neq \emptyset.
             </md>
+            Here <m>N_r'(x) = N_r(x) \setminus \{x\}</m> is the
+            deleted neighborhood of <m>x</m> of radius <m>r</m>.
             <ol marker="(a)">
               <li>
                 Write the negation of this statement. What would it mean
@@ -237,8 +239,9 @@
                 of <m>E</m>?
               </li>
               <li>
-                Bauldry calls a point that is not an accumulation point
-                an <term>isolated point</term>. Does your negation match
+                Bauldry calls a point <m>x \in E</m> that is not an
+                accumulation point of <m>E</m> an <term>isolated point</term>
+                of <m>E</m>. Does your negation match
                 Definition 2.3 item 8?
               </li>
             </ol>
@@ -262,9 +265,10 @@
       <exercise xml:id="ex-mod1-br-10">
         <title>Theorem 2.2: Infimum Theorem</title>
         <statement>
+          <!-- TODO(quinn): verify against Bauldry's wording. -->
           <p> Read the proof of Theorem 2.2 on page 47
-            (the infimum theorem: if <m>B \subseteq U</m> is bounded
-            below in a set with the LUB property, then <m>\inf B</m>
+            (the infimum theorem: if <m>B \subseteq U</m> is nonempty and
+            bounded below in a set with the LUB property, then <m>\inf B</m>
             exists and is in <m>U</m>).
             <ol marker="(a)">
               <li>
@@ -324,10 +328,11 @@
                 arrow <m>\Leftrightarrow</m>.
               </li>
               <li>
-                Based on your Module 1 work: to verify that a metric
-                space <em>is</em> complete, which direction of the iff
-                would you need to prove? To show it is <em>not</em>
-                complete, what would you need to exhibit?
+                Based on your Module 1 work: since this is a definition,
+                proving that a metric space <em>is</em> complete means
+                verifying the right-hand side of the definition. What exactly must you show?
+                To show a space is <em>not</em> complete, what would you
+                need to exhibit?
               </li>
             </ol>
           </p>
