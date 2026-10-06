@@ -1,0 +1,362 @@
+<section xml:id="sec-mod8-study-guide">
+  <title>Module 8: Companion Reading and Study Guide</title>
+  <p>Zorn §5.1–5.4 — Estimated time: 55 minutes</p>
+    <p>
+      This guide accompanies four sections of Zorn's <em>Understanding
+      Real Analysis</em>. Section 5.1 introduces partitions and Darboux
+      sums. Section 5.2 develops the integrability criterion. Section 5.3
+      identifies the main classes of integrable functions (continuous and
+      monotone). Section 5.4 proves the Fundamental Theorem of Calculus.
+    </p>
+    <p>
+      Read each section before working its questions. The recurring theme
+      is the integrability criterion: a function is Riemann integrable if
+      and only if for every <m>\varepsilon \gt 0</m> there is a partition
+      <m>P</m> with <m>U(f,P) - L(f,P) \lt \varepsilon</m>. Every positive
+      result in this module is proved by exhibiting such a partition.
+    </p>
+  <!-- ============================================================
+       SECTION 5.1: PARTITIONS AND DARBOUX SUMS
+  ============================================================ -->
+
+  <paragraphs xml:id="par-mod8-sg-51-intro">
+    <title>Section 5.1: Partitions and Darboux Sums</title>
+    <p>
+      Read Zorn's definitions of partition, Darboux sums, and upper and
+      lower integrals carefully. The key notational distinction: <m>M_i =
+      \sup\{f(x) : x \in [x_{i-1}, x_i]\}</m> is the supremum (not a
+      sample value), and <m>m_i = \inf\{f(x) : x \in [x_{i-1}, x_i]\}</m>
+      is the infimum. These always exist when <m>f</m> is bounded.
+    </p>
+  </paragraphs>
+
+  <exercise xml:id="ex-mod8-sg-51-1">
+    <title>Partitions and Mesh</title>
+    <statement>
+      <p>
+        Define a partition <m>P</m> of <m>[a,b]</m> and the mesh
+        <m>\|P\|</m>. For <m>P = \{0, 1/3, 2/3, 1\}</m> of <m>[0,1]</m>,
+        compute <m>\|P\|</m>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        A partition of <m>[a,b]</m> is a finite set
+        <m>P = \{x_0, x_1, \ldots, x_n\}</m> with
+        <m>a = x_0 \lt x_1 \lt \cdots \lt x_n = b</m>. The mesh is
+        <m>\|P\| = \max_{1 \le i \le n} \Delta x_i</m> where
+        <m>\Delta x_i = x_i - x_{i-1}</m>. For
+        <m>P = \{0, 1/3, 2/3, 1\}</m>, each subinterval has length
+        <m>1/3</m>, so <m>\|P\| = 1/3</m>.
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise xml:id="ex-mod8-sg-51-2">
+    <title>Upper Sums for <m>f(x) = x^2</m></title>
+    <statement>
+      <p>
+        For <m>f(x) = x^2</m> on <m>[0,1]</m> with uniform partition
+        <m>P_n</m> of <m>n</m> equal subintervals:
+        <ol marker="(a)">
+          <li>
+            What is <m>\Delta x = 1/n</m> and what are the partition
+            points <m>x_k = k/n</m>?
+          </li>
+          <li>
+            Compute <m>M_k = \sup f</m> on <m>[x_{k-1}, x_k]</m>.
+            Since <m>f</m> is increasing, <m>M_k = x_k^2 = k^2/n^2</m>.
+          </li>
+          <li>
+            Write <m>U(f, P_n) = \sum_{k=1}^{n} (k^2/n^2)(1/n)</m>
+            and use the formula
+            <m>\sum_{k=1}^{n} k^2 = n(n+1)(2n+1)/6</m> to obtain
+            <m>U(f, P_n) = (n+1)(2n+1)/(6n^2)</m>.
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        (a) <m>\Delta x = 1/n</m>; <m>x_k = k/n</m> for
+        <m>k = 0, 1, \ldots, n</m>.
+        (b) Since <m>x^2</m> is increasing on <m>[0,1]</m>, the supremum
+        on <m>[(k-1)/n, k/n]</m> is attained at the right endpoint:
+        <m>M_k = (k/n)^2 = k^2/n^2</m>.
+        (c)
+        <md>
+          U(f, P_n)
+          = \sum_{k=1}^{n} \frac{k^2}{n^2} \cdot \frac{1}{n}
+          = \frac{1}{n^3} \sum_{k=1}^{n} k^2
+          = \frac{1}{n^3} \cdot \frac{n(n+1)(2n+1)}{6}
+          = \frac{(n+1)(2n+1)}{6n^2}.
+        </md>
+      </p>
+    </answer>
+  </exercise>
+
+  <!-- ============================================================
+       SECTION 5.2: INTEGRABILITY CRITERION
+  ============================================================ -->
+
+  <paragraphs xml:id="par-mod8-sg-52-intro">
+    <title>Section 5.2: The Integrability Criterion</title>
+    <p>
+      The integrability criterion is the workhorse of this module.
+      Read Zorn's statement and proof carefully. Every positive
+      integrability result &#x2014; continuous functions, monotone
+      functions &#x2014; is proved by exhibiting a partition that
+      makes <m>U(f,P) - L(f,P)</m> small.
+    </p>
+  </paragraphs>
+
+  <exercise xml:id="ex-mod8-sg-52-1">
+    <title>Stating the Integrability Criterion</title>
+    <statement>
+      <p>
+        State the Riemann integrability criterion precisely. Why is
+        <m>U(f,P) - L(f,P)</m> sometimes called the
+        <q>oscillation sum</q>?
+      </p>
+    </statement>
+    <answer>
+      <p>
+        A bounded function <m>f</m> on <m>[a,b]</m> is Riemann
+        integrable if and only if for every <m>\varepsilon \gt 0</m>
+        there exists a partition <m>P</m> of <m>[a,b]</m> such that
+        <m>U(f,P) - L(f,P) \lt \varepsilon</m>.
+        The quantity <m>U(f,P) - L(f,P) = \sum (M_i - m_i)\Delta x_i</m>
+        is the oscillation sum because <m>M_i - m_i</m> measures the
+        oscillation of <m>f</m> on the <m>i</m>th subinterval &#x2014;
+        the spread between the largest and smallest values of <m>f</m>
+        on that piece. When the total oscillation (weighted by subinterval
+        length) can be made arbitrarily small, the function is integrable.
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise xml:id="ex-mod8-sg-52-2">
+    <title>The Dirichlet Function</title>
+    <statement>
+      <p>
+        For the Dirichlet function
+        <m>f(x) = 1</m> if <m>x \in \Q</m>,
+        <m>f(x) = 0</m> if <m>x \notin \Q</m>:
+        <ol marker="(a)">
+          <li>
+            What is <m>M_k = \sup f</m> on any subinterval
+            <m>[x_{k-1}, x_k]</m>? (Recall that the rationals are
+            dense in <m>\R</m>.)
+          </li>
+          <li>
+            What is <m>m_k = \inf f</m> on any subinterval?
+            (Recall that the irrationals are also dense in <m>\R</m>.)
+          </li>
+          <li>
+            Compute <m>U(f,P) - L(f,P)</m> for any partition <m>P</m>
+            of <m>[0,1]</m>.
+          </li>
+          <li>
+            Is the Dirichlet function Riemann integrable on
+            <m>[0,1]</m>?
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        (a) Since <m>\Q</m> is dense in <m>\R</m>, every subinterval
+        contains rationals, so <m>M_k = 1</m>.
+        (b) Since <m>\R \setminus \Q</m> is dense in <m>\R</m>, every
+        subinterval contains irrationals, so <m>m_k = 0</m>.
+        (c) <m>U(f,P) - L(f,P) = \sum (1 - 0)\Delta x_k = 1</m> for
+        any partition of <m>[0,1]</m>.
+        (d) No: since <m>U(f,P) - L(f,P) = 1</m> for every partition,
+        the integrability criterion fails (take <m>\varepsilon = 1/2</m>,
+        for instance). The upper integral equals 1 and the lower integral
+        equals 0, so they are not equal and <m>f</m> is not Riemann
+        integrable.
+      </p>
+    </answer>
+  </exercise>
+
+  <!-- ============================================================
+       SECTION 5.3: CLASSES OF INTEGRABLE FUNCTIONS
+  ============================================================ -->
+
+  <paragraphs xml:id="par-mod8-sg-53-intro">
+    <title>Section 5.3: Classes of Integrable Functions</title>
+    <p>
+      Zorn establishes two main classes: continuous functions (using
+      uniform continuity) and monotone functions (using a telescoping
+      argument). Read both proofs, paying attention to where each uses
+      special properties of the function class.
+    </p>
+  </paragraphs>
+
+  <exercise xml:id="ex-mod8-sg-53-1">
+    <title>Continuous Implies Integrable</title>
+    <statement>
+      <p>
+        Sketch the proof that if <m>f</m> is continuous on <m>[a,b]</m>,
+        then <m>f</m> is Riemann integrable on <m>[a,b]</m>. Which
+        fact from Module 6 is used and where?
+      </p>
+    </statement>
+    <answer>
+      <p>
+        The key tool is the Heine-Cantor theorem (Module 6): a
+        continuous function on a closed bounded interval is uniformly
+        continuous. Given <m>\varepsilon \gt 0</m>, apply uniform
+        continuity to get <m>\delta \gt 0</m> such that
+        <m>|x - y| \lt \delta \Rightarrow |f(x) - f(y)| \lt
+        \varepsilon/(b-a)</m>. Choose any partition <m>P</m> with
+        mesh <m>\|P\| \lt \delta</m>. On each subinterval
+        <m>[x_{i-1}, x_i]</m>, any two points are within <m>\delta</m>
+        of each other, so <m>M_i - m_i \leq \varepsilon/(b-a)</m>
+        by uniform continuity. Then
+        <md>
+          U(f,P) - L(f,P)
+          = \sum_{i=1}^{n} (M_i - m_i)\Delta x_i
+          \leq \frac{\varepsilon}{b-a} \sum_{i=1}^{n} \Delta x_i
+          = \varepsilon.
+        </md>
+        By the integrability criterion, <m>f</m> is integrable. Uniform
+        continuity is used to control <m>M_i - m_i</m>; pointwise
+        continuity would not suffice because the same <m>\delta</m>
+        must work everywhere on <m>[a,b]</m> simultaneously.
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise xml:id="ex-mod8-sg-53-2">
+    <title>Monotone Implies Integrable</title>
+    <statement>
+      <p>
+        Prove that a monotone function on <m>[a,b]</m> is Riemann
+        integrable.
+        <ol marker="(a)">
+          <li>
+            Assume without loss of generality that <m>f</m> is
+            increasing on <m>[a,b]</m>. For the uniform partition
+            <m>P_n</m> with <m>n</m> equal subintervals of width
+            <m>(b-a)/n</m>, show that
+            <md>
+              U(f,P_n) - L(f,P_n)
+              = \frac{1}{n}\sum_{k=1}^{n}[f(x_k) - f(x_{k-1})]
+              = \frac{f(b) - f(a)}{n},
+            </md>
+            using the telescoping nature of the sum and the fact that
+            <m>M_k = f(x_k)</m> and <m>m_k = f(x_{k-1})</m> for an
+            increasing function.
+          </li>
+          <li>
+            Apply the integrability criterion: given <m>\varepsilon \gt 0</m>,
+            choose <m>n \gt (f(b) - f(a))/\varepsilon</m> to conclude.
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        (a) For increasing <m>f</m>, on the <m>k</m>th subinterval
+        <m>[x_{k-1}, x_k]</m> the supremum is attained at the right
+        endpoint and the infimum at the left: <m>M_k = f(x_k)</m> and
+        <m>m_k = f(x_{k-1})</m>. With uniform partition width
+        <m>\Delta x = (b-a)/n</m>:
+        <md>
+          U(f,P_n) - L(f,P_n)
+          = \frac{b-a}{n} \sum_{k=1}^{n} [f(x_k) - f(x_{k-1})]
+          = \frac{b-a}{n} [f(b) - f(a)],
+        </md>
+        since the sum telescopes.
+        (b) Given <m>\varepsilon \gt 0</m>, choose
+        <m>n \gt (b-a)(f(b)-f(a))/\varepsilon</m>
+        (or <m>n = 1</m> if <m>f(b) = f(a)</m>). Then
+        <m>U(f,P_n) - L(f,P_n) = (b-a)(f(b)-f(a))/n \lt \varepsilon</m>.
+        By the integrability criterion, <m>f</m> is integrable.
+      </p>
+    </answer>
+  </exercise>
+
+  <!-- ============================================================
+       SECTION 5.4: THE FUNDAMENTAL THEOREM OF CALCULUS
+  ============================================================ -->
+
+  <paragraphs xml:id="par-mod8-sg-54-intro">
+    <title>Section 5.4: The Fundamental Theorem of Calculus</title>
+    <p>
+      Read both parts of the FTC carefully. Part 1 requires
+      differentiating a function defined by an integral; Part 2 uses
+      Part 1 together with the Module 7 corollary that a function
+      with zero derivative on an interval is constant.
+    </p>
+  </paragraphs>
+
+  <exercise xml:id="ex-mod8-sg-54-1">
+    <title>FTC Part 1 &#x2014; Hypotheses and Statement</title>
+    <statement>
+      <p>
+        State FTC Part 1 precisely, including all hypotheses. What
+        does it mean to say that <m>F(x) = \int_a^x f(t)\,dt</m>
+        is differentiable at <m>x</m>? (You must compute
+        <m>F'(x)</m> from the limit definition of the derivative.)
+      </p>
+    </statement>
+    <answer>
+      <p>
+        <em>FTC Part 1.</em> Let <m>f</m> be continuous on <m>[a,b]</m>
+        and define <m>F(x) = \int_a^x f(t)\,dt</m> for <m>x \in [a,b]</m>.
+        Then <m>F</m> is differentiable on <m>(a,b)</m> and
+        <m>F'(x) = f(x)</m> for all <m>x \in (a,b)</m>.
+        To say <m>F</m> is differentiable at <m>x</m> means that the
+        limit
+        <md>
+          F'(x) = \lim_{h \to 0} \frac{F(x+h) - F(x)}{h}
+                = \lim_{h \to 0} \frac{1}{h}\int_x^{x+h} f(t)\,dt
+        </md>
+        exists and equals <m>f(x)</m>.
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise xml:id="ex-mod8-sg-54-2">
+    <title>FTC Part 2 &#x2014; Statement and Proof</title>
+    <statement>
+      <p>
+        <ol marker="(a)">
+          <li>
+            State FTC Part 2 precisely, listing all hypotheses.
+          </li>
+          <li>
+            Prove FTC Part 2 using FTC Part 1 as a lemma: if
+            <m>F' = f</m> on <m>[a,b]</m>, define
+            <m>G(x) = \int_a^x f</m>. By Part 1, <m>G' = f = F'</m>,
+            so <m>(G - F)' = 0</m>. By the Module 7 corollary (a
+            function with zero derivative on an interval is constant),
+            <m>G - F = C</m> for some constant. Evaluate at <m>x = a</m>
+            to find <m>C</m>, then at <m>x = b</m> to conclude.
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        (a) <em>FTC Part 2.</em> Let <m>f</m> be continuous on
+        <m>[a,b]</m> and let <m>F</m> be differentiable on <m>[a,b]</m>
+        with <m>F' = f</m>. Then
+        <md>\int_a^b f(x)\,dx = F(b) - F(a).</md>
+        (b) Define <m>G(x) = \int_a^x f(t)\,dt</m>. By FTC Part 1,
+        <m>G'(x) = f(x) = F'(x)</m> for all <m>x \in (a,b)</m>. Hence
+        <m>(G - F)'(x) = 0</m> on <m>(a,b)</m>. By the Module 7 MVT
+        corollary, <m>G(x) - F(x) = C</m> for some constant
+        <m>C \in \R</m>. Evaluating at <m>x = a</m>:
+        <m>G(a) - F(a) = 0 - F(a) = -F(a)</m>, so <m>C = -F(a)</m>.
+        Thus <m>G(x) = F(x) - F(a)</m> for all <m>x \in [a,b]</m>.
+        Evaluating at <m>x = b</m>:
+        <m>\int_a^b f = G(b) = F(b) - F(a)</m>.
+      </p>
+    </answer>
+  </exercise>
+
+</section>

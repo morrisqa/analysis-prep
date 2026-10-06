@@ -1,0 +1,265 @@
+<section xml:id="sec-mod8-bridge-reading">
+  <title>Module 8: Bridge Reading Guide</title>
+  <p>Bauldry §1.4 and §2.4 — Estimated time: 40 minutes</p>
+    <p>
+      Every module ends with a bridge reading in Bauldry's
+      <em>Introduction to Real Analysis</em>. For this module the
+      reading covers two sections: Bauldry &#xa7;1.4
+      (<q>The Integral</q>) and Bauldry &#xa7;2.4
+      (<q>The Riemann-Stieltjes Integral</q>). Section &#xa7;1.4
+      is Bauldry's informal review of integration, parallel to what
+      you have just built via Darboux sums. Section &#xa7;2.4 is the
+      rigorous graduate treatment &#x2014; and it goes substantially
+      further than Zorn by introducing the Riemann-Stieltjes integral
+      <m>\int f\,d\alpha</m>, which replaces the length element
+      <m>dx</m> with a more general measure <m>d\alpha</m>.
+    </p>
+    <p>
+      This generalization is the correct setup for many applications
+      in graduate analysis and probability. MAT 5610 will spend
+      significant time on Bauldry &#xa7;2.4. The module you have just
+      completed gives you the Darboux framework; the graduate course
+      adds the Stieltjes measure. The exercises below help you build
+      a bridge between these two presentations.
+    </p>
+    <p>
+      <alert>For this module, read:</alert>
+      Bauldry &#xa7;1.4 (<q>The Integral</q>, approximately pp. 18&#x2013;24)
+      and &#xa7;2.4 (<q>The Riemann-Stieltjes Integral</q>,
+      approximately pp. 71&#x2013;88).
+    </p>
+  <!-- ============================================================
+       PART 1: BAULDRY §1.4
+  ============================================================ -->
+
+  <paragraphs xml:id="par-mod8-br-14">
+    <title>Bauldry &#xa7;1.4 &#x2014; The Riemann Integral (informal)</title>
+    <p>
+      Section &#xa7;1.4 is Bauldry's informal treatment of the integral,
+      parallel to Zorn &#xa7;5.1&#x2013;5.2. Bauldry introduces the
+      integral with an eye toward the rigorous Riemann-Stieltjes theory
+      that follows in &#xa7;2.4. Notice whether his setup emphasizes
+      Darboux sums, Riemann sums, or both; the choice of approach
+      shapes what the FTC proof looks like.
+    </p>
+  </paragraphs>
+
+  <exercise xml:id="ex-mod8-br-1">
+    <title>Bauldry's Definition</title>
+    <statement>
+      <p>
+        What definition of the integral does Bauldry use in &#xa7;1.4
+        &#x2014; Riemann sums (with sample points), Darboux sums (with
+        sup and inf), or something else? Quote the key definition.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod8-br-2">
+    <title>FTC in Bauldry &#xa7;1.4</title>
+    <statement>
+      <p>
+        <ol marker="(a)">
+          <li>
+            Does Bauldry prove the FTC in &#xa7;1.4, or does he
+            merely state it? What level of rigor does he use?
+          </li>
+          <li>
+            Compare the presentation of FTC in &#xa7;1.4 to Worked
+            Examples 3 and 4 in this module. What is made explicit in
+            the module that is implicit in Bauldry's &#xa7;1.4?
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod8-br-3">
+    <title>Beyond Area</title>
+    <statement>
+      <p>
+        Bauldry &#xa7;1.4 mentions applications of the integral that
+        go beyond area computation. Identify one such application and
+        describe briefly how the integral is used.
+      </p>
+    </statement>
+  </exercise>
+
+  <!-- ============================================================
+       PART 2: BAULDRY §2.4
+  ============================================================ -->
+
+  <paragraphs xml:id="par-mod8-br-24">
+    <title>Bauldry &#xa7;2.4 &#x2014; The Riemann-Stieltjes Integral (rigorous)</title>
+    <p>
+      Section &#xa7;2.4 is the starting point of MAT 5610's integration
+      theory. The Riemann-Stieltjes integral <m>\int_a^b f\,d\alpha</m>
+      replaces <m>dx</m> (the length element) with <m>d\alpha</m>
+      (determined by an <em>integrator</em> function <m>\alpha</m>).
+      When <m>\alpha(x) = x</m>, the Riemann-Stieltjes integral reduces
+      to the ordinary Riemann integral. The generalization is powerful
+      because it unifies the integral with Stieltjes-type weighted
+      averages and connects naturally to measure theory.
+    </p>
+    <p>
+      Read &#xa7;2.4 carefully. The definitions mirror what you have
+      learned &#x2014; upper sums, lower sums, integrability criterion
+      &#x2014; but with <m>\Delta\alpha_i = \alpha(x_i) - \alpha(x_{i-1})</m>
+      replacing <m>\Delta x_i</m>. Pay attention to where the hypotheses
+      on <m>\alpha</m> enter.
+    </p>
+  </paragraphs>
+
+  <exercise xml:id="ex-mod8-br-4">
+    <title>The Stieltjes Measure</title>
+    <statement>
+      <p>
+        Bauldry defines the Riemann-Stieltjes integral
+        <m>\int_a^b f\,d\alpha</m>. What plays the role of
+        <q><m>dx</m></q> in this definition? How does the ordinary
+        Riemann integral arise as a special case?
+      </p>
+    </statement>
+    <answer>
+      <p>
+        The role of <m>dx</m> is played by <m>d\alpha</m>, which in
+        the Darboux upper and lower sums amounts to replacing
+        <m>\Delta x_i = x_i - x_{i-1}</m> with
+        <m>\Delta\alpha_i = \alpha(x_i) - \alpha(x_{i-1})</m>. The
+        upper Stieltjes sum is
+        <m>U(f,P,\alpha) = \sum M_i\,\Delta\alpha_i</m> and the lower
+        sum is <m>L(f,P,\alpha) = \sum m_i\,\Delta\alpha_i</m>.
+        The Riemann integral arises as the special case
+        <m>\alpha(x) = x</m>, which gives
+        <m>\Delta\alpha_i = \Delta x_i</m> and recovers the ordinary
+        Darboux upper and lower sums.
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise xml:id="ex-mod8-br-5">
+    <title>Stieltjes Integrability Criterion and Bounded Variation</title>
+    <statement>
+      <p>
+        <ol marker="(a)">
+          <li>
+            State Bauldry's integrability criterion for the
+            Riemann-Stieltjes integral. How does it compare to the
+            Darboux integrability criterion in the Module 8 study guide?
+          </li>
+          <li>
+            Bauldry requires that the integrator <m>\alpha</m> is of
+            <em>bounded variation</em>. What does this mean? Why
+            might an integrator of unbounded variation cause problems?
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        (a) The Stieltjes integrability criterion has the same
+        structure as the Darboux criterion: <m>f</m> is
+        Riemann-Stieltjes integrable with respect to <m>\alpha</m>
+        on <m>[a,b]</m> if and only if for every <m>\varepsilon \gt 0</m>
+        there exists a partition <m>P</m> with
+        <m>U(f,P,\alpha) - L(f,P,\alpha) \lt \varepsilon</m>. The
+        difference is that the weights are <m>\Delta\alpha_i</m>
+        instead of <m>\Delta x_i</m>.
+        (b) A function <m>\alpha</m> is of bounded variation on
+        <m>[a,b]</m> if the total variation
+        <m>V(\alpha,[a,b]) = \sup_P \sum_{i=1}^n |\alpha(x_i) -
+        \alpha(x_{i-1})|</m> is finite. If <m>\alpha</m> has unbounded
+        variation, the weights <m>\Delta\alpha_i</m> could alternate
+        wildly in sign or grow without bound, making the upper and
+        lower sums meaningless as approximations to a limit.
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise xml:id="ex-mod8-br-6">
+    <title>Continuous Functions are Stieltjes-Integrable</title>
+    <statement>
+      <p>
+        Find the theorem in Bauldry &#xa7;2.4 corresponding to the
+        statement <q>continuous functions are Riemann integrable</q>
+        (Worked Example 2 of this module). What additional hypothesis
+        does the Stieltjes setting require on <m>\alpha</m>?
+      </p>
+    </statement>
+    <answer>
+      <p>
+        The corresponding theorem in &#xa7;2.4 typically states: if
+        <m>f</m> is continuous on <m>[a,b]</m> and <m>\alpha</m> is
+        of bounded variation on <m>[a,b]</m>, then <m>f</m> is
+        Riemann-Stieltjes integrable with respect to <m>\alpha</m>.
+        The additional hypothesis beyond the Riemann setting is that
+        <m>\alpha</m> must be of bounded variation; in the Riemann
+        integral, <m>\alpha(x) = x</m> automatically has this
+        property (it is monotone increasing), but a general integrator
+        may not.
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise xml:id="ex-mod8-br-7">
+    <title>Integration by Parts in the Stieltjes Setting</title>
+    <statement>
+      <p>
+        <ol marker="(a)">
+          <li>
+            Bauldry &#xa7;2.4 contains a version of integration by
+            parts for Stieltjes integrals. State it. How does it
+            differ from the version you proved in Practice Problem S2?
+          </li>
+          <li>
+            Why does the Stieltjes setting make integration by parts
+            more symmetric between <m>f</m> and <m>\alpha</m>?
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        (a) The Stieltjes integration by parts formula is:
+        <md>
+          \int_a^b f\,d\alpha + \int_a^b \alpha\,df
+          = f(b)\alpha(b) - f(a)\alpha(a).
+        </md>
+        This differs from the ordinary version in that both integrals
+        are Stieltjes integrals, and the roles of <m>f</m> and
+        <m>\alpha</m> are completely symmetric: <m>f</m> acts as
+        integrand in one and as integrator in the other.
+        (b) In the ordinary Riemann setting, integration by parts
+        involves <m>\int u\,v'\,dx</m> (a Riemann integral of <m>u</m>
+        against the derivative of <m>v</m>), which breaks the symmetry
+        between <m>u</m> and <m>v</m>. In the Stieltjes setting,
+        <m>\int f\,d\alpha</m> and <m>\int \alpha\,df</m> appear
+        symmetrically without requiring differentiability &#x2014;
+        just that the Stieltjes integrals exist, which happens when
+        <m>f</m> and <m>\alpha</m> have no common discontinuities.
+      </p>
+    </answer>
+  </exercise>
+
+  <!-- ============================================================
+       CLOSING
+  ============================================================ -->
+
+  <paragraphs xml:id="par-mod8-br-closing">
+    <title>Looking Ahead to MAT 5610</title>
+    <p>
+      MAT 5610 will begin its integration theory with Bauldry &#xa7;2.4.
+      The module you have just completed gives you the Darboux framework:
+      partitions, upper and lower sums, the integrability criterion, the
+      main classes of integrable functions, and the Fundamental Theorem
+      of Calculus. The graduate course adds the Stieltjes measure
+      <m>d\alpha</m>, develops the theory of bounded variation, and
+      proves deeper results including the Lebesgue criterion for
+      Riemann integrability (a bounded function is Riemann integrable
+      if and only if it is continuous except on a set of measure zero).
+      Come in knowing the integrability criterion cold, and be ready to
+      extend it to the Stieltjes setting on the first day.
+    </p>
+  </paragraphs>
+
+</section>

@@ -1,0 +1,254 @@
+<section xml:id="sec-mod8-orientation">
+  <title>Module 8: The Riemann Integral</title>
+
+  <objectives xml:id="obj-mod8">
+    <ul>
+      <li>
+        <p>
+          Define a partition <m>P</m> of <m>[a,b]</m> and compute the
+          upper sum <m>U(f,P) = \sum M_i \,\Delta x_i</m> and lower sum
+          <m>L(f,P) = \sum m_i \,\Delta x_i</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Define the upper integral as
+          <m>\inf\{U(f,P)\}</m> and the lower integral as
+          <m>\sup\{L(f,P)\}</m> over all partitions.
+        </p>
+      </li>
+      <li>
+        <p>
+          State the definition of Riemann integrability
+          (upper integral equals lower integral) and the Riemann
+          integrability criterion (<m>\forall \varepsilon \gt 0\ \exists P:
+          U(f,P) - L(f,P) \lt \varepsilon</m>).
+        </p>
+      </li>
+      <li>
+        <p>
+          Prove that every continuous function on <m>[a,b]</m> is Riemann
+          integrable, using uniform continuity from Module 6.
+        </p>
+      </li>
+      <li>
+        <p>
+          State that monotone functions on <m>[a,b]</m> are Riemann
+          integrable.
+        </p>
+      </li>
+      <li>
+        <p>
+          State and apply linearity and monotonicity of the Riemann
+          integral.
+        </p>
+      </li>
+      <li>
+        <p>
+          State and prove the Fundamental Theorem of Calculus, Part 1:
+          if <m>F(x) = \int_a^x f(t)\,dt</m> and <m>f</m> is continuous,
+          then <m>F'(x) = f(x)</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          State and prove FTC Part 2: if <m>F' = f</m> on <m>[a,b]</m>,
+          then <m>\int_a^b f(x)\,dx = F(b) - F(a)</m>.
+        </p>
+      </li>
+    </ul>
+  </objectives>
+
+  <p>Orientation</p>
+
+  <!-- ============================================================ -->
+    <p>
+      The Riemann integral is the culmination of the first part of real
+      analysis. It connects everything: the completeness of <m>\R</m>
+      (upper and lower integrals exist by completeness), uniform
+      continuity from Module 6 (the key ingredient in proving that every
+      continuous function is integrable), and the Mean Value Theorem from
+      Module 7 (the engine behind the proof of the Fundamental Theorem of
+      Calculus). If Modules 6 and 7 felt like separate tools, Module 8 is
+      where they snap together.
+    </p>
+    <p>
+      The definition of the integral via Darboux sums may look unfamiliar
+      even if you have computed integrals before. In a calculus course,
+      the integral is often introduced through Riemann sums with sample
+      points; here we use suprema and infima on each subinterval, which
+      always exist for bounded functions by the completeness of <m>\R</m>.
+      This approach &#x2014; upper sums from the top, lower sums from
+      below, squeeze them together &#x2014; is called the Darboux approach.
+      It is equivalent to the Riemann sum definition but technically
+      cleaner, and it makes the integrability criterion transparent.
+    </p>
+    <p>
+      The Fundamental Theorem of Calculus is where differentiation and
+      integration meet. Understanding both parts &#x2014; Part 1 says that
+      differentiating an integral recovers the integrand; Part 2 says that
+      integrating a derivative recovers the boundary values &#x2014; is
+      essential preparation for MAT 5610. The self-assessment questions
+      below are <alert>not graded</alert>. Write informally; a sentence or
+      two per question is fine.
+    </p>
+  <exercise xml:id="ex-mod8-sa-1">
+    <title>Area Intuition</title>
+    <statement>
+      <p>
+        What does <m>\int_0^1 x\,dx</m> represent geometrically?
+        What is your best guess for its value?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod8-sa-2">
+    <title>Partitions</title>
+    <statement>
+      <p>
+        Let <m>P = \{0, 0.5, 1\}</m> partition <m>[0,1]</m>. For
+        <m>f(x) = x</m>, compute <m>U(f,P)</m> and <m>L(f,P)</m>
+        by hand.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod8-sa-3">
+    <title>Integrability</title>
+    <statement>
+      <p>
+        Do you think the function
+        <md>f(x) = \begin{cases} 1 \amp x \in \Q \\ 0 \amp x \notin \Q \end{cases}</md>
+        (the Dirichlet function) is Riemann integrable? What happens
+        when you try to compute upper and lower sums?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod8-sa-4">
+    <title>FTC</title>
+    <statement>
+      <p>
+        State the Fundamental Theorem of Calculus as you remember it
+        from calculus. What are its two parts?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod8-sa-5">
+    <title>Your Background</title>
+    <statement>
+      <p>
+        Have you seen a proof of the FTC in a previous course?
+        Describe what you remember.
+      </p>
+    </statement>
+  </exercise>
+
+  <!-- ============================================================ -->
+
+  <paragraphs xml:id="par-mod8-instructor-note">
+    <title>A Note from the Instructor</title>
+    <p>
+      The definition of the Riemann integral via Darboux sums is elegant
+      but requires care: upper sums use suprema on each subinterval (not
+      function values at sample points), so they always exist for bounded
+      functions. This is not a technical nicety &#x2014; it is precisely
+      why the definition works. The integrability criterion is the key to
+      everything, and students should memorize it:
+      <m>\forall \varepsilon \gt 0\ \exists P: U(f,P) - L(f,P) \lt \varepsilon</m>.
+      If you can state and apply this criterion fluently, the proofs in
+      this module will feel natural rather than mysterious.
+    </p>
+    <p>
+      The connection to uniform continuity (Module 6) is not
+      coincidental &#x2014; it is the reason continuous functions are
+      integrable. The key step in the proof of <q>continuous implies
+      integrable</q> is to bound the oscillation <m>M_i - m_i</m> on
+      each subinterval, which requires uniform continuity (pointwise
+      continuity does not suffice). If you felt uncertain about the
+      distinction between pointwise and uniform continuity in Module 6,
+      this module provides the payoff for understanding it.
+    </p>
+  </paragraphs>
+
+  <paragraphs xml:id="par-mod8-pacing">
+    <title>A Note on Pacing</title>
+    <p>
+      <alert>A note on pacing.</alert>
+      If you are coming in with prior real analysis experience,
+      move quickly through Zorn &#xa7;5.1&#x2013;5.2 (you have likely
+      seen Darboux sums before) and focus your attention on the proof
+      of FTC Part 1 in Worked Example 3 and the Bridge Reading on
+      Bauldry &#xa7;2.4, which introduces the Riemann-Stieltjes integral
+      &#x2014; material that will be central in MAT 5610. If you are new
+      to analysis, work carefully through the computation in Worked
+      Example 1 (<m>f(x) = x</m> on <m>[0,1]</m>) before tackling the
+      integrability proofs; it shows the integrability criterion in its
+      simplest possible form. The most common mistake in this module is
+      confusing upper sums (from the sup) with Riemann sums (from a
+      sample point); keep the definitions in front of you until the
+      distinction is automatic.
+    </p>
+  </paragraphs>
+
+  <paragraphs xml:id="par-mod8-map">
+    <title>Module Road Map (estimated time: 5 hours)</title>
+    <tabular halign="left">
+      <col width="50%"/>
+      <col width="10%"/>
+      <col width="40%"/>
+      <row header="yes">
+        <cell><p>Component</p></cell>
+        <cell><p>Time</p></cell>
+        <cell><p>Purpose</p></cell>
+      </row>
+      <row>
+        <cell><p>Orientation (this document)</p></cell>
+        <cell><p>15 min</p></cell>
+        <cell><p>Goals, self-assessment, context</p></cell>
+      </row>
+      <row>
+        <cell><p>Video 1: Partitions and Riemann Sums</p></cell>
+        <cell><p>9 min</p></cell>
+        <cell><p>Core instruction via lightboard</p></cell>
+      </row>
+      <row>
+        <cell><p>Video 2: Integrability Criteria</p></cell>
+        <cell><p>9 min</p></cell>
+        <cell><p>Core instruction via lightboard</p></cell>
+      </row>
+      <row>
+        <cell><p>Video 3: The Fundamental Theorem of Calculus</p></cell>
+        <cell><p>10 min</p></cell>
+        <cell><p>Core instruction via lightboard</p></cell>
+      </row>
+      <row>
+        <cell><p>Companion Reading and Study Guide</p></cell>
+        <cell><p>55 min</p></cell>
+        <cell><p>Zorn &#xa7;5.1&#x2013;5.4 with guided questions</p></cell>
+      </row>
+      <row>
+        <cell><p>Worked Examples</p></cell>
+        <cell><p>40 min</p></cell>
+        <cell><p>Four annotated proof walkthroughs</p></cell>
+      </row>
+      <row>
+        <cell><p>Practice Problem Set</p></cell>
+        <cell><p>100 min</p></cell>
+        <cell><p>Scaffolded practice by difficulty</p></cell>
+      </row>
+      <row>
+        <cell><p>Bridge Reading Guide</p></cell>
+        <cell><p>40 min</p></cell>
+        <cell><p>Bauldry &#xa7;1.4 and &#xa7;2.4 with guided questions</p></cell>
+      </row>
+      <row>
+        <cell><p>Module Assessment</p></cell>
+        <cell><p>40 min</p></cell>
+        <cell><p>Submitted proofs and reflection</p></cell>
+      </row>
+    </tabular>
+  </paragraphs>
+
+</section>
