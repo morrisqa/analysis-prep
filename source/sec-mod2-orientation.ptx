@@ -53,12 +53,12 @@
       number system <m>\R</m>.
     </p>
     <p>
-      You already know that <m>\R</m> contains the rationals, the irrationals,
+      You already know that <m>\R</m> contains the rationals and the irrationals,
       and that it can be visualized as a number line. But real analysis
       depends on a much more specific fact about <m>\R</m>: it is
       <em>complete</em>. Informally, it has no gaps. The rationals
-      <m>\Q</m> do have gaps&#x2014;the location of <m>\sqrt{2}</m>
-      is a gap in <m>\Q</m>&#x2014;and those gaps are exactly what prevent
+      <m>\Q</m> do have gaps (the location of <m>\sqrt{2}</m>
+      is a gap in <m>\Q</m>), and those gaps are exactly what prevent
       you from doing analysis in <m>\Q</m>. By the end of this module you
       will know precisely what completeness means and why it matters.
     </p>
@@ -148,10 +148,10 @@
       is the most important thing this module gives you.
     </p>
     <p>
-      Completeness is the deeper idea. It is an axiom&#x2014;a property
-      we accept as the defining feature of <m>\R</m>&#x2014;and it is the
+      Completeness is the deeper idea. It is an axiom (a property
+      we accept as the defining feature of <m>\R</m>), and it is the
       reason real analysis works. Every major theorem in Bauldry's
-      Chapter 2 (the Archimedean Property, the Bolzano&#x2013;Weierstrass
+      Chapter 2 (the Archimedean Property, the Bolzano<ndash/>Weierstrass
       Theorem, the Intermediate Value Theorem, the Extreme Value Theorem)
       ultimately rests on completeness. When you reach those theorems in
       MAT 5610, you will see the Completeness Axiom invoked again and
@@ -166,17 +166,17 @@
     <p>
       <alert>A note on pacing.</alert>
       If you are coming in with prior real analysis experience, the
-      absolute value material in Section 1.7 will likely feel familiar.
+      absolute value material in Zorn &#xa7;1.7 will likely feel familiar.
       Spend a few minutes on the study guide questions to confirm fluency,
       then focus your attention on the
-      <m>\varepsilon</m>-characterization of the supremum (Section 1.8)
+      <m>\varepsilon</m>-characterization of the supremum (Zorn &#xa7;1.8)
       and its use in proofs. That characterization is the technical heart
       of this module and the template for arguments you will write in
       every subsequent module. If analysis-style proofs are newer territory
-      for you, budget extra time on Section 1.7 and the Worked Examples
-      before moving to the practice set. The triangle inequality proof
+      for you, budget extra time on Zorn &#xa7;1.7 and the Worked Examples
+      before moving to the practice set. The Triangle Inequality proof
       in the Worked Examples is worth reading carefully regardless of
-      background&#x2014;the technique of adding and comparing inequalities
+      background: the technique of adding and comparing inequalities
       is used constantly.
     </p>
   </paragraphs>
@@ -210,7 +210,7 @@
       <row>
         <cell><p>Companion Reading and Study Guide</p></cell>
         <cell><p>50 min</p></cell>
-        <cell><p>Zorn &#xa7;1.7&#x2013;1.9 with guided questions</p></cell>
+        <cell><p>Zorn &#xa7;1.7<ndash/>1.9 with guided questions</p></cell>
       </row>
       <row>
         <cell><p>Worked Examples</p></cell>

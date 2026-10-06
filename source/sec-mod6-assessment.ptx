@@ -27,10 +27,12 @@
       students on the written proofs or use AI writing tools to draft
       your arguments.
     </p>
+  <paragraphs xml:id="par-mod6-as-part1">
+    <title>Part 1: An <m>\varepsilon</m>-<m>\delta</m> Limit Proof (Required)</title>
     <p>
-      <alert>Part 1: An <m>\varepsilon</m>-<m>\delta</m> Limit Proof (Required)</alert>
-      (Estimated time: 15 minutes)
+      Estimated time: 15 minutes.
     </p>
+  </paragraphs>
   <exercise xml:id="ex-mod6-as-1">
     <title>Proving a Limit from the Definition</title>
     <statement>
@@ -65,10 +67,12 @@
   </exercise>
 
   <!-- ============================================================ -->
+  <paragraphs xml:id="par-mod6-as-part2">
+    <title>Part 2: Uniform Continuity (Required)</title>
     <p>
-      <alert>Part 2: Uniform Continuity (Required)</alert>
-      (Estimated time: 20 minutes)
+      Estimated time: 20 minutes.
     </p>
+  </paragraphs>
   <exercise xml:id="ex-mod6-as-2">
     <title>Proving Uniform Continuity</title>
     <statement>
@@ -109,16 +113,18 @@
   </exercise>
 
   <!-- ============================================================ -->
+  <paragraphs xml:id="par-mod6-as-part3">
+    <title>Part 3: Reflection</title>
     <p>
-      <alert>Part 3: Reflection</alert>
-      (Estimated time: 5 minutes)
+      Estimated time: 5 minutes.
     </p>
     <p>
-      Write 3&#x2013;5 sentences for each question. These are graded
+      Write 3<ndash/>5 sentences for each question. These are graded
       for thoughtfulness, not for mathematical correctness.
     </p>
+  </paragraphs>
   <exercise xml:id="ex-mod6-as-r1">
-    <title>The Sequence&#x2013;Function Parallel</title>
+    <title>The Sequence<ndash/>Function Parallel</title>
     <statement>
       <p>
         Compare the <m>\varepsilon</m>-<m>\delta</m> definition of
@@ -134,7 +140,7 @@
     <title>Bauldry's Presentation</title>
     <statement>
       <p>
-        In the Bridge Reading you compared Zorn &#xa7;3.1&#x2013;3.4
+        In the Bridge Reading you compared Zorn &#xa7;3.1<ndash/>3.4
         to Bauldry &#xa7;2.2. Identify one place where Bauldry's
         treatment in &#xa7;2.2 is more compressed than Zorn's. What
         background knowledge does Bauldry assume that Zorn develops
@@ -158,15 +164,12 @@
       </p>
     </statement>
   </exercise>
-    <p>
-      <alert>Assessment Rubric (Informational)</alert>
-    </p>
+  <paragraphs xml:id="par-mod6-as-rubric">
+    <title>Assessment Rubric (Informational)</title>
     <p>
       The following rubric describes how submitted proofs will be
       evaluated.
     </p>
-  <paragraphs xml:id="par-mod6-as-rubric">
-    <title>Grading Criteria</title>
     <tabular halign="left">
       <col width="14%"/>
       <col width="29%"/>

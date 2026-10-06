@@ -5,7 +5,7 @@
     <ul>
       <li>
         <p>
-          Define <em>pointwise convergence</em> of a sequence of functions
+          Define <term>pointwise convergence</term> of a sequence of functions
           <m>(f_n)</m> to a function <m>f</m> on a set <m>S</m>: for each
           fixed <m>x \in S</m>, the sequence of numbers <m>f_n(x)</m> converges
           to <m>f(x)</m>.
@@ -13,7 +13,7 @@
       </li>
       <li>
         <p>
-          Define <em>uniform convergence</em>: <m>f_n \to f</m> uniformly on
+          Define <term>uniform convergence</term>: <m>f_n \to f</m> uniformly on
           <m>S</m> if <m>\forall \varepsilon \gt 0\ \exists N\ \forall n \geq N\
           \forall x \in S:\ |f_n(x) - f(x)| \lt \varepsilon</m>, and explain
           why the single <m>N</m> working for all <m>x</m> simultaneously is
@@ -87,14 +87,14 @@
     </p>
     <p>
       The central discovery of this module is that the answer depends entirely
-      on <em>how</em> the convergence happens. Pointwise convergence&#x2014;where
+      on <em>how</em> the convergence happens. Pointwise convergence, where
       each value <m>f_n(x)</m> converges to <m>f(x)</m> separately for each
-      <m>x</m>&#x2014;is too weak to preserve continuity, and too weak to
+      <m>x</m>, is too weak to preserve continuity, and too weak to
       guarantee that the integral of the limit equals the limit of the
       integrals. Uniform convergence, where a
       single <m>N</m> controls the approximation for <em>all</em> <m>x</m>
       simultaneously, is strong enough. The difference between these two
-      notions is exactly a quantifier swap&#x2014;the same kind of swap that
+      notions is exactly a quantifier swap, the same kind of swap that
       distinguished continuity from uniform continuity in <xref ref="ch-mod6"/>.
     </p>
     <p>
@@ -166,7 +166,7 @@
     <title>Your Background</title>
     <statement>
       <p>
-        Have you seen uniform convergence before&#x2014;either in a real
+        Have you seen uniform convergence before, either in a real
         analysis course or in a complex analysis or differential equations
         course? If so, describe your prior exposure. If not, what feels most
         unfamiliar about the definition you just read?
@@ -181,7 +181,7 @@
     <p>
       Uniform convergence is, by consensus, the hardest conceptual leap in
       undergraduate real analysis. The definition looks nearly identical to
-      pointwise convergence&#x2014;the only change is a quantifier swap&#x2014;but
+      pointwise convergence (the only change is a quantifier swap), but
       its consequences are profound. My recommendation: before watching the
       videos, write out the two definitions side by side with the quantifiers
       spelled out explicitly, and circle the one symbol (<m>\exists N</m>)
@@ -199,7 +199,7 @@
       extended to functions (Modules
       <xref ref="ch-mod6" text="custom">6</xref> through <xref ref="ch-mod8" text="custom">8</xref>),
       and now we ask what happens
-      to all those properties&#x2014;continuity, integrability&#x2014;when
+      to all those properties (continuity, integrability) when
       functions themselves vary. The answer is: they survive under uniform
       convergence. This is the organizing principle of MAT 5610's treatment
       of function spaces.
@@ -212,7 +212,7 @@
       <alert>A note on pacing.</alert>
       If you are coming in with prior real analysis experience, the definitions
       here will be familiar, but push yourself to prove the theorems rather
-      than just recall them&#x2014;the Module Assessment asks for a proof of
+      than just recall them. The Module Assessment asks for a proof of
       the continuity theorem and a complete analysis of a sequence that does
       not converge uniformly, and writing them cleanly requires internalizing
       the <m>3\varepsilon</m> argument structure and the sup-norm criterion.

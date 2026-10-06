@@ -21,7 +21,7 @@
   ============================================================ -->
 
   <paragraphs xml:id="par-mod2-sg-17-intro">
-    <title>Section 1.7: Absolute Values (Zorn pp. 62&#x2013;65)</title>
+    <title>Section 1.7: Absolute Values (Zorn pp. 62<ndash/>65)</title>
     <p>
       This section introduces absolute value as a distance function and
       establishes the properties you will use in every subsequent module.
@@ -120,7 +120,7 @@
         <m>|a - b|</m> and <m>|b - c|</m>.
       </p>
       <p>
-        This result is sometimes called the <em>metric inequality</em>
+        This result is sometimes called the <term>metric inequality</term>
         for <m>\R</m>: the distance from <m>a</m> to <m>c</m> is at
         most the sum of the distances from <m>a</m> to <m>b</m> and
         from <m>b</m> to <m>c</m>.
@@ -140,7 +140,7 @@
   ============================================================ -->
 
   <paragraphs xml:id="par-mod2-sg-18-intro">
-    <title>Section 1.8: Bounds (Zorn pp. 67&#x2013;73)</title>
+    <title>Section 1.8: Bounds (Zorn pp. 67<ndash/>73)</title>
     <p>
       This section introduces the vocabulary of upper and lower bounds
       and defines the supremum (least upper bound) and infimum
@@ -254,17 +254,17 @@
   ============================================================ -->
 
   <paragraphs xml:id="par-mod2-sg-19-intro">
-    <title>Section 1.9: Completeness (Zorn pp. 74&#x2013;82)</title>
+    <title>Section 1.9: Completeness (Zorn pp. 74<ndash/>82)</title>
     <p>
       Section 1.9 delivers the central axiom of real analysis. Read
       this section carefully. The key question to keep in mind is:
-      <em>what would go wrong if we tried to do analysis in
+      <em>what would go wrong if you tried to do analysis in
       <m>\Q</m> instead of <m>\R</m>?</em>
     </p>
   </paragraphs>
 
   <exercise xml:id="ex-mod2-sg-19-1">
-    <title>Why <m>\Q</m> is Incomplete</title>
+    <title>Why <m>\Q</m> Is Incomplete</title>
     <statement>
       <p>
         Consider the set <m>T = \{x \in \Q : x^2 \lt 2\}</m>.
@@ -277,7 +277,7 @@
             Explain why <m>T</m> has no supremum <em>in <m>\Q</m></em>.
             (Hint: whatever rational upper bound you propose, you can
             always find a closer rational that is still above
-            <m>\sqrt{2}</m>&#x2014;or use the fact that
+            <m>\sqrt{2}</m>; alternatively, use the fact that
             <m>\sqrt{2} \notin \Q</m> directly.)
           </li>
           <li>
@@ -360,7 +360,7 @@
         <m>1/\varepsilon</m>.)
       </p>
       <p>
-        Why will this fact be useful when we work with sequences in
+        Why will this fact be useful when you work with sequences in
         <xref ref="ch-mod4"/>?
       </p>
     </statement>
@@ -369,7 +369,7 @@
         By the Archimedean Property applied to <m>x = 1/\varepsilon</m>,
         there exists <m>n \in \N</m> with <m>n \gt 1/\varepsilon</m>.
         Since <m>n \gt 0</m>, this gives <m>1/n \lt \varepsilon</m>.
-        In <xref ref="ch-mod4"/>, this will allow us to find, for any
+        In <xref ref="ch-mod4"/>, this will allow you to find, for any
         <m>\varepsilon \gt 0</m>, an index <m>N</m> beyond which
         terms of sequences like <m>1/n</m> lie within <m>\varepsilon</m>
         of their limit.

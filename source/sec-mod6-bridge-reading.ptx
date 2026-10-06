@@ -16,14 +16,14 @@
       Read &#xa7;1.2 first as a review and orientation; then read
       &#xa7;2.2 as a preview of where the material is going. Focus
       especially on how Bauldry's &#xa7;2.2 assumes more background and
-      moves faster than Zorn &#xa7;3.1&#x2013;3.4.
+      moves faster than Zorn &#xa7;3.1<ndash/>3.4.
     </p>
   <!-- ============================================================
        PART 1: BAULDRY SECTION 1.2
   ============================================================ -->
 
   <paragraphs xml:id="par-mod6-br-12">
-    <title>Bauldry &#xa7;1.2 &#x2014; Continuous Functions (informal)</title>
+    <title>Bauldry &#xa7;1.2: Continuous Functions (informal)</title>
     <p>
       Section 1.2 reviews the main results about continuity in an
       informal calculus-style presentation: limits, the definition of
@@ -89,7 +89,7 @@
             more informally?
           </li>
           <li>
-            Does Bauldry state the Heine&#x2013;Cantor theorem in
+            Does Bauldry state the Heine<ndash/>Cantor Theorem in
             &#xa7;1.2? If so, what name does he use for it?
           </li>
         </ol>
@@ -102,13 +102,13 @@
   ============================================================ -->
 
   <paragraphs xml:id="par-mod6-br-22">
-    <title>Bauldry &#xa7;2.2 &#x2014; Limits and Continuity (rigorous)</title>
+    <title>Bauldry &#xa7;2.2: Limits and Continuity (rigorous)</title>
     <p>
       Section 2.2 is the version of this material you will encounter
       in MAT 5610. It opens with the formal
       <m>\varepsilon</m>-<m>\delta</m> definition, develops the
       sequential characterization, and proves the main theorems
-      (IVT, EVT, and Heine&#x2013;Cantor). The presentation is more
+      (IVT, EVT, and Heine<ndash/>Cantor). The presentation is more
       compressed than Zorn; Bauldry assumes you are already fluent with
       the <m>\varepsilon</m>-<m>N</m> machinery.
     </p>
@@ -163,11 +163,11 @@
   </exercise>
 
   <exercise xml:id="ex-mod6-br-6">
-    <title>Heine&#x2013;Cantor in Bauldry &#xa7;2.2</title>
+    <title>Heine<ndash/>Cantor in Bauldry &#xa7;2.2</title>
     <statement>
       <p>
         Find the theorem in &#xa7;2.2 that corresponds to the
-        Heine&#x2013;Cantor theorem (continuous on a compact set implies
+        Heine<ndash/>Cantor Theorem (continuous on a compact set implies
         uniformly continuous).
         <ol marker="(a)">
           <li>
@@ -227,7 +227,7 @@
           </li>
           <li>
             How does compactness appear as a hypothesis in the theorems
-            you have read in &#xa7;2.2 (EVT, Heine&#x2013;Cantor)?
+            you have read in &#xa7;2.2 (EVT, Heine<ndash/>Cantor)?
             Why can these theorems fail on non-compact sets?
           </li>
         </ol>

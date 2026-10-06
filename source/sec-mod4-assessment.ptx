@@ -33,14 +33,16 @@
       students on the written proofs or use AI writing tools to draft
       your arguments.
     </p>
+  <paragraphs xml:id="par-mod4-as-part1">
+    <title>Part 1: Core Proof (Required)</title>
     <p>
-      <alert>Part 1: Core Proof (Required)</alert>
-      (Estimated time: 25 minutes)
+      Estimated time: 25 minutes.
     </p>
     <p>
       Consider the sequence defined by
       <md>a_n = \frac{4n + 7}{2n + 5}.</md>
     </p>
+  </paragraphs>
 
   <exercise xml:id="ex-mod4-as-1a">
     <title>Conjecturing the Limit</title>
@@ -57,9 +59,9 @@
     </statement>
     <hint>
       <p>
-        Divide numerator and denominator by <m>n</m>:
-        <m>a_n = (4 + 7/n)/(2 + 5/n)</m>. Each of <m>7/n</m> and
-        <m>5/n</m> tends to 0.
+        Divide the numerator and the denominator by the highest power
+        of <m>n</m> that appears, and ask what each resulting term does
+        as <m>n</m> grows.
       </p>
     </hint>
   </exercise>
@@ -95,14 +97,12 @@
     </statement>
     <hint>
       <p>
-        A direct calculation gives
-        <md>|a_n - 2| = \left|\frac{4n + 7 - 2(2n + 5)}{2n + 5}\right|
-        = \frac{3}{2n + 5}.</md>
-        Requiring <m>3/(2n + 5) \lt \varepsilon</m> is equivalent to
-        <m>n \gt (3/\varepsilon - 5)/2</m>. A slightly cleaner choice:
-        since <m>2n + 5 \gt n</m> for all <m>n \in \N</m>, we have
-        <m>|a_n - 2| \lt 3/n</m>, so it is enough to require
-        <m>n \gt 3/\varepsilon</m>.
+        After you combine <m>a_n - 2</m> over a common denominator,
+        you may solve the inequality for <m>n</m> exactly, or first
+        replace the denominator by a smaller, simpler positive expression in
+        <m>n</m>. The second route gives a larger but simpler upper
+        bound for <m>|a_n - 2|</m>, and an <m>N</m> that is easier to
+        write down.
       </p>
     </hint>
   </exercise>
@@ -120,9 +120,10 @@
 
   <!-- ============================================================ -->
 
+  <paragraphs xml:id="par-mod4-as-part2">
+    <title>Part 2: Proof Choice (Required; Choose One)</title>
     <p>
-      <alert>Part 2: Proof Choice (Required — Choose One)</alert>
-      (Estimated time: 15 minutes)
+      Estimated time: 15 minutes.
     </p>
     <p>
       Choose <em>one</em> of the following two proof problems.
@@ -130,6 +131,7 @@
       the techniques required. Label your submission clearly with
       <q>Option A</q> or <q>Option B.</q>
     </p>
+  </paragraphs>
 
   <exercise xml:id="ex-mod4-as-2a">
     <title>Option A (Standard): A Limit via the Algebra of Limits</title>
@@ -186,26 +188,28 @@
     </statement>
     <hint>
       <p>
-        Apply the convergence definition with tolerance
-        <m>\varepsilon/2</m> to obtain <m>N \in \N</m> with
-        <m>|a_k - L| \lt \varepsilon/2</m> for <m>k \geq N</m>. Then
-        for <m>m, n \geq N</m>, write
-        <m>a_m - a_n = (a_m - L) + (L - a_n)</m> and apply the
-        Triangle Inequality.
+        The convergence hypothesis controls how far each term is from
+        <m>L</m>, but the goal concerns the distance between two
+        terms. Rewrite <m>a_m - a_n</m> so that <m>L</m> appears, then
+        decide what tolerance to request from the convergence
+        definition so that your two estimates add up to less than
+        <m>\varepsilon</m>.
       </p>
     </hint>
   </exercise>
 
   <!-- ============================================================ -->
 
+  <paragraphs xml:id="par-mod4-as-part3">
+    <title>Part 3: Reflection</title>
     <p>
-      <alert>Part 3: Reflection</alert>
-      (Estimated time: 5 minutes)
+      Estimated time: 5 minutes.
     </p>
     <p>
-      Write 3&#x2013;5 sentences for each question. These are graded
+      Write 3<ndash/>5 sentences for each question. These are graded
       for thoughtfulness, not for mathematical correctness.
     </p>
+  </paragraphs>
 
   <exercise xml:id="ex-mod4-as-r1">
     <title>Quantifier Alternation</title>
@@ -254,16 +258,12 @@
     </statement>
   </exercise>
 
-    <p>
-      <alert>Assessment Rubric (Informational)</alert>
-    </p>
+  <paragraphs xml:id="par-mod4-as-rubric">
+    <title>Assessment Rubric (Informational)</title>
     <p>
       The following rubric describes how submitted proofs will be
       evaluated.
     </p>
-
-  <paragraphs xml:id="par-mod4-as-rubric">
-    <title>Grading Criteria</title>
     <tabular halign="left">
       <col width="14%"/>
       <col width="29%"/>

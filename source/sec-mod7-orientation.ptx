@@ -29,7 +29,7 @@
       </li>
       <li>
         <p>
-          State and prove the Mean Value Theorem (using Rolle's Theorem).
+          State and prove the Mean Value Theorem (MVT) using Rolle's Theorem.
         </p>
       </li>
       <li>
@@ -51,22 +51,22 @@
 
   <!-- ============================================================ -->
     <p>
-      Differentiation is where calculus begins, but what we do here is
+      Differentiation is where calculus begins, but what you do here is
       different from what you did in Calculus I: every statement becomes
       a theorem to be proved, not a rule to be applied. The derivative,
       which you once computed mechanically via the power rule, is now
       defined as a specific limit, and every differentiation rule
-      &#x2014;sum, product, chain&#x2014;must be deduced from that
+      (sum, product, chain) must be deduced from that
       definition using the limit laws of <xref ref="ch-mod6"/>.
     </p>
     <p>
-      The central result of this module&#x2014;the Mean Value
-      Theorem&#x2014;is one of the most-used theorems in all of
+      The central result of this module, the Mean Value
+      Theorem, is one of the most-used theorems in all of
       MAT 5610. It connects the local (the derivative at a point) to the
       global (values of <m>f</m> on an interval). Once you have the MVT,
       you can bound how much a function changes by bounding its
-      derivative&#x2014;an argument form that appears in the proofs of
-      the Fundamental Theorem of Calculus, Taylor's theorem, error
+      derivative. This argument form appears in the proofs of
+      the Fundamental Theorem of Calculus, Taylor's Theorem, error
       estimates for numerical methods, and many results in Bauldry
       Chapter 2.
     </p>
@@ -133,7 +133,7 @@
     <title>A Note from the Instructor</title>
     <p>
       The most important thing to take away from this module is the Mean
-      Value Theorem&#x2014;not as a formula but as an <em>argument
+      Value Theorem, not as a formula but as an <em>argument
       form</em>: to bound how much <m>f</m> can change on an interval,
       bound <m>f'</m> on that interval. This is a template you will use
       dozens of times in MAT 5610. The proof of Rolle's Theorem (which
@@ -144,11 +144,11 @@
     </p>
     <p>
       If you found <xref ref="ch-mod6"/> challenging, revisit the
-      definition of continuity and the Extreme Value Theorem before
+      definition of continuity and the Extreme Value Theorem (EVT) before
       starting this module: differentiability is a <em>stronger</em>
       condition than continuity, and Rolle's Theorem depends critically
       on the EVT. If you are solid on continuity, this module should
-      feel like a natural next step&#x2014;the definitions and proof
+      feel like a natural next step: the definitions and proof
       strategies are of the same character.
     </p>
   </paragraphs>
@@ -159,9 +159,9 @@
       <alert>A note on pacing.</alert>
       If you are coming in with prior real analysis experience, the
       definition of the derivative and the basic rules will likely feel
-      very familiar. Skim Zorn &#xa7;4.1&#x2013;4.2 quickly, focus
-      your attention on &#xa7;4.3 (the MVT and Taylor's theorem), and
-      work the Bridge Reading in Bauldry &#xa7;2.3 carefully&#x2014;pay
+      very familiar. Skim Zorn &#xa7;4.1<ndash/>4.2 quickly, focus
+      your attention on &#xa7;4.3 (the MVT and Taylor's Theorem), and
+      work the Bridge Reading in Bauldry &#xa7;2.3 carefully. Pay
       particular attention to how Bauldry uses the MVT in the results
       that follow it, since those are the results MAT 5610 will develop.
       If proof-based analysis is newer to you, work carefully through
@@ -191,7 +191,7 @@
         <cell><p>Goals, self-assessment, context</p></cell>
       </row>
       <row>
-        <cell><p>Video 1: The Derivative: Definition and Rules</p></cell>
+        <cell><p>Video 1: The Derivative (Definition and Rules)</p></cell>
         <cell><p>9 min</p></cell>
         <cell><p>Core instruction via lightboard</p></cell>
       </row>
@@ -203,7 +203,7 @@
       <row>
         <cell><p>Companion Reading and Study Guide</p></cell>
         <cell><p>75 min</p></cell>
-        <cell><p>Zorn &#xa7;4.1&#x2013;4.3 with guided questions</p></cell>
+        <cell><p>Zorn &#xa7;4.1<ndash/>4.3 with guided questions</p></cell>
       </row>
       <row>
         <cell><p>Worked Examples</p></cell>

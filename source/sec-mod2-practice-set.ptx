@@ -12,7 +12,7 @@
       These problems are not submitted, but you should write out
       complete solutions. For any problem that asks you to
       <em>prove</em> something, apply the standards from the Worked
-      Examples: complete sentences, explicit quantifiers, every step
+      Examples: complete sentences, explicit quantifiers, and every step
       justified.
     </p>
 
@@ -159,7 +159,7 @@
       <p>
         Prove that for any <m>a, b, c \in \R</m>,
         <md>|a - c| \leq |a - b| + |b - c|.</md>
-        This is sometimes called the <em>metric inequality</em> for
+        This is sometimes called the metric inequality for
         <m>\R</m>: the distance from <m>a</m> to <m>c</m> is at most
         the sum of the distances from <m>a</m> to <m>b</m> and from
         <m>b</m> to <m>c</m>.
@@ -256,7 +256,7 @@
   <paragraphs xml:id="par-mod2-ps-c">
     <title>Challenge Problems</title>
     <p>
-      These problems extend the module's ideas: uniqueness of the supremum,
+      These problems extend the module's ideas: uniqueness of the supremum
       and a derivation of the Archimedean Property from the Completeness
       Axiom.
     </p>

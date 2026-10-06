@@ -33,9 +33,10 @@
           students on the written proofs or use AI writing tools to draft
           your arguments.
         </p>
+      <paragraphs xml:id="par-mod1-as-part1">
+        <title>Part 1: Core Proof (Required)</title>
         <p>
-          <alert>Part 1: Core Proof (Required)</alert>
-          (Estimated time: 20 minutes)
+          Estimated time: 20 minutes.
         </p>
         <p>
           Recall the definition of sequence convergence:
@@ -45,6 +46,7 @@
             \text{ s.t. } \forall n \in \N,\;\; n \geq N \Rightarrow |a_n - L| \lt \varepsilon.
           </md>
         </p>
+      </paragraphs>
 
       <exercise xml:id="ex-mod1-as-1a">
         <title>Negating the Convergence Definition</title>
@@ -94,7 +96,7 @@
             In the scratch work, write <m>a_n - 2</m> as a single fraction
             before taking the absolute value, then ask how large <m>n</m>
             must be. In the formal proof, say which form of the Archimedean
-            property (see
+            Property (see
             <xref ref="par-mod1-sg-archimedean" text="custom">the three forms in the Study Guide</xref>,
             or Bauldry's Corollary 2.4, p. 48) guarantees that the
             <m>N</m> you choose exists in <m>\N</m>.
@@ -118,9 +120,10 @@
 
     <!-- ============================================================ -->
 
+      <paragraphs xml:id="par-mod1-as-part2">
+        <title>Part 2: Proof Choice (Required; Choose One)</title>
         <p>
-          <alert>Part 2: Proof Choice (Required — Choose One)</alert>
-          (Estimated time: 15 minutes)
+          Estimated time: 15 minutes.
         </p>
         <p>
           Choose <em>one</em> of the following two proof problems.
@@ -129,6 +132,7 @@
           Label your submission clearly with <q>Option A</q> or
           <q>Option B.</q>
         </p>
+      </paragraphs>
 
       <exercise xml:id="ex-mod1-as-2a">
         <title>Option A (Standard): A Divisibility Proof by Induction</title>
@@ -194,17 +198,19 @@
 
     <!-- ============================================================ -->
 
+      <paragraphs xml:id="par-mod1-as-part3">
+        <title>Part 3: Reflection</title>
         <p>
-          <alert>Part 3: Reflection</alert>
-          (Estimated time: 5 minutes)
+          Estimated time: 5 minutes.
         </p>
         <p>
           The following questions are short-answer and are not graded for
-          mathematical correctness — they are graded for thoughtfulness
-          and specificity. Write 3&#x2013;5 sentences for each. These
+          mathematical correctness; they are graded for thoughtfulness
+          and specificity. Write 3<ndash/>5 sentences for each. These
           reflections help the instructor understand where you are and
           adapt the course accordingly.
         </p>
+      </paragraphs>
 
       <exercise xml:id="ex-mod1-as-r1">
         <title>Proof Process Reflection</title>
@@ -247,17 +253,13 @@
         </statement>
       </exercise>
 
-        <p>
-          <alert>Assessment Rubric (Informational)</alert>
-        </p>
+      <paragraphs xml:id="par-mod1-as-rubric">
+        <title>Assessment Rubric (Informational)</title>
         <p>
           The following rubric describes how your submitted proofs will
           be evaluated. Reading it before you write will help you focus
           your efforts.
         </p>
-
-      <paragraphs xml:id="par-mod1-as-rubric">
-        <title>Grading Criteria</title>
         <tabular halign="left">
           <col width="14%"/>
           <col width="29%"/>
@@ -289,7 +291,7 @@
           </row>
           <row>
             <cell><p><alert>Required structure</alert></p></cell>
-            <cell><p>In <xref ref="ex-mod1-as-1b"/>, the scratch work is labeled, comes before the proof, and finds <m>N</m> with reasons; the formal proof opens <q>Let <m>\varepsilon \gt 0</m> be given. Choose <m>N = \ldots</m></q> and uses that <m>N</m>. In Option A, the base case, induction hypothesis and inductive step are labeled</p></cell>
+            <cell><p>In <xref ref="ex-mod1-as-1b"/>, the scratch work is labeled, comes before the proof, and finds <m>N</m> with reasons; the formal proof opens <q>Let <m>\varepsilon \gt 0</m> be given. Choose <m>N = \ldots</m></q> and uses that <m>N</m>. In Option A, the base case, induction hypothesis, and inductive step are labeled</p></cell>
             <cell><p>Scratch work is present but unlabeled or not connected to the <m>N</m> chosen, or the prescribed opening or a required label is missing</p></cell>
             <cell><p>No scratch work, or the proof does not follow the required structure</p></cell>
           </row>

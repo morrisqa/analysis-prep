@@ -15,7 +15,7 @@
     <p>
       Read each section before working its questions. Because many of
       the tests may be familiar from a calculus course, pay particular
-      attention to the <em>statements</em> and <em>proofs</em>&#x2014;not
+      attention to the <em>statements</em> and <em>proofs</em>, not
       just the recipes. The recurring theme, which you should be able
       to articulate by the end of this guide, is that every test is
       ultimately a statement about the partial-sum sequence <m>(S_n)</m>
@@ -27,11 +27,11 @@
   ============================================================ -->
 
   <paragraphs xml:id="par-mod5-sg-25-intro">
-    <title>Section 2.5: Series 101 — Basic Ideas (Zorn pp. 119&#x2013;134)</title>
+    <title>Section 2.5: <q>Series 101: Basic Ideas</q> (Zorn pp. 119<ndash/>134)</title>
     <p>
       Read Zorn's Definition 2.22 (series convergence) very carefully. This
       is the definition on which all of Module 5 rests. Notice that it
-      is not a new kind of limit&#x2014;it is the old <xref ref="ch-mod4"/> limit,
+      is not a new kind of limit; it is the old <xref ref="ch-mod4"/> limit,
       applied to the partial-sum sequence.
     </p>
   </paragraphs>
@@ -64,8 +64,8 @@
       <p>
         (a) When the series converges, <m>\sum_{k=1}^{\infty} a_k</m>
         denotes the real number <m>\lim_{n \to \infty} S_n</m>. When
-        it diverges, the symbol has no numerical value (though we
-        sometimes write <m>\sum a_k = \infty</m> loosely for
+        it diverges, the symbol has no numerical value (though
+        <m>\sum a_k = \infty</m> is sometimes written loosely for
         divergence to infinity).
         (b) You must show that the partial-sum sequence <m>(S_n)</m>
         converges to <m>S</m> in the <m>\varepsilon</m>-<m>N</m> sense:
@@ -111,7 +111,7 @@
         <m>ar^n</m> to both sides and simplify to get the formula
         with <m>n + 1</m> in place of <m>n</m>.
         (b) For <m>|r| \lt 1</m>, the sequence <m>(|r|^n)</m> is
-        decreasing and bounded below by 0; MCT gives a limit <m>L \geq 0</m>.
+        decreasing and bounded below by 0; the Monotone Convergence Theorem (MCT) gives a limit <m>L \geq 0</m>.
         Since <m>|r|^{n+1} = |r| \cdot |r|^n</m>, passing to the limit
         on both sides gives <m>L = |r| \cdot L</m>, so
         <m>L (1 - |r|) = 0</m>, so <m>L = 0</m>. Since
@@ -220,7 +220,7 @@
   ============================================================ -->
 
   <paragraphs xml:id="par-mod5-sg-26-intro">
-    <title>Section 2.6: Series 102 — Testing for Convergence (Zorn pp. 134&#x2013;146)</title>
+    <title>Section 2.6: <q>Series 102: Testing for Convergence</q> (Zorn pp. 134<ndash/>146)</title>
     <p>
       Section 2.6 is a catalog of convergence tests. Read slowly,
       because this is where the recipes get proved. For each test,
@@ -305,7 +305,7 @@
       <p>
         Let <m>a_k = 1/(k^2 + k)</m> and <m>b_k = 1/k^2</m>. Then
         <m>a_k/b_k = k^2/(k^2 + k) = 1/(1 + 1/k) \to 1 \in (0, \infty)</m>
-        by the algebra of limits. Since <m>\sum 1/k^2</m> converges,
+        by the Algebra of Limits. Since <m>\sum 1/k^2</m> converges,
         Limit Comparison implies <m>\sum 1/(k^2 + k)</m> converges.
       </p>
     </answer>
@@ -451,7 +451,7 @@
     <p>
       The limit <m>k^{1/k} \to 1</m> does not follow from the Algebra
       of Limits alone, because the base and the exponent both change
-      with <m>k</m>. We prove it with <term>Bernoulli's inequality</term>
+      with <m>k</m>. We prove it with <term>Bernoulli's Inequality</term>
       (<xref ref="thm-mod5-bernoulli"/>).
     </p>
     <lemma xml:id="thm-mod5-bernoulli">
@@ -475,7 +475,7 @@
     </lemma>
     <p>
       Now let <m>h_k = k^{1/(2k)} - 1</m>, which
-      is at least 0 because <m>k \geq 1</m>. Bernoulli's inequality
+      is at least 0 because <m>k \geq 1</m>. Bernoulli's Inequality
       gives <m>\sqrt{k} = (1 + h_k)^k \geq 1 + k h_k</m>, so
       <md>0 \leq h_k \leq \frac{\sqrt{k} - 1}{k} \lt \frac{1}{\sqrt{k}}.</md>
       Hence <m>1 \leq k^{1/k} = (1 + h_k)^2 \lt (1 + 1/\sqrt{k})^2</m>.
@@ -512,14 +512,14 @@
     <statement>
       <p>
         Read Zorn's discussion of absolute convergence. A series
-        <m>\sum a_k</m> converges <em>absolutely</em> if the series
+        <m>\sum a_k</m> converges <term>absolutely</term> if the series
         <m>\sum |a_k|</m> of absolute values converges.
       </p>
       <p>
         The central theorem is: <em>absolute convergence implies
         convergence.</em> Outline the proof in two or three sentences.
         (Hint: use the Cauchy criterion for the partial sums
-        <m>(S_n)</m>, together with the triangle inequality applied
+        <m>(S_n)</m>, together with the Triangle Inequality applied
         to finite sums.)
       </p>
     </statement>
@@ -528,8 +528,8 @@
         Let <m>T_n = \sum_{k=1}^{n} |a_k|</m>. If <m>(T_n)</m>
         converges, it is Cauchy: for every <m>\varepsilon \gt 0</m>
         there exists <m>N</m> with <m>T_n - T_m = \sum_{k=m+1}^{n} |a_k|
-        \lt \varepsilon</m> for <m>n \gt m \geq N</m>. By the triangle
-        inequality, <m>|S_n - S_m| = \left|\sum_{k=m+1}^{n} a_k\right|
+        \lt \varepsilon</m> for <m>n \gt m \geq N</m>. By the Triangle
+        Inequality, <m>|S_n - S_m| = \left|\sum_{k=m+1}^{n} a_k\right|
         \leq \sum_{k=m+1}^{n} |a_k| \lt \varepsilon</m>, so <m>(S_n)</m>
         is Cauchy, and by Cauchy completeness of <m>\R</m> (<xref ref="ch-mod4"/>),
         <m>(S_n)</m> converges.

@@ -61,7 +61,7 @@
               <li>
                 <m>\forall \varepsilon \gt 0 \;\; \exists n \in \N
                 \text{ such that } \tfrac{1}{n} \lt \varepsilon</m>.
-                <em>True</em> (Archimedean property).
+                <em>True</em> (Archimedean Property).
               </li>
               <li>
                 <m>\exists n \in \N \text{ such that }
@@ -148,7 +148,7 @@
         <title>Archimedean Property in Symbols</title>
         <statement>
           <p>
-            Zorn gives an example of the Archimedean property using
+            Zorn gives an example of the Archimedean Property using
             quantifiers. Write it out in full symbolic form and explain
             in one sentence what it means. (You will prove this in <xref ref="ch-mod2"/>.)
           </p>
@@ -165,7 +165,7 @@
       <paragraphs xml:id="par-mod1-sg-archimedean">
         <title>Three Forms of the Archimedean Property</title>
         <p>
-          This module uses the Archimedean property in three forms:
+          This module uses the Archimedean Property in three forms:
           <ol marker="(i)">
             <li>
               <m>\forall x \in \R \;\; \exists n \in \N</m> such that
@@ -294,7 +294,7 @@
             <m>N = p_1 p_2 \cdots p_k + 1</m>. <alert>Contradiction:</alert>
             Every prime <m>p_i</m> divides <m>p_1 \cdots p_k</m>, so
             <m>p_i \nmid N</m> (it leaves remainder 1). But <m>N \gt 1</m>
-            must have some prime factor&#x2014;a prime not on our list. This
+            must have some prime factor, which is a prime not on our list. This
             contradicts the assumption that the list was complete.
           </p>
         </answer>
@@ -323,10 +323,10 @@
             <alert>Inductive step:</alert> Let <m>A</m> have <m>n+1</m>
             elements; pick any element <m>a \in A</m>. Every subset of
             <m>A</m> either contains <m>a</m> or does not. The subsets not
-            containing <m>a</m> are exactly the subsets of <m>A \setminus \{a\}</m>&#x2014;by
+            containing <m>a</m> are exactly the subsets of <m>A \setminus \{a\}</m>; by
             the induction hypothesis, there are <m>2^n</m> of these.
             The subsets containing <m>a</m> are obtained by adding <m>a</m>
-            to each subset of <m>A \setminus \{a\}</m>&#x2014;also <m>2^n</m>.
+            to each subset of <m>A \setminus \{a\}</m>, so there are also <m>2^n</m> of these.
             Total: <m>2 \cdot 2^n = 2^{n+1}</m>. <m>\square</m>
           </p>
         </answer>
@@ -419,14 +419,14 @@
     <!-- ============================================================ -->
 
       <paragraphs xml:id="par-mod1-sg-h2">
-        <title>Reading 3: Hirst Ch. 2, &#xa7;2.1&#x2013;2.2 and &#xa7;2.4 (Suggested time: 10 minutes)</title>
+        <title>Reading 3: Hirst Ch. 2, &#xa7;2.1<ndash/>2.2 and &#xa7;2.4 (Suggested time: 10 minutes)</title>
         <p>
           Hirst formalizes the components of mathematical statements:
           <term>predicates</term> (<m>P(x,y)</m>), <term>terms</term>,
           <term>connectives</term> (<m>\wedge, \vee, \to, \neg</m>), and
-          quantifiers. Focus on &#xa7;2.1&#x2013;2.2 (building blocks and
+          quantifiers. Focus on &#xa7;2.1<ndash/>2.2 (building blocks and
           translations) and &#xa7;2.4 (free and bound variables). Sections
-          2.6&#x2013;2.18 are for deeper optional study.
+          2.6<ndash/>2.18 are for deeper optional study.
         </p>
       </paragraphs>
 
@@ -435,7 +435,7 @@
         <statement>
           <p>
             In Hirst's notation, what is the difference between a
-            <term>predicate</term> and a <term>function</term>? Why does
+            predicate and a function? Why does
             this distinction matter for mathematical statements?
           </p>
         </statement>
@@ -443,7 +443,7 @@
           <p>
             In the text's setting, a <term>function</term> maps the universe
             to itself (e.g., <m>f(x) = x^2</m> maps reals to reals).
-            A <term>predicate</term> maps inputs to truth values&#x2014;it
+            A predicate maps inputs to truth values: it
             is a property that a term either satisfies or does not
             (e.g., <m>P(x) \equiv (x \gt 0)</m>). The distinction matters
             because a function builds an object (a term such as <m>f(x)</m>),
@@ -526,7 +526,7 @@
     <!-- ============================================================ -->
 
       <paragraphs xml:id="par-mod1-sg-h3">
-        <title>Reading 4: Hirst Ch. 3, &#xa7;3.5&#x2013;3.6 (Suggested time: 5 minutes)</title>
+        <title>Reading 4: Hirst Ch. 3, &#xa7;3.5<ndash/>3.6 (Suggested time: 5 minutes)</title>
         <p>
           Use this reading to see how Hirst presents proof strategies
           in a more formal framework. Pay particular attention to
@@ -539,8 +539,8 @@
         <title>Other Strategies</title>
         <statement>
           <p> Hirst &#xa7;3.6 lists strategies for proving
-            <term>existence</term>, <term>uniqueness</term>,
-            <term>iff statements</term>, and <term>equalities</term>.
+            existence, uniqueness,
+            iff statements, and equalities.
             Summarize each strategy in one sentence.
           </p>
         </statement>
@@ -558,8 +558,8 @@
               </li>
               <li>
                 <alert>Iff (biconditional):</alert> Prove both directions
-                separately&#x2014;<m>P \Rightarrow Q</m> and
-                <m>Q \Rightarrow P</m>&#x2014;each by any valid method.
+                separately (<m>P \Rightarrow Q</m> and
+                <m>Q \Rightarrow P</m>), each by any valid method.
               </li>
               <li>
                 <alert>Equalities:</alert> Show each side is <m>\leq</m>
@@ -733,7 +733,7 @@
               \exists \varepsilon \gt 0 \;\; \forall N \in \N,\;\;
               \exists n \geq N \text{ such that } |a_n - L| \geq \varepsilon.
             </md>
-            The formerly-free variable <m>L</m> becomes universally quantified
+            The formerly free variable <m>L</m> becomes universally quantified
             at the outermost level: for <em>every</em> candidate limit, the
             sequence fails to converge to it.
           </p>

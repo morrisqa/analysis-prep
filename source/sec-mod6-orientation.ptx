@@ -44,7 +44,7 @@
       <li>
         <p>
           Apply the Lipschitz condition as a sufficient condition for
-          uniform continuity; state the Heine&#x2013;Cantor theorem
+          uniform continuity; state the Heine<ndash/>Cantor Theorem
           (continuous on a compact set implies uniformly continuous)
           as a pointer to MAT 5610.
         </p>
@@ -60,8 +60,8 @@
       of a real variable. The central question changes from
       <q>what does <m>a_n</m> approach as <m>n \to \infty</m>?</q> to
       <q>what does <m>f(x)</m> approach as the real variable <m>x</m>
-      approaches a fixed value <m>a</m>?</q> The formal answer&#x2014;the
-      <m>\varepsilon</m>-<m>\delta</m> definition of a limit&#x2014;is
+      approaches a fixed value <m>a</m>?</q> The formal answer, the
+      <m>\varepsilon</m>-<m>\delta</m> definition of a limit, is
       structurally identical to the <m>\varepsilon</m>-<m>N</m> definition
       from <xref ref="ch-mod4"/>. The only change is that the index set is now a
       continuous interval of real numbers rather than the discrete set
@@ -69,17 +69,17 @@
       the videos is strongly recommended.
     </p>
     <p>
-      From limits we build continuity, and from continuity we reach
+      From limits you build continuity, and from continuity you reach
       two of the most important theorems in undergraduate analysis: the
       Intermediate Value Theorem and the Extreme Value Theorem. Both
       theorems rely, at their core, on the completeness of <m>\R</m>
       that was established in <xref ref="ch-mod2"/>. The module closes with
-      <em>uniform continuity</em>&#x2014;a strengthening of pointwise
+      <em>uniform continuity</em>, a strengthening of pointwise
       continuity that swaps the order of two quantifiers. This
       quantifier swap is subtle, and it matters: the proof that a
       continuous function on a closed bounded interval <m>[a, b]</m> is
       Riemann integrable (<xref ref="ch-mod8"/>)
-      first uses the Heine<ndash/>Cantor theorem to upgrade continuity
+      first uses the Heine<ndash/>Cantor Theorem to upgrade continuity
       on <m>[a, b]</m> to uniform continuity, and then relies on the
       single <m>\delta</m> that uniform continuity provides.
     </p>
@@ -191,14 +191,14 @@
       likely know the <m>\varepsilon</m>-<m>\delta</m> definition of a
       limit already. Skim Zorn &#xa7;3.1 quickly (confirm the definition
       matches what you remember), and spend your time instead on the
-      Heine&#x2013;Cantor theorem sketch in &#xa7;3.4 and on the
+      Heine<ndash/>Cantor Theorem sketch in &#xa7;3.4 and on the
       uniform continuity examples in the worked examples and practice
       set. If proof-based function limits are new to you, work slowly
       through <xref ref="ex-mod6-we-1"/>: read the scratch work, reproduce the
       <m>\delta</m>-finding algebra on your own paper, and only then read
       the formal proof. The most common mistake with <m>\varepsilon</m>-<m>\delta</m>
       proofs is writing the formal proof before doing the scratch work;
-      the scratch work is not optional, it is where you find
+      the scratch work is not optional: it is where you find
       <m>\delta</m>.
     </p>
   </paragraphs>
@@ -220,7 +220,7 @@
         <cell><p>Goals, self-assessment, context</p></cell>
       </row>
       <row>
-        <cell><p>Video 1: <m>\varepsilon</m>&#x2013;<m>\delta</m> Limits of Functions</p></cell>
+        <cell><p>Video 1: <m>\varepsilon</m>-<m>\delta</m> Limits of Functions</p></cell>
         <cell><p>9 min</p></cell>
         <cell><p>Core instruction via lightboard</p></cell>
       </row>
@@ -237,7 +237,7 @@
       <row>
         <cell><p>Companion Reading and Study Guide</p></cell>
         <cell><p>55 min</p></cell>
-        <cell><p>Zorn &#xa7;3.1&#x2013;3.4 with guided questions</p></cell>
+        <cell><p>Zorn &#xa7;3.1<ndash/>3.4 with guided questions</p></cell>
       </row>
       <row>
         <cell><p>Worked Examples</p></cell>

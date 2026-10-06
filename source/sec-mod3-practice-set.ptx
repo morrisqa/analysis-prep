@@ -13,7 +13,7 @@
       complete solutions. For any problem that asks you to
       <em>prove</em> something, apply the standards from the
       Worked Examples: complete sentences, quantifiers stated
-      explicitly, every step justified.
+      explicitly, and every step justified.
     </p>
 
   <!-- ============================================================
@@ -130,7 +130,7 @@
         (a) Bijective. Every real number has a unique real cube root;
         <m>f^{-1}(y) = \sqrt[3]{y}</m>.
         (b) Not injective (since <m>g(-1)=g(1)=1</m>), but surjective
-        (every nonneg. real is the square of its square root).
+        (every nonnegative real is the square of its square root).
         (c) Injective but not surjective: <m>1 \in \N</m> has no
         preimage (there is no <m>n \in \N</m> with <m>n+1=1</m>,
         since <m>n=0 \notin \N</m> by the convention <m>\N = \{1,2,\ldots\}</m>).
@@ -169,7 +169,7 @@
         uncountable by Zorn's Theorem 1.21. Cantor's diagonal argument in
         <xref ref="ex-mod3-ps-c2"/> also proves it directly.
         (e) Countably infinite (product of two countable sets by
-        Prop. 1.18).
+        Zorn's Proposition 1.18).
       </p>
     </answer>
   </exercise>
@@ -299,8 +299,8 @@
           </li>
           <li>
             Give a specific example showing that <m>g</m> need not be
-            injective: find sets <m>A</m>, <m>B</m>, <m>C</m> and
-            functions <m>f</m>, <m>g</m> such that <m>g \circ f</m>
+            injective: find sets <m>A</m>, <m>B</m>, and <m>C</m> and
+            functions <m>f</m> and <m>g</m> such that <m>g \circ f</m>
             is injective but <m>g</m> is not.
           </li>
           <li>
@@ -323,7 +323,7 @@
   </exercise>
 
   <exercise xml:id="ex-mod3-ps-c2">
-    <title><m>[\mathbf{C}]</m> Cantor's Diagonal Argument &#x2014; Guided Proof</title>
+    <title><m>[\mathbf{C}]</m> Cantor's Diagonal Argument: Guided Proof</title>
     <statement>
       <p>
         In this problem you will write a complete proof that the

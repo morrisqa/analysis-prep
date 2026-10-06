@@ -8,7 +8,7 @@
           This guide bridges Module 1 to the text you will be reading on
           day one of MAT 5610. The assignment is to read the opening six
           pages of Bauldry Chapter 2 (<q>Introduction to Real Analysis</q>),
-          specifically pages 45&#x2013;50, which cover the chapter
+          specifically pages 45<ndash/>50, which cover the chapter
           introduction and &#xa7;2.1 (Basic Topology of the Real
           Numbers) through the end of Theorem 2.7.
         </p>
@@ -26,7 +26,7 @@
         <p>
           <alert>How to read.</alert> Read with a pencil. Before answering
           each question below, mark up the Bauldry page: box the quantifiers,
-          underline hypotheses, circle conclusions. This active reading
+          underline hypotheses, and circle conclusions. This active reading
           habit is essential in MAT 5610.
         </p>
         <p>
@@ -37,14 +37,16 @@
           flag those terms and continue. The questions are designed so that
           you can answer them using the tools from Module 1 alone.
         </p>
+      <paragraphs xml:id="par-mod1-br-part1">
+        <title>Part 1: The Chapter Introduction (p. 45)</title>
         <p>
-          <alert>Part 1: The Chapter Introduction (p. 45)</alert>
-          (Suggested time: 5 minutes)
+          Suggested time: 5 minutes.
         </p>
         <p>
           Read the chapter introduction on page 45 (the paragraph beginning
           <q>We begin our study of real analysis&#x2026;</q>).
         </p>
+      </paragraphs>
 
       <exercise xml:id="ex-mod1-br-1">
         <title>Logical Development vs. Calculation</title>
@@ -73,17 +75,18 @@
         </statement>
       </exercise>
 
+      <paragraphs xml:id="par-mod1-br-part2">
+        <title>Part 2: Reading Definitions as Quantified Statements (pp. 46<ndash/>49)</title>
         <p>
-          <alert>Part 2: Reading Definitions as Quantified Statements
-          (pp. 46&#x2013;49)</alert>
-          (Suggested time: 15 minutes)
+          Suggested time: 15 minutes.
         </p>
         <p>
           The heart of this bridge reading is learning to parse Bauldry's
           definitions using the quantifier machinery from Module 1. Work
           through the questions below as you read the definitions on
-          pp. 46&#x2013;49.
+          pp. 46<ndash/>49.
         </p>
+      </paragraphs>
         <p>
           <alert>Bauldry's Definition 2.1: Least Upper Bound Property (p. 47).</alert>
           Bauldry writes: <q><m>U</m> has the least upper bound property
@@ -113,7 +116,7 @@
           <p>
             Write the <em>negation</em> of the Least Upper Bound Property.
             In plain English, what would it mean for a set <m>U</m>
-            to <em>fail</em> to have the least upper bound property?
+            to <em>fail</em> to have the Least Upper Bound Property?
             (Bauldry says <m>\Q</m> fails to have this property.
             Can you give a specific example?)
           </p>
@@ -141,7 +144,7 @@
             (b) the existential quantifier and its domain; (c) the
             predicate that must hold. Then compare your formula to the
             statement you translated in <xref ref="ex-mod1-we-1"/> (Archimedean
-            property). Are they the same statement?
+            Property). Are they the same statement?
           </p>
         </statement>
       </exercise>
@@ -173,7 +176,7 @@
         <statement>
           <p>
             Bauldry's Corollary 2.4 lists four equivalent forms of the Archimedean
-            property. For Item 3 (<m>\forall x \gt 0 \; \exists n \in
+            Property. For Item 3 (<m>\forall x \gt 0 \; \exists n \in
             \N</m> s.t. <m>1/n \lt x</m>):
             <ol marker="(a)">
               <li>
@@ -191,7 +194,7 @@
 
         <p>
           <alert>Bauldry's Definitions 2.2 and 2.3: Metric Spaces and Neighborhoods
-          (pp. 48&#x2013;49).</alert>
+          (pp. 48<ndash/>49).</alert>
           Bauldry defines a <term>metric space</term> as a set <m>X</m>
           with a distance function <m>d : X \times X \to \R</m> satisfying
           three properties, and then defines a <term>neighborhood</term>
@@ -210,7 +213,7 @@
               <li><m>d(x,z) \leq d(x,y) + d(y,z)</m></li>
             </ol>
             Each of these is implicitly universally quantified over all
-            <m>x, y, z \in X</m>. Write property 1 out in full quantifier
+            <m>x, y, z \in X</m>. Write property (a) out in full quantifier
             notation, including the <q>if and only if</q> structure.
             (You will need two implications; recall how iff proofs work
             from <xref ref="ex-mod1-we-5"/>.)
@@ -241,7 +244,7 @@
                 Bauldry calls a point <m>x \in E</m> that is not an
                 accumulation point of <m>E</m> an <term>isolated point</term>
                 of <m>E</m>. Does your negation match
-                Definition 2.3 item 8?
+                Definition 2.3, Item 8?
               </li>
             </ol>
           </p>
@@ -251,15 +254,17 @@
 
     <!-- ============================================================ -->
 
+      <paragraphs xml:id="par-mod1-br-part3">
+        <title>Part 3: Reading a Graduate-Level Proof (pp. 47<ndash/>50)</title>
         <p>
-          <alert>Part 3: Reading a Graduate-Level Proof (pp. 47&#x2013;50)</alert>
-          (Suggested time: 10 minutes)
+          Suggested time: 10 minutes.
         </p>
         <p>
           In MAT 5610 you will be expected to read proofs like those in
-          Bauldry and identify their logical structure. This section
+          Bauldry and identify their logical structure. This part
           practices exactly that.
         </p>
+      </paragraphs>
 
       <exercise xml:id="ex-mod1-br-10">
         <title>Bauldry's Theorem 2.2: Infimum Theorem</title>
@@ -337,9 +342,10 @@
         </statement>
       </exercise>
 
+      <paragraphs xml:id="par-mod1-br-part4">
+        <title>Part 4: Synthesis Reflection (pp. 45<ndash/>50)</title>
         <p>
-          <alert>Part 4: Synthesis Reflection (pp. 45&#x2013;50)</alert>
-          (Suggested time: 5 minutes)
+          Suggested time: 5 minutes.
         </p>
         <p>
           After completing the guided questions, take a few minutes for
@@ -347,6 +353,7 @@
           These reflections are not graded but will directly prepare you
           for the Module 1 assessment.
         </p>
+      </paragraphs>
 
       <exercise xml:id="ex-mod1-br-13">
         <title>Quantifiers Everywhere</title>
@@ -366,7 +373,7 @@
         <title>Flag an Unfamiliar Term</title>
         <statement>
           <p> Identify one definition or theorem from
-            pp. 45&#x2013;50 that you could not fully parse after
+            pp. 45<ndash/>50 that you could not fully parse after
             reading Module 1 alone. What specific term or concept
             is unfamiliar? (This is a preview of <xref ref="ch-mod2"/> and
             <xref ref="ch-mod3"/>;

@@ -3,12 +3,12 @@
   <p>Reading: Bauldry, Sections 1.3 and 2.3. Estimated time: 40 minutes.</p>
     <p>
       Every module ends with a bridge reading in Bauldry's
-      <em>Introduction to Real Analysis</em>. For this module the
+      <pubtitle>Introduction to Real Analysis</pubtitle>. For this module the
       reading covers two sections: &#xa7;1.3 (<q>Differentiation</q>)
       in Bauldry's informal Chapter 1, and &#xa7;2.3
       (<q>Differentiation</q>) in his rigorous Chapter 2.
       The pair gives you the same mathematical content at two levels
-      of formality&#x2014;exactly the shift you are preparing for in
+      of formality, which is exactly the shift you are preparing for in
       MAT 5610.
     </p>
     <p>
@@ -17,21 +17,21 @@
       with only minimal proof. Treat &#xa7;2.3 as a
       <em>preview</em> of MAT 5610 content: pay careful attention to
       how Bauldry uses the MVT as the engine for subsequent results.
-      Those results&#x2014;monotonicity, Taylor's theorem, connections
-      to the integral&#x2014;are the ones MAT 5610 will develop in detail.
+      Those results (monotonicity, Taylor's Theorem, connections
+      to the integral) are the ones MAT 5610 will develop in detail.
     </p>
     <p>
       <alert>For this module, read:</alert>
       Bauldry &#xa7;1.3 (informal differentiation review, approximately
-      pp. 9&#x2013;14) and &#xa7;2.3 (rigorous differentiation,
-      approximately pp. 59&#x2013;75).
+      pp. 9<ndash/>14) and &#xa7;2.3 (rigorous differentiation,
+      approximately pp. 59<ndash/>75).
     </p>
   <!-- ============================================================
-       PART 1: BAULDRY §1.3 — INFORMAL DIFFERENTIATION
+       PART 1: BAULDRY §1.3 (INFORMAL DIFFERENTIATION)
   ============================================================ -->
 
   <paragraphs xml:id="par-mod7-br-13">
-    <title>Bauldry §1.3 — Differentiation (informal)</title>
+    <title>Bauldry §1.3: Differentiation (informal)</title>
     <p>
       Section 1.3 presents differentiation as it would appear in a
       rigorous calculus course: rules stated clearly, applied to
@@ -88,11 +88,11 @@
   </exercise>
 
   <!-- ============================================================
-       PART 2: BAULDRY §2.3 — RIGOROUS DIFFERENTIATION
+       PART 2: BAULDRY §2.3 (RIGOROUS DIFFERENTIATION)
   ============================================================ -->
 
   <paragraphs xml:id="par-mod7-br-23">
-    <title>Bauldry §2.3 — Differentiation (rigorous)</title>
+    <title>Bauldry §2.3: Differentiation (rigorous)</title>
     <p>
       Section 2.3 is the version of differentiation theory you will
       see in MAT 5610. Read it carefully; it is more compressed than
@@ -160,7 +160,7 @@
           </li>
           <li>
             <xref ref="ch-mod8"/> will develop the Riemann integral and the
-            Fundamental Theorem of Calculus. Based on what you now
+            Fundamental Theorem of Calculus (FTC). Based on what you now
             know about the MVT, describe in two or three sentences
             how you expect the MVT to play a role in the proof of
             the FTC. (You do not need to know the proof; articulating

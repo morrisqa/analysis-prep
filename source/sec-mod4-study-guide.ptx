@@ -7,7 +7,7 @@
       Real Analysis</em>, which together cover the full story of
       convergent sequences of real numbers. The weight of the module
       falls on &#xa7;2.1 (the definition of convergence) and &#xa7;2.3
-      (the Monotone Convergence and Bolzano&#x2013;Weierstrass theorems);
+      (the Monotone Convergence and Bolzano<ndash/>Weierstrass theorems);
       &#xa7;2.2 (limit laws) is labor-saving technology, and &#xa7;2.4
       (Cauchy sequences) reframes convergence in a form you will see
       again in MAT 5610.
@@ -24,7 +24,7 @@
   ============================================================ -->
 
   <paragraphs xml:id="par-mod4-sg-21-intro">
-    <title>Section 2.1: Sequences and Convergence (Zorn pp. 83&#x2013;95)</title>
+    <title>Section 2.1: Sequences and Convergence (Zorn pp. 83<ndash/>95)</title>
     <p>
       This is the central section of the module. Read Zorn's Definition 2.1
       (convergence) more than once; understanding its quantifier
@@ -65,7 +65,7 @@
         (a) Three: <m>\forall \varepsilon \gt 0\ \exists N \in \N\
         \forall n \geq N: |a_n - L| \lt \varepsilon</m>. The order
         is <m>\forall</m>, <m>\exists</m>, <m>\forall</m>.
-        (b) The adversary picks <m>\varepsilon</m>; we pick <m>N</m>
+        (b) The adversary picks <m>\varepsilon</m>; you pick <m>N</m>
         in response. The final <m>\forall n \geq N</m> is a conclusion,
         not a choice.
         (c) <m>N</m> gets larger as <m>\varepsilon</m> gets smaller:
@@ -78,14 +78,14 @@
     <title>Negating the Definition</title>
     <statement>
       <p>
-        Write out the negation of convergence&#x2014;that is, what
-        <m>a_n \not\to L</m> means&#x2014;by applying the standard
+        Write out the negation of convergence (that is, what
+        <m>a_n \not\to L</m> means) by applying the standard
         negation rules from <xref ref="ch-mod1"/> (push <m>\neg</m> through each
         quantifier in turn).
       </p>
       <p>
         Then state what it means, in this same format, for the
-        sequence <m>(a_n)</m> to be <em>divergent</em>&#x2014;that is,
+        sequence <m>(a_n)</m> to be <term>divergent</term>, that is,
         for no <m>L \in \R</m> to be its limit.
       </p>
     </statement>
@@ -224,7 +224,7 @@
   ============================================================ -->
 
   <paragraphs xml:id="par-mod4-sg-22-intro">
-    <title>Section 2.2: Working with Limits (Zorn pp. 96&#x2013;105)</title>
+    <title>Section 2.2: Working with Limits (Zorn pp. 96<ndash/>105)</title>
     <p>
       Section 2.2 collects the tools that let you evaluate limits of
       sums, products, quotients, and sandwiched sequences without
@@ -285,7 +285,7 @@
       <p>
         (a) <m>|(a_n + b_n) - (A + B)| \leq |a_n - A| + |b_n - B|</m>.
         (b) Each summand is bounded by <m>\varepsilon/2</m>, so their
-        sum is bounded by <m>\varepsilon</m>&#x2014;the desired bound.
+        sum is bounded by <m>\varepsilon</m>, the desired bound.
         (c) <m>N = \max(N_1, N_2)</m>, so that both convergence bounds
         hold simultaneously for <m>n \geq N</m>.
       </p>
@@ -305,7 +305,7 @@
       </p>
       <p>
         Write your reasoning in complete sentences. Indicate
-        each step at which the algebra of limits is applied.
+        each step at which the Algebra of Limits is applied.
       </p>
     </statement>
     <answer>
@@ -340,22 +340,22 @@
       <p>
         <m>-1 \leq \cos(n^2) \leq 1</m>, so <m>-1/n \leq a_n \leq 1/n</m>
         for all <m>n \in \N</m>. Both <m>-1/n \to 0</m> and
-        <m>1/n \to 0</m> (by Archimedean Property / known limit),
+        <m>1/n \to 0</m> (by the Archimedean Property, or as a known limit),
         so by the Squeeze Theorem <m>a_n \to 0</m>.
       </p>
     </answer>
   </exercise>
 
   <!-- ============================================================
-       SECTION 2.3: MONOTONE AND BOLZANO–WEIERSTRASS
+       SECTION 2.3: MONOTONE AND BOLZANO-WEIERSTRASS
   ============================================================ -->
 
   <paragraphs xml:id="par-mod4-sg-23-intro">
-    <title>Section 2.3: Subsequences and the Big Theorems (Zorn pp. 106&#x2013;113)</title>
+    <title>Section 2.3: Subsequences and the Big Theorems (Zorn pp. 106<ndash/>113)</title>
     <p>
       Section 2.3 introduces subsequences and proves two of the
       headline theorems of sequential analysis: the Monotone
-      Convergence Theorem and the Bolzano&#x2013;Weierstrass Theorem.
+      Convergence Theorem and the Bolzano<ndash/>Weierstrass Theorem.
       Both are consequences of completeness; each will be invoked
       repeatedly in MAT 5610.
     </p>
@@ -434,7 +434,7 @@
         <m>a_N \gt L - \varepsilon</m>.
         (d) Monotonicity (increasingness) is used to pass from
         <m>a_N \gt L - \varepsilon</m> to <m>a_n \gt L - \varepsilon</m>
-        for all <m>n \geq N</m>&#x2014;we need to know later terms do
+        for all <m>n \geq N</m>, because it guarantees that later terms do
         not drop back below <m>a_N</m>. Since <m>a_n \leq L</m> as well
         (<m>L</m> is an upper bound of <m>S</m>), this gives
         <m>L - \varepsilon \lt a_n \leq L</m>, so
@@ -444,10 +444,10 @@
   </exercise>
 
   <exercise xml:id="ex-mod4-sg-23-3">
-    <title>The Bolzano&#x2013;Weierstrass Theorem</title>
+    <title>The Bolzano<ndash/>Weierstrass Theorem</title>
     <statement>
       <p>
-        State the Bolzano&#x2013;Weierstrass Theorem. Read one of
+        State the Bolzano<ndash/>Weierstrass Theorem. Read one of
         Zorn's proof strategies (whichever he presents; most likely
         the monotone-subsequence approach).
       </p>
@@ -472,7 +472,7 @@
   </exercise>
 
   <exercise xml:id="ex-mod4-sg-23-4">
-    <title>Applying Bolzano&#x2013;Weierstrass</title>
+    <title>Applying Bolzano<ndash/>Weierstrass</title>
     <statement>
       <p>
         Consider the bounded sequence
@@ -482,7 +482,7 @@
             Verify that <m>(a_n)</m> is bounded.
           </li>
           <li>
-            Bolzano&#x2013;Weierstrass guarantees a convergent
+            Bolzano<ndash/>Weierstrass guarantees a convergent
             subsequence. Identify one such subsequence explicitly and
             compute its limit (using limit laws, not
             <m>\varepsilon</m>-<m>N</m>).
@@ -512,7 +512,7 @@
   ============================================================ -->
 
   <paragraphs xml:id="par-mod4-sg-24-intro">
-    <title>Section 2.4: Cauchy Sequences (Zorn pp. 114&#x2013;120)</title>
+    <title>Section 2.4: Cauchy Sequences (Zorn pp. 114<ndash/>120)</title>
     <p>
       Section 2.4 reframes convergence without reference to a limit.
       Read Zorn's Definition 2.17 and Theorem 2.20 carefully. The equivalence
@@ -585,7 +585,7 @@
       </p>
       <p>
         Step 1: A Cauchy sequence is bounded.
-        Step 2: By Bolzano&#x2013;Weierstrass, a bounded sequence has
+        Step 2: By Bolzano<ndash/>Weierstrass, a bounded sequence has
         a convergent subsequence.
         Step 3: A Cauchy sequence with a convergent subsequence converges.
       </p>
@@ -602,8 +602,8 @@
       <p>
         Step 1: direct argument using the Cauchy property with
         <m>\varepsilon = 1</m>; no completeness needed.
-        Step 2: Bolzano&#x2013;Weierstrass, which does use completeness
-        (either through MCT or through a nested-intervals argument).
+        Step 2: Bolzano<ndash/>Weierstrass, which does use completeness
+        (either through the Monotone Convergence Theorem (MCT) or through a nested-intervals argument).
         Step 3: Triangle-inequality argument; no additional completeness.
         Thus completeness enters via Step 2.
         In <m>\Q</m>: any Cauchy sequence of rationals converging to

@@ -301,7 +301,7 @@
   </exercise>
 
   <exercise xml:id="ex-mod4-ps-c2">
-    <title><m>[\mathbf{C}]</m> Applying Bolzano&#x2013;Weierstrass</title>
+    <title><m>[\mathbf{C}]</m> Applying Bolzano<ndash/>Weierstrass</title>
     <statement>
       <p>
         Let <m>(a_n)</m> be a bounded sequence of real numbers.
@@ -312,7 +312,7 @@
       <p>
         This is the converse direction of the subsequence-inheritance
         result, with an extra hypothesis. It illustrates why
-        Bolzano&#x2013;Weierstrass is the right tool for controlling
+        Bolzano<ndash/>Weierstrass is the right tool for controlling
         sequences whose convergence you cannot verify directly.
       </p>
     </statement>
@@ -327,7 +327,7 @@
         apply it with <m>N = 1</m> to get <m>n_1</m>, and, once
         <m>n_k</m> is chosen, apply it with <m>N = n_k + 1</m> to get
         <m>n_{k+1} \gt n_k</m>.
-        This subsequence is bounded; by Bolzano&#x2013;Weierstrass it
+        This subsequence is bounded; by Bolzano<ndash/>Weierstrass it
         has a further convergent sub-subsequence. Its indices are
         still strictly increasing, so it is also a subsequence of
         <m>(a_n)</m>, and by hypothesis it

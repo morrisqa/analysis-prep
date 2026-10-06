@@ -29,8 +29,6 @@
       <p>
         <alert>Scratch work (this section is part of the solution
         process; always do this before writing the proof).</alert>
-      </p>
-      <p>
         We want to choose, given <m>\varepsilon \gt 0</m>, an index
         <m>N</m> such that
         <md>n \geq N \Longrightarrow |a_n - 0| = \frac{1}{n^2} \lt \varepsilon.</md>
@@ -49,8 +47,6 @@
       </p>
       <p>
         <alert>Proof.</alert>
-      </p>
-      <p>
         Let <m>\varepsilon \gt 0</m>. By the Archimedean Property,
         there exists <m>N \in \N</m> with <m>N \gt 1/\varepsilon</m>.
         Then for every <m>n \geq N</m>,
@@ -106,8 +102,6 @@
       </p>
       <p>
         <alert>Proof.</alert>
-      </p>
-      <p>
         Dividing numerator and denominator by <m>n^2</m>, we rewrite
         the general term:
         <md>\frac{3n^2 + 2n - 1}{4n^2 + 5} = \frac{3 + \frac{2}{n} - \frac{1}{n^2}}{4 + \frac{5}{n^2}}.</md>
@@ -147,8 +141,8 @@
         rational expression in <m>n</m> reduces to a short sequence of
         limit-law applications. The only subtle point is the nonvanishing
         denominator hypothesis in the quotient rule: you must confirm
-        <em>in the limit</em> that the denominator is nonzero, which we
-        did here (it equals 4). If the numerator's leading degree had
+        <em>in the limit</em> that the denominator is nonzero, as this
+        solution does (the denominator's limit is 4). If the numerator's leading degree had
         exceeded the denominator's, the method would break down (the
         sequence would diverge to infinity); if the degrees were equal,
         the limit is always the ratio of leading coefficients.
@@ -181,8 +175,6 @@
       </p>
       <p>
         <alert>Step 1: The sequence is bounded above by 2.</alert>
-      </p>
-      <p>
         We claim <m>a_n \lt 2</m> for every <m>n \in \N</m>, and
         prove this by induction.
         <em>Base case.</em> <m>a_1 = 1 \lt 2</m>. <em>Inductive step.</em>
@@ -193,8 +185,6 @@
       </p>
       <p>
         <alert>Step 2: The sequence is increasing.</alert>
-      </p>
-      <p>
         We claim <m>a_n \lt a_{n+1}</m> for every <m>n \in \N</m>,
         again by induction. <em>Base case.</em>
         <m>a_1 = 1 \lt \sqrt{3} = a_2</m>. <em>Inductive step.</em>
@@ -206,8 +196,6 @@
       </p>
       <p>
         <alert>Step 3: Apply the Monotone Convergence Theorem.</alert>
-      </p>
-      <p>
         By Steps 1 and 2, <m>(a_n)</m> is monotone increasing and
         bounded above (by 2). By the Monotone Convergence Theorem,
         <m>(a_n)</m> converges to some limit <m>L \in \R</m>. All
@@ -221,8 +209,6 @@
       </p>
       <p>
         <alert>Step 4: Identify the limit.</alert>
-      </p>
-      <p>
         Squaring the recursion <m>a_{n+1} = \sqrt{2 + a_n}</m> gives
         <md>a_{n+1}^2 = 2 + a_n \qquad (n \geq 1).</md>
         The shifted sequence <m>(a_{n+1})</m> also converges to
@@ -249,7 +235,7 @@
         the bound by first solving the fixed-point equation informally;
         (2) <em>prove monotonicity by induction</em>, often driven by
         a monotone function applied to the recursion; (3) <em>apply
-        MCT to get a limit, then solve a fixed-point equation for
+        the Monotone Convergence Theorem (MCT) to get a limit, then solve a fixed-point equation for
         its value.</em> Note how the Completeness Axiom enters through
         MCT: in an ordered field without completeness, such as
         <m>\Q</m>, a bounded monotone sequence need not converge. For

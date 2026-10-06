@@ -418,7 +418,7 @@
         converge to <m>0</m> pointwise at <m>x = 0</m>.
       </p>
       <p>
-        (c) Uniform convergence of <m>(f_n)</m> does NOT imply convergence
+        (c) Uniform convergence of <m>(f_n)</m> does <em>not</em> imply convergence
         of the derivatives <m>(f_n')</m>. Differentiating term by term
         requires an additional condition (e.g., uniform convergence of the
         derivatives; this is a theorem for MAT 5610).

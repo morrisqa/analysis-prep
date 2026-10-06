@@ -11,7 +11,7 @@
     </p>
     <p>
       The theme running through all of &#xa7;4.4 is interchange of limits:
-      when can we move <m>\lim_{n \to \infty}</m> past <m>\int</m>, past
+      when can you move <m>\lim_{n \to \infty}</m> past <m>\int</m>, past
       <m>\lim_{x \to a}</m>, past <m>\sum</m>? The answer in every case is:
       when the convergence is <em>uniform</em>. Keep this organizing question
       in mind as you read.
@@ -112,7 +112,7 @@
       <p>
         (a) The sup over <m>x</m> is the worst-case error at stage <m>n</m>.
         Saying this sup <m>\to 0</m> means the worst-case error can be made
-        smaller than any <m>\varepsilon</m>&#x2014;exactly what <q>one
+        smaller than any <m>\varepsilon</m>, which is exactly what <q>one
         <m>N</m> works for all <m>x</m></q> means.
       </p>
       <p>
@@ -211,7 +211,7 @@
             <p>
               Outline the <m>3\varepsilon</m> proof strategy: for fixed
               <m>x_0</m> and given <m>\varepsilon \gt 0</m>, name the three
-              terms that appear in the triangle inequality
+              terms that appear in the Triangle Inequality
               <m>|f(x) - f(x_0)| \leq \cdots</m> and identify which piece
               of information controls each term.
             </p>
@@ -241,7 +241,7 @@
       </p>
       <p>
         (c) With only pointwise convergence, the <m>N</m> chosen in Step 1
-        depends on <m>x</m>&#x2014;a different <m>N</m> is needed near
+        depends on <m>x</m>: a different <m>N</m> is needed near
         <m>x_0</m> and away from it. The step that breaks is the choice of
         a single <m>f_N</m> before <m>x</m> is chosen. Every <m>f_N</m> is
         continuous, so Term 2 is never the problem. The problem is Term 1:
@@ -311,7 +311,7 @@
         <m>\int_0^1 \lim x^n\,dx = \int_0^1 f\,dx</m> where <m>f(x) = 0</m>
         on <m>[0,1)</m> and <m>f(1) = 1</m>: this integral also equals
         <m>0</m> (the single point <m>x=1</m> does not affect the integral).
-        So the two agree&#x2014;no contradiction. But the convergence
+        So the two agree, and there is no contradiction. But the convergence
         <m>x^n \to f</m> is <em>not</em> uniform, so the theorem does not
         apply; this is a case where the interchange happens to work despite
         non-uniform convergence.
@@ -345,8 +345,8 @@
     </p>
     <p>
       <em>The integrals tend to <m>1</m>.</em> Since
-      <m>\frac{d}{dx}\left[-e^{-n^2x^2}\right] = g_n(x)</m>, FTC Part 2
-      (<xref ref="ch-mod8"/>) gives
+      <m>\frac{d}{dx}\left[-e^{-n^2x^2}\right] = g_n(x)</m>, Part 2 of the Fundamental
+      Theorem of Calculus (FTC, <xref ref="ch-mod8"/>) gives
       <md>\int_0^1 g_n(x)\,dx = 1 - e^{-n^2} \to 1.</md>
       But the pointwise limit is the zero function, whose integral is
       <m>0</m>. So
@@ -496,7 +496,7 @@
             <p>
               At <m>x = 1</m>, the power series becomes
               <m>1 - 1/2 + 1/3 - 1/4 + \cdots</m>. What does the
-              alternating series test tell you about the convergence of
+              Alternating Series Test tell you about the convergence of
               this series (from <xref ref="ch-mod5"/>)?
             </p>
           </li>
@@ -520,11 +520,11 @@
       </p>
       <p>
         (c) At <m>x=1</m>: <m>\sum_{n=1}^{\infty} (-1)^{n+1}/n</m>.
-        Terms decrease to 0, alternating; by the Alternating Series Test
+        Terms decrease to <m>0</m>, alternating; by the Alternating Series Test
         (<xref ref="ch-mod5"/>), this converges. Its sum is <m>\ln 2</m>, but the
         formula from (a) does not give this directly: (a) holds only for
         <m>|x| \lt 1</m>, and what is needed is the value of the series at
-        <m>x = 1</m> itself. Abel's theorem gives results of this kind in
+        <m>x = 1</m> itself. Abel's Theorem gives results of this kind in
         general; here a direct estimate suffices, the same one used in
         <xref ref="ex-mod9-we-4"/>. For
         <m>t \in [0,1]</m>, the finite geometric sum gives

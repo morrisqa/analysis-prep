@@ -4,16 +4,16 @@
 
     <p>
       Every module ends with a bridge reading in Bauldry's
-      <em>Introduction to Real Analysis</em>. For this final module
+      <pubtitle>Introduction to Real Analysis</pubtitle>. For this final module
       the reading is Bauldry &#xa7;2.6
       (<q>Sequences and Series of Functions</q>,
-      approximately pp. 101&#x2013;116). This section is the graduate
+      approximately pp. 101<ndash/>116). This section is the graduate
       treatment of everything you have just studied: pointwise and
       uniform convergence, preservation of continuity and
       integrability, the Weierstrass <m>M</m>-Test, and power series
       as the payoff application. Reading it now, after working through
       Zorn &#xa7;4.4 and the module exercises, should feel like
-      recognition&#x2014;you already know the ideas; Bauldry is
+      recognition: you already know the ideas; Bauldry is
       showing you how a graduate text frames them.
     </p>
     <p>
@@ -33,7 +33,7 @@
     <p>
       <alert>For this module, read:</alert>
       Bauldry &#xa7;2.6 (<q>Sequences and Series of Functions</q>,
-      approximately pp. 101&#x2013;116).
+      approximately pp. 101<ndash/>116).
     </p>
 
   <!-- ============================================================
@@ -147,7 +147,7 @@
             <m>\pi/4 = 1 - 1/3 + 1/5 - \cdots</m> in
             <xref ref="ex-mod9-we-4"/> used this theorem on <m>[0,r]</m> for
             <m>r \lt 1</m>, and then a direct estimate of the
-            remainder to reach <m>x = 1</m>. Abel's theorem gives this
+            remainder to reach <m>x = 1</m>. Abel's Theorem gives this
             kind of boundary extension in general. Does Bauldry address
             it? What does he say?
           </li>
@@ -167,7 +167,7 @@
       <m>M</m>-Test to power series, showing that every power series
       converges uniformly on any closed interval strictly inside its
       radius of convergence. This result justifies term-by-term
-      differentiation and integration of power series&#x2014;one of
+      differentiation and integration of power series, one of
       the most important tools in graduate analysis.
     </p>
   </paragraphs>
@@ -266,7 +266,7 @@
       (<xref ref="ch-mod9"/>).
     </p>
     <p>
-      Bauldry Chapter 2 is the rigorous version of all of that&#x2014;
+      Bauldry Chapter 2 is the rigorous version of all of that,
       written at graduate speed, with proofs that assume you can fill in
       details that would have been spelled out at the undergraduate level.
       The prep course was designed so that when you encounter a definition
@@ -280,7 +280,7 @@
       <m>\varepsilon</m>-<m>\delta</m> definition of continuity
       and the <m>\varepsilon</m>-<m>N</m> definition of sequence
       convergence, the statement and proof of the
-      Bolzano-Weierstrass theorem, the proof of the Fundamental
+      Bolzano<ndash/>Weierstrass Theorem, the proof of the Fundamental
       Theorem of Calculus (both parts), and today's uniform convergence
       definitions. These four clusters are the joints at which the
       graduate course will bend. If you can write their proofs cleanly

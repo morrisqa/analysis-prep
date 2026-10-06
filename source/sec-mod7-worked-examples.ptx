@@ -6,7 +6,7 @@
       answer is, but to internalize the proof <em>template</em>.
       <xref ref="ex-mod7-we-1"/> shows how to compute a derivative directly from the
       limit definition. <xref ref="ex-mod7-we-2"/> proves differentiability implies
-      continuity&#x2014;a result that looks obvious but requires a
+      continuity, a result that looks obvious but requires a
       specific algebraic trick. <xref ref="ex-mod7-we-3"/> is a full proof of Rolle's
       Theorem, the key lemma for the MVT. <xref ref="ex-mod7-we-4"/> demonstrates the
       MVT used to produce an inequality, the most common application
@@ -27,16 +27,12 @@
     <solution>
       <p>
         <alert>Strategy.</alert>
-      </p>
-      <p>
         Compute the difference quotient <m>(f(a+h) - f(a))/h</m>,
         simplify the numerator algebraically, cancel the factor of
         <m>h</m>, and evaluate the resulting limit as <m>h \to 0</m>.
       </p>
       <p>
         <alert>Scratch work.</alert>
-      </p>
-      <p>
         Expand the numerator:
         <md>(a+h)^3 - a^3 = a^3 + 3a^2h + 3ah^2 + h^3 - a^3
         = 3a^2 h + 3ah^2 + h^3 = h(3a^2 + 3ah + h^2).</md>
@@ -45,8 +41,6 @@
       </p>
       <p>
         <alert>Proof.</alert>
-      </p>
-      <p>
         Let <m>a \in \R</m>. For <m>h \neq 0</m>, compute:
         <md>
           <mrow>\frac{f(a+h) - f(a)}{h}
@@ -62,8 +56,6 @@
       </p>
       <p>
         <alert>What to notice.</alert>
-      </p>
-      <p>
         The entire work is in the algebra of the numerator: expanding
         <m>(a+h)^3 - a^3</m> and identifying the factor of <m>h</m>
         that cancels the denominator. Once that cancellation is done,
@@ -89,8 +81,6 @@
     <solution>
       <p>
         <alert>Strategy.</alert>
-      </p>
-      <p>
         Write <m>f(x) - f(a)</m> as a product involving the difference
         quotient, then apply the product rule for limits. The key
         algebraic insight is that we can insert the factor
@@ -99,8 +89,6 @@
       </p>
       <p>
         <alert>Proof.</alert>
-      </p>
-      <p>
         Suppose <m>f</m> is differentiable at <m>a</m>. For
         <m>x \neq a</m>, we may write
         <md>f(x) - f(a) = \frac{f(x) - f(a)}{x - a} \cdot (x - a).</md>
@@ -114,8 +102,6 @@
       </p>
       <p>
         <alert>What to notice.</alert>
-      </p>
-      <p>
         The key algebraic trick is writing <m>f(x) - f(a)</m> as a
         product with the difference quotient. This is valid for
         <m>x \neq a</m>, and the limit as <m>x \to a</m> only looks
@@ -146,8 +132,6 @@
     <solution>
       <p>
         <alert>Strategy.</alert>
-      </p>
-      <p>
         The Extreme Value Theorem (<xref ref="ch-mod6"/>) guarantees that
         <m>f</m> attains its maximum and minimum on <m>[a, b]</m>.
         If <m>f</m> is constant, we are immediately done. If not,
@@ -157,16 +141,12 @@
       </p>
       <p>
         <alert>Step 1: Handle the trivial case.</alert>
-      </p>
-      <p>
         <em>(i) If <m>f</m> is constant on <m>[a, b]</m>.</em>
         Then <m>f'(c) = 0</m> for every <m>c \in (a, b)</m>, and
         the conclusion holds immediately.
       </p>
       <p>
         <alert>Step 2: Handle the nontrivial case.</alert>
-      </p>
-      <p>
         <em>(ii) If <m>f</m> is not constant on <m>[a, b]</m>.</em>
         By the Extreme Value Theorem (EVT, <xref ref="ch-mod6"/>), <m>f</m> attains
         both its maximum and its minimum on <m>[a, b]</m>. Since
@@ -195,8 +175,6 @@
       </p>
       <p>
         <alert>Step 3: Conclude <m>f'(c) = 0</m> at the interior extremum.</alert>
-      </p>
-      <p>
         Suppose first that <m>c</m> is an interior maximum. Choose
         <m>\delta \gt 0</m> with <m>(c - \delta, c + \delta) \subset (a, b)</m>.
         For <m>0 \lt h \lt \delta</m>,
@@ -230,8 +208,6 @@
       </p>
       <p>
         <alert>What to notice.</alert>
-      </p>
-      <p>
         The proof has two cases; the key one requires <m>f</m> to be
         non-constant. The Extreme Value Theorem (from <xref ref="ch-mod6"/>) is the
         tool that produces the interior extremum, and differentiability
@@ -259,8 +235,6 @@
     <solution>
       <p>
         <alert>Strategy.</alert>
-      </p>
-      <p>
         Apply the MVT to <m>f(t) = \sin(t)</m> on the interval
         between <m>x</m> and <m>y</m>, then use the bound
         <m>|\cos(c)| \leq 1</m> to control the result. This converts
@@ -269,10 +243,8 @@
       </p>
       <p>
         <alert>Proof.</alert>
-      </p>
-      <p>
         Fix <m>x, y \in \R</m>. If <m>x = y</m>, both sides are
-        <m>0</m> and the inequality holds trivially. Assume WLOG that
+        <m>0</m> and the inequality holds trivially. Assume without loss of generality (WLOG) that
         <m>x \lt y</m>. The function <m>f(t) = \sin(t)</m> is
         continuous on <m>[x, y]</m> and differentiable on
         <m>(x, y)</m>, with <m>f'(t) = \cos(t)</m>. By the Mean
@@ -286,11 +258,9 @@
       </p>
       <p>
         <alert>What to notice.</alert>
-      </p>
-      <p>
         The MVT converts <q>how much does <m>\sin</m> change on
-        <m>[x, y]</m>?</q> into <q>how large is <m>|\sin'(c)|</m>?</q>
-        &#x2014;and the answer is at most 1. This is the prototype
+        <m>[x, y]</m>?</q> into <q>how large is <m>|\sin'(c)|</m>?</q>,
+        and the answer is at most <m>1</m>. This is the prototype
         of the <em>MVT inequality template</em>:
         <m>|f(y) - f(x)| = |f'(c)| \cdot |y - x| \leq M|y-x|</m>
         whenever <m>|f'| \leq M</m> on the interval between <m>x</m>
