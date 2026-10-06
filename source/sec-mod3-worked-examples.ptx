@@ -25,7 +25,7 @@
     <title>Element-Chasing a Set Equality</title>
     <statement>
       <p>
-        Prove: for all sets <m>A</m>, <m>B</m>, <m>C</m>,
+        Prove: for all sets <m>A</m>, <m>B</m>, and <m>C</m>,
         <md>A \cap (B \cup C) = (A \cap B) \cup (A \cap C).</md>
       </p>
     </statement>
@@ -39,8 +39,6 @@
       </p>
       <p>
         <alert>Direction 1: <m>A \cap (B \cup C) \subseteq (A \cap B) \cup (A \cap C)</m>.</alert>
-      </p>
-      <p>
         Let <m>x \in A \cap (B \cup C)</m>. By definition of intersection:
         <m>x \in A</m> and <m>x \in B \cup C</m>.
       </p>
@@ -64,8 +62,6 @@
       </p>
       <p>
         <alert>Direction 2: <m>(A \cap B) \cup (A \cap C) \subseteq A \cap (B \cup C)</m>.</alert>
-      </p>
-      <p>
         Let <m>x \in (A \cap B) \cup (A \cap C)</m>. By definition
         of union, either <m>x \in A \cap B</m> or <m>x \in A \cap C</m>.
       </p>
@@ -118,8 +114,6 @@
     <solution>
       <p>
         <alert>Step 1: Prove injectivity.</alert>
-      </p>
-      <p>
         Suppose <m>f(x_1) = f(x_2)</m>. We must show <m>x_1 = x_2</m>.
       </p>
       <p>
@@ -130,8 +124,6 @@
       </p>
       <p>
         <alert>Step 2: Prove surjectivity.</alert>
-      </p>
-      <p>
         We must show that for every <m>y \in \R</m>, there exists
         <m>x \in \R</m> such that <m>f(x) = y</m>.
       </p>
@@ -150,10 +142,8 @@
       </p>
       <p>
         <alert>Step 3: Bijectivity and the inverse.</alert>
-      </p>
-      <p>
         Since <m>f</m> is both injective and surjective, it is bijective.
-        By Definition 1.11 (Zorn), an inverse function <m>f^{-1} : \R \to \R</m>
+        By Zorn's Definition 1.11, an inverse function <m>f^{-1} : \R \to \R</m>
         exists. The scratch work in Step 2 gives us its formula:
         <md>f^{-1}(y) = \frac{y + 5}{3}.</md>
       </p>
@@ -170,7 +160,7 @@
         in more complex examples the scratch work may suggest a
         candidate that fails a domain check. Also note that
         solving <m>y = f(x)</m> for <m>x</m> is exactly how you
-        find <m>f^{-1}</m>&#x2014;this is not a coincidence.
+        find <m>f^{-1}</m>. This is not a coincidence.
       </p>
     </solution>
   </example>
@@ -198,8 +188,6 @@
       </p>
       <p>
         <alert>Proof.</alert>
-      </p>
-      <p>
         Suppose <m>(g \circ f)(a_1) = (g \circ f)(a_2)</m>.
         By definition of composition, this means
         <m>g(f(a_1)) = g(f(a_2))</m>.
@@ -220,7 +208,7 @@
         The proof has a clean three-step structure: unpack composition,
         apply injectivity of <m>g</m>, apply injectivity of <m>f</m>.
         The order matters: <m>g</m> acts on the outputs of <m>f</m>,
-        so we peel back the outer function first. This <q>outside-in</q>
+        so you peel back the outer function first. This <q>outside-in</q>
         order is the right reflex for any composition proof.
       </p>
       <p>
@@ -436,7 +424,7 @@
         The bijection formula is worth remembering as a technique, but
         the key insight is the <em>geometric picture</em>: every infinite
         grid can be enumerated by walking along its diagonals. This picture
-        underlies the proof of Proposition 1.18 (Zorn) and Corollary 1.20
+        underlies the proof of Zorn's Proposition 1.18 and Corollary 1.20
         (<m>\Q</m> countable). When you need to show that a product or
         union of countable sets is countable, the diagonal picture is the
         right mental model, even if the formal proof uses the abstract

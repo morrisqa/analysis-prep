@@ -27,12 +27,14 @@
       students on the written proofs or use AI writing tools to draft
       your arguments.
     </p>
+  <paragraphs xml:id="par-mod7-as-part1">
+    <title>Part 1: Derivative from the Definition (Required)</title>
     <p>
-      <alert>Part 1: Derivative from the Definition (Required)</alert>
-      (Estimated time: 15 minutes)
+      Estimated time: 15 minutes.
     </p>
+  </paragraphs>
   <exercise xml:id="ex-mod7-as-1">
-    <title>Differentiating 1/x from the Definition</title>
+    <title>Differentiating <m>1/x</m> from the Definition</title>
     <statement>
       <p>
         Prove that <m>f(x) = 1/x</m> is differentiable on
@@ -72,10 +74,12 @@
   </exercise>
 
   <!-- ============================================================ -->
+  <paragraphs xml:id="par-mod7-as-part2">
+    <title>Part 2: An MVT Inequality (Required)</title>
     <p>
-      <alert>Part 2: An MVT Inequality (Required)</alert>
-      (Estimated time: 20 minutes)
+      Estimated time: 20 minutes.
     </p>
+  </paragraphs>
   <exercise xml:id="ex-mod7-as-2">
     <title>Using the MVT to Prove an Inequality</title>
     <statement>
@@ -98,7 +102,7 @@
             <m>g'(x) \lt 0</m>.
           </li>
           <li>
-            <em>Apply the MVT on an interval with endpoint 0.</em>
+            <em>Apply the MVT on an interval with endpoint <m>0</m>.</em>
             For <m>x \gt 0</m>, apply the MVT to <m>g</m> on
             <m>[0, x]</m> and use the sign of <m>g'</m> on
             <m>(0, x)</m> to show that <m>g(x) \gt g(0) = 0</m>, i.e.,
@@ -120,20 +124,22 @@
   </exercise>
 
   <!-- ============================================================ -->
+  <paragraphs xml:id="par-mod7-as-part3">
+    <title>Part 3: Reflection</title>
     <p>
-      <alert>Part 3: Reflection</alert>
-      (Estimated time: 5 minutes)
+      Estimated time: 5 minutes.
     </p>
     <p>
-      Write 3&#x2013;5 sentences for each question. These are graded
+      Write 3<ndash/>5 sentences for each question. These are graded
       for thoughtfulness, not for mathematical correctness.
     </p>
+  </paragraphs>
   <exercise xml:id="ex-mod7-as-r1">
     <title>Differentiability and Continuity</title>
     <statement>
       <p>
         In your own words, why does differentiability imply continuity?
-        Write the key idea of the proof from memory&#x2014;do not look
+        Write the key idea of the proof from memory; do not look
         at your notes. If you cannot reproduce it, explain which step
         you are stuck on and what tool you think is missing.
       </p>
@@ -145,7 +151,7 @@
     <statement>
       <p>
         In the Bridge Reading you found Bauldry's statement of the MVT
-        in &#xa7;2.3. Describe in 3&#x2013;5 sentences how Bauldry
+        in &#xa7;2.3. Describe in 3<ndash/>5 sentences how Bauldry
         uses the MVT in the subsequent results of &#xa7;2.3 that go
         beyond what this module explicitly covered. What theorems
         appear, and what role does the MVT play in each?
@@ -160,7 +166,7 @@
         The Fundamental Theorem of Calculus (<xref ref="ch-mod8"/>) has a proof
         that uses the MVT (or a closely related result called the MVT
         for Integrals). Based on what you now know about the MVT,
-        describe in 2&#x2013;3 sentences how you expect this connection
+        describe in 2<ndash/>3 sentences how you expect this connection
         to work. What does the MVT control in such an argument, and
         what would the bound on <m>f'</m> correspond to?
       </p>
@@ -168,15 +174,12 @@
   </exercise>
 
   <!-- ============================================================ -->
-    <p>
-      <alert>Assessment Rubric (Informational)</alert>
-    </p>
+  <paragraphs xml:id="par-mod7-as-rubric">
+    <title>Assessment Rubric (Informational)</title>
     <p>
       The following rubric describes how submitted proofs will be
       evaluated.
     </p>
-  <paragraphs xml:id="par-mod7-as-rubric">
-    <title>Grading Criteria</title>
     <tabular halign="left">
       <col width="14%"/>
       <col width="29%"/>

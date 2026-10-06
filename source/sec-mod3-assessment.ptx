@@ -34,9 +34,10 @@
       students on the written proofs or use AI writing tools to draft
       your arguments.
     </p>
+  <paragraphs xml:id="par-mod3-as-part1">
+    <title>Part 1: Core Proof (Required)</title>
     <p>
-      <alert>Part 1: Core Proof (Required)</alert>
-      (Estimated time: 15 minutes)
+      Estimated time: 15 minutes.
     </p>
     <p>
       The following set equality is one of De Morgan's laws for set
@@ -44,6 +45,7 @@
       but involves a different operation and requires a different
       case analysis.
     </p>
+  </paragraphs>
 
   <!-- ============================================================
        PART 1
@@ -77,9 +79,10 @@
        PART 2
   ============================================================ -->
 
+  <paragraphs xml:id="par-mod3-as-part2">
+    <title>Part 2: Proof Choice (Required; Choose One)</title>
     <p>
-      <alert>Part 2: Proof Choice (Required &#x2014; Choose One)</alert>
-      (Estimated time: 20 minutes)
+      Estimated time: 20 minutes.
     </p>
     <p>
       Choose <em>one</em> of the following two proof problems.
@@ -87,6 +90,7 @@
       the techniques required. Label your submission clearly with
       <q>Option A</q> or <q>Option B.</q>
     </p>
+  </paragraphs>
 
   <exercise xml:id="ex-mod3-as-2a">
     <title>Option A (Standard): Multiples of 3 Are Countably Infinite</title>
@@ -136,8 +140,8 @@
         You may use the following facts without proof:
         <m>\N \times \{0,1\}</m> is countably infinite (since it is
         in bijection with <m>\N</m>), and any subset of a countable
-        set is finite or countably infinite (Zorn Proposition 1.17).
-        You may not invoke Proposition 1.19 (Zorn) directly, as that
+        set is finite or countably infinite (Zorn's Proposition 1.17).
+        You may not invoke Zorn's Proposition 1.19 directly, as that
         is the general version of the result you are proving.
       </p>
       <p>
@@ -178,14 +182,16 @@
        PART 3: REFLECTION
   ============================================================ -->
 
+  <paragraphs xml:id="par-mod3-as-part3">
+    <title>Part 3: Reflection</title>
     <p>
-      <alert>Part 3: Reflection</alert>
-      (Estimated time: 5 minutes)
+      Estimated time: 5 minutes.
     </p>
     <p>
-      Write 3&#x2013;5 sentences for each question. These are graded
+      Write 3<ndash/>5 sentences for each question. These are graded
       for thoughtfulness, not for mathematical correctness.
     </p>
+  </paragraphs>
 
   <exercise xml:id="ex-mod3-as-r1">
     <title>Bauldry &#xa7;2.1 in Set-Theoretic Language</title>
@@ -194,7 +200,7 @@
         Identify one place in Bauldry &#xa7;2.1 where a set-theoretic
         argument from Module 3 (membership, subset, union, intersection,
         set difference, or element-chasing) is used. Describe in
-        2&#x2013;3 sentences what the argument is and why the set operation
+        2<ndash/>3 sentences what the argument is and why the set operation
         involved matters in that context.
       </p>
     </statement>
@@ -233,15 +239,11 @@
        RUBRIC
   ============================================================ -->
 
-    <p>
-      <alert>Assessment Rubric (Informational)</alert>
-    </p>
+  <paragraphs xml:id="par-mod3-as-rubric">
+    <title>Assessment Rubric (Informational)</title>
     <p>
       The following rubric describes how submitted proofs will be evaluated.
     </p>
-
-  <paragraphs xml:id="par-mod3-as-rubric">
-    <title>Grading Criteria</title>
     <tabular halign="left">
       <col width="14%"/>
       <col width="29%"/>

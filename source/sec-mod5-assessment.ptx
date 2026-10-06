@@ -28,10 +28,12 @@
       students on the written proofs or use AI writing tools to draft
       your arguments.
     </p>
+  <paragraphs xml:id="par-mod5-as-part1">
+    <title>Part 1: Partial-Sums Proof (Required)</title>
     <p>
-      <alert>Part 1: Partial-Sums Proof (Required)</alert>
-      (Estimated time: 15 minutes)
+      Estimated time: 15 minutes.
     </p>
+  </paragraphs>
 
   <exercise xml:id="ex-mod5-as-1">
     <title>A Telescoping Series from the Definition</title>
@@ -86,10 +88,12 @@
 
   <!-- ============================================================ -->
 
+  <paragraphs xml:id="par-mod5-as-part2">
+    <title>Part 2: Classification of an Alternating Series (Required)</title>
     <p>
-      <alert>Part 2: Classification of an Alternating Series (Required)</alert>
-      (Estimated time: 20 minutes)
+      Estimated time: 20 minutes.
     </p>
+  </paragraphs>
 
   <exercise xml:id="ex-mod5-as-2">
     <title>Absolute, Conditional, or Divergent?</title>
@@ -149,14 +153,16 @@
 
   <!-- ============================================================ -->
 
+  <paragraphs xml:id="par-mod5-as-part3">
+    <title>Part 3: Reflection</title>
     <p>
-      <alert>Part 3: Reflection</alert>
-      (Estimated time: 5 minutes)
+      Estimated time: 5 minutes.
     </p>
     <p>
-      Write 3&#x2013;5 sentences for each question. These are graded
+      Write 3<ndash/>5 sentences for each question. These are graded
       for thoughtfulness, not for mathematical correctness.
     </p>
+  </paragraphs>
 
   <exercise xml:id="ex-mod5-as-r1">
     <title>Divergence Test and Shifted Sequences</title>
@@ -184,8 +190,8 @@
     <statement>
       <p>
         In the Bridge Reading you encountered Bauldry's
-        &#xa7;1.5&#x2013;1.6. Compare the presentation style to
-        Zorn's &#xa7;2.5&#x2013;2.6: what is more compressed in
+        &#xa7;1.5<ndash/>1.6. Compare the presentation style to
+        Zorn's &#xa7;2.5<ndash/>2.6: what is more compressed in
         Bauldry, and what feels more like the Zorn text you worked
         through in the study guide? If there is a single place where
         Bauldry's phrasing left you unsure whether he was stating a
@@ -205,25 +211,21 @@
         functions</em>. Based on the preview, describe in two or
         three sentences what you think will be new in the functional
         setting. (A partial answer is: the series defines a function
-        of <m>x</m>, and we will need to be careful about which
-        operations&#x2014;differentiation, integration,
-        interchange of limits&#x2014;can be moved past the infinite
+        of <m>x</m>, and you will need to be careful about which
+        operations (differentiation, integration, and
+        interchange of limits) can be moved past the infinite
         sum. You do not need to know the answers yet; articulating
         the <em>question</em> is the point.)
       </p>
     </statement>
   </exercise>
 
-    <p>
-      <alert>Assessment Rubric (Informational)</alert>
-    </p>
+  <paragraphs xml:id="par-mod5-as-rubric">
+    <title>Assessment Rubric (Informational)</title>
     <p>
       The following rubric describes how submitted proofs will be
       evaluated.
     </p>
-
-  <paragraphs xml:id="par-mod5-as-rubric">
-    <title>Grading Criteria</title>
     <tabular halign="left">
       <col width="14%"/>
       <col width="29%"/>

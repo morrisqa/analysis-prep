@@ -315,7 +315,7 @@
         (<xref ref="ch-mod4"/>). Let <m>T_n = \sum_{k=1}^{n} |a_k|</m> and
         <m>S_n = \sum_{k=1}^{n} a_k</m>. Use that <m>(T_n)</m> is
         Cauchy (it converges by hypothesis) together with the
-        triangle inequality on finite sums to show <m>(S_n)</m> is
+        Triangle Inequality on finite sums to show <m>(S_n)</m> is
         Cauchy, and invoke Cauchy completeness of <m>\R</m>.
       </p>
       <p>

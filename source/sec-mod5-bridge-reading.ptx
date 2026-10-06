@@ -10,7 +10,7 @@
       Series</q>). Both sit in Bauldry's informal Chapter 1, which
       reviews elementary calculus with a gentle lean toward proof.
       The rigorous redevelopment of sequences and series happens in
-      Bauldry &#xa7;2.5&#x2014;which is the starting point of MAT 5610.
+      Bauldry &#xa7;2.5, which is the starting point of MAT 5610.
     </p>
     <p>
       Treat &#xa7;1.5 as a <em>compressed review</em>: Bauldry lists
@@ -23,8 +23,8 @@
     <p>
       <alert>For this module, read:</alert>
       Bauldry &#xa7;1.5 (<q>Sequences and Series of Constants</q>,
-      approximately pp. 25&#x2013;30) and &#xa7;1.6 (<q>Power Series
-      and Taylor Series</q>, approximately pp. 31&#x2013;36).
+      approximately pp. 25<ndash/>30) and &#xa7;1.6 (<q>Power Series
+      and Taylor Series</q>, approximately pp. 31<ndash/>36).
     </p>
 
   <!-- ============================================================
@@ -32,13 +32,13 @@
   ============================================================ -->
 
   <paragraphs xml:id="par-mod5-br-15">
-    <title>Bauldry §1.5 — Sequences and Series of Constants</title>
+    <title>Bauldry §1.5: Sequences and Series of Constants</title>
     <p>
       Bauldry's &#xa7;1.5 opens with sequences (Definition 1.13,
       Theorem 1.32 <q>Algebra of Sequence Limits</q>) and then pivots
       to series via partial sums. The section lists the named
-      tests&#x2014;Ratio, Root, Comparison, Integral, Alternating&#x2014;in
-      rapid succession as Theorems 1.35&#x2013;1.39. Unlike Zorn, who
+      tests (Ratio, Root, Comparison, Integral, and Alternating) in
+      rapid succession as Theorems 1.35<ndash/>1.39. Unlike Zorn, who
       proves each test in detail, Bauldry mostly states them and
       refers to exercises for proofs.
     </p>
@@ -57,7 +57,7 @@
           </li>
           <li>
             Notice that Bauldry treats the <em>partial-sum sequence</em>
-            as the primary object&#x2014;he writes
+            as the primary object: he writes
             <m>\{s_n\}</m>, not <m>\sum a_k</m>, for the series. How
             does this align with the framing of Video 1 (<q>a series
             is a sequence in disguise</q>)?
@@ -75,7 +75,7 @@
   </exercise>
 
   <exercise xml:id="ex-mod5-br-2">
-    <title>Example 1.11: Special Series</title>
+    <title>The Special Series of Elementary Calculus</title>
     <statement>
       <p>
         Read Bauldry's Example 1.11 (<q>Special Series of Elementary Calculus</q>),
@@ -104,12 +104,13 @@
   </exercise>
 
   <exercise xml:id="ex-mod5-br-3">
-    <title>The Catalog of Tests (Theorems 1.35–1.39)</title>
+    <title>The Catalog of Tests</title>
     <statement>
       <p>
         Bauldry states five convergence tests in quick succession:
-        Ratio (Thm 1.35), Root (Thm 1.36), Comparison (Thm 1.37),
-        Integral (Thm 1.38), Alternating Series (Thm 1.39).
+        Ratio (Theorem 1.35), Root (Theorem 1.36), Comparison
+        (Theorem 1.37), Integral (Theorem 1.38), and Alternating Series
+        (Theorem 1.39).
       </p>
       <p>
         <ol marker="(a)">
@@ -122,7 +123,7 @@
             <q>nonnegative</q> terms are assumed).
           </li>
           <li>
-            The Integral Test (Bauldry's Thm 1.38) is stated, but not
+            The Integral Test (Bauldry's Theorem 1.38) is stated, but not
             proved, in this module's Study Guide
             (<xref ref="ex-mod5-sg-26-6"/>). State Bauldry's hypotheses
             precisely: <m>f</m> must be continuous, positive, and
@@ -150,15 +151,15 @@
   ============================================================ -->
 
   <paragraphs xml:id="par-mod5-br-16">
-    <title>Bauldry §1.6 — Power Series and Taylor Series</title>
+    <title>Bauldry §1.6: Power Series and Taylor Series</title>
     <p>
       Section 1.6 extends the idea of a series by letting the terms
-      depend on a variable <m>x</m>: a <em>power series</em> centered
+      depend on a variable <m>x</m>: a <term>power series</term> centered
       at <m>c</m> is an expression
       <md>\sum_{n=0}^{\infty} a_n (x - c)^n.</md>
       For a fixed value of <m>x</m>, this is just a series of numbers,
       and the Module 5 tests apply. For <m>x</m> ranging over an
-      interval, we get a <em>function</em> defined wherever the series
+      interval, you get a <em>function</em> defined wherever the series
       converges. This is the subject of <xref ref="ch-mod9"/>.
     </p>
     <p>
@@ -242,7 +243,7 @@
         the series is <m>1 + 0 + 0 + \cdots</m>, which converges.
         The test is inconclusive at <m>|x| = 1</m>.
         Hence <m>R = 1</m>. (At <m>x = \pm 1</m> the series diverges
-        for reasons outside the Ratio Test&#x2014;at <m>x = 1</m>,
+        for reasons outside the Ratio Test: at <m>x = 1</m>,
         <m>a_k = 1 \not\to 0</m>; at <m>x = -1</m>, the alternating
         partial sums oscillate.)
       </p>
@@ -289,7 +290,7 @@
       <p>
         Scan the first page or two of Bauldry &#xa7;2.5 (<q>Sequences,
         Series, and Convergence Tests</q>, starting around p. 88).
-        You are not expected to read &#xa7;2.5 in full&#x2014;this is
+        You are not expected to read &#xa7;2.5 in full; this is
         a one-paragraph orientation exercise.
       </p>
       <p>

@@ -33,8 +33,6 @@
       </p>
       <p>
         <alert>Pointwise limit.</alert>
-      </p>
-      <p>
         For <m>x \in [0,1)</m>: <m>|x| \lt 1</m>, so
         <m>x^n \to 0</m> as <m>n \to \infty</m>.
         For <m>x = 1</m>: <m>1^n = 1</m> for all <m>n</m>, so
@@ -46,8 +44,6 @@
       </p>
       <p>
         <alert>Non-uniform convergence (sup-norm argument).</alert>
-      </p>
-      <p>
         For any <m>n \in \N</m> and any <m>x \in [0,1)</m>,
         <m>|f_n(x) - f(x)| = x^n</m>. As <m>x \to 1^-</m>,
         <m>x^n \to 1</m>. Therefore
@@ -96,8 +92,6 @@
       </p>
       <p>
         <alert>Proof.</alert>
-      </p>
-      <p>
         Since <m>f_n \to f</m> uniformly, there exists <m>N \in \N</m>
         such that for all <m>n \geq N</m> and all <m>x \in [a,b]</m>,
         <m>|f_n(x) - f(x)| \lt \varepsilon/3</m>.
@@ -107,7 +101,7 @@
         \varepsilon/3</m>.
       </p>
       <p>
-        Now suppose <m>|x - x_0| \lt \delta</m>. By the triangle inequality,
+        Now suppose <m>|x - x_0| \lt \delta</m>. By the Triangle Inequality,
         <md>
           <mrow>|f(x) - f(x_0)| \amp \leq |f(x) - f_N(x)| + |f_N(x) -
           f_N(x_0)| + |f_N(x_0) - f(x_0)|</mrow>
@@ -122,7 +116,7 @@
         This is the <m>3\varepsilon</m> trick. The three terms are controlled
         by: (1) uniform convergence applied at <m>x</m>; (2) continuity of
         <m>f_N</m>; (3) uniform convergence applied at <m>x_0</m>. The key
-        is that <m>N</m> is chosen <em>before</em> <m>x</m>&#x2014;this is
+        is that <m>N</m> is chosen <em>before</em> <m>x</m>; this is
         exactly what uniform convergence buys. With only pointwise convergence,
         the <m>N</m> from (1) would depend on <m>x</m>, and no single
         <m>f_N</m> (and so no single <m>\delta</m>) would work for every
@@ -152,8 +146,6 @@
       </p>
       <p>
         <alert>Proof.</alert>
-      </p>
-      <p>
         Set <m>f_n(x) = \sin(nx)/n^2</m>. For all <m>x \in \R</m> and all
         <m>n \in \N</m>,
         <md>
@@ -171,7 +163,7 @@
         functions, with the dominating series <m>\sum M_n</m> playing the
         role of the known convergent series. The uniformity of the bound
         <m>|f_n(x)| \leq M_n</m> (no <m>x</m> in <m>M_n</m>) is what
-        delivers uniform convergence. Notice also that we used
+        delivers uniform convergence. Notice also that the proof used
         <m>|\sin(nx)| \leq 1</m>, a bound that holds for every real
         <m>x</m>; that is why the same <m>M_n</m> works on the whole domain
         <m>\R</m>.
@@ -204,8 +196,6 @@
       </p>
       <p>
         <alert>Proof.</alert>
-      </p>
-      <p>
         For <m>|t| \lt 1</m>, the geometric series gives
         <md>
           \frac{1}{1 + t^2} = \sum_{n=0}^{\infty} (-1)^n t^{2n}.
@@ -265,7 +255,7 @@
         converge. The value <m>\pi/4</m> at <m>x = 1</m> comes from the
         remainder estimate, not from the term-by-term integration theorem,
         which covers only intervals <m>[0,r]</m> with <m>r \lt 1</m>.
-        A general result, Abel's theorem, says that whenever a
+        A general result, Abel's Theorem, says that whenever a
         power series converges at an endpoint of its interval of
         convergence, its value there is the limit of its values from inside
         (see Rudin, <pubtitle>Principles of Mathematical Analysis</pubtitle>,
@@ -273,8 +263,8 @@
         even gives a rate: the <m>n</m>th partial sum is within
         <m>1/(2n+3)</m> of <m>\pi/4</m>. The same estimate, with
         <m>\int_0^x</m> in place of <m>\int_0^1</m>, proves the series for
-        <m>\arctan(x)</m> for every <m>x \in [0,1]</m>. The punchline&#x2014;<m>\pi/4</m> as an alternating series
-        of unit fractions&#x2014;is one of the most beautiful results in
+        <m>\arctan(x)</m> for every <m>x \in [0,1]</m>. The punchline (<m>\pi/4</m> as an alternating series
+        of unit fractions) is one of the most beautiful results in
         elementary analysis.
       </p>
     </solution>

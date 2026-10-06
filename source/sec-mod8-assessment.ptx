@@ -27,10 +27,12 @@
       students on the written proofs or use AI writing tools to draft
       your arguments.
     </p>
+  <paragraphs xml:id="par-mod8-as-part1">
+    <title>Part 1: Riemann Integrability from the Definition (Required)</title>
     <p>
-      <alert>Part 1: Riemann Integrability from the Definition (Required)</alert>
-      (Estimated time: 20 minutes)
+      Estimated time: 20 minutes.
     </p>
+  </paragraphs>
   <exercise xml:id="ex-mod8-as-1">
     <title>A Function That Is Constant Except at an Endpoint</title>
     <statement>
@@ -91,10 +93,12 @@
   </exercise>
 
   <!-- ============================================================ -->
+  <paragraphs xml:id="par-mod8-as-part2">
+    <title>Part 2: Applying the Fundamental Theorem (Required)</title>
     <p>
-      <alert>Part 2: Applying the Fundamental Theorem (Required)</alert>
-      (Estimated time: 20 minutes)
+      Estimated time: 20 minutes.
     </p>
+  </paragraphs>
   <exercise xml:id="ex-mod8-as-2">
     <title>FTC in Action</title>
     <statement>
@@ -132,19 +136,21 @@
   </exercise>
 
   <!-- ============================================================ -->
+  <paragraphs xml:id="par-mod8-as-part3">
+    <title>Part 3: Reflection</title>
     <p>
-      <alert>Part 3: Reflection</alert>
-      (Estimated time: 5 minutes)
+      Estimated time: 5 minutes.
     </p>
     <p>
-      Write 3&#x2013;5 sentences for each question. These are graded
+      Write 3<ndash/>5 sentences for each question. These are graded
       for thoughtfulness, not for mathematical correctness.
     </p>
+  </paragraphs>
   <exercise xml:id="ex-mod8-as-r1">
     <title>Uniform Continuity and Integrability</title>
     <statement>
       <p>
-        Explain in your own words, in 3&#x2013;5 sentences, how
+        Explain in your own words, in 3<ndash/>5 sentences, how
         uniform continuity (<xref ref="ch-mod6"/>) appears in the proof that
         continuous functions are Riemann integrable. What specific
         role does it play, and could the proof work with only
@@ -154,11 +160,11 @@
   </exercise>
 
   <exercise xml:id="ex-mod8-as-r2">
-    <title>Bauldry &#xa7;2.4 &#x2014; First Impressions</title>
+    <title>Bauldry &#xa7;2.4: First Impressions</title>
     <statement>
       <p>
-        In the Bridge Reading you encountered the Riemann-Stieltjes
-        integral. In 3&#x2013;5 sentences, describe what is new in
+        In the Bridge Reading you encountered the Riemann<ndash/>Stieltjes
+        integral. In 3<ndash/>5 sentences, describe what is new in
         the Stieltjes setting compared to the Riemann integral. What
         does the integrator <m>\alpha</m> add, and why might this
         generalization be useful?
@@ -171,25 +177,22 @@
     <statement>
       <p>
         The FTC connects differentiation (<xref ref="ch-mod7"/>) and integration
-        (Module 8). In 2&#x2013;3 sentences, describe this connection
-        in your own words. Which direction &#x2014; Part 1 (differentiating
-        an integral gives the integrand) or Part 2 (integrating a
-        derivative gives the boundary values) &#x2014; do you find more
-        surprising, and why?
+        (<xref ref="ch-mod8"/>). In 2<ndash/>3 sentences, describe this connection
+        in your own words. Which direction do you find more surprising,
+        Part 1 (differentiating an integral gives the integrand) or
+        Part 2 (integrating a derivative gives the boundary values),
+        and why?
       </p>
     </statement>
   </exercise>
 
   <!-- ============================================================ -->
-    <p>
-      <alert>Assessment Rubric (Informational)</alert>
-    </p>
+  <paragraphs xml:id="par-mod8-as-rubric">
+    <title>Assessment Rubric (Informational)</title>
     <p>
       The following rubric describes how submitted proofs will be
       evaluated.
     </p>
-  <paragraphs xml:id="par-mod8-as-rubric">
-    <title>Grading Criteria</title>
     <tabular halign="left">
       <col width="14%"/>
       <col width="29%"/>

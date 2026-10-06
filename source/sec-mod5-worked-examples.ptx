@@ -42,8 +42,6 @@
       </p>
       <p>
         <alert>Proof.</alert>
-      </p>
-      <p>
         Using the partial-fraction identity, the <m>n</m>th partial sum is
         <md>
           <mrow>S_n = \sum_{k=1}^{n} \frac{1}{k(k+1)} \amp= \sum_{k=1}^{n} \left(\frac{1}{k} - \frac{1}{k+1}\right)</mrow>
@@ -66,8 +64,8 @@
         features were critical: (1) a closed form for the summand
         (partial fractions) that made the cancellation visible, and
         (2) a closed form for <m>S_n</m> that reduced the problem to
-        a <xref ref="ch-mod4"/> limit. When neither is available&#x2014;which is
-        nearly always the case&#x2014;we must use convergence
+        a <xref ref="ch-mod4"/> limit. When neither is available, which is
+        nearly always the case, you must use convergence
         <em>tests</em> to determine whether a limit exists, without
         being able to identify its value.
       </p>
@@ -105,8 +103,6 @@
       </p>
       <p>
         <alert>Proof.</alert>
-      </p>
-      <p>
         Set <m>a_k = \dfrac{1}{k^2 + k}</m> and <m>b_k = \dfrac{1}{k^2}</m>.
         Both are positive for <m>k \geq 1</m>. We compute
         <md>\frac{a_k}{b_k} = \frac{1/(k^2 + k)}{1/k^2}
@@ -133,7 +129,7 @@
         of Theorem 2.29), but the case of a finite nonzero limit is
         the most commonly useful. The hypothesis of <em>positive
         terms</em> must be checked: Limit Comparison is a test for
-        positive series, so we note explicitly that <m>a_k, b_k \gt 0</m>.
+        positive series, so the proof notes explicitly that <m>a_k, b_k \gt 0</m>.
       </p>
     </solution>
   </example>
@@ -160,8 +156,6 @@
       </p>
       <p>
         <alert>Proof.</alert>
-      </p>
-      <p>
         Let <m>a_k = k!/k^k \gt 0</m>. Then
         <md>
           <mrow>\frac{a_{k+1}}{a_k} \amp= \frac{(k+1)!}{(k+1)^{k+1}} \cdot \frac{k^k}{k!}</mrow>
@@ -169,7 +163,7 @@
           <mrow>\amp= \frac{k^k}{(k+1)^k} = \left(\frac{k}{k+1}\right)^k = \frac{1}{\left(1 + \frac{1}{k}\right)^k}.</mrow>
         </md>
         It is a standard limit (proved in Zorn &#xa7;2.3 or its
-        problem set; also a limit students know from calculus) that
+        problem set; also a limit you know from calculus) that
         <m>\left(1 + \frac{1}{k}\right)^k \to e</m> as <m>k \to \infty</m>.
         By the quotient rule,
         <md>\lim_{k \to \infty} \frac{a_{k+1}}{a_k}
@@ -184,8 +178,8 @@
         game: <m>(k+1)!/k! = k+1</m>, and <m>(k+1)^{k+1}/(k+1)^k = k+1</m>,
         so a single factor of <m>(k+1)</m> in numerator and denominator
         cancels and leaves a clean ratio. Recognizing the
-        <m>(1 + 1/k)^k</m> pattern&#x2014;rather than fumbling with
-        binomial expansions&#x2014;is what makes the test feel
+        <m>(1 + 1/k)^k</m> pattern, rather than fumbling with
+        binomial expansions, is what makes the test feel
         routine. The Ratio Test delivers a yes/no verdict only; it
         does not tell you what the sum is, and nothing in this module
         gives the value of <m>\sum k!/k^k</m>.
@@ -217,9 +211,7 @@
         (or directly as a <m>p</m>-series with <m>p = 1/2 \lt 1</m>).
       </p>
       <p>
-        <alert>Step 1: Convergence via AST.</alert>
-      </p>
-      <p>
+        <alert>Step 1: Convergence via the Alternating Series Test (AST).</alert>
         Write the series as <m>\sum (-1)^{k+1} b_k</m> with
         <m>b_k = 1/\sqrt{k} \gt 0</m>. To apply the Alternating Series
         Test we verify two conditions:
@@ -242,8 +234,6 @@
       </p>
       <p>
         <alert>Step 2: Absolute divergence.</alert>
-      </p>
-      <p>
         Consider the series of absolute values,
         <m>\displaystyle\sum_{k=1}^{\infty} \frac{1}{\sqrt{k}}</m>.
         We show this diverges by direct comparison with the harmonic
@@ -256,8 +246,6 @@
       </p>
       <p>
         <alert>Conclusion.</alert>
-      </p>
-      <p>
         The series <m>\sum (-1)^{k+1}/\sqrt{k}</m> converges (Step 1)
         but not absolutely (Step 2). By definition, it converges
         <em>conditionally</em>. <m>\square</m>
@@ -270,11 +258,11 @@
         convergence separately, usually via comparison with a known
         series; (3) declare whether the convergence is absolute or
         conditional. The order matters: <em>you cannot conclude
-        conditional convergence from AST alone</em>&#x2014;you must
+        conditional convergence from AST alone</em>; you must
         also rule out absolute convergence. Conditional convergence
         is a delicate property: rearranging the terms of a
         conditionally convergent series can change its sum (Riemann's
-        rearrangement theorem, a topic for MAT 5610; see, for example,
+        Rearrangement Theorem, a topic for MAT 5610; see, for example,
         Rudin, <pubtitle>Principles of Mathematical Analysis</pubtitle>, 3rd ed.,
         Theorem 3.54).
       </p>

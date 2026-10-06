@@ -15,9 +15,9 @@
     </p>
     <p>
       <alert>For this module, read:</alert>
-      Bauldry &#xa7;2.5 (<q>Sequences</q>, approximately pp. 88&#x2013;99).
+      Bauldry &#xa7;2.5 (<q>Sequences</q>, approximately pp. 88<ndash/>99).
       This single section covers everything you studied in Zorn
-      &#xa7;2.1&#x2013;2.4.
+      &#xa7;2.1<ndash/>2.4.
     </p>
 
   <!-- ============================================================
@@ -27,7 +27,7 @@
   <paragraphs xml:id="par-mod4-br-defn">
     <title>Bauldry's Definition of Convergence</title>
     <p>
-      Bauldry Definition 2.15 (or nearby) gives the
+      Bauldry's Definition 2.15 (or nearby) gives the
       <m>\varepsilon</m>-<m>N</m> definition of convergence. Its
       symbolic content is identical to Zorn's, but Bauldry's wording
       and typographic style differ. Read it carefully.
@@ -136,11 +136,11 @@
   </exercise>
 
   <exercise xml:id="ex-mod4-br-4">
-    <title>The Bolzano&#x2013;Weierstrass Theorem</title>
+    <title>The Bolzano<ndash/>Weierstrass Theorem</title>
     <statement>
       <p>
         Locate Bauldry's statement and proof (or sketch) of
-        Bolzano&#x2013;Weierstrass (Theorem 2.54 or the numbered
+        Bolzano<ndash/>Weierstrass (Theorem 2.54 or the numbered
         theorem whose statement matches <q>every bounded sequence has
         a convergent subsequence</q>).
         <ol marker="(a)">
@@ -200,7 +200,7 @@
             completeness, and via which earlier theorem?
           </li>
           <li>
-            The other direction&#x2014;convergent implies Cauchy&#x2014;can
+            The other direction (convergent implies Cauchy) can
             be proved without completeness. Outline Bauldry's argument
             in one or two sentences.
           </li>

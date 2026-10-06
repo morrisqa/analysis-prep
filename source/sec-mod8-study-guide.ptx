@@ -2,8 +2,8 @@
   <title>Companion Reading and Study Guide</title>
   <p>Reading: Zorn, Sections 5.1<ndash/>5.4. Estimated time: 65 minutes.</p>
     <p>
-      This guide accompanies four sections of Zorn's <em>Understanding
-      Real Analysis</em>. Section 5.1 introduces partitions and Darboux
+      This guide accompanies four sections of Zorn's <pubtitle>Understanding
+      Real Analysis</pubtitle>. Section 5.1 introduces partitions and Darboux
       sums. Section 5.2 develops the integrability criterion. Section 5.3
       identifies the main classes of integrable functions (continuous and
       monotone). Section 5.4 proves the Fundamental Theorem of Calculus.
@@ -41,9 +41,9 @@
     </statement>
     <answer>
       <p>
-        A partition of <m>[a,b]</m> is a finite set
+        A <term>partition</term> of <m>[a,b]</m> is a finite set
         <m>P = \{x_0, x_1, \ldots, x_n\}</m> with
-        <m>a = x_0 \lt x_1 \lt \cdots \lt x_n = b</m>. The mesh is
+        <m>a = x_0 \lt x_1 \lt \cdots \lt x_n = b</m>. The <term>mesh</term> is
         <m>\|P\| = \max_{1 \le i \le n} \Delta x_i</m> where
         <m>\Delta x_i = x_i - x_{i-1}</m>. For
         <m>P = \{0, 1/3, 2/3, 1\}</m>, each subinterval has length
@@ -104,8 +104,8 @@
     <p>
       The integrability criterion is the workhorse of this module.
       Read Zorn's statement and proof carefully. Every positive
-      integrability result &#x2014; continuous functions, monotone
-      functions &#x2014; is proved by exhibiting a partition that
+      integrability result (continuous functions, monotone
+      functions) is proved by exhibiting a partition that
       makes <m>U(f,P) - L(f,P)</m> small.
     </p>
   </paragraphs>
@@ -127,7 +127,7 @@
         <m>U(f,P) - L(f,P) \lt \varepsilon</m>.
         The quantity <m>U(f,P) - L(f,P) = \sum (M_i - m_i)\Delta x_i</m>
         is the oscillation sum because <m>M_i - m_i</m> measures the
-        oscillation of <m>f</m> on the <m>i</m>th subinterval &#x2014;
+        oscillation of <m>f</m> on the <m>i</m>th subinterval:
         the spread between the largest and smallest values of <m>f</m>
         on that piece. When the total oscillation (weighted by subinterval
         length) can be made arbitrarily small, the function is integrable.
@@ -173,8 +173,8 @@
         any partition of <m>[0,1]</m>.
         (d) No: since <m>U(f,P) - L(f,P) = 1</m> for every partition,
         the integrability criterion fails (take <m>\varepsilon = 1/2</m>,
-        for instance). The upper integral equals 1 and the lower integral
-        equals 0, so they are not equal and <m>f</m> is not Riemann
+        for instance). The upper integral equals <m>1</m> and the lower integral
+        equals <m>0</m>, so they are not equal and <m>f</m> is not Riemann
         integrable.
       </p>
     </answer>
@@ -205,7 +205,7 @@
     </statement>
     <answer>
       <p>
-        The key tool is the Heine<ndash/>Cantor theorem
+        The key tool is the Heine<ndash/>Cantor Theorem
         (<xref ref="ex-mod6-sg-34-3"/> states it; see Zorn or MAT 5610
         for a proof): a
         continuous function on a closed bounded interval is uniformly
@@ -230,7 +230,7 @@
         each point separately gives a <m>\delta</m> that may depend on
         the point, and this argument needs one <m>\delta</m> that works
         everywhere on <m>[a,b]</m> simultaneously; on a closed bounded
-        interval, the Heine<ndash/>Cantor theorem supplies it.
+        interval, the Heine<ndash/>Cantor Theorem supplies it.
       </p>
     </answer>
   </exercise>
@@ -329,7 +329,7 @@
         </li>
       </ul>
       Read Zorn's statements and proofs of these properties
-      (&#xa7;5.1&#x2013;5.4). A second source is Rudin,
+      (&#xa7;5.1<ndash/>5.4). A second source is Rudin,
       <pubtitle>Principles of Mathematical Analysis</pubtitle>,
       3rd edition, Theorem 6.12.
     </p>
@@ -363,7 +363,7 @@
   </paragraphs>
 
   <exercise xml:id="ex-mod8-sg-54-1">
-    <title>FTC Part 1 &#x2014; Hypotheses and Statement</title>
+    <title>FTC Part 1: Hypotheses and Statement</title>
     <statement>
       <p>
         State FTC Part 1 precisely, including all hypotheses. What
@@ -394,7 +394,7 @@
   </exercise>
 
   <exercise xml:id="ex-mod8-sg-54-2">
-    <title>FTC Part 2 &#x2014; Statement and Proof</title>
+    <title>FTC Part 2: Statement and Proof</title>
     <statement>
       <p>
         <ol marker="(a)">
@@ -421,7 +421,7 @@
         <md>\int_a^b f(x)\,dx = F(b) - F(a).</md>
         (b) Define <m>G(x) = \int_a^x f(t)\,dt</m>. By FTC Part 1,
         <m>G'(x) = f(x) = F'(x)</m> for all <m>x \in (a,b)</m>. Hence
-        <m>(G - F)'(x) = 0</m> on <m>(a,b)</m>. By the <xref ref="ch-mod7"/> MVT
+        <m>(G - F)'(x) = 0</m> on <m>(a,b)</m>. By the <xref ref="ch-mod7"/> Mean Value Theorem
         corollary (<xref ref="ex-mod7-sg-43-3"/>), there is a constant
         <m>C \in \R</m> with <m>G(x) - F(x) = C</m> for all
         <m>x \in (a,b)</m>.

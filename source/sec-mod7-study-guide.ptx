@@ -2,14 +2,14 @@
   <title>Companion Reading and Study Guide</title>
   <p>Reading: Zorn, Sections 4.1<ndash/>4.3. Estimated time: 75 minutes.</p>
     <p>
-      This guide accompanies three sections of Zorn's <em>Understanding
-      Real Analysis</em>. Section 4.1 (<q>Derivatives</q>) introduces
+      This guide accompanies three sections of Zorn's <pubtitle>Understanding
+      Real Analysis</pubtitle>. Section 4.1 (<q>Derivatives</q>) introduces
       the formal limit definition and establishes differentiability as
       a condition stronger than continuity. Section 4.2
       (<q>Differentiation Rules</q>) develops the standard rules as
       theorems proved from the definition. Section 4.3 (<q>The Mean
       Value Theorem</q>) builds from Rolle's Theorem to the MVT and
-      applies it to prove monotonicity results and Taylor's theorem.
+      applies it to prove monotonicity results and Taylor's Theorem.
     </p>
     <p>
       Read each section before working its questions. The theme running
@@ -26,7 +26,7 @@
   ============================================================ -->
 
   <paragraphs xml:id="par-mod7-sg-41-intro">
-    <title>Section 4.1: The Derivative (Zorn pp. 163&#x2013;172)</title>
+    <title>Section 4.1: The Derivative (Zorn pp. 163<ndash/>172)</title>
     <p>
       Read Zorn's definition of differentiability at a point carefully.
       The difference quotient <m>(f(x) - f(a))/(x - a)</m> is a
@@ -80,7 +80,7 @@
     </statement>
     <answer>
       <p>
-        (a) <m>f</m> is differentiable at <m>a</m> if
+        (a) <m>f</m> is <term>differentiable</term> at <m>a</m> if
         <m>\lim_{h \to 0} (f(a+h) - f(a))/h</m> exists (as a finite
         real number); its value is called <m>f'(a)</m>.
       </p>
@@ -131,7 +131,7 @@
   ============================================================ -->
 
   <paragraphs xml:id="par-mod7-sg-42-intro">
-    <title>Section 4.2: Differentiation Rules (Zorn pp. 172&#x2013;182)</title>
+    <title>Section 4.2: Differentiation Rules (Zorn pp. 172<ndash/>182)</title>
     <p>
       Section 4.2 develops the product rule, quotient rule, and chain
       rule as theorems. The product rule proof is a model of the
@@ -188,8 +188,8 @@
             then <m>(g \circ f)'(a) = g'(f(a)) \cdot f'(a)</m>.
           </li>
           <li>
-            Explain in words why the <q>obvious</q> proof attempt&#x2014;multiply
-            and divide by <m>f(a+h) - f(a)</m>&#x2014;has a gap.
+            Explain in words why the <q>obvious</q> proof attempt (multiply
+            and divide by <m>f(a+h) - f(a)</m>) has a gap.
           </li>
           <li>
             Describe the auxiliary function approach that fixes the gap.
@@ -254,7 +254,7 @@
   ============================================================ -->
 
   <paragraphs xml:id="par-mod7-sg-43-intro">
-    <title>Section 4.3: The Mean Value Theorem (Zorn pp. 182&#x2013;196)</title>
+    <title>Section 4.3: The Mean Value Theorem (Zorn pp. 182<ndash/>196)</title>
     <p>
       Section 4.3 is the heart of Module 7. Read the proof of Rolle's
       Theorem carefully: it uses the Extreme Value Theorem (<xref ref="ch-mod6"/>)
@@ -263,9 +263,9 @@
       be able to reconstruct from memory by the end of this module.
       The guide then closes with three further results, each stated and
       proved here: Taylor's Theorem, the Cauchy Mean Value Theorem, and
-      L'H&#xf4;pital's rule. The Practice Set uses Taylor's Theorem and
-      L'H&#xf4;pital's rule, and the Cauchy Mean Value Theorem is the
-      step in the proof of L'H&#xf4;pital's rule.
+      L'H&#xf4;pital's Rule. The Practice Set uses Taylor's Theorem and
+      L'H&#xf4;pital's Rule, and the Cauchy Mean Value Theorem is the
+      step in the proof of L'H&#xf4;pital's Rule.
     </p>
   </paragraphs>
 
@@ -357,8 +357,8 @@
       of degree at most <m>n</m> and expresses the error with the
       derivative of order <m>n + 1</m>. This guide states and proves it
       here, together with the Cauchy Mean Value Theorem and
-      L'H&#xf4;pital's rule below, because the Practice Set uses
-      Taylor's Theorem and L'H&#xf4;pital's rule, and the proof of the
+      L'H&#xf4;pital's Rule below, because the Practice Set uses
+      Taylor's Theorem and L'H&#xf4;pital's Rule, and the proof of the
       rule rests on the Cauchy Mean Value Theorem. The proof is one application of Rolle's
       Theorem to a well-chosen auxiliary function, the same idea as the
       proof of the MVT in <xref ref="ex-mod7-sg-43-2"/>.
@@ -466,7 +466,7 @@
   <paragraphs xml:id="par-mod7-sg-43-cauchy">
     <title>The Cauchy Mean Value Theorem</title>
     <p>
-      L'H&#xf4;pital's rule compares two functions at once. The tool
+      L'H&#xf4;pital's Rule compares two functions at once. The tool
       for that is a version of the MVT for two functions.
     </p>
     <theorem xml:id="thm-mod7-cauchy-mvt">

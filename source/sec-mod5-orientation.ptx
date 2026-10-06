@@ -65,9 +65,9 @@
       <xref ref="ch-mod4"/> built a toolkit for sequences: the
       <m>\varepsilon</m>-<m>N</m> definition of convergence, the
       Algebra of Limits, the Squeeze Theorem, the Monotone Convergence
-      Theorem, Bolzano&#x2013;Weierstrass, and Cauchy sequences. Module 5
+      Theorem, Bolzano<ndash/>Weierstrass, and Cauchy sequences. Module 5
       asks you to apply that toolkit to one specific family of sequences:
-      the <em>partial sums</em> of a series. Every convergence test in
+      the <term>partial sums</term> of a series. Every convergence test in
       this module is, at its core, a statement about the partial-sum
       sequence <m>S_n = a_1 + a_2 + \cdots + a_n</m>.
     </p>
@@ -75,12 +75,12 @@
       Keeping the partial-sums framing in view does two things. First,
       it demystifies the named tests. The Divergence Test, for instance,
       is just the observation that if <m>S_n</m> converges then
-      <m>S_n - S_{n-1} = a_n \to 0</m>&#x2014;an immediate corollary of
+      <m>S_n - S_{n-1} = a_n \to 0</m>, an immediate corollary of
       limit laws from <xref ref="ch-mod4"/>. Second, it clarifies what
       <em>absolute</em> and <em>conditional</em> convergence really mean:
       the question is whether <m>\sum |a_k|</m> (a <em>new</em> series,
       with its own partial-sum sequence <m>T_n = |a_1| + \cdots + |a_n|</m>)
-      also converges. The Module is organized around this structural
+      also converges. The module is organized around this structural
       simplification.
     </p>
     <p>
@@ -165,8 +165,8 @@
       <em>translate every series question into a sequence question about
       <m>(S_n)</m></em>. Most students come in having seen the named
       tests in a calculus course, where they are presented as a list of
-      recipes to apply. The recipes are fine&#x2014;you should be able
-      to apply them fluently by the end of the module&#x2014;but what
+      recipes to apply. The recipes are fine (you should be able
+      to apply them fluently by the end of the module), but what
       makes the material feel rigorous instead of procedural is the
       recognition that each test is a statement you could, in principle,
       prove by using the <m>\varepsilon</m>-<m>N</m> machinery on
@@ -176,7 +176,7 @@
     </p>
     <p>
       If your calculus recall of these tests is rusty, that is fine.
-      The reading in Zorn &#xa7;2.5&#x2013;2.6 redevelops them from the
+      The reading in Zorn &#xa7;2.5<ndash/>2.6 redevelops them from the
       ground up, and the worked examples show you what a clean written
       argument looks like. If your recall is sharp, use this module as
       an opportunity to strengthen your grip on the <em>underlying</em>
@@ -193,11 +193,11 @@
       If you are coming in with prior real analysis experience, the
       definition of a series via partial sums and the standard tests
       will likely feel familiar. Skim Zorn &#xa7;2.5 quickly, spend
-      focused time on the proofs of Comparison Test and Limit
+      focused time on the proofs of the Comparison Test and the Limit
       Comparison Test in &#xa7;2.6, and work the Bridge Reading on
-      Bauldry &#xa7;1.5&#x2013;1.6 with full attention&#x2014;Bauldry's
+      Bauldry &#xa7;1.5<ndash/>1.6 with full attention: Bauldry's
       informal Ch. 1 presentation is preparation for his rigorous
-      Ch. 2.5 treatment, which is where MAT 5610 will begin. If
+      &#xa7;2.5 treatment, which is where MAT 5610 will begin. If
       proof-based series work is newer to you, slow down at
       <xref ref="ex-mod5-we-1"/> (telescoping from partial sums): read it twice,
       reproduce the partial-sum computation on paper, and then work
@@ -240,7 +240,7 @@
       <row>
         <cell><p>Companion Reading and Study Guide</p></cell>
         <cell><p>55 min</p></cell>
-        <cell><p>Zorn &#xa7;2.5&#x2013;2.6 with guided questions</p></cell>
+        <cell><p>Zorn &#xa7;2.5<ndash/>2.6 with guided questions</p></cell>
       </row>
       <row>
         <cell><p>Worked Examples</p></cell>
@@ -255,7 +255,7 @@
       <row>
         <cell><p>Bridge Reading Guide</p></cell>
         <cell><p>40 min</p></cell>
-        <cell><p>Bauldry &#xa7;1.5&#x2013;1.6 and a power-series preview</p></cell>
+        <cell><p>Bauldry &#xa7;1.5<ndash/>1.6 and a power-series preview</p></cell>
       </row>
       <row>
         <cell><p>Assessment</p></cell>

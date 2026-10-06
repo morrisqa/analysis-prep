@@ -24,8 +24,6 @@
     <solution>
       <p>
         <alert>Strategy.</alert>
-      </p>
-      <p>
         Use uniform partitions <m>P_n</m> with <m>n</m> equal
         subintervals, compute upper and lower sums explicitly, show their
         difference tends to zero, and use the integrability criterion.
@@ -34,8 +32,6 @@
       </p>
       <p>
         <alert>Proof.</alert>
-      </p>
-      <p>
         Let <m>P_n</m> be the uniform partition with points
         <m>x_k = k/n</m> for <m>k = 0, 1, \ldots, n</m>, so each
         subinterval has width <m>\Delta x = 1/n</m>. Since <m>f(x) = x</m>
@@ -84,8 +80,8 @@
         definition: the function is increasing, so <m>M_k</m> and
         <m>m_k</m> are just the values at the right and left endpoints.
         The difference <m>U - L = 1/n</m> has a beautifully transparent
-        form. In <xref ref="ex-mod8-we-2"/>, the same strategy &#x2014; bound
-        <m>M_i - m_i</m> on each subinterval &#x2014; is applied to
+        form. In <xref ref="ex-mod8-we-2"/>, the same strategy (bound
+        <m>M_i - m_i</m> on each subinterval) is applied to
         continuous functions, where uniform continuity does the
         bounding.
       </p>
@@ -107,9 +103,7 @@
     <solution>
       <p>
         <alert>Strategy.</alert>
-      </p>
-      <p>
-        Use the Heine<ndash/>Cantor theorem (uniform continuity of
+        Use the Heine<ndash/>Cantor Theorem (uniform continuity of
         continuous functions on closed bounded intervals, stated in
         <xref ref="ch-mod6"/>; see Zorn or
         MAT 5610 for a proof) to bound the oscillation <m>M_i - m_i</m> on each subinterval,
@@ -117,10 +111,8 @@
       </p>
       <p>
         <alert>Proof.</alert>
-      </p>
-      <p>
         Since <m>f</m> is continuous on the closed bounded interval
-        <m>[a,b]</m>, the Heine<ndash/>Cantor theorem
+        <m>[a,b]</m>, the Heine<ndash/>Cantor Theorem
         (<xref ref="ex-mod6-sg-34-3"/>, from Zorn &#xa7;3.4) gives that
         <m>f</m> is uniformly continuous on <m>[a,b]</m>. Let
         <m>\varepsilon \gt 0</m> be given. By uniform continuity,
@@ -161,7 +153,7 @@
         a <m>\delta</m> that depends on the point; those values could
         tend to zero, and then no single mesh would work. (This is a
         limitation of the method, not of continuous functions: on
-        <m>[a,b]</m>, the Heine<ndash/>Cantor theorem guarantees the
+        <m>[a,b]</m>, the Heine<ndash/>Cantor Theorem guarantees the
         single <m>\delta</m>.) The factor <m>2</m> in
         <m>\varepsilon/(2(b-a))</m> is there because taking a supremum
         can turn the strict inequality <m>\lt</m> into <m>\leq</m>;
@@ -191,21 +183,17 @@
     <solution>
       <p>
         <alert>Strategy.</alert>
-      </p>
-      <p>
         Compute <m>(F(x+h) - F(x))/h</m> using the additivity of
         the integral, and show that it approaches <m>f(x)</m> as
         <m>h \to 0</m>. The key is that <m>f(x)</m> can be written as
         the average value of the constant <m>f(x)</m> over
         <m>[x, x+h]</m>, so the difference quotient minus <m>f(x)</m>
         is controlled by how close <m>f(t)</m> is to <m>f(x)</m>
-        for <m>t</m> near <m>x</m> &#x2014; which is exactly what
+        for <m>t</m> near <m>x</m>, which is exactly what
         continuity of <m>f</m> at <m>x</m> gives.
       </p>
       <p>
         <alert>Proof.</alert>
-      </p>
-      <p>
         Fix <m>x \in (a,b)</m> and consider <m>h \neq 0</m> with
         <m>x + h \in [a,b]</m>. By additivity of the integral
         and the orientation convention (<xref ref="par-mod8-sg-54-props"
@@ -316,16 +304,12 @@
     <solution>
       <p>
         <alert>Strategy.</alert>
-      </p>
-      <p>
         Find an antiderivative <m>F</m> with <m>F'(x) = \sin(x)</m>,
         verify that <m>f(x) = \sin(x)</m> is continuous on
         <m>[0, \pi]</m>, and apply FTC Part 2.
       </p>
       <p>
         <alert>Proof.</alert>
-      </p>
-      <p>
         Take <m>F(x) = -\cos(x)</m>. We verify: <m>F'(x) = \sin(x)</m>
         (by the formula <m>\cos'(x) = -\sin(x)</m> from calculus;
         <xref ref="ch-mod7"/> uses the

@@ -8,7 +8,7 @@
       the sequential characterization of limits. Sections 3.2
       and 3.3 develop the theory of continuous functions, including the
       Intermediate Value Theorem and Extreme Value Theorem. Section 3.4
-      introduces uniform continuity and the Heine&#x2013;Cantor theorem.
+      introduces uniform continuity and the Heine<ndash/>Cantor Theorem.
     </p>
     <p>
       As you read, keep in mind the central structural theme: the
@@ -24,13 +24,13 @@
   ============================================================ -->
 
   <paragraphs xml:id="par-mod6-sg-31-intro">
-    <title>Section 3.1: Limits of Functions (Zorn pp. 151&#x2013;164)</title>
+    <title>Section 3.1: Limits of Functions (Zorn pp. 151<ndash/>164)</title>
     <p>
       Read the <m>\varepsilon</m>-<m>\delta</m> definition of
       <m>\lim_{x \to a} f(x) = L</m> carefully. Compare it line by
       line with the <m>\varepsilon</m>-<m>N</m> definition of sequence
-      convergence from <xref ref="ch-mod4"/>. The structural parallel is the key
-      takeaway from this section.
+      convergence from <xref ref="ch-mod4"/>. The structural parallel is the main
+      point of this section.
     </p>
   </paragraphs>
 
@@ -157,17 +157,17 @@
   </exercise>
 
   <!-- ============================================================
-       SECTIONS 3.2–3.4: CONTINUITY AND UNIFORM CONTINUITY
+       SECTIONS 3.2 TO 3.4: CONTINUITY AND UNIFORM CONTINUITY
   ============================================================ -->
 
   <paragraphs xml:id="par-mod6-sg-32-intro">
-    <title>Sections 3.2&#x2013;3.4: Continuity and Uniform Continuity (Zorn pp. 164&#x2013;198)</title>
+    <title>Sections 3.2<ndash/>3.4: Continuity and Uniform Continuity (Zorn pp. 164<ndash/>198)</title>
     <p>
       Section 3.2 defines continuity at a point and on a set, and
       develops the algebra of continuous functions. Section 3.3 proves
       the Intermediate Value Theorem and Extreme Value Theorem. Section
-      3.4 introduces uniform continuity and the Heine&#x2013;Cantor
-      theorem. Read all three before working the exercises below.
+      3.4 introduces uniform continuity and the Heine<ndash/>Cantor
+      Theorem. Read all three before working the exercises below.
     </p>
   </paragraphs>
 
@@ -193,7 +193,7 @@
         <md>\forall \varepsilon \gt 0\ \exists \delta \gt 0\ \forall x \in D:\
         |x - a| \lt \delta \Rightarrow |f(x) - f(a)| \lt \varepsilon.</md>
         (Note: unlike the limit definition,
-        we do not need <m>0 \lt |x - a|</m>, because continuity
+        this one does not need <m>0 \lt |x - a|</m>, because continuity
         includes the requirement that <m>f(a)</m> is the right value.)
       </p>
       <p>
@@ -460,10 +460,10 @@
   </exercise>
 
   <exercise xml:id="ex-mod6-sg-34-3">
-    <title>Heine&#x2013;Cantor Theorem</title>
+    <title>Heine<ndash/>Cantor Theorem</title>
     <statement>
       <p>
-        Read Zorn's statement of the Heine&#x2013;Cantor theorem: if
+        Read Zorn's statement of the Heine<ndash/>Cantor Theorem: if
         <m>f</m> is continuous on a closed bounded interval <m>[a, b]</m>,
         then <m>f</m> is uniformly continuous on <m>[a, b]</m>.
         <ol marker="(a)">
@@ -478,7 +478,7 @@
             interior point?
           </li>
           <li>
-            The proof of Heine&#x2013;Cantor uses the theory of
+            The proof of Heine<ndash/>Cantor uses the theory of
             compact sets and open covers. Zorn may prove it differently.
             Identify the key property of <m>[a, b]</m> that the proof
             uses, and note that this is a topic developed fully in
@@ -517,8 +517,8 @@
       </p>
       <p>
         (c) The key property is <em>compactness</em> of <m>[a, b]</m>:
-        every open cover has a finite subcover (Heine&#x2013;Borel
-        theorem). Here is a sketch of how the proof uses it. Fix
+        every open cover has a finite subcover (Heine<ndash/>Borel
+        Theorem). Here is a sketch of how the proof uses it. Fix
         <m>\varepsilon \gt 0</m>. For each <m>x \in [a, b]</m>,
         continuity at <m>x</m> with <m>\varepsilon/2</m> gives
         <m>\delta_x \gt 0</m> such that
@@ -533,7 +533,7 @@
         <m>x</m> lies within <m>\delta_{x_i}/2</m> of some center
         <m>x_i</m>, and so <m>|y - x_i| \lt \delta_{x_i}/2 + \delta \leq \delta_{x_i}</m>.
         Both <m>x</m> and <m>y</m> are within <m>\delta_{x_i}</m> of
-        <m>x_i</m>, and the triangle inequality through <m>f(x_i)</m>
+        <m>x_i</m>, and the Triangle Inequality through <m>f(x_i)</m>
         gives
         <m>|f(x) - f(y)| \leq |f(x) - f(x_i)| + |f(x_i) - f(y)| \lt \varepsilon</m>.
         (Halving the radii is what lets <m>x</m> and <m>y</m> share a

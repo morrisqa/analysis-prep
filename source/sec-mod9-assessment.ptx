@@ -29,10 +29,12 @@
       students on the written proofs or use AI writing tools to draft
       your arguments.
     </p>
+  <paragraphs xml:id="par-mod9-as-part1">
+    <title>Part 1: Uniform Convergence Preserves Continuity (Required)</title>
     <p>
-      <alert>Part 1: Uniform Convergence Preserves Continuity (Required)</alert>
-      (Estimated time: 15 minutes)
+      Estimated time: 15 minutes.
     </p>
+  </paragraphs>
 
   <exercise xml:id="ex-mod9-as-1">
     <title>The Continuity Theorem</title>
@@ -67,7 +69,7 @@
             \lt \varepsilon/3</m>.
           </li>
           <li>
-            <em>The triangle inequality.</em> Suppose
+            <em>The Triangle Inequality.</em> Suppose
             <m>|x - x_0| \lt \delta</m>. Write out the
             <m>3\varepsilon</m> split
             <md>
@@ -88,7 +90,7 @@
     <hint>
       <p>
         The critical step is (ii): the <m>N</m> you obtain from
-        uniform convergence must not depend on <m>x</m>&#x2014;it
+        uniform convergence must not depend on <m>x</m>; it
         works simultaneously for all <m>x \in [a,b]</m>. This is
         exactly the content of the quantifier structure of uniform
         convergence, and it is what makes the proof work. If you
@@ -100,10 +102,12 @@
 
   <!-- ============================================================ -->
 
+  <paragraphs xml:id="par-mod9-as-part2">
+    <title>Part 2: Analyzing a Non-Uniform Sequence (Required)</title>
     <p>
-      <alert>Part 2: Analyzing a Non-Uniform Sequence (Required)</alert>
-      (Estimated time: 20 minutes)
+      Estimated time: 20 minutes.
     </p>
+  </paragraphs>
 
   <exercise xml:id="ex-mod9-as-2">
     <title>The Sequence <m>f_n(x) = n^2x(1-x)^n</m></title>
@@ -168,23 +172,25 @@
 
   <!-- ============================================================ -->
 
+  <paragraphs xml:id="par-mod9-as-part3">
+    <title>Part 3: Reflection</title>
     <p>
-      <alert>Part 3: Reflection</alert>
-      (Estimated time: 5 minutes)
+      Estimated time: 5 minutes.
     </p>
     <p>
-      Write 3&#x2013;5 sentences for each question. These are graded
+      Write 3<ndash/>5 sentences for each question. These are graded
       for thoughtfulness, not for mathematical correctness.
     </p>
+  </paragraphs>
 
   <exercise xml:id="ex-mod9-as-r1">
     <title>The Quantifier Swap</title>
     <statement>
       <p>
         The only formal difference between pointwise and uniform
-        convergence is the order of two quantifiers. In 3&#x2013;5
+        convergence is the order of two quantifiers. In 3<ndash/>5
         sentences, explain in your own words why this single
-        quantifier swap has such dramatic consequences&#x2014;why
+        quantifier swap has such dramatic consequences. Why
         does moving <m>\exists N</m> outside the <m>\forall x</m>
         change what properties the limit function inherits?
       </p>
@@ -192,10 +198,10 @@
   </exercise>
 
   <exercise xml:id="ex-mod9-as-r2">
-    <title>Bauldry &#xa7;2.6 &#x2014; First Impressions</title>
+    <title>Bauldry &#xa7;2.6: First Impressions</title>
     <statement>
       <p>
-        After reading Bauldry &#xa7;2.6, describe in 3&#x2013;5
+        After reading Bauldry &#xa7;2.6, describe in 3<ndash/>5
         sentences what feels most different about the graduate
         presentation compared to the module material. Was there
         a result in Bauldry that surprised you, or that the module
@@ -209,7 +215,7 @@
     <statement>
       <p>
         This is the final assessment of the prep course. In
-        4&#x2013;6 sentences, reflect on the following: Which module
+        4<ndash/>6 sentences, reflect on the following: Which module
         or topic represented the biggest conceptual leap for you?
         What single idea from the course do you expect to use most
         in MAT 5610? Is there any topic from the nine modules that
@@ -221,16 +227,12 @@
 
   <!-- ============================================================ -->
 
-    <p>
-      <alert>Assessment Rubric (Informational)</alert>
-    </p>
+  <paragraphs xml:id="par-mod9-as-rubric">
+    <title>Assessment Rubric (Informational)</title>
     <p>
       The following rubric describes how submitted proofs will be
       evaluated.
     </p>
-
-  <paragraphs xml:id="par-mod9-as-rubric">
-    <title>Grading Criteria</title>
     <tabular halign="left">
       <col width="14%"/>
       <col width="29%"/>

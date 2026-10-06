@@ -242,7 +242,7 @@
       </p>
       <p>
         Use the monotonicity of the Riemann integral (if <m>f \leq g</m>
-        on <m>[a,b]</m> then <m>\int f \leq \int g</m>) and the
+        on <m>[a,b]</m>, then <m>\int f \leq \int g</m>) and the
         computation <m>\int_a^b M\,dx = M(b-a)</m> for a constant.
       </p>
     </statement>
@@ -310,7 +310,7 @@
         <m>|f|</m>, using the fact that the oscillation of <m>|f|</m>
         on any interval is bounded by the oscillation of <m>f</m>:
         <m>|\,|f(x)| - |f(y)|\,| \leq |f(x) - f(y)|</m> by the
-        reverse triangle inequality.)
+        Reverse Triangle Inequality.)
       </p>
     </hint>
   </exercise>
@@ -379,8 +379,8 @@
         citing density of <m>\Q</m> and <m>\R \setminus \Q</m> in
         <m>\R</m>; (ii) conclude that <m>U(f,P) = 1</m> and
         <m>L(f,P) = 0</m> for every partition <m>P</m>; (iii) state
-        that the upper integral equals 1 and the lower integral equals
-        0, so they are unequal and <m>f</m> is not integrable.
+        that the upper integral equals <m>1</m> and the lower integral equals
+        <m>0</m>, so they are unequal and <m>f</m> is not integrable.
       </p>
     </statement>
   </exercise>

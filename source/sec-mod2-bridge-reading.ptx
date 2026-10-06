@@ -14,9 +14,9 @@
     </p>
     <p>
       <alert>For this module, read:</alert>
-      Bauldry §1.1 (pp. 1&#x2013;7, informal overview) and §2.1
-      (pp. 37&#x2013;51, the formal foundations of <m>\R</m>).
-      Section 1.1 is a casual warmup. The real work is §2.1.
+      Bauldry §1.1 (pp. 1<ndash/>7, informal overview) and §2.1
+      (pp. 37<ndash/>51, the formal foundations of <m>\R</m>).
+      Section 1.1 is a casual warm-up. The real work is §2.1.
     </p>
 
   <!-- ============================================================
@@ -51,7 +51,7 @@
           <li>
             Bauldry presents the Completeness Axiom as an
             <em>axiom</em>. What does that mean for how it can be used
-            in proofs&#x2014;do you need to justify it, or can you
+            in proofs: do you need to justify it, or can you
             invoke it directly?
           </li>
         </ol>
@@ -66,7 +66,7 @@
   <paragraphs xml:id="par-mod2-br-archimedean">
     <title>The Archimedean Order Property</title>
     <p>
-      Theorem 2.3 in Bauldry is the Archimedean Order Property. In
+      Bauldry's Theorem 2.3 is the Archimedean Order Property. In
       <xref ref="ch-mod1"/> you read the
       proof for its logical structure; now you will read it again, with
       attention to how it uses the Completeness Axiom.
@@ -104,7 +104,7 @@
     <title>Comparing to Your Practice Set Work</title>
     <statement>
       <p>
-        Practice Set Problem <m>[\mathbf{C}]</m>2 asked you to prove
+        <xref ref="ex-mod2-ps-c2"/> in the Practice Set asked you to prove
         the Archimedean Property yourself. Compare your proof to
         Bauldry's.
         <ol marker="(a)">
@@ -133,7 +133,7 @@
     <title>Density of <m>\Q</m> in <m>\R</m></title>
     <p>
       Immediately following the Archimedean Property, Bauldry proves
-      that <m>\Q</m> is <em>dense</em> in <m>\R</m>: between any two
+      that <m>\Q</m> is <term>dense</term> in <m>\R</m>: between any two
       distinct real numbers there is a rational number. Its proof uses
       the Archimedean Property, which holds in <m>\R</m> because of the
       Completeness Axiom.

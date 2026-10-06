@@ -33,14 +33,16 @@
       students on the written proofs or use AI writing tools to draft
       your arguments.
     </p>
+  <paragraphs xml:id="par-mod4-as-part1">
+    <title>Part 1: Core Proof (Required)</title>
     <p>
-      <alert>Part 1: Core Proof (Required)</alert>
-      (Estimated time: 25 minutes)
+      Estimated time: 25 minutes.
     </p>
     <p>
       Consider the sequence defined by
       <md>a_n = \frac{4n + 7}{2n + 5}.</md>
     </p>
+  </paragraphs>
 
   <exercise xml:id="ex-mod4-as-1a">
     <title>Conjecturing the Limit</title>
@@ -120,9 +122,10 @@
 
   <!-- ============================================================ -->
 
+  <paragraphs xml:id="par-mod4-as-part2">
+    <title>Part 2: Proof Choice (Required; Choose One)</title>
     <p>
-      <alert>Part 2: Proof Choice (Required — Choose One)</alert>
-      (Estimated time: 15 minutes)
+      Estimated time: 15 minutes.
     </p>
     <p>
       Choose <em>one</em> of the following two proof problems.
@@ -130,6 +133,7 @@
       the techniques required. Label your submission clearly with
       <q>Option A</q> or <q>Option B.</q>
     </p>
+  </paragraphs>
 
   <exercise xml:id="ex-mod4-as-2a">
     <title>Option A (Standard): A Limit via the Algebra of Limits</title>
@@ -198,14 +202,16 @@
 
   <!-- ============================================================ -->
 
+  <paragraphs xml:id="par-mod4-as-part3">
+    <title>Part 3: Reflection</title>
     <p>
-      <alert>Part 3: Reflection</alert>
-      (Estimated time: 5 minutes)
+      Estimated time: 5 minutes.
     </p>
     <p>
-      Write 3&#x2013;5 sentences for each question. These are graded
+      Write 3<ndash/>5 sentences for each question. These are graded
       for thoughtfulness, not for mathematical correctness.
     </p>
+  </paragraphs>
 
   <exercise xml:id="ex-mod4-as-r1">
     <title>Quantifier Alternation</title>
@@ -254,16 +260,12 @@
     </statement>
   </exercise>
 
-    <p>
-      <alert>Assessment Rubric (Informational)</alert>
-    </p>
+  <paragraphs xml:id="par-mod4-as-rubric">
+    <title>Assessment Rubric (Informational)</title>
     <p>
       The following rubric describes how submitted proofs will be
       evaluated.
     </p>
-
-  <paragraphs xml:id="par-mod4-as-rubric">
-    <title>Grading Criteria</title>
     <tabular halign="left">
       <col width="14%"/>
       <col width="29%"/>

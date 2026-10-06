@@ -80,7 +80,7 @@
       quantified statements that admit formal proof. Similarly, sets
       are not just collections to be described informally; they are
       objects governed by axioms, and the central technique for proving
-      set equalities&#x2014;element-chasing&#x2014;is a proof strategy
+      set equalities (element-chasing) is a proof strategy
       you will use throughout the course.
     </p>
     <p>
@@ -245,7 +245,7 @@
       <row>
         <cell><p>Companion Reading and Study Guide</p></cell>
         <cell><p>55 min</p></cell>
-        <cell><p>Zorn &#xa7;1.2&#x2013;1.3, &#xa7;1.6; Hirst Ch. 5 with guided questions</p></cell>
+        <cell><p>Zorn &#xa7;1.2<ndash/>1.3, &#xa7;1.6; Hirst Ch. 5 with guided questions</p></cell>
       </row>
       <row>
         <cell><p>Worked Examples</p></cell>

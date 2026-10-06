@@ -99,7 +99,7 @@
   </exercise>
 
   <exercise xml:id="ex-mod7-ps-f3">
-    <title><m>[\mathbf{F}]</m> MVT: Finding c</title>
+    <title><m>[\mathbf{F}]</m> MVT: Finding <m>c</m></title>
     <statement>
       <p>
         For each function and interval, verify that the hypotheses of
@@ -163,7 +163,7 @@
       differentiability from the limit definition, a proof using the Mean
       Value Theorem that <m>e^x \geq 1 + x</m>, a proof that a positive
       derivative on an interval makes a function strictly increasing, a
-      limit evaluated by two applications of L'H&#xf4;pital's rule, and a
+      limit evaluated by two applications of L'H&#xf4;pital's Rule, and a
       second-order Taylor polynomial with its Lagrange remainder.
     </p>
   </paragraphs>
@@ -242,8 +242,8 @@
       <p>
         Evaluate
         <md>\lim_{x \to 0} \frac{e^x - 1 - x}{x^2}</md>
-        by applying L'H&#xf4;pital's rule twice. At each application,
-        verify every hypothesis of L'H&#xf4;pital's rule
+        by applying L'H&#xf4;pital's Rule twice. At each application,
+        verify every hypothesis of L'H&#xf4;pital's Rule
         (<xref ref="thm-mod7-lhopital"/>): on an open interval around <m>0</m>, except
         possibly at <m>0</m>, the numerator and denominator are
         differentiable and the derivative of the denominator is nonzero;

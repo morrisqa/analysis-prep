@@ -106,7 +106,7 @@
           <p>
             For each claim, identify whether you would first try
             direct proof, proof by contrapositive, or proof by
-            contradiction&#x2014;and say briefly why.
+            contradiction, and say briefly why.
             <ol marker="(a)">
               <li>If <m>n^2</m> is odd, then <m>n</m> is odd.</li>
               <li>There are infinitely many prime numbers.</li>
@@ -150,7 +150,7 @@
           Graduate real analysis is hard because it demands two things
           simultaneously: mathematical content (what is true) and logical
           precision (why it must be true, expressed unambiguously). Most
-          students find the content familiar&#x2014;you have seen sequences,
+          students find the content familiar: you have seen sequences,
           limits, and derivatives before. The challenge in MAT 5610 is the
           second part: Bauldry's definitions are short but dense, and every
           word is load-bearing.
@@ -222,7 +222,7 @@
           <row>
             <cell><p>Companion Reading and Study Guide</p></cell>
             <cell><p>55 min</p></cell>
-            <cell><p>Hirst Ch. 2&#x2013;3 and Zorn &#xa7;1.4&#x2013;1.5</p></cell>
+            <cell><p>Hirst Ch. 2<ndash/>3 and Zorn &#xa7;1.4<ndash/>1.5</p></cell>
           </row>
           <row>
             <cell><p>Worked Examples</p></cell>

@@ -45,7 +45,7 @@
       </li>
       <li>
         <p>
-          State and prove the Fundamental Theorem of Calculus, Part 1:
+          State and prove the Fundamental Theorem of Calculus (FTC), Part 1:
           if <m>F(x) = \int_a^x f(t)\,dt</m> and <m>f</m> is continuous
           on <m>[a,b]</m>, then <m>F'(x) = f(x)</m> for <m>x \in (a,b)</m>.
         </p>
@@ -76,10 +76,10 @@
       The definition of the integral via Darboux sums may look unfamiliar
       even if you have computed integrals before. In a calculus course,
       the integral is often introduced through Riemann sums with sample
-      points; here we use suprema and infima on each subinterval, which
+      points; here you use suprema and infima on each subinterval, which
       always exist for bounded functions by the completeness of <m>\R</m>.
-      This approach &#x2014; upper sums from the top, lower sums from
-      below, squeeze them together &#x2014; is called the Darboux approach.
+      This approach (upper sums from the top, lower sums from
+      below, squeeze them together) is called the Darboux approach.
       It gives the same integrable functions and the same integrals as
       the Riemann sum definition (a standard equivalence that this module
       does not need; for a proof see Bartle and Sherbert,
@@ -89,10 +89,10 @@
     </p>
     <p>
       The Fundamental Theorem of Calculus is where differentiation and
-      integration meet. Understanding both parts &#x2014; Part 1 says that
+      integration meet. Part 1 says that
       differentiating an integral recovers the integrand; Part 2 says that
-      integrating a derivative recovers the boundary values &#x2014; is
-      essential preparation for MAT 5610. The self-assessment questions
+      integrating a derivative recovers the boundary values. Understanding
+      both parts is essential preparation for MAT 5610. The self-assessment questions
       below are <alert>not graded</alert>. Write informally; a sentence or
       two per question is fine.
     </p>
@@ -157,22 +157,22 @@
       The definition of the Riemann integral via Darboux sums is elegant
       but requires care: upper sums use suprema on each subinterval (not
       function values at sample points), so they always exist for bounded
-      functions. This is not a technical nicety &#x2014; it is precisely
+      functions. This is not a technical nicety: it is precisely
       why the definition works. The integrability criterion is the key to
-      everything, and students should memorize it:
+      everything, and you should memorize it:
       <m>\forall \varepsilon \gt 0\ \exists P: U(f,P) - L(f,P) \lt \varepsilon</m>.
       If you can state and apply this criterion fluently, the proofs in
       this module will feel natural rather than mysterious.
     </p>
     <p>
       The connection to uniform continuity (<xref ref="ch-mod6"/>) is not
-      coincidental &#x2014; it is the reason continuous functions are
+      coincidental: it is the reason continuous functions are
       integrable. The key step in the proof of <q>continuous implies
       integrable</q> is to bound the oscillation <m>M_i - m_i</m> on
       each subinterval, which requires uniform continuity: continuity
       at each point separately gives a <m>\delta</m> that may depend
       on the point, and the proof needs one <m>\delta</m> for all of
-      <m>[a,b]</m>, which the Heine<ndash/>Cantor theorem supplies. If you felt uncertain about the
+      <m>[a,b]</m>, which the Heine<ndash/>Cantor Theorem supplies. If you felt uncertain about the
       distinction between pointwise and uniform continuity in <xref ref="ch-mod6"/>,
       this module provides the payoff for understanding it.
     </p>
@@ -183,11 +183,11 @@
     <p>
       <alert>A note on pacing.</alert>
       If you are coming in with prior real analysis experience,
-      move quickly through Zorn &#xa7;5.1&#x2013;5.2 (you have likely
+      move quickly through Zorn &#xa7;5.1<ndash/>5.2 (you have likely
       seen Darboux sums before) and focus your attention on the proof
       of FTC Part 1 in <xref ref="ex-mod8-we-3"/> and the Bridge Reading on
-      Bauldry &#xa7;2.4, which introduces the Riemann-Stieltjes integral
-      &#x2014; material that will be central in MAT 5610. If you are new
+      Bauldry &#xa7;2.4, which introduces the Riemann<ndash/>Stieltjes integral,
+      material that will be central in MAT 5610. If you are new
       to analysis, work carefully through the computation in
       <xref ref="ex-mod8-we-1"/> (<m>f(x) = x</m> on <m>[0,1]</m>) before tackling the
       integrability proofs; it shows the integrability criterion in its
@@ -232,7 +232,7 @@
       <row>
         <cell><p>Companion Reading and Study Guide</p></cell>
         <cell><p>65 min</p></cell>
-        <cell><p>Zorn &#xa7;5.1&#x2013;5.4 with guided questions</p></cell>
+        <cell><p>Zorn &#xa7;5.1<ndash/>5.4 with guided questions</p></cell>
       </row>
       <row>
         <cell><p>Worked Examples</p></cell>
