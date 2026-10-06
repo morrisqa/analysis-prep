@@ -240,10 +240,27 @@
       An <em>equivalence relation</em> is a relation that is reflexive,
       symmetric, and transitive. Equivalence relations partition a set
       into disjoint equivalence classes; this structure reappears in
-      abstract algebra and topology. For our purposes in real analysis,
-      the most important equivalence relation is the one defining
-      cardinality in Part D: <m>A \sim B</m> iff there exists a
-      bijection <m>A \to B</m>.
+      abstract algebra and topology.
+    </p>
+    <p>
+      For our purposes in real analysis,
+      the most important equivalence-like comparison is the comparison
+      of sets by cardinality in Part D: for sets <m>A</m> and <m>B</m>, write
+      <m>A \sim B</m> iff there exists a bijection <m>A \to B</m>.
+      This comparison is reflexive (the identity map <m>A \to A</m> is
+      a bijection), symmetric (a bijection <m>f : A \to B</m> has an
+      inverse <m>f^{-1} : B \to A</m>, which is a bijection because its
+      inverse is <m>f</m>), and
+      transitive (if <m>f : A \to B</m> and <m>g : B \to C</m> are
+      bijections, then <m>g \circ f</m> is injective by
+      <xref ref="ex-mod3-we-3" text="custom">Worked Example 3</xref>,
+      and surjective because each <m>c \in C</m> is <m>g(b)</m> for some
+      <m>b \in B</m>, which is <m>f(a)</m> for some <m>a \in A</m>).
+      So it behaves like an equivalence relation, although it is not a
+      relation on one fixed set <m>A</m> in the sense above: it compares
+      arbitrary sets. From Part D on, <m>A \sim B</m> between two sets
+      always has this meaning; in the exercise below, <m>\sim</m> is a
+      different relation, on <m>\Z</m>.
     </p>
   </paragraphs>
 
@@ -305,8 +322,9 @@
     </p>
     <p>
       Hirst &#xa7;5.5 covers related material including the Cantor&#x2013;Bernstein
-      theorem (<m>A \preceq B</m> and <m>B \preceq A</m> imply
-      <m>A \sim B</m>). You are not required to prove Cantor&#x2013;Bernstein,
+      theorem. Write <m>A \preceq B</m> when there is an injection
+      <m>A \to B</m>; the theorem says that if <m>A \preceq B</m> and
+      <m>B \preceq A</m>, then <m>A \sim B</m>. You are not required to prove Cantor&#x2013;Bernstein,
       but reading its statement gives you important context for how
       cardinality comparisons work in MAT 5610.
     </p>
