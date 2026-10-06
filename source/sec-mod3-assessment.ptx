@@ -116,7 +116,8 @@
       <p>
         One approach: define <m>f : \N \to T</m> by
         <m>f(n) = 3 \cdot \varphi(n)</m>, where <m>\varphi : \N \to \Z</m>
-        is the bijection from Worked Example 4. Then verify that
+        is the bijection from
+        <xref ref="ex-mod3-we-4" text="custom">Worked Example 4</xref>. Then verify that
         <m>f</m> is a bijection <m>\N \to T</m>.
       </p>
     </hint>
@@ -142,8 +143,8 @@
         <ol marker="(i)">
           <li>
             Handle the case where at least one of <m>A</m> or <m>B</m>
-            is finite separately, or explain why it suffices to assume
-            both are countably infinite.
+            is finite separately, or explain how your argument handles
+            finite or empty sets.
           </li>
           <li>
             Construct an explicit surjection from <m>\N</m> onto
@@ -158,24 +159,15 @@
     </statement>
     <hint>
       <p>
-        If <m>A = \emptyset</m> or <m>B = \emptyset</m>, then
-        <m>A \cup B</m> is <m>B</m> or <m>A</m>, which is countable.
-        Otherwise <m>A</m> and <m>B</m> are nonempty and countable, so
-        there exist surjections <m>a : \N \to A</m> and
-        <m>b : \N \to B</m> (a bijection if the set is countably
-        infinite; if <m>A = \{x_1, \ldots, x_k\}</m> is finite, take
-        <m>a(n) = x_{\min(n,k)}</m>). Define <m>h : \N \to A \cup B</m> by
-        sending even <m>n</m> to <m>a(n/2)</m> and odd <m>n</m>
-        to <m>b((n+1)/2)</m>. Show <m>h</m> is a surjection. Then turn
-        it into an injection: for each <m>y \in A \cup B</m>, let
-        <m>\iota(y)</m> be the least <m>n \in \N</m> with
-        <m>h(n) = y</m> (every nonempty set of natural numbers has a
-        least element). If <m>\iota(y) = \iota(y')</m>, then
-        <m>y = h(\iota(y)) = h(\iota(y')) = y'</m>, so
-        <m>\iota : A \cup B \to \N</m> is injective. Thus
-        <m>A \cup B</m> is in bijection with the subset
-        <m>\iota(A \cup B)</m> of <m>\N</m>, and Proposition 1.17
-        finishes the proof.
+        First dispose of the case where <m>A</m> or <m>B</m> is empty.
+        Otherwise, there are surjections <m>a : \N \to A</m> and
+        <m>b : \N \to B</m> (a nonempty finite set also has a surjection
+        from <m>\N</m>). Interleave them: use the even natural numbers
+        for <m>a</m> and the odd ones for <m>b</m> to build a surjection
+        <m>h : \N \to A \cup B</m>. Then turn <m>h</m> into an injection
+        <m>A \cup B \to \N</m> by sending each element to its least
+        preimage under <m>h</m> (every nonempty set of natural numbers
+        has a least element).
       </p>
     </hint>
   </exercise>
@@ -279,7 +271,7 @@
       </row>
       <row>
         <cell><p><alert>Function construction (Part 2)</alert></p></cell>
-        <cell><p>Explicit function of the kind the option asks for (a bijection in Option A; a surjection or injection in Option B) given; every property it needs verified</p></cell>
+        <cell><p>An explicit function of the kind the option asks for (a bijection in Option A; a surjection or injection in Option B), with every needed property verified</p></cell>
         <cell><p>Function described informally; only some of the needed properties verified</p></cell>
         <cell><p>No explicit function; conclusion asserted without construction</p></cell>
       </row>

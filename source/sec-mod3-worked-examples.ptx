@@ -396,13 +396,14 @@
       </p>
       <p>
         Every <m>n \in \N</m> lies in exactly one block. Since
-        <m>T_2 = 0 \lt n</m> and <m>T_k \geq k - 2</m> (so only finitely
-        many <m>k</m> have <m>T_k \lt n</m>), there is a largest
-        <m>k</m> with <m>T_k \lt n</m>, and for that <m>k</m> we have
+        <m>T_2 = 0</m> and <m>T_{k+1} - T_k = k - 1 \geq 1</m> for
+        <m>k \geq 2</m>, the <m>T_k</m> increase with <m>k</m> and
+        <m>T_k \geq k - 2</m>. Because <m>T_2 \lt n</m>, and only
+        finitely many <m>k</m> have <m>T_k \lt n</m>, there is a largest
+        such <m>k</m>. By maximality of <m>k</m>,
         <m>T_k \lt n \leq T_{k+1}</m>, so <m>n \in B_k</m>. If also
         <m>n \in B_{k'}</m> with <m>k \lt k'</m>, then
-        <m>n \leq T_{k+1} \leq T_{k'} \lt n</m> (the <m>T_k</m> increase
-        with <m>k</m>), which is impossible.
+        <m>n \leq T_{k+1} \leq T_{k'} \lt n</m>, which is impossible.
       </p>
       <p>
         <em>Injectivity.</em> Suppose <m>f(i,j) = f(i',j') = n</m>. Then
@@ -419,7 +420,7 @@
         <m>f(i,j) = T_k + i = n</m>.
       </p>
       <p>
-        We verify the first few values:
+        As a check, the first few values are:
         <m>f(1,1) = 0 \cdot 0/2 + 1 = 1</m>,
         <m>f(1,2) = 1 \cdot 2/2 + 1 = 2</m>,
         <m>f(2,1) = 1 \cdot 2/2 + 2 = 3</m>,

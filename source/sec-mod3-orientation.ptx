@@ -187,10 +187,10 @@
     </p>
     <p>
       The element-chasing technique for set equality is worth mastering
-      completely. The technique is always the same: to show
+      completely. The technique is usually the same: to show
       <m>A = B</m>, pick an arbitrary element of <m>A</m> and show
       it belongs to <m>B</m> (giving <m>A \subseteq B</m>), then
-      reverse (giving <m>B \subseteq A</m>). The template never changes;
+      reverse (giving <m>B \subseteq A</m>). The template rarely changes;
       what changes is the algebra needed to execute each direction.
       Most set equality proofs in this module and in MAT 5610 follow
       this template.

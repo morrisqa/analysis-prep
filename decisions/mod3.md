@@ -9,9 +9,11 @@ Source review: [#10 Module 3 comment](https://github.com/morrisqa/analysis-prep/
 | `ex-mod3-we-4`, `ex-mod3-ps-s4`, `ex-mod3-as-2a` | Keep WE4's bijection f : ℕ₀ → ℤ and add a named bijection φ : ℕ → ℤ, φ(n) = f(n − 1), with its explicit formula and a short proof; ps-s4 and as-2a now use φ. | Keeps Quinn's construction and gives the later exercises an object that exists. | Rewrite WE4 on ℕ directly. |
 | `ex-mod3-as-2a` hint | The hint now defines the student's f = 3φ directly (no separate g). | One name for the requested answer; φ avoids the clash with the statement's f. | Keep g; rename only the helper. |
 | `ex-mod3-as-2b` hint | Surjection route for nonempty sets, empty case handled separately, least-preimage injection; well-ordering stated in plain words. | Fixes three gaps within Quinn's approach; well-ordering is not named elsewhere in the book. | Use the injection into ℕ × {0, 1} the statement allows. |
+| `ex-mod3-as-2b` hint (after review) | Cut back to the approach (empty case, interleave two surjections, least preimage); the verifications and the appeal to Proposition 1.17 are left to the student. Statement (i) now accepts one argument covering finite and empty sets. | Both reviewers found the first fix had turned the hint of a **graded** item into the full proof. | Keep the full proof in the hint. |
+| `par-mod3-instructor-note` | "always the same" → "usually the same"; "never changes" → "rarely changes". | Agree with the corrected "Most set equality proofs". | Leave Quinn's universal wording. |
 | `ex-mod3-we-5` | Full proof of bijectivity (diagonal blocks, position within a block). | Student learning over brevity; the example was labelled "Formal argument". | Relabel as a sketch. |
 | `par-mod3-sg-c` | Keep ∼ for "same cardinality", define it, prove reflexive/symmetric/transitive, and say it "behaves like" an equivalence relation. | Avoids claiming a relation on a set of all sets without needing Russell's paradox. | Use ≡ for the parity relation in sg-c1. |
-| `par-mod3-sg-d` | Define ≼ in the module's words (injection A → B). | It was used undefined. | Replace ≼ with words. |
+| `par-mod3-sg-d` | Define ⪯ in the module's words (injection A → B). | It was used undefined. | Replace ≼ with words. |
 | `ex-mod3-we-1`, `par-mod3-instructor-note` | "Most set equality proofs follow this template" (was "Every"). | "Every" is false. | "Every element-chasing proof…" |
 | `ex-mod3-br-1`(b) | Task changed to set-builder notation plus a union of two intervals. | The set was already written with set difference. | Delete the sentence. |
 | `par-mod3-as-rubric` | Row renamed "Function construction (Part 2)", covering a bijection (Option A) or a surjection/injection (Option B). | The old row fit only Option A. | Separate rows per option. |
@@ -23,5 +25,5 @@ Source review: [#10 Module 3 comment](https://github.com/morrisqa/analysis-prep/
 - Zorn Theorem 1.21: stated for ℝ or (0, 1)? The module now relies only on "ℝ is uncountable".
 - How Zorn proves ℚ is countable (claim removed).
 - "Countably infinite means in bijection with ℕ = {1, 2, 3, …}" against Zorn Definition 1.13.
-- Hirst's notation for injection comparison (≼ is defined in the module's own words).
+- Hirst's notation for injection comparison (⪯ is defined in the module's own words).
 - All other Zorn, Hirst and Bauldry page and section references in Module 3.

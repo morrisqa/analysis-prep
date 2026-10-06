@@ -164,10 +164,10 @@
         union of countable sets, contradicting Theorem 1.21).
         (c) Countably infinite (in bijection with <m>\N</m> via
         <m>n \mapsto 1/n</m>).
-        (d) Uncountable (bijection with <m>\R</m> via, e.g.,
+        (d) Uncountable. It is in bijection with <m>\R</m> via, e.g.,
         <m>x \mapsto \tan(\pi x - \pi/2)</m>, and <m>\R</m> is
-        uncountable by Theorem 1.21; Cantor's diagonal argument in
-        <xref ref="ex-mod3-ps-c2"/> also proves it directly).
+        uncountable by Theorem 1.21. Cantor's diagonal argument in
+        <xref ref="ex-mod3-ps-c2"/> also proves it directly.
         (e) Countably infinite (product of two countable sets by
         Prop. 1.18).
       </p>
