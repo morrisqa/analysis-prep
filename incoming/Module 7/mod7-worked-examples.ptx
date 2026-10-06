@@ -1,0 +1,271 @@
+<section xml:id="ws-mod7-worked-examples">
+  <title>Module 7: Worked Examples</title>
+  <subtitle>Annotated Proof Walkthroughs — Estimated time: 40 minutes</subtitle>
+
+  <introduction>
+    <p>
+      Read each example slowly. The goal is not just to see what the
+      answer is, but to internalize the proof <em>template</em>.
+      Example 1 shows how to compute a derivative directly from the
+      limit definition. Example 2 proves differentiability implies
+      continuity&#x2014;a result that looks obvious but requires a
+      specific algebraic trick. Example 3 is a full proof of Rolle's
+      Theorem, the key lemma for the MVT. Example 4 demonstrates the
+      MVT used to produce an inequality, the most common application
+      pattern in MAT 5610.
+    </p>
+  </introduction>
+
+  <!-- ============================================================
+       EXAMPLE 1: DERIVATIVE FROM THE DEFINITION
+  ============================================================ -->
+
+  <exercise xml:id="ex-mod7-we-1">
+    <title>Example 1: Derivative from the Definition</title>
+    <statement>
+      <p>
+        Prove that <m>f(x) = x^3</m> is differentiable at every
+        <m>a \in \R</m> and that <m>f'(a) = 3a^2</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <alert>Strategy.</alert>
+      </p>
+      <p>
+        Compute the difference quotient <m>(f(a+h) - f(a))/h</m>,
+        simplify the numerator algebraically, cancel the factor of
+        <m>h</m>, and evaluate the resulting limit as <m>h \to 0</m>.
+      </p>
+      <p>
+        <alert>Scratch work.</alert>
+      </p>
+      <p>
+        Expand the numerator:
+        <me>(a+h)^3 - a^3 = a^3 + 3a^2h + 3ah^2 + h^3 - a^3
+        = 3a^2 h + 3ah^2 + h^3 = h(3a^2 + 3ah + h^2).</me>
+        Dividing by <m>h</m> leaves <m>3a^2 + 3ah + h^2</m>, which
+        tends to <m>3a^2</m> as <m>h \to 0</m>.
+      </p>
+      <p>
+        <alert>Proof.</alert>
+      </p>
+      <p>
+        Let <m>a \in \R</m>. For <m>h \neq 0</m>, compute:
+        <md>
+          <mrow>\frac{f(a+h) - f(a)}{h}
+          \amp= \frac{(a+h)^3 - a^3}{h}</mrow>
+          <mrow>\amp= \frac{3a^2 h + 3ah^2 + h^3}{h}</mrow>
+          <mrow>\amp= 3a^2 + 3ah + h^2.</mrow>
+        </md>
+        By the sum and product rules for limits (Module 6),
+        <me>\lim_{h \to 0} (3a^2 + 3ah + h^2) = 3a^2 + 0 + 0 = 3a^2.</me>
+        By the definition of the derivative, <m>f'(a) = 3a^2</m>. Since
+        <m>a \in \R</m> was arbitrary, <m>f</m> is differentiable at
+        every point and <m>f'(x) = 3x^2</m>. <m>\square</m>
+      </p>
+      <p>
+        <alert>What to notice.</alert>
+      </p>
+      <p>
+        The entire work is in the algebra of the numerator: expanding
+        <m>(a+h)^3 - a^3</m> and identifying the factor of <m>h</m>
+        that cancels the denominator. Once that cancellation is done,
+        the limit is immediate from the limit laws. This is the standard
+        template for every computation of a derivative from the
+        definition: <em>simplify, cancel, then take the limit</em>.
+      </p>
+    </solution>
+  </exercise>
+
+  <!-- ============================================================
+       EXAMPLE 2: DIFFERENTIABILITY IMPLIES CONTINUITY
+  ============================================================ -->
+
+  <exercise xml:id="ex-mod7-we-2">
+    <title>Example 2: Differentiability Implies Continuity</title>
+    <statement>
+      <p>
+        Prove that if <m>f</m> is differentiable at <m>a</m>, then
+        <m>f</m> is continuous at <m>a</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <alert>Strategy.</alert>
+      </p>
+      <p>
+        Write <m>f(x) - f(a)</m> as a product involving the difference
+        quotient, then apply the product rule for limits. The key
+        algebraic insight is that we can insert the factor
+        <m>(x - a)</m> in the denominator as long as we also put it
+        in the numerator.
+      </p>
+      <p>
+        <alert>Proof.</alert>
+      </p>
+      <p>
+        Suppose <m>f</m> is differentiable at <m>a</m>. For
+        <m>x \neq a</m>, we may write
+        <me>f(x) - f(a) = \frac{f(x) - f(a)}{x - a} \cdot (x - a).</me>
+        As <m>x \to a</m>, the first factor tends to <m>f'(a)</m> by
+        the hypothesis of differentiability, and the second factor
+        tends to <m>0</m>. By the product rule for limits,
+        <me>\lim_{x \to a} [f(x) - f(a)]
+        = f'(a) \cdot 0 = 0.</me>
+        Hence <m>\lim_{x \to a} f(x) = f(a)</m>, so <m>f</m> is
+        continuous at <m>a</m>. <m>\square</m>
+      </p>
+      <p>
+        <alert>What to notice.</alert>
+      </p>
+      <p>
+        The key algebraic trick is writing <m>f(x) - f(a)</m> as a
+        product with the difference quotient. This is valid for
+        <m>x \neq a</m>, and the limit as <m>x \to a</m> only looks
+        at <m>x \neq a</m> anyway. The theorem is one-directional:
+        continuity does <em>not</em> imply differentiability. The
+        function <m>f(x) = |x|</m> is continuous at <m>0</m> but not
+        differentiable there (the left- and right-hand difference
+        quotients both exist but are <m>-1</m> and <m>+1</m>
+        respectively, so the limit does not exist).
+      </p>
+    </solution>
+  </exercise>
+
+  <!-- ============================================================
+       EXAMPLE 3: PROOF OF ROLLE'S THEOREM
+  ============================================================ -->
+
+  <exercise xml:id="ex-mod7-we-3">
+    <title>Example 3: Proof of Rolle's Theorem</title>
+    <statement>
+      <p>
+        Prove Rolle's Theorem: if <m>f</m> is continuous on
+        <m>[a, b]</m>, differentiable on <m>(a, b)</m>, and
+        <m>f(a) = f(b)</m>, then there exists <m>c \in (a, b)</m>
+        with <m>f'(c) = 0</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <alert>Strategy.</alert>
+      </p>
+      <p>
+        The Extreme Value Theorem (Module 6) guarantees that
+        <m>f</m> attains its maximum and minimum on <m>[a, b]</m>.
+        If <m>f</m> is constant, we are immediately done. If not,
+        at least one extremum must occur at an interior point
+        <m>c \in (a, b)</m>, and at an interior extremum of a
+        differentiable function, the derivative must be zero.
+      </p>
+      <p>
+        <alert>Step 1: Handle the trivial case.</alert>
+      </p>
+      <p>
+        <em>(i) If <m>f</m> is constant on <m>[a, b]</m>.</em>
+        Then <m>f'(c) = 0</m> for every <m>c \in (a, b)</m>, and
+        the conclusion holds immediately.
+      </p>
+      <p>
+        <alert>Step 2: Handle the nontrivial case.</alert>
+      </p>
+      <p>
+        <em>(ii) If <m>f</m> is not constant on <m>[a, b]</m>.</em>
+        By the Extreme Value Theorem (EVT, Module 6), <m>f</m> attains
+        its maximum at some point in <m>[a, b]</m>. Since <m>f</m> is
+        not constant and <m>f(a) = f(b)</m>, the maximum cannot equal
+        <m>f(a) = f(b)</m> at both endpoints simultaneously; there
+        must be some <m>x_0 \in (a, b)</m> with
+        <m>f(x_0) &gt; f(a) = f(b)</m>. Hence the maximum of <m>f</m>
+        is attained at some point <m>c \in (a, b)</m>.
+      </p>
+      <p>
+        <alert>Step 3: Conclude <m>f'(c) = 0</m> at the interior maximum.</alert>
+      </p>
+      <p>
+        At the interior maximum <m>c</m>: for <m>h \gt 0</m> small,
+        <m>f(c + h) \leq f(c)</m>, so
+        <m>(f(c+h) - f(c))/h \leq 0</m>; taking the right-hand limit,
+        <m>f'(c) \leq 0</m>. For <m>h \lt 0</m> small,
+        <m>f(c + h) \leq f(c)</m>, so
+        <m>(f(c+h) - f(c))/h \geq 0</m>; taking the left-hand limit,
+        <m>f'(c) \geq 0</m>. Since both inequalities hold and the
+        derivative exists, <m>f'(c) = 0</m>. (A symmetric argument
+        applies if <m>f</m> attains its minimum at an interior point.)
+        <m>\square</m>
+      </p>
+      <p>
+        <alert>What to notice.</alert>
+      </p>
+      <p>
+        The proof has two cases; the key one requires <m>f</m> to be
+        non-constant. The Extreme Value Theorem (from Module 6) is the
+        tool that produces the interior extremum, and differentiability
+        is what forces <m>f'(c) = 0</m> at that point. The argument
+        for <m>f'(c) = 0</m> at an interior extremum (comparing
+        left-hand and right-hand difference quotients) is itself a
+        standard template in real analysis.
+      </p>
+    </solution>
+  </exercise>
+
+  <!-- ============================================================
+       EXAMPLE 4: AN MVT INEQUALITY
+  ============================================================ -->
+
+  <exercise xml:id="ex-mod7-we-4">
+    <title>Example 4: An MVT Inequality</title>
+    <statement>
+      <p>
+        Use the Mean Value Theorem to prove that
+        <m>|\sin(x) - \sin(y)| \leq |x - y|</m> for all
+        <m>x, y \in \R</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <alert>Strategy.</alert>
+      </p>
+      <p>
+        Apply the MVT to <m>f(t) = \sin(t)</m> on the interval
+        between <m>x</m> and <m>y</m>, then use the bound
+        <m>|\cos(c)| \leq 1</m> to control the result. This converts
+        a question about how much <m>\sin</m> can change into a
+        question about how large its derivative can be.
+      </p>
+      <p>
+        <alert>Proof.</alert>
+      </p>
+      <p>
+        Fix <m>x, y \in \R</m>. If <m>x = y</m>, both sides are
+        <m>0</m> and the inequality holds trivially. Assume WLOG that
+        <m>x \lt y</m>. The function <m>f(t) = \sin(t)</m> is
+        continuous on <m>[x, y]</m> and differentiable on
+        <m>(x, y)</m>, with <m>f'(t) = \cos(t)</m>. By the Mean
+        Value Theorem, there exists <m>c \in (x, y)</m> such that
+        <me>f(y) - f(x) = f'(c)(y - x), \quad \text{i.e.,} \quad
+        \sin(y) - \sin(x) = \cos(c)(y - x).</me>
+        Taking absolute values:
+        <me>|\sin(y) - \sin(x)| = |\cos(c)| \cdot |y - x| \leq |y - x|,</me>
+        since <m>|\cos(c)| \leq 1</m> for all <m>c \in \R</m>. This
+        gives <m>|\sin(x) - \sin(y)| \leq |x - y|</m>. <m>\square</m>
+      </p>
+      <p>
+        <alert>What to notice.</alert>
+      </p>
+      <p>
+        The MVT converts <q>how much does <m>\sin</m> change on
+        <m>[x, y]</m>?</q> into <q>how large is <m>|\sin'(c)|</m>?</q>
+        &#x2014;and the answer is at most 1. This is the prototype
+        of the <em>MVT inequality template</em>:
+        <m>|f(y) - f(x)| = |f'(c)| \cdot |y - x| \leq M|y-x|</m>
+        whenever <m>|f'| \leq M</m>. This template recurs throughout
+        MAT 5610: in the proof of the Fundamental Theorem of Calculus,
+        in error bounds for Taylor polynomials, and in the definition
+        of Lipschitz continuity.
+      </p>
+    </solution>
+  </exercise>
+
+</section>

@@ -1,0 +1,598 @@
+<section xml:id="ws-mod1-study-guide">
+    <title>Module 1: Companion Reading and Study Guide</title>
+    <subtitle>Hirst Ch. 2&#x2013;3; Zorn &#xa7;1.4&#x2013;1.5 &#x2014; Estimated time: 50 minutes</subtitle>
+
+    <!-- ============================================================ -->
+
+      <introduction>
+        <p>
+          <alert>How to use this guide.</alert> Work through it
+          <em>while</em> reading, not after. Each section names the
+          assignment, explains what to look for, and poses
+          <q>stop and check</q> questions. Starred items
+          are especially important for MAT 5610 preparation.
+        </p>
+      </introduction>
+
+    <!-- ============================================================ -->
+
+      <paragraphs xml:id="par-mod1-sg-z14">
+        <title>Reading 1: Zorn &#xa7;1.4 <q>Proofs 101</q> (Suggested time: 20 minutes)</title>
+        <p>
+          Zorn treats proof-writing as a language skill. He opens with
+          concrete prose rules (use standard notation; define everything;
+          write complete <q>sentences</q>; watch word order; make it look
+          easy; etc.) and then builds up a lexicon of logical terms.
+          As you read, identify each rule and be able to say why it matters.
+        </p>
+      </paragraphs>
+
+      <exercise xml:id="ex-mod1-sg-z14-1">
+        <title>Correcting a Malformed Statement</title>
+        <statement>
+          <p> Zorn writes that <q>For all <m>\Q</m>,
+            we have <m>x^2 \geq 0</m></q> is nonsensical. Explain why
+            this sentence fails, and write a corrected version.
+          </p>
+        </statement>
+        <answer>
+          <p>
+            The statement fails because <m>\Q</m> denotes a set, not a
+            variable. The quantifier <q>for all</q> must bind a variable
+            ranging over a domain, not the domain itself. A corrected version:
+            <q>For all <m>x \in \Q</m>, we have <m>x^2 \geq 0</m>.</q>
+            In symbols: <m>\forall x \in \Q,\; x^2 \geq 0</m>.
+          </p>
+        </answer>
+      </exercise>
+
+      <exercise xml:id="ex-mod1-sg-z14-2">
+        <title>Word Order and Quantifiers</title>
+        <statement>
+          <p>
+            Zorn's <q>Watch word order</q> section gives two statements
+            involving <m>\varepsilon</m> and <m>n</m> that look similar but
+            have opposite truth values. Write out both statements, and
+            explain why their quantifier order makes them different.
+            (This pair recurs in Module 2 on sequences.)
+          </p>
+        </statement>
+        <answer>
+          <p>
+            The two statements (over <m>\varepsilon \gt 0</m> and <m>n \in \N</m>) are:
+            <ol marker="(a)">
+              <li>
+                <m>\forall \varepsilon \gt 0 \;\; \exists n \in \N
+                \text{ such that } \tfrac{1}{n} \lt \varepsilon</m>.
+                <em>True</em> (Archimedean property).
+              </li>
+              <li>
+                <m>\exists n \in \N \text{ such that }
+                \forall \varepsilon \gt 0,\;\; \tfrac{1}{n} \lt \varepsilon</m>.
+                <em>False</em>: no fixed <m>n</m> makes <m>1/n</m> smaller
+                than every positive <m>\varepsilon</m>.
+              </li>
+            </ol>
+            The difference is which variable is fixed first. In (a) <m>n</m> may
+            depend on <m>\varepsilon</m>; in (b) <m>n</m> must work for all
+            <m>\varepsilon</m> simultaneously.
+          </p>
+        </answer>
+      </exercise>
+
+      <exercise xml:id="ex-mod1-sg-z14-3">
+        <title>Scratch Work vs. Finished Proof</title>
+        <statement>
+          <p>
+            The <q>Make it look easy</q> rule says a finished proof should
+            hide the scratch work. Does this mean you should not show your
+            reasoning? Explain the distinction Zorn is drawing.
+          </p>
+        </statement>
+        <answer>
+          <p>
+            Zorn is not saying to omit reasoning; he is saying that the
+            <em>finished proof</em> should read as a clean, forward-moving
+            argument rather than a record of how you found the proof. Scratch
+            work (trying cases, working backwards, computing examples) is
+            essential privately, but the write-up presents the logical chain
+            in order, without dead ends or self-corrections. In MAT 5610,
+            assessments will ask you to include clearly labeled scratch work
+            before the formal proof.
+          </p>
+        </answer>
+      </exercise>
+
+      <exercise xml:id="ex-mod1-sg-z14-4">
+        <title>De Morgan's Laws for Quantifiers</title>
+        <statement>
+          <p> State De Morgan's laws for <em>quantified</em>
+            statements (not just for <q>and</q>/<q>or</q>). Use the
+            symbols <m>\forall</m>, <m>\exists</m>, and <m>\neg</m>.
+          </p>
+        </statement>
+        <answer>
+          <p>
+            The quantifier De Morgan laws (where <m>P(x)</m> is a predicate
+            over domain <m>D</m>):
+            <md>
+              <mrow>\neg\bigl(\forall x \in D,\; P(x)\bigr) \amp\iff \exists x \in D,\; \neg P(x)</mrow>
+              <mrow>\neg\bigl(\exists x \in D,\; P(x)\bigr) \amp\iff \forall x \in D,\; \neg P(x)</mrow>
+            </md>
+            In words: the negation of a universal is an existential counterexample;
+            the negation of an existential is a universal denial.
+          </p>
+        </answer>
+      </exercise>
+
+      <exercise xml:id="ex-mod1-sg-z14-5">
+        <title>Archimedean Property in Symbols</title>
+        <statement>
+          <p>
+            Zorn gives an example of the Archimedean property using
+            quantifiers. Write it out in full symbolic form and explain
+            in one sentence what it means. (You will prove this in Module 2.)
+          </p>
+        </statement>
+        <answer>
+          <p>
+            <m>\forall x \in \R,\; \exists n \in \N \text{ such that } x \lt n</m>.
+            This says: every real number is exceeded by some natural number,
+            i.e., the natural numbers are unbounded above in <m>\R</m>.
+          </p>
+        </answer>
+      </exercise>
+
+      <exercise xml:id="ex-mod1-sg-z14-6">
+        <title>Converse and Contrapositive</title>
+        <statement>
+          <p> For the implication <q>If <m>f</m> is
+            differentiable at <m>a</m>, then <m>f</m> is continuous
+            at <m>a</m></q>:
+            <ol marker="(a)">
+              <li>State the converse. Is it true?</li>
+              <li>State the contrapositive. Is it true?</li>
+            </ol>
+          </p>
+        </statement>
+        <answer>
+          <p>
+            <ol marker="(a)">
+              <li>
+                <alert>Converse:</alert> <q>If <m>f</m> is continuous at
+                <m>a</m>, then <m>f</m> is differentiable at <m>a</m>.</q>
+                <em>False.</em> The function <m>f(x) = |x|</m> is continuous
+                at <m>0</m> but not differentiable there.
+              </li>
+              <li>
+                <alert>Contrapositive:</alert> <q>If <m>f</m> is not
+                continuous at <m>a</m>, then <m>f</m> is not differentiable
+                at <m>a</m>.</q> <em>True</em> (logically equivalent to the
+                original implication, which is a standard theorem).
+              </li>
+            </ol>
+          </p>
+        </answer>
+      </exercise>
+
+    <!-- ============================================================ -->
+
+      <paragraphs xml:id="par-mod1-sg-z15">
+        <title>Reading 2: Zorn &#xa7;1.5 <q>Types of Proof</q> (Suggested time: 15 minutes)</title>
+        <p>
+          Read this after Videos 2 and 3. Zorn gives well-chosen examples
+          of all major proof strategies. The examples reinforce what you
+          saw on the lightboard.
+        </p>
+      </paragraphs>
+
+      <exercise xml:id="ex-mod1-sg-z15-1">
+        <title>Irrationality of <m>\sqrt{5}</m></title>
+        <statement>
+          <p> Zorn proves that <m>\sqrt{5}</m> is irrational
+            using an argument about prime factorizations (rather than the
+            parity argument). In your own words, describe the key idea.
+            What property of squaring makes the argument work?
+          </p>
+        </statement>
+        <answer>
+          <p>
+            The proof assumes <m>\sqrt{5} = p/q</m> in lowest terms, so
+            <m>p^2 = 5q^2</m>. Since 5 is prime, <m>5 \mid p^2</m> implies
+            <m>5 \mid p</m>, so write <m>p = 5k</m>; then <m>25k^2 = 5q^2</m>,
+            giving <m>5 \mid q</m>. This contradicts <m>\gcd(p,q)=1</m>.
+            Squaring preserves prime divisibility: if <m>p \mid a^2</m> and
+            <m>p</m> is prime, then <m>p \mid a</m> (by unique factorization).
+          </p>
+        </answer>
+      </exercise>
+
+      <exercise xml:id="ex-mod1-sg-z15-2">
+        <title>Infinitely Many Primes</title>
+        <statement>
+          <p>
+            Zorn proves there are infinitely many primes by contradiction.
+            Trace through the proof: what is the assumption, what
+            contradicting object is constructed, and what property of
+            that object creates the contradiction?
+          </p>
+        </statement>
+        <answer>
+          <p>
+            <alert>Assumption:</alert> There are finitely many primes,
+            <m>p_1, p_2, \ldots, p_k</m>. <alert>Constructed object:</alert>
+            <m>N = p_1 p_2 \cdots p_k + 1</m>. <alert>Contradiction:</alert>
+            Every prime <m>p_i</m> divides <m>p_1 \cdots p_k</m>, so
+            <m>p_i \nmid N</m> (it leaves remainder 1). But <m>N \gt 1</m>
+            must have some prime factor&#x2014;a prime not on our list. This
+            contradicts the assumption that the list was complete.
+          </p>
+        </answer>
+      </exercise>
+
+      <exercise xml:id="ex-mod1-sg-z15-3">
+        <title>Induction: Subsets</title>
+        <statement>
+          <p>
+            Zorn's Claim VIII: a set with <m>n</m> elements has <m>2^n</m>
+            subsets. Identify the base case, the induction hypothesis, and
+            the key idea in the inductive step. (Hint: adding one element
+            to a set does something predictable to the number of subsets.)
+          </p>
+        </statement>
+        <answer>
+          <p>
+            <alert>Base case:</alert> <m>n = 0</m>. A set with 0 elements
+            has exactly 1 subset (the empty set), and <m>2^0 = 1</m>. &#x2713;
+          </p>
+          <p>
+            <alert>Induction hypothesis:</alert> Assume any set with <m>n</m>
+            elements has <m>2^n</m> subsets.
+          </p>
+          <p>
+            <alert>Inductive step:</alert> Let <m>A</m> have <m>n+1</m>
+            elements; pick any element <m>a \in A</m>. Every subset of
+            <m>A</m> either contains <m>a</m> or does not. The subsets not
+            containing <m>a</m> are exactly the subsets of <m>A \setminus \{a\}</m>&#x2014;by
+            the induction hypothesis, there are <m>2^n</m> of these.
+            The subsets containing <m>a</m> are obtained by adding <m>a</m>
+            to each subset of <m>A \setminus \{a\}</m>&#x2014;also <m>2^n</m>.
+            Total: <m>2 \cdot 2^n = 2^{n+1}</m>. <m>\square</m>
+          </p>
+        </answer>
+      </exercise>
+
+      <exercise xml:id="ex-mod1-sg-z15-4">
+        <title>Exhaustive Case Analysis</title>
+        <statement>
+          <p>
+            Zorn's section <q>Brute Force, Cases, Exhaustion</q> is brief.
+            What kind of claim is best handled by exhaustive case analysis?
+            Give one example from mathematics (invented or remembered).
+          </p>
+        </statement>
+        <answer>
+          <p>
+            Case analysis works best when the claim naturally splits into
+            a finite number of mutually exclusive, collectively exhaustive
+            situations, each of which can be handled individually.
+            Example: <q>For any integer <m>n</m>, <m>n^2</m> leaves remainder
+            0 or 1 when divided by 4.</q> Proof by cases: either <m>n</m> is
+            even (<m>n = 2k</m>, so <m>n^2 = 4k^2 \equiv 0</m>) or <m>n</m>
+            is odd (<m>n = 2k+1</m>, so <m>n^2 = 4k^2+4k+1 \equiv 1</m>).
+          </p>
+        </answer>
+      </exercise>
+
+    <!-- ============================================================ -->
+
+      <paragraphs xml:id="par-mod1-sg-h2">
+        <title>Reading 3: Hirst Ch. 2, &#xa7;2.1&#x2013;2.2 and &#xa7;2.4 (Suggested time: 10 minutes)</title>
+        <p>
+          Hirst formalizes the components of mathematical statements:
+          <term>predicates</term> (<m>P(x,y)</m>), <term>terms</term>,
+          <term>connectives</term> (<m>\wedge, \vee, \to, \neg</m>), and
+          quantifiers. Focus on &#xa7;2.1&#x2013;2.2 (building blocks and
+          translations) and &#xa7;2.4 (free and bound variables). Sections
+          2.6&#x2013;2.18 are for deeper optional study.
+        </p>
+      </paragraphs>
+
+      <exercise xml:id="ex-mod1-sg-h2-1">
+        <title>Predicates vs. Functions</title>
+        <statement>
+          <p>
+            In Hirst's notation, what is the difference between a
+            <term>predicate</term> and a <term>function</term>? Why does
+            this distinction matter for mathematical statements?
+          </p>
+        </statement>
+        <answer>
+          <p>
+            A <term>function</term> maps inputs to outputs of the same type
+            as the domain (e.g., <m>f(x) = x^2</m> maps reals to reals).
+            A <term>predicate</term> maps inputs to truth values&#x2014;it
+            is a property that a term either satisfies or does not
+            (e.g., <m>P(x) \equiv (x \gt 0)</m>). The distinction matters
+            because only predicates can appear after <m>\forall</m> or
+            <m>\exists</m>; quantifiers bind variables in predicates, not
+            in function expressions.
+          </p>
+        </answer>
+      </exercise>
+
+      <exercise xml:id="ex-mod1-sg-h2-2">
+        <title>Quantifier Order with <m>L(x,y)</m></title>
+        <statement>
+          <p> Hirst gives four statements about <m>L(x,y)</m>
+            using mixed quantifiers. Write all four, translate each into
+            plain English, and identify which pairs have the same truth
+            value when <m>L(x,y)</m> means <q><m>x \lt y</m></q>
+            over <m>\R</m>.
+          </p>
+        </statement>
+        <answer>
+          <p>
+            The four statements (with <m>L(x,y): x \lt y</m> over <m>\R</m>):
+            <ol marker="(a)">
+              <li>
+                <m>\forall x\, \forall y,\; L(x,y)</m>: <q>Every real is less
+                than every real.</q> <em>False.</em>
+              </li>
+              <li>
+                <m>\forall x\, \exists y,\; L(x,y)</m>: <q>Every real has
+                some real greater than it.</q> <em>True.</em>
+              </li>
+              <li>
+                <m>\exists x\, \forall y,\; L(x,y)</m>: <q>Some real is less
+                than every real.</q> <em>False.</em>
+              </li>
+              <li>
+                <m>\exists x\, \exists y,\; L(x,y)</m>: <q>There exist two
+                reals with the first less than the second.</q> <em>True.</em>
+              </li>
+            </ol>
+            Statements (b) and (d) are both true; (a) and (c) are both false.
+          </p>
+        </answer>
+      </exercise>
+
+      <exercise xml:id="ex-mod1-sg-h2-3">
+        <title>Free and Bound Variables</title>
+        <statement>
+          <p>
+            In the formula
+            <me>\forall x \bigl(P(x, y) \to \forall y(R(x, y) \vee
+            Q(y))\bigr) \wedge B(x),</me>
+            identify all free and bound variable occurrences. Is this
+            formula a sentence (closed formula)?
+          </p>
+        </statement>
+        <answer>
+          <p>
+            <alert>Bound occurrences:</alert> The outermost <m>\forall x</m>
+            binds the <m>x</m> in <m>P(x,y)</m> and <m>R(x,y)</m>
+            within the first conjunct. The inner <m>\forall y</m> binds
+            the <m>y</m> in <m>R(x,y)</m> and <m>Q(y)</m>.
+          </p>
+          <p>
+            <alert>Free occurrences:</alert> The <m>y</m> in <m>P(x,y)</m>
+            is free (it lies outside the scope of <m>\forall y</m>).
+            The <m>x</m> in <m>B(x)</m> in the second conjunct
+            is free (it lies outside the scope of <m>\forall x</m>).
+          </p>
+          <p>
+            Because both <m>x</m> (in <m>B(x)</m>) and <m>y</m> (in <m>P(x,y)</m>)
+            have free occurrences, this formula is <em>not</em> a sentence;
+            it is an open formula.
+          </p>
+        </answer>
+      </exercise>
+
+    <!-- ============================================================ -->
+
+      <paragraphs xml:id="par-mod1-sg-h3">
+        <title>Reading 4: Hirst Ch. 3, &#xa7;3.5&#x2013;3.6 (Suggested time: 5 minutes)</title>
+        <p>
+          Use this reading to see how Hirst presents proof strategies
+          in a more formal framework. Pay particular attention to
+          &#xa7;3.6 (existence, uniqueness, and iff proofs), all of
+          which appear regularly in MAT 5610.
+        </p>
+      </paragraphs>
+
+      <exercise xml:id="ex-mod1-sg-h3-1">
+        <title>Other Strategies</title>
+        <statement>
+          <p> Hirst &#xa7;3.6 lists strategies for proving
+            <term>existence</term>, <term>uniqueness</term>,
+            <term>iff statements</term>, and <term>equalities</term>.
+            Summarize each strategy in one sentence.
+          </p>
+        </statement>
+        <answer>
+          <p>
+            <ol marker="(a)">
+              <li>
+                <alert>Existence:</alert> Exhibit a specific object that
+                satisfies the required property, or use a non-constructive
+                argument (e.g., contradiction) to show one must exist.
+              </li>
+              <li>
+                <alert>Uniqueness:</alert> Assume two objects <m>a</m> and
+                <m>b</m> both satisfy the property and show <m>a = b</m>.
+              </li>
+              <li>
+                <alert>Iff (biconditional):</alert> Prove both directions
+                separately&#x2014;<m>P \Rightarrow Q</m> and
+                <m>Q \Rightarrow P</m>&#x2014;each by any valid method.
+              </li>
+              <li>
+                <alert>Equalities:</alert> Show each side is <m>\leq</m>
+                the other (the <q>double inequality</q> method), or
+                transform one side into the other by a chain of equalities.
+              </li>
+            </ol>
+          </p>
+        </answer>
+      </exercise>
+
+      <exercise xml:id="ex-mod1-sg-h3-2">
+        <title>Contradiction vs. Contrapositive</title>
+        <statement>
+          <p>
+            Hirst gives <q>If <m>n^2</m> is even, then <m>n</m> is even</q>
+            as an example of proof by contradiction. But as Hirst notes,
+            the same result follows from the contrapositive of a direct
+            result. Which approach do you find more natural, and why?
+          </p>
+        </statement>
+        <answer>
+          <p>
+            Both are valid. <alert>Contrapositive:</alert> Assume <m>n</m>
+            is odd, so <m>n = 2k+1</m>; then <m>n^2 = 4k^2+4k+1</m> is
+            odd. This is clean and direct. <alert>Contradiction:</alert>
+            Assume <m>n^2</m> is even but <m>n</m> is odd; the same
+            calculation shows <m>n^2</m> is odd, contradiction.
+          </p>
+          <p>
+            Many analysts prefer the contrapositive here because it avoids
+            the extra negation overhead; contradiction is more natural when
+            there is no obvious <q>converse</q> direction to assume.
+            Either approach is acceptable in MAT 5610.
+          </p>
+        </answer>
+      </exercise>
+
+      <exercise xml:id="ex-mod1-sg-h3-3">
+        <title>Proving a Conjunction</title>
+        <statement>
+          <p>
+            According to Hirst &#xa7;3.6, to prove
+            <m>C \to (A \wedge B)</m> directly, what must you show?
+            What does the contrapositive look like for this type of statement?
+          </p>
+        </statement>
+        <answer>
+          <p>
+            <alert>Direct:</alert> Assuming <m>C</m>, prove both <m>A</m>
+            and <m>B</m> separately. Since the conclusion is a conjunction,
+            you must establish each conjunct under the hypothesis.
+          </p>
+          <p>
+            <alert>Contrapositive:</alert>
+            <m>\neg(A \wedge B) \to \neg C</m>, which by De Morgan is
+            <m>(\neg A \vee \neg B) \to \neg C</m>. In practice this is
+            proved by cases: assume <m>\neg A</m> (or <m>\neg B</m>) and
+            derive <m>\neg C</m>.
+          </p>
+        </answer>
+      </exercise>
+
+    <!-- ============================================================ -->
+
+      <paragraphs xml:id="par-mod1-sg-syn">
+        <title>Synthesis: The Convergence Definition</title>
+        <p>
+          Read the following definition carefully. You will encounter it
+          on the first day of MAT 5610.
+        </p>
+        <p>
+          <alert>Definition (Convergence of a Sequence, Bauldry Ch. 2).</alert>
+          A sequence <m>(a_n)_{n=1}^\infty</m> of real numbers
+          <term>converges</term> to a limit <m>L \in \R</m>
+          if and only if
+          <me>
+            \forall \varepsilon \gt 0 \;\; \exists N \in \N
+            \text{ such that } n \geq N \implies |a_n - L| \lt \varepsilon.
+          </me>
+          We write <m>\lim_{n \to \infty} a_n = L</m> or <m>a_n \to L</m>.
+        </p>
+      </paragraphs>
+
+      <exercise xml:id="ex-mod1-sg-syn-1">
+        <title>Parsing the Definition</title>
+        <statement>
+          <p> Identify the quantifiers, their order, and the
+            universe of each variable in the convergence definition.
+          </p>
+        </statement>
+        <answer>
+          <p>
+            The definition contains two quantifiers in this order:
+            <ol marker="(a)">
+              <li>
+                <m>\forall \varepsilon \gt 0</m>: universal quantifier over
+                positive reals (<m>\varepsilon \in (0,\infty) \subset \R</m>).
+              </li>
+              <li>
+                <m>\exists N \in \N</m>: existential quantifier over the
+                natural numbers. Note that <m>N</m> is allowed to depend
+                on <m>\varepsilon</m> (it comes after the universal).
+              </li>
+            </ol>
+            The free variables already bound at the outer level are
+            <m>(a_n)</m> (the sequence) and <m>L</m> (the proposed limit).
+            The bound variables are <m>\varepsilon</m>, <m>N</m>, and
+            (implicitly) <m>n</m> in <m>n \geq N \implies |a_n - L| \lt \varepsilon</m>.
+          </p>
+        </answer>
+      </exercise>
+
+      <exercise xml:id="ex-mod1-sg-syn-2">
+        <title>Negating the Definition</title>
+        <statement>
+          <p> Write the negation of the convergence definition
+            (i.e., the definition of <m>a_n \not\to L</m>). What does
+            each quantifier become?
+          </p>
+        </statement>
+        <answer>
+          <p>
+            Applying the quantifier De Morgan laws:
+            <me>
+              \exists \varepsilon \gt 0 \;\; \forall N \in \N,\;\;
+              \exists n \geq N \text{ such that } |a_n - L| \geq \varepsilon.
+            </me>
+            Each quantifier flips: <m>\forall \varepsilon</m> becomes
+            <m>\exists \varepsilon</m>; <m>\exists N</m> becomes
+            <m>\forall N</m>; and the implication
+            <m>n \geq N \Rightarrow |a_n-L| \lt \varepsilon</m> negates to
+            <m>\exists n \geq N</m> with <m>|a_n - L| \geq \varepsilon</m>.
+            In words: the sequence does not converge to <m>L</m> if there
+            is some <m>\varepsilon \gt 0</m> such that no matter how far out
+            you go, you can find a term at least <m>\varepsilon</m> away from
+            <m>L</m>.
+          </p>
+        </answer>
+      </exercise>
+
+      <exercise xml:id="ex-mod1-sg-syn-3">
+        <title>Formulating Divergence</title>
+        <statement>
+          <p>
+            The definition says a sequence <em>converges to a specific
+            limit</em> <m>L</m>. Suppose you want to state that a
+            sequence diverges (does not converge to <em>any</em> limit).
+            How would you formulate this using your quantifier rules?
+            (Hint: which symbol does <m>L</m> become?)
+          </p>
+        </statement>
+        <answer>
+          <p>
+            A sequence <m>(a_n)</m> <term>diverges</term> if it converges
+            to no limit, i.e.:
+            <me>
+              \forall L \in \R,\;\;
+              \exists \varepsilon \gt 0 \;\; \forall N \in \N,\;\;
+              \exists n \geq N \text{ such that } |a_n - L| \geq \varepsilon.
+            </me>
+            The formerly-free variable <m>L</m> becomes universally quantified
+            at the outermost level: for <em>every</em> candidate limit, the
+            sequence fails to converge to it.
+          </p>
+        </answer>
+      </exercise>
+
+
+  </section>

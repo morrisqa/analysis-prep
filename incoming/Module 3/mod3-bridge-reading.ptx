@@ -1,0 +1,201 @@
+<section xml:id="ws-mod3-bridge-reading">
+  <title>Module 3: Bridge Reading Guide</title>
+  <subtitle>Bauldry &#xa7;2.1 &#x2014; Estimated time: 35 minutes</subtitle>
+
+  <introduction>
+    <p>
+      <alert>Read:</alert> Bauldry &#xa7;2.1 (Introduction to Real Analysis,
+      pp. 37&#x2013;52, approximately): <q>The Topology of <m>\R</m>.</q>
+    </p>
+    <p>
+      This reading is your first direct encounter with the material
+      you will study in MAT 5610. Bauldry &#xa7;2.1 develops the topology
+      of the real line: neighborhoods, open and closed sets, interior
+      and boundary points, and limit points (accumulation points). Every
+      definition in this section is written in the set and function
+      language of Module 3. The goal of this reading is not to master
+      topology&#x2014;that is MAT 5610's job&#x2014;but to see concretely how the
+      vocabulary you have built is deployed in graduate-level analysis.
+    </p>
+    <p>
+      As you read, notice the following:
+      <ul>
+        <li>
+          <p>
+            Neighborhoods are defined using absolute value (from Module 2)
+            and described as open intervals, which are sets.
+          </p>
+        </li>
+        <li>
+          <p>
+            <q>Deleted neighborhoods</q> are formed using set difference
+            (a Module 3 operation).
+          </p>
+        </li>
+        <li>
+          <p>
+            Open and closed sets are defined in terms of set-theoretic
+            properties (every point is an interior point; the complement
+            is open).
+          </p>
+        </li>
+        <li>
+          <p>
+            Accumulation points involve a quantified statement about
+            neighborhoods, and the distinction between finite and
+            infinite sets (cardinality) is used in the definition.
+          </p>
+        </li>
+      </ul>
+    </p>
+    <p>
+      The guided questions below are not submitted. Write your answers
+      in your notebook as you read; they are designed to ensure you
+      engage actively with the text rather than reading passively.
+    </p>
+  </introduction>
+
+  <!-- ============================================================
+       GUIDED QUESTIONS
+  ============================================================ -->
+
+  <exercise xml:id="ex-mod3-br-1">
+    <title>Neighborhoods as Sets</title>
+    <statement>
+      <p>
+        Bauldry defines the <m>\delta</m>-neighborhood of a point
+        <m>c \in \R</m> as the set
+        <m>N(c; \delta) = \{x \in \R : |x - c| \lt \delta\}</m>.
+        <ol marker="(a)">
+          <li>
+            What interval (in standard notation) is <m>N(c;\delta)</m>?
+          </li>
+          <li>
+            Bauldry also defines the <em>deleted <m>\delta</m>-neighborhood</em>
+            <m>N^*(c;\delta) = N(c;\delta) \setminus \{c\}</m>.
+            Write this set using the Module 3 notation for set difference.
+            Why is the point <m>c</m> removed?
+          </li>
+          <li>
+            Is <m>N(c;\delta)</m> an open set, a closed set, or neither?
+            (Look up Bauldry's definition of open set and apply it.)
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod3-br-2">
+    <title>Set Operations in Topology</title>
+    <statement>
+      <p>
+        Bauldry defines the <em>interior</em> of a set <m>S</m> as the
+        set of all interior points of <m>S</m>, where <m>c</m> is an
+        interior point if some neighborhood of <m>c</m> is contained
+        in <m>S</m> (i.e., <m>\exists \delta \gt 0</m> such that
+        <m>N(c;\delta) \subseteq S</m>).
+        <ol marker="(a)">
+          <li>
+            Using Module 3 set notation, what does
+            <m>N(c;\delta) \subseteq S</m> mean in terms of membership?
+          </li>
+          <li>
+            Bauldry states that an open set equals its own interior.
+            What does this say about the relationship between a set
+            and the subsets used to define it?
+          </li>
+          <li>
+            Find one set from Zorn Chapter 1 that is open and one
+            that is closed (in the Bauldry sense). Verify your choices
+            by checking the definition.
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod3-br-3">
+    <title>Accumulation Points and Cardinality</title>
+    <statement>
+      <p>
+        A point <m>c</m> is an <em>accumulation point</em> (or
+        <em>limit point</em>) of a set <m>S</m> if every deleted
+        neighborhood of <m>c</m> contains at least one point of <m>S</m>:
+        <me>\forall \delta \gt 0,\quad N^*(c;\delta) \cap S \neq \emptyset.</me>
+        <ol marker="(a)">
+          <li>
+            Write this definition out using the set-builder and quantifier
+            notation from Modules 1 and 3.
+          </li>
+          <li>
+            Is 0 an accumulation point of the set
+            <m>\{1/n : n \in \N\}</m>? Explain by checking the
+            definition: for any <m>\delta \gt 0</m>, can you find
+            <m>n \in \N</m> such that <m>1/n \in N^*(0;\delta)</m>?
+          </li>
+          <li>
+            The set <m>\{1/n : n \in \N\}</m> is countably infinite
+            (it is in bijection with <m>\N</m>). Its set of accumulation
+            points, however, contains only one point. What is that point?
+            Why does the size (cardinality) of the set not determine how
+            many accumulation points it has?
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod3-br-4">
+    <title>Notation and Vocabulary Alignment</title>
+    <statement>
+      <p>
+        As you read Bauldry &#xa7;2.1, you will encounter notation and
+        terminology that may differ slightly from Zorn's.
+        <ol marker="(a)">
+          <li>
+            Does Bauldry use <m>\subseteq</m> or <m>\subset</m> for
+            the subset relation? Is the distinction important here?
+          </li>
+          <li>
+            Identify one place in Bauldry &#xa7;2.1 where a set-theoretic
+            operation (union, intersection, complement, or set difference)
+            appears in a definition or theorem. Write out the statement
+            using Module 3 notation and explain what the operation is
+            doing in context.
+          </li>
+          <li>
+            In 2&#x2013;3 sentences: what is one concept or proof technique
+            from Bauldry &#xa7;2.1 that you expect will be important in
+            MAT 5610, based on what you have seen so far in this course?
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <!-- ============================================================
+       LOOKING AHEAD
+  ============================================================ -->
+
+  <paragraphs xml:id="par-mod3-br-ahead">
+    <title>Looking Ahead</title>
+    <p>
+      The topology developed in Bauldry &#xa7;2.1 is the setting for the
+      definitions of limit and continuity in Bauldry &#xa7;2.2. When Bauldry
+      writes <q><m>f</m> is continuous at <m>c</m></q>, the definition
+      quantifies over neighborhoods: for every <m>\varepsilon</m>-neighborhood
+      of <m>f(c)</m>, there is a <m>\delta</m>-neighborhood of <m>c</m>
+      that maps into it. This is a statement about preimages of sets
+      under a function&#x2014;exactly the preimage language from Hirst &#xa7;5.4
+      that you read in the Study Guide.
+    </p>
+    <p>
+      You will return to these ideas in Module 6 (Limits, Continuity,
+      and Uniform Continuity). For now, the goal is recognition: the
+      set-theoretic vocabulary you built in Module 3 is not abstract
+      machinery; it is the language of the definitions you will be
+      working with throughout MAT 5610.
+    </p>
+  </paragraphs>
+
+</section>

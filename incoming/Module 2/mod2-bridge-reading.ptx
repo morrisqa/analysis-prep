@@ -1,0 +1,192 @@
+<section xml:id="ws-mod2-bridge-reading">
+  <title>Module 2: Bridge Reading Guide</title>
+  <subtitle>Bauldry §1.1 and §2.1 — Estimated time: 35 minutes</subtitle>
+
+  <introduction>
+    <p>
+      Every module ends with a bridge reading in Bauldry's
+      <em>Introduction to Real Analysis</em>. These readings serve one
+      purpose: to orient you toward MAT 5610 by showing you how the
+      material you just learned looks in the course's primary text.
+      Bauldry's style is more compressed than Zorn's. A definition
+      that takes Zorn half a page may occupy a single sentence in Bauldry.
+      The goal is not to master Bauldry yet, but to begin reading him
+      fluently.
+    </p>
+    <p>
+      <alert>For this module, read:</alert>
+      Bauldry §1.1 (pp. 1&#x2013;7, informal overview) and §2.1
+      (pp. 37&#x2013;51, the formal foundations of <m>\R</m>).
+      Section 1.1 is a casual warmup. The real work is §2.1.
+    </p>
+  </introduction>
+
+  <!-- ============================================================
+       PART 1: THE COMPLETENESS AXIOM IN BAULDRY
+  ============================================================ -->
+
+  <paragraphs xml:id="par-mod2-br-completeness">
+    <title>The Completeness Axiom in Bauldry</title>
+    <p>
+      Bauldry presents the real number system as a complete ordered
+      field. The Completeness Axiom appears in §2.1 as one of the
+      axioms that defines <m>\R</m>; it is not derived from anything
+      more basic.
+    </p>
+  </paragraphs>
+
+  <exercise xml:id="ex-mod2-br-1">
+    <title>Locating the Completeness Axiom</title>
+    <statement>
+      <p>
+        Find the Completeness Axiom in Bauldry §2.1.
+        <ol marker="(a)">
+          <li>
+            Copy Bauldry's exact statement of the axiom (one or two
+            sentences).
+          </li>
+          <li>
+            Compare it to Zorn's statement (§1.9). Are the wordings
+            identical? If not, what differs? Are the two statements
+            logically equivalent?
+          </li>
+          <li>
+            Bauldry presents the Completeness Axiom as an
+            <em>axiom</em>. What does that mean for how it can be used
+            in proofs&#x2014;do you need to justify it, or can you
+            invoke it directly?
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <!-- ============================================================
+       PART 2: THE ARCHIMEDEAN PROPERTY
+  ============================================================ -->
+
+  <paragraphs xml:id="par-mod2-br-archimedean">
+    <title>The Archimedean Order Property</title>
+    <p>
+      Theorem 2.3 in Bauldry is the Archimedean Order Property. In
+      the Module 1 assessment you were asked to describe its proof
+      structure in retrospect; now you will read it carefully.
+    </p>
+  </paragraphs>
+
+  <exercise xml:id="ex-mod2-br-2">
+    <title>Reading Bauldry's Proof of Theorem 2.3</title>
+    <statement>
+      <p>
+        Read the statement and proof of Bauldry's Theorem 2.3.
+        <ol marker="(a)">
+          <li>
+            State the theorem in your own words. What property of
+            <m>\R</m> does it assert?
+          </li>
+          <li>
+            Identify the proof strategy. (One of the strategies from
+            Module 1: direct proof, contrapositive, or contradiction?)
+          </li>
+          <li>
+            What set does Bauldry construct in the proof, and why is
+            the Completeness Axiom applicable to it?
+          </li>
+          <li>
+            What is the contradiction that ends the proof? State it
+            in one sentence.
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod2-br-3">
+    <title>Comparing to Your Practice Set Work</title>
+    <statement>
+      <p>
+        Practice Set Problem <m>[\mathbf{C}]</m>2 asked you to prove
+        the Archimedean Property yourself. Compare your proof to
+        Bauldry's.
+        <ol marker="(a)">
+          <li>
+            Are the logical structures identical, or did Bauldry
+            organize the argument differently?
+          </li>
+          <li>
+            Bauldry's proof is likely more compressed than what you
+            wrote. Identify one step in Bauldry that you had to fill
+            in or unpack when reading it. What implicit reasoning
+            did Bauldry omit?
+          </li>
+        </ol>
+        (If you did not attempt the challenge problem, answer (b) only,
+        and read your own hint against Bauldry's proof.)
+      </p>
+    </statement>
+  </exercise>
+
+  <!-- ============================================================
+       PART 3: DENSITY AND FURTHER APPLICATIONS
+  ============================================================ -->
+
+  <paragraphs xml:id="par-mod2-br-density">
+    <title>Density of <m>\Q</m> in <m>\R</m></title>
+    <p>
+      Immediately following the Archimedean Property, Bauldry proves
+      that <m>\Q</m> is <em>dense</em> in <m>\R</m>: between any two
+      distinct real numbers there is a rational number. This result
+      requires both the Archimedean Property and the Completeness Axiom.
+    </p>
+  </paragraphs>
+
+  <exercise xml:id="ex-mod2-br-4">
+    <title>Density of <m>\Q</m></title>
+    <statement>
+      <p>
+        Locate Bauldry's statement and proof (or sketch) of the
+        density of <m>\Q</m> in <m>\R</m>.
+        <ol marker="(a)">
+          <li>
+            State the result precisely: what does it say, and what
+            are the hypotheses?
+          </li>
+          <li>
+            Why does this result require the Archimedean Property
+            (and not just the Completeness Axiom alone)?
+          </li>
+          <li>
+            In plain English, why does density of <m>\Q</m> imply
+            that <m>\Q</m> is not a <q>thin</q> or <q>sparse</q>
+            subset of <m>\R</m>, even though <m>\R \setminus \Q</m>
+            is uncountable?
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <!-- ============================================================
+       PART 4: SCANNING AHEAD
+  ============================================================ -->
+
+  <exercise xml:id="ex-mod2-br-5">
+    <title>Where Does Completeness Appear in Bauldry Chapter 2?</title>
+    <statement>
+      <p>
+        Scan the section headings and theorem statements in the rest
+        of Bauldry §2.1 and beyond. Find at least two theorems or
+        results (other than the Archimedean Property and density)
+        where the Completeness Axiom is invoked, either directly or
+        through one of its consequences.
+      </p>
+      <p>
+        For each result you find: state its name or number, and
+        write one sentence explaining in what way completeness enters
+        the argument. (You are not expected to read the full proofs
+        yet; identifying where completeness is needed is enough.)
+      </p>
+    </statement>
+  </exercise>
+
+</section>

@@ -1,0 +1,208 @@
+MODULE 8: THE RIEMANN INTEGRAL
+Video Scripts — "Say: / Write on board:" format
+Three videos: (~9 min), (~9 min), (~10 min)
+=============================================================
+
+VIDEO 1: Partitions and Riemann Sums (~9 min)
+=============================================================
+
+[Slide 1: Motivation]
+Say: The integral is defined by approximation. We chop the interval into pieces, find the best upper and lower estimates for f on each piece, and add up. The question is: which estimates do we use, and how do we pass to a limit? That's what this video sets up.
+[Draw: a wavy function over [a,b] with rectangles above (upper staircase) and below (lower staircase) it on the board.]
+
+[Slide 2: Partitions]
+Say: A partition is just a way of subdividing [a,b] into finitely many pieces.
+Write on board:
+  P = {x_0, x_1, ..., x_n}  with  a = x_0 < x_1 < ... < x_n = b
+  Subinterval widths: Δx_i = x_i - x_{i-1}
+  Mesh: ||P|| = max Δx_i
+
+Say: The mesh tells you the width of the widest subinterval. Refining a partition means making the mesh smaller.
+
+[Slide 3: Upper and Lower Sums]
+Say: On each subinterval, we take the supremum and infimum of f — not a sample value, the actual sup and inf. These always exist when f is bounded.
+Write on board:
+  M_i = sup { f(x) : x in [x_{i-1}, x_i] }
+  m_i = inf { f(x) : x in [x_{i-1}, x_i] }
+  U(f,P) = sum_{i=1}^n  M_i Δx_i    [upper Darboux sum]
+  L(f,P) = sum_{i=1}^n  m_i Δx_i    [lower Darboux sum]
+  Always: L(f,P) ≤ U(f,P)
+
+Say: Upper sums overestimate; lower sums underestimate. The integral, if it exists, must lie between them for every partition P.
+
+[Slide 4: Upper and Lower Integrals]
+Say: As we refine the partition, upper sums can only decrease and lower sums can only increase. We define the upper and lower integrals as the best possible estimates.
+Write on board:
+  Upper integral:  _U^a_b f = inf { U(f,P) : P a partition of [a,b] }
+  Lower integral:  _L^a_b f = sup { L(f,P) : P a partition of [a,b] }
+  Always: lower integral ≤ upper integral
+
+Say: These infimum and supremum exist by completeness of R — another place where the structure of the real line is doing essential work.
+
+[Slide 5: Definition of Integrability]
+Write on board:
+  f is Riemann integrable on [a,b] if:
+    upper integral = lower integral
+  The common value is  ∫_a^b f(x) dx.
+Say: Not every bounded function is integrable. The Dirichlet function — 1 on rationals, 0 on irrationals — is the classic example of a bounded function that is NOT Riemann integrable. We'll come back to that in Video 2.
+
+[Slide 6: Example — f(x) = x on [0,1]]
+Say: Let's see upper and lower sums in action for f(x) = x with uniform partitions P_n.
+[Leave the following computation BLANK for live work:]
+% Worked live on the lightboard:
+%   P_n: x_k = k/n, Δx = 1/n
+%   f increasing: M_k = k/n (right endpoint), m_k = (k-1)/n (left endpoint)
+%   U(f,P_n) = (1/n^2) sum_{k=1}^n k = (1/n^2)(n(n+1)/2) = (n+1)/(2n)
+%   L(f,P_n) = (1/n^2) sum_{k=1}^n (k-1) = (1/n^2)(n(n-1)/2) = (n-1)/(2n)
+%   U - L = 1/n → 0
+
+[Slide 7: Wrap-Up]
+Say: Upper and lower Darboux sums bracket the integral from above and below. When they can be made arbitrarily close together — when U-L can be driven below any epsilon — the function is integrable and the common limit IS the integral. That's the integrability criterion, which is the subject of Video 2.
+
+
+=============================================================
+VIDEO 2: Integrability Criteria (~9 min)
+=============================================================
+
+[Slide 1: The Integrability Criterion]
+Say: Here is the main theorem of the module. Memorize this.
+Write on board:
+  Theorem (Integrability Criterion):
+    f is Riemann integrable on [a,b]
+    iff
+    for every ε > 0, there exists a partition P such that
+    U(f,P) - L(f,P) < ε.
+
+Say: This is often much easier to check than comparing upper and lower integrals directly. The strategy is always the same: given ε, find a partition P that makes U-L small.
+
+[Slide 2: Continuous Implies Integrable]
+Say: Every continuous function on [a,b] is integrable. The key tool is uniform continuity from Module 6 — specifically, the Heine-Cantor theorem.
+Write on board:
+  Proof sketch: given ε > 0,
+    by Heine-Cantor (Module 6): ∃ δ > 0 such that
+    |x-y| < δ  ⟹  |f(x)-f(y)| < ε/(b-a).
+    Choose partition P with ||P|| < δ.
+    On each [x_{i-1}, x_i]: M_i - m_i ≤ ε/(b-a).
+    Then U-L = Σ (M_i - m_i) Δx_i ≤ [ε/(b-a)] · (b-a) = ε.  ∎
+
+[Leave the bound derivation BLANK for live work:]
+% Worked live:
+%   On [x_{i-1}, x_i] with |x-y| ≤ ||P|| < δ: M_i - m_i ≤ ε/(b-a)
+%   Sum up: U-L = Σ (M_i - m_i) Δx_i ≤ [ε/(b-a)] Σ Δx_i = ε
+
+Say: Uniform continuity is essential here. Pointwise continuity gives a different delta at each point — which could go to zero — and you couldn't find a single partition that works everywhere. Uniform continuity gives a single delta for all of [a,b].
+
+[Slide 3: Monotone Implies Integrable]
+Say: Monotone functions don't need to be continuous to be integrable.
+Write on board:
+  Proof: WLOG f increasing on [a,b].
+    Uniform partition P_n, width (b-a)/n.
+    M_k = f(x_k), m_k = f(x_{k-1})  [since f is increasing].
+[Leave telescoping computation BLANK for live work:]
+%  U - L = [(b-a)/n] Σ [f(x_k) - f(x_{k-1})]
+%         = [(b-a)/n] [f(b) - f(a)]   [telescoping!]
+%         → 0 as n → ∞.
+
+Say: The sum telescopes beautifully to (b-a)(f(b)-f(a))/n, which goes to 0. That's why jump discontinuities — which monotone functions can have — don't prevent integrability.
+
+[Slide 4: Basic Properties of the Integral]
+Write on board:
+  Linearity:    ∫(αf + βg) = α∫f + β∫g
+  Monotonicity: f ≤ g  ⟹  ∫f ≤ ∫g
+  Additivity:   ∫_a^b f = ∫_a^c f + ∫_c^b f  (for c ∈ (a,b))
+
+Say: These are proved from the definition using the integrability criterion. We'll use additivity in a crucial way in the proof of FTC Part 1 in Video 3.
+
+[Slide 5: The Dirichlet Function — Non-Integrable Example]
+Write on board:
+  Dirichlet function:  f(x) = 1 (x ∈ Q),  f(x) = 0 (x ∉ Q)
+  For any partition P and any subinterval [x_{k-1}, x_k]:
+    M_k = 1  (Q is dense: every interval contains rationals)
+    m_k = 0  (Q^c is dense: every interval contains irrationals)
+  So: U(f,P) = b-a  and  L(f,P) = 0  for every P.
+  Upper integral = b-a ≠ 0 = lower integral.
+  NOT Riemann integrable.
+
+Say: The Lebesgue theory you'll meet in MAT 5610 explains this precisely: a bounded function is Riemann integrable if and only if it is continuous except on a set of measure zero. The Dirichlet function is discontinuous everywhere, so it fails the criterion completely.
+
+[Slide 6: Wrap-Up]
+Say: The integrability criterion is the workhorse. Continuous and monotone functions pass it; the Dirichlet function fails it at every partition. In Video 3, we use the integral to build the Fundamental Theorem of Calculus — the deepest theorem of this module.
+
+
+=============================================================
+VIDEO 3: The Fundamental Theorem of Calculus (~10 min)
+=============================================================
+
+[Slide 1: Setup and Statement]
+Say: The FTC is the deepest result of this module. It says that differentiation and integration are inverse operations. Two parts, two directions.
+Write on board:
+  FTC Part 1: Let f be continuous on [a,b].
+    Define F(x) = ∫_a^x f(t) dt  for x ∈ [a,b].
+    Then F is differentiable and F'(x) = f(x).
+
+  FTC Part 2: If F is differentiable on [a,b] with F' = f
+    and f is continuous, then
+    ∫_a^b f(x) dx = F(b) - F(a).
+
+Say: Part 1 says: differentiate an integral, get the integrand. Part 2 says: integrate a derivative, get the boundary values. Together they explain why antidifferentiation computes integrals.
+
+[Slide 2: Proof of FTC Part 1 — Setup]
+Say: We prove F'(x) = f(x) from the limit definition of derivative.
+Write on board:
+  (F(x+h) - F(x))/h = (1/h) ∫_x^{x+h} f(t) dt   [by additivity]
+  f(x) = (1/h) ∫_x^{x+h} f(x) dt                 [constant w.r.t. t]
+  So:
+  [(F(x+h)-F(x))/h] - f(x) = (1/h) ∫_x^{x+h} [f(t) - f(x)] dt
+
+Say: The key insight: the difference quotient minus f(x) equals the average value of [f(t)-f(x)] over [x, x+h]. When h is small, f(t) is close to f(x) by continuity of f at x.
+
+[Slide 3: Proof of FTC Part 1 — Completion]
+[Leave the bound derivation BLANK for live work:]
+%  Given ε > 0: by continuity of f at x, ∃ δ > 0 such that
+%    |t - x| < δ  ⟹  |f(t) - f(x)| < ε.
+%  For |h| < δ and t between x and x+h:  |t-x| ≤ |h| < δ.
+%  So |f(t) - f(x)| < ε for all t in [x, x+h].
+%  Therefore:
+%    |(1/h) ∫_x^{x+h} [f(t)-f(x)] dt|  ≤  (1/|h|) · |h| · ε  =  ε.
+%  Hence F'(x) = f(x).  ∎
+
+Say: The analytic core of the argument: the average of a quantity bounded by epsilon is bounded by epsilon. Continuity of f at x is doing all the work.
+
+[Slide 4: Proof of FTC Part 2]
+Say: Part 2 follows from Part 1 plus the Module 7 corollary that a zero-derivative function is constant.
+Write on board:
+[Leave the auxiliary function argument BLANK for live work:]
+%  Let G(x) = ∫_a^x f.
+%  By Part 1: G'(x) = f(x) = F'(x).
+%  So (G - F)'(x) = 0 on (a,b).
+%  By Module 7 MVT corollary: G(x) - F(x) = C  (constant).
+%  Evaluate at x = a: G(a) - F(a) = 0 - F(a) = -F(a).
+%  So C = -F(a), hence G(x) = F(x) - F(a).
+%  Evaluate at x = b: ∫_a^b f = G(b) = F(b) - F(a).  ∎
+
+Say: The constant-function corollary from Module 7 is the glue. Two functions with the same derivative on (a,b) differ by a constant — that's what lets us pin down G in terms of F.
+
+[Slide 5: A Computation]
+Say: FTC Part 2 turns integration into antidifferentiation. Here's the template in action.
+Write on board:
+  Example:  ∫_0^π sin(x) dx
+    F(x) = -cos(x),  F'(x) = sin(x)  ✓
+    f(x) = sin(x) is continuous on [0, π]  ✓
+    By FTC Part 2:
+    ∫_0^π sin(x) dx = F(π) - F(0) = -cos(π) + cos(0) = 1 + 1 = 2.
+
+Say: The template has three steps: (1) find F with F' = f; (2) check f is continuous; (3) compute F(b) - F(a). Step (2) is often skipped in calculus but is logically required.
+
+[Slide 6: Chain Rule + FTC Part 1]
+Say: When the upper limit is a function of x rather than x itself, we need the chain rule.
+Write on board:
+  d/dx ∫_a^{g(x)} f(t) dt = f(g(x)) · g'(x)
+
+  Example:  d/dx ∫_0^{x^2} e^t dt
+    G(u) = ∫_0^u e^t dt,  G'(u) = e^u  [by FTC Part 1]
+    d/dx G(x^2) = G'(x^2) · 2x = e^{x^2} · 2x.
+
+Say: FTC Part 1 gives you G'(u); the chain rule handles the composition G(g(x)). This is a very common calculation in MAT 5610 and beyond.
+
+[Slide 7: Wrap-Up]
+Say: FTC is the meeting point of differentiation and integration. Part 1 says: differentiate an integral, you recover the integrand. Part 2 says: integrate a derivative, you recover the boundary values. Together they explain why calculus works — why antidifferentiation computes areas, why u-substitution works, why integration by parts works. In Module 9, we ask: what happens when f is not just a function but a limit of functions? That's the question of sequences and series of functions, and answering it will require Module 6's uniform continuity all over again.
