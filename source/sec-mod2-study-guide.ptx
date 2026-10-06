@@ -64,7 +64,6 @@
       <p>
         Theorem 1.23(c) says: <m>|x| \lt k \iff -k \lt x \lt k</m>
         (for <m>k \gt 0</m>).
-        <!-- TODO(quinn): sentence added in #10 (math fixes); confirm or replace. -->
         The non-strict form <m>|x| \leq k \iff -k \leq x \leq k</m>
         (for <m>k \geq 0</m>) also holds, since <m>|x|</m> is the larger
         of <m>x</m> and <m>-x</m>. Use these to rewrite each inequality
@@ -239,7 +238,6 @@
     </statement>
   </exercise>
 
-  <!-- TODO(quinn): paragraph added in #10 (math fixes); confirm or replace. Check that the definition matches Zorn's in Section 1.8. -->
   <p>
     You now have two equivalent ways to show <m>s = \sup S</m>.
     The definition: <m>s</m> is an

@@ -265,7 +265,6 @@
       <exercise xml:id="ex-mod1-br-10">
         <title>Theorem 2.2: Infimum Theorem</title>
         <statement>
-          <!-- TODO(quinn): verify against Bauldry's wording. -->
           <p> Read the proof of Theorem 2.2 on page 47
             (the infimum theorem: if <m>B \subseteq U</m> is nonempty and
             bounded below in a set with the LUB property, then <m>\inf B</m>

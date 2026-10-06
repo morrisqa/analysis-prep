@@ -7,6 +7,12 @@ book or course text, built from source and published to GitHub Pages.
 Quinn is the author and final editor. Agents draft, review, and maintain; Quinn
 decides what the text argues, approves outlines, and merges every pull request.
 
+Autonomous run (#26, from 2026-10-06): Quinn authorized the main session to
+finish and publish the book and to merge pull requests once CI passes and the
+reviews are addressed. During the run, a decision that would otherwise be a
+`TODO(quinn)` marker is recorded in `decisions/` instead, and the source carries
+no `TODO(quinn)` markers. Quinn reviews the log afterward.
+
 ## Repository layout
 
 - `project.ptx`: the project manifest (targets `web` and `print`).
@@ -18,6 +24,7 @@ decides what the text argues, approves outlines, and merges every pull request.
   per-module sources into `source/` (#3, #4). Those sources were in `incoming/`,
   which was removed once migration was complete; they remain in git history
   (commit `14df202`).
+- `decisions/`: the log of decisions made for Quinn's later review (#26).
 - `output/`: build output. Never commit it; never edit it by hand.
 - `.claude/agents/`: the agent team (auditor, author, math-reviewer, copy-editor,
   publisher).
@@ -52,7 +59,8 @@ rebuild. Do not suppress warnings to make a build pass.
    and is closed. This rule now applies without exception.
 4. Never state a mathematical result without either a proof in the text or a
    citation. If you are unsure whether a claim is true, say so with a comment:
-   `<!-- TODO(quinn): verify ... -->`. Do not guess.
+   `<!-- TODO(quinn): verify ... -->` (during the autonomous run: report it to
+   the main session, which logs it in `decisions/`). Do not guess.
 5. Do not rewrite text Quinn wrote unless the issue asks for it. Copy edits are
    fine; changes of argument, emphasis, or voice are not.
 6. Do not add a license, change the license, or add third-party material
