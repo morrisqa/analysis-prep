@@ -14,9 +14,11 @@ on:
 permissions:
   contents: read
 
+# A newer push to a pull request supersedes the running check, so cancel it.
+# Runs on main deploy to Pages and are never cancelled mid-run; they queue.
 concurrency:
   group: pages-${{ github.ref }}
-  cancel-in-progress: true
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   build:
@@ -33,13 +35,12 @@ jobs:
             || python3 -m pip install --break-system-packages -r requirements.txt
           pretext --version
 
-      # Fails on RELAX-NG schema errors only. `pretext validate` also reports
-      # "validation-plus" style notes (Unicode dashes, issue #7) and exits 1 for
-      # them, so its exit code alone is not used. In the terse report each line
-      # is one tab-separated message whose 4th field names the check; schema
-      # messages are "schema", and a jing line core could not locate has fewer
-      # fields (unlocated style notes start with "PTX:"). Validation that could
-      # not run (exit 2, or jing itself failing) also fails the step.
+      # The source validates with zero messages, so any message is fatal:
+      # RELAX-NG schema errors and "validation-plus" notes (Unicode dashes,
+      # issue #7, and everything else) alike. `pretext validate` exits 1 when it
+      # reports any message, and the consolidated report lists one message per
+      # line. Validation that could not run (exit 2 or higher, no report, or
+      # jing itself failing) also fails the step.
       # The container image predates jing in the PreTeXt images, so install it
       # when missing.
       - name: Validate source against the PreTeXt schema
@@ -53,16 +54,16 @@ jobs:
           cat validate.log
           report=logs/main-validation.txt
           if [ "$status" -gt 1 ] || [ ! -f "$report" ] || grep -q 'the "jing" program failed' validate.log; then
-            echo "::error::Schema validation could not run (exit code $status)."
+            echo "::error::Validation could not run (exit code $status)."
             exit 1
           fi
-          schema_errors="$(awk -F'\t' 'NF && $1 !~ /^PTX:/ && (NF < 5 || $4 == "schema")' "$report")"
-          if [ -n "$schema_errors" ]; then
-            echo "::error::The source does not match the PreTeXt schema:"
-            printf '%s\n' "$schema_errors"
+          count="$(grep -c . "$report" || true)"
+          if [ "$status" -ne 0 ] || [ "$count" -ne 0 ]; then
+            echo "::error::Validation reported $count message(s) (exit code $status); any message fails the build:"
+            cat "$report"
             exit 1
           fi
-          echo "No schema errors. Style notes (not fatal): $(grep -c . "$report" || true)."
+          echo "Validation passed with no messages."
 
       - name: Build HTML
         run: pretext build web
@@ -72,8 +73,13 @@ jobs:
 
       - name: Place PDF in the site
         run: |
+          # The preface links book.pdf, so a missing PDF is a broken site.
           pdf="$(find output/print -maxdepth 1 -name '*.pdf' | head -n 1)"
-          if [ -n "$pdf" ]; then cp "$pdf" output/web/book.pdf; fi
+          if [ -z "$pdf" ]; then
+            echo "::error::No PDF found in output/print; the site links book.pdf, so the build fails."
+            exit 1
+          fi
+          cp "$pdf" output/web/book.pdf
 
       - name: Upload site artifact
         if: github.event_name != 'pull_request'
