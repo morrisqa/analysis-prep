@@ -56,6 +56,16 @@
           </li>
         </ol>
       </p>
+      <p>
+        For part (c): <m>\lim_{x \to \infty} f(x) = L</m> means that for
+        every <m>\varepsilon \gt 0</m> there is a number <m>M</m> such
+        that <m>|f(x) - L| \lt \varepsilon</m> for every <m>x \gt M</m>
+        in the domain of <m>f</m>. This is the definition of
+        <m>\lim_{n \to \infty} a_n = L</m> from
+        <xref ref="ch-mod4" text="custom">Module 4</xref>, with the real
+        variable <m>x</m> and the real threshold <m>M</m> in place of
+        <m>n</m> and <m>N</m>.
+      </p>
     </statement>
     <answer>
       <p>
@@ -154,6 +164,17 @@
         (d) <m>f(0)</m> is undefined, so <m>f</m> is not continuous at
         <m>a = 0</m>.
       </p>
+      <p>
+        A remark on (b) and (d): in this module, continuity at
+        <m>a</m> means <m>\lim_{x \to a} f(x) = f(a)</m>, which cannot
+        hold when <m>f(a)</m> is undefined. Many analysis texts speak
+        of continuity only at points of the domain. In that language
+        the question does not arise at <m>a = 3</m> or <m>a = 0</m>, and
+        <m>1/x</m> is called a continuous function because it is
+        continuous at every point of its domain. The two ways of
+        speaking describe the same facts; check which one your text
+        uses.
+      </p>
     </answer>
   </exercise>
 
@@ -163,22 +184,23 @@
       <p>
         Show that <m>x^5 - 3x + 1 = 0</m> has at least one solution
         in <m>(0, 2)</m>. Identify the function <m>f</m>, compute
-        <m>f(0)</m> and <m>f(2)</m>, and invoke the IVT by name.
+        <m>f(0)</m> and <m>f(1)</m>, and invoke the IVT by name on a
+        suitable interval.
       </p>
     </statement>
     <answer>
       <p>
         Let <m>f(x) = x^5 - 3x + 1</m>. As a polynomial, <m>f</m> is
-        continuous on <m>[0, 2]</m>. We compute
+        continuous on <m>[0, 1]</m>. We compute
         <m>f(0) = 0 - 0 + 1 = 1 \gt 0</m> and
-        <m>f(2) = 32 - 6 + 1 = 27 \gt 0</m>.
+        <m>f(1) = 1 - 3 + 1 = -1 \lt 0</m>.
       </p>
       <p>
-        Since both endpoints give positive values, we cannot yet apply
-        IVT directly. Check an interior point: <m>f(1) = 1 - 3 + 1 = -1 \lt 0</m>.
-        Now <m>f(0) = 1 \gt 0</m> and <m>f(1) = -1 \lt 0</m>, so by
-        the Intermediate Value Theorem, there exists <m>c \in (0, 1)
-        \subset (0, 2)</m> with <m>f(c) = 0</m>.
+        Since <m>f(0) \gt 0 \gt f(1)</m>, the Intermediate Value Theorem
+        gives <m>c \in (0, 1) \subset (0, 2)</m> with <m>f(c) = 0</m>.
+        (The endpoints of <m>(0, 2)</m> itself would not work:
+        <m>f(2) = 32 - 6 + 1 = 27</m> is positive, like <m>f(0)</m>, so
+        the IVT gives no conclusion on <m>[0, 2]</m>.)
       </p>
     </answer>
   </exercise>
@@ -233,8 +255,9 @@
     </statement>
     <hint>
       <p>
-        <m>|f(x) - f(a)| = |3x + 7 - (3a + 7)| = 3|x - a|</m>.
-        Set <m>\delta = \varepsilon / 3</m>.
+        Simplify <m>|f(x) - f(a)|</m> until it is a constant times
+        <m>|x - a|</m>, then choose <m>\delta</m> as in
+        <xref ref="ex-mod6-we-1" text="custom">Worked Example 1</xref>.
       </p>
     </hint>
   </exercise>
@@ -288,8 +311,9 @@
         is continuous at <m>a</m>.
       </p>
       <p>
-        You may use the sequential characterization of continuity for
-        both <m>f</m> and <m>g</m>.
+        You may use the sequential characterization of continuity
+        (<xref ref="par-mod6-sg-32-seq-cont" text="custom">Sequential Characterization of Continuity</xref>)
+        for both <m>f</m> and <m>g</m>.
       </p>
     </statement>
     <hint>

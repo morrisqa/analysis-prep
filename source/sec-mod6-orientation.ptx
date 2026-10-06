@@ -76,9 +76,12 @@
       that was established in Module 2. The module closes with
       <em>uniform continuity</em>&#x2014;a strengthening of pointwise
       continuity that swaps the order of two quantifiers. This
-      quantifier swap is subtle but mathematically crucial: uniform
-      continuity is exactly the hypothesis needed to prove that
-      continuous functions are Riemann integrable (Module 8).
+      quantifier swap is subtle, and it matters: the proof that a
+      continuous function on a closed bounded interval <m>[a, b]</m> is
+      Riemann integrable (<xref ref="ch-mod8" text="custom">Module 8</xref>)
+      first uses the Heine<ndash/>Cantor theorem to upgrade continuity
+      on <m>[a, b]</m> to uniform continuity, and then relies on the
+      single <m>\delta</m> that uniform continuity provides.
     </p>
     <p>
       The self-assessment questions below are <alert>not graded</alert>.

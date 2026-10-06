@@ -130,9 +130,14 @@
         depends on both <m>\varepsilon</m> and <m>a</m>; this is
         perfectly fine for <em>continuity</em> (pointwise). The same
         function <m>x^2</m> is <em>not</em> uniformly continuous on
-        <m>\R</m>, because the factor <m>2|a| + 1</m> grows without
-        bound as <m>|a| \to \infty</m>, so no single <m>\delta</m>
-        works for all points. On any bounded interval, however,
+        <m>\R</m>, but this proof does not show that. The growth of
+        <m>2|a| + 1</m> as <m>|a| \to \infty</m> shows only that
+        <em>this</em> choice of <m>\delta</m> shrinks as <m>|a|</m>
+        grows, not that every choice must. To prove that no single
+        <m>\delta</m> works for all points, you need the sequence
+        technique of <xref ref="ex-mod6-we-3" text="custom">Worked Example 3</xref>;
+        you will carry it out in <xref ref="ex-mod6-ps-s4"/>.
+        On any bounded interval, however,
         <m>2|a| + 1</m> is bounded above, and uniform continuity
         follows (see Example 4).
       </p>
@@ -248,15 +253,39 @@
       <p>
         The Lipschitz constant <m>K = 4</m> comes from the global
         bound <m>|x + y| \leq 4</m> on <m>[0, 2]</m>. On all of
-        <m>\R</m>, no such global bound exists (as <m>|a| \to \infty</m>,
-        <m>|x + a|</m> can be made arbitrarily large), which is why
-        <m>x^2</m> is <em>not</em> uniformly continuous on <m>\R</m>.
-        The Heine&#x2013;Cantor theorem explains why boundedness and
-        closedness together guarantee uniform continuity: every
-        continuous function on a compact set is Lipschitz on that set
-        (or at least uniformly continuous, which Heine&#x2013;Cantor
-        guarantees even without a Lipschitz bound). The proof of
-        Heine&#x2013;Cantor is a topic for MAT 5610.
+        <m>\R</m>, no such global bound exists (<m>|x + y|</m> can be
+        made arbitrarily large), so this argument does not extend to
+        <m>\R</m>. That failure alone does not prove that <m>x^2</m> is
+        not uniformly continuous on <m>\R</m>, because a function can be
+        uniformly continuous without satisfying any Lipschitz condition
+        (an example follows). The proof that <m>x^2</m> is not uniformly
+        continuous on <m>\R</m> uses the sequence technique of
+        <xref ref="ex-mod6-we-3" text="custom">Worked Example 3</xref>;
+        see <xref ref="ex-mod6-ps-s4"/>.
+      </p>
+      <p>
+        A Lipschitz condition is sufficient for uniform continuity, but
+        not necessary. The Heine<ndash/>Cantor theorem says that every
+        continuous function on a closed bounded interval <m>[a, b]</m>
+        is uniformly continuous there; it does not say that such a
+        function satisfies a Lipschitz condition. For example,
+        <m>f(x) = \sqrt{x}</m> is continuous on <m>[0, 1]</m>, so it is
+        uniformly continuous there, but it satisfies no Lipschitz
+        condition on <m>[0, 1]</m>: for <m>0 \lt x \leq 1</m>,
+        <md>|\sqrt{x} - \sqrt{0}| = \frac{1}{\sqrt{x}}\, |x - 0|,</md>
+        and <m>1/\sqrt{x} \gt K</m> as soon as <m>x \lt 1/K^2</m>, so no
+        constant <m>K</m> works for every pair of points. (In
+        <xref ref="ex-mod6-as-2"/> you will prove directly that
+        <m>\sqrt{x}</m> is uniformly continuous on all of
+        <m>[0, \infty)</m>.) A stronger hypothesis does give a Lipschitz
+        condition: if <m>f</m> is differentiable on <m>[a, b]</m> and
+        <m>f'</m> is continuous there, then the Extreme Value Theorem
+        applied to <m>|f'|</m> gives a constant <m>K</m> with
+        <m>|f'(t)| \leq K</m> for all <m>t \in [a, b]</m>, and the Mean
+        Value Theorem (<xref ref="ch-mod7" text="custom">Module 7</xref>)
+        gives, for <m>x, y \in [a, b]</m>, a point <m>c</m> between them
+        with <m>|f(x) - f(y)| = |f'(c)|\,|x - y| \leq K|x - y|</m>. The
+        proof of Heine<ndash/>Cantor is a topic for MAT 5610.
       </p>
     </solution>
   </exercise>
