@@ -1,0 +1,222 @@
+<section xml:id="sec-mod7-assessment">
+  <title>Module 7: Assessment</title>
+  <p>Submitted Proofs and Reflection — Estimated time: 40 minutes</p>
+
+  <!-- ============================================================ -->
+    <p>
+      This assessment has three parts. Parts 1 and 2 ask you to write
+      complete mathematical proofs, submitted for feedback. Part 3 is
+      a short reflection. Submit all three parts together as a single
+      document (PDF or typed file) through the course management system.
+    </p>
+    <p>
+      <alert>Write-up standard.</alert> All proofs must be written in
+      complete mathematical prose. Use the style modeled in the Worked
+      Examples: announce your strategy, include scratch work (clearly labeled) before the formal proof, write in complete grammatical
+      sentences, invoke each theorem by name, and justify every step.
+      Work consisting only of symbolic manipulations without explanation
+      will not receive full credit.
+    </p>
+    <p>
+      <alert>A note on Part 2.</alert> Part 2 is a single required proof problem; there are no options to choose between. All students complete the same Part 2 problem.
+    </p>
+    <p>
+      <alert>Academic integrity.</alert> Your proofs must be your own
+      work. You may refer to your notes, the textbooks, and the worked
+      examples from this module. You may not collaborate with other
+      students on the written proofs or use AI writing tools to draft
+      your arguments.
+    </p>
+    <p>
+      <alert>Part 1: Derivative from the Definition (Required)</alert>
+      (Estimated time: 15 minutes)
+    </p>
+  <exercise xml:id="ex-mod7-as-1">
+    <title>Differentiating 1/x from the Definition</title>
+    <statement>
+      <p>
+        Prove that <m>f(x) = 1/x</m> is differentiable on
+        <m>(0, \infty)</m> and that <m>f'(x) = -1/x^2</m>.
+      </p>
+      <p>
+        Your proof must have the following structure:
+        <ol marker="(i)">
+          <li>
+            <em>Set up the difference quotient.</em> Write
+            <md>\frac{f(x+h) - f(x)}{h}
+            = \frac{\dfrac{1}{x+h} - \dfrac{1}{x}}{h}</md>
+            and simplify the numerator by combining the two fractions
+            over a common denominator, showing that
+            <m>\dfrac{1}{x+h} - \dfrac{1}{x} = \dfrac{-h}{x(x+h)}</m>.
+          </li>
+          <li>
+            <em>Simplify the difference quotient.</em> Cancel the factor
+            of <m>h</m> to obtain the simplified form
+            <m>\dfrac{-1}{x(x+h)}</m>.
+          </li>
+          <li>
+            <em>Take the limit.</em> As <m>h \to 0</m>, the expression
+            <m>-1/(x(x+h))</m> tends to <m>-1/x^2</m>. Justify using
+            the limit laws: <m>x + h \to x</m> as <m>h \to 0</m>, and
+            the quotient and product rules for limits apply since
+            <m>x \neq 0</m>.
+          </li>
+          <li>
+            <em>State the conclusion.</em> By the definition of the
+            derivative, <m>f'(x) = -1/x^2</m> for all <m>x \in (0, \infty)</m>.
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <!-- ============================================================ -->
+    <p>
+      <alert>Part 2: An MVT Inequality (Required)</alert>
+      (Estimated time: 20 minutes)
+    </p>
+  <exercise xml:id="ex-mod7-as-2">
+    <title>Using the MVT to Prove an Inequality</title>
+    <statement>
+      <p>
+        Prove that <m>\ln(1 + x) \leq x</m> for all <m>x \gt -1</m>.
+      </p>
+      <p>
+        Your proof must have the following structure:
+        <ol marker="(i)">
+          <li>
+            <em>Set up the auxiliary function.</em> Define
+            <m>g(x) = x - \ln(1 + x)</m> for <m>x \gt -1</m>.
+            Compute <m>g(0)</m>.
+          </li>
+          <li>
+            <em>Compute the derivative.</em> Show that
+            <m>g'(x) = 1 - \dfrac{1}{1+x} = \dfrac{x}{1+x}</m>
+            for <m>x \gt -1</m>. State the values of <m>x</m> for
+            which <m>g'(x) \gt 0</m>, <m>g'(x) = 0</m>, and
+            <m>g'(x) \lt 0</m>.
+          </li>
+          <li>
+            <em>Apply monotonicity (an application of the MVT).</em>
+            For <m>x \gt 0</m>: <m>g'(x) \gt 0</m>, so by the MVT,
+            <m>g</m> is strictly increasing on <m>(0, \infty)</m>;
+            hence <m>g(x) \gt g(0) = 0</m>, i.e., <m>x \gt \ln(1+x)</m>.
+            For <m>-1 \lt x \lt 0</m>: <m>g'(x) \lt 0</m>, so <m>g</m>
+            is strictly decreasing on <m>(-1, 0)</m>; hence
+            <m>g(x) \gt g(0) = 0</m>, i.e., <m>x \gt \ln(1+x)</m>.
+            State and invoke the MVT by name in at least one of these
+            cases.
+          </li>
+          <li>
+            <em>State the conclusion.</em> Combine the cases to conclude
+            that <m>g(x) \geq 0</m> for all <m>x \gt -1</m>, i.e.,
+            <m>\ln(1+x) \leq x</m>, with equality only at <m>x = 0</m>.
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <!-- ============================================================ -->
+    <p>
+      <alert>Part 3: Reflection</alert>
+      (Estimated time: 5 minutes)
+    </p>
+    <p>
+      Write 3&#x2013;5 sentences for each question. These are graded
+      for thoughtfulness, not for mathematical correctness.
+    </p>
+  <exercise xml:id="ex-mod7-as-r1">
+    <title>Differentiability and Continuity</title>
+    <statement>
+      <p>
+        In your own words, why does differentiability imply continuity?
+        Write the key idea of the proof from memory&#x2014;do not look
+        at your notes. If you cannot reproduce it, explain which step
+        you are stuck on and what tool you think is missing.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod7-as-r2">
+    <title>Bauldry's MVT</title>
+    <statement>
+      <p>
+        In the Bridge Reading you found Bauldry's statement of the MVT
+        in &#xa7;2.3. Describe in 3&#x2013;5 sentences how Bauldry
+        uses the MVT in the subsequent results of &#xa7;2.3 that go
+        beyond what this module explicitly covered. What theorems
+        appear, and what role does the MVT play in each?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod7-as-r3">
+    <title>Looking Ahead to Module 8</title>
+    <statement>
+      <p>
+        The Fundamental Theorem of Calculus (Module 8) has a proof
+        that uses the MVT (or a closely related result called the MVT
+        for Integrals). Based on what you now know about the MVT,
+        describe in 2&#x2013;3 sentences how you expect this connection
+        to work. What does the MVT control in such an argument, and
+        what would the bound on <m>f'</m> correspond to?
+      </p>
+    </statement>
+  </exercise>
+
+  <!-- ============================================================ -->
+    <p>
+      <alert>Assessment Rubric (Informational)</alert>
+    </p>
+    <p>
+      The following rubric describes how submitted proofs will be
+      evaluated.
+    </p>
+  <paragraphs xml:id="par-mod7-as-rubric">
+    <title>Grading Criteria</title>
+    <tabular halign="left">
+      <col width="14%"/>
+      <col width="29%"/>
+      <col width="29%"/>
+      <col width="28%"/>
+      <row header="yes">
+        <cell><p>Criterion</p></cell>
+        <cell><p>Full credit</p></cell>
+        <cell><p>Partial credit</p></cell>
+        <cell><p>Minimal credit</p></cell>
+      </row>
+      <row>
+        <cell><p><alert>Logical correctness</alert></p></cell>
+        <cell><p>All steps are valid; the argument proves exactly the stated claim</p></cell>
+        <cell><p>Mostly correct with one fixable gap</p></cell>
+        <cell><p>Significant logical errors or wrong claim proved</p></cell>
+      </row>
+      <row>
+        <cell><p><alert>Limit definition mechanics</alert></p></cell>
+        <cell><p>Difference quotient set up correctly, numerator simplified, factor of <m>h</m> cancelled, limit taken with justification</p></cell>
+        <cell><p>Algebra correct but limit step not fully justified</p></cell>
+        <cell><p>Difference quotient not set up, or algebra contains errors</p></cell>
+      </row>
+      <row>
+        <cell><p><alert>MVT application</alert></p></cell>
+        <cell><p>Hypotheses of MVT (or monotonicity corollary) verified explicitly; conclusion correctly drawn and connected to the inequality</p></cell>
+        <cell><p>MVT cited but one hypothesis unchecked, or conclusion not connected clearly</p></cell>
+        <cell><p>MVT not cited by name, or applied in a setting where its hypotheses fail</p></cell>
+      </row>
+      <row>
+        <cell><p><alert>Mathematical prose</alert></p></cell>
+        <cell><p>Complete grammatical sentences; strategy stated up front; every step connected by logical connectives</p></cell>
+        <cell><p>Mostly prose with some missing connective sentences</p></cell>
+        <cell><p>Primarily symbolic with no connecting narrative</p></cell>
+      </row>
+      <row>
+        <cell><p><alert>Reflection</alert></p></cell>
+        <cell><p>Specific, thoughtful, and engages with the mathematical content of the module</p></cell>
+        <cell><p>General but relevant observations</p></cell>
+        <cell><p>Vague or too brief to be informative</p></cell>
+      </row>
+    </tabular>
+  </paragraphs>
+
+</section>
