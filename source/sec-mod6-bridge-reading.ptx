@@ -1,0 +1,238 @@
+<section xml:id="sec-mod6-bridge-reading">
+  <title>Module 6: Bridge Reading Guide</title>
+  <p>Bauldry §1.2 and §2.2 — Estimated time: 40 minutes</p>
+    <p>
+      Every module ends with a bridge reading in Bauldry's
+      <em>Introduction to Real Analysis</em>. For Module 6 the reading
+      covers two sections from different chapters: &#xa7;1.2
+      (<q>Continuous Functions</q>) from Bauldry's informal Chapter 1,
+      and &#xa7;2.2 (<q>Limits and Continuity</q>) from his rigorous
+      Chapter 2. The contrast between the two sections is itself
+      instructive: &#xa7;1.2 treats continuity informally, as in a
+      calculus course; &#xa7;2.2 is the graduate-level rigorous
+      treatment that you will encounter in MAT 5610.
+    </p>
+    <p>
+      Read &#xa7;1.2 first as a review and orientation; then read
+      &#xa7;2.2 as a preview of where the material is going. Focus
+      especially on how Bauldry's &#xa7;2.2 assumes more background and
+      moves faster than Zorn &#xa7;3.1&#x2013;3.4.
+    </p>
+  <!-- ============================================================
+       PART 1: BAULDRY SECTION 1.2
+  ============================================================ -->
+
+  <paragraphs xml:id="par-mod6-br-12">
+    <title>Bauldry &#xa7;1.2 &#x2014; Continuous Functions (informal)</title>
+    <p>
+      Section 1.2 reviews the main results about continuity in an
+      informal calculus-style presentation: limits, the definition of
+      continuity, the Intermediate Value Theorem, the Extreme Value
+      Theorem, and a brief mention of uniform continuity. Unlike Zorn,
+      Bauldry keeps the proofs at a sketch level here, reserving full
+      rigor for Chapter 2.
+    </p>
+  </paragraphs>
+
+  <exercise xml:id="ex-mod6-br-1">
+    <title>Bauldry's Definition of Continuity</title>
+    <statement>
+      <p>
+        Read Bauldry's definition of continuity in &#xa7;1.2. Is it
+        given in terms of <m>\varepsilon</m>-<m>\delta</m>, in terms
+        of limits, or in some more informal phrasing?
+        <ol marker="(a)">
+          <li>
+            Quote the key sentence or definition from the text.
+          </li>
+          <li>
+            Compare this to the definition you used in the Module 6
+            study guide (from Zorn &#xa7;3.2). Which is more formal?
+            What does the less formal version omit?
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod6-br-2">
+    <title>IVT and EVT in Bauldry &#xa7;1.2</title>
+    <statement>
+      <p>
+        <ol marker="(a)">
+          <li>
+            Bauldry states both the Intermediate Value Theorem and the
+            Extreme Value Theorem in &#xa7;1.2. For which of the two
+            does he provide even a proof sketch, and for which does he
+            simply state the result?
+          </li>
+          <li>
+            Compare Bauldry's statement of the IVT to Zorn's version
+            in &#xa7;3.3. Do they have the same hypotheses and conclusion,
+            or does one state a more general version?
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod6-br-3">
+    <title>Uniform Continuity in Bauldry &#xa7;1.2</title>
+    <statement>
+      <p>
+        Locate Bauldry's treatment of uniform continuity in &#xa7;1.2.
+        How does his presentation compare to Zorn's &#xa7;3.4?
+        <ol marker="(a)">
+          <li>
+            Does Bauldry give the formal quantifier-order definition
+            of uniform continuity in &#xa7;1.2, or does he present it
+            more informally?
+          </li>
+          <li>
+            Does Bauldry state the Heine&#x2013;Cantor theorem in
+            &#xa7;1.2? If so, what name does he use for it?
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <!-- ============================================================
+       PART 2: BAULDRY SECTION 2.2
+  ============================================================ -->
+
+  <paragraphs xml:id="par-mod6-br-22">
+    <title>Bauldry &#xa7;2.2 &#x2014; Limits and Continuity (rigorous)</title>
+    <p>
+      Section 2.2 is the version of this material you will encounter
+      in MAT 5610. It opens with the formal
+      <m>\varepsilon</m>-<m>\delta</m> definition, develops the
+      sequential characterization, and proves the main theorems
+      (IVT, EVT, and Heine&#x2013;Cantor). The presentation is more
+      compressed than Zorn; Bauldry assumes you are already fluent with
+      the <m>\varepsilon</m>-<m>N</m> machinery.
+    </p>
+  </paragraphs>
+
+  <exercise xml:id="ex-mod6-br-4">
+    <title>Bauldry's Formal Definition</title>
+    <statement>
+      <p>
+        Write out the <m>\varepsilon</m>-<m>\delta</m> definition that
+        Bauldry gives at the opening of &#xa7;2.2.
+        <ol marker="(a)">
+          <li>
+            Compare it to Zorn's definition in &#xa7;3.1 and to the
+            definition you used in the Module 6 study guide. Are they
+            logically equivalent?
+          </li>
+          <li>
+            Does Bauldry's notation or phrasing differ from Zorn's?
+            Note any differences in the variable names, the direction
+            of quantifiers, or what object is called the
+            <q>limit.</q>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod6-br-5">
+    <title>Sequential Characterization in Bauldry &#xa7;2.2</title>
+    <statement>
+      <p>
+        <ol marker="(a)">
+          <li>
+            Find the theorem in &#xa7;2.2 that gives the sequential
+            characterization of continuity (the theorem that says
+            <m>f</m> is continuous at <m>a</m> if and only if
+            <m>f(x_n) \to f(a)</m> for every sequence
+            <m>x_n \to a</m>). Write the theorem number and the
+            statement.
+          </li>
+          <li>
+            Does the proof strategy in Bauldry match the approach in
+            the Module 6 study guide? Identify the main step in the
+            proof of the forward direction (from
+            <m>\varepsilon</m>-<m>\delta</m> continuity to the
+            sequential property).
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod6-br-6">
+    <title>Heine&#x2013;Cantor in Bauldry &#xa7;2.2</title>
+    <statement>
+      <p>
+        Find the theorem in &#xa7;2.2 that corresponds to the
+        Heine&#x2013;Cantor theorem (continuous on a compact set implies
+        uniformly continuous).
+        <ol marker="(a)">
+          <li>
+            What does Bauldry call this theorem? Does he use the word
+            <q>compact</q> explicitly?
+          </li>
+          <li>
+            What is the key property of <m>[a, b]</m> that the proof
+            uses? (Even if Bauldry's proof is sketch-level, identify
+            the step where compactness or some equivalent property is
+            invoked.)
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod6-br-7">
+    <title>Looking Ahead to Integration</title>
+    <statement>
+      <p>
+        <ol marker="(a)">
+          <li>
+            Identify one result in Bauldry &#xa7;2.2 about uniform
+            continuity that will be used in the treatment of the
+            Riemann integral in Bauldry &#xa7;2.4 (and Module 8 of
+            this course). State the result and explain in one sentence
+            how you expect it to enter the integration theory.
+          </li>
+          <li>
+            What is the first topic in MAT 5610 that builds directly
+            on the material in Bauldry &#xa7;2.2? (Scan the beginning
+            of Bauldry &#xa7;2.3 or &#xa7;2.4 briefly if needed.)
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <!-- ============================================================
+       PART 3: SYNTHESIS
+  ============================================================ -->
+
+  <exercise xml:id="ex-mod6-br-8">
+    <title>Topology Preview</title>
+    <statement>
+      <p>
+        Bauldry's rigorous treatment of continuity in &#xa7;2.2 makes
+        implicit or explicit use of topological notions: open sets,
+        closed sets, and compact sets. In MAT 5610 these will be
+        developed carefully.
+        <ol marker="(a)">
+          <li>
+            What does it mean for a subset of <m>\R</m> to be
+            <em>compact</em>? (Give an informal answer based on your
+            reading; you are not expected to know the topology yet.)
+          </li>
+          <li>
+            How does compactness appear as a hypothesis in the theorems
+            you have read in &#xa7;2.2 (EVT, Heine&#x2013;Cantor)?
+            Why can these theorems fail on non-compact sets?
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+</section>

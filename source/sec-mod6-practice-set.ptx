@@ -1,0 +1,376 @@
+<section xml:id="sec-mod6-practice-set">
+  <title>Module 6: Practice Problem Set</title>
+  <p>Estimated time: 100 minutes</p>
+    <p>
+      Problems are labeled <m>[\mathbf{F}]</m> (Foundational),
+      <m>[\mathbf{S}]</m> (Standard), and <m>[\mathbf{C}]</m>
+      (Challenge). Work in order within each level; later problems in a
+      level often build on earlier ones.
+    </p>
+    <p>
+      These problems are not submitted, but you should write out complete
+      solutions. For any problem that asks you to <em>prove</em>
+      something, apply the standards from the Worked Examples: state your
+      strategy up front, write in complete sentences, justify every step,
+      and cite each test or theorem by name.
+    </p>
+    <p>
+      The <m>\varepsilon</m>-<m>\delta</m> proofs will take longer than
+      they look. Allow extra time for the scratch work phase, which is
+      not optional&#x2014;it is where you find <m>\delta</m>.
+    </p>
+  <!-- ============================================================
+       FOUNDATIONAL
+  ============================================================ -->
+
+  <paragraphs xml:id="par-mod6-ps-f">
+    <title>Foundational Problems</title>
+    <!-- TODO(quinn): sentence added in #4 to satisfy the schema; confirm or replace. -->
+    <p>
+      These problems practice the basic moves of the module: evaluating
+      limits or deciding that they do not exist, finding <m>\delta</m> for
+      a given <m>\varepsilon</m>, checking continuity at a point, and
+      showing that an equation has a solution using the Intermediate Value
+      Theorem.
+    </p>
+  </paragraphs>
+
+  <exercise xml:id="ex-mod6-ps-f1">
+    <title><m>[\mathbf{F}]</m> Limit Intuition</title>
+    <statement>
+      <p>
+        For each, state the limit or state that it does not exist.
+        No formal proof is required; use your calculus intuition or
+        algebra to evaluate.
+        <ol marker="(a)">
+          <li>
+            <m>\displaystyle\lim_{x \to 1} \frac{x^2 - 1}{x - 1}</m>
+          </li>
+          <li>
+            <m>\displaystyle\lim_{x \to 0} \frac{|x|}{x}</m>
+          </li>
+          <li>
+            <m>\displaystyle\lim_{x \to \infty} \frac{2x + 1}{x - 3}</m>
+          </li>
+          <li>
+            <m>\displaystyle\lim_{x \to 0} \frac{\sin x}{x}</m>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        (a) Factor: <m>(x^2 - 1)/(x - 1) = x + 1 \to 2</m> as
+        <m>x \to 1</m>.
+      </p>
+      <p>
+        (b) For <m>x \gt 0</m>, <m>|x|/x = 1</m>; for <m>x \lt 0</m>,
+        <m>|x|/x = -1</m>. The left and right limits disagree, so the
+        limit does not exist.
+      </p>
+      <p>
+        (c) Divide numerator and denominator by <m>x</m>:
+        <m>(2 + 1/x)/(1 - 3/x) \to 2/1 = 2</m>.
+      </p>
+      <p>
+        (d) This is a standard limit from calculus:
+        <m>\lim_{x \to 0} \sin(x)/x = 1</m>.
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise xml:id="ex-mod6-ps-f2">
+    <title><m>[\mathbf{F}]</m> Finding <m>\delta</m></title>
+    <statement>
+      <p>
+        Let <m>f(x) = 5x - 2</m>. The limit as <m>x \to 1</m> is
+        <m>L = 3</m>. For each given <m>\varepsilon</m>, find the
+        largest valid <m>\delta</m> (in terms of <m>\varepsilon</m>
+        for part (d)).
+        <ol marker="(a)">
+          <li><m>\varepsilon = 0.5</m></li>
+          <li><m>\varepsilon = 0.1</m></li>
+          <li><m>\varepsilon = 0.01</m></li>
+          <li>General <m>\varepsilon \gt 0</m>.</li>
+        </ol>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        Note that <m>|f(x) - 3| = |5x - 2 - 3| = 5|x - 1|</m>, so
+        we need <m>5|x - 1| \lt \varepsilon</m>, i.e.,
+        <m>|x - 1| \lt \varepsilon/5</m>.
+      </p>
+      <p>
+        (a) <m>\delta = 0.5/5 = 0.1</m>.
+        (b) <m>\delta = 0.1/5 = 0.02</m>.
+        (c) <m>\delta = 0.01/5 = 0.002</m>.
+        (d) <m>\delta = \varepsilon/5</m>.
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise xml:id="ex-mod6-ps-f3">
+    <title><m>[\mathbf{F}]</m> Continuity Check</title>
+    <statement>
+      <p>
+        For each function and point, determine whether <m>f</m> is
+        continuous at <m>a</m> by checking whether
+        <m>\lim_{x \to a} f(x) = f(a)</m>. State your conclusion with
+        a brief justification.
+        <ol marker="(a)">
+          <li>
+            <m>f(x) = x^3 - x</m> at <m>a = 2</m>.
+          </li>
+          <li>
+            <m>f(x) = \dfrac{x^2 - 9}{x - 3}</m> at <m>a = 3</m>.
+          </li>
+          <li>
+            <m>f(x) = |x|</m> at <m>a = 0</m>.
+          </li>
+          <li>
+            <m>f(x) = 1/x</m> at <m>a = 0</m>.
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        (a) <m>f(2) = 8 - 2 = 6</m>. As a polynomial, <m>f</m> is
+        continuous everywhere; <m>\lim_{x \to 2} f(x) = f(2) = 6</m>.
+        Continuous at <m>a = 2</m>.
+      </p>
+      <p>
+        (b) <m>f(3)</m> is undefined (division by zero), so <m>f</m>
+        is not continuous at <m>a = 3</m>. The limit
+        <m>\lim_{x \to 3} (x^2 - 9)/(x - 3) = \lim_{x \to 3}(x + 3) = 6</m>
+        exists, but there is no value of <m>f(3)</m> to equal it.
+      </p>
+      <p>
+        (c) <m>f(0) = 0</m>. For <m>x \gt 0</m>, <m>|x| = x \to 0</m>;
+        for <m>x \lt 0</m>, <m>|x| = -x \to 0</m>. So
+        <m>\lim_{x \to 0} |x| = 0 = f(0)</m>. Continuous.
+      </p>
+      <p>
+        (d) <m>f(0)</m> is undefined, so <m>f</m> is not continuous at
+        <m>a = 0</m>.
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise xml:id="ex-mod6-ps-f4">
+    <title><m>[\mathbf{F}]</m> IVT Application</title>
+    <statement>
+      <p>
+        Show that <m>x^5 - 3x + 1 = 0</m> has at least one solution
+        in <m>(0, 2)</m>. Identify the function <m>f</m>, compute
+        <m>f(0)</m> and <m>f(2)</m>, and invoke the IVT by name.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        Let <m>f(x) = x^5 - 3x + 1</m>. As a polynomial, <m>f</m> is
+        continuous on <m>[0, 2]</m>. We compute
+        <m>f(0) = 0 - 0 + 1 = 1 \gt 0</m> and
+        <m>f(2) = 32 - 6 + 1 = 27 \gt 0</m>.
+      </p>
+      <p>
+        Since both endpoints give positive values, we cannot yet apply
+        IVT directly. Check an interior point: <m>f(1) = 1 - 3 + 1 = -1 \lt 0</m>.
+        Now <m>f(0) = 1 \gt 0</m> and <m>f(1) = -1 \lt 0</m>, so by
+        the Intermediate Value Theorem, there exists <m>c \in (0, 1)
+        \subset (0, 2)</m> with <m>f(c) = 0</m>.
+      </p>
+    </answer>
+  </exercise>
+
+  <!-- ============================================================
+       STANDARD
+  ============================================================ -->
+
+  <paragraphs xml:id="par-mod6-ps-s">
+    <title>Standard Problems</title>
+    <!-- TODO(quinn): sentence added in #4 to satisfy the schema; confirm or replace. -->
+    <p>
+      These problems apply the same moves to longer arguments: an
+      <m>\varepsilon</m>-<m>\delta</m> limit proof, a proof of continuity
+      from the definition, a proof of uniform continuity using a Lipschitz
+      condition, a proof that a function is not uniformly continuous, and a
+      proof using the sequential characterization that a composition of
+      continuous functions is continuous.
+    </p>
+  </paragraphs>
+
+  <exercise xml:id="ex-mod6-ps-s1">
+    <title><m>[\mathbf{S}]</m> An <m>\varepsilon</m>-<m>\delta</m> Limit Proof</title>
+    <statement>
+      <p>
+        Prove that <m>\displaystyle\lim_{x \to 4} \left(\frac{x}{2} + 1\right) = 3</m>.
+      </p>
+      <p>
+        Your proof must follow this structure:
+        <ol marker="(a)">
+          <li>
+            <em>Scratch work.</em> Compute <m>|f(x) - 3|</m> and find
+            a value of <m>\delta</m> in terms of <m>\varepsilon</m> that
+            will work.
+          </li>
+          <li>
+            <em>Formal proof.</em> State <q>Let <m>\varepsilon \gt 0</m></q>
+            and <q>Set <m>\delta = \ldots</m>,</q> assume
+            <m>0 \lt |x - 4| \lt \delta</m>, and verify the chain
+            of inequalities concluding <m>|f(x) - 3| \lt \varepsilon</m>.
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod6-ps-s2">
+    <title><m>[\mathbf{S}]</m> Continuity from the Definition</title>
+    <statement>
+      <p>
+        Prove that <m>f(x) = 3x + 7</m> is continuous at every
+        <m>a \in \R</m>.
+      </p>
+    </statement>
+    <hint>
+      <p>
+        <m>|f(x) - f(a)| = |3x + 7 - (3a + 7)| = 3|x - a|</m>.
+        Set <m>\delta = \varepsilon / 3</m>.
+      </p>
+    </hint>
+  </exercise>
+
+  <exercise xml:id="ex-mod6-ps-s3">
+    <title><m>[\mathbf{S}]</m> Uniform Continuity via Lipschitz</title>
+    <statement>
+      <p>
+        Prove that <m>f(x) = \sqrt{x}</m> is uniformly continuous on
+        <m>[1, \infty)</m> by showing it satisfies a Lipschitz condition
+        on that domain.
+      </p>
+    </statement>
+    <hint>
+      <p>
+        For <m>x, y \geq 1</m>, write
+        <m>|\sqrt{x} - \sqrt{y}| = |x - y| / (\sqrt{x} + \sqrt{y})</m>
+        (rationalize the numerator). Since <m>x, y \geq 1</m>,
+        <m>\sqrt{x} + \sqrt{y} \geq 2</m>, so
+        <m>|\sqrt{x} - \sqrt{y}| \leq |x - y| / 2</m>.
+        This gives a Lipschitz constant <m>K = 1/2</m>, so
+        <m>\delta = 2\varepsilon</m> works.
+      </p>
+    </hint>
+  </exercise>
+
+  <exercise xml:id="ex-mod6-ps-s4">
+    <title><m>[\mathbf{S}]</m> Not Uniformly Continuous</title>
+    <statement>
+      <p>
+        Prove that <m>g(x) = x^2</m> is <em>not</em> uniformly
+        continuous on <m>\R</m>.
+      </p>
+    </statement>
+    <hint>
+      <p>
+        Let <m>x_n = n + 1/n</m> and <m>y_n = n</m>. Then
+        <m>|x_n - y_n| = 1/n \to 0</m>. Compute
+        <m>|g(x_n) - g(y_n)| = |x_n^2 - y_n^2|</m> and show this does
+        not tend to 0.
+      </p>
+    </hint>
+  </exercise>
+
+  <exercise xml:id="ex-mod6-ps-s5">
+    <title><m>[\mathbf{S}]</m> Composition of Continuous Functions</title>
+    <statement>
+      <p>
+        State and prove: if <m>f</m> is continuous at <m>a</m> and
+        <m>g</m> is continuous at <m>f(a)</m>, then <m>g \circ f</m>
+        is continuous at <m>a</m>.
+      </p>
+      <p>
+        You may use the sequential characterization of continuity for
+        both <m>f</m> and <m>g</m>.
+      </p>
+    </statement>
+    <hint>
+      <p>
+        Let <m>(x_n)</m> be any sequence with <m>x_n \to a</m>. Since
+        <m>f</m> is continuous at <m>a</m>, <m>f(x_n) \to f(a)</m>.
+        Since <m>g</m> is continuous at <m>f(a)</m> and
+        <m>f(x_n) \to f(a)</m>, we get <m>g(f(x_n)) \to g(f(a))</m>.
+        That is, <m>(g \circ f)(x_n) \to (g \circ f)(a)</m> for every
+        sequence <m>x_n \to a</m>, so <m>g \circ f</m> is continuous
+        at <m>a</m>.
+      </p>
+    </hint>
+  </exercise>
+
+  <!-- ============================================================
+       CHALLENGE
+  ============================================================ -->
+
+  <paragraphs xml:id="par-mod6-ps-c">
+    <title>Challenge Problems</title>
+    <!-- TODO(quinn): sentence added in #4 to satisfy the schema; confirm or replace. -->
+    <p>
+      These problems extend the module's ideas: a proof using Cauchy
+      sequences that a uniformly continuous function on an open interval
+      has one-sided limits at both endpoints, and a proof that a
+      composition of uniformly continuous functions is uniformly
+      continuous.
+    </p>
+  </paragraphs>
+
+  <exercise xml:id="ex-mod6-ps-c1">
+    <title><m>[\mathbf{C}]</m> Uniformly Continuous Functions Extend to the Boundary</title>
+    <statement>
+      <p>
+        Prove: if <m>f : (a, b) \to \R</m> is uniformly continuous,
+        then both limits <m>\lim_{x \to a^+} f(x)</m> and
+        <m>\lim_{x \to b^-} f(x)</m> exist. (That is, <m>f</m> extends
+        continuously to the closed interval <m>[a, b]</m>.)
+      </p>
+    </statement>
+    <hint>
+      <p>
+        Let <m>(x_n)</m> be any sequence in <m>(a, b)</m> with
+        <m>x_n \to a</m>. Show that <m>(f(x_n))</m> is a Cauchy
+        sequence using the definition of uniform continuity: given
+        <m>\varepsilon \gt 0</m>, pick <m>\delta \gt 0</m> from
+        uniform continuity; since <m>x_n \to a</m>, eventually
+        <m>|x_m - x_n| \lt \delta</m>, so <m>|f(x_m) - f(x_n)| \lt \varepsilon</m>.
+        By Cauchy completeness of <m>\R</m> (Module 4), <m>f(x_n)</m>
+        converges. One then checks that every sequence approaching
+        <m>a</m> gives the same limit, which defines
+        <m>\lim_{x \to a^+} f(x)</m>.
+      </p>
+    </hint>
+  </exercise>
+
+  <exercise xml:id="ex-mod6-ps-c2">
+    <title><m>[\mathbf{C}]</m> Composition of Uniformly Continuous Functions</title>
+    <statement>
+      <p>
+        Prove: if <m>f : A \to B</m> is uniformly continuous and
+        <m>g : B \to \R</m> is uniformly continuous, then
+        <m>g \circ f : A \to \R</m> is uniformly continuous.
+      </p>
+    </statement>
+    <hint>
+      <p>
+        Given <m>\varepsilon \gt 0</m>, use uniform continuity of
+        <m>g</m> to find <m>\delta_1 \gt 0</m> such that
+        <m>|u - v| \lt \delta_1 \Rightarrow |g(u) - g(v)| \lt \varepsilon</m>
+        for all <m>u, v \in B</m>. Then use uniform continuity of
+        <m>f</m> with <m>\varepsilon' = \delta_1</m> to find
+        <m>\delta \gt 0</m> such that
+        <m>|x - y| \lt \delta \Rightarrow |f(x) - f(y)| \lt \delta_1</m>
+        for all <m>x, y \in A</m>. Chain the two implications.
+      </p>
+    </hint>
+  </exercise>
+
+</section>
