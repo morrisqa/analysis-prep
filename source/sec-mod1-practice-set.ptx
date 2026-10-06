@@ -153,7 +153,7 @@
               </li>
               <li>
                 <m>\forall \varepsilon \gt 0 \;\; \exists \delta \gt 0</m>
-                such that <m>|x - 2| \lt \delta \Rightarrow |x^2 - 4| \lt
+                such that <m>\forall x \in \R,\; |x - 2| \lt \delta \Rightarrow |x^2 - 4| \lt
                 \varepsilon</m>
               </li>
             </ol>
@@ -174,10 +174,10 @@
               </li>
               <li>
                 Negation: <m>\exists \varepsilon \gt 0</m> such that
-                <m>\forall \delta \gt 0,\; \exists x</m> with
+                <m>\forall \delta \gt 0,\; \exists x \in \R</m> with
                 <m>|x-2| \lt \delta</m> and <m>|x^2-4| \geq \varepsilon</m>.
                 <em>False</em>: the original statement is true (it expresses
-                <m>\lim_{x \to 2} x^2 = 4</m>), so its negation is false.
+                the continuity of <m>x^2</m> at <m>2</m>), so its negation is false.
               </li>
             </ol>
           </p>
@@ -228,9 +228,13 @@
                 <m>3 \mid q</m>, contradicting <m>\gcd(p,q)=1</m>.
               </li>
               <li>
-                <alert>Contradiction.</alert> Assume finitely many primes
-                and construct <m>N = p_1 \cdots p_k + 1</m>, which has
-                no prime factor on the list&#x2014;contradiction.
+                <alert>Contradiction.</alert> Assume there is a largest
+                prime <m>p</m>. Then there are finitely many primes
+                <m>p_1, \ldots, p_k</m>, all at most <m>p</m>. Construct
+                <m>N = p_1 \cdots p_k + 1</m>. Since <m>N \gt 1</m>, it
+                has a prime factor, but no <m>p_i</m> divides <m>N</m>
+                (each leaves remainder 1). So that prime factor is not on
+                the list and exceeds <m>p</m>, a contradiction.
               </li>
             </ol>
           </p>
@@ -275,7 +279,7 @@
         </statement>
         <answer>
           <p>
-            There are at least two errors:
+            There are three errors:
             <ol marker="(a)">
               <li>
                 <alert>The theorem is false.</alert> For example,
@@ -285,13 +289,19 @@
                 <alert>The claim <m>2 \geq n+1</m> fails for <m>n \geq 2</m>.</alert>
                 The argument says <q>for small <m>n</m></q> but does not
                 specify which values, and the inductive step requires it
-                for <em>all</em> <m>n</m>.
+                for <em>all</em> <m>n</m>. This is the fatal step: passing
+                from <m>n = 3</m> to <m>n = 4</m> would need
+                <m>2 \geq 4</m>, and the claim is false at <m>n = 4</m>.
               </li>
               <li>
-                <alert>Circular structure.</alert> The argument begins
+                <alert>Missing base case and incomplete induction framework.</alert>
+                The argument begins
                 <q>Assume <m>2^n \geq n!</m></q> without establishing
                 a base case first, and does not present the induction
-                correctly.
+                correctly. Here the base case is in fact true
+                (<m>2^1 = 2 \geq 1 = 1!</m>), so its omission is a defect
+                of the write-up, not the reason the claim fails; the
+                claim fails because of the step in (b).
               </li>
             </ol>
           </p>
@@ -328,7 +338,12 @@
               <mrow>\amp= \frac{(n+1)(2n^2+7n+6)}{6}</mrow>
               <mrow>\amp= \frac{(n+1)(n+2)(2n+3)}{6}.</mrow>
             </md>
-            This is the formula with <m>n</m> replaced by <m>n+1</m>. <m>\square</m>
+            This is the formula with <m>n</m> replaced by <m>n+1</m>, so the
+            inductive step is complete.
+          </p>
+          <p>
+            By the principle of mathematical induction, the formula holds
+            for all integers <m>n \geq 1</m>. <m>\square</m>
           </p>
         </answer>
       </exercise>
@@ -404,7 +419,7 @@
             The definition of <m>\lim_{n \to \infty} a_n = L</m> is:
             <md>
               \forall \varepsilon \gt 0 \;\; \exists N \in \N
-              \text{ s.t. } n \geq N \Rightarrow |a_n - L| \lt \varepsilon.
+              \text{ s.t. } \forall n \in \N,\;\; n \geq N \Rightarrow |a_n - L| \lt \varepsilon.
             </md>
             <ol marker="(a)">
               <li>
@@ -539,9 +554,10 @@
             which is odd.
           </p>
           <p>
-            <alert>(<m>\Leftarrow</m>)</alert> Suppose <m>n^2</m> is odd.
-            We prove the contrapositive of this direction: if <m>n</m> is
-            even, then <m>n^2</m> is even. If <m>n = 2k</m>, then
+            <alert>(<m>\Leftarrow</m>)</alert> We prove the contrapositive
+            of this direction: if <m>n</m> is even, then <m>n^2</m> is even.
+            Suppose <m>n</m> is even, so <m>n = 2k</m> for some integer
+            <m>k</m>. Then
             <m>n^2 = 4k^2 = 2(2k^2)</m>, which is even. By contrapositive,
             if <m>n^2</m> is odd then <m>n</m> is odd.
           </p>
@@ -556,13 +572,13 @@
         <title><m>[\mathbf{S}]</m> Induction with a Shifted Base</title>
         <statement>
           <p>
-            Prove by induction: for all <m>n \geq 3</m>,
+            Prove by induction: for all <m>n \geq 5</m>,
             <m>n^2 \lt 2^n</m>.
           </p>
         </statement>
         <hint>
           <p>
-            Start your base case at <m>n = 3</m>. In the inductive step,
+            Start your base case at <m>n = 5</m>. In the inductive step,
             you will need to show that if <m>n^2 \lt 2^n</m>, then
             <m>(n+1)^2 \lt 2^{n+1}</m>. It helps to show
             <m>(n+1)^2 \leq 2n^2</m> for <m>n \geq 3</m>.
@@ -570,18 +586,11 @@
         </hint>
         <answer>
           <p>
-            <alert>Proof.</alert> We proceed by induction on <m>n \geq 3</m>.
+            <alert>Proof.</alert> We proceed by induction on <m>n \geq 5</m>.
           </p>
           <p>
-            <alert>Base case.</alert> <m>n = 3</m>: <m>3^2 = 9 \lt 8 = 2^3</m>.
-            Wait&#x2014;<m>2^3 = 8 \lt 9</m>. Let us check <m>n=4</m>:
-            <m>4^2 = 16 = 2^4</m>, still not strict. <m>n = 5</m>:
-            <m>5^2 = 25 \lt 32 = 2^5</m>. &#x2713; (The base case is
-            <m>n = 5</m> if strict inequality is required; students should
-            check that <m>n=3</m> and <m>n=4</m> fail, and note the claim
-            holds for <m>n \geq 5</m> as stated with strict inequality.
-            Alternatively the problem holds for <m>n \geq 3</m> with
-            <m>\leq</m>.)
+            <alert>Base case.</alert> <m>n = 5</m>:
+            <m>5^2 = 25 \lt 32 = 2^5</m>. &#x2713;
           </p>
           <p>
             <alert>Inductive step.</alert> Assume <m>n^2 \lt 2^n</m> for
@@ -590,6 +599,10 @@
             \leq n^2 + n^2 = 2n^2</m> (using <m>3n \leq n^2</m> for
             <m>n \geq 3</m>). Therefore
             <m>(n+1)^2 \leq 2n^2 \lt 2 \cdot 2^n = 2^{n+1}</m>.
+          </p>
+          <p>
+            By the principle of mathematical induction,
+            <m>n^2 \lt 2^n</m> for all integers <m>n \geq 5</m>.
             <m>\square</m>
           </p>
         </answer>
@@ -624,7 +637,12 @@
             By the induction hypothesis, <m>6 \mid (n^3-n)</m>. Also,
             <m>n(n+1)</m> is a product of consecutive integers, hence
             even, so <m>6 \mid 3n(n+1)</m>. Therefore
-            <m>6 \mid (n+1)^3-(n+1)</m>. <m>\square</m>
+            <m>6 \mid (n+1)^3-(n+1)</m>.
+          </p>
+          <p>
+            By the principle of mathematical induction,
+            <m>6 \mid (n^3 - n)</m> for all integers <m>n \geq 1</m>.
+            <m>\square</m>
           </p>
         </answer>
       </exercise>

@@ -43,7 +43,7 @@
           <md>
             \lim_{n \to \infty} a_n = L \;\;\text{means}\;\;
             \forall \varepsilon \gt 0 \;\; \exists N \in \N
-            \text{ s.t. } n \geq N \Rightarrow |a_n - L| \lt \varepsilon.
+            \text{ s.t. } \forall n \in \N,\;\; n \geq N \Rightarrow |a_n - L| \lt \varepsilon.
           </md>
         </p>
 
@@ -235,7 +235,7 @@
         <statement>
           <p>
             The <m>\varepsilon</m>-<m>N</m> proof you wrote in Part 1(b)
-            is the first in a series: Module 2 will ask you to prove that
+            is the first in a series: <xref ref="ch-mod4" text="custom">Module 4</xref> will ask you to prove that
             various sequences converge using this same definition. Based
             on your experience with this proof, what do you anticipate
             will be the hardest step in applying the definition to more

@@ -8,8 +8,7 @@
           <alert>How to use this guide.</alert> Work through it
           <em>while</em> reading, not after. Each section names the
           assignment, explains what to look for, and poses
-          <q>stop and check</q> questions. Starred items
-          are especially important for MAT 5610 preparation.
+          <q>stop and check</q> questions.
         </p>
 
     <!-- ============================================================ -->
@@ -52,7 +51,7 @@
             involving <m>\varepsilon</m> and <m>n</m> that look similar but
             have opposite truth values. Write out both statements, and
             explain why their quantifier order makes them different.
-            (This pair recurs in Module 2 on sequences.)
+            (This pair recurs in <xref ref="ch-mod4" text="custom">Module 4</xref> on sequences.)
           </p>
         </statement>
         <answer>
@@ -122,6 +121,28 @@
           </p>
         </answer>
       </exercise>
+
+        <!-- TODO(quinn): paragraph added in #10 (math fixes); confirm or replace. -->
+        <p>
+          Besides the quantifier De Morgan laws, two rules come up whenever
+          you negate a definition from analysis. First, the negation of an
+          implication is not another implication:
+          <md>
+            \neg(P \Rightarrow Q) \iff P \wedge \neg Q,
+          </md>
+          since an implication is false exactly when its hypothesis is true
+          and its conclusion is false. Second, a bounded quantifier keeps its
+          bound under negation:
+          <md>
+            \neg\bigl(\forall \varepsilon \gt 0,\; P(\varepsilon)\bigr) \iff \exists \varepsilon \gt 0,\; \neg P(\varepsilon).
+          </md>
+          The reason is that <m>\forall \varepsilon \gt 0,\; P(\varepsilon)</m>
+          abbreviates <m>\forall \varepsilon \bigl(\varepsilon \gt 0 \Rightarrow P(\varepsilon)\bigr)</m>,
+          and by the first rule its negation is
+          <m>\exists \varepsilon \bigl(\varepsilon \gt 0 \wedge \neg P(\varepsilon)\bigr)</m>.
+          The negation still speaks about positive <m>\varepsilon</m>; it
+          does not produce <m>\varepsilon \leq 0</m>.
+        </p>
 
       <exercise xml:id="ex-mod1-sg-z14-5">
         <title>Archimedean Property in Symbols</title>
@@ -199,8 +220,8 @@
             <m>p^2 = 5q^2</m>. Since 5 is prime, <m>5 \mid p^2</m> implies
             <m>5 \mid p</m>, so write <m>p = 5k</m>; then <m>25k^2 = 5q^2</m>,
             giving <m>5 \mid q</m>. This contradicts <m>\gcd(p,q)=1</m>.
-            Squaring preserves prime divisibility: if <m>p \mid a^2</m> and
-            <m>p</m> is prime, then <m>p \mid a</m> (by unique factorization).
+            Squaring preserves prime divisibility: if <m>r \mid a^2</m> and
+            <m>r</m> is prime, then <m>r \mid a</m> (by unique factorization).
           </p>
         </answer>
       </exercise>
@@ -307,14 +328,20 @@
         </statement>
         <answer>
           <p>
-            A <term>function</term> maps inputs to outputs of the same type
-            as the domain (e.g., <m>f(x) = x^2</m> maps reals to reals).
+            A <term>function</term> maps inputs to outputs; in the
+            single-sorted setting of the text, a function symbol maps the
+            universe to itself (e.g., <m>f(x) = x^2</m> maps reals to reals).
             A <term>predicate</term> maps inputs to truth values&#x2014;it
             is a property that a term either satisfies or does not
             (e.g., <m>P(x) \equiv (x \gt 0)</m>). The distinction matters
-            because only predicates can appear after <m>\forall</m> or
-            <m>\exists</m>; quantifiers bind variables in predicates, not
-            in function expressions.
+            because function symbols build <term>terms</term> (names for
+            objects, such as <m>f(x)</m>), while predicates build
+            <term>formulas</term> (statements that are true or false, such
+            as <m>f(x) = 0</m> or <m>P(f(x))</m>). A quantifier must be
+            followed by a formula, not a bare term: <m>\forall x\, f(x)</m>
+            is meaningless, while <m>\forall x\, \bigl(f(x) = 0\bigr)</m> is
+            a statement. The quantifier binds its variable wherever it occurs
+            in that formula, including inside terms such as <m>f(x)</m>.
           </p>
         </answer>
       </exercise>
@@ -456,7 +483,7 @@
           <p>
             Many analysts prefer the contrapositive here because it avoids
             the extra negation overhead; contradiction is more natural when
-            there is no obvious <q>converse</q> direction to assume.
+            there is no obvious contrapositive to prove.
             Either approach is acceptable in MAT 5610.
           </p>
         </answer>
@@ -481,8 +508,9 @@
             <alert>Contrapositive:</alert>
             <m>\neg(A \wedge B) \to \neg C</m>, which by De Morgan is
             <m>(\neg A \vee \neg B) \to \neg C</m>. In practice this is
-            proved by cases: assume <m>\neg A</m> (or <m>\neg B</m>) and
-            derive <m>\neg C</m>.
+            proved by cases, and both cases are needed: assume <m>\neg A</m>
+            and derive <m>\neg C</m>; then assume <m>\neg B</m> and derive
+            <m>\neg C</m>.
           </p>
         </answer>
       </exercise>
@@ -502,7 +530,7 @@
           if and only if
           <md>
             \forall \varepsilon \gt 0 \;\; \exists N \in \N
-            \text{ such that } n \geq N \implies |a_n - L| \lt \varepsilon.
+            \text{ such that } \forall n \in \N,\;\; n \geq N \implies |a_n - L| \lt \varepsilon.
           </md>
           We write <m>\lim_{n \to \infty} a_n = L</m> or <m>a_n \to L</m>.
         </p>
@@ -517,7 +545,7 @@
         </statement>
         <answer>
           <p>
-            The definition contains two quantifiers in this order:
+            The definition contains three quantifiers in this order:
             <ol marker="(a)">
               <li>
                 <m>\forall \varepsilon \gt 0</m>: universal quantifier over
@@ -528,11 +556,18 @@
                 natural numbers. Note that <m>N</m> is allowed to depend
                 on <m>\varepsilon</m> (it comes after the universal).
               </li>
+              <li>
+                <m>\forall n \in \N</m>: universal quantifier over the
+                natural numbers (the indices), governing the implication
+                <m>n \geq N \implies |a_n - L| \lt \varepsilon</m>. Together
+                with that implication it says <q>for all <m>n \geq N</m></q>.
+              </li>
             </ol>
-            The free variables already bound at the outer level are
-            <m>(a_n)</m> (the sequence) and <m>L</m> (the proposed limit).
+            The free variables are <m>(a_n)</m> (the sequence) and
+            <m>L</m> (the proposed limit): the definition does not quantify
+            them, so they are parameters fixed before the statement begins.
             The bound variables are <m>\varepsilon</m>, <m>N</m>, and
-            (implicitly) <m>n</m> in <m>n \geq N \implies |a_n - L| \lt \varepsilon</m>.
+            <m>n</m>.
           </p>
         </answer>
       </exercise>
@@ -552,10 +587,14 @@
               \exists \varepsilon \gt 0 \;\; \forall N \in \N,\;\;
               \exists n \geq N \text{ such that } |a_n - L| \geq \varepsilon.
             </md>
-            Each quantifier flips: <m>\forall \varepsilon</m> becomes
-            <m>\exists \varepsilon</m>; <m>\exists N</m> becomes
-            <m>\forall N</m>; and the implication
-            <m>n \geq N \Rightarrow |a_n-L| \lt \varepsilon</m> negates to
+            This takes two steps. First, each quantifier flips:
+            <m>\forall \varepsilon</m> becomes <m>\exists \varepsilon</m>;
+            <m>\exists N</m> becomes <m>\forall N</m>; and
+            <m>\forall n</m> becomes <m>\exists n</m>. Second, the implication
+            <m>n \geq N \Rightarrow |a_n-L| \lt \varepsilon</m> negates, by
+            <m>\neg(P \Rightarrow Q) \iff P \wedge \neg Q</m>, to
+            <m>n \geq N</m> and <m>|a_n - L| \geq \varepsilon</m>. Combining
+            <m>\exists n \in \N</m> with <m>n \geq N</m> gives
             <m>\exists n \geq N</m> with <m>|a_n - L| \geq \varepsilon</m>.
             In words: the sequence does not converge to <m>L</m> if there
             is some <m>\varepsilon \gt 0</m> such that no matter how far out
