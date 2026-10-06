@@ -215,7 +215,7 @@
         <m>a_1 = 1</m> and the sequence is increasing), so the limit
         satisfies
         <m>1 \leq L \leq 2</m> (limits preserve non-strict
-        inequalities; see the <xref ref="sec-mod4-study-guide" text="custom">study guide</xref>).
+        inequalities; see the <xref ref="par-mod4-sg-two-facts" text="custom">study guide</xref>).
         The strict bound <m>a_n \lt 2</m> yields only <m>L \leq 2</m>
         in the limit.
       </p>
@@ -234,7 +234,7 @@
         <m>L \cdot L = L^2</m> by the product rule, and the right side
         converges to <m>2 + L</m> by the sum rule. The two sides are
         the same sequence, so by uniqueness of limits (see the
-        <xref ref="sec-mod4-study-guide" text="custom">study guide</xref>),
+        <xref ref="par-mod4-sg-two-facts" text="custom">study guide</xref>),
         <m>L^2 = 2 + L</m>, i.e.,
         <m>L^2 - L - 2 = 0</m>,
         which factors as <m>(L - 2)(L + 1) = 0</m>. So
@@ -258,7 +258,8 @@
         rational, each is at least the one before, and all are less
         than 2. In <m>\R</m> they converge to <m>\sqrt{2}</m>: the
         <m>k</m>th truncation is within <m>10^{1-k}</m> of
-        <m>\sqrt{2}</m>, and <m>10^{1-k} \to 0</m>. They have no limit
+        <m>\sqrt{2}</m>, and <m>10^{1-k} \to 0</m> (since
+        <m>10^{k-1} \geq k</m>, so <m>10^{1-k} \leq 1/k</m>). They have no limit
         in <m>\Q</m>. A limit in <m>\Q</m> would also be a limit in
         <m>\R</m>, because every positive real <m>\varepsilon</m> has
         a positive rational below it; uniqueness of limits would then
