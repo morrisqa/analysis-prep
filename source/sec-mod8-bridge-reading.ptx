@@ -12,14 +12,16 @@
       rigorous graduate treatment &#x2014; and it goes substantially
       further than Zorn by introducing the Riemann-Stieltjes integral
       <m>\int f\,d\alpha</m>, which replaces the length element
-      <m>dx</m> with a more general measure <m>d\alpha</m>.
+      <m>dx</m> with a more general increment <m>d\alpha</m>,
+      determined by a function <m>\alpha</m> called the
+      <term>integrator</term>.
     </p>
     <p>
       This generalization is the correct setup for many applications
       in graduate analysis and probability. MAT 5610 will spend
       significant time on Bauldry &#xa7;2.4. The module you have just
       completed gives you the Darboux framework; the graduate course
-      adds the Stieltjes measure. The exercises below help you build
+      adds the Stieltjes integral. The exercises below help you build
       a bridge between these two presentations.
     </p>
     <p>
@@ -95,23 +97,39 @@
       Section &#xa7;2.4 is the starting point of MAT 5610's integration
       theory. The Riemann-Stieltjes integral <m>\int_a^b f\,d\alpha</m>
       replaces <m>dx</m> (the length element) with <m>d\alpha</m>
-      (determined by an <em>integrator</em> function <m>\alpha</m>).
+      (determined by the integrator <m>\alpha</m>).
       When <m>\alpha(x) = x</m>, the Riemann-Stieltjes integral reduces
       to the ordinary Riemann integral. The generalization is powerful
       because it unifies the integral with Stieltjes-type weighted
       averages and connects naturally to measure theory.
     </p>
     <p>
-      Read &#xa7;2.4 carefully. The definitions mirror what you have
-      learned &#x2014; upper sums, lower sums, integrability criterion
-      &#x2014; but with <m>\Delta\alpha_i = \alpha(x_i) - \alpha(x_{i-1})</m>
-      replacing <m>\Delta x_i</m>. Pay attention to where the hypotheses
-      on <m>\alpha</m> enter.
+      Read &#xa7;2.4 carefully. When the integrator <m>\alpha</m> is
+      increasing, the definitions mirror what you have learned (upper
+      sums, lower sums, integrability criterion), but with
+      <m>\Delta\alpha_i = \alpha(x_i) - \alpha(x_{i-1})</m>
+      replacing <m>\Delta x_i</m>. The hypothesis that <m>\alpha</m>
+      is increasing matters: it makes every <m>\Delta\alpha_i \geq 0</m>,
+      which is what makes upper and lower sums with these weights
+      behave like Darboux sums. For an integrator of bounded variation,
+      the integral is defined instead through Riemann-Stieltjes sums
+      <m>\sum f(t_i)\,\Delta\alpha_i</m> with sample points
+      <m>t_i \in [x_{i-1}, x_i]</m>. Alternatively, the bounded-variation
+      case can be reduced to the increasing case (with Apostol's
+      definition of the Riemann-Stieltjes integral) by the Jordan
+      decomposition (the total-variation decomposition), which writes every function of bounded variation as
+      the difference of two increasing functions. (A second source for
+      bounded variation and the Stieltjes integral is Apostol,
+      <pubtitle>Mathematical Analysis</pubtitle>, 2nd edition,
+      Chapters 6 and 7; the total-variation decomposition is in
+      Chapter 6.) Pay attention to where the hypotheses on
+      <m>\alpha</m> enter. Which of these approaches does Bauldry
+      take?
     </p>
   </paragraphs>
 
   <exercise xml:id="ex-mod8-br-4">
-    <title>The Stieltjes Measure</title>
+    <title>The Stieltjes Integrator</title>
     <statement>
       <p>
         Bauldry defines the Riemann-Stieltjes integral
@@ -122,16 +140,22 @@
     </statement>
     <answer>
       <p>
-        The role of <m>dx</m> is played by <m>d\alpha</m>, which in
-        the Darboux upper and lower sums amounts to replacing
+        The role of <m>dx</m> is played by <m>d\alpha</m>. For an
+        increasing integrator <m>\alpha</m>, in
+        the Darboux upper and lower sums this amounts to replacing
         <m>\Delta x_i = x_i - x_{i-1}</m> with
-        <m>\Delta\alpha_i = \alpha(x_i) - \alpha(x_{i-1})</m>. The
+        <m>\Delta\alpha_i = \alpha(x_i) - \alpha(x_{i-1}) \geq 0</m>. The
         upper Stieltjes sum is
         <m>U(f,P,\alpha) = \sum M_i\,\Delta\alpha_i</m> and the lower
         sum is <m>L(f,P,\alpha) = \sum m_i\,\Delta\alpha_i</m>.
+        (For an integrator of bounded variation, the same replacement is
+        made in Riemann-Stieltjes sums
+        <m>\sum f(t_i)\,\Delta\alpha_i</m>, as described in
+        <xref ref="par-mod8-br-24" text="custom">Bauldry &#xa7;2.4: The
+        Riemann-Stieltjes Integral</xref>.)
         The Riemann integral arises as the special case
-        <m>\alpha(x) = x</m>, which gives
-        <m>\Delta\alpha_i = \Delta x_i</m> and recovers the ordinary
+        <m>\alpha(x) = x</m>, which is increasing, gives
+        <m>\Delta\alpha_i = \Delta x_i</m>, and recovers the ordinary
         Darboux upper and lower sums.
       </p>
     </answer>
@@ -157,21 +181,52 @@
     </statement>
     <answer>
       <p>
-        (a) The Stieltjes integrability criterion has the same
-        structure as the Darboux criterion: <m>f</m> is
+        (a) For an increasing integrator <m>\alpha</m>, integrability
+        can be defined as in the Darboux setting: <m>f</m> is integrable
+        with respect to <m>\alpha</m> when the upper Stieltjes integral
+        (the infimum of the upper sums <m>U(f,P,\alpha)</m>) equals the
+        lower Stieltjes integral (the supremum of the lower sums
+        <m>L(f,P,\alpha)</m>). For this definition the Stieltjes
+        integrability criterion has the same
+        structure as the Darboux criterion, and its proof uses the same
+        refinement argument (refining a partition does not increase upper
+        sums or decrease lower sums, because every
+        <m>\Delta\alpha_i \geq 0</m>): a bounded <m>f</m> is
         Riemann-Stieltjes integrable with respect to <m>\alpha</m>
         on <m>[a,b]</m> if and only if for every <m>\varepsilon \gt 0</m>
         there exists a partition <m>P</m> with
         <m>U(f,P,\alpha) - L(f,P,\alpha) \lt \varepsilon</m>. The
         difference is that the weights are <m>\Delta\alpha_i</m>
-        instead of <m>\Delta x_i</m>.
+        instead of <m>\Delta x_i</m>. The hypothesis that
+        <m>\alpha</m> is increasing cannot be dropped. Take
+        <m>\alpha(x) = -x</m> on <m>[0,1]</m> and <m>f</m> the Dirichlet
+        function. Then <m>\Delta\alpha_i = -\Delta x_i</m>, so
+        <m>U(f,P,\alpha) = \sum 1 \cdot (-\Delta x_i) = -1</m> and
+        <m>L(f,P,\alpha) = 0</m> for every partition <m>P</m>, so
+        <m>U(f,P,\alpha) - L(f,P,\alpha) = -1 \lt \varepsilon</m>
+        for every <m>\varepsilon \gt 0</m>.
+        Yet <m>f</m> is not integrable with respect to <m>\alpha</m>:
+        its Riemann-Stieltjes sums
+        <m>\sum f(t_i)\,\Delta\alpha_i</m> equal <m>-1</m> when every
+        <m>t_i</m> is rational and <m>0</m> when every <m>t_i</m> is
+        irrational, however fine the partition. For an integrator of
+        bounded variation, upper and lower sums are not used directly
+        (see <xref ref="par-mod8-br-24" text="custom">Bauldry &#xa7;2.4:
+        The Riemann-Stieltjes Integral</xref>).
         (b) A function <m>\alpha</m> is of bounded variation on
         <m>[a,b]</m> if the total variation
         <m>V(\alpha,[a,b]) = \sup_P \sum_{i=1}^n |\alpha(x_i) -
-        \alpha(x_{i-1})|</m> is finite. If <m>\alpha</m> has unbounded
-        variation, the weights <m>\Delta\alpha_i</m> could alternate
-        wildly in sign or grow without bound, making the upper and
-        lower sums meaningless as approximations to a limit.
+        \alpha(x_{i-1})|</m> is finite. For bounded <m>f</m>, every
+        Riemann-Stieltjes sum satisfies
+        <md>\Bigl|\sum f(t_i)\,\Delta\alpha_i\Bigr| \leq \Bigl(\sup_{[a,b]}|f|\Bigr) \sum |\Delta\alpha_i|,</md>
+        and when <m>\alpha</m> has bounded variation the right side is at
+        most <m>\bigl(\sup|f|\bigr)\,V(\alpha,[a,b])</m>. Estimates of this
+        kind are what control Stieltjes sums in the existence proofs. If
+        <m>\alpha</m> has unbounded variation, the sums
+        <m>\sum |\Delta\alpha_i|</m> are unbounded as <m>P</m> varies
+        (even if <m>\alpha</m> itself is bounded), and this estimate gives
+        no control at all; that is why the existence theorems assume
+        bounded variation.
       </p>
     </answer>
   </exercise>
@@ -209,7 +264,7 @@
           <li>
             Bauldry &#xa7;2.4 contains a version of integration by
             parts for Stieltjes integrals. State it. How does it
-            differ from the version you proved in Practice Problem S2?
+            differ from the version you proved in <xref ref="ex-mod8-ps-s2"/>?
           </li>
           <li>
             Why does the Stieltjes setting make integration by parts
@@ -220,11 +275,19 @@
     </statement>
     <answer>
       <p>
-        (a) The Stieltjes integration by parts formula is:
+        (a) The Stieltjes integration by parts formula states: if <m>f</m> is
+        Riemann-Stieltjes integrable with respect to <m>\alpha</m> on
+        <m>[a,b]</m>, then <m>\alpha</m> is Riemann-Stieltjes integrable
+        with respect to <m>f</m> on <m>[a,b]</m>, and
         <md>
           \int_a^b f\,d\alpha + \int_a^b \alpha\,df
           = f(b)\alpha(b) - f(a)\alpha(a).
         </md>
+        So if either integral exists, so does the other. (For a proof,
+        with the integral defined through Riemann-Stieltjes sums, see
+        Apostol, <pubtitle>Mathematical Analysis</pubtitle>, 2nd
+        edition, Chapter 7. How do its hypotheses compare with the version
+        in Bauldry?)
         This differs from the ordinary version in that both integrals
         are Stieltjes integrals, and the roles of <m>f</m> and
         <m>\alpha</m> are completely symmetric: <m>f</m> acts as
@@ -234,9 +297,16 @@
         against the derivative of <m>v</m>), which breaks the symmetry
         between <m>u</m> and <m>v</m>. In the Stieltjes setting,
         <m>\int f\,d\alpha</m> and <m>\int \alpha\,df</m> appear
-        symmetrically without requiring differentiability &#x2014;
-        just that the Stieltjes integrals exist, which happens when
-        <m>f</m> and <m>\alpha</m> have no common discontinuities.
+        symmetrically without requiring differentiability; the formula
+        requires only that one of the two Stieltjes integrals exists
+        (see (a)). One sufficient condition is that
+        <m>f</m> is continuous and <m>\alpha</m> is of bounded variation
+        on <m>[a,b]</m> (the theorem in <xref ref="ex-mod8-br-6"/>; see
+        also Apostol, Chapter 7). Having no common discontinuities is
+        not enough: <m>\alpha(x) = x</m> is continuous everywhere, so it
+        shares no discontinuity with the Dirichlet function <m>f</m>, but
+        <m>\int_0^1 f\,d\alpha</m> is then the Riemann integral of
+        <m>f</m>, which does not exist (<xref ref="ex-mod8-sg-52-2"/>).
       </p>
     </answer>
   </exercise>
@@ -252,8 +322,8 @@
       The module you have just completed gives you the Darboux framework:
       partitions, upper and lower sums, the integrability criterion, the
       main classes of integrable functions, and the Fundamental Theorem
-      of Calculus. The graduate course adds the Stieltjes measure
-      <m>d\alpha</m>, develops the theory of bounded variation, and
+      of Calculus. The graduate course adds the Stieltjes integral
+      <m>\int f\,d\alpha</m> with integrator <m>\alpha</m>, develops the theory of bounded variation, and
       proves deeper results including the Lebesgue criterion for
       Riemann integrability (a bounded function is Riemann integrable
       if and only if it is continuous except on a set of measure zero).

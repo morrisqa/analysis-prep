@@ -46,13 +46,14 @@
       <li>
         <p>
           State and prove the Fundamental Theorem of Calculus, Part 1:
-          if <m>F(x) = \int_a^x f(t)\,dt</m> and <m>f</m> is continuous,
-          then <m>F'(x) = f(x)</m>.
+          if <m>F(x) = \int_a^x f(t)\,dt</m> and <m>f</m> is continuous
+          on <m>[a,b]</m>, then <m>F'(x) = f(x)</m> for <m>x \in (a,b)</m>.
         </p>
       </li>
       <li>
         <p>
-          State and prove FTC Part 2: if <m>F' = f</m> on <m>[a,b]</m>,
+          State and prove FTC Part 2: if <m>f</m> is continuous on
+          <m>[a,b]</m> and <m>F' = f</m> on <m>[a,b]</m>,
           then <m>\int_a^b f(x)\,dx = F(b) - F(a)</m>.
         </p>
       </li>
@@ -80,8 +81,12 @@
       always exist for bounded functions by the completeness of <m>\R</m>.
       This approach &#x2014; upper sums from the top, lower sums from
       below, squeeze them together &#x2014; is called the Darboux approach.
-      It is equivalent to the Riemann sum definition but technically
-      cleaner, and it makes the integrability criterion transparent.
+      It gives the same integrable functions and the same integrals as
+      the Riemann sum definition (a standard equivalence that this module
+      does not need; for a proof see Bartle and Sherbert,
+      <pubtitle>Introduction to Real Analysis</pubtitle>, 4th edition,
+      Section 7.4), but it is technically cleaner, and it
+      makes the integrability criterion transparent.
     </p>
     <p>
       The Fundamental Theorem of Calculus is where differentiation and
@@ -165,8 +170,10 @@
       coincidental &#x2014; it is the reason continuous functions are
       integrable. The key step in the proof of <q>continuous implies
       integrable</q> is to bound the oscillation <m>M_i - m_i</m> on
-      each subinterval, which requires uniform continuity (pointwise
-      continuity does not suffice). If you felt uncertain about the
+      each subinterval, which requires uniform continuity: continuity
+      at each point separately gives a <m>\delta</m> that may depend
+      on the point, and the proof needs one <m>\delta</m> for all of
+      <m>[a,b]</m>, which the Heine<ndash/>Cantor theorem supplies. If you felt uncertain about the
       distinction between pointwise and uniform continuity in Module 6,
       this module provides the payoff for understanding it.
     </p>
@@ -245,7 +252,7 @@
       </row>
       <row>
         <cell><p>Module Assessment</p></cell>
-        <cell><p>40 min</p></cell>
+        <cell><p>45 min</p></cell>
         <cell><p>Submitted proofs and reflection</p></cell>
       </row>
     </tabular>
