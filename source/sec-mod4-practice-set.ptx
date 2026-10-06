@@ -79,9 +79,12 @@
         (a) <m>N = 11</m> (smallest integer exceeding 10).
         (b) <m>N = 101</m>.
         (c) <m>N = 10^6 + 1</m>.
-        (d) Any integer <m>N \gt 1/\varepsilon</m>; by the Archimedean
-        Property, such <m>N</m> exists, and one standard choice is
-        <m>N = \lfloor 1/\varepsilon \rfloor + 1</m>.
+        (d) Any integer <m>N \gt 1/\varepsilon</m> works; by the
+        Archimedean Property, such <m>N</m> exists. No integer
+        <m>N \leq 1/\varepsilon</m> works, since then
+        <m>1/N \geq \varepsilon</m> fails the condition at <m>n = N</m>.
+        So the smallest is <m>N = \lfloor 1/\varepsilon \rfloor + 1</m>,
+        the least integer exceeding <m>1/\varepsilon</m>.
       </p>
     </answer>
   </exercise>
@@ -222,7 +225,8 @@
         that <m>|a_n - L| \lt 1</m> for <m>n \geq N</m>. The Triangle
         Inequality then gives <m>|a_n| \leq |L| + 1</m> for <m>n \geq N</m>.
         Bound <m>|a_1|, \ldots, |a_{N-1}|</m> by their maximum, and
-        combine.
+        combine. (If <m>N = 1</m>, there are no such terms, and
+        <m>|L| + 1</m> alone bounds the sequence.)
       </p>
     </hint>
   </exercise>
@@ -289,8 +293,8 @@
       <p>
         Without loss of generality <m>m \geq n \geq N</m>. Then
         <md>|a_m - a_n| = \left|\frac{1}{m} - \frac{1}{n}\right|
-        = \frac{n - m}{mn} \cdot (\text{sign})</md>
-        so <m>|a_m - a_n| \leq 1/n \leq 1/N</m>. Choose <m>N \gt 1/\varepsilon</m>.
+        = \frac{1}{n} - \frac{1}{m} = \frac{m - n}{mn} \lt \frac{m}{mn} = \frac{1}{n},</md>
+        so <m>|a_m - a_n| \lt 1/n \leq 1/N</m>. Choose <m>N \gt 1/\varepsilon</m>.
       </p>
     </hint>
   </exercise>
@@ -313,13 +317,21 @@
     </statement>
     <hint>
       <p>
-        Proof by contradiction. If <m>a_n \not\to L</m>, there exists
-        <m>\varepsilon_0 \gt 0</m> and a subsequence <m>(a_{n_k})</m>
-        with <m>|a_{n_k} - L| \geq \varepsilon_0</m> for all <m>k</m>.
+        Proof by contradiction. If <m>a_n \not\to L</m>, the negation
+        of the definition gives <m>\varepsilon_0 \gt 0</m> such that for
+        every <m>N</m> there is <m>n \geq N</m> with
+        <m>|a_n - L| \geq \varepsilon_0</m>. Use this repeatedly to
+        build a subsequence <m>(a_{n_k})</m>
+        with <m>|a_{n_k} - L| \geq \varepsilon_0</m> for all <m>k</m>:
+        apply it with <m>N = 1</m> to get <m>n_1</m>, and, once
+        <m>n_k</m> is chosen, with <m>N = n_k + 1</m> to get
+        <m>n_{k+1} \gt n_k</m>.
         This subsequence is bounded; by Bolzano&#x2013;Weierstrass it
-        has a further convergent sub-subsequence, which by hypothesis
+        has a further convergent sub-subsequence. Its indices are
+        still strictly increasing, so it is also a subsequence of
+        <m>(a_n)</m>, and by hypothesis it
         converges to <m>L</m>. But all its terms are at least
-        <m>\varepsilon_0</m> away from <m>L</m> — contradiction.
+        <m>\varepsilon_0</m> away from <m>L</m>: contradiction.
       </p>
     </hint>
   </exercise>

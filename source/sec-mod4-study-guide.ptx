@@ -145,7 +145,8 @@
         then <m>|a_n| \leq |L| + 1</m> for such <m>n</m>. The initial
         terms <m>a_1, \ldots, a_{N-1}</m> form a finite set, so
         <m>M = \max\{|a_1|, \ldots, |a_{N-1}|, |L| + 1\}</m> bounds
-        the entire sequence.
+        the entire sequence. (If <m>N = 1</m>, there are no initial
+        terms, and <m>M = |L| + 1</m>.)
       </p>
     </answer>
   </exercise>
@@ -243,7 +244,9 @@
       <p>
         Dividing gives <m>\dfrac{5 - 3/n}{2 + 1/n + 7/n^2}</m>.
         Since <m>1/n \to 0</m> and <m>1/n^2 = (1/n)(1/n) \to 0 \cdot 0 = 0</m>
-        (product rule), we have numerator <m>\to 5 - 0 = 5</m>
+        (product rule), the product rule with a constant sequence also
+        gives <m>3/n = 3 \cdot (1/n) \to 0</m> and
+        <m>7/n^2 = 7 \cdot (1/n^2) \to 0</m>. So we have numerator <m>\to 5 - 0 = 5</m>
         (sum rule) and denominator <m>\to 2 + 0 + 0 = 2</m>
         (sum rule, twice). Since the denominator's limit is
         nonzero, the quotient rule gives <m>5/2</m>.
@@ -352,7 +355,9 @@
     </statement>
     <answer>
       <p>
-        (a) <m>S = \{a_n : n \in \N\}</m>, the set of terms. It is
+        (a) For an increasing sequence (the decreasing case is
+        symmetric, using the infimum),
+        <m>S = \{a_n : n \in \N\}</m>, the set of terms. It is
         nonempty (contains <m>a_1</m>) and bounded above by the given
         bound on <m>(a_n)</m>.
         (b) Completeness is used to assert <m>L = \sup S \in \R</m>.
@@ -362,7 +367,10 @@
         (d) Monotonicity (increasingness) is used to pass from
         <m>a_N \gt L - \varepsilon</m> to <m>a_n \gt L - \varepsilon</m>
         for all <m>n \geq N</m>&#x2014;we need to know later terms do
-        not drop back below <m>a_N</m>.
+        not drop back below <m>a_N</m>. Since also <m>a_n \leq L</m>
+        (<m>L</m> is an upper bound of <m>S</m>), this gives
+        <m>L - \varepsilon \lt a_n \leq L</m>, so
+        <m>|a_n - L| \lt \varepsilon</m> for all <m>n \geq N</m>.
       </p>
     </answer>
   </exercise>
@@ -441,7 +449,8 @@
       Section 2.4 reframes convergence without reference to a limit.
       Read Definition 2.17 and Theorem 2.20 carefully. The equivalence
       of <q>convergent</q> and <q>Cauchy</q> in <m>\R</m> is another
-      face of completeness&#x2014;in <m>\Q</m> it fails.
+      face of completeness: in <m>\Q</m> it fails, because a Cauchy
+      sequence of rationals need not converge in <m>\Q</m>.
     </p>
   </paragraphs>
 

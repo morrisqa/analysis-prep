@@ -44,7 +44,9 @@
       <p>
         We could also use the weaker but simpler bound
         <m>1/n^2 \leq 1/n</m>, requiring only <m>n \gt 1/\varepsilon</m>.
-        Either choice works; we pick the cleaner Archimedean-style bound.
+        Either choice works. The proof below uses this simpler bound,
+        which avoids the square root, so it takes <m>N</m> to be a
+        natural number with <m>N \gt 1/\varepsilon</m>.
       </p>
       <p>
         <alert>Proof.</alert>
@@ -97,7 +99,10 @@
         <alert>Set-up.</alert>
         The standard technique for a ratio of polynomials in <m>n</m>
         is to divide numerator and denominator by the highest power of
-        <m>n</m> appearing, which forces every term to converge.
+        <m>n</m> appearing in the denominator. This gives the
+        denominator a nonzero limit (its leading coefficient), as the
+        quotient rule requires, and when the numerator's degree is no
+        larger, it forces every term to converge.
         Here that is <m>n^2</m>.
       </p>
       <p>
@@ -207,20 +212,30 @@
         By Steps 1 and 2, <m>(a_n)</m> is monotone increasing and
         bounded above (by 2). By the Monotone Convergence Theorem,
         <m>(a_n)</m> converges to some limit <m>L \in \R</m>. Because
-        all terms satisfy <m>1 \leq a_n \lt 2</m>, we have
-        <m>L \in [1, 2]</m>.
+        all terms satisfy <m>1 \leq a_n \lt 2</m> (the lower bound holds since
+        <m>a_1 = 1</m> and the sequence is increasing), we have
+        <m>L \in [1, 2]</m>. Indeed, if <m>L \lt 1</m>, then applying
+        the definition of convergence with <m>\varepsilon = 1 - L</m>
+        gives some <m>n</m> with <m>|a_n - L| \lt 1 - L</m>, so
+        <m>a_n \lt L + (1 - L) = 1</m>, a contradiction. Likewise, if
+        <m>L \gt 2</m>, then <m>\varepsilon = L - 2</m> gives some
+        <m>n</m> with <m>a_n \gt L - (L - 2) = 2</m>, a contradiction.
+        (The strict bound <m>a_n \lt 2</m> yields only <m>L \leq 2</m>
+        in the limit, and here <m>L</m> will in fact equal 2.)
       </p>
       <p>
         <alert>Step 4: Identify the limit.</alert>
       </p>
       <p>
-        Letting <m>n \to \infty</m> in the recursion
-        <m>a_{n+1} = \sqrt{2 + a_n}</m> and using the continuity of
-        the square root together with the Algebra of Limits (the
+        Squaring the recursion <m>a_{n+1} = \sqrt{2 + a_n}</m> gives
+        <md>a_{n+1}^2 = 2 + a_n \qquad (n \geq 1).</md>
+        Letting <m>n \to \infty</m> and using the Algebra of Limits (the
         subsequence <m>(a_{n+1})</m> is just <m>(a_n)</m> shifted by
-        one index, so it shares the limit <m>L</m>), we get
-        <md>L = \sqrt{2 + L}.</md>
-        Squaring, <m>L^2 = 2 + L</m>, i.e., <m>L^2 - L - 2 = 0</m>,
+        one index, so it shares the limit <m>L</m>), the left side
+        converges to <m>L \cdot L = L^2</m> by the product rule and the
+        right side converges to <m>2 + L</m> by the sum rule. Since a
+        sequence has only one limit, <m>L^2 = 2 + L</m>, i.e.,
+        <m>L^2 - L - 2 = 0</m>,
         which factors as <m>(L - 2)(L + 1) = 0</m>. So
         <m>L = 2</m> or <m>L = -1</m>. Since <m>L \in [1, 2]</m>,
         we conclude <m>L = 2</m>. <m>\square</m>
@@ -235,12 +250,20 @@
         a monotone function applied to the recursion; (3) <em>apply
         MCT to get a limit, then solve a fixed-point equation for
         its value.</em> Note how the Completeness Axiom enters through
-        MCT: without completeness, Step 3 could fail (the sequence
-        would be Cauchy in <m>\R</m> but might lack a limit in a
-        smaller ordered field). The <em>continuity</em> of the
-        square root used in Step 4 is a fact we will prove formally
-        in Module 6; here we use it informally, as Zorn does in
-        &#xa7;2.3.
+        MCT: in an ordered field without completeness, such as
+        <m>\Q</m>, a bounded monotone sequence need not converge. For
+        example, the decimal truncations
+        <m>1, 1.4, 1.41, 1.414, \ldots</m> of <m>\sqrt{2}</m> are
+        rational, each is at least the one before, and all are less
+        than 2. In <m>\R</m> they converge to <m>\sqrt{2}</m> (the
+        <m>k</m>th truncation is within <m>10^{1-k}</m> of
+        <m>\sqrt{2}</m>). Because a sequence has only one limit and
+        <m>\sqrt{2}</m> is irrational, they have no limit in <m>\Q</m>.
+        Step 4 squares the recursion so that only the product and sum
+        rules are needed. Letting <m>n \to \infty</m> directly in
+        <m>a_{n+1} = \sqrt{2 + a_n}</m> would require the
+        <em>continuity</em> of the square root, which you will study
+        in <xref ref="ch-mod6" text="custom">Module 6</xref>.
       </p>
     </solution>
   </exercise>

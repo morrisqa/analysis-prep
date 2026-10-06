@@ -184,7 +184,10 @@
       first, that is ordinary. The discomfort comes from the quantifier
       alternation: <m>\varepsilon</m> comes first, <m>N</m> is chosen in
       response. That order is the whole game. Reversing it produces
-      statements that look similar but are mathematically empty.
+      a statement that looks similar but says something much
+      stronger: a single <m>N</m> that works for every
+      <m>\varepsilon</m> forces <m>a_n = L</m> for all
+      <m>n \geq N</m>, so only eventually constant sequences satisfy it.
     </p>
     <p>
       The theorems in this module have two flavors. The Algebra of Limits
