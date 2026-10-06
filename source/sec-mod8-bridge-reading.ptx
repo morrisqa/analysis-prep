@@ -67,8 +67,8 @@
             merely state it? What level of rigor does he use?
           </li>
           <li>
-            Compare the presentation of FTC in &#xa7;1.4 to Worked
-            Examples 3 and 4 in this module. What is made explicit in
+            Compare the presentation of FTC in &#xa7;1.4 to
+            <xref ref="ex-mod8-we-3"/> and <xref ref="ex-mod8-we-4"/>. What is made explicit in
             the module that is implicit in Bauldry's &#xa7;1.4?
           </li>
         </ol>
@@ -237,7 +237,7 @@
       <p>
         Find the theorem in Bauldry &#xa7;2.4 corresponding to the
         statement <q>continuous functions are Riemann integrable</q>
-        (Worked Example 2 of this module). What additional hypothesis
+        (<xref ref="ex-mod8-we-2"/>). What additional hypothesis
         does the Stieltjes setting require on <m>\alpha</m>?
       </p>
     </statement>

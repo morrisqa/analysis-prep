@@ -165,7 +165,7 @@
       particular attention to how Bauldry uses the MVT in the results
       that follow it, since those are the results MAT 5610 will develop.
       If proof-based analysis is newer to you, work carefully through
-      Worked Examples 1 and 2 (derivative from the definition,
+      <xref ref="ex-mod7-we-1"/> and <xref ref="ex-mod7-we-2"/> (derivative from the definition,
       differentiability implies continuity) before attempting the MVT,
       and spend extra time on the proof of Rolle's Theorem in the Study
       Guide before tackling the Practice Set. The chain of reasoning
@@ -191,7 +191,7 @@
         <cell><p>Goals, self-assessment, context</p></cell>
       </row>
       <row>
-        <cell><p>Video 1: The Derivative&#x2014;Definition and Rules</p></cell>
+        <cell><p>Video 1: The Derivative: Definition and Rules</p></cell>
         <cell><p>9 min</p></cell>
         <cell><p>Core instruction via lightboard</p></cell>
       </row>
@@ -221,7 +221,7 @@
         <cell><p>Bauldry &#xa7;1.3 and &#xa7;2.3 with guided questions</p></cell>
       </row>
       <row>
-        <cell><p>Module Assessment</p></cell>
+        <cell><p>Assessment</p></cell>
         <cell><p>40 min</p></cell>
         <cell><p>Submitted proofs and reflection</p></cell>
       </row>

@@ -449,7 +449,7 @@
       </proof>
     </theorem>
     <p>
-      For <m>n = 0</m> the theorem gives the conclusion of
+      For <m>n = 0</m>, Taylor's Theorem gives the conclusion of
       the MVT (under slightly stronger hypotheses):
       <m>f(x) = f(a) + f'(c)(x - a)</m>.
     </p>
@@ -470,7 +470,6 @@
       for that is a version of the MVT for two functions.
     </p>
     <theorem xml:id="thm-mod7-cauchy-mvt">
-      <title>Cauchy Mean Value Theorem</title>
       <statement>
         <p>
           If <m>f</m> and <m>g</m> are
@@ -587,7 +586,8 @@
       </proof>
     </theorem>
     <p>
-      This module needs only this form of the rule.
+      <xref ref="thm-mod7-lhopital"/> is the only form of the rule this
+      module needs.
       Notice the direction of the argument: hypothesis (iv) asks you to
       know that <m>f'/g'</m> has a limit <em>before</em> the rule says
       anything about <m>f/g</m>. If <m>f'/g'</m> has no limit, the rule

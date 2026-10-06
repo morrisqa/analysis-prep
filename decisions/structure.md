@@ -30,3 +30,12 @@ Each setting was verified with a scratch build of PreTeXt 2.55.0 before it was a
 | Module 1's worked examples (headings plus "Try It" exercises, and reflection questions) are not converted here. | `sec-mod1-worked-examples.ptx` | Different structure; handled with the Module 1 alignment (#8). | |
 | The results added during the math fixes are numbered: Theorems 4.1–4.2 (uniqueness of limits; limits preserve non-strict inequalities), 5.1–5.2 (Root Test, two forms), Lemma 5.3 (Bernoulli), Theorem 6.1 (sequential characterization of continuity), Definition 7.1 (Taylor polynomial), Theorems 7.2–7.4 (Taylor, Cauchy MVT, L'Hôpital). Each sits inside its original titled block, whose id is unchanged; the new elements have `thm-`/`def-` ids (the lemma uses `thm-`, since the scheme has no `lem-`). Sentences citing them use "Theorem N.M". | Modules 4 to 7 study guides | Results should look like results and be citable by number. | Leave them as emphasized paragraphs. |
 | The Module 2 supremum-definition paragraph and the Module 1 negation-rules paragraph stay prose. | Modules 1 and 2 | Neither is a single result; a formal block would need rewording. | `<definition>`. |
+
+## After review (PR #36 follow-ups)
+
+| Decision | Where | Why | Alternative |
+|---|---|---|---|
+| Hand-typed references to worked examples ("Example 3", "Worked Example 2") in Modules 2 to 9 replaced by 58 xrefs. | Section intros, pacing notes, practice sets, bridge readings, assessments | With one shared counter, the hand-typed numbers pointed at the wrong block. | Leave until #5 (would have left misleading text on `main`). |
+| Numbered items of the outside books name their book ("Zorn's Theorem 2.5", "Bauldry's Definition 1.18"); 26 changed. | Modules 2 to 9 | They read as the book's own Theorem 4.1-style numbers. The numbers themselves are unverified (see each module's log). | |
+| Theorem titles that exactly repeat their block's title are removed (Theorems 6.1, 7.3). | Modules 6, 7 | "Sequential Characterization of Continuity" twice in a row. | Rename the blocks. |
+| The road-map row "Module Assessment" is "Assessment" (matches the section title). | All nine orientations | Consistency. | |

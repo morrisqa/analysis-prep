@@ -15,8 +15,8 @@
       <m>\varepsilon</m>-<m>\delta</m> definition is a direct analogue
       of the <m>\varepsilon</m>-<m>N</m> definition from Module 4.
       Every theorem about limits of functions has a counterpart for
-      sequences, and the sequential characterization (Theorem 3.3 or
-      its analogue in Zorn) is the bridge that lets you use Module 4
+      sequences, and the sequential characterization (Zorn's Theorem 3.3 or
+      its analogue) is the bridge that lets you use Module 4
       tools here.
     </p>
   <!-- ============================================================
@@ -225,10 +225,11 @@
       <m>x \in D</m> with <m>|x - a| \lt \delta</m>.
     </p>
     <theorem xml:id="thm-mod6-seq-cont">
-      <title>Sequential Characterization of Continuity</title>
       <statement>
         <p>
-          <m>f</m> is continuous at <m>a</m> if and only if
+          Let <m>f</m> be defined on a set <m>D</m> and let
+          <m>a \in D</m>. Then <m>f</m> is continuous at <m>a</m> if and
+          only if
           <m>f(x_n) \to f(a)</m> for every sequence <m>(x_n)</m> in
           <m>D</m> with <m>x_n \to a</m>.
         </p>
@@ -268,7 +269,7 @@
       </proof>
     </theorem>
     <p>
-      Compare this with the version for limits. In both, the sequences
+      Compare <xref ref="thm-mod6-seq-cont"/> with the version for limits. In both, the sequences
       lie in the domain of <m>f</m>. There are two differences. First,
       the sequences here may take the value <m>a</m> (there is no
       condition <m>x_n \neq a</m>). Second, <m>a</m> must lie in

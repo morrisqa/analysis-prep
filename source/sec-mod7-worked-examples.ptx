@@ -4,11 +4,11 @@
     <p>
       Read each example slowly. The goal is not just to see what the
       answer is, but to internalize the proof <em>template</em>.
-      Example 1 shows how to compute a derivative directly from the
-      limit definition. Example 2 proves differentiability implies
+      <xref ref="ex-mod7-we-1"/> shows how to compute a derivative directly from the
+      limit definition. <xref ref="ex-mod7-we-2"/> proves differentiability implies
       continuity&#x2014;a result that looks obvious but requires a
-      specific algebraic trick. Example 3 is a full proof of Rolle's
-      Theorem, the key lemma for the MVT. Example 4 demonstrates the
+      specific algebraic trick. <xref ref="ex-mod7-we-3"/> is a full proof of Rolle's
+      Theorem, the key lemma for the MVT. <xref ref="ex-mod7-we-4"/> demonstrates the
       MVT used to produce an inequality, the most common application
       pattern in MAT 5610.
     </p>

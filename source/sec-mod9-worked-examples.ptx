@@ -3,10 +3,10 @@
   <p>Estimated time: 45 minutes.</p>
 
     <p>
-      Read each example slowly. Example 1 dissects the canonical non-uniform
-      example <m>f_n(x) = x^n</m>. Example 2 proves the uniform-limit
-      continuity theorem using the <m>3\varepsilon</m> trick. Example 3
-      applies the Weierstrass <m>M</m>-Test. Example 4 uses term-by-term
+      Read each example slowly. <xref ref="ex-mod9-we-1"/> dissects the canonical non-uniform
+      example <m>f_n(x) = x^n</m>. <xref ref="ex-mod9-we-2"/> proves the uniform-limit
+      continuity theorem using the <m>3\varepsilon</m> trick. <xref ref="ex-mod9-we-3"/>
+      applies the Weierstrass <m>M</m>-Test. <xref ref="ex-mod9-we-4"/> uses term-by-term
       integration to derive a classical series identity.
     </p>
 
@@ -66,7 +66,7 @@
       <p>
         <alert>What to notice.</alert>
         The failure of uniform convergence here has a visible consequence:
-        the pointwise limit is discontinuous. The theorem in Example 2 says
+        the pointwise limit is discontinuous. The theorem in <xref ref="ex-mod9-we-2"/> says
         this cannot happen under uniform convergence of continuous functions.
         The non-uniform behavior of <m>x^n</m> on <m>[0,1]</m> is the
         prototypical counterexample for this entire module.
@@ -214,7 +214,7 @@
         <m>[-r, r]</m> by the Weierstrass <m>M</m>-Test (with
         <m>M_n = r^{2n}</m> and <m>\sum r^{2n} = 1/(1-r^2) \lt \infty</m>).
         Each partial-sum function is continuous, and the uniform limit of
-        continuous functions is continuous (Example 2). By the term-by-term
+        continuous functions is continuous (<xref ref="ex-mod9-we-2"/>). By the term-by-term
         integration theorem, for <m>x \in [0,r]</m>,
         <md>
           \int_0^x \frac{dt}{1+t^2} = \int_0^x

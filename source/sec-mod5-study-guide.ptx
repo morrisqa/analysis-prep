@@ -29,7 +29,7 @@
   <paragraphs xml:id="par-mod5-sg-25-intro">
     <title>Section 2.5: Series 101 — Basic Ideas (Zorn pp. 119&#x2013;134)</title>
     <p>
-      Read Definition 2.22 (series convergence) very carefully. This
+      Read Zorn's Definition 2.22 (series convergence) very carefully. This
       is the definition on which all of Module 5 rests. Notice that it
       is not a new kind of limit&#x2014;it is the old Module 4 limit,
       applied to the partial-sum sequence.
@@ -413,8 +413,7 @@
         <p>
           Suppose <m>a_k \geq 0</m> for all <m>k</m> and
           <m>\sqrt[k]{a_k} \to \rho</m>. Then <m>\sum a_k</m> converges if
-          <m>\rho \lt 1</m> and diverges if <m>\rho \gt 1</m>. If
-          <m>\rho = 1</m>, the test is inconclusive.
+          <m>\rho \lt 1</m> and diverges if <m>\rho \gt 1</m>.
         </p>
       </statement>
       <proof>
@@ -439,7 +438,8 @@
       </proof>
     </theorem>
     <p>
-      To see that <m>\rho = 1</m> decides nothing, compare
+      If <m>\rho = 1</m>, the test is inconclusive. To see this,
+      compare
       <m>\sum 1/k</m>, which diverges
       (<xref ref="ex-mod5-sg-25-4"/>), with <m>\sum 1/k^2</m>, which
       converges (the <m>p</m>-series theorem with <m>p = 2</m>; see
@@ -451,13 +451,14 @@
     <p>
       The limit <m>k^{1/k} \to 1</m> does not follow from the Algebra
       of Limits alone, because the base and the exponent both change
-      with <m>k</m>. We prove it with <term>Bernoulli's inequality</term>.
+      with <m>k</m>. We prove it with <term>Bernoulli's inequality</term>
+      (<xref ref="thm-mod5-bernoulli"/>).
     </p>
     <lemma xml:id="thm-mod5-bernoulli">
       <title>Bernoulli's Inequality</title>
       <statement>
         <p>
-          For every <m>h \geq 0</m> and every <m>k \geq 1</m>,
+          For every <m>h \geq 0</m> and every integer <m>k \geq 1</m>,
           <m>(1 + h)^k \geq 1 + kh</m>.
         </p>
       </statement>

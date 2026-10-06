@@ -7,7 +7,7 @@
       and the structure of the argument as much as to the algebra.
       The goal is not just to see what the answer is, but to internalize
       the proof <em>strategy</em>&#x2014;particularly the template in
-      Example 3, which you will reproduce in slightly varied form on
+      <xref ref="ex-mod2-we-3"/>, which you will reproduce in slightly varied form on
       the assessment.
     </p>
 
@@ -26,7 +26,7 @@
     <solution>
       <p>
         <alert>Method.</alert>
-        We apply Theorem 1.23(c): <m>|u| \lt k \iff -k \lt u \lt k</m>.
+        We apply Zorn's Theorem 1.23(c): <m>|u| \lt k \iff -k \lt u \lt k</m>.
         Here <m>u = 2x - 3</m> and <m>k = 5</m>.
       </p>
       <p>
@@ -112,7 +112,7 @@
         Adding these inequalities gives
         <md>-(|x| + |y|) \leq x + y \leq |x| + |y|.</md>
         This says <m>|x + y| \leq |x| + |y|</m> by the non-strict form
-        of Theorem 1.23(c) (see <xref ref="ex-mod2-sg-17-2"/>), with
+        of Zorn's Theorem 1.23(c) (see <xref ref="ex-mod2-sg-17-2"/>), with
         <m>u = x + y</m> and <m>k = |x| + |y|</m>. <m>\square</m>
       </p>
       <p>
@@ -120,7 +120,7 @@
         The proof has three moves: (1) establish the lemma by cases,
         (2) apply the lemma to each variable separately, (3) add the
         inequalities and convert back using the non-strict form of
-        Theorem 1.23(c). Each step
+        Zorn's Theorem 1.23(c). Each step
         is short; the proof works because we set up the right lemma first.
       </p>
       <p>

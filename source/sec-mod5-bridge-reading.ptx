@@ -78,7 +78,7 @@
     <title>Example 1.11: Special Series</title>
     <statement>
       <p>
-        Read Example 1.11 (<q>Special Series of Elementary Calculus</q>),
+        Read Bauldry's Example 1.11 (<q>Special Series of Elementary Calculus</q>),
         which catalogs geometric, harmonic, <m>p</m>-series, and
         telescoping series as a reference set.
         <ol marker="(a)">
@@ -183,7 +183,7 @@
             apply to decide whether it converges?
           </li>
           <li>
-            The <em>radius of convergence</em> (Definition 1.18) is
+            The <em>radius of convergence</em> (Bauldry's Definition 1.18) is
             the key summary statistic for a power series. State the
             three possibilities: <m>R = 0</m> (converges only at
             <m>x = c</m>), <m>R = \infty</m> (converges for all

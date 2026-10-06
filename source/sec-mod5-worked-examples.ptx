@@ -5,10 +5,10 @@
     <p>
       Read each example slowly. The goal is not just to see what the
       answer is, but to internalize the proof <em>template</em>.
-      Example 1 is the archetype of a direct partial-sums argument
-      (telescoping); Example 2 shows the Limit Comparison Test in
-      action; Example 3 demonstrates the Ratio Test on a factorial
-      series; Example 4 treats conditional convergence via the
+      <xref ref="ex-mod5-we-1"/> is the archetype of a direct partial-sums argument
+      (telescoping); <xref ref="ex-mod5-we-2"/> shows the Limit Comparison Test in
+      action; <xref ref="ex-mod5-we-3"/> demonstrates the Ratio Test on a factorial
+      series; <xref ref="ex-mod5-we-4"/> treats conditional convergence via the
       Alternating Series Test.
     </p>
 

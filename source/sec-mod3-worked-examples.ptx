@@ -12,7 +12,7 @@
       The five examples cover the two main proof techniques of this
       module: <em>element-chasing</em> (for set equalities) and
       <em>definition-unpacking</em> (for injectivity, surjectivity,
-      and countability). Examples 4 and 5 show that the same
+      and countability). <xref ref="ex-mod3-we-4"/> and <xref ref="ex-mod3-we-5"/> show that the same
       definition-unpacking approach applies to infinite sets, where
       the conclusion is far less obvious.
     </p>

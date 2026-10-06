@@ -194,7 +194,7 @@
       Heine&#x2013;Cantor theorem sketch in &#xa7;3.4 and on the
       uniform continuity examples in the worked examples and practice
       set. If proof-based function limits are new to you, work slowly
-      through Worked Example 1: read the scratch work, reproduce the
+      through <xref ref="ex-mod6-we-1"/>: read the scratch work, reproduce the
       <m>\delta</m>-finding algebra on your own paper, and only then read
       the formal proof. The most common mistake with <m>\varepsilon</m>-<m>\delta</m>
       proofs is writing the formal proof before doing the scratch work;
@@ -255,7 +255,7 @@
         <cell><p>Bauldry &#xa7;1.2 and &#xa7;2.2 with guided questions</p></cell>
       </row>
       <row>
-        <cell><p>Module Assessment</p></cell>
+        <cell><p>Assessment</p></cell>
         <cell><p>40 min</p></cell>
         <cell><p>Submitted proofs and reflection</p></cell>
       </row>

@@ -217,8 +217,8 @@
       not converge uniformly, and writing them cleanly requires internalizing
       the <m>3\varepsilon</m> argument structure and the sup-norm criterion.
       If this is your first encounter with uniform
-      convergence, slow down at Worked Example 1 (the <m>x^n</m> analysis)
-      and Worked Example 2 (the continuity proof): read each one twice, then
+      convergence, slow down at <xref ref="ex-mod9-we-1"/> (the <m>x^n</m> analysis)
+      and <xref ref="ex-mod9-we-2"/> (the continuity proof): read each one twice, then
       close the document and try to reproduce the argument on paper before
       moving to the practice set.
     </p>
@@ -271,7 +271,7 @@
         <cell><p>Bauldry &#xa7;2.6 with guided questions</p></cell>
       </row>
       <row>
-        <cell><p>Module Assessment</p></cell>
+        <cell><p>Assessment</p></cell>
         <cell><p>40 min</p></cell>
         <cell><p>Submitted proofs and reflection</p></cell>
       </row>

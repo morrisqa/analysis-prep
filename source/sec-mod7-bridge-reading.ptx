@@ -65,8 +65,8 @@
             proof?
           </li>
           <li>
-            Compare the treatment in &#xa7;1.3 to Worked Example 2
-            in this module. What is present in the worked example
+            Compare the treatment in &#xa7;1.3 to <xref ref="ex-mod7-we-2"/>.
+            What is present in the worked example
             that is absent in &#xa7;1.3?
           </li>
         </ol>
@@ -108,7 +108,7 @@
         Bauldry &#xa7;2.3 opens with a theorem. What is it, and how
         does it compare to Rolle's Theorem as stated in this module?
         Is there any hypothesis in Bauldry's version that differs from
-        what you proved in Worked Example 3?
+        what you proved in <xref ref="ex-mod7-we-3"/>?
       </p>
     </statement>
   </exercise>

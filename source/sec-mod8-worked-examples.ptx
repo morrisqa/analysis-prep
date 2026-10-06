@@ -3,17 +3,17 @@
   <p>Estimated time: 40 minutes.</p>
     <p>
       Read each example slowly. The goal is to internalize the proof
-      template, not just to see the answer. Example 1 is the archetype
-      of a direct Darboux argument; Example 2 shows the proof that
-      continuous implies integrable; Example 3 proves FTC Part 1 in full;
-      Example 4 shows FTC Part 2 in a computation.
+      template, not just to see the answer. <xref ref="ex-mod8-we-1"/> is the archetype
+      of a direct Darboux argument; <xref ref="ex-mod8-we-2"/> shows the proof that
+      continuous implies integrable; <xref ref="ex-mod8-we-3"/> proves FTC Part 1 in full;
+      <xref ref="ex-mod8-we-4"/> shows FTC Part 2 in a computation.
     </p>
   <!-- ============================================================
        EXAMPLE 1: f(x)=x IS RIEMANN INTEGRABLE
   ============================================================ -->
 
   <example xml:id="ex-mod8-we-1">
-    <title><m>f(x) = x</m> is Riemann Integrable on <m>[0,1]</m> and <m>\int = 1/2</m></title>
+    <title><m>f(x) = x</m> Is Riemann Integrable on <m>[0,1]</m> and <m>\int = 1/2</m></title>
     <statement>
       <p>
         Prove from the Darboux definition that <m>f(x) = x</m> is
@@ -84,7 +84,7 @@
         definition: the function is increasing, so <m>M_k</m> and
         <m>m_k</m> are just the values at the right and left endpoints.
         The difference <m>U - L = 1/n</m> has a beautifully transparent
-        form. In Worked Example 2, the same strategy &#x2014; bound
+        form. In <xref ref="ex-mod8-we-2"/>, the same strategy &#x2014; bound
         <m>M_i - m_i</m> on each subinterval &#x2014; is applied to
         continuous functions, where uniform continuity does the
         bounding.
@@ -97,7 +97,7 @@
   ============================================================ -->
 
   <example xml:id="ex-mod8-we-2">
-    <title>Continuous Functions are Riemann Integrable</title>
+    <title>Continuous Functions Are Riemann Integrable</title>
     <statement>
       <p>
         Prove that if <m>f</m> is continuous on <m>[a,b]</m>, then
@@ -295,7 +295,7 @@
       choose <m>r, s \in J</m> with <m>r \leq p \leq s</m> and
       <m>r \lt x \lt s</m>. Then
       <m>G(x) = \int_r^x f(t)\,dt - \int_r^p f(t)\,dt</m>, and the
-      second term does not depend on <m>x</m>, so Worked Example 3 on
+      second term does not depend on <m>x</m>, so <xref ref="ex-mod8-we-3"/> on
       <m>[r,s]</m> gives <m>G'(x) = f(x)</m>. This is the form of
       FTC Part 1 to use with the chain rule when the upper limit can
       fall below the base point.

@@ -38,7 +38,7 @@
     </p>
     <p>
       The following set equality is one of De Morgan's laws for set
-      difference. It is structurally similar to Worked Example 1,
+      difference. It is structurally similar to <xref ref="ex-mod3-we-1"/>,
       but involves a different operation and requires a different
       case analysis.
     </p>
@@ -152,7 +152,7 @@
             into a known countable set.
           </li>
           <li>
-            Use Proposition 1.17 to conclude.
+            Use Zorn's Proposition 1.17 to conclude.
           </li>
         </ol>
       </p>
@@ -202,7 +202,7 @@
     <title>Element-Chasing as a Proof Template</title>
     <statement>
       <p>
-        In Part 1 and Worked Example 1, you used the element-chasing
+        In Part 1 and <xref ref="ex-mod3-we-1"/>, you used the element-chasing
         method. Describe the template in your own words: what is the
         general structure of an element-chasing proof of a set equality?
         Then reflect: was there a step in your Part 1 proof where you

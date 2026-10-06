@@ -3,11 +3,11 @@
   <p>Estimated time: 40 minutes.</p>
     <p>
       Read each example slowly. The goal is not just to see what the
-      answer is, but to internalize the proof <em>template</em>. Example 1
+      answer is, but to internalize the proof <em>template</em>. <xref ref="ex-mod6-we-1"/>
       is the archetype of an <m>\varepsilon</m>-<m>\delta</m> limit
-      proof; Example 2 shows how to prove continuity at every point of
-      <m>\R</m> using the same method; Example 3 demonstrates the
-      sequential criterion for proving non-uniform continuity; Example 4
+      proof; <xref ref="ex-mod6-we-2"/> shows how to prove continuity at every point of
+      <m>\R</m> using the same method; <xref ref="ex-mod6-we-3"/> demonstrates the
+      sequential criterion for proving non-uniform continuity; <xref ref="ex-mod6-we-4"/>
       shows the Lipschitz method for proving uniform continuity on a
       bounded interval.
     </p>
@@ -62,7 +62,7 @@
         structure is the standard template for all
         <m>\varepsilon</m>-<m>\delta</m> proofs. Notice that in this
         linear example the expression <m>|f(x) - L|</m> simplified to
-        a constant times <m>|x - a|</m> immediately. In Example 2, the
+        a constant times <m>|x - a|</m> immediately. In <xref ref="ex-mod6-we-2"/>, the
         function is quadratic and we need an extra step to bound the
         remaining factor.
       </p>
@@ -150,7 +150,7 @@
   ============================================================ -->
 
   <example xml:id="ex-mod6-we-3">
-    <title>Proving <m>f(x) = 1/x</m> is Not Uniformly Continuous on <m>(0,1)</m></title>
+    <title>Proving <m>f(x) = 1/x</m> Is Not Uniformly Continuous on <m>(0,1)</m></title>
     <statement>
       <p>
         Prove that <m>f(x) = 1/x</m> is not uniformly continuous on

@@ -198,8 +198,8 @@
       Bauldry &#xa7;1.5&#x2013;1.6 with full attention&#x2014;Bauldry's
       informal Ch. 1 presentation is preparation for his rigorous
       Ch. 2.5 treatment, which is where MAT 5610 will begin. If
-      proof-based series work is newer to you, slow down at Worked
-      Example 1 (telescoping from partial sums): read it twice,
+      proof-based series work is newer to you, slow down at
+      <xref ref="ex-mod5-we-1"/> (telescoping from partial sums): read it twice,
       reproduce the partial-sum computation on paper, and then work
       Practice Set problems F1&#x2013;F4 before attempting the Ratio
       and Root Tests. The single most common mistake in this module
@@ -257,7 +257,7 @@
         <cell><p>Bauldry &#xa7;1.5&#x2013;1.6 and a power-series preview</p></cell>
       </row>
       <row>
-        <cell><p>Module Assessment</p></cell>
+        <cell><p>Assessment</p></cell>
         <cell><p>40 min</p></cell>
         <cell><p>Submitted proofs and reflection</p></cell>
       </row>
