@@ -72,13 +72,16 @@
             State the uniqueness theorem in your own words.
           </li>
           <li>
-            Bauldry's proof is likely a short argument by contradiction
-            using the <m>\varepsilon/2</m> trick. What is the
-            contradiction, and how is the Triangle Inequality used?
+            Bauldry's proof is likely a short argument using the
+            <m>\varepsilon/2</m> trick. Which <m>\varepsilon</m> does
+            he choose? Is his argument direct or by contradiction, and
+            how does it compare with the proof in the
+            <xref ref="par-mod4-sg-two-facts" text="custom">study guide</xref>?
           </li>
           <li>
-            Did the proof depend on completeness, or only on the
-            definition of convergence and the Triangle Inequality?
+            Does Bauldry's proof use any property of <m>\R</m> beyond
+            the ordered-field and absolute-value facts that the study
+            guide's proof uses?
           </li>
         </ol>
       </p>
@@ -123,7 +126,7 @@
           </li>
           <li>
             Is Bauldry's proof structurally identical to the one in
-            the Module 4 study guide (ex-mod4-sg-23-2), or does he
+            the Module 4 study guide (<xref ref="ex-mod4-sg-23-2"/>), or does he
             organize the argument differently? Note one step you had
             to unpack or fill in when reading it.
           </li>
