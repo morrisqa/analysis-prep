@@ -205,26 +205,32 @@
     </statement>
     <answer>
       <p>
-        The key tool is the Heine-Cantor theorem (Module 6): a
+        The key tool is the Heine<ndash/>Cantor theorem
+        (<xref ref="ex-mod6-sg-34-3"/> states it; see Zorn or MAT 5610
+        for a proof): a
         continuous function on a closed bounded interval is uniformly
         continuous. Given <m>\varepsilon \gt 0</m>, apply uniform
         continuity to get <m>\delta \gt 0</m> such that
         <m>|x - y| \lt \delta \Rightarrow |f(x) - f(y)| \lt
-        \varepsilon/(b-a)</m>. Choose any partition <m>P</m> with
+        \varepsilon/(2(b-a))</m>. Choose any partition <m>P</m> with
         mesh <m>\|P\| \lt \delta</m>. On each subinterval
         <m>[x_{i-1}, x_i]</m>, any two points are within <m>\delta</m>
-        of each other, so <m>M_i - m_i \leq \varepsilon/(b-a)</m>
-        by uniform continuity. Then
+        of each other, so <m>M_i - m_i \leq \varepsilon/(2(b-a))</m>
+        by uniform continuity. (Taking a supremum can turn
+        <m>\lt</m> into <m>\leq</m>; the factor <m>2</m> leaves room
+        for that.) Then
         <md>
           U(f,P) - L(f,P)
           = \sum_{i=1}^{n} (M_i - m_i)\Delta x_i
-          \leq \frac{\varepsilon}{b-a} \sum_{i=1}^{n} \Delta x_i
-          = \varepsilon.
+          \leq \frac{\varepsilon}{2(b-a)} \sum_{i=1}^{n} \Delta x_i
+          = \frac{\varepsilon}{2} \lt \varepsilon.
         </md>
         By the integrability criterion, <m>f</m> is integrable. Uniform
-        continuity is used to control <m>M_i - m_i</m>; pointwise
-        continuity would not suffice because the same <m>\delta</m>
-        must work everywhere on <m>[a,b]</m> simultaneously.
+        continuity is used to control <m>M_i - m_i</m>. Continuity at
+        each point separately gives a <m>\delta</m> that may depend on
+        the point, and this argument needs one <m>\delta</m> that works
+        everywhere on <m>[a,b]</m> simultaneously; on a closed bounded
+        interval, the Heine<ndash/>Cantor theorem supplies it.
       </p>
     </answer>
   </exercise>
@@ -243,8 +249,8 @@
             <m>(b-a)/n</m>, show that
             <md>
               U(f,P_n) - L(f,P_n)
-              = \frac{1}{n}\sum_{k=1}^{n}[f(x_k) - f(x_{k-1})]
-              = \frac{f(b) - f(a)}{n},
+              = \frac{b-a}{n}\sum_{k=1}^{n}[f(x_k) - f(x_{k-1})]
+              = \frac{(b-a)(f(b) - f(a))}{n},
             </md>
             using the telescoping nature of the sum and the fact that
             <m>M_k = f(x_k)</m> and <m>m_k = f(x_{k-1})</m> for an
@@ -252,7 +258,7 @@
           </li>
           <li>
             Apply the integrability criterion: given <m>\varepsilon \gt 0</m>,
-            choose <m>n \gt (f(b) - f(a))/\varepsilon</m> to conclude.
+            choose <m>n \gt (b-a)(f(b) - f(a))/\varepsilon</m> to conclude.
           </li>
         </ol>
       </p>
@@ -293,6 +299,69 @@
     </p>
   </paragraphs>
 
+  <paragraphs xml:id="par-mod8-sg-54-props">
+    <title>Properties of the Integral Used in the FTC Proofs</title>
+    <p>
+      The proofs in this section, and in the rest of the module, use
+      the following properties of the integral. Let <m>f</m> and <m>g</m> be
+      Riemann integrable on <m>[a,b]</m>.
+      <ul>
+        <li>
+          <p>
+            <em>Linearity.</em> For constants <m>c</m> and <m>d</m>, the
+            function <m>cf + dg</m> is integrable on <m>[a,b]</m> and
+            <m>\int_a^b (cf + dg) = c\int_a^b f + d\int_a^b g</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <em>Monotonicity.</em> If <m>f(x) \leq g(x)</m> for all
+            <m>x \in [a,b]</m>, then <m>\int_a^b f \leq \int_a^b g</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <em>Additivity over intervals.</em> If <m>a \lt q \lt b</m>,
+            then <m>f</m> is integrable on <m>[a,q]</m> and on
+            <m>[q,b]</m>, and
+            <m>\int_a^b f = \int_a^q f + \int_q^b f</m>.
+          </p>
+        </li>
+      </ul>
+      Read Zorn's statements and proofs of these properties
+      (&#xa7;5.1&#x2013;5.4). A second source is Rudin,
+      <pubtitle>Principles of Mathematical Analysis</pubtitle>,
+      3rd edition, Theorem 6.12.
+    </p>
+    <p>
+      <em>Constant functions.</em> If <m>f(x) = c</m> for all
+      <m>x \in [a,b]</m>, then for every partition <m>P</m> of
+      <m>[a,b]</m> we have <m>M_i = m_i = c</m> on every subinterval, so
+      <m>U(f,P) = L(f,P) = \sum c\,\Delta x_i = c(b-a)</m>. Hence the
+      upper and lower integrals both equal <m>c(b-a)</m>, so <m>f</m> is
+      integrable and
+      <md>\int_a^b c\,dx = c(b-a).</md>
+    </p>
+    <p>
+      <em>Orientation convention.</em> So far <m>\int_a^b f</m> has meant
+      <m>a \lt b</m>. The FTC proofs also need integrals such as
+      <m>\int_x^{x+h} f</m> with <m>h \lt 0</m>, and
+      <m>\int_a^a f</m>. Define <m>\int_a^a f = 0</m> and, for
+      <m>a \lt b</m>,
+      <md>\int_b^a f = -\int_a^b f.</md>
+      With this convention,
+      <m>\int_p^q f + \int_q^r f = \int_p^r f</m> for any points
+      <m>p, q, r</m>, in any order, of an interval on which <m>f</m> is
+      integrable. Each of these integrals is defined because, by
+      additivity, <m>f</m> is integrable on every closed subinterval of
+      that interval. For example, if <m>q \lt p \lt r</m>, additivity
+      gives <m>\int_q^r f = \int_q^p f + \int_p^r f</m>, so
+      <m>\int_p^q f + \int_q^r f = -\int_q^p f + \int_q^p f + \int_p^r f
+      = \int_p^r f</m>. The other orders, and the cases in which two of
+      the points coincide, are checked the same way.
+    </p>
+  </paragraphs>
+
   <exercise xml:id="ex-mod8-sg-54-1">
     <title>FTC Part 1 &#x2014; Hypotheses and Statement</title>
     <statement>
@@ -315,7 +384,11 @@
           F'(x) = \lim_{h \to 0} \frac{F(x+h) - F(x)}{h}
                 = \lim_{h \to 0} \frac{1}{h}\int_x^{x+h} f(t)\,dt
         </md>
-        exists and equals <m>f(x)</m>.
+        exists and equals <m>f(x)</m>. (The second expression uses
+        additivity and the orientation convention from
+        <xref ref="par-mod8-sg-54-props" text="custom">Properties of the
+        Integral Used in the FTC Proofs</xref>, so it is valid for
+        <m>h</m> of either sign.)
       </p>
     </answer>
   </exercise>
@@ -349,9 +422,38 @@
         (b) Define <m>G(x) = \int_a^x f(t)\,dt</m>. By FTC Part 1,
         <m>G'(x) = f(x) = F'(x)</m> for all <m>x \in (a,b)</m>. Hence
         <m>(G - F)'(x) = 0</m> on <m>(a,b)</m>. By the Module 7 MVT
-        corollary, <m>G(x) - F(x) = C</m> for some constant
-        <m>C \in \R</m>. Evaluating at <m>x = a</m>:
-        <m>G(a) - F(a) = 0 - F(a) = -F(a)</m>, so <m>C = -F(a)</m>.
+        corollary (<xref ref="ex-mod7-sg-43-3"/>), there is a constant
+        <m>C \in \R</m> with <m>G(x) - F(x) = C</m> for all
+        <m>x \in (a,b)</m>.
+      </p>
+      <p>
+        The corollary says nothing about the endpoints, so we extend
+        the equation to <m>a</m> and <m>b</m> by continuity. Since
+        <m>F</m> is differentiable on <m>[a,b]</m>, it is continuous on
+        <m>[a,b]</m> (<xref ref="ex-mod7-we-2"/>; at <m>a</m> and
+        <m>b</m> the same argument works with one-sided limits). For
+        <m>G</m>: <m>f</m> is continuous on <m>[a,b]</m>, so it is
+        bounded there by the Extreme Value Theorem
+        (<xref ref="ex-mod6-sg-32-3"/>); say <m>|f(t)| \leq K</m> for all
+        <m>t \in [a,b]</m>. If <m>a \leq y \lt x \leq b</m>, then
+        <m>G(x) - G(y) = \int_y^x f(t)\,dt</m> by additivity, and
+        monotonicity applied to <m>-K \leq f \leq K</m> on
+        <m>[y,x]</m>, with the integral of a constant, gives
+        <m>-K(x-y) \leq \int_y^x f(t)\,dt \leq K(x-y)</m>. So
+        <m>|G(x) - G(y)| \leq K|x - y|</m> for all
+        <m>x, y \in [a,b]</m>, and <m>G</m> is continuous on
+        <m>[a,b]</m>. (These properties are in
+        <xref ref="par-mod8-sg-54-props" text="custom">Properties of the
+        Integral Used in the FTC Proofs</xref>.) Therefore
+        <m>G - F</m> is continuous on <m>[a,b]</m> and equal to
+        <m>C</m> on <m>(a,b)</m>, so
+        <md>G(a) - F(a) = \lim_{x \to a^+} \bigl(G(x) - F(x)\bigr) = C,</md>
+        and in the same way <m>G(b) - F(b) = C</m>.
+      </p>
+      <p>
+        Evaluating at <m>x = a</m>:
+        <m>G(a) - F(a) = 0 - F(a) = -F(a)</m>, since
+        <m>G(a) = \int_a^a f = 0</m>; so <m>C = -F(a)</m>.
         Thus <m>G(x) = F(x) - F(a)</m> for all <m>x \in [a,b]</m>.
         Evaluating at <m>x = b</m>:
         <m>\int_a^b f = G(b) = F(b) - F(a)</m>.

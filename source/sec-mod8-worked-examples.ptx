@@ -109,9 +109,10 @@
         <alert>Strategy.</alert>
       </p>
       <p>
-        Use the Heine-Cantor theorem (uniform continuity of continuous
-        functions on closed bounded intervals, proved in Module 6) to
-        bound the oscillation <m>M_i - m_i</m> on each subinterval,
+        Use the Heine<ndash/>Cantor theorem (uniform continuity of
+        continuous functions on closed bounded intervals, stated in
+        <xref ref="ch-mod6" text="custom">Module 6</xref>; see Zorn or
+        MAT 5610 for a proof) to bound the oscillation <m>M_i - m_i</m> on each subinterval,
         then sum up and apply the integrability criterion.
       </p>
       <p>
@@ -119,12 +120,13 @@
       </p>
       <p>
         Since <m>f</m> is continuous on the closed bounded interval
-        <m>[a,b]</m>, the Heine-Cantor theorem (Module 6) gives that
+        <m>[a,b]</m>, the Heine<ndash/>Cantor theorem
+        (<xref ref="ex-mod6-sg-34-3"/>, from Zorn &#xa7;3.4) gives that
         <m>f</m> is uniformly continuous on <m>[a,b]</m>. Let
         <m>\varepsilon \gt 0</m> be given. By uniform continuity,
         there exists <m>\delta \gt 0</m> such that for all
         <m>x, y \in [a,b]</m> with <m>|x - y| \lt \delta</m>,
-        <md>|f(x) - f(y)| \lt \frac{\varepsilon}{b - a}.</md>
+        <md>|f(x) - f(y)| \lt \frac{\varepsilon}{2(b - a)}.</md>
         Choose any partition <m>P = \{x_0, x_1, \ldots, x_n\}</m> of
         <m>[a,b]</m> with <m>\|P\| \lt \delta</m> (such a partition
         exists; take, for instance, a uniform partition with
@@ -133,16 +135,17 @@
       <p>
         On each subinterval <m>[x_{i-1}, x_i]</m>, any two points
         <m>x, y</m> satisfy <m>|x - y| \leq \|P\| \lt \delta</m>,
-        so <m>|f(x) - f(y)| \lt \varepsilon/(b-a)</m>. Taking the
+        so <m>|f(x) - f(y)| \lt \varepsilon/(2(b-a))</m>. Taking the
         supremum over <m>x</m> and infimum over <m>y</m> (or vice
-        versa) gives <m>M_i - m_i \leq \varepsilon/(b-a)</m>.
+        versa) gives <m>M_i - m_i \leq \varepsilon/(2(b-a))</m>.
         Therefore:
         <md>
           U(f,P) - L(f,P)
           = \sum_{i=1}^{n} (M_i - m_i)\,\Delta x_i
-          \leq \frac{\varepsilon}{b-a} \sum_{i=1}^{n} \Delta x_i
-          = \frac{\varepsilon}{b-a} \cdot (b-a)
-          = \varepsilon.
+          \leq \frac{\varepsilon}{2(b-a)} \sum_{i=1}^{n} \Delta x_i
+          = \frac{\varepsilon}{2(b-a)} \cdot (b-a)
+          = \frac{\varepsilon}{2}
+          \lt \varepsilon.
         </md>
         Since <m>\varepsilon \gt 0</m> was arbitrary and we exhibited
         a partition <m>P</m> with <m>U(f,P) - L(f,P) \lt \varepsilon</m>,
@@ -151,13 +154,20 @@
       </p>
       <p>
         <alert>What to notice.</alert>
-        Uniform continuity is indispensable: the same <m>\delta</m>
-        must work at every point of <m>[a,b]</m> simultaneously, which
-        is exactly the guarantee uniform continuity provides.
-        Pointwise continuity gives a different <m>\delta</m> at each
-        point, which could tend to zero and prevent us from finding a
-        single partition that works. The proof template is:
-        (1) invoke Heine-Cantor; (2) choose a partition with mesh
+        Uniform continuity is indispensable to this argument: the same
+        <m>\delta</m> must work at every point of <m>[a,b]</m>
+        simultaneously, which is exactly the guarantee uniform
+        continuity provides. Continuity at each point separately gives
+        a <m>\delta</m> that depends on the point; those values could
+        tend to zero, and then no single mesh would work. (This is a
+        limitation of the method, not of continuous functions: on
+        <m>[a,b]</m>, the Heine<ndash/>Cantor theorem guarantees the
+        single <m>\delta</m>.) The factor <m>2</m> in
+        <m>\varepsilon/(2(b-a))</m> is there because taking a supremum
+        can turn the strict inequality <m>\lt</m> into <m>\leq</m>;
+        aiming for <m>\varepsilon/2</m> keeps the final inequality
+        strict. The proof template is:
+        (1) invoke Heine<ndash/>Cantor; (2) choose a partition with mesh
         smaller than <m>\delta</m>; (3) bound <m>M_i - m_i</m>;
         (4) sum up; (5) invoke the criterion.
       </p>
@@ -174,7 +184,8 @@
       <p>
         Prove FTC Part 1: if <m>f</m> is continuous on <m>[a,b]</m>
         and <m>F(x) = \int_a^x f(t)\,dt</m> for <m>x \in [a,b]</m>,
-        then <m>F</m> is differentiable and <m>F'(x) = f(x)</m>.
+        then <m>F</m> is differentiable on <m>(a,b)</m> and
+        <m>F'(x) = f(x)</m> for every <m>x \in (a,b)</m>.
       </p>
     </statement>
     <solution>
@@ -195,21 +206,33 @@
         <alert>Proof.</alert>
       </p>
       <p>
-        Fix <m>x \in (a,b)</m> and consider <m>h \neq 0</m> small
-        enough that <m>x + h \in [a,b]</m>. By the additivity of
-        the integral,
+        Fix <m>x \in (a,b)</m> and consider <m>h \neq 0</m> with
+        <m>x + h \in [a,b]</m>. By additivity of the integral
+        and the orientation convention (<xref ref="par-mod8-sg-54-props"
+        text="custom">Properties of the Integral Used in the FTC
+        Proofs</xref>), for <m>h</m> of either sign,
         <md>
           F(x+h) - F(x)
           = \int_a^{x+h} f(t)\,dt - \int_a^x f(t)\,dt
-          = \int_x^{x+h} f(t)\,dt
+          = \int_x^{x+h} f(t)\,dt.
         </md>
-        (for <m>h \gt 0</m>; the case <m>h \lt 0</m> is analogous).
         Dividing by <m>h</m>:
         <md>
           \frac{F(x+h) - F(x)}{h} = \frac{1}{h}\int_x^{x+h} f(t)\,dt.
         </md>
-        Since <m>f(x)</m> is constant with respect to <m>t</m>,
-        <m>f(x) = \dfrac{1}{h}\int_x^{x+h} f(x)\,dt</m>, so
+        Since <m>f(x)</m> is constant with respect to <m>t</m>, the
+        integral of a constant gives
+        <m>\int_x^{x+h} f(x)\,dt = h f(x)</m>. For <m>h \gt 0</m> this
+        is the integral of a constant over <m>[x, x+h]</m>; for
+        <m>h \lt 0</m>, the orientation convention gives
+        <md>
+          \int_x^{x+h} f(x)\,dt = -\int_{x+h}^x f(x)\,dt
+          = -f(x)\bigl(x - (x+h)\bigr) = h f(x).
+        </md>
+        So
+        <m>f(x) = \dfrac{1}{h}\int_x^{x+h} f(x)\,dt</m> and, by
+        linearity (which also holds for <m>h \lt 0</m>: by the orientation
+        convention, negate both sides of linearity on <m>[x+h, x]</m>),
         <md>
           \frac{F(x+h) - F(x)}{h} - f(x)
           = \frac{1}{h}\int_x^{x+h} [f(t) - f(x)]\,dt.
@@ -217,14 +240,31 @@
         Let <m>\varepsilon \gt 0</m>. Since <m>f</m> is continuous at
         <m>x</m>, there exists <m>\delta \gt 0</m> such that
         <m>|t - x| \lt \delta \Rightarrow |f(t) - f(x)| \lt
-        \varepsilon</m>. For <m>|h| \lt \delta</m> and <m>t</m>
-        between <m>x</m> and <m>x + h</m>, we have
-        <m>|t - x| \leq |h| \lt \delta</m>, so
-        <m>|f(t) - f(x)| \lt \varepsilon</m>. Therefore:
+        \varepsilon</m>. Shrinking <m>\delta</m> if necessary, we may
+        assume <m>\delta \leq \min(x - a, b - x)</m>, so that
+        <m>x + h \in [a,b]</m> whenever <m>|h| \lt \delta</m>. Let
+        <m>0 \lt |h| \lt \delta</m>, and let
+        <m>I_h</m> be the closed interval with endpoints <m>x</m> and
+        <m>x + h</m>, which has length <m>|h|</m>. For <m>t \in I_h</m>
+        we have <m>|t - x| \leq |h| \lt \delta</m>, so
+        <m>-\varepsilon \lt f(t) - f(x) \lt \varepsilon</m>. The
+        function <m>f(t) - f(x)</m> is continuous, hence integrable, on
+        <m>I_h</m> (<xref ref="ex-mod8-we-2" text="custom">Worked
+        Example 2</xref>), so monotonicity and the integral of a constant
+        give
+        <md>
+          -\varepsilon |h| \leq \int_{I_h} [f(t) - f(x)]\,dt \leq \varepsilon |h|,
+        </md>
+        where <m>\int_{I_h}</m> is the integral from the left endpoint
+        of <m>I_h</m> to the right one. The integral
+        <m>\int_x^{x+h}</m> equals <m>\int_{I_h}</m> if <m>h \gt 0</m>
+        and <m>-\int_{I_h}</m> if <m>h \lt 0</m>, so in both cases
+        <m>\left|\int_x^{x+h}[f(t) - f(x)]\,dt\right| \leq \varepsilon|h|</m>.
+        Therefore:
         <md>
           \left|\frac{F(x+h) - F(x)}{h} - f(x)\right|
-          = \left|\frac{1}{h}\int_x^{x+h}[f(t) - f(x)]\,dt\right|
-          \leq \frac{1}{|h|} \cdot |h| \cdot \varepsilon
+          = \frac{1}{|h|}\left|\int_x^{x+h}[f(t) - f(x)]\,dt\right|
+          \leq \frac{1}{|h|} \cdot \varepsilon |h|
           = \varepsilon.
         </md>
         Since <m>\varepsilon \gt 0</m> was arbitrary, the limit of
@@ -243,6 +283,25 @@
       </p>
     </solution>
   </exercise>
+
+  <paragraphs xml:id="par-mod8-we-base-point">
+    <title>FTC Part 1 with Any Base Point</title>
+    <p>
+      <xref ref="ex-mod8-we-3" text="custom">Worked Example 3</xref>
+      measures the integral from the left endpoint <m>a</m>. With the
+      orientation convention, the base point can be any point of the
+      interval. Suppose <m>f</m> is continuous on an interval
+      <m>J</m>, <m>p \in J</m>, and <m>G(x) = \int_p^x f(t)\,dt</m> for
+      <m>x \in J</m>. If <m>x</m> is an interior point of <m>J</m>,
+      choose <m>r, s \in J</m> with <m>r \leq p \leq s</m> and
+      <m>r \lt x \lt s</m>. Then
+      <m>G(x) = \int_r^x f(t)\,dt - \int_r^p f(t)\,dt</m>, and the
+      second term does not depend on <m>x</m>, so Worked Example 3 on
+      <m>[r,s]</m> gives <m>G'(x) = f(x)</m>. This is the form of
+      FTC Part 1 to use with the chain rule when the upper limit can
+      fall below the base point.
+    </p>
+  </paragraphs>
 
   <!-- ============================================================
        EXAMPLE 4: COMPUTATION USING FTC
@@ -269,8 +328,10 @@
       </p>
       <p>
         Take <m>F(x) = -\cos(x)</m>. We verify: <m>F'(x) = \sin(x)</m>
-        (by the standard differentiation formula, proved in Module 7
-        or calculus). The function <m>f(x) = \sin(x)</m> is continuous
+        (by the formula <m>\cos'(x) = -\sin(x)</m> from calculus;
+        <xref ref="ch-mod7" text="custom">Module 7</xref> uses the
+        derivatives of <m>\sin</m> and <m>\cos</m> but does not prove
+        them). The function <m>f(x) = \sin(x)</m> is continuous
         on <m>[0, \pi]</m> (it is continuous everywhere). Since
         <m>F'(x) = \sin(x) = f(x)</m> on <m>[0, \pi]</m>, FTC Part 2
         applies:
@@ -291,7 +352,11 @@
         <m>F' = f</m>; (2) check that <m>f</m> is continuous on
         <m>[a,b]</m> (the hypothesis of FTC Part 2); (3) compute
         <m>F(b) - F(a)</m>. Step (2) is often omitted in calculus
-        courses but is essential for the theorem to apply. In this
+        courses, but continuity of <m>f</m> is a hypothesis of FTC
+        Part 2 as stated and proved in this module, so it must be
+        checked before that theorem applies. (Continuity is sufficient
+        for the conclusion, not necessary; the version proved here
+        simply assumes it.) In this
         example, <m>\sin</m> is continuous everywhere, so there is
         nothing to check, but for a piecewise-defined function the
         continuity condition would require verification.

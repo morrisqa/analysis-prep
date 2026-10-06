@@ -77,7 +77,7 @@
         <ol marker="(a)">
           <li><m>\displaystyle\int_0^1 x^3\,dx</m></li>
           <li><m>\displaystyle\int_0^{\pi/2} \cos(x)\,dx</m></li>
-          <li><m>\displaystyle\int_1^e \frac{1}{x}\,dx</m></li>
+          <li><m>\displaystyle\int_1^4 \frac{1}{\sqrt{x}}\,dx</m></li>
           <li><m>\displaystyle\int_0^1 e^x\,dx</m></li>
         </ol>
       </p>
@@ -88,8 +88,8 @@
         <m>F(1) - F(0) = 1/4 - 0 = 1/4</m>.
         (b) <m>F(x) = \sin(x)</m>; <m>F'(x) = \cos(x)</m>;
         <m>F(\pi/2) - F(0) = 1 - 0 = 1</m>.
-        (c) <m>F(x) = \ln(x)</m>; <m>F'(x) = 1/x</m>;
-        <m>F(e) - F(1) = 1 - 0 = 1</m>.
+        (c) <m>F(x) = 2\sqrt{x}</m>; <m>F'(x) = 1/\sqrt{x}</m> for
+        <m>x \gt 0</m>; <m>F(4) - F(1) = 4 - 2 = 2</m>.
         (d) <m>F(x) = e^x</m>; <m>F'(x) = e^x</m>;
         <m>F(1) - F(0) = e - 1</m>.
       </p>
@@ -108,11 +108,16 @@
     </statement>
     <answer>
       <p>
-        By FTC Part 1 (since <m>t^2 + \sin t</m> is continuous),
-        <m>\dfrac{d}{dx}\int_0^x (t^2 + \sin t)\,dt = x^2 + \sin x</m>.
+        Here <m>x</m> can be negative, so the upper limit can fall below
+        the base point <m>0</m>; use FTC Part 1 in the form of
+        <xref ref="par-mod8-we-base-point" text="custom">FTC Part 1 with
+        Any Base Point</xref>, with <m>J = \R</m> and <m>p = 0</m>. By
+        that form (since <m>t^2 + \sin t</m> is continuous on <m>\R</m>),
+        <m>\dfrac{d}{dx}\int_0^x (t^2 + \sin t)\,dt = x^2 + \sin x</m>
+        for every <m>x \in \R</m>.
         For the second integral, write <m>G(u) = \int_0^u e^t\,dt</m>,
-        so the integral equals <m>G(x^2)</m>. By FTC Part 1,
-        <m>G'(u) = e^u</m>. By the chain rule:
+        so the integral equals <m>G(x^2)</m>. By the same form of FTC
+        Part 1, <m>G'(u) = e^u</m> for every <m>u \in \R</m>. By the chain rule:
         <md>\frac{d}{dx} G(x^2) = G'(x^2) \cdot 2x = e^{x^2} \cdot 2x.</md>
       </p>
     </answer>
@@ -249,9 +254,10 @@
           \int_a^b m\,dx \leq \int_a^b f(x)\,dx \leq \int_a^b M\,dx.
         </md>
         Since <m>m</m> and <m>M</m> are constants, their integrals
-        are <m>m(b-a)</m> and <m>M(b-a)</m> respectively (by the
-        assessment, constant functions are integrable with
-        <m>\int_a^b c\,dx = c(b-a)</m>). Hence
+        are <m>m(b-a)</m> and <m>M(b-a)</m> respectively (constant
+        functions are integrable with <m>\int_a^b c\,dx = c(b-a)</m>;
+        see <xref ref="par-mod8-sg-54-props" text="custom">Properties of
+        the Integral Used in the FTC Proofs</xref>). Hence
         <m>m(b-a) \leq \int_a^b f \leq M(b-a)</m>.
       </p>
     </answer>
@@ -263,7 +269,7 @@
       <p>
         Prove: if <m>f</m> is increasing on <m>[a,b]</m>, then
         <m>f</m> is Riemann integrable on <m>[a,b]</m>. Follow the
-        strategy of Study Guide Exercise sg-53-2.
+        strategy of <xref ref="ex-mod8-sg-53-2"/>.
       </p>
     </statement>
     <hint>
@@ -334,17 +340,25 @@
       <p>
         Your proof must have the following steps: (i) define
         <m>G(x) = \int_a^x f</m> and invoke FTC Part 1 to conclude
-        <m>G' = f = F'</m>; (ii) apply the Module 7 corollary to
-        <m>G - F</m>; (iii) evaluate at <m>x = a</m> to determine
-        the constant; (iv) evaluate at <m>x = b</m> to conclude.
+        <m>G' = f = F'</m> on <m>(a,b)</m>; (ii) apply the Module 7
+        corollary to <m>G - F</m> on <m>(a,b)</m>; (iii) show that
+        <m>G</m> and <m>F</m> are continuous on <m>[a,b]</m>, so that
+        <m>G - F</m> takes the same constant value at <m>a</m> and
+        <m>b</m>; (iv) evaluate at <m>x = a</m> to determine
+        the constant; (v) evaluate at <m>x = b</m> to conclude.
       </p>
     </statement>
     <hint>
       <p>
-        At step (iii): <m>G(a) = \int_a^a f = 0</m> and
+        At step (iii): <m>F</m> is continuous because it is
+        differentiable (<xref ref="ex-mod7-we-2"/>). For <m>G</m>,
+        bound <m>|f|</m> on <m>[a,b]</m> by a constant <m>K</m>, and use
+        additivity and monotonicity to show
+        <m>|G(x) - G(y)| \leq K|x - y|</m>.
+        At step (iv): <m>G(a) = \int_a^a f = 0</m> and
         <m>(G - F)(a) = G(a) - F(a) = -F(a)</m>. So the constant
         is <m>C = -F(a)</m>, giving <m>G(x) = F(x) - F(a)</m>.
-        At step (iv): <m>\int_a^b f = G(b) = F(b) - F(a)</m>.
+        At step (v): <m>\int_a^b f = G(b) = F(b) - F(a)</m>.
       </p>
     </hint>
   </exercise>
