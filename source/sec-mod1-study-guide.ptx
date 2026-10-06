@@ -169,7 +169,7 @@
           <ol marker="(i)">
             <li>
               <m>\forall x \in \R \;\; \exists n \in \N</m> such that
-              <m>n \gt x</m> (the form in the exercise above);
+              <m>n \gt x</m> (the form in <xref ref="ex-mod1-sg-z14-5"/>);
             </li>
             <li>
               <m>\forall \varepsilon \gt 0 \;\; \exists n \in \N</m>
@@ -180,11 +180,13 @@
               for all positive real numbers <m>\varepsilon</m> and
               <m>x</m> there is an <m>n \in \N</m> such that
               <m>n\varepsilon \gt x</m> (Bauldry's Theorem 2.3, which you
-              will write in symbols in the Bridge Reading).
+              will write in symbols in <xref ref="ex-mod1-br-5"/>).
             </li>
           </ol>
-          They are different statements, but each one implies the next, so
-          all three are equivalent.
+          They are different statements, but the implications
+          (i) <m>\Rightarrow</m> (iii) <m>\Rightarrow</m> (ii)
+          <m>\Rightarrow</m> (i) run around a cycle, so all three are
+          equivalent.
           <ul>
             <li>
               (i) implies (iii): given <m>\varepsilon \gt 0</m> and
@@ -206,8 +208,8 @@
           </ul>
           These arguments show only that the three forms stand or fall
           together; none of them proves the property. In this module the
-          property is taken as known. In <xref ref="ch-mod2"/> you will
-          prove it from the Completeness Axiom of <m>\R</m>.
+          property is taken as known. <xref ref="ch-mod2"/> derives it from
+          the Completeness Axiom of <m>\R</m>.
         </p>
       </paragraphs>
 

@@ -96,10 +96,10 @@
             (Archimedean property; see
             <xref ref="par-mod1-sg-archimedean" text="custom">the three forms of the Archimedean property</xref>
             in the Study Guide). But the negation is a valid, well-formed
-            mathematical claim — it just happens to be false.]</em>
+            mathematical claim: it just happens to be false.]</em>
           </p>
           <p>
-            <em>[Caution: the original statement is not the definition of
+            <alert>Caution.</alert> The original statement is not the definition of
             <m>1/n \to 0</m>. That definition
             (<xref ref="par-mod1-sg-syn" text="custom">the convergence definition</xref>
             in the Study Guide) has a third quantifier: for every
@@ -111,7 +111,7 @@
             if <m>1/N \lt \varepsilon</m> and <m>n \geq N</m>, then
             <m>1/n \leq 1/N \lt \varepsilon</m>. For a sequence that is not
             monotone, one term below <m>\varepsilon</m> proves nothing about
-            the later terms.]</em>
+            the later terms.
           </p>
         </solution>
       </example>

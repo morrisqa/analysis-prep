@@ -173,15 +173,16 @@
           familiar. Use the self-assessment above to decide where your
           extra time should go. If you are coming in with prior real
           analysis experience and the self-assessment went smoothly, you
-          may move quickly through the Study Guide, the Worked Examples and
-          the <m>[\mathbf{F}]</m> practice problems, and spend extra time on
+          may move quickly through the Study Guide and the
+          <m>[\mathbf{F}]</m> practice problems, and spend extra time on
           the <m>[\mathbf{S}]</m> and <m>[\mathbf{C}]</m> problems and the
           Bridge Reading: the goal is not just to recall proof strategies
           but to see how Bauldry deploys them in a graduate-level context.
           If your background is in other proof-based courses but not in
           analysis, or if the self-assessment revealed gaps, work through
           each component carefully and in order. Whatever your background,
-          do not skip the Worked Examples. The quantifier-negation exercises
+          read the Worked Examples closely: they model the proof style
+          expected in every later module. The quantifier-negation exercises
           in the Study Guide and the induction proof in
           <xref ref="ex-mod1-we-4"/> deserve particular care.
         </p>

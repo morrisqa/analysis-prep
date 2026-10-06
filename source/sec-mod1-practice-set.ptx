@@ -754,7 +754,7 @@
                 <m>x = 1</m> also works (<m>1 - 1 = 0</m>), and
                 <m>1 \neq 0</m>. In fact
                 <m>x^3 - x = x(x-1)(x+1)</m>, and a product of real numbers
-                is <m>0</m> exactly when one factor is <m>0</m>, so the
+                is <m>0</m> exactly when at least one factor is <m>0</m>, so the
                 solutions are exactly <m>-1</m>, <m>0</m>, and <m>1</m>.
               </li>
               <li>

@@ -24,6 +24,11 @@ Issue #8 asked for Quinn's decision on each difference between Module 1 (the pro
 | Cross-references | All hand-typed references in Module 1 are xrefs; Bauldry's numbered items name the book. | `policies.md`. | |
 | Time estimates | Study guide 50 → 55, practice set 90 → 100; road map "about 5 hours" (310 minutes). | New material. | |
 
+## After review (PR #37 follow-ups)
+- `par-mod1-pacing`: no longer lets some readers "move quickly through" the Worked Examples while also saying not to skip them; now "Whatever your background, read the Worked Examples closely: they model the proof style expected in every later module."
+- `par-mod1-sg-archimedean`: the implications are described as a cycle (i) ⇒ (iii) ⇒ (ii) ⇒ (i); "Module 2 derives it from the Completeness Axiom" (students meet the proof as reading and as a [C] or Option B problem).
+- `ex-mod1-as-2b` (√6): Part 2 stays at 15 minutes; the new Option B costs about the same as the √5 version. Raise to 20 if it proves tight.
+
 ## Not changed here
 - The assessments of Modules 2 to 4 say "if you are coming in with prior real analysis experience, challenge yourself with Option B" (track framing). Handled book-wide in the framing pass.
 
