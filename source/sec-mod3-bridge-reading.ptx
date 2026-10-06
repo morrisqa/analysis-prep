@@ -40,9 +40,10 @@
         </li>
         <li>
           <p>
-            Accumulation points involve a quantified statement about
-            neighborhoods, and the distinction between finite and
-            infinite sets (cardinality) is used in the definition.
+            Accumulation points are defined by a quantified statement
+            about neighborhoods, and the distinction between finite and
+            infinite sets (cardinality) comes up as soon as you study
+            them (see <xref ref="ex-mod3-br-3"/>).
           </p>
         </li>
       </ul>
@@ -71,8 +72,8 @@
           <li>
             Bauldry also defines the <em>deleted <m>\delta</m>-neighborhood</em>
             <m>N^*(c;\delta) = N(c;\delta) \setminus \{c\}</m>.
-            Write this set using the Module 3 notation for set difference.
-            Why is the point <m>c</m> removed?
+            Write this set in set-builder notation and as a union of
+            two intervals. Why is the point <m>c</m> removed?
           </li>
           <li>
             Is <m>N(c;\delta)</m> an open set, a closed set, or neither?

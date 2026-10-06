@@ -95,7 +95,8 @@
         <ol marker="(i)">
           <li>
             Construct an explicit bijection <m>f : \N \to T</m>.
-            (Use the bijection <m>\N \to \Z</m> from Worked Example 4
+            (Use the bijection <m>\varphi : \N \to \Z</m> from
+            <xref ref="ex-mod3-we-4" text="custom">Worked Example 4</xref>
             as a guide, or construct a direct bijection by interleaving
             positive and negative multiples of 3.)
           </li>
@@ -113,10 +114,11 @@
     </statement>
     <hint>
       <p>
-        One approach: define <m>g : \N \to T</m> by
-        <m>g(n) = 3 \cdot f(n)</m>, where <m>f : \N \to \Z</m>
-        is the bijection from Worked Example 4. Then verify that
-        <m>g</m> is a bijection <m>\N \to T</m>.
+        One approach: define <m>f : \N \to T</m> by
+        <m>f(n) = 3 \cdot \varphi(n)</m>, where <m>\varphi : \N \to \Z</m>
+        is the bijection from
+        <xref ref="ex-mod3-we-4" text="custom">Worked Example 4</xref>. Then verify that
+        <m>f</m> is a bijection <m>\N \to T</m>.
       </p>
     </hint>
   </exercise>
@@ -141,8 +143,8 @@
         <ol marker="(i)">
           <li>
             Handle the case where at least one of <m>A</m> or <m>B</m>
-            is finite separately, or explain why it suffices to assume
-            both are countably infinite.
+            is finite separately, or explain how your argument handles
+            finite or empty sets.
           </li>
           <li>
             Construct an explicit surjection from <m>\N</m> onto
@@ -157,12 +159,15 @@
     </statement>
     <hint>
       <p>
-        Since <m>A</m> and <m>B</m> are countably infinite, there exist
-        surjections (or bijections) <m>a : \N \to A</m> and
-        <m>b : \N \to B</m>. Define <m>h : \N \to A \cup B</m> by
-        sending even <m>n</m> to <m>a(n/2)</m> and odd <m>n</m>
-        to <m>b((n-1)/2)</m>. Show <m>h</m> is a surjection and
-        apply Proposition 1.17.
+        First dispose of the case where <m>A</m> or <m>B</m> is empty.
+        Otherwise, there are surjections <m>a : \N \to A</m> and
+        <m>b : \N \to B</m> (a nonempty finite set also has a surjection
+        from <m>\N</m>). Interleave them: use the even natural numbers
+        for <m>a</m> and the odd ones for <m>b</m> to build a surjection
+        <m>h : \N \to A \cup B</m>. Then turn <m>h</m> into an injection
+        <m>A \cup B \to \N</m> by sending each element to its least
+        preimage under <m>h</m> (every nonempty set of natural numbers
+        has a least element).
       </p>
     </hint>
   </exercise>
@@ -265,10 +270,10 @@
         <cell><p>Element-chasing structure missing; equality claimed without proof of both directions</p></cell>
       </row>
       <row>
-        <cell><p><alert>Bijection construction (Part 2)</alert></p></cell>
-        <cell><p>Explicit bijection given; both injectivity and surjectivity verified</p></cell>
-        <cell><p>Bijection described informally; one of the two properties verified</p></cell>
-        <cell><p>No explicit bijection; conclusion asserted without construction</p></cell>
+        <cell><p><alert>Function construction (Part 2)</alert></p></cell>
+        <cell><p>An explicit function of the kind the option asks for (a bijection in Option A; a surjection or injection in Option B), with every needed property verified</p></cell>
+        <cell><p>Function described informally; only some of the needed properties verified</p></cell>
+        <cell><p>No explicit function; conclusion asserted without construction</p></cell>
       </row>
       <row>
         <cell><p><alert>Mathematical prose</alert></p></cell>
