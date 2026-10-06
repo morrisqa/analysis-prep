@@ -16,8 +16,8 @@
        EXAMPLE 1: DERIVATIVE FROM THE DEFINITION
   ============================================================ -->
 
-  <exercise xml:id="ex-mod7-we-1">
-    <title>Example 1: Derivative from the Definition</title>
+  <example xml:id="ex-mod7-we-1">
+    <title>Derivative from the Definition</title>
     <statement>
       <p>
         Prove that <m>f(x) = x^3</m> is differentiable at every
@@ -72,14 +72,14 @@
         definition: <em>simplify, cancel, then take the limit</em>.
       </p>
     </solution>
-  </exercise>
+  </example>
 
   <!-- ============================================================
        EXAMPLE 2: DIFFERENTIABILITY IMPLIES CONTINUITY
   ============================================================ -->
 
-  <exercise xml:id="ex-mod7-we-2">
-    <title>Example 2: Differentiability Implies Continuity</title>
+  <example xml:id="ex-mod7-we-2">
+    <title>Differentiability Implies Continuity</title>
     <statement>
       <p>
         Prove that if <m>f</m> is differentiable at <m>a</m>, then
@@ -127,14 +127,14 @@
         <m>+1</m> respectively, so the limit does not exist).
       </p>
     </solution>
-  </exercise>
+  </example>
 
   <!-- ============================================================
        EXAMPLE 3: PROOF OF ROLLE'S THEOREM
   ============================================================ -->
 
-  <exercise xml:id="ex-mod7-we-3">
-    <title>Example 3: Proof of Rolle's Theorem</title>
+  <example xml:id="ex-mod7-we-3">
+    <title>Proof of Rolle's Theorem</title>
     <statement>
       <p>
         Prove Rolle's Theorem: if <m>f</m> is continuous on
@@ -217,8 +217,7 @@
         quotients <m>(f(c+h_n) - f(c))/h_n</m> converge to
         <m>f'(c)</m>. Each of them is <m>\leq 0</m>, and limits of
         sequences preserve non-strict inequalities
-        (<xref ref="par-mod4-sg-two-facts" text="custom">Two Facts You
-        Will Use Constantly</xref>), so <m>f'(c) \leq 0</m>. The
+        (<xref ref="thm-mod4-limit-order"/>), so <m>f'(c) \leq 0</m>. The
         numbers <m>-h_n</m> give <m>f'(c) \geq 0</m> in the same way.
       </p>
       <p>
@@ -242,14 +241,14 @@
         standard template in real analysis.
       </p>
     </solution>
-  </exercise>
+  </example>
 
   <!-- ============================================================
        EXAMPLE 4: AN MVT INEQUALITY
   ============================================================ -->
 
-  <exercise xml:id="ex-mod7-we-4">
-    <title>Example 4: An MVT Inequality</title>
+  <example xml:id="ex-mod7-we-4">
+    <title>An MVT Inequality</title>
     <statement>
       <p>
         Use the Mean Value Theorem to prove that
@@ -298,8 +297,7 @@
         and <m>y</m>. In particular, a function whose derivative is
         bounded by <m>M</m> on an interval satisfies the Lipschitz
         condition <m>|f(x) - f(y)| \leq M|x - y|</m> there. By the
-        argument of <xref ref="ex-mod6-we-4" text="custom">Worked Example
-        4</xref> of <xref ref="ch-mod6" text="custom">Module 6</xref>,
+        argument of <xref ref="ex-mod6-we-4"/>,
         such a function is uniformly continuous. The same idea of bounding a derivative
         gives error bounds for Taylor polynomials. The MVT equality
         <m>f(y) - f(x) = f'(c)(y - x)</m> itself, without the
@@ -307,6 +305,6 @@
         Calculus in MAT 5610 uses.
       </p>
     </solution>
-  </exercise>
+  </example>
 
 </section>

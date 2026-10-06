@@ -260,7 +260,7 @@
       <p>
         Simplify <m>|f(x) - f(a)|</m> until it is a constant times
         <m>|x - a|</m>, then choose <m>\delta</m> as in
-        <xref ref="ex-mod6-we-1" text="custom">Worked Example 1</xref>.
+        <xref ref="ex-mod6-we-1"/>.
       </p>
     </hint>
   </exercise>
@@ -317,7 +317,7 @@
       </p>
       <p>
         You may use the sequential characterization of continuity
-        (<xref ref="par-mod6-sg-32-seq-cont" text="custom">Sequential Characterization of Continuity</xref>)
+        (<xref ref="thm-mod6-seq-cont"/>)
         for both <m>f</m> and <m>g</m>.
       </p>
     </statement>

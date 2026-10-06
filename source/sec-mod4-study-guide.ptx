@@ -115,31 +115,48 @@
       completeness. Read the two proofs
       now, since the worked examples and later modules cite both facts.
     </p>
-    <p>
-      <em>Uniqueness of limits.</em> If <m>a_n \to L</m> and
-      <m>a_n \to M</m>, then <m>L = M</m>. To prove this, suppose
-      instead that <m>L \neq M</m>, and set
-      <m>\varepsilon = |L - M|/2 \gt 0</m>. We choose <m>N_1</m> with
-      <m>|a_n - L| \lt \varepsilon</m> for all <m>n \geq N_1</m>, and
-      <m>N_2</m> with <m>|a_n - M| \lt \varepsilon</m> for all
-      <m>n \geq N_2</m>. For <m>n = \max(N_1, N_2)</m>, the Triangle
-      Inequality gives
-      <md>|L - M| \leq |L - a_n| + |a_n - M| \lt \varepsilon + \varepsilon = |L - M|,</md>
-      which is impossible. Hence <m>L = M</m>. (You will compare this
-      argument with Bauldry's in <xref ref="ex-mod4-br-2"/>.)
-    </p>
-    <p>
-      <em>Limits preserve non-strict inequalities.</em> If
-      <m>a_n \to A</m>, <m>b_n \to B</m>, and <m>a_n \leq b_n</m> for
-      all <m>n \geq N_0</m>, then <m>A \leq B</m>. To prove this,
-      suppose instead that <m>A \gt B</m>, and set
-      <m>\varepsilon = (A - B)/2 \gt 0</m>. We choose <m>N_1</m> with
-      <m>|a_n - A| \lt \varepsilon</m> for all <m>n \geq N_1</m>, and
-      <m>N_2</m> with <m>|b_n - B| \lt \varepsilon</m> for all
-      <m>n \geq N_2</m>. For <m>n = \max(N_0, N_1, N_2)</m>,
-      <md>b_n \lt B + \varepsilon = \frac{A + B}{2} = A - \varepsilon \lt a_n,</md>
-      which contradicts <m>a_n \leq b_n</m>. Hence <m>A \leq B</m>.
-    </p>
+    <theorem xml:id="thm-mod4-limit-unique">
+      <title>Uniqueness of Limits</title>
+      <statement>
+        <p>
+          If <m>a_n \to L</m> and <m>a_n \to M</m>, then <m>L = M</m>.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Suppose instead that <m>L \neq M</m>, and set
+          <m>\varepsilon = |L - M|/2 \gt 0</m>. We choose <m>N_1</m> with
+          <m>|a_n - L| \lt \varepsilon</m> for all <m>n \geq N_1</m>, and
+          <m>N_2</m> with <m>|a_n - M| \lt \varepsilon</m> for all
+          <m>n \geq N_2</m>. For <m>n = \max(N_1, N_2)</m>, the Triangle
+          Inequality gives
+          <md>|L - M| \leq |L - a_n| + |a_n - M| \lt \varepsilon + \varepsilon = |L - M|,</md>
+          which is impossible. Hence <m>L = M</m>. (You will compare this
+          argument with Bauldry's in <xref ref="ex-mod4-br-2"/>.)
+        </p>
+      </proof>
+    </theorem>
+    <theorem xml:id="thm-mod4-limit-order">
+      <title>Limits Preserve Non-Strict Inequalities</title>
+      <statement>
+        <p>
+          If <m>a_n \to A</m>, <m>b_n \to B</m>, and
+          <m>a_n \leq b_n</m> for all <m>n \geq N_0</m>, then
+          <m>A \leq B</m>.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Suppose instead that <m>A \gt B</m>, and set
+          <m>\varepsilon = (A - B)/2 \gt 0</m>. We choose <m>N_1</m> with
+          <m>|a_n - A| \lt \varepsilon</m> for all <m>n \geq N_1</m>, and
+          <m>N_2</m> with <m>|b_n - B| \lt \varepsilon</m> for all
+          <m>n \geq N_2</m>. For <m>n = \max(N_0, N_1, N_2)</m>,
+          <md>b_n \lt B + \varepsilon = \frac{A + B}{2} = A - \varepsilon \lt a_n,</md>
+          which contradicts <m>a_n \leq b_n</m>. Hence <m>A \leq B</m>.
+        </p>
+      </proof>
+    </theorem>
     <p>
       The most common use takes one of the two sequences to be
       constant. The constant sequence <m>c, c, c, \ldots</m> converges

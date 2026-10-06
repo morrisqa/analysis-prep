@@ -224,12 +224,49 @@
       such that <m>|f(x) - f(a)| \lt \varepsilon</m> for every
       <m>x \in D</m> with <m>|x - a| \lt \delta</m>.
     </p>
-    <p>
-      <alert>Sequential characterization of continuity.</alert>
-      <m>f</m> is continuous at <m>a</m> if and only if
-      <m>f(x_n) \to f(a)</m> for every sequence <m>(x_n)</m> in
-      <m>D</m> with <m>x_n \to a</m>.
-    </p>
+    <theorem xml:id="thm-mod6-seq-cont">
+      <title>Sequential Characterization of Continuity</title>
+      <statement>
+        <p>
+          <m>f</m> is continuous at <m>a</m> if and only if
+          <m>f(x_n) \to f(a)</m> for every sequence <m>(x_n)</m> in
+          <m>D</m> with <m>x_n \to a</m>.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Suppose first that <m>f</m> is continuous at
+          <m>a</m>, and let <m>(x_n)</m> be a sequence in <m>D</m> with
+          <m>x_n \to a</m>. Let <m>\varepsilon \gt 0</m>. By continuity, there
+          is a <m>\delta \gt 0</m> such that
+          <m>|f(x) - f(a)| \lt \varepsilon</m> for every <m>x \in D</m> with
+          <m>|x - a| \lt \delta</m>. Since <m>x_n \to a</m>, the definition
+          of convergence, applied with <m>\delta</m> in the role of
+          <m>\varepsilon</m>, gives an <m>N</m> such that
+          <m>|x_n - a| \lt \delta</m> for all <m>n \geq N</m>. For each such
+          <m>n</m>, the point <m>x_n</m> lies in <m>D</m> and satisfies
+          <m>|x_n - a| \lt \delta</m>, so <m>|f(x_n) - f(a)| \lt \varepsilon</m>.
+          Hence <m>f(x_n) \to f(a)</m>.
+        </p>
+        <p>
+          For the converse, we prove the contrapositive. Suppose <m>f</m> is
+          not continuous at <m>a</m>. Negating the definition, there is an
+          <m>\varepsilon_0 \gt 0</m> such that for every <m>\delta \gt 0</m>
+          some <m>x \in D</m> satisfies <m>|x - a| \lt \delta</m> but
+          <m>|f(x) - f(a)| \geq \varepsilon_0</m>. For each <m>n \in \N</m>,
+          apply this with <m>\delta = 1/n</m> and call the resulting point
+          <m>x_n</m>. Then <m>(x_n)</m> is a sequence in <m>D</m> with
+          <m>|x_n - a| \lt 1/n</m>, so <m>x_n \to a</m>: given
+          <m>\varepsilon \gt 0</m>, the Archimedean Property gives
+          <m>N \in \N</m> with <m>N \gt 1/\varepsilon</m>, and then
+          <m>|x_n - a| \lt 1/n \leq 1/N \lt \varepsilon</m> for all
+          <m>n \geq N</m>. But <m>|f(x_n) - f(a)| \geq \varepsilon_0</m> for
+          every <m>n</m>, so no term of <m>(f(x_n))</m> is within
+          <m>\varepsilon_0</m> of <m>f(a)</m>, and <m>(f(x_n))</m> does not
+          converge to <m>f(a)</m>.
+        </p>
+      </proof>
+    </theorem>
     <p>
       Compare this with the version for limits. In both, the sequences
       lie in the domain of <m>f</m>. There are two differences. First,
@@ -239,37 +276,6 @@
       number <m>L</m>. Both differences mirror the definitions: the
       condition <m>0 \lt |x - a|</m> does not appear in the definition
       of continuity, and <m>f(a)</m> plays the role of <m>L</m>.
-    </p>
-    <p>
-      <em>Proof.</em> Suppose first that <m>f</m> is continuous at
-      <m>a</m>, and let <m>(x_n)</m> be a sequence in <m>D</m> with
-      <m>x_n \to a</m>. Let <m>\varepsilon \gt 0</m>. By continuity, there
-      is a <m>\delta \gt 0</m> such that
-      <m>|f(x) - f(a)| \lt \varepsilon</m> for every <m>x \in D</m> with
-      <m>|x - a| \lt \delta</m>. Since <m>x_n \to a</m>, the definition
-      of convergence, applied with <m>\delta</m> in the role of
-      <m>\varepsilon</m>, gives an <m>N</m> such that
-      <m>|x_n - a| \lt \delta</m> for all <m>n \geq N</m>. For each such
-      <m>n</m>, the point <m>x_n</m> lies in <m>D</m> and satisfies
-      <m>|x_n - a| \lt \delta</m>, so <m>|f(x_n) - f(a)| \lt \varepsilon</m>.
-      Hence <m>f(x_n) \to f(a)</m>.
-    </p>
-    <p>
-      For the converse, we prove the contrapositive. Suppose <m>f</m> is
-      not continuous at <m>a</m>. Negating the definition, there is an
-      <m>\varepsilon_0 \gt 0</m> such that for every <m>\delta \gt 0</m>
-      some <m>x \in D</m> satisfies <m>|x - a| \lt \delta</m> but
-      <m>|f(x) - f(a)| \geq \varepsilon_0</m>. For each <m>n \in \N</m>,
-      apply this with <m>\delta = 1/n</m> and call the resulting point
-      <m>x_n</m>. Then <m>(x_n)</m> is a sequence in <m>D</m> with
-      <m>|x_n - a| \lt 1/n</m>, so <m>x_n \to a</m>: given
-      <m>\varepsilon \gt 0</m>, the Archimedean Property gives
-      <m>N \in \N</m> with <m>N \gt 1/\varepsilon</m>, and then
-      <m>|x_n - a| \lt 1/n \leq 1/N \lt \varepsilon</m> for all
-      <m>n \geq N</m>. But <m>|f(x_n) - f(a)| \geq \varepsilon_0</m> for
-      every <m>n</m>, so no term of <m>(f(x_n))</m> is within
-      <m>\varepsilon_0</m> of <m>f(a)</m>, and <m>(f(x_n))</m> does not
-      converge to <m>f(a)</m>. <m>\square</m>
     </p>
   </paragraphs>
 

@@ -267,7 +267,7 @@
     <hint>
       <p>
         Use the bijection <m>\varphi : \N \to \Z</m> from
-        <xref ref="ex-mod3-we-4" text="custom">Worked Example 4</xref>, then
+        <xref ref="ex-mod3-we-4"/>, then
         compose with <m>n \mapsto 2n</m>. Alternatively, define a direct
         bijection by interleaving positive and negative even integers.
       </p>

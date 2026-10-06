@@ -96,7 +96,7 @@
           <li>
             Construct an explicit bijection <m>f : \N \to T</m>.
             (Use the bijection <m>\varphi : \N \to \Z</m> from
-            <xref ref="ex-mod3-we-4" text="custom">Worked Example 4</xref>
+            <xref ref="ex-mod3-we-4"/>
             as a guide, or construct a direct bijection by interleaving
             positive and negative multiples of 3.)
           </li>
@@ -117,7 +117,7 @@
         One approach: define <m>f : \N \to T</m> by
         <m>f(n) = 3 \cdot \varphi(n)</m>, where <m>\varphi : \N \to \Z</m>
         is the bijection from
-        <xref ref="ex-mod3-we-4" text="custom">Worked Example 4</xref>. Then verify that
+        <xref ref="ex-mod3-we-4"/>. Then verify that
         <m>f</m> is a bijection <m>\N \to T</m>.
       </p>
     </hint>

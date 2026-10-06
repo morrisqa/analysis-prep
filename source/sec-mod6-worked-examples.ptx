@@ -15,8 +15,8 @@
        EXAMPLE 1: EPSILON-DELTA LIMIT PROOF
   ============================================================ -->
 
-  <exercise xml:id="ex-mod6-we-1">
-    <title>Example 1: An <m>\varepsilon</m>-<m>\delta</m> Limit Proof</title>
+  <example xml:id="ex-mod6-we-1">
+    <title>An <m>\varepsilon</m>-<m>\delta</m> Limit Proof</title>
     <statement>
       <p>
         Prove that <m>\lim_{x \to 2} (3x - 1) = 5</m>.
@@ -67,14 +67,14 @@
         remaining factor.
       </p>
     </solution>
-  </exercise>
+  </example>
 
   <!-- ============================================================
        EXAMPLE 2: CONTINUITY AT EVERY POINT
   ============================================================ -->
 
-  <exercise xml:id="ex-mod6-we-2">
-    <title>Example 2: Proving Continuity Using the <m>\varepsilon</m>-<m>\delta</m> Definition</title>
+  <example xml:id="ex-mod6-we-2">
+    <title>Proving Continuity Using the <m>\varepsilon</m>-<m>\delta</m> Definition</title>
     <statement>
       <p>
         Prove that <m>f(x) = x^2</m> is continuous at every
@@ -136,21 +136,21 @@
         grows, not that every choice must. To prove that no single
         <m>\delta</m> works for all points, you need the sequential
         criterion (<xref ref="ex-mod6-sg-34-2"/>, used in
-        <xref ref="ex-mod6-we-3" text="custom">Worked Example 3</xref>);
+        <xref ref="ex-mod6-we-3"/>);
         you will carry it out in <xref ref="ex-mod6-ps-s4"/>.
         On any bounded interval, however,
         <m>2|a| + 1</m> is bounded above, and uniform continuity
-        follows (see <xref ref="ex-mod6-we-4" text="custom">Worked Example 4</xref>).
+        follows (see <xref ref="ex-mod6-we-4"/>).
       </p>
     </solution>
-  </exercise>
+  </example>
 
   <!-- ============================================================
        EXAMPLE 3: NOT UNIFORMLY CONTINUOUS
   ============================================================ -->
 
-  <exercise xml:id="ex-mod6-we-3">
-    <title>Example 3: Proving <m>f(x) = 1/x</m> is Not Uniformly Continuous on <m>(0,1)</m></title>
+  <example xml:id="ex-mod6-we-3">
+    <title>Proving <m>f(x) = 1/x</m> is Not Uniformly Continuous on <m>(0,1)</m></title>
     <statement>
       <p>
         Prove that <m>f(x) = 1/x</m> is not uniformly continuous on
@@ -208,14 +208,14 @@
         even though the inputs become arbitrarily close.
       </p>
     </solution>
-  </exercise>
+  </example>
 
   <!-- ============================================================
        EXAMPLE 4: UNIFORM CONTINUITY VIA LIPSCHITZ
   ============================================================ -->
 
-  <exercise xml:id="ex-mod6-we-4">
-    <title>Example 4: Uniform Continuity via a Lipschitz Condition</title>
+  <example xml:id="ex-mod6-we-4">
+    <title>Uniform Continuity via a Lipschitz Condition</title>
     <statement>
       <p>
         Prove that <m>f(x) = x^2</m> is uniformly continuous on
@@ -264,7 +264,7 @@
         (an example follows). The proof that <m>x^2</m> is not uniformly
         continuous on <m>\R</m> uses the sequential criterion
         (<xref ref="ex-mod6-sg-34-2"/>, used in
-        <xref ref="ex-mod6-we-3" text="custom">Worked Example 3</xref>);
+        <xref ref="ex-mod6-we-3"/>);
         see <xref ref="ex-mod6-ps-s4"/>.
       </p>
       <p>
@@ -295,6 +295,6 @@
         <m>x = y</m>, the inequality holds trivially.
       </p>
     </solution>
-  </exercise>
+  </example>
 
 </section>

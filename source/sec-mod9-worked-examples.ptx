@@ -14,8 +14,8 @@
        EXAMPLE 1
   ============================================================ -->
 
-  <exercise xml:id="ex-mod9-we-1">
-    <title>Example 1: Pointwise but Not Uniform Convergence</title>
+  <example xml:id="ex-mod9-we-1">
+    <title>Pointwise but Not Uniform Convergence</title>
     <statement>
       <p>
         Let <m>f_n(x) = x^n</m> for <m>x \in [0,1]</m>. Show that
@@ -72,14 +72,14 @@
         prototypical counterexample for this entire module.
       </p>
     </solution>
-  </exercise>
+  </example>
 
   <!-- ============================================================
        EXAMPLE 2
   ============================================================ -->
 
-  <exercise xml:id="ex-mod9-we-2">
-    <title>Example 2: Uniform Convergence Preserves Continuity</title>
+  <example xml:id="ex-mod9-we-2">
+    <title>Uniform Convergence Preserves Continuity</title>
     <statement>
       <p>
         Prove: if <m>f_n \to f</m> uniformly on <m>[a,b]</m> and each
@@ -129,14 +129,14 @@
         <m>x</m> near <m>x_0</m>.
       </p>
     </solution>
-  </exercise>
+  </example>
 
   <!-- ============================================================
        EXAMPLE 3
   ============================================================ -->
 
-  <exercise xml:id="ex-mod9-we-3">
-    <title>Example 3: The Weierstrass <m>M</m>-Test</title>
+  <example xml:id="ex-mod9-we-3">
+    <title>The Weierstrass <m>M</m>-Test</title>
     <statement>
       <p>
         Show that <m>\displaystyle\sum_{n=1}^{\infty} \frac{\sin(nx)}{n^2}</m>
@@ -177,14 +177,14 @@
         <m>\R</m>.
       </p>
     </solution>
-  </exercise>
+  </example>
 
   <!-- ============================================================
        EXAMPLE 4
   ============================================================ -->
 
-  <exercise xml:id="ex-mod9-we-4">
-    <title>Example 4: Term-by-Term Integration</title>
+  <example xml:id="ex-mod9-we-4">
+    <title>Term-by-Term Integration</title>
     <statement>
       <p>
         Use the geometric series, the term-by-term integration theorem,
@@ -278,6 +278,6 @@
         elementary analysis.
       </p>
     </solution>
-  </exercise>
+  </example>
 
 </section>

@@ -15,8 +15,8 @@
        EXAMPLE 1: ABSOLUTE VALUE ALGEBRA
   ============================================================ -->
 
-  <exercise xml:id="ex-mod2-we-1">
-    <title>Example 1: Absolute Value Algebra</title>
+  <example xml:id="ex-mod2-we-1">
+    <title>Absolute Value Algebra</title>
     <statement>
       <p>
         Solve the inequality <m>|2x - 3| \lt 5</m> and express
@@ -59,14 +59,14 @@
         is useful for building intuition and for checking answers.
       </p>
     </solution>
-  </exercise>
+  </example>
 
   <!-- ============================================================
        EXAMPLE 2: PROVING THE TRIANGLE INEQUALITY
   ============================================================ -->
 
-  <exercise xml:id="ex-mod2-we-2">
-    <title>Example 2: Proving the Triangle Inequality</title>
+  <example xml:id="ex-mod2-we-2">
+    <title>Proving the Triangle Inequality</title>
     <statement>
       <p>
         Prove: for all <m>x, y \in \R</m>,
@@ -156,14 +156,14 @@
         is often the right tool.
       </p>
     </solution>
-  </exercise>
+  </example>
 
   <!-- ============================================================
        EXAMPLE 3: PROVING sup{1 - 1/n} = 1
   ============================================================ -->
 
-  <exercise xml:id="ex-mod2-we-3">
-    <title>Example 3: Proving a Supremum</title>
+  <example xml:id="ex-mod2-we-3">
+    <title>Proving a Supremum</title>
     <statement>
       <p>
         Let <m>S = \left\{1 - \dfrac{1}{n} : n \in \N\right\}</m>.
@@ -245,6 +245,6 @@
         The assessment asks you to apply this template to a different set.
       </p>
     </solution>
-  </exercise>
+  </example>
 
 </section>

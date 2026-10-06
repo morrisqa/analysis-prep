@@ -253,7 +253,7 @@
       inverse is <m>f</m>), and
       transitive (if <m>f : A \to B</m> and <m>g : B \to C</m> are
       bijections, then <m>g \circ f</m> is injective by
-      <xref ref="ex-mod3-we-3" text="custom">Worked Example 3</xref>,
+      <xref ref="ex-mod3-we-3"/>,
       and surjective because each <m>c \in C</m> is <m>g(b)</m> for some
       <m>b \in B</m>, which is <m>f(a)</m> for some <m>a \in A</m>).
       So it behaves like an equivalence relation, although it is not a

@@ -21,8 +21,8 @@
        EXAMPLE 1: ELEMENT-CHASING SET EQUALITY
   ============================================================ -->
 
-  <exercise xml:id="ex-mod3-we-1">
-    <title>Example 1: Element-Chasing a Set Equality</title>
+  <example xml:id="ex-mod3-we-1">
+    <title>Element-Chasing a Set Equality</title>
     <statement>
       <p>
         Prove: for all sets <m>A</m>, <m>B</m>, <m>C</m>,
@@ -100,14 +100,14 @@
         <q>or</q> in the union definition is almost always the right move.
       </p>
     </solution>
-  </exercise>
+  </example>
 
   <!-- ============================================================
        EXAMPLE 2: PROVING BIJECTIVITY AND FINDING THE INVERSE
   ============================================================ -->
 
-  <exercise xml:id="ex-mod3-we-2">
-    <title>Example 2: Proving Bijectivity and Finding the Inverse</title>
+  <example xml:id="ex-mod3-we-2">
+    <title>Proving Bijectivity and Finding the Inverse</title>
     <statement>
       <p>
         Let <m>f : \R \to \R</m> be defined by <m>f(x) = 3x - 5</m>.
@@ -173,14 +173,14 @@
         find <m>f^{-1}</m>&#x2014;this is not a coincidence.
       </p>
     </solution>
-  </exercise>
+  </example>
 
   <!-- ============================================================
        EXAMPLE 3: COMPOSITION PRESERVES INJECTIVITY
   ============================================================ -->
 
-  <exercise xml:id="ex-mod3-we-3">
-    <title>Example 3: Composition Preserves Injectivity</title>
+  <example xml:id="ex-mod3-we-3">
+    <title>Composition Preserves Injectivity</title>
     <statement>
       <p>
         Let <m>f : A \to B</m> and <m>g : B \to C</m>. Prove: if
@@ -230,14 +230,14 @@
         the practice set asks you to find a counterexample.
       </p>
     </solution>
-  </exercise>
+  </example>
 
   <!-- ============================================================
        EXAMPLE 4: THE INTEGERS ARE COUNTABLE
   ============================================================ -->
 
-  <exercise xml:id="ex-mod3-we-4">
-    <title>Example 4: The Integers Are Countably Infinite</title>
+  <example xml:id="ex-mod3-we-4">
+    <title>The Integers Are Countably Infinite</title>
     <statement>
       <p>
         Prove that <m>\Z</m> is countably infinite by constructing
@@ -324,14 +324,14 @@
         <xref ref="ex-mod3-as-2b"/>).
       </p>
     </solution>
-  </exercise>
+  </example>
 
   <!-- ============================================================
        EXAMPLE 5: ℕ × ℕ IS COUNTABLE
   ============================================================ -->
 
-  <exercise xml:id="ex-mod3-we-5">
-    <title>Example 5: <m>\N \times \N</m> Is Countably Infinite</title>
+  <example xml:id="ex-mod3-we-5">
+    <title><m>\N \times \N</m> Is Countably Infinite</title>
     <statement>
       <p>
         Prove that <m>\N \times \N</m> is countably infinite.
@@ -443,6 +443,6 @@
         propositions rather than re-deriving the bijection formula.
       </p>
     </solution>
-  </exercise>
+  </example>
 
 </section>

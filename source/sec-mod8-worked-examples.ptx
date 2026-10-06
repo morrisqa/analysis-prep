@@ -12,8 +12,8 @@
        EXAMPLE 1: f(x)=x IS RIEMANN INTEGRABLE
   ============================================================ -->
 
-  <exercise xml:id="ex-mod8-we-1">
-    <title>Example 1: <m>f(x) = x</m> is Riemann Integrable on <m>[0,1]</m> and <m>\int = 1/2</m></title>
+  <example xml:id="ex-mod8-we-1">
+    <title><m>f(x) = x</m> is Riemann Integrable on <m>[0,1]</m> and <m>\int = 1/2</m></title>
     <statement>
       <p>
         Prove from the Darboux definition that <m>f(x) = x</m> is
@@ -90,14 +90,14 @@
         bounding.
       </p>
     </solution>
-  </exercise>
+  </example>
 
   <!-- ============================================================
        EXAMPLE 2: CONTINUOUS IMPLIES INTEGRABLE
   ============================================================ -->
 
-  <exercise xml:id="ex-mod8-we-2">
-    <title>Example 2: Continuous Functions are Riemann Integrable</title>
+  <example xml:id="ex-mod8-we-2">
+    <title>Continuous Functions are Riemann Integrable</title>
     <statement>
       <p>
         Prove that if <m>f</m> is continuous on <m>[a,b]</m>, then
@@ -172,14 +172,14 @@
         (4) sum up; (5) invoke the criterion.
       </p>
     </solution>
-  </exercise>
+  </example>
 
   <!-- ============================================================
        EXAMPLE 3: FTC PART 1
   ============================================================ -->
 
-  <exercise xml:id="ex-mod8-we-3">
-    <title>Example 3: FTC Part 1</title>
+  <example xml:id="ex-mod8-we-3">
+    <title>FTC Part 1</title>
     <statement>
       <p>
         Prove FTC Part 1: if <m>f</m> is continuous on <m>[a,b]</m>
@@ -249,8 +249,7 @@
         we have <m>|t - x| \leq |h| \lt \delta</m>, so
         <m>-\varepsilon \lt f(t) - f(x) \lt \varepsilon</m>. The
         function <m>f(t) - f(x)</m> is continuous, hence integrable, on
-        <m>I_h</m> (<xref ref="ex-mod8-we-2" text="custom">Worked
-        Example 2</xref>), so monotonicity and the integral of a constant
+        <m>I_h</m> (<xref ref="ex-mod8-we-2"/>), so monotonicity and the integral of a constant
         give
         <md>
           -\varepsilon |h| \leq \int_{I_h} [f(t) - f(x)]\,dt \leq \varepsilon |h|,
@@ -282,12 +281,12 @@
         the analytic core of the argument.
       </p>
     </solution>
-  </exercise>
+  </example>
 
   <paragraphs xml:id="par-mod8-we-base-point">
     <title>FTC Part 1 with Any Base Point</title>
     <p>
-      <xref ref="ex-mod8-we-3" text="custom">Worked Example 3</xref>
+      <xref ref="ex-mod8-we-3"/>
       measures the integral from the left endpoint <m>a</m>. With the
       orientation convention, the base point can be any point of the
       interval. Suppose <m>f</m> is continuous on an interval
@@ -307,8 +306,8 @@
        EXAMPLE 4: COMPUTATION USING FTC
   ============================================================ -->
 
-  <exercise xml:id="ex-mod8-we-4">
-    <title>Example 4: A Computation Using FTC</title>
+  <example xml:id="ex-mod8-we-4">
+    <title>A Computation Using FTC</title>
     <statement>
       <p>
         Compute <m>\int_0^{\pi} \sin(x)\,dx</m> using FTC Part 2.
@@ -362,6 +361,6 @@
         continuity condition would require verification.
       </p>
     </solution>
-  </exercise>
+  </example>
 
 </section>

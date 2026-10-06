@@ -369,8 +369,7 @@
             Compute <m>\sqrt[k]{a_k}</m> separately for <m>k</m> even
             and for <m>k</m> odd. Does
             <m>\lim_{k \to \infty} \sqrt[k]{a_k}</m> exist? Use the
-            eventual-bound form of the Root Test (in
-            <xref ref="par-mod5-sg-26-root" text="custom">the Study Guide</xref>)
+            eventual-bound form of the Root Test (<xref ref="thm-mod5-root-test-bound"/>)
             to decide whether the
             series converges.
           </li>

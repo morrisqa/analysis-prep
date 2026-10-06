@@ -75,8 +75,8 @@
             Bauldry's proof is likely a short argument using the
             <m>\varepsilon/2</m> trick. Which <m>\varepsilon</m> does
             he choose? Is his argument direct or by contradiction, and
-            how does it compare with the proof in the
-            <xref ref="par-mod4-sg-two-facts" text="custom">study guide</xref>?
+            how does it compare with the proof of
+            <xref ref="thm-mod4-limit-unique"/>?
           </li>
           <li>
             Does Bauldry's proof use any property of <m>\R</m> beyond
