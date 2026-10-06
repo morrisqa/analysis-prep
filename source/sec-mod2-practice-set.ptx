@@ -22,7 +22,6 @@
 
   <paragraphs xml:id="par-mod2-ps-f">
     <title>Foundational Problems</title>
-    <!-- TODO(quinn): sentence added in #4 to satisfy the schema; confirm or replace. -->
     <p>
       These problems practice the basic moves of the module: computing
       absolute values, rewriting absolute value inequalities as intervals,
@@ -147,7 +146,6 @@
 
   <paragraphs xml:id="par-mod2-ps-s">
     <title>Standard Problems</title>
-    <!-- TODO(quinn): sentence added in #4 to satisfy the schema; confirm or replace. -->
     <p>
       These problems apply the same moves to longer arguments: proofs using
       the Triangle Inequality, bounding a product, and supremum proofs from
@@ -261,7 +259,6 @@
 
   <paragraphs xml:id="par-mod2-ps-c">
     <title>Challenge Problems</title>
-    <!-- TODO(quinn): sentence added in #4 to satisfy the schema; confirm or replace. -->
     <p>
       These problems extend the module's ideas: uniqueness of the supremum,
       and a derivation of the Archimedean Property from the Completeness

@@ -22,7 +22,6 @@
 
   <paragraphs xml:id="par-mod4-ps-f">
     <title>Foundational Problems</title>
-    <!-- TODO(quinn): sentence added in #4 to satisfy the schema; confirm or replace. -->
     <p>
       These problems practice the basic moves of the module:
       identifying the limit of a sequence or recognizing divergence,
@@ -145,7 +144,6 @@
 
   <paragraphs xml:id="par-mod4-ps-s">
     <title>Standard Problems</title>
-    <!-- TODO(quinn): sentence added in #4 to satisfy the schema; confirm or replace. -->
     <p>
       These problems apply the same moves to longer arguments: a direct
       <m>\varepsilon</m>-<m>N</m> proof of convergence, a proof using the
@@ -264,7 +262,6 @@
 
   <paragraphs xml:id="par-mod4-ps-c">
     <title>Challenge Problems</title>
-    <!-- TODO(quinn): sentence added in #4 to satisfy the schema; confirm or replace. -->
     <p>
       These problems extend the module's ideas: a proof from the
       definition that <m>(1/n)</m> is a Cauchy sequence, and a proof using

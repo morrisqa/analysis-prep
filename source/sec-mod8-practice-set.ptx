@@ -19,7 +19,6 @@
 
   <paragraphs xml:id="par-mod8-ps-f">
     <title>Foundational Problems</title>
-    <!-- TODO(quinn): sentence added in #4 to satisfy the schema; confirm or replace. -->
     <p>
       These problems practice the basic moves of the module: computing
       upper and lower sums for a given partition, evaluating integrals
@@ -147,7 +146,6 @@
 
   <paragraphs xml:id="par-mod8-ps-s">
     <title>Standard Problems</title>
-    <!-- TODO(quinn): sentence added in #4 to satisfy the schema; confirm or replace. -->
     <p>
       These problems apply the same moves to longer arguments: a proof
       that <m>x^2</m> is integrable on <m>[0,1]</m>, a proof of integration
@@ -317,7 +315,6 @@
 
   <paragraphs xml:id="par-mod8-ps-c">
     <title>Challenge Problems</title>
-    <!-- TODO(quinn): sentence added in #4 to satisfy the schema; confirm or replace. -->
     <p>
       These problems extend the module's ideas: a proof of FTC Part 2
       using FTC Part 1 and the Module 7 corollary that a function with
