@@ -12,6 +12,11 @@
       \newcommand{\R}{\mathbb{R}}
       \newcommand{\C}{\mathbb{C}}
     </macros>
+
+    <!-- Each chapter is a module; inline exercises read "Exercise"     -->
+    <!-- rather than PreTeXt's default "Checkpoint".                    -->
+    <rename element="chapter">Module</rename>
+    <rename element="exercise-inline">Exercise</rename>
   </docinfo>
 
   <book xml:id="analysis-prep">
