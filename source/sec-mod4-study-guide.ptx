@@ -1,0 +1,540 @@
+<section xml:id="sec-mod4-study-guide">
+  <title>Module 4: Companion Reading and Study Guide</title>
+  <p>Zorn §2.1–2.4 — Estimated time: 60 minutes</p>
+
+    <p>
+      This guide accompanies four sections of Zorn's <em>Understanding
+      Real Analysis</em>, which together cover the full story of
+      convergent sequences of real numbers. The weight of the module
+      falls on &#xa7;2.1 (the definition of convergence) and &#xa7;2.3
+      (the Monotone Convergence and Bolzano&#x2013;Weierstrass theorems);
+      &#xa7;2.2 (limit laws) is labor-saving technology, and &#xa7;2.4
+      (Cauchy sequences) reframes convergence in a form you will see
+      again in MAT 5610.
+    </p>
+    <p>
+      Read each section before working its questions. The questions
+      are designed to be answered with the text open in front of you;
+      quote definitions and theorem numbers rather than paraphrasing
+      when you can.
+    </p>
+
+  <!-- ============================================================
+       SECTION 2.1: DEFINITION OF CONVERGENCE
+  ============================================================ -->
+
+  <paragraphs xml:id="par-mod4-sg-21-intro">
+    <title>Section 2.1: Sequences and Convergence (Zorn pp. 83&#x2013;95)</title>
+    <p>
+      This is the central section of the module. Read Definition 2.1
+      (convergence) more than once; understanding its quantifier
+      structure is the main learning goal of Video 1 and of the whole
+      module. Pay attention also to Definition 2.2 (bounded,
+      monotone) and Theorem 2.3 (a bounded monotone sequence converges).
+    </p>
+  </paragraphs>
+
+  <exercise xml:id="ex-mod4-sg-21-1">
+    <title>Parsing the Definition</title>
+    <statement>
+      <p>
+        Write out Zorn's Definition 2.1 of convergence
+        (<m>a_n \to L</m>) symbolically, using quantifiers
+        (<m>\forall</m>, <m>\exists</m>) and the absolute value.
+        Then answer:
+        <ol marker="(a)">
+          <li>
+            How many quantifiers appear, and in what order?
+          </li>
+          <li>
+            Which variable is chosen by the adversary (i.e., you do
+            not get to pick it), and which is chosen in response?
+          </li>
+          <li>
+            After a proof of convergence is written, what is the
+            natural functional relationship between the adversary's
+            choice and the responder's choice: typically, does
+            <m>N</m> get larger or smaller as <m>\varepsilon</m> gets
+            smaller?
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        (a) Three: <m>\forall \varepsilon \gt 0\ \exists N \in \N\
+        \forall n \geq N: |a_n - L| \lt \varepsilon</m>. The order
+        is <m>\forall</m>, <m>\exists</m>, <m>\forall</m>.
+        (b) The adversary picks <m>\varepsilon</m>; we pick <m>N</m>
+        in response. The final <m>\forall n \geq N</m> is a conclusion,
+        not a choice.
+        (c) <m>N</m> gets larger as <m>\varepsilon</m> gets smaller:
+        a finer tolerance requires going farther out in the sequence.
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise xml:id="ex-mod4-sg-21-2">
+    <title>Negating the Definition</title>
+    <statement>
+      <p>
+        Write out the negation of convergence&#x2014;that is, what
+        <m>a_n \not\to L</m> means&#x2014;by applying the standard
+        negation rules from Module 1 (push <m>\neg</m> through each
+        quantifier in turn).
+      </p>
+      <p>
+        Then state what it means, in this same format, for the
+        sequence <m>(a_n)</m> to be <em>divergent</em>&#x2014;that is,
+        for no <m>L \in \R</m> to be its limit.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        <m>a_n \not\to L</m> means:
+        <m>\exists \varepsilon_0 \gt 0\ \forall N \in \N\
+        \exists n \geq N: |a_n - L| \geq \varepsilon_0</m>.
+        Divergence is: <m>\forall L \in \R\ \exists \varepsilon_0 \gt 0\
+        \forall N \in \N\ \exists n \geq N: |a_n - L| \geq \varepsilon_0</m>.
+        The key point is that to disprove convergence to a specific
+        <m>L</m>, you exhibit a single <m>\varepsilon_0</m> that fails
+        for every <m>N</m>.
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise xml:id="ex-mod4-sg-21-3">
+    <title>From Scratch Work to Formal Proof</title>
+    <statement>
+      <p>
+        In Zorn's worked examples in &#xa7;2.1, the author often first
+        performs algebraic manipulation (finding the relationship
+        between <m>n</m> and <m>\varepsilon</m>) and then writes a
+        formal proof. Re-read Zorn's proof that <m>1/n \to 0</m>
+        (or whichever first explicit <m>\varepsilon</m>-<m>N</m>
+        argument Zorn presents near Definition 2.1).
+      </p>
+      <p>
+        Identify: where in the formal proof does the Archimedean
+        Property appear, and why is it essential? Which of Module 2's
+        tools is the Archimedean Property a consequence of?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod4-sg-21-4">
+    <title>Boundedness</title>
+    <statement>
+      <p>
+        State Zorn's definition of a <em>bounded</em> sequence
+        (Definition 2.2 or nearby). Then prove Theorem 2.4 informally:
+        if <m>a_n \to L</m>, then <m>(a_n)</m> is bounded.
+      </p>
+      <p>
+        (Sketch: apply the definition of convergence with
+        <m>\varepsilon = 1</m> to bound the tail; then use the
+        finiteness of the first <m>N</m> terms to bound the head.
+        Write this as two or three complete sentences.)
+      </p>
+    </statement>
+    <answer>
+      <p>
+        A sequence is bounded if there exists <m>M \gt 0</m> such that
+        <m>|a_n| \leq M</m> for all <m>n \in \N</m>. If <m>a_n \to L</m>,
+        pick <m>N</m> so that <m>|a_n - L| \lt 1</m> for <m>n \geq N</m>;
+        then <m>|a_n| \leq |L| + 1</m> for such <m>n</m>. The initial
+        terms <m>a_1, \ldots, a_{N-1}</m> form a finite set, so
+        <m>M = \max\{|a_1|, \ldots, |a_{N-1}|, |L| + 1\}</m> bounds
+        the entire sequence.
+      </p>
+    </answer>
+  </exercise>
+
+  <!-- ============================================================
+       SECTION 2.2: ALGEBRA OF LIMITS AND SQUEEZE
+  ============================================================ -->
+
+  <paragraphs xml:id="par-mod4-sg-22-intro">
+    <title>Section 2.2: Working with Limits (Zorn pp. 96&#x2013;105)</title>
+    <p>
+      Section 2.2 collects the tools that let you evaluate limits of
+      sums, products, quotients, and sandwiched sequences without
+      returning to the definition. The main results are the Algebra of
+      Limits (Theorem 2.5) and the Squeeze Theorem (Theorem 2.6).
+    </p>
+  </paragraphs>
+
+  <exercise xml:id="ex-mod4-sg-22-1">
+    <title>The Algebra of Limits</title>
+    <statement>
+      <p>
+        Suppose <m>a_n \to A</m> and <m>b_n \to B</m>. State the
+        three most commonly used conclusions from Theorem 2.5
+        (sum, product, quotient).
+      </p>
+      <p>
+        For the quotient, what additional hypothesis is needed beyond
+        <m>a_n \to A</m> and <m>b_n \to B</m>, and why is that
+        hypothesis necessary?
+      </p>
+    </statement>
+    <answer>
+      <p>
+        Sum: <m>a_n + b_n \to A + B</m>. Product: <m>a_n b_n \to AB</m>.
+        Quotient: <m>a_n / b_n \to A / B</m>, provided <m>B \neq 0</m>
+        (and implicitly the <m>b_n</m> are eventually nonzero). The
+        hypothesis <m>B \neq 0</m> is needed to avoid dividing by 0
+        both in the limit and, via a tail argument, in the quotient
+        <m>a_n/b_n</m> for large <m>n</m>.
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise xml:id="ex-mod4-sg-22-2">
+    <title>Reading the Proof of the Sum Rule</title>
+    <statement>
+      <p>
+        Read Zorn's proof that <m>a_n + b_n \to A + B</m>.
+        <ol marker="(a)">
+          <li>
+            What algebraic identity launches the proof? (It is an
+            application of the Triangle Inequality.)
+          </li>
+          <li>
+            Why is the tolerance split as <m>\varepsilon/2 + \varepsilon/2</m>
+            instead of simply <m>\varepsilon</m>?
+          </li>
+          <li>
+            How is <m>N</m> chosen in terms of the <m>N_1</m> and
+            <m>N_2</m> coming from <m>a_n \to A</m> and <m>b_n \to B</m>
+            respectively?
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        (a) <m>|(a_n + b_n) - (A + B)| \leq |a_n - A| + |b_n - B|</m>.
+        (b) Each summand is bounded by <m>\varepsilon/2</m>, so their
+        sum is bounded by <m>\varepsilon</m>&#x2014;the desired bound.
+        (c) <m>N = \max(N_1, N_2)</m>, so that both convergence bounds
+        hold simultaneously for <m>n \geq N</m>.
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise xml:id="ex-mod4-sg-22-3">
+    <title>Using the Algebra of Limits on Rational Expressions</title>
+    <statement>
+      <p>
+        Compute
+        <md>\lim_{n \to \infty} \frac{5n^2 - 3n}{2n^2 + n + 7}.</md>
+        Do not write an <m>\varepsilon</m>-<m>N</m> proof. Instead:
+        divide numerator and denominator by <m>n^2</m>, identify each
+        term's limit (using <m>1/n \to 0</m> and constants), and apply
+        the Algebra of Limits to assemble the answer.
+      </p>
+      <p>
+        Write your reasoning in complete sentences. Indicate
+        each step at which the algebra of limits is applied.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        Dividing gives <m>\dfrac{5 - 3/n}{2 + 1/n + 7/n^2}</m>.
+        Since <m>1/n \to 0</m> and <m>1/n^2 = (1/n)(1/n) \to 0 \cdot 0 = 0</m>
+        (product rule), we have numerator <m>\to 5 - 0 = 5</m>
+        (sum rule) and denominator <m>\to 2 + 0 + 0 = 2</m>
+        (sum rule, twice). Since the denominator's limit is
+        nonzero, the quotient rule gives <m>5/2</m>.
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise xml:id="ex-mod4-sg-22-4">
+    <title>The Squeeze Theorem in Practice</title>
+    <statement>
+      <p>
+        State the Squeeze Theorem from Zorn &#xa7;2.2 in your own
+        words. Then apply it to show that <m>a_n = \dfrac{\cos(n^2)}{n}</m>
+        converges, and identify the limit.
+      </p>
+      <p>
+        Your solution should explicitly write the two bounding
+        sequences you are squeezing between, explain why each
+        converges (to what), and then invoke the theorem.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        <m>-1 \leq \cos(n^2) \leq 1</m>, so <m>-1/n \leq a_n \leq 1/n</m>
+        for all <m>n \in \N</m>. Both <m>-1/n \to 0</m> and
+        <m>1/n \to 0</m> (by Archimedean Property / known limit),
+        so by the Squeeze Theorem <m>a_n \to 0</m>.
+      </p>
+    </answer>
+  </exercise>
+
+  <!-- ============================================================
+       SECTION 2.3: MONOTONE AND BOLZANO–WEIERSTRASS
+  ============================================================ -->
+
+  <paragraphs xml:id="par-mod4-sg-23-intro">
+    <title>Section 2.3: Subsequences and the Big Theorems (Zorn pp. 106&#x2013;113)</title>
+    <p>
+      Section 2.3 introduces subsequences and proves two of the
+      headline theorems of sequential analysis: the Monotone
+      Convergence Theorem and the Bolzano&#x2013;Weierstrass Theorem.
+      Both are consequences of completeness; each will be invoked
+      repeatedly in MAT 5610.
+    </p>
+  </paragraphs>
+
+  <exercise xml:id="ex-mod4-sg-23-1">
+    <title>Subsequences and Inheritance</title>
+    <statement>
+      <p>
+        Define <em>subsequence</em> precisely: what does it mean for
+        <m>(a_{n_k})</m> to be a subsequence of <m>(a_n)</m>? What is
+        required of the index sequence <m>n_1, n_2, \ldots</m>?
+      </p>
+      <p>
+        State (without proof) the inheritance result: if <m>a_n \to L</m>,
+        what is the limit of every subsequence of <m>(a_n)</m>?
+        State the contrapositive of the inheritance result and explain
+        how it is used to <em>prove divergence</em>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        <m>(a_{n_k})_{k=1}^{\infty}</m> is a subsequence of <m>(a_n)</m>
+        if <m>n_1 \lt n_2 \lt n_3 \lt \cdots</m> is a strictly increasing
+        sequence in <m>\N</m>. Inheritance: if <m>a_n \to L</m>, every
+        subsequence also converges to <m>L</m>. Contrapositive: if
+        <m>(a_n)</m> has two subsequences converging to different
+        limits, then <m>(a_n)</m> diverges. This is the standard tool
+        for showing that, e.g., <m>((-1)^n)</m> diverges: the even
+        terms converge to 1 and the odd terms to <m>-1</m>.
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise xml:id="ex-mod4-sg-23-2">
+    <title>Where Completeness Enters the Monotone Convergence Theorem</title>
+    <statement>
+      <p>
+        State the Monotone Convergence Theorem as Zorn presents it
+        (Theorem 2.3, or its analogue in your text). Then re-read
+        the proof slowly.
+      </p>
+      <p>
+        <ol marker="(a)">
+          <li>
+            What set <m>S</m> does the proof consider, and why is
+            <m>S</m> nonempty and bounded above?
+          </li>
+          <li>
+            At what step is the Completeness Axiom invoked, and
+            what object does it produce?
+          </li>
+          <li>
+            How is the <m>\varepsilon</m>-characterization of the
+            supremum (from Module 2) used to produce the index
+            <m>N</m> needed by the <m>\varepsilon</m>-<m>N</m>
+            definition of convergence?
+          </li>
+          <li>
+            Where in the proof is the hypothesis that <m>(a_n)</m>
+            is monotone actually used?
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        (a) <m>S = \{a_n : n \in \N\}</m>, the set of terms. It is
+        nonempty (contains <m>a_1</m>) and bounded above by the given
+        bound on <m>(a_n)</m>.
+        (b) Completeness is used to assert <m>L = \sup S \in \R</m>.
+        (c) The <m>\varepsilon</m>-characterization provides, for any
+        <m>\varepsilon \gt 0</m>, an index <m>N</m> with
+        <m>a_N \gt L - \varepsilon</m>.
+        (d) Monotonicity (increasingness) is used to pass from
+        <m>a_N \gt L - \varepsilon</m> to <m>a_n \gt L - \varepsilon</m>
+        for all <m>n \geq N</m>&#x2014;we need to know later terms do
+        not drop back below <m>a_N</m>.
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise xml:id="ex-mod4-sg-23-3">
+    <title>The Bolzano&#x2013;Weierstrass Theorem</title>
+    <statement>
+      <p>
+        State the Bolzano&#x2013;Weierstrass Theorem. Read one of
+        Zorn's proof strategies (whichever he presents; most likely
+        the monotone-subsequence approach).
+      </p>
+      <p>
+        <ol marker="(a)">
+          <li>
+            In the monotone-subsequence strategy, the first step is
+            to show every sequence of reals has a monotone subsequence.
+            Why is that claim not obvious?
+          </li>
+          <li>
+            Once a monotone subsequence has been produced, how do the
+            hypotheses of the theorem ensure that the subsequence is
+            bounded?
+          </li>
+          <li>
+            How does Monotone Convergence finish the argument?
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod4-sg-23-4">
+    <title>Applying Bolzano&#x2013;Weierstrass</title>
+    <statement>
+      <p>
+        Consider the bounded sequence
+        <m>a_n = (-1)^n \cdot \dfrac{n}{n+1}</m>.
+        <ol marker="(a)">
+          <li>
+            Verify that <m>(a_n)</m> is bounded.
+          </li>
+          <li>
+            Bolzano&#x2013;Weierstrass guarantees a convergent
+            subsequence. Identify one such subsequence explicitly and
+            compute its limit (using limit laws, not
+            <m>\varepsilon</m>-<m>N</m>).
+          </li>
+          <li>
+            Find a second convergent subsequence with a different
+            limit. What does this show about <m>(a_n)</m> itself?
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        (a) <m>|a_n| = n/(n+1) \lt 1</m>, so <m>|a_n| \leq 1</m> for all
+        <m>n</m>; the sequence is bounded.
+        (b) The even subsequence <m>a_{2k} = 2k/(2k+1) \to 1</m>
+        (limit laws: divide by <m>2k</m>).
+        (c) The odd subsequence <m>a_{2k-1} = -(2k-1)/(2k) \to -1</m>.
+        Two subsequences with different limits implies <m>(a_n)</m>
+        itself diverges.
+      </p>
+    </answer>
+  </exercise>
+
+  <!-- ============================================================
+       SECTION 2.4: CAUCHY SEQUENCES
+  ============================================================ -->
+
+  <paragraphs xml:id="par-mod4-sg-24-intro">
+    <title>Section 2.4: Cauchy Sequences (Zorn pp. 114&#x2013;120)</title>
+    <p>
+      Section 2.4 reframes convergence without reference to a limit.
+      Read Definition 2.17 and Theorem 2.20 carefully. The equivalence
+      of <q>convergent</q> and <q>Cauchy</q> in <m>\R</m> is another
+      face of completeness&#x2014;in <m>\Q</m> it fails.
+    </p>
+  </paragraphs>
+
+  <exercise xml:id="ex-mod4-sg-24-1">
+    <title>The Cauchy Definition</title>
+    <statement>
+      <p>
+        State Zorn's definition of a Cauchy sequence symbolically.
+        Identify every quantifier and its type.
+      </p>
+      <p>
+        Compare to the definition of convergence. Which <em>variable</em>
+        appears in the convergence definition but is <em>absent</em>
+        from the Cauchy definition? What is the conceptual significance
+        of that absence?
+      </p>
+    </statement>
+    <answer>
+      <p>
+        <m>\forall \varepsilon \gt 0\ \exists N \in \N\ \forall m, n \geq N:
+        |a_m - a_n| \lt \varepsilon</m>. The absent variable is the
+        limit <m>L</m>: the Cauchy definition talks only about the
+        terms of the sequence among themselves. Conceptually, this is
+        what makes Cauchy a <q>purely internal</q> notion of convergence,
+        definable without reference to an external candidate limit.
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise xml:id="ex-mod4-sg-24-2">
+    <title>Convergent Implies Cauchy</title>
+    <statement>
+      <p>
+        Read Zorn's proof that every convergent sequence is Cauchy
+        (Proposition 2.18 or its analogue). The core identity is
+        <md>a_m - a_n = (a_m - L) + (L - a_n).</md>
+        Explain how this identity, combined with the Triangle Inequality
+        and the <m>\varepsilon/2</m>-split, delivers the Cauchy
+        conclusion.
+      </p>
+      <p>
+        Is the Completeness Axiom used in this direction of the proof?
+      </p>
+    </statement>
+    <answer>
+      <p>
+        By the Triangle Inequality applied to the identity,
+        <m>|a_m - a_n| \leq |a_m - L| + |L - a_n|</m>. If
+        <m>a_n \to L</m>, pick <m>N</m> so that <m>|a_k - L| \lt \varepsilon/2</m>
+        for <m>k \geq N</m>; then for <m>m, n \geq N</m>,
+        <m>|a_m - a_n| \lt \varepsilon/2 + \varepsilon/2 = \varepsilon</m>.
+        Completeness is <em>not</em> used in this direction: the
+        existence of <m>L</m> is given by hypothesis.
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise xml:id="ex-mod4-sg-24-3">
+    <title>Cauchy Implies Convergent (where completeness enters)</title>
+    <statement>
+      <p>
+        Read Zorn's proof that in <m>\R</m>, every Cauchy sequence
+        converges. The argument has three steps:
+      </p>
+      <p>
+        Step 1: A Cauchy sequence is bounded.
+        Step 2: By Bolzano&#x2013;Weierstrass, a bounded sequence has
+        a convergent subsequence.
+        Step 3: A Cauchy sequence with a convergent subsequence converges.
+      </p>
+      <p>
+        For each step, identify: what theorem or property of <m>\R</m>
+        does it use, and is completeness needed?
+      </p>
+      <p>
+        Conclude: In <m>\Q</m>, Cauchy sequences need not converge.
+        Give one familiar example.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        Step 1: direct argument using the Cauchy property with
+        <m>\varepsilon = 1</m>; no completeness needed.
+        Step 2: Bolzano&#x2013;Weierstrass, which does use completeness
+        (either through MCT or through a nested-intervals argument).
+        Step 3: Triangle-inequality argument; no additional completeness.
+        Thus completeness enters via Step 2.
+        In <m>\Q</m>: any Cauchy sequence of rationals converging to
+        <m>\sqrt{2}</m> in <m>\R</m>, e.g., the decimal truncations
+        <m>1, 1.4, 1.41, 1.414, \ldots</m>, is Cauchy in <m>\Q</m>
+        but has no limit in <m>\Q</m>.
+      </p>
+    </answer>
+  </exercise>
+
+</section>

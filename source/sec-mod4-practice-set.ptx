@@ -1,0 +1,331 @@
+<section xml:id="sec-mod4-practice-set">
+  <title>Module 4: Practice Problem Set</title>
+  <p>Estimated time: 110 minutes</p>
+
+    <p>
+      Problems are labeled <m>[\mathbf{F}]</m> (Foundational),
+      <m>[\mathbf{S}]</m> (Standard), and <m>[\mathbf{C}]</m>
+      (Challenge). Work in order within each level; later problems
+      in a level often build on earlier ones.
+    </p>
+    <p>
+      These problems are not submitted, but you should write out
+      complete solutions. For any problem that asks you to
+      <em>prove</em> something, apply the standards from the Worked
+      Examples: scratch work labeled and separate from the formal
+      proof, complete sentences, every step justified.
+    </p>
+
+  <!-- ============================================================
+       FOUNDATIONAL
+  ============================================================ -->
+
+  <paragraphs xml:id="par-mod4-ps-f">
+    <title>Foundational Problems</title>
+    <!-- TODO(quinn): sentence added in #4 to satisfy the schema; confirm or replace. -->
+    <p>
+      These problems practice the basic moves of the module:
+      identifying the limit of a sequence or recognizing divergence,
+      finding <m>N</m> for a given <m>\varepsilon</m>, deciding whether
+      a sequence is bounded or monotone, and evaluating limits with the
+      Algebra of Limits.
+    </p>
+  </paragraphs>
+
+  <exercise xml:id="ex-mod4-ps-f1">
+    <title><m>[\mathbf{F}]</m> Limit Intuition</title>
+    <statement>
+      <p>
+        For each sequence, state (without proof) its limit, or state
+        that it diverges. A one-sentence reason is enough.
+        <ol marker="(a)">
+          <li><m>a_n = \dfrac{3}{n + 5}</m></li>
+          <li><m>a_n = \dfrac{2n + 1}{n}</m></li>
+          <li><m>a_n = (-1)^n + \dfrac{1}{n}</m></li>
+          <li><m>a_n = \dfrac{n^2}{n + 1}</m></li>
+        </ol>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        (a) Converges to 0 (numerator fixed, denominator <m>\to \infty</m>).
+        (b) <m>2 + 1/n \to 2</m>.
+        (c) Diverges: even subsequence <m>\to 1</m>, odd subsequence
+        <m>\to -1</m>.
+        (d) <m>a_n = n - n/(n+1)</m>, which grows without bound;
+        diverges.
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise xml:id="ex-mod4-ps-f2">
+    <title><m>[\mathbf{F}]</m> Finding <m>N</m> Given <m>\varepsilon</m></title>
+    <statement>
+      <p>
+        For <m>a_n = 1/n</m> and each of the given tolerances
+        <m>\varepsilon</m>, find the smallest <m>N \in \N</m> such
+        that <m>|a_n - 0| \lt \varepsilon</m> for all <m>n \geq N</m>.
+        Show your work.
+        <ol marker="(a)">
+          <li><m>\varepsilon = 0.1</m></li>
+          <li><m>\varepsilon = 0.01</m></li>
+          <li><m>\varepsilon = 1/10^6</m></li>
+          <li>(general) <m>\varepsilon \gt 0</m>, in terms of <m>\varepsilon</m>.</li>
+        </ol>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        We need <m>n \gt 1/\varepsilon</m>.
+        (a) <m>N = 11</m> (smallest integer exceeding 10).
+        (b) <m>N = 101</m>.
+        (c) <m>N = 10^6 + 1</m>.
+        (d) Any integer <m>N \gt 1/\varepsilon</m>; by the Archimedean
+        Property, such <m>N</m> exists, and one standard choice is
+        <m>N = \lfloor 1/\varepsilon \rfloor + 1</m>.
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise xml:id="ex-mod4-ps-f3">
+    <title><m>[\mathbf{F}]</m> Bounded, Monotone, or Both?</title>
+    <statement>
+      <p>
+        For each sequence, decide whether it is (i) bounded, (ii)
+        monotone (increasing or decreasing), or (iii) neither. Briefly
+        justify each answer.
+        <ol marker="(a)">
+          <li><m>a_n = n</m></li>
+          <li><m>a_n = (-1)^n</m></li>
+          <li><m>a_n = \dfrac{n}{n + 1}</m></li>
+          <li><m>a_n = \dfrac{1}{n^2}</m></li>
+        </ol>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        (a) Monotone increasing; not bounded (above).
+        (b) Bounded; not monotone.
+        (c) Bounded (<m>0 \lt a_n \lt 1</m>) and monotone increasing
+        (check <m>a_{n+1} - a_n = 1/((n+1)(n+2)) \gt 0</m>).
+        (d) Bounded (<m>0 \lt a_n \leq 1</m>) and monotone decreasing.
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise xml:id="ex-mod4-ps-f4">
+    <title><m>[\mathbf{F}]</m> Algebra of Limits</title>
+    <statement>
+      <p>
+        Use the Algebra of Limits (and the known limit <m>1/n \to 0</m>)
+        to evaluate each limit. Write out which limit law you invoke at
+        each step.
+        <ol marker="(a)">
+          <li><m>\displaystyle\lim_{n \to \infty} \left(5 - \dfrac{3}{n}\right)</m></li>
+          <li><m>\displaystyle\lim_{n \to \infty} \dfrac{2n - 1}{n + 4}</m></li>
+          <li><m>\displaystyle\lim_{n \to \infty} \dfrac{n^2 + 3}{2n^2 - n}</m></li>
+        </ol>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        (a) <m>5 - 0 = 5</m> (sum/difference rule).
+        (b) Divide by <m>n</m>: <m>(2 - 1/n)/(1 + 4/n) \to 2/1 = 2</m>
+        (sum, quotient, <m>1/n \to 0</m>).
+        (c) Divide by <m>n^2</m>: <m>(1 + 3/n^2)/(2 - 1/n) \to 1/2</m>
+        (sum, quotient, <m>1/n^2 \to 0</m> via product rule,
+        <m>1/n \to 0</m>).
+      </p>
+    </answer>
+  </exercise>
+
+  <!-- ============================================================
+       STANDARD
+  ============================================================ -->
+
+  <paragraphs xml:id="par-mod4-ps-s">
+    <title>Standard Problems</title>
+    <!-- TODO(quinn): sentence added in #4 to satisfy the schema; confirm or replace. -->
+    <p>
+      These problems apply the same moves to longer arguments: a direct
+      <m>\varepsilon</m>-<m>N</m> proof of convergence, a proof using the
+      Squeeze Theorem, a proof that a convergent sequence is bounded, and
+      a proof of divergence from the negation of the definition of
+      convergence.
+    </p>
+  </paragraphs>
+
+  <exercise xml:id="ex-mod4-ps-s1">
+    <title><m>[\mathbf{S}]</m> A Direct <m>\varepsilon</m>-<m>N</m> Proof</title>
+    <statement>
+      <p>
+        Prove directly from the definition of convergence that
+        <md>a_n = \frac{5n + 3}{2n + 1} \longrightarrow \frac{5}{2}.</md>
+      </p>
+      <p>
+        Your proof must follow the template from Worked Example 1:
+        explicit scratch work, clearly labeled, that derives the
+        relationship between <m>n</m> and <m>\varepsilon</m>; followed
+        by the formal proof written in complete sentences, with every
+        inequality in the verification step justified.
+      </p>
+    </statement>
+    <hint>
+      <p>
+        Compute
+        <md>\left|\frac{5n + 3}{2n + 1} - \frac{5}{2}\right|
+        = \left|\frac{2(5n+3) - 5(2n+1)}{2(2n+1)}\right|
+        = \frac{1}{2(2n+1)}.</md>
+        Then find the condition on <m>n</m> for this to be less than
+        <m>\varepsilon</m>, and apply the Archimedean Property.
+      </p>
+    </hint>
+  </exercise>
+
+  <exercise xml:id="ex-mod4-ps-s2">
+    <title><m>[\mathbf{S}]</m> The Squeeze Theorem</title>
+    <statement>
+      <p>
+        Prove that
+        <md>b_n = \frac{\sin(n)}{n} \longrightarrow 0.</md>
+        Use the Squeeze Theorem (Theorem 2.6). Your proof should
+        (i) explicitly identify two bounding sequences
+        <m>a_n \leq b_n \leq c_n</m>, (ii) state what each of those
+        sequences converges to (and why), and (iii) invoke the
+        Squeeze Theorem by name.
+      </p>
+    </statement>
+    <hint>
+      <p>
+        For any real number <m>t</m>, <m>-1 \leq \sin(t) \leq 1</m>,
+        so <m>-1/n \leq \sin(n)/n \leq 1/n</m>. Both outer sequences
+        tend to 0.
+      </p>
+    </hint>
+  </exercise>
+
+  <exercise xml:id="ex-mod4-ps-s3">
+    <title><m>[\mathbf{S}]</m> Convergent Implies Bounded</title>
+    <statement>
+      <p>
+        Prove that if <m>a_n \to L</m>, then <m>(a_n)</m> is bounded.
+        Write a complete proof. (This is Theorem 2.4 in Zorn; the
+        argument was sketched in the study guide.)
+      </p>
+      <p>
+        Your proof should use the definition of convergence with
+        <m>\varepsilon = 1</m> to bound the <em>tail</em> of the
+        sequence, then use the finiteness of the initial segment
+        to bound the whole sequence.
+      </p>
+    </statement>
+    <hint>
+      <p>
+        By convergence with <m>\varepsilon = 1</m>, pick <m>N</m> so
+        that <m>|a_n - L| \lt 1</m> for <m>n \geq N</m>. The Triangle
+        Inequality then gives <m>|a_n| \leq |L| + 1</m> for <m>n \geq N</m>.
+        Bound <m>|a_1|, \ldots, |a_{N-1}|</m> by their maximum, and
+        combine.
+      </p>
+    </hint>
+  </exercise>
+
+  <exercise xml:id="ex-mod4-ps-s4">
+    <title><m>[\mathbf{S}]</m> Proving Divergence via Negation</title>
+    <statement>
+      <p>
+        Prove that the sequence <m>a_n = (-1)^n</m> diverges.
+      </p>
+      <p>
+        Your argument must use the <em>negation</em> of the definition
+        of convergence (as developed in the study guide): for any
+        candidate limit <m>L \in \R</m>, exhibit a specific
+        <m>\varepsilon_0 \gt 0</m> for which the convergence definition
+        fails.
+      </p>
+      <p>
+        A proof via two subsequences with different limits is elegant
+        but <em>not</em> what this problem asks for. Use the raw
+        definition.
+      </p>
+    </statement>
+    <hint>
+      <p>
+        Let <m>L \in \R</m>. Since adjacent terms satisfy
+        <m>|a_n - a_{n+1}| = 2</m>, the Triangle Inequality implies
+        <m>|a_n - L| + |a_{n+1} - L| \geq 2</m>, so at least one of
+        the two is at least 1. Use this with <m>\varepsilon_0 = 1</m>.
+      </p>
+    </hint>
+  </exercise>
+
+  <!-- ============================================================
+       CHALLENGE
+  ============================================================ -->
+
+  <paragraphs xml:id="par-mod4-ps-c">
+    <title>Challenge Problems</title>
+    <!-- TODO(quinn): sentence added in #4 to satisfy the schema; confirm or replace. -->
+    <p>
+      These problems extend the module's ideas: a proof from the
+      definition that <m>(1/n)</m> is a Cauchy sequence, and a proof using
+      the Bolzano<ndash/>Weierstrass Theorem that a bounded sequence
+      converges to <m>L</m> when every convergent subsequence does.
+    </p>
+  </paragraphs>
+
+  <exercise xml:id="ex-mod4-ps-c1">
+    <title><m>[\mathbf{C}]</m> A Cauchy Proof from Definition</title>
+    <statement>
+      <p>
+        Let <m>a_n = \dfrac{1}{n}</m>. Prove directly from the
+        definition of Cauchy sequence that <m>(a_n)</m> is Cauchy.
+      </p>
+      <p>
+        You may not use the theorem <q>convergent implies Cauchy</q>
+        even though it would close this problem in one line. The
+        goal is to produce, given <m>\varepsilon \gt 0</m>, an
+        explicit <m>N \in \N</m> such that
+        <m>m, n \geq N \Rightarrow |a_m - a_n| \lt \varepsilon</m>.
+      </p>
+    </statement>
+    <hint>
+      <p>
+        Without loss of generality <m>m \geq n \geq N</m>. Then
+        <md>|a_m - a_n| = \left|\frac{1}{m} - \frac{1}{n}\right|
+        = \frac{n - m}{mn} \cdot (\text{sign})</md>
+        so <m>|a_m - a_n| \leq 1/n \leq 1/N</m>. Choose <m>N \gt 1/\varepsilon</m>.
+      </p>
+    </hint>
+  </exercise>
+
+  <exercise xml:id="ex-mod4-ps-c2">
+    <title><m>[\mathbf{C}]</m> Applying Bolzano&#x2013;Weierstrass</title>
+    <statement>
+      <p>
+        Let <m>(a_n)</m> be a bounded sequence of real numbers.
+        Suppose that every convergent subsequence of <m>(a_n)</m>
+        converges to the same limit <m>L</m>. Prove that
+        <m>a_n \to L</m>.
+      </p>
+      <p>
+        This is the converse direction of the subsequence-inheritance
+        result, with an extra hypothesis. It illustrates why
+        Bolzano&#x2013;Weierstrass is the right tool for controlling
+        sequences whose convergence you cannot verify directly.
+      </p>
+    </statement>
+    <hint>
+      <p>
+        Proof by contradiction. If <m>a_n \not\to L</m>, there exists
+        <m>\varepsilon_0 \gt 0</m> and a subsequence <m>(a_{n_k})</m>
+        with <m>|a_{n_k} - L| \geq \varepsilon_0</m> for all <m>k</m>.
+        This subsequence is bounded; by Bolzano&#x2013;Weierstrass it
+        has a further convergent sub-subsequence, which by hypothesis
+        converges to <m>L</m>. But all its terms are at least
+        <m>\varepsilon_0</m> away from <m>L</m> — contradiction.
+      </p>
+    </hint>
+  </exercise>
+
+</section>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ch-mod4">
+  <title>Module 4: Sequences — Convergence and Key Theorems</title>
+
+  <xi:include href="sec-mod4-orientation.ptx"/>
+  <xi:include href="sec-mod4-study-guide.ptx"/>
+  <xi:include href="sec-mod4-worked-examples.ptx"/>
+  <xi:include href="sec-mod4-practice-set.ptx"/>
+  <xi:include href="sec-mod4-bridge-reading.ptx"/>
+  <xi:include href="sec-mod4-assessment.ptx"/>
+
+</chapter>

@@ -1,0 +1,233 @@
+<section xml:id="sec-mod4-bridge-reading">
+  <title>Module 4: Bridge Reading Guide</title>
+  <p>Bauldry §2.5 — Estimated time: 40 minutes</p>
+
+    <p>
+      Every module ends with a bridge reading in Bauldry's
+      <em>Introduction to Real Analysis</em>. These readings orient
+      you toward MAT 5610 by showing you how the material you just
+      learned looks in the course's primary text. Bauldry's style is
+      more compressed than Zorn's: a definition that takes Zorn a
+      half-page may occupy a single sentence in Bauldry; a theorem
+      whose proof Zorn laid out in four paragraphs may be dispatched
+      by Bauldry in two. The goal is not to master Bauldry yet, but
+      to begin reading him fluently.
+    </p>
+    <p>
+      <alert>For this module, read:</alert>
+      Bauldry &#xa7;2.5 (<q>Sequences</q>, approximately pp. 88&#x2013;99).
+      This single section covers everything you studied in Zorn
+      &#xa7;2.1&#x2013;2.4.
+    </p>
+
+  <!-- ============================================================
+       PART 1: THE DEFINITION OF CONVERGENCE
+  ============================================================ -->
+
+  <paragraphs xml:id="par-mod4-br-defn">
+    <title>Bauldry's Definition of Convergence</title>
+    <p>
+      Bauldry Definition 2.15 (or nearby) gives the
+      <m>\varepsilon</m>-<m>N</m> definition of convergence. Its
+      symbolic content is identical to Zorn's, but Bauldry's wording
+      and typographic style differ. Read it carefully.
+    </p>
+  </paragraphs>
+
+  <exercise xml:id="ex-mod4-br-1">
+    <title>Locating and Reading the Definition</title>
+    <statement>
+      <p>
+        Find Bauldry's <m>\varepsilon</m>-<m>N</m> definition of
+        convergence in &#xa7;2.5.
+        <ol marker="(a)">
+          <li>
+            Copy Bauldry's exact statement of the definition
+            (one or two sentences).
+          </li>
+          <li>
+            Identify each quantifier and its type (<m>\forall</m> or
+            <m>\exists</m>), in the order they appear. Is the order
+            identical to Zorn's?
+          </li>
+          <li>
+            Bauldry and Zorn use slightly different notation for the
+            limit (e.g., <m>\lim a_n = L</m> vs. <m>a_n \to L</m>).
+            Note which variants Bauldry uses; you should be able to
+            read all of them.
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod4-br-2">
+    <title>Bauldry's First Theorem on Sequences</title>
+    <statement>
+      <p>
+        Bauldry states and proves the <em>uniqueness of the limit</em>
+        (Theorem 2.48 or its analogue) immediately after the definition.
+        <ol marker="(a)">
+          <li>
+            State the uniqueness theorem in your own words.
+          </li>
+          <li>
+            Bauldry's proof is likely a short argument by contradiction
+            using the <m>\varepsilon/2</m> trick. What is the
+            contradiction, and how is the Triangle Inequality used?
+          </li>
+          <li>
+            Did the proof depend on completeness, or only on the
+            definition of convergence and the Triangle Inequality?
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <!-- ============================================================
+       PART 2: THE BIG STRUCTURAL THEOREMS
+  ============================================================ -->
+
+  <paragraphs xml:id="par-mod4-br-mct">
+    <title>The Monotone Convergence Theorem in Bauldry</title>
+    <p>
+      Bauldry states a version of the Monotone Convergence Theorem as
+      Theorem 2.53 (or the numbered theorem whose statement matches
+      <q>a bounded monotone sequence converges</q>). Read it and its
+      proof carefully; this is one of the key places where Bauldry
+      uses the Completeness Axiom.
+    </p>
+  </paragraphs>
+
+  <exercise xml:id="ex-mod4-br-3">
+    <title>Tracking Completeness in Bauldry's MCT Proof</title>
+    <statement>
+      <p>
+        Read Bauldry's proof of the Monotone Convergence Theorem.
+        <ol marker="(a)">
+          <li>
+            What is the analog of the set <m>S = \{a_n\}</m> in
+            Bauldry's proof? Does he work with this set explicitly,
+            or with the sequence directly?
+          </li>
+          <li>
+            At what sentence does the Completeness Axiom enter, and
+            what object does it produce?
+          </li>
+          <li>
+            Locate the step that uses the
+            <m>\varepsilon</m>-characterization of the supremum. Is
+            this characterization proved earlier in Bauldry, or stated
+            as part of the axiom itself?
+          </li>
+          <li>
+            Is Bauldry's proof structurally identical to the one in
+            the Module 4 study guide (ex-mod4-sg-23-2), or does he
+            organize the argument differently? Note one step you had
+            to unpack or fill in when reading it.
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod4-br-4">
+    <title>The Bolzano&#x2013;Weierstrass Theorem</title>
+    <statement>
+      <p>
+        Locate Bauldry's statement and proof (or sketch) of
+        Bolzano&#x2013;Weierstrass (Theorem 2.54 or the numbered
+        theorem whose statement matches <q>every bounded sequence has
+        a convergent subsequence</q>).
+        <ol marker="(a)">
+          <li>
+            State the theorem precisely in your own words.
+          </li>
+          <li>
+            Which proof strategy does Bauldry use: the
+            monotone-subsequence approach, the bisection
+            (nested-intervals) approach, or something else?
+          </li>
+          <li>
+            Identify the step in Bauldry's proof at which completeness
+            is used. Is it used directly (via the Completeness Axiom)
+            or indirectly (via a theorem already proved from
+            completeness)?
+          </li>
+          <li>
+            Bauldry's proof is likely more compressed than Zorn's.
+            Name one sentence in Bauldry's proof that, if given to
+            someone unfamiliar with the argument, would require them
+            to fill in implicit reasoning.
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <!-- ============================================================
+       PART 3: CAUCHY SEQUENCES
+  ============================================================ -->
+
+  <paragraphs xml:id="par-mod4-br-cauchy">
+    <title>Cauchy Sequences in Bauldry</title>
+    <p>
+      Bauldry's definition of Cauchy sequence (Definition 2.16 or its
+      analogue) and the equivalence with convergence in <m>\R</m>
+      (Theorem 2.55 or its analogue) close out his treatment of
+      sequences. This is the same equivalence you studied in
+      Zorn &#xa7;2.4, but Bauldry's phrasing is slightly different.
+    </p>
+  </paragraphs>
+
+  <exercise xml:id="ex-mod4-br-5">
+    <title>The Cauchy Equivalence</title>
+    <statement>
+      <p>
+        Locate Bauldry's statement of the equivalence
+        <q>Cauchy <m>\iff</m> convergent (in <m>\R</m>).</q>
+        <ol marker="(a)">
+          <li>
+            State the theorem precisely. Does Bauldry call <m>\R</m>
+            <em>complete</em> (in the Cauchy sense) as a consequence?
+          </li>
+          <li>
+            Bauldry's proof has two directions. Which one uses
+            completeness, and via which earlier theorem?
+          </li>
+          <li>
+            The other direction&#x2014;convergent implies Cauchy&#x2014;can
+            be proved without completeness. Outline Bauldry's argument
+            in one or two sentences.
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <!-- ============================================================
+       PART 4: SCANNING AHEAD
+  ============================================================ -->
+
+  <exercise xml:id="ex-mod4-br-6">
+    <title>Where Do Sequences Reappear in Bauldry?</title>
+    <statement>
+      <p>
+        Scan the section headings and theorem statements in Bauldry
+        beyond &#xa7;2.5. Find at least two theorems elsewhere in
+        Chapter 2 whose statements or proofs invoke sequences
+        directly (for example, the sequential characterization of
+        continuity, or the use of a sequence to build a point with
+        a desired property).
+      </p>
+      <p>
+        For each result you find: state its name or number, and
+        write one sentence explaining in what way sequence convergence
+        enters the argument. (You are not expected to read the full
+        proofs yet; identifying where sequences appear is enough.)
+      </p>
+    </statement>
+  </exercise>
+
+</section>
