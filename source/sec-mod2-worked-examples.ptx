@@ -112,9 +112,8 @@
         Adding these inequalities gives
         <md>-(|x| + |y|) \leq x + y \leq |x| + |y|.</md>
         This says <m>|x + y| \leq |x| + |y|</m> by the non-strict form
-        of Theorem 1.23(c), <m>|u| \leq k \iff -k \leq u \leq k</m>
-        for <m>k \geq 0</m> (stated in <xref ref="ex-mod2-sg-17-2"/>),
-        with <m>u = x + y</m> and <m>k = |x| + |y|</m>. <m>\square</m>
+        of Theorem 1.23(c) (see <xref ref="ex-mod2-sg-17-2"/>), with
+        <m>u = x + y</m> and <m>k = |x| + |y|</m>. <m>\square</m>
       </p>
       <p>
         <alert>What to notice.</alert>

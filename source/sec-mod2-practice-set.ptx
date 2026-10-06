@@ -241,7 +241,8 @@
           <li>
             Prove your answer for <m>\sup U</m> by verifying
             both conditions in the definition of supremum.
-            For condition (ii), note that <m>\sqrt{5} \in U</m>.
+            For condition (ii), note that <m>\sqrt{5} \in U</m>, so
+            every upper bound of <m>U</m> is at least <m>\sqrt{5}</m>.
           </li>
         </ol>
       </p>
@@ -275,7 +276,8 @@
       <p>
         Since both <m>s</m> and <m>s'</m> are upper bounds of <m>S</m>,
         and both are least upper bounds, use the second condition of
-        the definition (a supremum is at most every upper bound) to show <m>s \leq s'</m> and <m>s' \leq s</m>.
+        the definition (a supremum is at most every upper bound) to
+        show <m>s \leq s'</m> and <m>s' \leq s</m>.
       </p>
     </hint>
   </exercise>
@@ -292,7 +294,7 @@
         <!-- TODO(quinn): verify against the statement of Bauldry's Theorem 2.3. -->
         (This is the case <m>\varepsilon = 1</m> of Bauldry's Theorem 2.3,
         stated for every real <m>x</m> rather than only <m>x \gt 0</m>.
-        Working through it yourself before the Bridge Reading will
+        Working through the argument yourself before the Bridge Reading will
         make Bauldry's proof much easier to follow.)
       </p>
     </statement>

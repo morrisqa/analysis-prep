@@ -67,7 +67,7 @@
     <title>The Archimedean Order Property</title>
     <p>
       Theorem 2.3 in Bauldry is the Archimedean Order Property. In
-      <xref ref="ch-mod1" text="custom">Module 1</xref> you read its
+      <xref ref="ch-mod1" text="custom">Module 1</xref> you read the
       proof for its logical structure; now you will read it again, with
       attention to how it uses the Completeness Axiom.
     </p>
@@ -153,11 +153,12 @@
           </li>
           <li>
             Which step of the proof uses the Archimedean Property?
-            Explain how that step depends, through the Archimedean
-            Property, on the Completeness Axiom.
+            Explain how that step therefore depends on the
+            Completeness Axiom.
           </li>
           <li>
-            In plain English, in what sense is <m>\Q</m> dense in
+            In plain English, in what sense does density mean that
+            <m>\Q</m> is not a <q>thin</q> or <q>sparse</q> subset of
             <m>\R</m>, even though <m>\R \setminus \Q</m>
             is uncountable?
           </li>

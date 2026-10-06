@@ -215,18 +215,6 @@
     </statement>
   </exercise>
 
-  <!-- TODO(quinn): paragraph added in #10 (math fixes); confirm or replace. Check that it matches Zorn's definition in Section 1.8. -->
-  <p>
-    In this module, the <em>definition</em> of the <term>supremum</term> is
-    the following: <m>s = \sup S</m> if (i) <m>s</m> is an upper bound of
-    <m>S</m>, and (ii) <m>s \leq u</m> for every upper bound <m>u</m> of
-    <m>S</m>. The next exercise gives an equivalent condition, the
-    <m>\varepsilon</m>-characterization. When an exercise asks for
-    <q>the definition</q>, verify (i) and (ii) as stated here; when it
-    asks for the <m>\varepsilon</m>-characterization, verify the two
-    conditions in the next exercise.
-  </p>
-
   <exercise xml:id="ex-mod2-sg-18-4">
     <title>The <m>\varepsilon</m>-Characterization of the Supremum</title>
     <statement>
@@ -240,7 +228,9 @@
             <m>x \in S</m> with <m>s - \varepsilon \lt x \leq s</m>.
           </li>
         </ol>
-        Condition (ii) is called the <m>\varepsilon</m>-characterization.
+        Condition (i) is the same as in the definition; condition (ii)
+        replaces the definition's second condition. Together, (i) and
+        (ii) are called the <m>\varepsilon</m>-characterization.
         In plain English, what does condition (ii) say about how
         <m>s</m> relates to the elements of <m>S</m>?
         Why does it guarantee that no number smaller than <m>s</m>
@@ -248,6 +238,18 @@
       </p>
     </statement>
   </exercise>
+
+  <!-- TODO(quinn): paragraph added in #10 (math fixes); confirm or replace. Check that the definition matches Zorn's in Section 1.8. -->
+  <p>
+    You now have two equivalent ways to show <m>s = \sup S</m>.
+    The definition: <m>s</m> is an
+    upper bound of <m>S</m>, and <m>s \leq u</m> for every upper bound
+    <m>u</m> of <m>S</m>. The <m>\varepsilon</m>-characterization:
+    <m>s</m> is an upper bound of <m>S</m>, and for every
+    <m>\varepsilon \gt 0</m> there exists <m>x \in S</m> with
+    <m>s - \varepsilon \lt x \leq s</m>. Exercises say which one to
+    verify.
+  </p>
 
   <!-- ============================================================
        SECTION 1.9: COMPLETENESS
@@ -293,13 +295,14 @@
         and <m>2^2 = 4 \gt 2</m>, so <m>x \lt 2</m> for all <m>x \in T</m>.
         (b) Suppose <m>q \in \Q</m> were a supremum of <m>T</m>.
         Since <m>1 \in T</m>, <m>q \geq 1</m>.
-        Then <m>q^2 \geq 2</m> (since <m>q</m> is an upper bound: if
-        <m>q^2 \lt 2</m>, a rational strictly between <m>q</m> and
-        <m>\sqrt{2}</m> would be an element of <m>T</m> greater than
-        <m>q</m>).
+        If <m>q^2 \lt 2</m>, we can find a rational <m>r</m> with
+        <m>q \lt r \lt \sqrt{2}</m>; since <m>0 \lt r \lt \sqrt{2}</m>,
+        <m>r^2 \lt 2</m>, so <m>r</m> is an element of <m>T</m> greater
+        than <m>q</m>, contradicting that <m>q</m> is an upper bound.
+        So <m>q^2 \geq 2</m>.
         But <m>q^2 = 2</m> would mean <m>q = \sqrt{2} \notin \Q</m>
         (as <m>q \gt 0</m>), contradiction. And if <m>q^2 \gt 2</m>,
-        one can find a rational <m>r</m> strictly between
+        we can find a rational <m>r</m> strictly between
         <m>\sqrt{2}</m> and <m>q</m>. Since <m>r \gt \sqrt{2} \gt 0</m>,
         we have <m>r^2 \gt 2 \gt x^2</m>, and hence <m>x \lt r</m>, for
         every <m>x \in T</m>. So <m>r</m> is a rational upper bound of
