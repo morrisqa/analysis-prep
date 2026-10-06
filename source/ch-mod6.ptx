@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ch-mod6">
+  <title>Module 6: Limits, Continuity, and Uniform Continuity</title>
+
+  <xi:include href="sec-mod6-orientation.ptx"/>
+  <xi:include href="sec-mod6-study-guide.ptx"/>
+  <xi:include href="sec-mod6-worked-examples.ptx"/>
+  <xi:include href="sec-mod6-practice-set.ptx"/>
+  <xi:include href="sec-mod6-bridge-reading.ptx"/>
+  <xi:include href="sec-mod6-assessment.ptx"/>
+
+</chapter>
