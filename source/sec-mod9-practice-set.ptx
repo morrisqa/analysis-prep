@@ -90,7 +90,7 @@
     <title><m>[\mathbf{F}]</m> Sup-Norm Computations</title>
     <statement>
       <p>
-        For each sequence in F1, compute
+        For each of the first three sequences in F1, compute
         <m>S_n = \sup_{x \in D} |f_n(x) - f(x)|</m>
         (where <m>f</m> is the pointwise limit from F1) and determine
         whether <m>S_n \to 0</m>.
@@ -214,7 +214,10 @@
     </statement>
     <answer>
       <p>
-        (a) <m>M_n = 5^n/n!</m>; <m>\sum 5^n/n! = e^5 \lt \infty</m>.
+        (a) <m>M_n = 5^n/n!</m>; <m>\sum M_n</m> converges by the Ratio
+        Test (the ratio <m>M_{n+1}/M_n = 5/(n+1) \to 0</m>), and in fact
+        <m>\sum_{n=1}^{\infty} 5^n/n! = e^5 - 1 \lt \infty</m> (the series
+        for <m>e^5</m> without its <m>n = 0</m> term).
         Uniform on <m>[-5,5]</m>.
       </p>
       <p>
@@ -223,7 +226,7 @@
       </p>
       <p>
         (c) <m>|(x/2)^n| \leq (1/2)^n =: M_n</m> on <m>[-1,1]</m>;
-        <m>\sum (1/2)^n = 1 \lt \infty</m>. Uniform on <m>[-1,1]</m>.
+        <m>\sum_{n=0}^{\infty} (1/2)^n = 2 \lt \infty</m>. Uniform on <m>[-1,1]</m>.
       </p>
     </answer>
   </exercise>
@@ -318,9 +321,13 @@
     <title><m>[\mathbf{S}]</m> Radius of Convergence and Uniform Convergence</title>
     <statement>
       <p>
-        Find the radius of convergence of each power series using the
-        Ratio Test. Then for each, state the largest set on which the
-        <m>M</m>-Test guarantees uniform convergence.
+        Find the radius of convergence <m>R</m> of each power series
+        <m>\sum a_n x^n</m> using the Ratio Test. Then, for each, determine
+        the values of <m>r \gt 0</m> for which the <m>M</m>-Test, applied
+        with <m>M_n = |a_n| r^n</m> (the largest value of
+        <m>|a_n x^n|</m> on <m>[-r,r]</m>), guarantees uniform convergence
+        on <m>[-r,r]</m>. In particular, decide whether <m>r = R</m> is
+        allowed.
         <ol marker="(a)">
           <li>
             <p>
@@ -343,16 +350,33 @@
     <answer>
       <p>
         (a) Ratio <m>\to |x|/3</m>. <m>R = 3</m>. Uniform on
-        <m>[-r,r]</m> for any <m>r \lt 3</m> (by <m>M</m>-Test with
-        <m>M_n = r^n/(n \cdot 3^n)</m>).
+        <m>[-r,r]</m> for any <m>0 \lt r \lt 3</m> (by <m>M</m>-Test with
+        <m>M_n = r^n/(n \cdot 3^n) \leq (r/3)^n</m>, a convergent geometric
+        bound). The value <m>r = 3</m> is not allowed: there
+        <m>M_n = 1/n</m>, and the harmonic series diverges. (In fact the
+        series itself diverges at <m>x = 3</m>.) No <m>r \gt 3</m> works
+        either: for <m>|x| \gt 3</m> the ratio tends to
+        <m>|x|/3 \gt 1</m>, so the series diverges at <m>x = r</m> by the
+        Ratio Test. In particular <m>\sum M_n</m>, which is the series at
+        <m>x = r</m>, diverges, and the series cannot converge uniformly on
+        <m>[-r,r]</m>, since it does not even converge at <m>x = r</m>.
       </p>
       <p>
         (b) Ratio <m>= (n+1)|x| \to \infty</m> for any <m>x \neq 0</m>.
-        <m>R = 0</m>: the series converges only at <m>x = 0</m>.
+        <m>R = 0</m>: the series converges only at <m>x = 0</m>. No
+        <m>r \gt 0</m> works, since the series diverges at every point of
+        <m>[-r,r]</m> other than <m>0</m>; the only set on which the series
+        converges (trivially uniformly) is <m>\{0\}</m>.
       </p>
       <p>
-        (c) Ratio <m>\to |x|</m>. <m>R = 1</m>. Uniform on <m>[-r,r]</m>
-        for any <m>r \lt 1</m>.
+        (c) Ratio <m>\to |x|</m>. <m>R = 1</m>. Here <m>r = R</m> is
+        allowed: for <m>0 \lt r \leq 1</m>,
+        <m>M_n = r^n/(n^2 + 1) \leq 1/(n^2 + 1)</m>, and
+        <m>\sum 1/(n^2+1)</m> converges by comparison with
+        <m>\sum 1/n^2</m>. So the series converges uniformly on
+        <m>[-1,1]</m>, and hence on every <m>[-r,r]</m> with
+        <m>r \leq 1</m>. No <m>r \gt 1</m> works, since the series
+        diverges at <m>x = r</m> (its terms do not tend to <m>0</m>).
       </p>
     </answer>
   </exercise>
@@ -430,15 +454,29 @@
       <p>
         Your proof must use the following steps: (i) show <m>f</m> is
         bounded (since each <m>f_n</m> is bounded and convergence is
-        uniform); (ii) estimate
+        uniform); (ii) show <m>f</m> is Riemann integrable by the
+        integrability criterion: prove that for every partition <m>P</m>
+        and every <m>N</m>,
+        <md>U(f,P) - L(f,P) \leq U(f_N,P) - L(f_N,P) + 2(b-a)\sup_x |f_N(x) - f(x)|,</md>
+        and use this to produce, for each <m>\varepsilon \gt 0</m>, a
+        partition <m>P</m> with <m>U(f,P) - L(f,P) \lt \varepsilon</m>;
+        (iii) estimate
         <m>\left|\int_a^b f_n - \int_a^b f\right| \leq
         (b-a) \cdot \sup_x |f_n(x) - f(x)|</m>;
-        (iii) conclude by the definition of limit.
+        (iv) conclude by the definition of limit.
       </p>
     </statement>
     <hint>
       <p>
-        For step (ii), use
+        For step (ii), compare the supremum and infimum of <m>f</m> and of
+        <m>f_N</m> on each subinterval: if <m>|f_N - f| \leq s</m> on
+        <m>[a,b]</m>, the supremum of <m>f</m> on a subinterval is at most
+        the supremum of <m>f_N</m> plus <m>s</m>, and the infimum is at
+        least the infimum of <m>f_N</m> minus <m>s</m>. Given
+        <m>\varepsilon</m>, choose <m>N</m> first (so that
+        <m>2(b-a)\sup_x|f_N(x) - f(x)| \lt 2\varepsilon/3</m>), and then
+        choose <m>P</m> using the integrability of <m>f_N</m>.
+        For step (iii), use
         <m>\left|\int_a^b (f_n - f)\right| \leq \int_a^b |f_n - f|
         \leq (b-a) \cdot \sup_x |f_n(x) - f(x)|</m>.
         For step (i): there exists <m>N</m> such that
@@ -461,17 +499,22 @@
       <p>
         Your proof must: (i) observe that <m>|a_n x^n| \leq |a_n| r^n</m>
         for <m>x \in [-r,r]</m>; (ii) show <m>\sum |a_n| r^n \lt \infty</m>
-        (use the definition of radius of convergence: the series
-        <m>\sum a_n r^n</m> converges absolutely because <m>r \lt R</m>);
+        (use the definition of radius of convergence: because
+        <m>r \lt R</m>, there is a point <m>x_1</m> with
+        <m>|x_1| \gt r</m> at which <m>\sum a_n x_1^n</m> converges;
+        compare <m>|a_n| r^n</m> with a geometric series);
         (iii) apply the Weierstrass <m>M</m>-Test with <m>M_n = |a_n| r^n</m>.
       </p>
     </statement>
     <hint>
       <p>
-        The key fact: since <m>r \lt R</m>, we can pick <m>r'</m> with
-        <m>r \lt r' \lt R</m> such that <m>\sum |a_n| (r')^n \lt \infty</m>.
-        Then <m>|a_n| r^n = |a_n| (r')^n \cdot (r/r')^n \leq C (r/r')^n</m>
-        for some <m>C</m>, and <m>\sum (r/r')^n \lt \infty</m>.
+        The key fact: since <m>\sum a_n x_1^n</m> converges, its terms
+        tend to <m>0</m>, and a convergent sequence is bounded, so there is
+        <m>C</m> with <m>|a_n x_1^n| \leq C</m> for all <m>n</m>. Put
+        <m>r' = |x_1|</m>. Then
+        <m>|a_n| r^n = |a_n| (r')^n \cdot (r/r')^n \leq C (r/r')^n</m>,
+        and <m>\sum (r/r')^n \lt \infty</m> because
+        <m>0 \lt r/r' \lt 1</m>. The Comparison Test finishes step (ii).
       </p>
     </hint>
   </exercise>

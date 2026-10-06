@@ -5,8 +5,9 @@
   <!-- ============================================================ -->
 
     <p>
-      This assessment has three parts. Parts 1 and 2 ask you to write
-      complete mathematical proofs, submitted for feedback. Part 3 is
+      This assessment has three parts. Part 1 asks you to write a
+      complete mathematical proof, and Part 2 a complete analysis with
+      every step justified; both are submitted for feedback. Part 3 is
       a short reflection. Submit all three parts together as a single
       document (PDF or typed file) through the course management system.
     </p>
@@ -19,7 +20,7 @@
       will not receive full credit.
     </p>
     <p>
-      <alert>A note on Part 2.</alert> Part 2 is a single required proof problem; there are no options to choose between. All students complete the same Part 2 problem.
+      <alert>A note on Part 2.</alert> Part 2 is a single required problem; there are no options to choose between. All students complete the same Part 2 problem.
     </p>
     <p>
       <alert>Academic integrity.</alert> Your proofs must be your own
@@ -54,8 +55,9 @@
             Use the definition of uniform convergence to obtain
             <m>N \in \N</m> such that <m>|f_n(x) - f(x)| \lt
             \varepsilon/3</m> for all <m>n \geq N</m> and all
-            <m>x \in [a,b]</m>. Specify the value of <m>N</m>
-            you fix.
+            <m>x \in [a,b]</m>. Say explicitly that you fix one
+            such <m>N</m>, and note that it does not depend on
+            <m>x</m>.
           </li>
           <li>
             <em>Choose <m>\delta</m> from continuity of <m>f_N</m>.</em>
@@ -104,29 +106,32 @@
     </p>
 
   <exercise xml:id="ex-mod9-as-2">
-    <title>The Sequence <m>f_n(x) = nx\,e^{-nx}</m></title>
+    <title>The Sequence <m>f_n(x) = n^2x(1-x)^n</m></title>
     <statement>
       <p>
-        Let <m>f_n(x) = nx\,e^{-nx}</m> for <m>x \in [0,1]</m>.
+        Let <m>f_n(x) = n^2x(1-x)^n</m> for <m>x \in [0,1]</m>.
       </p>
       <p>
         <ol marker="(i)">
           <li>
             <em>Pointwise limit.</em> Compute
             <m>\lim_{n \to \infty} f_n(x)</m> for each fixed
-            <m>x \in [0,1]</m>. (Handle <m>x = 0</m> and
-            <m>x \in (0,1]</m> separately.) Call the pointwise
+            <m>x \in [0,1]</m>. (Handle <m>x = 0</m>, <m>x = 1</m>, and
+            <m>x \in (0,1)</m> separately.) Call the pointwise
             limit <m>f(x)</m> and state it explicitly.
           </li>
           <li>
             <em>Supremum of <m>|f_n - f|</m>.</em> For each
             <m>n</m>, find the maximum of <m>|f_n(x) - f(x)|</m>
             over <m>x \in [0,1]</m>. (Use single-variable
-            calculus: differentiate, set equal to zero, check the
-            critical point.) Compute
+            calculus: differentiate, find the critical point in
+            <m>(0,1)</m>, and check that it gives the maximum.) Compute
             <m>\sup_{x \in [0,1]} |f_n(x) - f(x)|</m> and
             determine whether this supremum tends to <m>0</m>
-            as <m>n \to \infty</m>.
+            as <m>n \to \infty</m>. You may use the limit
+            <m>(1 + 1/n)^n \to e</m>, which is used in
+            <xref ref="ex-mod5-we-3" text="custom">Worked Example 3</xref>
+            of <xref ref="ch-mod5" text="custom">Module 5</xref>.
           </li>
           <li>
             <em>Uniform convergence verdict.</em> Does
@@ -137,24 +142,27 @@
             <em>Comparing integrals.</em> Compute
             <m>\displaystyle\lim_{n \to \infty} \int_0^1 f_n(x)\,dx</m>
             and <m>\displaystyle\int_0^1 f(x)\,dx</m>. Are they equal?
-            What does the discrepancy (if any) illustrate about the
-            relationship between pointwise convergence and interchange
-            of limits and integrals?
+            The term-by-term integration theorem would make them equal
+            if its hypotheses held. Which hypothesis of that theorem
+            fails for this sequence, and which hypotheses hold? Cite
+            your answers to (ii) and (iii).
           </li>
         </ol>
       </p>
     </statement>
     <hint>
       <p>
-        For part (i): recall that <m>nx \to \infty</m> as
-        <m>n \to \infty</m> when <m>x \gt 0</m>, so you need
-        <m>u e^{-u} \to 0</m> as <m>u \to \infty</m>&#x2014;which
-        follows from L'H&#x00F4;pital's rule or the standard
-        limit <m>e^u \gg u</m>.
-        For part (ii): differentiate <m>g(x) = nx\,e^{-nx}</m>
-        with respect to <m>x</m> and set <m>g'(x) = 0</m>.
-        For part (iv): use integration by parts
-        <m>\int_0^1 nx\,e^{-nx}\,dx</m>.
+        For part (i): for fixed <m>x \in (0,1)</m>, compare consecutive
+        terms <m>f_{n+1}(x)</m> and <m>f_n(x)</m>, and recall the tests
+        for series in <xref ref="ch-mod5" text="custom">Module 5</xref>.
+        For part (ii): differentiate <m>f_n</m> with respect to
+        <m>x</m> and factor the derivative.
+        For part (iv): find an antiderivative of <m>f_n</m> (the
+        substitution <m>u = 1 - x</m> suggests one), confirm it by
+        differentiating with the chain rule from
+        <xref ref="ch-mod7" text="custom">Module 7</xref>, and apply
+        Part 2 of the Fundamental Theorem of Calculus from
+        <xref ref="ch-mod8" text="custom">Module 8</xref>.
       </p>
     </hint>
   </exercise>
@@ -252,6 +260,12 @@
         <cell><p>Critical point found correctly in Part 2 (ii); sup computed and limit evaluated</p></cell>
         <cell><p>Maximum found with minor computational error</p></cell>
         <cell><p>Supremum not computed or wrong method used</p></cell>
+      </row>
+      <row>
+        <cell><p><alert>Part 2 analysis</alert></p></cell>
+        <cell><p>Pointwise limit in Part 2 (i) correct in all three cases; uniform-convergence verdict in (iii) justified from (ii); both integrals in (iv) computed correctly and the failed hypothesis named, with the hypotheses that hold identified</p></cell>
+        <cell><p>One of (i), (iii), (iv) incomplete or with a minor error, or the failed hypothesis named without justification</p></cell>
+        <cell><p>Pointwise limit wrong, verdict unsupported, or integrals not computed</p></cell>
       </row>
       <row>
         <cell><p><alert>Mathematical prose</alert></p></cell>
