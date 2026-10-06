@@ -1,0 +1,3 @@
+# Pin to the exact version you build with locally (run `pretext --version`).
+# The publisher agent updates this pin deliberately, never as a side effect.
+pretext==2.55.0

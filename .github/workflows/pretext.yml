@@ -1,0 +1,66 @@
+# Builds the PreTeXt project on every pull request.
+# On pushes to main, also deploys the HTML (with the PDF alongside) to GitHub Pages.
+#
+# One-time setup: Settings > Pages > Build and deployment > Source: "GitHub Actions".
+
+name: PreTeXt build and deploy
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    # Image maintained by the PreTeXt CLI team; includes TeX and the asset tools
+    # needed for PDF builds and generated images.
+    container: oscarlevin/pretext-full
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Install pinned PreTeXt CLI
+        run: |
+          python3 -m pip install -r requirements.txt \
+            || python3 -m pip install --break-system-packages -r requirements.txt
+          pretext --version
+
+      - name: Build HTML
+        run: pretext build web
+
+      - name: Build PDF
+        run: pretext build print
+
+      - name: Place PDF in the site
+        run: |
+          pdf="$(find output/print -maxdepth 1 -name '*.pdf' | head -n 1)"
+          if [ -n "$pdf" ]; then cp "$pdf" output/web/book.pdf; fi
+
+      - name: Upload site artifact
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: output/web
+
+  deploy:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,22 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/check-ptx.sh"
+          }
+        ]
+      }
+    ]
+  },
+  "permissions": {
+    "deny": [
+      "Bash(pretext deploy:*)",
+      "Bash(git push origin main:*)",
+      "Bash(git push origin gh-pages:*)"
+    ]
+  }
+}

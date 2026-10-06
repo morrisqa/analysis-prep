@@ -1,0 +1,9 @@
+output/
+generated-assets/
+.cache/
+.venv/
+__pycache__/
+*.aux
+*.log
+.DS_Store
+.claude/settings.local.json
