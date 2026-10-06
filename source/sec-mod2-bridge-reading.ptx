@@ -67,7 +67,7 @@
     <title>The Archimedean Order Property</title>
     <p>
       Theorem 2.3 in Bauldry is the Archimedean Order Property. In
-      <xref ref="ch-mod1" text="custom">Module 1</xref> you read the
+      <xref ref="ch-mod1"/> you read the
       proof for its logical structure; now you will read it again, with
       attention to how it uses the Completeness Axiom.
     </p>
@@ -85,7 +85,7 @@
           </li>
           <li>
             Identify the proof strategy. (One of the strategies from
-            Module 1: direct proof, contrapositive, or contradiction?)
+            <xref ref="ch-mod1"/>: direct proof, contrapositive, or contradiction?)
           </li>
           <li>
             What set does Bauldry construct in the proof, and why is

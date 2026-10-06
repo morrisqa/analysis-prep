@@ -17,7 +17,7 @@
       every test in a few pages, with examples but without full proofs.
       Treat &#xa7;1.6 as a <em>preview</em>: power series and Taylor
       series are topics you saw in calculus; reading them in Bauldry's
-      style sets you up for Module 9, where sequences and series of
+      style sets you up for <xref ref="ch-mod9"/>, where sequences and series of
       functions (uniform convergence, power series) take center stage.
     </p>
     <p>
@@ -159,7 +159,7 @@
       For a fixed value of <m>x</m>, this is just a series of numbers,
       and the Module 5 tests apply. For <m>x</m> ranging over an
       interval, we get a <em>function</em> defined wherever the series
-      converges. This is the subject of Module 9.
+      converges. This is the subject of <xref ref="ch-mod9"/>.
     </p>
     <p>
       <alert>A preview, not a full treatment.</alert>
@@ -266,7 +266,7 @@
             <q>sum</q> means for an infinite series.)
           </li>
           <li>
-            Bauldry does not prove Theorem 1.40 in &#xa7;1.6. Module 9
+            Bauldry does not prove Theorem 1.40 in &#xa7;1.6. <xref ref="ch-mod9"/>
             of this course (on <em>sequences and series of functions</em>)
             will develop the tool required to prove it: <em>uniform
             convergence</em>. Without reading ahead, make a guess: why
@@ -300,7 +300,7 @@
           </li>
           <li>
             Bauldry &#xa7;2.5 is the starting point of MAT 5610. Based
-            on what you have built in Modules 4 and 5, what fraction
+            on what you have built in Modules <xref ref="ch-mod4" text="custom">4</xref> and 5, what fraction
             of &#xa7;2.5 do you expect will be <em>review</em> (at a
             higher level of formality) versus <em>new material</em>?
             One or two sentences of impression is enough.

@@ -20,10 +20,12 @@
     </p>
     <p>
       <alert>A note on Part 2.</alert> All students complete all three
-      parts. For Part 2, choose the option that best matches your
-      background: if you have prior real analysis experience, challenge
-      yourself with Option B. If this is newer territory, Option A is
-      the right starting point.
+      parts. Part 2 offers two options. Option A asks you to show that
+      scaling a set by a positive constant scales its supremum, by
+      checking both conditions of the definition. Option B asks you to
+      derive the Archimedean Property from the Completeness Axiom by
+      contradiction, and is the more demanding. Choose the option that
+      will stretch you.
     </p>
     <p>
       <alert>Academic integrity.</alert> Your proofs must be your own
@@ -111,9 +113,10 @@
     <title>The Infimum</title>
     <statement>
       <p>
-        State (without proof) the value of <m>\inf S</m>, and write
-        one sentence explaining why the Completeness Axiom guarantees
-        that <m>\inf S</m> exists in <m>\R</m>.
+        State (without proof) the value of <m>\inf S</m>. Then write
+        one sentence explaining why, for this particular set, you did
+        not need the Completeness Axiom to know that <m>\sup S</m> and
+        <m>\inf S</m> exist in <m>\R</m>.
       </p>
     </statement>
   </exercise>
@@ -199,13 +202,14 @@
     <title>The Role of Completeness</title>
     <statement>
       <p>
-        In your Part 1 proof, where exactly did the Completeness
-        Axiom enter? Was it used explicitly, or did it appear
-        implicitly (for example, in a claim about what <m>\sup S</m>
-        is)?
+        In Part 1 you identified <m>\sup S</m> and <m>\inf S</m> directly,
+        without the Completeness Axiom. Where in this module is the
+        Completeness Axiom genuinely needed? Name one result or
+        exercise whose proof uses it, and say exactly where in that
+        proof it enters.
       </p>
       <p>
-        Then consider: could you have written the same proof if you
+        Then consider: could you have written your Part 1 proof if you
         were working in <m>\Q</m> instead of <m>\R</m>?
         Why or why not?
       </p>
@@ -218,7 +222,7 @@
       <p>
         In the Bridge Reading you read Bauldry's proof of Theorem 2.3
         (Archimedean Property). Compare its logical structure to the
-        proof you wrote in Part 2 (Option B) or the hint you read for
+        proof you wrote in Part 2 (Option B, <xref ref="ex-mod2-as-2b"/>) or the hint you read for
         Option B. What is the same? If there are differences, where
         did your proof and Bauldry's diverge?
       </p>
@@ -229,7 +233,7 @@
     <title>Looking Ahead</title>
     <statement>
       <p>
-        In Module 4, you will prove that sequences like
+        In <xref ref="ch-mod4"/>, you will prove that sequences like
         <m>a_n = 1 - 1/n</m> converge to their limit using an
         <m>\varepsilon</m>-<m>N</m> argument. Based on what you
         practiced in this module, describe the connection you see

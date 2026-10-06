@@ -21,7 +21,7 @@
       <ul>
         <li>
           <p>
-            Neighborhoods are defined using absolute value (from Module 2)
+            Neighborhoods are defined using absolute value (from <xref ref="ch-mod2"/>)
             and described as open intervals, which are sets.
           </p>
         </li>
@@ -124,7 +124,7 @@
         <ol marker="(a)">
           <li>
             Write this definition out using the set-builder and quantifier
-            notation from Modules 1 and 3.
+            notation from Modules <xref ref="ch-mod1" text="custom">1</xref> and 3.
           </li>
           <li>
             Is 0 an accumulation point of the set
@@ -189,7 +189,7 @@
       that you read in the Study Guide.
     </p>
     <p>
-      You will return to these ideas in Module 6 (Limits, Continuity,
+      You will return to these ideas in <xref ref="ch-mod6"/> (Limits, Continuity,
       and Uniform Continuity). For now, the goal is recognition: the
       set-theoretic vocabulary you built in Module 3 is not abstract
       machinery; it is the language of the definitions you will be

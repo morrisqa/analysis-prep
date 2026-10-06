@@ -30,7 +30,7 @@
         To prove a series equals a specific number, we must show its
         partial-sum sequence <m>(S_n)</m> converges to that number.
         Here we will find an explicit closed form for <m>S_n</m> and
-        then take a limit using Module 4 tools.
+        then take a limit using <xref ref="ch-mod4"/> tools.
       </p>
       <p>
         <alert>Scratch work.</alert>
@@ -51,7 +51,7 @@
           <mrow>\amp= 1 - \frac{1}{n + 1},</mrow>
         </md>
         since all intermediate terms cancel. By the Algebra of Limits
-        (Module 4) together with the standard limit <m>1/(n+1) \to 0</m>,
+        (<xref ref="ch-mod4"/>) together with the standard limit <m>1/(n+1) \to 0</m>,
         <md>\lim_{n \to \infty} S_n
         = \lim_{n \to \infty} \left(1 - \frac{1}{n + 1}\right)
         = 1 - 0 = 1.</md>
@@ -66,7 +66,7 @@
         features were critical: (1) a closed form for the summand
         (partial fractions) that made the cancellation visible, and
         (2) a closed form for <m>S_n</m> that reduced the problem to
-        a Module 4 limit. When neither is available&#x2014;which is
+        a <xref ref="ch-mod4"/> limit. When neither is available&#x2014;which is
         nearly always the case&#x2014;we must use convergence
         <em>tests</em> to determine whether a limit exists, without
         being able to identify its value.

@@ -123,7 +123,7 @@
       <p>
         Compare the <m>\varepsilon</m>-<m>\delta</m> definition of
         <m>\lim_{x \to a} f(x) = L</m> to the <m>\varepsilon</m>-<m>N</m>
-        definition of <m>\lim_{n \to \infty} a_n = L</m> from Module 4.
+        definition of <m>\lim_{n \to \infty} a_n = L</m> from <xref ref="ch-mod4"/>.
         What is structurally identical between the two definitions?
         What is genuinely different?
       </p>
@@ -148,7 +148,7 @@
     <statement>
       <p>
         Uniform continuity will appear in the proof that continuous
-        functions are Riemann integrable (Module 8). Based on what
+        functions are Riemann integrable (<xref ref="ch-mod8"/>). Based on what
         you know now about uniform continuity, describe in two or
         three sentences how you expect uniform continuity to enter
         that argument. (Hint: think about what has to be controlled on

@@ -63,7 +63,7 @@
         that <m>|f(x) - L| \lt \varepsilon</m> for every <m>x \gt M</m>
         in the domain of <m>f</m>. This is the definition of
         <m>\lim_{n \to \infty} a_n = L</m> from
-        <xref ref="ch-mod4" text="custom">Module 4</xref>, with the real
+        <xref ref="ch-mod4"/>, with the real
         variable <m>x</m> and the real threshold <m>M</m> in place of
         <m>n</m> and <m>N</m>.
       </p>
@@ -367,7 +367,7 @@
         <m>\varepsilon \gt 0</m>, pick <m>\delta \gt 0</m> from
         uniform continuity; since <m>x_n \to a</m>, eventually
         <m>|x_m - x_n| \lt \delta</m>, so <m>|f(x_m) - f(x_n)| \lt \varepsilon</m>.
-        By Cauchy completeness of <m>\R</m> (Module 4), <m>f(x_n)</m>
+        By Cauchy completeness of <m>\R</m> (<xref ref="ch-mod4"/>), <m>f(x_n)</m>
         converges. One then checks that every sequence approaching
         <m>a</m> gives the same limit, which defines
         <m>\lim_{x \to a^+} f(x)</m>.

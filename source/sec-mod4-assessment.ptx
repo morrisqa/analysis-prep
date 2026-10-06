@@ -20,10 +20,11 @@
     </p>
     <p>
       <alert>A note on Part 2.</alert> All students complete all three
-      parts. For Part 2, choose the option that best matches your
-      background: if you have prior real analysis experience, challenge
-      yourself with Option B. If this is newer territory, Option A is
-      the right starting point.
+      parts. Part 2 offers two options. Option A asks you to evaluate a
+      limit with the Algebra of Limits. Option B asks for a proof,
+      directly from the definitions, that every convergent sequence is
+      Cauchy, and is the more demanding. Choose the option that will
+      stretch you.
     </p>
     <p>
       <alert>Academic integrity.</alert> Your proofs must be your own
@@ -210,7 +211,7 @@
     <title>Quantifier Alternation</title>
     <statement>
       <p>
-        In your Part 1(b) proof, where in the proof did you make
+        In <xref ref="ex-mod4-as-1b"/>, where did you make
         a choice that <em>depended on</em> <m>\varepsilon</m>? What
         would have broken in the proof if your choice of <m>N</m>
         had been made before seeing <m>\varepsilon</m>?
@@ -237,7 +238,7 @@
     <title>Looking Ahead</title>
     <statement>
       <p>
-        In Module 6, you will prove that a function <m>f</m> is
+        In <xref ref="ch-mod6"/>, you will prove that a function <m>f</m> is
         continuous at <m>a</m> using an
         <m>\varepsilon</m>-<m>\delta</m> argument: for every
         <m>\varepsilon \gt 0</m> there exists <m>\delta \gt 0</m>

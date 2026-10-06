@@ -90,24 +90,24 @@
     <title><m>[\mathbf{F}]</m> Sup-Norm Computations</title>
     <statement>
       <p>
-        For each of the first three sequences in F1, compute
+        For each of the first three sequences in <xref ref="ex-mod9-ps-f1"/>, compute
         <m>S_n = \sup_{x \in D} |f_n(x) - f(x)|</m>
-        (where <m>f</m> is the pointwise limit from F1) and determine
+        (where <m>f</m> is the pointwise limit from <xref ref="ex-mod9-ps-f1"/>) and determine
         whether <m>S_n \to 0</m>.
         <ol marker="(a)">
           <li>
             <p>
-              Part (a) of F1, on <m>(0, \infty)</m>.
+              Part (a) of <xref ref="ex-mod9-ps-f1"/>, on <m>(0, \infty)</m>.
             </p>
           </li>
           <li>
             <p>
-              Part (b) of F1, on <m>[0, \infty)</m> and on <m>[1, \infty)</m>.
+              Part (b) of <xref ref="ex-mod9-ps-f1"/>, on <m>[0, \infty)</m> and on <m>[1, \infty)</m>.
             </p>
           </li>
           <li>
             <p>
-              Part (c) of F1, on <m>\R</m>.
+              Part (c) of <xref ref="ex-mod9-ps-f1"/>, on <m>\R</m>.
             </p>
           </li>
         </ol>

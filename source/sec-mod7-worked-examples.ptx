@@ -54,7 +54,7 @@
           <mrow>\amp= \frac{3a^2 h + 3ah^2 + h^3}{h}</mrow>
           <mrow>\amp= 3a^2 + 3ah + h^2.</mrow>
         </md>
-        By the sum and product rules for limits (Module 6),
+        By the sum and product rules for limits (<xref ref="ch-mod6"/>),
         <md>\lim_{h \to 0} (3a^2 + 3ah + h^2) = 3a^2 + 0 + 0 = 3a^2.</md>
         By the definition of the derivative, <m>f'(a) = 3a^2</m>. Since
         <m>a \in \R</m> was arbitrary, <m>f</m> is differentiable at
@@ -148,7 +148,7 @@
         <alert>Strategy.</alert>
       </p>
       <p>
-        The Extreme Value Theorem (Module 6) guarantees that
+        The Extreme Value Theorem (<xref ref="ch-mod6"/>) guarantees that
         <m>f</m> attains its maximum and minimum on <m>[a, b]</m>.
         If <m>f</m> is constant, we are immediately done. If not,
         at least one extremum must occur at an interior point
@@ -168,7 +168,7 @@
       </p>
       <p>
         <em>(ii) If <m>f</m> is not constant on <m>[a, b]</m>.</em>
-        By the Extreme Value Theorem (EVT, Module 6), <m>f</m> attains
+        By the Extreme Value Theorem (EVT, <xref ref="ch-mod6"/>), <m>f</m> attains
         both its maximum and its minimum on <m>[a, b]</m>. Since
         <m>f</m> is not constant, there is some <m>x_0 \in [a, b]</m>
         with <m>f(x_0) \neq f(a)</m>, and since <m>f(a) = f(b)</m>,
@@ -233,7 +233,7 @@
       </p>
       <p>
         The proof has two cases; the key one requires <m>f</m> to be
-        non-constant. The Extreme Value Theorem (from Module 6) is the
+        non-constant. The Extreme Value Theorem (from <xref ref="ch-mod6"/>) is the
         tool that produces the interior extremum, and differentiability
         is what forces <m>f'(c) = 0</m> at that point. The argument
         for <m>f'(c) = 0</m> at an interior extremum (comparing

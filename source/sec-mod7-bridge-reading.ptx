@@ -159,7 +159,7 @@
             is stated.
           </li>
           <li>
-            Module 8 will develop the Riemann integral and the
+            <xref ref="ch-mod8"/> will develop the Riemann integral and the
             Fundamental Theorem of Calculus. Based on what you now
             know about the MVT, describe in two or three sentences
             how you expect the MVT to play a role in the proof of

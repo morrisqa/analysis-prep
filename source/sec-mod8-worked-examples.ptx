@@ -111,7 +111,7 @@
       <p>
         Use the Heine<ndash/>Cantor theorem (uniform continuity of
         continuous functions on closed bounded intervals, stated in
-        <xref ref="ch-mod6" text="custom">Module 6</xref>; see Zorn or
+        <xref ref="ch-mod6"/>; see Zorn or
         MAT 5610 for a proof) to bound the oscillation <m>M_i - m_i</m> on each subinterval,
         then sum up and apply the integrability criterion.
       </p>
@@ -328,7 +328,7 @@
       <p>
         Take <m>F(x) = -\cos(x)</m>. We verify: <m>F'(x) = \sin(x)</m>
         (by the formula <m>\cos'(x) = -\sin(x)</m> from calculus;
-        <xref ref="ch-mod7" text="custom">Module 7</xref> uses the
+        <xref ref="ch-mod7"/> uses the
         derivatives of <m>\sin</m> and <m>\cos</m> but does not prove
         them). The function <m>f(x) = \sin(x)</m> is continuous
         on <m>[0, \pi]</m> (it is continuous everywhere). Since
