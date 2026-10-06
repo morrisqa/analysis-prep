@@ -149,9 +149,9 @@
     <title>Standard Problems</title>
     <!-- TODO(quinn): sentence added in #4 to satisfy the schema; confirm or replace. -->
     <p>
-      These problems apply the same moves to longer arguments: Triangle
-      Inequality proofs, bounding a product, and supremum proofs from the
-      definition and from the <m>\varepsilon</m>-characterization.
+      These problems apply the same moves to longer arguments: proofs using
+      the Triangle Inequality, bounding a product, and supremum proofs from
+      the definition and from the <m>\varepsilon</m>-characterization.
     </p>
   </paragraphs>
 
