@@ -1,0 +1,248 @@
+<section xml:id="sec-mod4-worked-examples">
+  <title>Module 4: Worked Examples</title>
+  <p>Annotated Proof Walkthroughs — Estimated time: 45 minutes</p>
+
+    <p>
+      Read each example slowly. The goal is not just to see what the
+      answer is, but to internalize the proof <em>template</em>. Example
+      1 is the basic <m>\varepsilon</m>-<m>N</m> pattern you will
+      reproduce on the assessment. Example 2 shows how the Algebra of
+      Limits replaces direct <m>\varepsilon</m>-<m>N</m> work for
+      rational expressions. Example 3 shows the Monotone Convergence
+      Theorem in its most common use: a recursively defined sequence
+      whose limit is not visible at a glance.
+    </p>
+
+  <!-- ============================================================
+       EXAMPLE 1: DIRECT EPSILON-N PROOF
+  ============================================================ -->
+
+  <exercise xml:id="ex-mod4-we-1">
+    <title>Example 1: A Direct <m>\varepsilon</m>-<m>N</m> Proof</title>
+    <statement>
+      <p>
+        Prove directly from the definition that
+        <md>a_n = \frac{1}{n^2} \longrightarrow 0.</md>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <alert>Scratch work (this section is part of the solution
+        process; always do this before writing the proof).</alert>
+      </p>
+      <p>
+        We want to choose, given <m>\varepsilon \gt 0</m>, an index
+        <m>N</m> such that
+        <md>n \geq N \Longrightarrow |a_n - 0| = \frac{1}{n^2} \lt \varepsilon.</md>
+        Solving <m>1/n^2 \lt \varepsilon</m> for <m>n</m>: this happens
+        exactly when <m>n^2 \gt 1/\varepsilon</m>, i.e.,
+        <m>n \gt 1/\sqrt{\varepsilon}</m>. So we should choose
+        <m>N</m> to be any natural number exceeding
+        <m>1/\sqrt{\varepsilon}</m>. The Archimedean Property
+        guarantees such <m>N</m> exists.
+      </p>
+      <p>
+        We could also use the weaker but simpler bound
+        <m>1/n^2 \leq 1/n</m>, requiring only <m>n \gt 1/\varepsilon</m>.
+        Either choice works; we pick the cleaner Archimedean-style bound.
+      </p>
+      <p>
+        <alert>Proof.</alert>
+      </p>
+      <p>
+        Let <m>\varepsilon \gt 0</m>. By the Archimedean Property,
+        there exists <m>N \in \N</m> with <m>N \gt 1/\varepsilon</m>.
+        Then for every <m>n \geq N</m>,
+        <md>
+          <mrow>|a_n - 0| = \left|\frac{1}{n^2}\right| = \frac{1}{n^2} \amp\leq \frac{1}{n}</mrow>
+          <mrow>\amp\leq \frac{1}{N}</mrow>
+          <mrow>\amp\lt \varepsilon,</mrow>
+        </md>
+        where the first inequality uses <m>n \geq 1</m> (so <m>n^2 \geq n</m>),
+        the second uses <m>n \geq N</m>, and the third uses
+        <m>N \gt 1/\varepsilon</m>.
+        Since <m>\varepsilon \gt 0</m> was arbitrary, <m>a_n \to 0</m>. <m>\square</m>
+      </p>
+      <p>
+        <alert>What to notice.</alert>
+        The proof has a fixed structure you will reproduce many times:
+        <em>start the formal proof with <q>Let <m>\varepsilon \gt 0</m></q>,
+        produce <m>N</m>, then verify the bound on <m>|a_n - L|</m>
+        for <m>n \geq N</m>.</em> The scratch work lives outside that
+        formal proof but must be shown; the scratch work is what
+        justifies the specific choice of <m>N</m>. The chain of
+        inequalities in the proof does the verification. Each step is
+        labeled with a reason: you should do this in your own proofs
+        too.
+      </p>
+    </solution>
+  </exercise>
+
+  <!-- ============================================================
+       EXAMPLE 2: ALGEBRA OF LIMITS
+  ============================================================ -->
+
+  <exercise xml:id="ex-mod4-we-2">
+    <title>Example 2: A Rational Limit via the Algebra of Limits</title>
+    <statement>
+      <p>
+        Evaluate
+        <md>\lim_{n \to \infty} \frac{3n^2 + 2n - 1}{4n^2 + 5}.</md>
+        Do not use an <m>\varepsilon</m>-<m>N</m> argument; use the
+        Algebra of Limits (Theorem 2.5) directly.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <alert>Set-up.</alert>
+        The standard technique for a ratio of polynomials in <m>n</m>
+        is to divide numerator and denominator by the highest power of
+        <m>n</m> appearing, which forces every term to converge.
+        Here that is <m>n^2</m>.
+      </p>
+      <p>
+        <alert>Proof.</alert>
+      </p>
+      <p>
+        Dividing numerator and denominator by <m>n^2</m>, we rewrite
+        the general term:
+        <md>\frac{3n^2 + 2n - 1}{4n^2 + 5} = \frac{3 + \frac{2}{n} - \frac{1}{n^2}}{4 + \frac{5}{n^2}}.</md>
+        We now evaluate the limits of the numerator and denominator
+        separately, using the Algebra of Limits. Throughout, we use
+        the known limit <m>1/n \to 0</m>.
+      </p>
+      <p>
+        <em>Numerator.</em> By the product rule,
+        <md>\frac{2}{n} = 2 \cdot \frac{1}{n} \longrightarrow 2 \cdot 0 = 0, \qquad
+        \frac{1}{n^2} = \frac{1}{n} \cdot \frac{1}{n} \longrightarrow 0 \cdot 0 = 0.</md>
+        The constant sequence 3 has limit 3. Applying the sum rule
+        (twice),
+        <md>3 + \frac{2}{n} - \frac{1}{n^2} \longrightarrow 3 + 0 - 0 = 3.</md>
+      </p>
+      <p>
+        <em>Denominator.</em> The constant 4 has limit 4, and
+        <m>5/n^2 \to 0</m> by the product rule applied to
+        <m>5 \cdot (1/n^2)</m>. By the sum rule,
+        <md>4 + \frac{5}{n^2} \longrightarrow 4 + 0 = 4.</md>
+      </p>
+      <p>
+        <em>Quotient.</em> The limit of the denominator is 4, which is
+        nonzero. By the quotient rule,
+        <md>\frac{3 + \frac{2}{n} - \frac{1}{n^2}}{4 + \frac{5}{n^2}}
+        \longrightarrow \frac{3}{4}.</md>
+      </p>
+      <p>
+        Hence
+        <m>\displaystyle\lim_{n \to \infty} \frac{3n^2 + 2n - 1}{4n^2 + 5} = \frac{3}{4}.</m>
+        <m>\square</m>
+      </p>
+      <p>
+        <alert>What to notice.</alert>
+        Once the basic limit <m>1/n \to 0</m> is established (Example 1
+        covers <m>1/n^2</m>; <m>1/n</m> is the classical case), every
+        rational expression in <m>n</m> reduces to a short sequence of
+        limit-law applications. The only subtle point is the nonvanishing
+        denominator hypothesis in the quotient rule: you must confirm
+        <em>in the limit</em> that the denominator is nonzero, which we
+        did here (it equals 4). If the numerator's leading degree had
+        exceeded the denominator's, the method would break down (the
+        sequence would diverge to infinity); if the degrees were equal,
+        the limit is always the ratio of leading coefficients.
+      </p>
+    </solution>
+  </exercise>
+
+  <!-- ============================================================
+       EXAMPLE 3: MONOTONE CONVERGENCE FOR A RECURSIVE SEQUENCE
+  ============================================================ -->
+
+  <exercise xml:id="ex-mod4-we-3">
+    <title>Example 3: A Recursive Sequence and the Monotone Convergence Theorem</title>
+    <statement>
+      <p>
+        Define the sequence <m>(a_n)</m> recursively by
+        <md>a_1 = 1, \qquad a_{n+1} = \sqrt{2 + a_n} \quad (n \geq 1).</md>
+        Prove that <m>(a_n)</m> converges and find its limit.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <alert>Strategy.</alert>
+        The formula for <m>a_n</m> is not in closed form, so a direct
+        <m>\varepsilon</m>-<m>N</m> proof is impractical. We instead:
+        (1) show <m>(a_n)</m> is increasing and bounded above, (2)
+        conclude it converges by the Monotone Convergence Theorem, and
+        (3) find the limit by letting <m>n \to \infty</m> in the
+        recursion.
+      </p>
+      <p>
+        <alert>Step 1: The sequence is bounded above by 2.</alert>
+      </p>
+      <p>
+        We claim <m>a_n \lt 2</m> for every <m>n \in \N</m>, and
+        prove this by induction.
+        <em>Base case.</em> <m>a_1 = 1 \lt 2</m>. <em>Inductive step.</em>
+        Suppose <m>a_n \lt 2</m>. Then
+        <md>a_{n+1} = \sqrt{2 + a_n} \lt \sqrt{2 + 2} = \sqrt{4} = 2,</md>
+        using that <m>\sqrt{\cdot}</m> is monotone increasing on
+        <m>[0, \infty)</m>. By induction, <m>a_n \lt 2</m> for all <m>n</m>.
+      </p>
+      <p>
+        <alert>Step 2: The sequence is increasing.</alert>
+      </p>
+      <p>
+        We claim <m>a_n \lt a_{n+1}</m> for every <m>n \in \N</m>,
+        again by induction. <em>Base case.</em>
+        <m>a_1 = 1 \lt \sqrt{3} = a_2</m>. <em>Inductive step.</em>
+        Suppose <m>a_n \lt a_{n+1}</m>. Adding 2 and applying the
+        (strictly monotone) square root,
+        <md>a_{n+1} = \sqrt{2 + a_n} \lt \sqrt{2 + a_{n+1}} = a_{n+2}.</md>
+        So <m>a_{n+1} \lt a_{n+2}</m>. By induction, <m>(a_n)</m> is
+        strictly increasing.
+      </p>
+      <p>
+        <alert>Step 3: Apply the Monotone Convergence Theorem.</alert>
+      </p>
+      <p>
+        By Steps 1 and 2, <m>(a_n)</m> is monotone increasing and
+        bounded above (by 2). By the Monotone Convergence Theorem,
+        <m>(a_n)</m> converges to some limit <m>L \in \R</m>. Because
+        all terms satisfy <m>1 \leq a_n \lt 2</m>, we have
+        <m>L \in [1, 2]</m>.
+      </p>
+      <p>
+        <alert>Step 4: Identify the limit.</alert>
+      </p>
+      <p>
+        Letting <m>n \to \infty</m> in the recursion
+        <m>a_{n+1} = \sqrt{2 + a_n}</m> and using the continuity of
+        the square root together with the Algebra of Limits (the
+        subsequence <m>(a_{n+1})</m> is just <m>(a_n)</m> shifted by
+        one index, so it shares the limit <m>L</m>), we get
+        <md>L = \sqrt{2 + L}.</md>
+        Squaring, <m>L^2 = 2 + L</m>, i.e., <m>L^2 - L - 2 = 0</m>,
+        which factors as <m>(L - 2)(L + 1) = 0</m>. So
+        <m>L = 2</m> or <m>L = -1</m>. Since <m>L \in [1, 2]</m>,
+        we conclude <m>L = 2</m>. <m>\square</m>
+      </p>
+      <p>
+        <alert>What to notice.</alert>
+        This is the archetypal pattern for a recursively defined
+        sequence. Three moves, always in this order:
+        (1) <em>prove boundedness by induction</em>, often guessing
+        the bound by first solving the fixed-point equation informally;
+        (2) <em>prove monotonicity by induction</em>, often driven by
+        a monotone function applied to the recursion; (3) <em>apply
+        MCT to get a limit, then solve a fixed-point equation for
+        its value.</em> Note how the Completeness Axiom enters through
+        MCT: without completeness, Step 3 could fail (the sequence
+        would be Cauchy in <m>\R</m> but might lack a limit in a
+        smaller ordered field). The <em>continuity</em> of the
+        square root used in Step 4 is a fact we will prove formally
+        in Module 6; here we use it informally, as Zorn does in
+        &#xa7;2.3.
+      </p>
+    </solution>
+  </exercise>
+
+</section>
