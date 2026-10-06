@@ -1,0 +1,245 @@
+<section xml:id="sec-mod9-worked-examples">
+  <title>Module 9: Worked Examples</title>
+  <p>Annotated Proof Walkthroughs — Estimated time: 45 minutes</p>
+
+    <p>
+      Read each example slowly. Example 1 dissects the canonical non-uniform
+      example <m>f_n(x) = x^n</m>. Example 2 proves the uniform-limit
+      continuity theorem using the <m>3\varepsilon</m> trick. Example 3
+      applies the Weierstrass <m>M</m>-Test. Example 4 uses term-by-term
+      integration to derive a classical series identity.
+    </p>
+
+  <!-- ============================================================
+       EXAMPLE 1
+  ============================================================ -->
+
+  <exercise xml:id="ex-mod9-we-1">
+    <title>Example 1: Pointwise but Not Uniform Convergence</title>
+    <statement>
+      <p>
+        Let <m>f_n(x) = x^n</m> for <m>x \in [0,1]</m>. Show that
+        <m>(f_n)</m> converges pointwise but <em>not</em> uniformly on
+        <m>[0,1]</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <alert>Strategy.</alert>
+        For pointwise convergence, fix <m>x</m> and compute
+        <m>\lim_{n \to \infty} x^n</m>. For non-uniform convergence, compute
+        the sup-norm <m>\sup_{x \in [0,1]} |f_n(x) - f(x)|</m> and show it
+        does not go to <m>0</m>.
+      </p>
+      <p>
+        <alert>Pointwise limit.</alert>
+      </p>
+      <p>
+        For <m>x \in [0,1)</m>: <m>|x| \lt 1</m>, so
+        <m>x^n \to 0</m> as <m>n \to \infty</m>.
+        For <m>x = 1</m>: <m>1^n = 1</m> for all <m>n</m>, so
+        <m>x^n \to 1</m>.
+        Define <m>f(x) = 0</m> for <m>x \in [0,1)</m> and <m>f(1) = 1</m>.
+        Then <m>f_n \to f</m> pointwise on <m>[0,1]</m>.
+        Note that <m>f</m> is <em>discontinuous</em> at <m>x = 1</m>,
+        even though each <m>f_n</m> is continuous on <m>[0,1]</m>.
+      </p>
+      <p>
+        <alert>Non-uniform convergence (sup-norm argument).</alert>
+      </p>
+      <p>
+        For any <m>n \in \N</m> and any <m>x \in [0,1)</m>,
+        <m>|f_n(x) - f(x)| = x^n</m>. As <m>x \to 1^-</m>,
+        <m>x^n \to 1</m>. Therefore
+        <md>
+          \sup_{x \in [0,1]} |f_n(x) - f(x)| = 1
+        </md>
+        for every <m>n</m>. (The sup is not attained in <m>[0,1)</m> but
+        equals <m>1</m> since the function <m>x \mapsto x^n</m> approaches
+        <m>1</m> as <m>x \to 1^-</m>; at <m>x=1</m>, <m>|f_n(1)-f(1)|=0</m>,
+        so the sup over <m>[0,1]</m> is still <m>1</m> by continuity of
+        <m>x^n</m> on <m>[0,1)</m>.) Since the sup is <m>1</m> for every
+        <m>n</m>, it does not converge to <m>0</m>, and the convergence is
+        not uniform. <m>\square</m>
+      </p>
+      <p>
+        <alert>What to notice.</alert>
+        The failure of uniform convergence here has a visible consequence:
+        the pointwise limit is discontinuous. The theorem in Example 2 says
+        this cannot happen under uniform convergence of continuous functions.
+        The non-uniform behavior of <m>x^n</m> on <m>[0,1]</m> is the
+        prototypical counterexample for this entire module.
+      </p>
+    </solution>
+  </exercise>
+
+  <!-- ============================================================
+       EXAMPLE 2
+  ============================================================ -->
+
+  <exercise xml:id="ex-mod9-we-2">
+    <title>Example 2: Uniform Convergence Preserves Continuity</title>
+    <statement>
+      <p>
+        Prove: if <m>f_n \to f</m> uniformly on <m>[a,b]</m> and each
+        <m>f_n</m> is continuous on <m>[a,b]</m>, then <m>f</m> is
+        continuous on <m>[a,b]</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <alert>Strategy.</alert>
+        Fix <m>x_0 \in [a,b]</m> and <m>\varepsilon \gt 0</m>. Split
+        <m>|f(x) - f(x_0)|</m> into three pieces using the triangle
+        inequality, and control each piece separately.
+      </p>
+      <p>
+        <alert>Proof.</alert>
+      </p>
+      <p>
+        Since <m>f_n \to f</m> uniformly, there exists <m>N \in \N</m>
+        such that for all <m>n \geq N</m> and all <m>x \in [a,b]</m>,
+        <m>|f_n(x) - f(x)| \lt \varepsilon/3</m>.
+        Fix such an <m>N</m>; the function <m>f_N</m> is continuous at
+        <m>x_0</m>, so there exists <m>\delta \gt 0</m> such that
+        <m>|x - x_0| \lt \delta \Rightarrow |f_N(x) - f_N(x_0)| \lt
+        \varepsilon/3</m>.
+      </p>
+      <p>
+        Now suppose <m>|x - x_0| \lt \delta</m>. By the triangle inequality,
+        <md>
+          <mrow>|f(x) - f(x_0)| \amp \leq |f(x) - f_N(x)| + |f_N(x) -
+          f_N(x_0)| + |f_N(x_0) - f(x_0)|</mrow>
+          <mrow>\amp \lt \frac{\varepsilon}{3} + \frac{\varepsilon}{3} +
+          \frac{\varepsilon}{3} = \varepsilon.</mrow>
+        </md>
+        Since <m>x_0</m> was arbitrary, <m>f</m> is continuous on
+        <m>[a,b]</m>. <m>\square</m>
+      </p>
+      <p>
+        <alert>What to notice.</alert>
+        This is the <m>3\varepsilon</m> trick. The three terms are controlled
+        by: (1) uniform convergence applied at <m>x</m>; (2) continuity of
+        <m>f_N</m>; (3) uniform convergence applied at <m>x_0</m>. The key
+        is that <m>N</m> is chosen <em>before</em> <m>x</m>&#x2014;this is
+        exactly what uniform convergence buys. With only pointwise convergence,
+        the <m>N</m> from (1) would depend on <m>x</m>, making the argument
+        circular.
+      </p>
+    </solution>
+  </exercise>
+
+  <!-- ============================================================
+       EXAMPLE 3
+  ============================================================ -->
+
+  <exercise xml:id="ex-mod9-we-3">
+    <title>Example 3: The Weierstrass <m>M</m>-Test</title>
+    <statement>
+      <p>
+        Show that <m>\displaystyle\sum_{n=1}^{\infty} \frac{\sin(nx)}{n^2}</m>
+        converges absolutely and uniformly on <m>\R</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <alert>Strategy.</alert>
+        Find a bound <m>M_n</m> independent of <m>x</m> with
+        <m>|f_n(x)| \leq M_n</m> and <m>\sum M_n \lt \infty</m>.
+        Then invoke the Weierstrass <m>M</m>-Test.
+      </p>
+      <p>
+        <alert>Proof.</alert>
+      </p>
+      <p>
+        Set <m>f_n(x) = \sin(nx)/n^2</m>. For all <m>x \in \R</m> and all
+        <m>n \in \N</m>,
+        <md>
+          |f_n(x)| = \frac{|\sin(nx)|}{n^2} \leq \frac{1}{n^2} =: M_n.
+        </md>
+        The series <m>\sum_{n=1}^{\infty} M_n = \sum_{n=1}^{\infty}
+        \frac{1}{n^2}</m> is a convergent <m>p</m>-series (<m>p = 2 \gt 1</m>).
+        By the Weierstrass <m>M</m>-Test,
+        <m>\sum_{n=1}^{\infty} \sin(nx)/n^2</m> converges absolutely and
+        uniformly on <m>\R</m>. <m>\square</m>
+      </p>
+      <p>
+        <alert>What to notice.</alert>
+        The <m>M</m>-Test is essentially a comparison test for series of
+        functions, with the dominating series <m>\sum M_n</m> playing the
+        role of the known convergent series. The uniformity of the bound
+        <m>|f_n(x)| \leq M_n</m> (no <m>x</m> in <m>M_n</m>) is what
+        delivers uniform convergence. Notice also that we used
+        <m>|\sin(nx)| \leq 1</m>&#x2014;a global bound available precisely
+        because the domain is all of <m>\R</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <!-- ============================================================
+       EXAMPLE 4
+  ============================================================ -->
+
+  <exercise xml:id="ex-mod9-we-4">
+    <title>Example 4: Term-by-Term Integration</title>
+    <statement>
+      <p>
+        Use the geometric series and the term-by-term integration theorem
+        to show that
+        <md>
+          \sum_{n=0}^{\infty} \frac{(-1)^n}{2n+1} = \frac{\pi}{4}.
+        </md>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <alert>Strategy.</alert>
+        Start from the geometric series for <m>1/(1+t^2)</m>, integrate
+        term by term (justified by uniform convergence on a compact interval),
+        and evaluate at <m>x = 1</m>.
+      </p>
+      <p>
+        <alert>Proof.</alert>
+      </p>
+      <p>
+        For <m>|t| \lt 1</m>, the geometric series gives
+        <md>
+          \frac{1}{1 + t^2} = \sum_{n=0}^{\infty} (-1)^n t^{2n}.
+        </md>
+        For any <m>0 \lt r \lt 1</m>, the series converges uniformly on
+        <m>[-r, r]</m> by the Weierstrass <m>M</m>-Test (with
+        <m>M_n = r^{2n}</m> and <m>\sum r^{2n} = 1/(1-r^2) \lt \infty</m>).
+        Each partial-sum function is continuous, and the uniform limit of
+        continuous functions is continuous (Example 2). By the term-by-term
+        integration theorem, for <m>x \in [0,r]</m>,
+        <md>
+          <mrow>\int_0^x \frac{dt}{1+t^2} \amp= \int_0^x
+          \sum_{n=0}^{\infty} (-1)^n t^{2n}\,dt =
+          \sum_{n=0}^{\infty} (-1)^n \frac{x^{2n+1}}{2n+1}.</mrow>
+        </md>
+        The left side equals <m>\arctan(x)</m>.
+        Setting <m>x = 1</m>: since the series
+        <m>\sum_{n=0}^{\infty} \frac{(-1)^n}{2n+1}</m> converges by the
+        Alternating Series Test (terms positive, decreasing to <m>0</m>),
+        and <m>\arctan(1) = \pi/4</m>, we conclude
+        <md>
+          \sum_{n=0}^{\infty} \frac{(-1)^n}{2n+1}
+          = 1 - \frac{1}{3} + \frac{1}{5} - \cdots = \frac{\pi}{4}.
+        </md>
+        <m>\square</m>
+      </p>
+      <p>
+        <alert>What to notice.</alert>
+        The passage from <m>x \in [0,r]</m> to <m>x = 1</m> uses a
+        continuity argument (Abel's theorem) that is beyond this course&#x2014;we
+        have stated the result but not proved this final step rigorously.
+        The term-by-term integration part is fully rigorous on any <m>[0,r]</m>
+        with <m>r \lt 1</m>; extending to the boundary is a topic for
+        MAT 5610. The punchline&#x2014;<m>\pi/4</m> as an alternating series
+        of unit fractions&#x2014;is one of the most beautiful results in
+        elementary analysis.
+      </p>
+    </solution>
+  </exercise>
+
+</section>
