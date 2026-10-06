@@ -202,7 +202,7 @@
       </row>
       <row>
         <cell><p><alert>MVT application</alert></p></cell>
-        <cell><p>Hypotheses of MVT (or monotonicity corollary) verified explicitly; conclusion correctly drawn and connected to the inequality</p></cell>
+        <cell><p>In each case, MVT stated, invoked by name, and its hypotheses verified explicitly on the interval used; conclusion correctly drawn and connected to the inequality</p></cell>
         <cell><p>MVT cited but one hypothesis unchecked, or conclusion not connected clearly</p></cell>
         <cell><p>MVT not cited by name, or applied in a setting where its hypotheses fail</p></cell>
       </row>

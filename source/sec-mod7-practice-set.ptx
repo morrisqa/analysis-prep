@@ -245,11 +245,11 @@
         by applying L'H&#xf4;pital's rule twice. At each application,
         verify every hypothesis of
         <xref ref="par-mod7-sg-43-lhopital" text="custom">L'H&#xf4;pital's
-        rule</xref>: the numerator and denominator are differentiable
-        near <m>0</m>, the derivative of the denominator is nonzero near
-        <m>0</m> (except possibly at <m>0</m>), both numerator and
-        denominator tend to <m>0</m>, and the limit of the ratio of
-        their derivatives exists. What is the answer?
+        rule</xref>: on an open interval around <m>0</m>, except
+        possibly at <m>0</m>, the numerator and denominator are
+        differentiable and the derivative of the denominator is nonzero;
+        both numerator and denominator tend to <m>0</m>; and the limit
+        of the ratio of their derivatives exists. What is the answer?
       </p>
     </statement>
     <answer>
@@ -305,11 +305,12 @@
         <m>R_2(x) = f'''(c) x^3/3! = 2x^3/(6(1+c)^3) = x^3/(3(1+c)^3)</m>
         for some <m>c</m> between <m>0</m> and <m>x</m>.
         Here <m>c</m> is an unknown intermediate value; its existence
-        is guaranteed by Taylor's Theorem, which applies because
+        is guaranteed by Taylor's Theorem. The theorem applies because
         <m>f</m> is three times differentiable on the open interval
-        <m>(-1, \infty)</m>, which contains <m>0</m> and <m>x</m>.
-        (Its proof applies Rolle's Theorem to an auxiliary function;
-        for <m>n = 0</m> it is the MVT.)
+        <m>(-1, \infty)</m>, and this interval contains <m>0</m> and
+        <m>x</m>. (Its proof applies Rolle's Theorem to an auxiliary
+        function; for <m>n = 0</m> the theorem gives the MVT's
+        conclusion.)
       </p>
     </answer>
   </exercise>

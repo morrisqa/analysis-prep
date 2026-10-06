@@ -21,6 +21,15 @@ Source review: [#10 Module 7 comment](https://github.com/morrisqa/analysis-prep/
 | `ex-mod7-ps-c2` | Retitled "Rolle's Theorem Applied Three Times"; hint notes f′ is continuous because it is differentiable. | The title didn't match the proof. | |
 | `ex-mod7-we-4` | The MVT gives a Lipschitz condition from a bounded derivative (linked to Module 6's WE4); the FTC proof uses the MVT equality, not the inequality. | Lipschitz is not part of the MVT's definition. | |
 
+## After review (PR #33 follow-ups)
+
+| Where | Decision | Why | Alternative |
+|---|---|---|---|
+| Study-guide time estimate | 55 → 75 minutes (study guide and orientation table). The road-map total is updated in the structure pass. | The guide gained three full proofs. | Keep Quinn's 55. |
+| `par-mod7-as-rubric` | "MVT application" full credit now requires the MVT, named, with hypotheses verified in each case. | Matches the corrected as-2(iii); "or monotonicity corollary" allowed the invalid route. | |
+| L'Hôpital block | Proof functions renamed φ, ψ (interval K). | The adjacent Taylor proof uses F, G, J for different objects. | |
+| Taylor block, intro | The practice set uses Taylor and L'Hôpital; the Cauchy MVT is named as the step in L'Hôpital's proof. | Accurate (no practice problem cites the Cauchy MVT). | |
+
 ## Noted, not changed
 - `ex-mod7-br-6` asks for a Bauldry theorem "that did not appear explicitly in this module's Study Guide". With Taylor, the Cauchy MVT and L'Hôpital now in the study guide, fewer answers qualify. The exercise still works.
 

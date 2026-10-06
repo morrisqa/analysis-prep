@@ -209,7 +209,8 @@
         derivative exists, <m>f'(c) = 0</m>.
       </p>
       <p>
-        Taking these limits preserves the inequalities. For instance,
+        Why may we pass to the limit in these inequalities? Taking
+        these limits preserves them. For instance,
         the numbers <m>h_n = \delta/(n+1)</m> are positive, less than
         <m>\delta</m>, and tend to <m>0</m>, so by the sequential
         characterization of limits (<xref ref="ex-mod6-sg-31-3"/>) the
@@ -296,10 +297,10 @@
         whenever <m>|f'| \leq M</m> on the interval between <m>x</m>
         and <m>y</m>. In particular, a function whose derivative is
         bounded by <m>M</m> on an interval satisfies the Lipschitz
-        condition <m>|f(x) - f(y)| \leq M|x - y|</m> there, which, by
-        <xref ref="ex-mod6-we-4" text="custom">Worked Example 4</xref>
-        of <xref ref="ch-mod6" text="custom">Module 6</xref>, makes it
-        uniformly continuous. The same idea of bounding a derivative
+        condition <m>|f(x) - f(y)| \leq M|x - y|</m> there. By the
+        argument of <xref ref="ex-mod6-we-4" text="custom">Worked Example
+        4</xref> of <xref ref="ch-mod6" text="custom">Module 6</xref>,
+        such a function is uniformly continuous. The same idea of bounding a derivative
         gives error bounds for Taylor polynomials. The MVT equality
         <m>f(y) - f(x) = f'(c)(y - x)</m> itself, without the
         inequality, is what the proof of the Fundamental Theorem of

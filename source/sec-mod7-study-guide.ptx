@@ -1,6 +1,6 @@
 <section xml:id="sec-mod7-study-guide">
   <title>Module 7: Companion Reading and Study Guide</title>
-  <p>Zorn §4.1–4.3 — Estimated time: 55 minutes</p>
+  <p>Zorn §4.1–4.3 — Estimated time: 75 minutes</p>
     <p>
       This guide accompanies three sections of Zorn's <em>Understanding
       Real Analysis</em>. Section 4.1 (<q>Derivatives</q>) introduces
@@ -261,6 +261,11 @@
       in an essential way. The MVT proof derives from Rolle's by a
       geometric trick (subtracting the secant line) that you should
       be able to reconstruct from memory by the end of this module.
+      The guide then closes with three further results, each stated and
+      proved here: Taylor's Theorem, the Cauchy Mean Value Theorem, and
+      L'H&#xf4;pital's rule. The Practice Set uses Taylor's Theorem and
+      L'H&#xf4;pital's rule, and the Cauchy Mean Value Theorem is the
+      step in the proof of L'H&#xf4;pital's rule.
     </p>
   </paragraphs>
 
@@ -347,12 +352,14 @@
     <p>
       The MVT says that <m>f(x) = f(a) + f'(c)(x - a)</m> for some
       <m>c</m> between <m>a</m> and <m>x</m>: it approximates <m>f</m>
-      near <m>a</m> by a constant and expresses the error with one
-      derivative. Taylor's Theorem approximates <m>f</m> by a polynomial
+      near <m>a</m> by a constant and expresses the error using the
+      first derivative at an unknown point. Taylor's Theorem approximates <m>f</m> by a polynomial
       of degree at most <m>n</m> and expresses the error with the
       derivative of order <m>n + 1</m>. This guide states and proves it
-      here, together with L'H&#xf4;pital's rule below, because the
-      Practice Set uses both. The proof is one application of Rolle's
+      here, together with the Cauchy Mean Value Theorem and
+      L'H&#xf4;pital's rule below, because the Practice Set uses
+      Taylor's Theorem and L'H&#xf4;pital's rule, and the proof of the
+      rule rests on the Cauchy Mean Value Theorem. The proof is one application of Rolle's
       Theorem to a well-chosen auxiliary function, the same idea as the
       proof of the MVT in <xref ref="ex-mod7-sg-43-2"/>.
     </p>
@@ -376,7 +383,8 @@
       that
       <md>R_n(x) = \frac{f^{(n+1)}(c)}{(n+1)!}(x - a)^{n+1}.</md>
       If <m>x \neq a</m>, then <m>c</m> lies strictly between <m>a</m>
-      and <m>x</m>. For <m>n = 0</m> the theorem is the MVT:
+      and <m>x</m>. For <m>n = 0</m> the theorem gives the conclusion of
+      the MVT (under slightly stronger hypotheses):
       <m>f(x) = f(a) + f'(c)(x - a)</m>.
     </p>
     <p>
@@ -400,8 +408,8 @@
       <m>k \geq 1</m>, the product and chain rules give
       <md>\frac{d}{dt}\left[\frac{f^{(k)}(t)}{k!}(x - t)^k\right]
       = \frac{f^{(k+1)}(t)}{k!}(x - t)^k
-      - \frac{f^{(k)}(t)}{(k-1)!}(x - t)^{k-1},</md>
-      and for <m>k = 0</m> the derivative of <m>f(t)</m> is
+      - \frac{f^{(k)}(t)}{(k-1)!}(x - t)^{k-1}</md>
+      (for <m>k = 1</m>, read <m>(x - t)^0</m> as <m>1</m>), and for <m>k = 0</m> the derivative of <m>f(t)</m> is
       <m>f'(t)</m>. Since <m>f(x)</m> does not depend on <m>t</m>,
       <md>F'(t) = -\left[\sum_{k=0}^{n} \frac{f^{(k+1)}(t)}{k!}(x - t)^k
       - \sum_{k=1}^{n} \frac{f^{(k)}(t)}{(k-1)!}(x - t)^{k-1}\right]
@@ -510,31 +518,31 @@
       of the rule.
     </p>
     <p>
-      <em>Proof.</em> Define <m>F(x) = f(x)</m> and
-      <m>G(x) = g(x)</m> for <m>x \in I</m> with <m>x \neq a</m>, and
-      <m>F(a) = G(a) = 0</m>. Then <m>F</m> and <m>G</m> are
+      <em>Proof.</em> Define <m>\varphi(x) = f(x)</m> and
+      <m>\psi(x) = g(x)</m> for <m>x \in I</m> with <m>x \neq a</m>, and
+      <m>\varphi(a) = \psi(a) = 0</m>. Then <m>\varphi</m> and <m>\psi</m> are
       continuous on <m>I</m>: at a point <m>x \neq a</m> because they
       agree with <m>f</m> and <m>g</m> on an open interval around
       <m>x</m>, where <m>f</m> and <m>g</m> are differentiable and
       hence continuous (<xref ref="ex-mod7-sg-41-2"/>), and at <m>a</m>
       by (iii). Fix <m>x \in I</m> with <m>x \neq a</m>, and let
-      <m>J</m> be the closed interval with endpoints <m>a</m> and
-      <m>x</m>; then <m>J \subset I</m>, and <m>F</m> and <m>G</m> are
-      continuous on <m>J</m> and differentiable at every point strictly
-      between <m>a</m> and <m>x</m>, with <m>F' = f'</m> and
-      <m>G' = g'</m> there.
+      <m>K</m> be the closed interval with endpoints <m>a</m> and
+      <m>x</m>; then <m>K \subset I</m>, and <m>\varphi</m> and <m>\psi</m> are
+      continuous on <m>K</m> and differentiable at every point strictly
+      between <m>a</m> and <m>x</m>, with <m>\varphi' = f'</m> and
+      <m>\psi' = g'</m> there.
     </p>
     <p>
-      First, <m>g(x) \neq 0</m>: otherwise <m>G(x) = 0 = G(a)</m>, and
-      Rolle's Theorem applied to <m>G</m> on <m>J</m> would give a point
+      First, <m>g(x) \neq 0</m>: otherwise <m>\psi(x) = 0 = \psi(a)</m>, and
+      Rolle's Theorem applied to <m>\psi</m> on <m>K</m> would give a point
       strictly between <m>a</m> and <m>x</m> where <m>g'</m> is
-      <m>0</m>, contrary to (ii). Next, the Cauchy Mean Value Theorem
-      applied to <m>F</m> and <m>G</m> on <m>J</m> gives a point
+      <m>0</m>, contrary to (ii). Next, <xref ref="par-mod7-sg-43-cauchy" text="custom">the Cauchy
+      Mean Value Theorem</xref> applied to <m>\varphi</m> and <m>\psi</m> on <m>K</m> gives a point
       <m>c_x</m> strictly between <m>a</m> and <m>x</m> with
-      <md>F(x)\, G'(c_x) = G(x)\, F'(c_x), \quad \text{that is,} \quad
+      <md>\varphi(x)\, \psi'(c_x) = \psi(x)\, \varphi'(c_x), \quad \text{that is,} \quad
       f(x)\, g'(c_x) = g(x)\, f'(c_x).</md>
       (When <m>x \lt a</m>, the theorem on <m>[x, a]</m> gives
-      <m>(F(a) - F(x))\, G'(c_x) = (G(a) - G(x))\, F'(c_x)</m>, which
+      <m>(\varphi(a) - \varphi(x))\, \psi'(c_x) = (\psi(a) - \psi(x))\, \varphi'(c_x)</m>, which
       is the same equation multiplied by <m>-1</m>.) Dividing by
       <m>g(x)\, g'(c_x)</m>, which is nonzero by (ii) and the first
       step,
@@ -563,7 +571,9 @@
       and <m>f(x)/g(x) = x \sin(1/x) \to 0</m> because
       <m>|x \sin(1/x)| \leq |x|</m>. But
       <m>f'(x)/g'(x) = 2x\sin(1/x) - \cos(1/x)</m> has no limit as
-      <m>x \to 0</m>: if it tended to some <m>M</m>, then
+      <m>x \to 0</m>. If it tended to some <m>M</m>, then, since
+      <m>2x \sin(1/x) \to 0</m> (because
+      <m>|2x \sin(1/x)| \leq 2|x|</m>), the difference
       <m>\cos(1/x) = 2x \sin(1/x) - f'(x)/g'(x)</m> would tend to
       <m>-M</m>, yet <m>\cos(1/x)</m> equals <m>1</m> at the points
       <m>1/(2\pi n)</m> and <m>-1</m> at the points
