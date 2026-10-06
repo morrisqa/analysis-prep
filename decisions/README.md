@@ -20,6 +20,7 @@ change the source as usual; the entry says where to look.
 | [structure.md](structure.md) | The structure pass: chapters as modules, examples, theorem markup, numbering |
 | [cross-references.md](cross-references.md) | Cross-references, numbering check, neutral option guidance, Module 2 items (#5, #6) |
 | [house-style.md](house-style.md) | House style and the graded-hint audit (#7) |
+| [frontmatter.md](frontmatter.md) | Title page and the preface "About This Text" (#40) |
 | [citations.md](citations.md) | **Every textbook citation, as a checklist to verify with the books** (#9) |
 
 

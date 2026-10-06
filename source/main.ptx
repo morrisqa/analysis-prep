@@ -22,6 +22,8 @@
   <book xml:id="analysis-prep">
     <title>Intensive Analysis Prep</title>
 
+    <xi:include href="frontmatter.ptx"/>
+
     <xi:include href="ch-mod1.ptx"/>
     <xi:include href="ch-mod2.ptx"/>
     <xi:include href="ch-mod3.ptx"/>

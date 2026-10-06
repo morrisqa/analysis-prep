@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frontmatter xml:id="frontmatter">
+  <bibinfo>
+    <author>
+      <personname>Quinn Morris</personname>
+      <department>Department of Mathematical Sciences</department>
+      <institution>Appalachian State University</institution>
+    </author>
+  </bibinfo>
+
+  <titlepage>
+    <titlepage-items/>
+  </titlepage>
+
+  <preface xml:id="preface-about">
+    <title>About This Text</title>
+
+    <p>
+      This text is for incoming graduate students preparing for MAT 5610.
+      Some of you are refreshing real analysis you have studied before;
+      others are meeting analysis-style proof for the first time. All
+      students do all of the work. The difference in starting points
+      appears in one place: the orientation of each module has a note on
+      pacing that suggests where to spend your time.
+    </p>
+
+    <p>
+      The nine modules begin with mathematical language and proof
+      strategies (<xref ref="ch-mod1"/>), the real number system
+      (<xref ref="ch-mod2"/>), and sets, functions, and cardinality
+      (<xref ref="ch-mod3"/>). They continue with sequences
+      (<xref ref="ch-mod4"/>), series (<xref ref="ch-mod5"/>), limits,
+      continuity, and uniform continuity (<xref ref="ch-mod6"/>), differentiation
+      (<xref ref="ch-mod7"/>), and the Riemann integral
+      (<xref ref="ch-mod8"/>), and close with sequences and series of
+      functions (<xref ref="ch-mod9"/>). Later modules use earlier ones, so
+      work through them in order.
+    </p>
+
+    <p>
+      Every module has six components. Use them in this order.
+      <ol>
+        <li>
+          <p>
+            <alert>Orientation.</alert> The module's objectives, ungraded
+            self-assessment questions, and a road map with an estimated
+            time for each part of the module.
+          </p>
+        </li>
+        <li>
+          <p>
+            <alert>Companion Reading and Study Guide.</alert> Guided questions to answer with the
+            assigned textbook sections open in front of you.
+          </p>
+        </li>
+        <li>
+          <p>
+            <alert>Worked Examples.</alert> Complete proofs that model the
+            standard expected of your own writing, with scratch work kept
+            separate from the formal proof.
+          </p>
+        </li>
+        <li>
+          <p>
+            <alert>Practice Problem Set.</alert> Problems to work with
+            complete written solutions. They are not submitted.
+          </p>
+        </li>
+        <li>
+          <p>
+            <alert>Bridge Reading Guide.</alert> A reading in the MAT 5610 text,
+            with guided questions, showing how the module's material looks
+            there.
+          </p>
+        </li>
+        <li>
+          <p>
+            <alert>Assessment.</alert> Proofs and a short reflection,
+            submitted for feedback.
+          </p>
+        </li>
+      </ol>
+    </p>
+
+    <p>
+      Practice problems are labeled <m>[\mathbf{F}]</m> (foundational),
+      <m>[\mathbf{S}]</m> (standard), or <m>[\mathbf{C}]</m> (challenge).
+      The labels describe difficulty, not importance: problems at every
+      level are part of the module.
+    </p>
+
+    <p>
+      Many exercises carry a hint, an answer, or a solution. In the online
+      version these are hidden until you open them; in the PDF they follow
+      the exercise. In either format, try the problem before you look.
+      Assessment items have no answers or solutions, and their hints point
+      only to an approach.
+    </p>
+
+    <p>
+      The study guides follow Zorn's <pubtitle>Understanding Real
+      Analysis</pubtitle> and, in <xref ref="ch-mod1"/> and
+      <xref ref="ch-mod3"/>, Hirst. The bridge readings connect each module
+      to Bauldry, the text for MAT 5610. This text cites these books and,
+      apart from a few short quotations, does not reproduce them, so you
+      will need your own copies.
+    </p>
+
+    <p>
+      Each module's road map lists lightboard videos. The videos are
+      distributed through the course and are not part of this text.
+      Assessments are also submitted through the course.
+    </p>
+
+    <p>
+      Read the
+      <url href="https://morrisqa.github.io/analysis-prep/" visual="morrisqa.github.io/analysis-prep">web version of this text</url>
+      or download the
+      <url href="https://morrisqa.github.io/analysis-prep/book.pdf" visual="morrisqa.github.io/analysis-prep/book.pdf">PDF version of this text</url>.
+    </p>
+  </preface>
+</frontmatter>
