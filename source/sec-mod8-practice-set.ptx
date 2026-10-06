@@ -151,10 +151,10 @@
     <p>
       These problems apply the same moves to longer arguments: a proof
       that <m>x^2</m> is integrable on <m>[0,1]</m>, a proof of integration
-      by parts, a bound on an integral from bounds on its integrand, a
-      proof that increasing functions are integrable, and a proof that
-      <m>|f|</m> is integrable with
-      <m>\left|\int_a^b f\right| \leq \int_a^b |f|</m>.
+      by parts, a proof that bounds on an integrand give bounds on its
+      integral, a proof that an increasing function on <m>[a,b]</m> is
+      integrable, and a proof that <m>|f|</m> is integrable whenever
+      <m>f</m> is, with <m>\left|\int_a^b f\right| \leq \int_a^b |f|</m>.
     </p>
   </paragraphs>
 

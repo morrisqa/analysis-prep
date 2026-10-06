@@ -27,7 +27,8 @@
       These problems practice the basic moves of the module: finding
       pointwise limits of sequences of functions, computing sup-norm
       distances to the pointwise limit, deciding whether convergence is
-      uniform on a given set, and applying the Weierstrass <m>M</m>-Test to series of functions.
+      uniform on a given set, and applying the Weierstrass <m>M</m>-Test to
+      series of functions.
     </p>
   </paragraphs>
 

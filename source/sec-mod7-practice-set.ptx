@@ -165,9 +165,8 @@
       differentiability from the limit definition, a proof using the Mean
       Value Theorem that <m>e^x \geq 1 + x</m>, a proof that a positive
       derivative on an interval makes a function strictly increasing, a
-      limit evaluated by two applications of
-      L'H&#xf4;pital's rule, and a second-order Taylor polynomial with its
-      Lagrange remainder.
+      limit evaluated by two applications of L'H&#xf4;pital's rule, and a
+      second-order Taylor polynomial with its Lagrange remainder.
     </p>
   </paragraphs>
 

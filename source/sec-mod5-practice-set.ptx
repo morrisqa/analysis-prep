@@ -152,8 +152,8 @@
       telescoping proof from the definition of series convergence,
       applications of the Ratio Test and the Limit Comparison Test, a proof
       using the Alternating Series Test with a classification as absolute
-      or conditional, and a pair of examples showing that the converse of
-      the Divergence Test is false.
+      or conditional, and a pair of examples showing that the Divergence
+      Test is inconclusive when <m>a_k \to 0</m>.
     </p>
   </paragraphs>
 
