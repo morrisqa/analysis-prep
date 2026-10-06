@@ -19,6 +19,7 @@
 
     <xi:include href="ch-mod1.ptx"/>
     <xi:include href="ch-mod2.ptx"/>
+    <xi:include href="ch-mod3.ptx"/>
 
   </book>
 
