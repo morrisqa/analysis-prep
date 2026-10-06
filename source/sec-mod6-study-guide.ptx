@@ -13,10 +13,10 @@
     <p>
       As you read, keep in mind the central structural theme: the
       <m>\varepsilon</m>-<m>\delta</m> definition is a direct analogue
-      of the <m>\varepsilon</m>-<m>N</m> definition from Module 4.
+      of the <m>\varepsilon</m>-<m>N</m> definition from <xref ref="ch-mod4"/>.
       Every theorem about limits of functions has a counterpart for
       sequences, and the sequential characterization (Zorn's Theorem 3.3 or
-      its analogue) is the bridge that lets you use Module 4
+      its analogue) is the bridge that lets you use <xref ref="ch-mod4"/>
       tools here.
     </p>
   <!-- ============================================================
@@ -29,7 +29,7 @@
       Read the <m>\varepsilon</m>-<m>\delta</m> definition of
       <m>\lim_{x \to a} f(x) = L</m> carefully. Compare it line by
       line with the <m>\varepsilon</m>-<m>N</m> definition of sequence
-      convergence from Module 4. The structural parallel is the key
+      convergence from <xref ref="ch-mod4"/>. The structural parallel is the key
       takeaway from this section.
     </p>
   </paragraphs>
@@ -76,7 +76,7 @@
         particular, <m>f</m> need not even be defined at <m>a</m>.
       </p>
       <p>
-        (b) In Module 4, <m>N</m> is a threshold index past which
+        (b) In <xref ref="ch-mod4"/>, <m>N</m> is a threshold index past which
         the sequence stays within <m>\varepsilon</m> of <m>L</m>.
         Here, <m>\delta</m> plays the same role: it is a threshold
         distance from <m>a</m> within which <m>f(x)</m> stays within
@@ -124,7 +124,7 @@
         have <m>f(x_n) \to L</m>.
         <ol marker="(a)">
           <li>
-            Explain in one sentence how this theorem connects Module 4
+            Explain in one sentence how this theorem connects <xref ref="ch-mod4"/>
             to Module 6.
           </li>
           <li>
@@ -140,7 +140,7 @@
       <p>
         (a) The sequential characterization reduces questions about
         function limits to questions about sequence limits, so every
-        Module 4 tool (Algebra of Limits, Squeeze Theorem, etc.) applies
+        <xref ref="ch-mod4"/> tool (Algebra of Limits, Squeeze Theorem, etc.) applies
         directly to function limits via this bridge.
       </p>
       <p>

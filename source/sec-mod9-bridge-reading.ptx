@@ -73,7 +73,7 @@
           <li>
             State the sup-norm criterion as Bauldry gives it. How
             does his statement compare to the version in the module
-            study guide (Exercise sg-2)?
+            study guide (<xref ref="ex-mod9-sg-2"/>)?
           </li>
           <li>
             Bauldry may phrase the criterion as a theorem or as an
@@ -121,7 +121,7 @@
             closed interval is <em>uniformly</em> continuous.
             Does he state this? Is any hypothesis needed beyond those
             of the continuity theorem? (Recall what
-            <xref ref="ch-mod6" text="custom">Module 6</xref> says
+            <xref ref="ch-mod6"/> says
             about continuous functions on a closed, bounded interval.)
           </li>
         </ol>
@@ -247,23 +247,23 @@
       This is the final bridge reading of the prep course. Over nine
       modules, you have built every foundational tool that MAT 5610
       will use in Bauldry Chapter 2: the logic and proof-writing
-      infrastructure (<xref ref="ch-mod1" text="custom">Module 1</xref>),
+      infrastructure (<xref ref="ch-mod1"/>),
       the completeness of <m>\R</m>
-      (<xref ref="ch-mod2" text="custom">Module 2</xref>), sets,
+      (<xref ref="ch-mod2"/>), sets,
       functions, and cardinality
-      (<xref ref="ch-mod3" text="custom">Module 3</xref>), the theory
+      (<xref ref="ch-mod3"/>), the theory
       of sequences including Cauchy sequences and subsequences
-      (<xref ref="ch-mod4" text="custom">Module 4</xref>), series
+      (<xref ref="ch-mod4"/>), series
       including absolute and conditional convergence
-      (<xref ref="ch-mod5" text="custom">Module 5</xref>), limits,
+      (<xref ref="ch-mod5"/>), limits,
       continuity, and uniform continuity of functions
-      (<xref ref="ch-mod6" text="custom">Module 6</xref>),
+      (<xref ref="ch-mod6"/>),
       differentiation, the Mean Value Theorem, and Taylor polynomials
-      (<xref ref="ch-mod7" text="custom">Module 7</xref>), Riemann
+      (<xref ref="ch-mod7"/>), Riemann
       integration and the Fundamental Theorem
-      (<xref ref="ch-mod8" text="custom">Module 8</xref>), and now
+      (<xref ref="ch-mod8"/>), and now
       uniform convergence of function sequences and series
-      (<xref ref="ch-mod9" text="custom">Module 9</xref>).
+      (<xref ref="ch-mod9"/>).
     </p>
     <p>
       Bauldry Chapter 2 is the rigorous version of all of that&#x2014;

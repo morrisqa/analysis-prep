@@ -239,7 +239,7 @@
         </md>
         Every function here is continuous on <m>[0,1]</m>, so we may
         integrate from <m>0</m> to <m>1</m> and use linearity and FTC Part 2
-        (<xref ref="ch-mod8" text="custom">Module 8</xref>), with
+        (<xref ref="ch-mod8"/>), with
         <m>\arctan(1) = \pi/4</m>:
         <md>
           \frac{\pi}{4} - \sum_{k=0}^{n} \frac{(-1)^k}{2k+1} = (-1)^{n+1}\int_0^1 \frac{t^{2n+2}}{1+t^2}\,dt.

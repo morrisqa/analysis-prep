@@ -245,7 +245,7 @@
     <p>
       For our purposes in real analysis,
       the most important equivalence-like comparison is the comparison
-      of sets by cardinality in Part D: for sets <m>A</m> and <m>B</m>, write
+      of sets by cardinality in <xref ref="par-mod3-sg-d" text="custom">Part D</xref>: for sets <m>A</m> and <m>B</m>, write
       <m>A \sim B</m> iff there exists a bijection <m>A \to B</m>.
       This comparison is reflexive (the identity map <m>A \to A</m> is
       a bijection), symmetric (a bijection <m>f : A \to B</m> has an
@@ -258,7 +258,7 @@
       <m>b \in B</m>, which is <m>f(a)</m> for some <m>a \in A</m>).
       So it behaves like an equivalence relation, although it is not a
       relation on one fixed set <m>A</m> in the sense above: it compares
-      arbitrary sets. From Part D on, <m>A \sim B</m> between two sets
+      arbitrary sets. From <xref ref="par-mod3-sg-d" text="custom">Part D</xref> on, <m>A \sim B</m> between two sets
       always has this meaning; in the exercise below, <m>\sim</m> is a
       different relation, on <m>\Z</m>.
     </p>

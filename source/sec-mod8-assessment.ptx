@@ -145,7 +145,7 @@
     <statement>
       <p>
         Explain in your own words, in 3&#x2013;5 sentences, how
-        uniform continuity (Module 6) appears in the proof that
+        uniform continuity (<xref ref="ch-mod6"/>) appears in the proof that
         continuous functions are Riemann integrable. What specific
         role does it play, and could the proof work with only
         pointwise continuity?
@@ -170,7 +170,7 @@
     <title>FTC as a Bridge</title>
     <statement>
       <p>
-        The FTC connects differentiation (Module 7) and integration
+        The FTC connects differentiation (<xref ref="ch-mod7"/>) and integration
         (Module 8). In 2&#x2013;3 sentences, describe this connection
         in your own words. Which direction &#x2014; Part 1 (differentiating
         an integral gives the integrand) or Part 2 (integrating a

@@ -200,7 +200,7 @@
       <p>
         Sketch the proof that if <m>f</m> is continuous on <m>[a,b]</m>,
         then <m>f</m> is Riemann integrable on <m>[a,b]</m>. Which
-        fact from Module 6 is used and where?
+        fact from <xref ref="ch-mod6"/> is used and where?
       </p>
     </statement>
     <answer>
@@ -294,7 +294,7 @@
     <p>
       Read both parts of the FTC carefully. Part 1 requires
       differentiating a function defined by an integral; Part 2 uses
-      Part 1 together with the Module 7 corollary that a function
+      Part 1 together with the <xref ref="ch-mod7"/> corollary that a function
       with zero derivative on an interval is constant.
     </p>
   </paragraphs>
@@ -405,7 +405,7 @@
             Prove FTC Part 2 using FTC Part 1 as a lemma: if
             <m>F' = f</m> on <m>[a,b]</m>, define
             <m>G(x) = \int_a^x f</m>. By Part 1, <m>G' = f = F'</m>,
-            so <m>(G - F)' = 0</m>. By the Module 7 corollary (a
+            so <m>(G - F)' = 0</m>. By the <xref ref="ch-mod7"/> corollary (a
             function with zero derivative on an interval is constant),
             <m>G - F = C</m> for some constant. Evaluate at <m>x = a</m>
             to find <m>C</m>, then at <m>x = b</m> to conclude.
@@ -421,7 +421,7 @@
         <md>\int_a^b f(x)\,dx = F(b) - F(a).</md>
         (b) Define <m>G(x) = \int_a^x f(t)\,dt</m>. By FTC Part 1,
         <m>G'(x) = f(x) = F'(x)</m> for all <m>x \in (a,b)</m>. Hence
-        <m>(G - F)'(x) = 0</m> on <m>(a,b)</m>. By the Module 7 MVT
+        <m>(G - F)'(x) = 0</m> on <m>(a,b)</m>. By the <xref ref="ch-mod7"/> MVT
         corollary (<xref ref="ex-mod7-sg-43-3"/>), there is a constant
         <m>C \in \R</m> with <m>G(x) - F(x) = C</m> for all
         <m>x \in (a,b)</m>.

@@ -66,7 +66,7 @@
   <!-- ============================================================ -->
 
     <p>
-      Modules 1 and 2 gave you the tools of mathematical logic and the
+      Modules <xref ref="ch-mod1" text="custom">1</xref> and <xref ref="ch-mod2" text="custom">2</xref> gave you the tools of mathematical logic and the
       structure of the real number system. This module supplies the
       remaining foundational vocabulary that real analysis depends on:
       <em>sets</em>, <em>functions</em>, and <em>cardinality</em>.
@@ -167,8 +167,8 @@
     <p>
       The material in this module is foundational in the most literal
       sense: every subsequent module rests on it. The <m>\varepsilon</m>-<m>N</m>
-      definitions in Module 4 are statements about functions from
-      <m>\N</m> to <m>\R</m>. The continuity definitions in Module 6
+      definitions in <xref ref="ch-mod4"/> are statements about functions from
+      <m>\N</m> to <m>\R</m>. The continuity definitions in <xref ref="ch-mod6"/>
       require you to work fluently with function composition and
       preimages. Cardinality shows up implicitly any time a proof
       distinguishes between countably many and uncountably many objects.
@@ -201,10 +201,10 @@
     <p>
       <alert>A note on pacing.</alert>
       If you are coming in with prior real analysis experience, the
-      set notation in Part A of the Study Guide and the function
-      definitions in Part B will likely feel familiar. Skim those
+      set notation in <xref ref="par-mod3-sg-a" text="custom">Part A</xref> of the Study Guide and the function
+      definitions in <xref ref="par-mod3-sg-b" text="custom">Part B</xref> will likely feel familiar. Skim those
       sections to confirm your notation is aligned with Zorn's, then
-      invest your time in Part D (cardinality) and the Worked Examples
+      invest your time in <xref ref="par-mod3-sg-d" text="custom">Part D</xref> (cardinality) and the Worked Examples
       for countability. The diagonal argument, even if you have seen it
       before, is worth re-reading slowly with attention to the logical
       structure of the contradiction. If analysis-style proofs are newer

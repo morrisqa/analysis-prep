@@ -16,8 +16,8 @@
       through all three sections is that <em>every statement about
       derivatives is ultimately a statement about limits</em>, and every
       proof uses the limit machinery from
-      <xref ref="ch-mod4" text="custom">Module 4</xref> and
-      <xref ref="ch-mod6" text="custom">Module 6</xref>. When you
+      <xref ref="ch-mod4"/> and
+      <xref ref="ch-mod6"/>. When you
       encounter a rule you learned mechanically in calculus, ask: which
       limit law is doing the work here?
     </p>
@@ -257,7 +257,7 @@
     <title>Section 4.3: The Mean Value Theorem (Zorn pp. 182&#x2013;196)</title>
     <p>
       Section 4.3 is the heart of Module 7. Read the proof of Rolle's
-      Theorem carefully: it uses the Extreme Value Theorem (Module 6)
+      Theorem carefully: it uses the Extreme Value Theorem (<xref ref="ch-mod6"/>)
       in an essential way. The MVT proof derives from Rolle's by a
       geometric trick (subtracting the secant line) that you should
       be able to reconstruct from memory by the end of this module.

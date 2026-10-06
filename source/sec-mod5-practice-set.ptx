@@ -112,7 +112,7 @@
         (d) <m>\cos(1/k) \to \cos(0) = 1 \neq 0</m>, because
         <m>1/k \to 0</m> and cosine is continuous at 0 (a calculus
         fact for now; continuity is the subject of
-        <xref ref="ch-mod6" text="custom">Module 6</xref>); diverges.
+        <xref ref="ch-mod6"/>); diverges.
       </p>
     </answer>
   </exercise>
@@ -312,7 +312,7 @@
       </p>
       <p>
         Your first proof must use the Cauchy criterion for sequences
-        (Module 4). Let <m>T_n = \sum_{k=1}^{n} |a_k|</m> and
+        (<xref ref="ch-mod4"/>). Let <m>T_n = \sum_{k=1}^{n} |a_k|</m> and
         <m>S_n = \sum_{k=1}^{n} a_k</m>. Use that <m>(T_n)</m> is
         Cauchy (it converges by hypothesis) together with the
         triangle inequality on finite sums to show <m>(S_n)</m> is
@@ -324,7 +324,7 @@
         does not use the Cauchy criterion, using the Comparison Test
         and the algebra of convergent series
         (<xref ref="ex-mod5-sg-25-5"/>) instead. Finally, for each
-        proof, name the <xref ref="ch-mod4" text="custom">Module 4</xref>
+        proof, name the <xref ref="ch-mod4"/>
         theorem through which the completeness of <m>\R</m> enters.
       </p>
     </statement>

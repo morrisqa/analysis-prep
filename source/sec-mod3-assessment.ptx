@@ -20,10 +20,12 @@
     </p>
     <p>
       <alert>A note on Part 2.</alert> All students complete all three
-      parts. For Part 2, choose the option that best matches your
-      background: if you have prior real analysis experience, challenge
-      yourself with Option B. If this is newer territory, Option A is
-      the right starting point.
+      parts. Part 2 offers two options. Option A asks for an explicit
+      bijection showing that the integer multiples of 3 form a countably
+      infinite set. Option B asks you to prove that the union of two
+      countable sets is countable, building the map yourself and
+      handling finite sets, and is the more demanding. Choose the
+      option that will stretch you.
     </p>
     <p>
       <alert>Academic integrity.</alert> Your proofs must be your own
@@ -216,7 +218,7 @@
     <title>Looking Ahead</title>
     <statement>
       <p>
-        In Module 4, you will prove convergence of sequences using
+        In <xref ref="ch-mod4"/>, you will prove convergence of sequences using
         <m>\varepsilon</m>-<m>N</m> arguments. A sequence is a function
         <m>a : \N \to \R</m>. Based on what you learned in Module 3
         about functions, injectivity, and countability, describe one

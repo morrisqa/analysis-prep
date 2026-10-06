@@ -57,7 +57,7 @@
       which you once computed mechanically via the power rule, is now
       defined as a specific limit, and every differentiation rule
       &#x2014;sum, product, chain&#x2014;must be deduced from that
-      definition using the limit laws of Module 6.
+      definition using the limit laws of <xref ref="ch-mod6"/>.
     </p>
     <p>
       The central result of this module&#x2014;the Mean Value
@@ -137,13 +137,13 @@
       form</em>: to bound how much <m>f</m> can change on an interval,
       bound <m>f'</m> on that interval. This is a template you will use
       dozens of times in MAT 5610. The proof of Rolle's Theorem (which
-      depends on the Extreme Value Theorem from Module 6) is
+      depends on the Extreme Value Theorem from <xref ref="ch-mod6"/>) is
       worth memorizing; the derivation of the MVT from Rolle's (the
       <q>tilt the function</q> trick) is worth understanding so well that
       you could reconstruct it under pressure.
     </p>
     <p>
-      Students who found Module 6 challenging should revisit the
+      If you found <xref ref="ch-mod6"/> challenging, revisit the
       definition of continuity and the Extreme Value Theorem before
       starting this module: differentiability is a <em>stronger</em>
       condition than continuity, and Rolle's Theorem depends critically

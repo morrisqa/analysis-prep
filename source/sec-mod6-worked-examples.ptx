@@ -289,7 +289,7 @@
         applied to <m>|f'|</m> gives a constant <m>K</m> with
         <m>|f'(t)| \leq K</m> for all <m>t \in [a, b]</m>. If
         <m>x, y \in [a, b]</m> and <m>x \neq y</m>, the Mean Value
-        Theorem (<xref ref="ch-mod7" text="custom">Module 7</xref>) gives
+        Theorem (<xref ref="ch-mod7"/>) gives
         a point <m>c</m> between them with
         <m>|f(x) - f(y)| = |f'(c)|\,|x - y| \leq K|x - y|</m>; if
         <m>x = y</m>, the inequality holds trivially.

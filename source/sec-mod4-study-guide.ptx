@@ -80,7 +80,7 @@
       <p>
         Write out the negation of convergence&#x2014;that is, what
         <m>a_n \not\to L</m> means&#x2014;by applying the standard
-        negation rules from Module 1 (push <m>\neg</m> through each
+        negation rules from <xref ref="ch-mod1"/> (push <m>\neg</m> through each
         quantifier in turn).
       </p>
       <p>
@@ -184,7 +184,7 @@
       </p>
       <p>
         Identify: where in the formal proof does the Archimedean
-        Property appear, and why is it essential? Which of Module 2's
+        Property appear, and why is it essential? Which of <xref ref="ch-mod2"/>'s
         tools is the Archimedean Property a consequence of?
       </p>
     </statement>
@@ -410,7 +410,7 @@
           </li>
           <li>
             How is the <m>\varepsilon</m>-characterization of the
-            supremum (from Module 2) used to produce the index
+            supremum (from <xref ref="ch-mod2"/>) used to produce the index
             <m>N</m> needed by the <m>\varepsilon</m>-<m>N</m>
             definition of convergence?
           </li>

@@ -51,7 +51,7 @@
             involving <m>\varepsilon</m> and <m>n</m> that look similar but
             have opposite truth values. Write out both statements, and
             explain why their quantifier order makes them different.
-            (This pair recurs in <xref ref="ch-mod4" text="custom">Module 4</xref> on sequences.)
+            (This pair recurs in <xref ref="ch-mod4"/> on sequences.)
           </p>
         </statement>
         <answer>

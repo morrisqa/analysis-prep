@@ -66,8 +66,8 @@
   <!-- ============================================================ -->
 
     <p>
-      In Module 2 you built the vocabulary of bounds and completeness;
-      in Module 3 you became fluent with sets, functions, and the kinds
+      In <xref ref="ch-mod2"/> you built the vocabulary of bounds and completeness;
+      in <xref ref="ch-mod3"/> you became fluent with sets, functions, and the kinds
       of indexing that show up in analysis arguments. This module is
       where those tools first pay off. A <em>sequence</em> is just a
       function <m>a : \N \to \R</m>, but the question we ask of
@@ -134,7 +134,7 @@
       <p>
         The definition of convergence begins: <q>for every <m>\varepsilon \gt 0</m>,
         there exists <m>N \in \N</m> such that for every <m>n \geq N</m>&#x2026;</q>
-        Based on your work in Module 1 with quantifier alternation, what
+        Based on your work in <xref ref="ch-mod1"/> with quantifier alternation, what
         kind of dependency do you expect between <m>\varepsilon</m> and
         <m>N</m>? Does <m>N</m> depend on <m>\varepsilon</m>, or the
         other way around?
@@ -219,8 +219,9 @@
       on most directly. If <m>\varepsilon</m>-<m>N</m> proofs are newer
       territory, slow down at <xref ref="ex-mod4-we-1"/>: read it two or three
       times, reproduce the scratch-work-then-formal-proof pattern on
-      paper, and then work Practice Set problems F2&#x2013;F4 and
-      S1&#x2013;S2 before moving to the more structural theorems.
+      paper, and then work Practice Set problems
+      <xref ref="ex-mod4-ps-f2"/> to <xref ref="ex-mod4-ps-f4"/>,
+      <xref ref="ex-mod4-ps-s1"/>, and <xref ref="ex-mod4-ps-s2"/> before moving to the more structural theorems.
       The single most common mistake in this module is writing a
       proof in which <m>N</m> is chosen before <m>\varepsilon</m>; if
       the structure of your scratch work gets that order wrong, the

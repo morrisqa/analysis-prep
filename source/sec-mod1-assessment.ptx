@@ -20,12 +20,11 @@
         </p>
         <p>
           <alert>A note on Part 2.</alert> All students complete all three
-          parts. For Part 2, choose the option that best matches your
-          background: if you are coming in with prior real analysis
-          experience, challenge yourself with Option B. If analysis-style
-          proofs are newer territory for you, Option A is the right
-          starting point — work through it carefully before considering
-          Option B.
+          parts. Part 2 offers two options. Option A asks for a proof by
+          induction of a divisibility statement. Option B asks for a proof
+          by contrapositive (with cases) followed by a proof by
+          contradiction that <m>\sqrt{6}</m> is irrational, and is the more
+          demanding. Choose the option that will stretch you.
         </p>
         <p>
           <alert>Academic integrity.</alert> Your proofs must be your own
@@ -239,7 +238,7 @@
         <statement>
           <p>
             The <m>\varepsilon</m>-<m>N</m> proof you wrote in <xref ref="ex-mod1-as-1b"/>
-            is the first in a series: <xref ref="ch-mod4" text="custom">Module 4</xref> will ask you to prove that
+            is the first in a series: <xref ref="ch-mod4"/> will ask you to prove that
             various sequences converge using this same definition. Based
             on your experience with this proof, what do you anticipate
             will be the hardest step in applying the definition to more

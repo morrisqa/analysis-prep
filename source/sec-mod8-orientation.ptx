@@ -28,7 +28,7 @@
       <li>
         <p>
           Prove that every continuous function on <m>[a,b]</m> is Riemann
-          integrable, using uniform continuity from Module 6.
+          integrable, using uniform continuity from <xref ref="ch-mod6"/>.
         </p>
       </li>
       <li>
@@ -66,10 +66,10 @@
       The Riemann integral is the culmination of the first part of real
       analysis. It connects everything: the completeness of <m>\R</m>
       (upper and lower integrals exist by completeness), uniform
-      continuity from Module 6 (the key ingredient in proving that every
+      continuity from <xref ref="ch-mod6"/> (the key ingredient in proving that every
       continuous function is integrable), and the Mean Value Theorem from
-      Module 7 (the engine behind the proof of the Fundamental Theorem of
-      Calculus). If Modules 6 and 7 felt like separate tools, Module 8 is
+      <xref ref="ch-mod7"/> (the engine behind the proof of the Fundamental Theorem of
+      Calculus). If Modules <xref ref="ch-mod6" text="custom">6</xref> and <xref ref="ch-mod7" text="custom">7</xref> felt like separate tools, Module 8 is
       where they snap together.
     </p>
     <p>
@@ -165,7 +165,7 @@
       this module will feel natural rather than mysterious.
     </p>
     <p>
-      The connection to uniform continuity (Module 6) is not
+      The connection to uniform continuity (<xref ref="ch-mod6"/>) is not
       coincidental &#x2014; it is the reason continuous functions are
       integrable. The key step in the proof of <q>continuous implies
       integrable</q> is to bound the oscillation <m>M_i - m_i</m> on
@@ -173,7 +173,7 @@
       at each point separately gives a <m>\delta</m> that may depend
       on the point, and the proof needs one <m>\delta</m> for all of
       <m>[a,b]</m>, which the Heine<ndash/>Cantor theorem supplies. If you felt uncertain about the
-      distinction between pointwise and uniform continuity in Module 6,
+      distinction between pointwise and uniform continuity in <xref ref="ch-mod6"/>,
       this module provides the payoff for understanding it.
     </p>
   </paragraphs>

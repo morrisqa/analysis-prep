@@ -41,7 +41,7 @@
         <md>\sum_{k=1}^{\infty} \frac{1}{k(k+2)} = \frac{3}{4}.</md>
         Your proof must not use any of the named
         convergence tests; it must instead identify a closed form for
-        the partial sums <m>S_n</m> and take a limit using Module 4
+        the partial sums <m>S_n</m> and take a limit using <xref ref="ch-mod4"/>
         tools.
       </p>
       <p>
@@ -67,7 +67,7 @@
           </li>
           <li>
             <em>Take the limit.</em> Apply the Algebra of Limits from
-            Module 4 to conclude <m>S_n \to 3/4</m>, and invoke the
+            <xref ref="ch-mod4"/> to conclude <m>S_n \to 3/4</m>, and invoke the
             definition of series convergence.
           </li>
         </ol>
@@ -162,7 +162,7 @@
     <title>Divergence Test and Shifted Sequences</title>
     <statement>
       <p>
-        In <xref ref="ch-mod4" text="custom">Module 4</xref> you learned
+        In <xref ref="ch-mod4"/> you learned
         to use the Algebra of Limits (in particular, the difference
         rule) to compute limits of combinations of sequences. In <xref ref="ex-mod5-sg-25-3"/>
         you used one more fact: shifting a sequence by one index does
@@ -200,7 +200,7 @@
     <statement>
       <p>
         The Bridge Reading included a preview of <em>power series</em>
-        via Bauldry &#xa7;1.6. In Module 9 you will return to these
+        via Bauldry &#xa7;1.6. In <xref ref="ch-mod9"/> you will return to these
         objects in the language of <em>sequences and series of
         functions</em>. Based on the preview, describe in two or
         three sentences what you think will be new in the functional

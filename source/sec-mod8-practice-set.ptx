@@ -323,7 +323,7 @@
     <title>Challenge Problems</title>
     <p>
       These problems extend the module's ideas: a proof of FTC Part 2
-      using FTC Part 1 and the Module 7 corollary that a function with
+      using FTC Part 1 and the <xref ref="ch-mod7"/> corollary that a function with
       zero derivative on an open interval is constant, and a proof that
       the Dirichlet function is not Riemann integrable on <m>[0,1]</m>.
     </p>
@@ -334,13 +334,13 @@
     <statement>
       <p>
         Prove FTC Part 2 in full, using FTC Part 1 as a lemma and
-        the Module 7 corollary that a function with zero derivative
+        the <xref ref="ch-mod7"/> corollary that a function with zero derivative
         on an open interval is constant on that interval.
       </p>
       <p>
         Your proof must have the following steps: (i) define
         <m>G(x) = \int_a^x f</m> and invoke FTC Part 1 to conclude
-        <m>G' = f = F'</m> on <m>(a,b)</m>; (ii) apply the Module 7
+        <m>G' = f = F'</m> on <m>(a,b)</m>; (ii) apply the <xref ref="ch-mod7"/>
         corollary to <m>G - F</m> on <m>(a,b)</m>; (iii) show that
         <m>G</m> and <m>F</m> are continuous on <m>[a,b]</m>, so that
         <m>G - F</m> takes the same constant value at <m>a</m> and

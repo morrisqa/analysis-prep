@@ -47,7 +47,7 @@
   <!-- ============================================================ -->
 
     <p>
-      In Module 1 you assembled the logical toolkit: quantifiers, proof
+      In <xref ref="ch-mod1"/> you assembled the logical toolkit: quantifiers, proof
       strategies, and mathematical prose. This module turns to the object
       those tools will be applied to for the rest of the course: the real
       number system <m>\R</m>.

@@ -153,15 +153,15 @@
       <p>
         For part (i): for fixed <m>x \in (0,1)</m>, compare consecutive
         terms <m>f_{n+1}(x)</m> and <m>f_n(x)</m>, and recall the tests
-        for series in <xref ref="ch-mod5" text="custom">Module 5</xref>.
+        for series in <xref ref="ch-mod5"/>.
         For part (ii): differentiate <m>f_n</m> with respect to
         <m>x</m> and factor the derivative.
         For part (iv): find an antiderivative of <m>f_n</m> (the
         substitution <m>u = 1 - x</m> suggests one), confirm it by
         differentiating with the chain rule from
-        <xref ref="ch-mod7" text="custom">Module 7</xref>, and apply
+        <xref ref="ch-mod7"/>, and apply
         Part 2 of the Fundamental Theorem of Calculus from
-        <xref ref="ch-mod8" text="custom">Module 8</xref>.
+        <xref ref="ch-mod8"/>.
       </p>
     </hint>
   </exercise>

@@ -51,7 +51,7 @@
         <p>
           Articulate the central structural claim of this module:
           <em>every theorem about series is a theorem about sequences</em>,
-          obtained by applying Module 4 results to the partial-sum
+          obtained by applying <xref ref="ch-mod4"/> results to the partial-sum
           sequence <m>(S_n)</m>.
         </p>
       </li>
@@ -62,7 +62,7 @@
   <!-- ============================================================ -->
 
     <p>
-      Module 4 built a toolkit for sequences: the
+      <xref ref="ch-mod4"/> built a toolkit for sequences: the
       <m>\varepsilon</m>-<m>N</m> definition of convergence, the
       Algebra of Limits, the Squeeze Theorem, the Monotone Convergence
       Theorem, Bolzano&#x2013;Weierstrass, and Cauchy sequences. Module 5
@@ -76,7 +76,7 @@
       it demystifies the named tests. The Divergence Test, for instance,
       is just the observation that if <m>S_n</m> converges then
       <m>S_n - S_{n-1} = a_n \to 0</m>&#x2014;an immediate corollary of
-      limit laws from Module 4. Second, it clarifies what
+      limit laws from <xref ref="ch-mod4"/>. Second, it clarifies what
       <em>absolute</em> and <em>conditional</em> convergence really mean:
       the question is whether <m>\sum |a_k|</m> (a <em>new</em> series,
       with its own partial-sum sequence <m>T_n = |a_1| + \cdots + |a_n|</m>)
@@ -95,7 +95,7 @@
       <p>
         In your own words, what does it mean for the infinite series
         <m>\sum_{k=1}^{\infty} a_k</m> to <em>equal</em> the number
-        <m>S</m>? Which previously-studied object (from Module 4) is
+        <m>S</m>? Which previously-studied object (from <xref ref="ch-mod4"/>) is
         really doing the work in that definition?
       </p>
     </statement>
@@ -182,7 +182,7 @@
       an opportunity to strengthen your grip on the <em>underlying</em>
       statement: for each test, be able to identify the partial-sum
       sequence, the hypothesis you are using about that sequence, and
-      the Module 4 theorem that makes the argument go.
+      the <xref ref="ch-mod4"/> theorem that makes the argument go.
     </p>
   </paragraphs>
 
@@ -201,7 +201,8 @@
       proof-based series work is newer to you, slow down at
       <xref ref="ex-mod5-we-1"/> (telescoping from partial sums): read it twice,
       reproduce the partial-sum computation on paper, and then work
-      Practice Set problems F1&#x2013;F4 before attempting the Ratio
+      Practice Set problems <xref ref="ex-mod5-ps-f1"/> to
+      <xref ref="ex-mod5-ps-f4"/> before attempting the Ratio
       and Root Tests. The single most common mistake in this module
       is to treat a test as a black box rather than as a claim about
       the sequence <m>(S_n)</m>; if you can always name the

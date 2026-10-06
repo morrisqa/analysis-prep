@@ -268,7 +268,7 @@
         rules are needed. Letting <m>n \to \infty</m> directly in
         <m>a_{n+1} = \sqrt{2 + a_n}</m> would require the
         <em>continuity</em> of the square root, which you will study
-        in <xref ref="ch-mod6" text="custom">Module 6</xref>. Zorn
+        in <xref ref="ch-mod6"/>. Zorn
         (&#xa7;2.3) takes the direct route, using continuity of the
         square root informally.
       </p>

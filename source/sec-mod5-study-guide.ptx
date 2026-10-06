@@ -31,7 +31,7 @@
     <p>
       Read Zorn's Definition 2.22 (series convergence) very carefully. This
       is the definition on which all of Module 5 rests. Notice that it
-      is not a new kind of limit&#x2014;it is the old Module 4 limit,
+      is not a new kind of limit&#x2014;it is the old <xref ref="ch-mod4"/> limit,
       applied to the partial-sum sequence.
     </p>
   </paragraphs>
@@ -44,7 +44,7 @@
         symbolically. Your statement should involve the partial sums
         <m>S_n = a_1 + a_2 + \cdots + a_n</m> and the
         <m>\varepsilon</m>-<m>N</m> definition of sequence convergence
-        from Module 4.
+        from <xref ref="ch-mod4"/>.
       </p>
       <p>
         <ol marker="(a)">
@@ -94,7 +94,7 @@
           <li>
             Explain why <m>r^n \to 0</m> when <m>|r| \lt 1</m>. (You
             do not need to prove this rigorously, but you should be
-            able to point at the Module 4 tool that does the work;
+            able to point at the <xref ref="ch-mod4"/> tool that does the work;
             in Zorn it appears as Theorem 2.16 or near Proposition 2.24.)
           </li>
           <li>
@@ -133,7 +133,7 @@
       </p>
       <p>
         Prove this from scratch, using the definition of series
-        convergence and a Module 4 limit law of your choice.
+        convergence and a <xref ref="ch-mod4"/> limit law of your choice.
       </p>
       <p>
         (Hint: <m>a_n = S_n - S_{n-1}</m>, where <m>S_0 = 0</m>.)
@@ -199,7 +199,7 @@
         Read Zorn's Theorem 2.23 (algebra with convergent series).
         State the results for sums and constant multiples, and explain
         in one sentence why each is a direct consequence of the
-        Algebra of Limits from Module 4 applied to partial sums.
+        Algebra of Limits from <xref ref="ch-mod4"/> applied to partial sums.
       </p>
     </statement>
     <answer>
@@ -207,7 +207,7 @@
         If <m>\sum a_n = A</m> and <m>\sum b_n = B</m>, then
         <m>\sum (a_n \pm b_n) = A \pm B</m> and <m>\sum c a_n = c A</m>
         for any constant <m>c</m>. Each follows by applying the
-        sum rule (resp. constant-multiple rule) from Module 4 to the
+        sum rule (resp. constant-multiple rule) from <xref ref="ch-mod4"/> to the
         partial-sum sequences <m>(S_n^{(a)})</m> and <m>(S_n^{(b)})</m>:
         the partial sum of <m>a_n + b_n</m> is <m>S_n^{(a)} + S_n^{(b)}</m>,
         and limits of sums are sums of limits.
@@ -226,7 +226,7 @@
       because this is where the recipes get proved. For each test,
       identify: the hypothesis on the terms, the conclusion about the
       series, and the earlier fact that drives the proof: a result
-      from <xref ref="ch-mod4" text="custom">Module 4</xref> (MCT,
+      from <xref ref="ch-mod4"/> (MCT,
       the Cauchy criterion, or the fact that
       <xref ref="par-mod4-sg-two-facts" text="custom">limits preserve
       non-strict inequalities</xref>) or the geometric series of
@@ -367,11 +367,11 @@
       <m>r^k</m> of a fixed number. This module uses it in the two
       forms below; the limit form is the version you may know from
       calculus. The proofs compare with the geometric series and use
-      only results from <xref ref="ch-mod4" text="custom">Module 4</xref>
+      only results from <xref ref="ch-mod4"/>
       and from this module. Every nonnegative real number has a unique
       nonnegative <m>k</m>th root (a consequence of the completeness of
       <m>\R</m>; it also follows from the Intermediate Value Theorem in
-      <xref ref="ch-mod6" text="custom">Module 6</xref>), and the usual
+      <xref ref="ch-mod6"/>), and the usual
       exponent laws apply to these roots. For <m>a_k \geq 0</m>,
       <m>\sqrt[k]{a_k}</m> denotes the nonnegative <m>k</m>th root of
       <m>a_k</m>.
@@ -531,7 +531,7 @@
         \lt \varepsilon</m> for <m>n \gt m \geq N</m>. By the triangle
         inequality, <m>|S_n - S_m| = \left|\sum_{k=m+1}^{n} a_k\right|
         \leq \sum_{k=m+1}^{n} |a_k| \lt \varepsilon</m>, so <m>(S_n)</m>
-        is Cauchy, and by Cauchy completeness of <m>\R</m> (Module 4),
+        is Cauchy, and by Cauchy completeness of <m>\R</m> (<xref ref="ch-mod4"/>),
         <m>(S_n)</m> converges.
       </p>
     </answer>
