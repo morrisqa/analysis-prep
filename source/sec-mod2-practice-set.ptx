@@ -186,9 +186,9 @@
           </li>
           <li>
             Using part (a), prove that
-            <m>|x^2 - 9| \lt 7 \cdot |x - 3|</m>.
+            <m>|x^2 - 9| \leq 7 \cdot |x - 3|</m>.
             (Hint: factor <m>x^2 - 9 = (x-3)(x+3)</m> and use
-            <m>|xy| = |x||y|</m>.)
+            <m>|uv| = |u||v|</m>.)
           </li>
           <li>
             Conclude: if <m>|x - 3| \lt \min\!\left(1, \varepsilon/7\right)</m>,
@@ -241,12 +241,8 @@
           <li>
             Prove your answer for <m>\sup U</m> by verifying
             both conditions in the definition of supremum.
-            For condition (ii), you may use the fact that between any
-            real number strictly less than <m>\sqrt{5}</m> and
-            <m>\sqrt{5}</m> itself there exist real numbers in
-            <m>U</m>. (You do not need to construct an explicit
-            element; the density of <m>\R</m> near <m>\sqrt{5}</m>
-            is sufficient.)
+            For condition (ii), note that <m>\sqrt{5} \in U</m>, so
+            every upper bound of <m>U</m> is at least <m>\sqrt{5}</m>.
           </li>
         </ol>
       </p>
@@ -280,7 +276,8 @@
       <p>
         Since both <m>s</m> and <m>s'</m> are upper bounds of <m>S</m>,
         and both are least upper bounds, use the second condition of
-        the definition to show <m>s \leq s'</m> and <m>s' \leq s</m>.
+        the definition (a supremum is at most every upper bound) to
+        show <m>s \leq s'</m> and <m>s' \leq s</m>.
       </p>
     </hint>
   </exercise>
@@ -294,8 +291,10 @@
         such that <m>n \gt x</m>.
       </p>
       <p>
-        (This is the argument you will read in Bauldry as Theorem 2.3.
-        Working through it yourself before the Bridge Reading will
+        <!-- TODO(quinn): verify against the statement of Bauldry's Theorem 2.3. -->
+        (This is the case <m>\varepsilon = 1</m> of Bauldry's Theorem 2.3,
+        stated for every real <m>x</m> rather than only <m>x \gt 0</m>.
+        Working through the argument yourself before the Bridge Reading will
         make Bauldry's proof much easier to follow.)
       </p>
     </statement>

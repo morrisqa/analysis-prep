@@ -63,7 +63,11 @@
     <statement>
       <p>
         Theorem 1.23(c) says: <m>|x| \lt k \iff -k \lt x \lt k</m>
-        (for <m>k \gt 0</m>). Use this to rewrite each inequality
+        (for <m>k \gt 0</m>).
+        <!-- TODO(quinn): sentence added in #10 (math fixes); confirm or replace. -->
+        The non-strict form <m>|x| \leq k \iff -k \leq x \leq k</m>
+        (for <m>k \geq 0</m>) also holds, since <m>|x|</m> is the larger
+        of <m>x</m> and <m>-x</m>. Use these to rewrite each inequality
         as a simple interval, then verify your answer geometrically
         by identifying the center and radius of the interval.
         <ol marker="(a)">
@@ -76,7 +80,8 @@
     <answer>
       <p>
         (a) <m>1 \lt x \lt 5</m>; center <m>3</m>, radius <m>2</m>.
-        (b) <m>-5 \leq x \leq 3</m>; center <m>-1</m>, radius <m>4</m>.
+        (b) By the non-strict form, <m>-4 \leq x + 1 \leq 4</m>, so
+        <m>-5 \leq x \leq 3</m>; center <m>-1</m>, radius <m>4</m>.
         (c) <m>|2x - 5| \lt 1 \Rightarrow -1 \lt 2x - 5 \lt 1
         \Rightarrow 4 \lt 2x \lt 6 \Rightarrow 2 \lt x \lt 3</m>;
         center <m>5/2</m>, radius <m>1/2</m>.
@@ -188,10 +193,8 @@
     <answer>
       <p>
         (a) <m>\inf\{n^2\} = 1</m> (achieved at <m>n = 1</m>); no supremum.
-        (b) <m>\sup = 1/1 = 1</m> (at <m>n = 1</m>, odd);
-        <m>\inf = -1</m> (at <m>n = 2</m>, even, giving <m>-1/2</m>&#x2014;actually
-        the infimum is <m>-1/2</m> since the most negative term is
-        <m>(-1)^2/2 = -1/2</m>).
+        (b) <m>\sup = 1/2</m> (at <m>n = 2</m>, even);
+        <m>\inf = -1</m> (at <m>n = 1</m>, odd).
         (c) <m>\sup = 3</m> and <m>\inf = -3</m>, both achieved.
         (d) <m>\sup = 1</m> (limit, never achieved); <m>\inf = 0</m>
         (at <m>n=1</m>, giving <m>0</m>, which is achieved).
@@ -225,7 +228,9 @@
             <m>x \in S</m> with <m>s - \varepsilon \lt x \leq s</m>.
           </li>
         </ol>
-        Condition (ii) is called the <m>\varepsilon</m>-characterization.
+        Condition (i) is the same as in the definition; condition (ii)
+        replaces the definition's second condition. Together, (i) and
+        (ii) are called the <m>\varepsilon</m>-characterization.
         In plain English, what does condition (ii) say about how
         <m>s</m> relates to the elements of <m>S</m>?
         Why does it guarantee that no number smaller than <m>s</m>
@@ -233,6 +238,18 @@
       </p>
     </statement>
   </exercise>
+
+  <!-- TODO(quinn): paragraph added in #10 (math fixes); confirm or replace. Check that the definition matches Zorn's in Section 1.8. -->
+  <p>
+    You now have two equivalent ways to show <m>s = \sup S</m>.
+    The definition: <m>s</m> is an
+    upper bound of <m>S</m>, and <m>s \leq u</m> for every upper bound
+    <m>u</m> of <m>S</m>. The <m>\varepsilon</m>-characterization:
+    <m>s</m> is an upper bound of <m>S</m>, and for every
+    <m>\varepsilon \gt 0</m> there exists <m>x \in S</m> with
+    <m>s - \varepsilon \lt x \leq s</m>. Exercises say which one to
+    verify.
+  </p>
 
   <!-- ============================================================
        SECTION 1.9: COMPLETENESS
@@ -277,11 +294,22 @@
         It is bounded above in <m>\Q</m>: for example, <m>2 \in \Q</m>
         and <m>2^2 = 4 \gt 2</m>, so <m>x \lt 2</m> for all <m>x \in T</m>.
         (b) Suppose <m>q \in \Q</m> were a supremum of <m>T</m>.
-        Then <m>q^2 \geq 2</m> (since <m>q</m> is an upper bound).
-        But <m>q^2 = 2</m> would mean <m>q = \sqrt{2} \notin \Q</m>,
-        contradiction. And if <m>q^2 \gt 2</m>, one can find a rational
-        strictly between <m>\sqrt{2}</m> and <m>q</m>, contradicting
-        <m>q</m> being the <em>least</em> upper bound.
+        Since <m>1 \in T</m>, <m>q \geq 1</m>.
+        If <m>q^2 \lt 2</m>, we can find a rational <m>r</m> with
+        <m>q \lt r \lt \sqrt{2}</m>; since <m>0 \lt r \lt \sqrt{2}</m>,
+        <m>r^2 \lt 2</m>, so <m>r</m> is an element of <m>T</m> greater
+        than <m>q</m>, contradicting that <m>q</m> is an upper bound.
+        So <m>q^2 \geq 2</m>.
+        But <m>q^2 = 2</m> would mean <m>q = \sqrt{2} \notin \Q</m>
+        (as <m>q \gt 0</m>), contradiction. And if <m>q^2 \gt 2</m>,
+        we can find a rational <m>r</m> strictly between
+        <m>\sqrt{2}</m> and <m>q</m>. Since <m>r \gt \sqrt{2} \gt 0</m>,
+        we have <m>r^2 \gt 2 \gt x^2</m>, and hence <m>x \lt r</m>, for
+        every <m>x \in T</m>. So <m>r</m> is a rational upper bound of
+        <m>T</m> smaller than <m>q</m>, contradicting <m>q</m> being the
+        <em>least</em> upper bound. (Both steps use the density of
+        <m>\Q</m> in <m>\R</m>, stated in
+        <xref ref="par-mod2-br-density" text="custom">the Bridge Reading</xref>.)
         (c) The supremum is <m>\sqrt{2} \in \R \setminus \Q</m>.
       </p>
     </answer>

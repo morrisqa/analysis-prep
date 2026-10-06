@@ -84,7 +84,7 @@
           <li>
             <em>Formal proof.</em> Using your scratch work, write
             a complete proof that <m>\sup S = 2</m> by verifying
-            both conditions in the definition of supremum.
+            both conditions of the <m>\varepsilon</m>-characterization.
             The proof should be written in complete mathematical prose.
           </li>
         </ol>
@@ -100,6 +100,9 @@
         it is negative by factoring as <m>(x_0 + 3)(x_0 - 2)</m>.
         Note that <m>x_0 + 3 \gt 0</m> (since <m>x_0 \gt -1 \gt -3</m>
         for <m>\varepsilon \lt 6</m>) and <m>x_0 - 2 = -\varepsilon/2 \lt 0</m>.
+        If <m>\varepsilon \geq 6</m>, then <m>x_0 = 3/2 \in S</m>
+        already satisfies <m>x_0 \gt 2 - \varepsilon</m>, so your
+        proof may assume <m>\varepsilon \lt 6</m>.
       </p>
     </hint>
   </exercise>
@@ -266,7 +269,7 @@
       </row>
       <row>
         <cell><p><alert>Use of definitions</alert></p></cell>
-        <cell><p>Both conditions of the supremum definition are verified explicitly</p></cell>
+        <cell><p>Both conditions of the supremum definition (or the <m>\varepsilon</m>-characterization, where required) are verified explicitly</p></cell>
         <cell><p>One condition is verified correctly; the other is sketched</p></cell>
         <cell><p>Definition not invoked or confused with a different property</p></cell>
       </row>
