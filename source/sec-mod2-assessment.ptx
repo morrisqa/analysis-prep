@@ -61,9 +61,9 @@
     </statement>
     <hint>
       <p>
-        Factor as <m>(x + 3)(x - 2) \lt 0</m> and recall that a
-        product of two real numbers is negative exactly when the
-        factors have opposite signs.
+        Find the two roots of <m>x^2 + x - 6</m> to factor it. Then
+        use the fact that a product of two real numbers is negative
+        exactly when the factors have opposite signs.
       </p>
     </hint>
   </exercise>
@@ -96,17 +96,13 @@
     </statement>
     <hint>
       <p>
-        For the <m>\varepsilon</m>-characterization step: you need
-        to show that for any <m>\varepsilon \gt 0</m>, the point
-        <m>x_0 = 2 - \varepsilon/2</m> belongs to <m>S</m> (at
-        least when <m>\varepsilon</m> is small). To verify
-        <m>x_0 \in S</m>, compute <m>x_0^2 + x_0 - 6</m> and show
-        it is negative by factoring as <m>(x_0 + 3)(x_0 - 2)</m>.
-        Note that <m>x_0 + 3 \gt 0</m> (since <m>x_0 \gt -1 \gt -3</m>
-        for <m>\varepsilon \lt 6</m>) and <m>x_0 - 2 = -\varepsilon/2 \lt 0</m>.
-        If <m>\varepsilon \geq 6</m>, then <m>x_0 = 3/2 \in S</m>
-        already satisfies <m>x_0 \gt 2 - \varepsilon</m>, so your
-        proof may assume <m>\varepsilon \lt 6</m>.
+        For condition (ii), you need a point of <m>S</m> strictly
+        between <m>2 - \varepsilon</m> and <m>2</m>; a point defined by
+        a simple formula in <m>\varepsilon</m> is easiest to check.
+        To show your point lies in <m>S</m>, use the factored form from
+        the previous problem and find the sign of each factor. Your
+        point may fail to lie in <m>S</m> when <m>\varepsilon</m> is
+        large, so say how your proof handles large <m>\varepsilon</m>.
       </p>
     </hint>
   </exercise>
@@ -156,11 +152,11 @@
     </statement>
     <hint>
       <p>
-        For condition (i): if <m>x \in S</m> then <m>x \leq s</m>;
-        multiply both sides by <m>c \gt 0</m>.
-        For condition (ii): if <m>U</m> is an upper bound of <m>cS</m>,
-        show that <m>U/c</m> is an upper bound of <m>S</m> and use
-        <m>s \leq U/c</m>.
+        Check the two conditions of the definition one at a time,
+        starting each from what you know about <m>S</m> and <m>s</m>.
+        For the second condition, take an arbitrary upper bound of
+        <m>cS</m> and produce from it an upper bound of <m>S</m>.
+        Say where you use <m>c \gt 0</m>.
       </p>
     </hint>
   </exercise>
@@ -182,11 +178,12 @@
     </statement>
     <hint>
       <p>
-        Suppose no such <m>n</m> exists; then <m>x</m> is an upper
-        bound for <m>\N</m>. Let <m>\alpha = \sup \N</m>. Apply
-        the <m>\varepsilon</m>-characterization with <m>\varepsilon = 1</m>:
-        there exists <m>n \in \N</m> with <m>\alpha - 1 \lt n</m>,
-        so <m>n + 1 \gt \alpha</m>. But <m>n + 1 \in \N</m>&#x2026;
+        Start by writing down what the negation of the conclusion
+        says about <m>x</m> and <m>\N</m>; that tells you which set
+        the Completeness Axiom applies to. Then choose a value of
+        <m>\varepsilon</m> suited to the spacing of the natural
+        numbers, and look for an element of that set that is too
+        large.
       </p>
     </hint>
   </exercise>

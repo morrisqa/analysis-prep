@@ -64,13 +64,12 @@
     </statement>
     <hint>
       <p>
-        Recall that <m>x \in A \setminus (B \cap C)</m> means
-        <m>x \in A</m> and <m>x \notin B \cap C</m>.
-        The statement <m>x \notin B \cap C</m> means it is not the
-        case that (<m>x \in B</m> and <m>x \in C</m>). By De Morgan's
-        law for logic, this is equivalent to:
-        <m>x \notin B</m> or <m>x \notin C</m>.
-        Now consider the two cases.
+        In each direction, unpack membership in each set into
+        statements about <m>x \in A</m>, <m>x \in B</m>, and
+        <m>x \in C</m>, using the definitions of set difference,
+        intersection, and union. De Morgan's law for logic tells you
+        how to rewrite the negation of an <q>and</q> statement, and a
+        proof by cases is natural wherever an <q>or</q> appears.
       </p>
     </hint>
   </exercise>
@@ -120,11 +119,12 @@
     </statement>
     <hint>
       <p>
-        One approach: define <m>f : \N \to T</m> by
-        <m>f(n) = 3 \cdot \varphi(n)</m>, where <m>\varphi : \N \to \Z</m>
-        is the bijection from
-        <xref ref="ex-mod3-we-4"/>. Then verify that
-        <m>f</m> is a bijection <m>\N \to T</m>.
+        If you build <m>f</m> from the bijection <m>\varphi</m> of
+        <xref ref="ex-mod3-we-4"/>, look for a simple way to turn an
+        integer into a multiple of 3 that loses no information. You
+        can then reduce injectivity and surjectivity of <m>f</m> to
+        the same properties of <m>\varphi</m>; write out each
+        reduction.
       </p>
     </hint>
   </exercise>
@@ -165,15 +165,14 @@
     </statement>
     <hint>
       <p>
-        First dispose of the case where <m>A</m> or <m>B</m> is empty.
-        Otherwise, there are surjections <m>a : \N \to A</m> and
-        <m>b : \N \to B</m> (a nonempty finite set also has a surjection
-        from <m>\N</m>). Interleave them: use the even natural numbers
-        for <m>a</m> and the odd ones for <m>b</m> to build a surjection
-        <m>h : \N \to A \cup B</m>. Then turn <m>h</m> into an injection
-        <m>A \cup B \to \N</m> by sending each element to its least
-        preimage under <m>h</m> (every nonempty set of natural numbers
-        has a least element).
+        The set <m>\N \times \{0,1\}</m> in the statement suggests
+        the idea: give the elements of <m>A</m> and of <m>B</m> separate
+        <q>labels</q> so that the two sets cannot collide. Decide
+        whether you will build a map into <m>A \cup B</m> or out of
+        it, and check that it is defined at every point, including
+        when an element lies in both sets or a set is finite or empty.
+        Proposition 1.17 concerns subsets of a countable set, so make
+        sure your map gives you one.
       </p>
     </hint>
   </exercise>

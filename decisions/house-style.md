@@ -19,3 +19,13 @@ The pass ran as three copy-editors (Modules 1 to 3, 4 to 6, 7 to 9) on one branc
 | `<term>` | Added where a module defines the term (Module 3 topology terms, Module 4 sequence terms, Module 9 pointwise and uniform convergence, and others); removed where nothing was defined (Module 1 study guide). Terms that a module only sends to the textbook for (supremum in Module 2, countable in Module 3, upper and lower sums in Module 8) have no defining sentence in the book to mark. | House style. | Add defining sentences (a content change; not done). |
 | Module 7 road map | "Video 1: The Derivative (Definition and Rules)". | Double colon. | |
 | Module 5 bridge reading | `ex-mod5-br-2` "The Special Series of Elementary Calculus"; `ex-mod5-br-3` "The Catalog of Tests". | Matches the other bridge-reading titles. | |
+
+## Graded-hint audit, Modules 1 to 4
+
+Applying `policies.md` (graded hints give the approach only). Ten hints were cut back to the approach: `ex-mod2-as-1a`, `-1b`, `-2a`, `-2b`; `ex-mod3-as-1`, `-2a`, `-2b`; `ex-mod4-as-1a`, `-1b`, `-2b`. Each old hint supplied a factorization, a witness, a bijection, a full construction, or the whole scratch work. The old text is in git history (`main` before this PR) if you prefer any of them back. `ex-mod1-as-*`, `ex-mod1-as-2a` and `ex-mod4-as-2a` were already approach-level. No graded item in Modules 1 to 4 has an answer or solution.
+
+| Where | Decision | Why | Alternative |
+|---|---|---|---|
+| `ex-mod2-as-2a` hint | No longer says "condition (ii)" for the definition's second condition. | The study guide uses "condition (ii)" for the ε-condition (one name per concept). | |
+| `ex-mod2-as-r2` | Statement unchanged; it asks Option A students to compare Bauldry's proof with "the hint you read for Option B", which is now an outline only. | The comparison still works at the level of strategy. | Reword the reflection for Option A students. |
+| `ex-mod7-as-2` | Step (ii) of the statement gives g'(x) = x/(1+x); left. | Scaffolding written into the statement, not a hint. | Ask students to compute it. |
