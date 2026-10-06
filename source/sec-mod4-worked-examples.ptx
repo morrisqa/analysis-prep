@@ -45,8 +45,7 @@
         We could also use the weaker but simpler bound
         <m>1/n^2 \leq 1/n</m>, requiring only <m>n \gt 1/\varepsilon</m>.
         Either choice works. The proof below uses this simpler bound,
-        which avoids the square root, so it takes <m>N</m> to be a
-        natural number with <m>N \gt 1/\varepsilon</m>.
+        which avoids the square root, and takes <m>N \gt 1/\varepsilon</m>.
       </p>
       <p>
         <alert>Proof.</alert>
@@ -99,11 +98,11 @@
         <alert>Set-up.</alert>
         The standard technique for a ratio of polynomials in <m>n</m>
         is to divide numerator and denominator by the highest power of
-        <m>n</m> appearing in the denominator. This gives the
+        <m>n</m> appearing in the denominator; here the highest power
+        is <m>n^2</m>. This gives the
         denominator a nonzero limit (its leading coefficient), as the
         quotient rule requires, and when the numerator's degree is no
         larger, it forces every term to converge.
-        Here that is <m>n^2</m>.
       </p>
       <p>
         <alert>Proof.</alert>
@@ -211,17 +210,14 @@
       <p>
         By Steps 1 and 2, <m>(a_n)</m> is monotone increasing and
         bounded above (by 2). By the Monotone Convergence Theorem,
-        <m>(a_n)</m> converges to some limit <m>L \in \R</m>. Because
-        all terms satisfy <m>1 \leq a_n \lt 2</m> (the lower bound holds since
-        <m>a_1 = 1</m> and the sequence is increasing), we have
-        <m>L \in [1, 2]</m>. Indeed, if <m>L \lt 1</m>, then applying
-        the definition of convergence with <m>\varepsilon = 1 - L</m>
-        gives some <m>n</m> with <m>|a_n - L| \lt 1 - L</m>, so
-        <m>a_n \lt L + (1 - L) = 1</m>, a contradiction. Likewise, if
-        <m>L \gt 2</m>, then <m>\varepsilon = L - 2</m> gives some
-        <m>n</m> with <m>a_n \gt L - (L - 2) = 2</m>, a contradiction.
-        (The strict bound <m>a_n \lt 2</m> yields only <m>L \leq 2</m>
-        in the limit, and here <m>L</m> will in fact equal 2.)
+        <m>(a_n)</m> converges to some limit <m>L \in \R</m>. All
+        terms satisfy <m>1 \leq a_n \lt 2</m> (the lower bound holds since
+        <m>a_1 = 1</m> and the sequence is increasing), so the limit
+        satisfies
+        <m>1 \leq L \leq 2</m> (limits preserve non-strict
+        inequalities; see the <xref ref="sec-mod4-study-guide" text="custom">study guide</xref>).
+        The strict bound <m>a_n \lt 2</m> yields only <m>L \leq 2</m>
+        in the limit.
       </p>
       <p>
         <alert>Step 4: Identify the limit.</alert>
@@ -229,12 +225,17 @@
       <p>
         Squaring the recursion <m>a_{n+1} = \sqrt{2 + a_n}</m> gives
         <md>a_{n+1}^2 = 2 + a_n \qquad (n \geq 1).</md>
-        Letting <m>n \to \infty</m> and using the Algebra of Limits (the
-        subsequence <m>(a_{n+1})</m> is just <m>(a_n)</m> shifted by
-        one index, so it shares the limit <m>L</m>), the left side
-        converges to <m>L \cdot L = L^2</m> by the product rule and the
-        right side converges to <m>2 + L</m> by the sum rule. Since a
-        sequence has only one limit, <m>L^2 = 2 + L</m>, i.e.,
+        The shifted sequence <m>(a_{n+1})</m> also converges to
+        <m>L</m>: given <m>\varepsilon \gt 0</m>, take the <m>N</m> that
+        works for <m>(a_n)</m>; if <m>n \geq N</m>, then
+        <m>n + 1 \geq N</m>, so <m>|a_{n+1} - L| \lt \varepsilon</m>.
+        Letting <m>n \to \infty</m>, we use the Algebra of Limits
+        (Theorem 2.5): the left side converges to
+        <m>L \cdot L = L^2</m> by the product rule, and the right side
+        converges to <m>2 + L</m> by the sum rule. The two sides are
+        the same sequence, so by uniqueness of limits (see the
+        <xref ref="sec-mod4-study-guide" text="custom">study guide</xref>),
+        <m>L^2 = 2 + L</m>, i.e.,
         <m>L^2 - L - 2 = 0</m>,
         which factors as <m>(L - 2)(L + 1) = 0</m>. So
         <m>L = 2</m> or <m>L = -1</m>. Since <m>L \in [1, 2]</m>,
@@ -255,15 +256,20 @@
         example, the decimal truncations
         <m>1, 1.4, 1.41, 1.414, \ldots</m> of <m>\sqrt{2}</m> are
         rational, each is at least the one before, and all are less
-        than 2. In <m>\R</m> they converge to <m>\sqrt{2}</m> (the
+        than 2. In <m>\R</m> they converge to <m>\sqrt{2}</m>: the
         <m>k</m>th truncation is within <m>10^{1-k}</m> of
-        <m>\sqrt{2}</m>). Because a sequence has only one limit and
-        <m>\sqrt{2}</m> is irrational, they have no limit in <m>\Q</m>.
+        <m>\sqrt{2}</m>, and <m>10^{1-k} \to 0</m>. They have no limit
+        in <m>\Q</m>. A limit in <m>\Q</m> would also be a limit in
+        <m>\R</m>, because every positive real <m>\varepsilon</m> has
+        a positive rational below it; uniqueness of limits would then
+        force that limit to be <m>\sqrt{2}</m>, which is irrational.
         Step 4 squares the recursion so that only the product and sum
         rules are needed. Letting <m>n \to \infty</m> directly in
         <m>a_{n+1} = \sqrt{2 + a_n}</m> would require the
         <em>continuity</em> of the square root, which you will study
-        in <xref ref="ch-mod6" text="custom">Module 6</xref>.
+        in <xref ref="ch-mod6" text="custom">Module 6</xref>. Zorn
+        (&#xa7;2.3) takes the direct route, using continuity of the
+        square root informally.
       </p>
     </solution>
   </exercise>

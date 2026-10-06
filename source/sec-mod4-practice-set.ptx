@@ -82,7 +82,8 @@
         (d) Any integer <m>N \gt 1/\varepsilon</m> works; by the
         Archimedean Property, such <m>N</m> exists. No integer
         <m>N \leq 1/\varepsilon</m> works, since then
-        <m>1/N \geq \varepsilon</m> fails the condition at <m>n = N</m>.
+        <m>|a_N - 0| = 1/N \geq \varepsilon</m>, so the condition
+        fails at <m>n = N</m>.
         So the smallest is <m>N = \lfloor 1/\varepsilon \rfloor + 1</m>,
         the least integer exceeding <m>1/\varepsilon</m>.
       </p>
@@ -324,7 +325,7 @@
         build a subsequence <m>(a_{n_k})</m>
         with <m>|a_{n_k} - L| \geq \varepsilon_0</m> for all <m>k</m>:
         apply it with <m>N = 1</m> to get <m>n_1</m>, and, once
-        <m>n_k</m> is chosen, with <m>N = n_k + 1</m> to get
+        <m>n_k</m> is chosen, apply it with <m>N = n_k + 1</m> to get
         <m>n_{k+1} \gt n_k</m>.
         This subsequence is bounded; by Bolzano&#x2013;Weierstrass it
         has a further convergent sub-subsequence. Its indices are
