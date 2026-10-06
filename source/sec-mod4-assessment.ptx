@@ -99,7 +99,7 @@
       <p>
         After you combine <m>a_n - 2</m> over a common denominator,
         you may solve the inequality for <m>n</m> exactly, or first
-        replace the denominator by a smaller, simpler expression in
+        replace the denominator by a smaller, simpler positive expression in
         <m>n</m>. The second route gives a larger but simpler upper
         bound for <m>|a_n - 2|</m>, and an <m>N</m> that is easier to
         write down.

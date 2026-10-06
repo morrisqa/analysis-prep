@@ -142,7 +142,7 @@
         limit-law applications. The only subtle point is the nonvanishing
         denominator hypothesis in the quotient rule: you must confirm
         <em>in the limit</em> that the denominator is nonzero, as this
-        solution does (the limit is 4). If the numerator's leading degree had
+        solution does (the denominator's limit is 4). If the numerator's leading degree had
         exceeded the denominator's, the method would break down (the
         sequence would diverge to infinity); if the degrees were equal,
         the limit is always the ratio of leading coefficients.

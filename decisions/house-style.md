@@ -27,5 +27,9 @@ Applying `policies.md` (graded hints give the approach only). Ten hints were cut
 | Where | Decision | Why | Alternative |
 |---|---|---|---|
 | `ex-mod2-as-2a` hint | No longer says "condition (ii)" for the definition's second condition. | The study guide uses "condition (ii)" for the ε-condition (one name per concept). | |
-| `ex-mod2-as-r2` | Statement unchanged; it asks Option A students to compare Bauldry's proof with "the hint you read for Option B", which is now an outline only. | The comparison still works at the level of strategy. | Reword the reflection for Option A students. |
+| `ex-mod2-as-r2` | Statement changed: Option B students compare Bauldry's proof with their own; Option A students read Bauldry's proof on its own and identify the set completeness is applied to, the supremum, and the contradiction. | The old prompt pointed Option A students at the Option B hint, which is now an outline only (math review). | Keep the old prompt. |
+| `ex-mod3-as-2b` | Title "Union of Two Countable Sets" (was "Countable Union of Countable Sets", the general result the statement forbids citing); hint made route-neutral. | Math review. | |
+| `ex-mod4-as-1b` hint | "a smaller, simpler positive expression". | Replacing a denominator by a smaller one enlarges the fraction only if it stays positive. | |
 | `ex-mod7-as-2` | Step (ii) of the statement gives g'(x) = x/(1+x); left. | Scaffolding written into the statement, not a hint. | Ask students to compute it. |
+| `ex-mod1-we-2`, `-we-3`, `-we-4` | The bracketed teaching aside after each proof's last sentence now sits after `</proof>` (inside the solution), so the drawn end-of-proof mark falls where the argument ends. | These examples model where a proof ends (math review). | Restore hand-typed marks (doubles them). |
+| `ex-mod4-we-2` | "(the denominator's limit is 4)". | "the limit is 4" could be read as the sequence's limit, which is 3/4 (math review). | |

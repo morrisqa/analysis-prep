@@ -158,11 +158,11 @@
               Therefore, our assumption was false, and <m>a + b</m> must be
               irrational.
             </p>
-            <p>
-              <em>[The contradiction closes the proof. Notice the final
-              sentence explicitly states what was shown and how.]</em>
-            </p>
           </proof>
+          <p>
+            <em>[The contradiction closes the proof. Notice the final
+            sentence explicitly states what was shown and how.]</em>
+          </p>
         </solution>
       </example>
 
@@ -219,11 +219,11 @@
               By the contrapositive, if <m>mn</m> is odd, then both <m>m</m>
               and <m>n</m> are odd.
             </p>
-            <p>
-              <em>[The final sentence explicitly invokes the contrapositive to
-              close the loop. Do not leave the reader to infer this step.]</em>
-            </p>
           </proof>
+          <p>
+            <em>[The final sentence explicitly invokes the contrapositive to
+            close the loop. Do not leave the reader to infer this step.]</em>
+          </p>
         </solution>
       </example>
 
@@ -303,11 +303,11 @@
               <alert>Conclusion.</alert> By the principle of mathematical
               induction, <m>P(n)</m> holds for all integers <m>n \geq 1</m>.
             </p>
-            <p>
-              <em>[The conclusion explicitly invokes the induction principle.
-              Do not end an induction proof without this closing statement.]</em>
-            </p>
           </proof>
+          <p>
+            <em>[The conclusion explicitly invokes the induction principle.
+            Do not end an induction proof without this closing statement.]</em>
+          </p>
         </solution>
       </example>
 

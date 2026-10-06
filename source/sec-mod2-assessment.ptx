@@ -224,10 +224,13 @@
     <statement>
       <p>
         In the Bridge Reading you read Bauldry's proof of Theorem 2.3
-        (Archimedean Property). Compare its logical structure to the
-        proof you wrote in Part 2 (Option B, <xref ref="ex-mod2-as-2b"/>) or the hint you read for
-        Option B. What is the same? If there are differences, where
-        did your proof and Bauldry's diverge?
+        (Archimedean Property). If you chose Option B, compare its
+        logical structure to the proof you wrote
+        (<xref ref="ex-mod2-as-2b"/>). What is the same? If there are
+        differences, where did your proof and Bauldry's diverge? If you
+        chose Option A, read Bauldry's proof on its own and identify the set to which
+        completeness is applied, the supremum obtained, and the
+        contradiction reached.
       </p>
     </statement>
   </exercise>

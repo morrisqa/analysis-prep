@@ -130,7 +130,7 @@
   </exercise>
 
   <exercise xml:id="ex-mod3-as-2b">
-    <title>Option B (More Challenging): Countable Union of Countable Sets</title>
+    <title>Option B (More Challenging): Union of Two Countable Sets</title>
     <statement>
       <p>
         Let <m>A</m> and <m>B</m> be countable sets. Prove that
@@ -167,12 +167,11 @@
       <p>
         The set <m>\N \times \{0,1\}</m> in the statement suggests
         the idea: give the elements of <m>A</m> and of <m>B</m> separate
-        <q>labels</q> so that the two sets cannot collide. Decide
-        whether you will build a map into <m>A \cup B</m> or out of
-        it, and check that it is defined at every point, including
-        when an element lies in both sets or a set is finite or empty.
-        Proposition 1.17 concerns subsets of a countable set, so make
-        sure your map gives you one.
+        <q>labels</q> so that the two sets cannot collide. Whichever
+        direction your map goes, check that it is well defined in every
+        case the statement asks you to handle. However you build it,
+        end with <m>A \cup B</m> in bijection with a subset of a
+        countable set, so that Zorn's Proposition 1.17 applies.
       </p>
     </hint>
   </exercise>
