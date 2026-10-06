@@ -33,6 +33,37 @@ jobs:
             || python3 -m pip install --break-system-packages -r requirements.txt
           pretext --version
 
+      # Fails on RELAX-NG schema errors only. `pretext validate` also reports
+      # "validation-plus" style notes (Unicode dashes, issue #7) and exits 1 for
+      # them, so its exit code alone is not used. In the terse report each line
+      # is one tab-separated message whose 4th field names the check; schema
+      # messages are "schema", and a jing line core could not locate has fewer
+      # fields (unlocated style notes start with "PTX:"). Validation that could
+      # not run (exit 2, or jing itself failing) also fails the step.
+      # The container image predates jing in the PreTeXt images, so install it
+      # when missing.
+      - name: Validate source against the PreTeXt schema
+        shell: bash
+        run: |
+          if ! command -v jing >/dev/null; then
+            apt-get update -qq && DEBIAN_FRONTEND=noninteractive apt-get install -y -qq --no-install-recommends jing
+          fi
+          status=0
+          pretext validate web --report-form terse > validate.log 2>&1 || status=$?
+          cat validate.log
+          report=logs/main-validation.txt
+          if [ "$status" -gt 1 ] || [ ! -f "$report" ] || grep -q 'the "jing" program failed' validate.log; then
+            echo "::error::Schema validation could not run (exit code $status)."
+            exit 1
+          fi
+          schema_errors="$(awk -F'\t' 'NF && $1 !~ /^PTX:/ && (NF < 5 || $4 == "schema")' "$report")"
+          if [ -n "$schema_errors" ]; then
+            echo "::error::The source does not match the PreTeXt schema:"
+            printf '%s\n' "$schema_errors"
+            exit 1
+          fi
+          echo "No schema errors. Style notes (not fatal): $(grep -c . "$report" || true)."
+
       - name: Build HTML
         run: pretext build web
 
