@@ -92,14 +92,13 @@
         </statement>
         <hint>
           <p>
-            Note that
-            <md>|a_n - 2| = \left|\frac{2n+1}{n} - 2\right|
-            = \left|\frac{1}{n}\right| = \frac{1}{n}.</md>
-            To make <m>1/n \lt \varepsilon</m>, you need <m>n \gt 1/\varepsilon</m>.
-            Choose <m>N \in \N</m> with <m>N \gt 1/\varepsilon</m>, so that
-            <m>n \geq N</m> implies <m>n \gt 1/\varepsilon</m>.
-            The Archimedean property (Corollary 2.4, Bauldry p. 48) guarantees
-            that such an <m>N \in \N</m> exists.
+            In the scratch work, write <m>a_n - 2</m> as a single fraction
+            before taking the absolute value, then ask how large <m>n</m>
+            must be. In the formal proof, say which form of the Archimedean
+            property (see
+            <xref ref="par-mod1-sg-archimedean" text="custom">the three forms in the Study Guide</xref>,
+            or Bauldry's Corollary 2.4, p. 48) guarantees that the
+            <m>N</m> you choose exists in <m>\N</m>.
           </p>
         </hint>
       </exercise>
@@ -108,7 +107,7 @@
         <title>Applying the Negation</title>
         <statement>
           <p>
-            Using your negation from the first problem, write out what it
+            Using your negation from <xref ref="ex-mod1-as-1a"/>, write out what it
             would mean for the sequence <m>a_n = (2n+1)/n</m> to <em>not</em>
             converge to 3. (You do not need to prove this statement;
             just write it in symbols and translate it into a
@@ -166,23 +165,26 @@
               <li>
                 <p>
                   Prove by contrapositive: for any integer <m>n</m>, if
-                  <m>n^2</m> is divisible by 5, then <m>n</m> is divisible
-                  by 5.
+                  <m>n^2</m> is divisible by 6, then <m>n</m> is divisible
+                  by 6.
                 </p>
                 <p>
-                  (Hint: if <m>5 \nmid n</m>,
-                  then <m>n</m> leaves remainder 1, 2, 3, or 4 when
-                  divided by 5. Check each case to show
-                  <m>5 \nmid n^2</m>. You may use proof by cases within
+                  (Hint: if <m>6 \nmid n</m>,
+                  then <m>n</m> leaves remainder 1, 2, 3, 4, or 5 when
+                  divided by 6. Check each case to show
+                  <m>6 \nmid n^2</m>. You may use proof by cases within
                   the contrapositive argument.)
                 </p>
               </li>
               <li>
                 <p>
-                  Using part (a), prove by contradiction that <m>\sqrt{5}</m>
+                  Using part (a), prove by contradiction that <m>\sqrt{6}</m>
                   is irrational. Model your argument closely on the proof
                   that <m>\sqrt{2}</m> is irrational; the key lemma you
-                  need is the result from part (a).
+                  need is the result from part (a). (Since 6 is not prime,
+                  the fact about primes used for <m>\sqrt{5}</m> in
+                  <xref ref="ex-mod1-sg-z15-1"/> does not apply directly;
+                  part (a) takes its place.)
                 </p>
               </li>
             </ol>
@@ -210,7 +212,7 @@
         <statement>
           <p>
             Describe the process you used to write your proof in
-            Part 1(b). Where did you get stuck, if at all? How did
+            <xref ref="ex-mod1-as-1b"/>. Where did you get stuck, if at all? How did
             you decide on the value of <m>N</m>? What was the
             relationship between your scratch work and the final proof?
           </p>
@@ -221,7 +223,7 @@
         <title>Bridge to Bauldry</title>
         <statement>
           <p>
-            In the Bridge Reading (Part 2), you examined Bauldry's proof
+            In the Bridge Reading (<xref ref="ex-mod1-br-6"/>), you examined Bauldry's proof
             of Theorem 2.3 (Archimedean Order Property). The proof used
             contradiction and the Least Upper Bound Property. Briefly
             explain the logical structure of that proof in your own words:
@@ -236,7 +238,7 @@
         <title>Looking Ahead</title>
         <statement>
           <p>
-            The <m>\varepsilon</m>-<m>N</m> proof you wrote in Part 1(b)
+            The <m>\varepsilon</m>-<m>N</m> proof you wrote in <xref ref="ex-mod1-as-1b"/>
             is the first in a series: <xref ref="ch-mod4" text="custom">Module 4</xref> will ask you to prove that
             various sequences converge using this same definition. Based
             on your experience with this proof, what do you anticipate
@@ -285,6 +287,12 @@
             <cell><p>Strategy is named; proof follows the announced structure throughout</p></cell>
             <cell><p>Strategy is correct but not announced, or announced but not fully followed</p></cell>
             <cell><p>Strategy is inappropriate for the claim</p></cell>
+          </row>
+          <row>
+            <cell><p><alert>Required structure</alert></p></cell>
+            <cell><p>In <xref ref="ex-mod1-as-1b"/>, the scratch work is labeled, comes before the proof, and finds <m>N</m> with reasons; the formal proof opens <q>Let <m>\varepsilon \gt 0</m> be given. Choose <m>N = \ldots</m></q> and uses that <m>N</m>. In Option A, the base case, induction hypothesis and inductive step are labeled</p></cell>
+            <cell><p>Scratch work is present but unlabeled or not connected to the <m>N</m> chosen, or the prescribed opening or a required label is missing</p></cell>
+            <cell><p>No scratch work, or the proof does not follow the required structure</p></cell>
           </row>
           <row>
             <cell><p><alert>Mathematical prose</alert></p></cell>

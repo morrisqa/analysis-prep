@@ -1,6 +1,6 @@
 <section xml:id="sec-mod1-study-guide">
     <title>Companion Reading and Study Guide</title>
-    <p>Reading: Hirst, Chapters 2<ndash/>3; Zorn, Sections 1.4<ndash/>1.5. Estimated time: 50 minutes.</p>
+    <p>Reading: Hirst, Chapters 2<ndash/>3; Zorn, Sections 1.4<ndash/>1.5. Estimated time: 55 minutes.</p>
 
     <!-- ============================================================ -->
 
@@ -150,7 +150,7 @@
           <p>
             Zorn gives an example of the Archimedean property using
             quantifiers. Write it out in full symbolic form and explain
-            in one sentence what it means. (You will prove this in Module 2.)
+            in one sentence what it means. (You will prove this in <xref ref="ch-mod2"/>.)
           </p>
         </statement>
         <answer>
@@ -161,6 +161,57 @@
           </p>
         </answer>
       </exercise>
+
+      <paragraphs xml:id="par-mod1-sg-archimedean">
+        <title>Three Forms of the Archimedean Property</title>
+        <p>
+          This module uses the Archimedean property in three forms:
+          <ol marker="(i)">
+            <li>
+              <m>\forall x \in \R \;\; \exists n \in \N</m> such that
+              <m>n \gt x</m> (the form in <xref ref="ex-mod1-sg-z14-5"/>);
+            </li>
+            <li>
+              <m>\forall \varepsilon \gt 0 \;\; \exists n \in \N</m>
+              such that <m>1/n \lt \varepsilon</m> (the form in
+              <xref ref="ex-mod1-we-1"/>);
+            </li>
+            <li>
+              for all positive real numbers <m>\varepsilon</m> and
+              <m>x</m> there is an <m>n \in \N</m> such that
+              <m>n\varepsilon \gt x</m> (Bauldry's Theorem 2.3, which you
+              will write in symbols in <xref ref="ex-mod1-br-5"/>).
+            </li>
+          </ol>
+          They are different statements, but the implications
+          (i) <m>\Rightarrow</m> (iii) <m>\Rightarrow</m> (ii)
+          <m>\Rightarrow</m> (i) run around a cycle, so all three are
+          equivalent.
+          <ul>
+            <li>
+              (i) implies (iii): given <m>\varepsilon \gt 0</m> and
+              <m>x \gt 0</m>, apply (i) to the real number
+              <m>x/\varepsilon</m> to get <m>n \gt x/\varepsilon</m>, and
+              multiply by <m>\varepsilon \gt 0</m>.
+            </li>
+            <li>
+              (iii) implies (ii): given <m>\varepsilon \gt 0</m>, apply
+              (iii) with <m>x = 1</m> to get <m>n\varepsilon \gt 1</m>, and
+              divide by <m>n \gt 0</m>.
+            </li>
+            <li>
+              (ii) implies (i): given <m>x \in \R</m>, if <m>x \leq 0</m>
+              then <m>n = 1</m> works; if <m>x \gt 0</m>, apply (ii) with
+              <m>\varepsilon = 1/x</m> to get <m>1/n \lt 1/x</m>, which
+              gives <m>n \gt x</m> because both sides are positive.
+            </li>
+          </ul>
+          These arguments show only that the three forms stand or fall
+          together; none of them proves the property. In this module the
+          property is taken as known. <xref ref="ch-mod2"/> derives it from
+          the Completeness Axiom of <m>\R</m>.
+        </p>
+      </paragraphs>
 
       <exercise xml:id="ex-mod1-sg-z14-6">
         <title>Converse and Contrapositive</title>
@@ -197,7 +248,7 @@
     <!-- ============================================================ -->
 
       <paragraphs xml:id="par-mod1-sg-z15">
-        <title>Reading 2: Zorn &#xa7;1.5 <q>Types of Proof</q> (Suggested time: 15 minutes)</title>
+        <title>Reading 2: Zorn &#xa7;1.5 <q>Types of Proof</q> (Suggested time: 20 minutes)</title>
         <p>
           Read this after Videos 2 and 3. Zorn gives well-chosen examples
           of all major proof strategies. The examples reinforce what you
@@ -280,6 +331,68 @@
           </p>
         </answer>
       </exercise>
+
+      <paragraphs xml:id="par-mod1-sg-strong-induction">
+        <title>Strong Induction</title>
+        <p>
+          In ordinary induction, the inductive step assumes <m>P(n)</m> and
+          proves <m>P(n+1)</m>. Some arguments for <m>P(n+1)</m> need the
+          statement for a smaller value than <m>n</m>, or for several
+          smaller values at once. <term>Strong induction</term> allows the
+          inductive step to assume <m>P(k)</m> for every <m>k</m> from the
+          base case up to <m>n</m>. Despite its name, it proves nothing
+          that ordinary induction cannot: the proof below derives it from
+          ordinary induction.
+        </p>
+        <theorem xml:id="thm-mod1-strong-induction">
+          <title>Principle of Strong Induction</title>
+          <statement>
+            <p>
+              Let <m>n_0</m> be an integer, and let <m>P(n)</m> be a
+              statement about integers <m>n \geq n_0</m>. Suppose that
+              <ol marker="(a)">
+                <li><m>P(n_0)</m> holds, and</li>
+                <li>
+                  for every integer <m>n \geq n_0</m>, if <m>P(k)</m> holds
+                  for every integer <m>k</m> with
+                  <m>n_0 \leq k \leq n</m>, then <m>P(n+1)</m> holds.
+                </li>
+              </ol>
+              Then <m>P(n)</m> holds for every integer <m>n \geq n_0</m>.
+            </p>
+          </statement>
+          <proof>
+            <p>
+              We apply ordinary induction to the statement
+              <md>Q(n):\quad P(k) \text{ holds for every integer } k \text{ with } n_0 \leq k \leq n.</md>
+            </p>
+            <p>
+              <alert>Base case.</alert> <m>Q(n_0)</m> says only that
+              <m>P(n_0)</m> holds, which is hypothesis (a).
+            </p>
+            <p>
+              <alert>Inductive step.</alert> Assume <m>Q(n)</m> holds for
+              some integer <m>n \geq n_0</m>. By hypothesis (b),
+              <m>P(n+1)</m> holds. Together with <m>Q(n)</m>, this says that
+              <m>P(k)</m> holds for every integer <m>k</m> with
+              <m>n_0 \leq k \leq n+1</m>, which is <m>Q(n+1)</m>.
+            </p>
+            <p>
+              By the principle of mathematical induction, <m>Q(n)</m> holds
+              for every integer <m>n \geq n_0</m>. Since <m>Q(n)</m>
+              includes <m>P(n)</m>, the statement <m>P(n)</m> holds for every
+              integer <m>n \geq n_0</m>.
+            </p>
+          </proof>
+        </theorem>
+        <p>
+          A strong induction proof has the same parts as an ordinary one.
+          State the induction hypothesis, which is now <q><m>P(k)</m> holds
+          for every <m>k</m> with <m>n_0 \leq k \leq n</m>,</q> and label
+          each place you use it, as in <xref ref="ex-mod1-we-4"/>. You will
+          use strong induction in <xref ref="ex-mod1-ps-c4"/>.
+        </p>
+      </paragraphs>
 
       <exercise xml:id="ex-mod1-sg-z15-4">
         <title>Exhaustive Case Analysis</title>

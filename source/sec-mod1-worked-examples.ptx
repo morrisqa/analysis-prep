@@ -19,29 +19,25 @@
           attention to the opening sentence of each proof, which announces
           the strategy.
         </p>
-        <p>
-          <alert>Example 1: Quantifier Translation and Negation</alert>
-        </p>
-        <p>
-          <alert>Problem.</alert> Let the universe be <m>\R</m>.
-          <ol marker="(a)">
-            <li>
-              Translate into symbols:
-              <q>For every positive real number <m>\varepsilon</m>, there
-              exists a natural number <m>N</m> such that <m>1/N \lt
-              \varepsilon</m>.</q>
-            </li>
-            <li>Write the negation of your symbolic statement.</li>
-            <li>Translate the negation back into plain English.</li>
-          </ol>
-        </p>
-
-      <exercise xml:id="ex-mod1-we-1">
-        <title>Try It: Translate and Negate</title>
+      <example xml:id="ex-mod1-we-1">
+        <title>Quantifier Translation and Negation</title>
         <statement>
           <p>
+            <alert>Problem.</alert> Let the universe be <m>\R</m>.
+            <ol marker="(a)">
+              <li>
+                Translate into symbols:
+                <q>For every positive real number <m>\varepsilon</m>, there
+                exists a natural number <m>N</m> such that <m>1/N \lt
+                \varepsilon</m>.</q>
+              </li>
+              <li>Write the negation of your symbolic statement.</li>
+              <li>Translate the negation back into plain English.</li>
+            </ol>
+          </p>
+          <p>
             Before reading the solution, write your own symbolic translation
-            and negation for the problem above.
+            and negation.
           </p>
         </statement>
         <solution>
@@ -93,27 +89,42 @@
             <m>N</m>.</q>
           </p>
           <p>
-            <em>[Interpretation: the negation says that <m>1/N</m> does not
-            approach 0. This is false, since the original statement is true
-            (Archimedean property). But the negation is a valid, well-formed
-            mathematical claim — it just happens to be false.]</em>
+            <em>[Interpretation: the negation says that the numbers
+            <m>1/N</m> have a positive lower bound: there is a single
+            <m>\varepsilon \gt 0</m> lying at or below every one of them.
+            This is false, since the original statement is true
+            (Archimedean property; see
+            <xref ref="par-mod1-sg-archimedean" text="custom">the three forms of the Archimedean property</xref>
+            in the Study Guide). But the negation is a valid, well-formed
+            mathematical claim: it just happens to be false.]</em>
+          </p>
+          <p>
+            <alert>Caution.</alert> The original statement is not the definition of
+            <m>1/n \to 0</m>. That definition
+            (<xref ref="par-mod1-sg-syn" text="custom">the convergence definition</xref>
+            in the Study Guide) has a third quantifier: for every
+            <m>\varepsilon \gt 0</m> there is an <m>N</m> such that
+            <m>1/n \lt \varepsilon</m> for <em>every</em>
+            <m>n \geq N</m>. The statement in this example asks only for
+            one term <m>1/N</m> below <m>\varepsilon</m>. For this
+            particular sequence the two agree, because the terms decrease:
+            if <m>1/N \lt \varepsilon</m> and <m>n \geq N</m>, then
+            <m>1/n \leq 1/N \lt \varepsilon</m>. For a sequence that is not
+            monotone, one term below <m>\varepsilon</m> proves nothing about
+            the later terms.
           </p>
         </solution>
-      </exercise>
+      </example>
 
-        <p>
-          <alert>Example 2: Proof by Contradiction</alert>
-        </p>
-        <p>
-          <alert>Claim.</alert> If <m>a</m> is rational and <m>b</m> is
-          irrational, then <m>a + b</m> is irrational.
-        </p>
-
-      <exercise xml:id="ex-mod1-we-2">
-        <title>Try It: Rational Plus Irrational</title>
+      <example xml:id="ex-mod1-we-2">
+        <title>Proof by Contradiction</title>
         <statement>
           <p>
-            Before reading the solution, attempt a proof of the claim above.
+            <alert>Claim.</alert> If <m>a</m> is rational and <m>b</m> is
+            irrational, then <m>a + b</m> is irrational.
+          </p>
+          <p>
+            Before reading the solution, attempt a proof of the claim.
             Which strategy will you use?
           </p>
         </statement>
@@ -158,19 +169,15 @@
             </p>
           </proof>
         </solution>
-      </exercise>
+      </example>
 
-        <p>
-          <alert>Example 3: Proof by Contrapositive</alert>
-        </p>
-        <p>
-          <alert>Claim.</alert> For integers <m>m</m> and <m>n</m>, if
-          <m>mn</m> is odd, then both <m>m</m> and <m>n</m> are odd.
-        </p>
-
-      <exercise xml:id="ex-mod1-we-3">
-        <title>Try It: Odd Product</title>
+      <example xml:id="ex-mod1-we-3">
+        <title>Proof by Contrapositive</title>
         <statement>
+          <p>
+            <alert>Claim.</alert> For integers <m>m</m> and <m>n</m>, if
+            <m>mn</m> is odd, then both <m>m</m> and <m>n</m> are odd.
+          </p>
           <p>
             Before reading the solution, identify the contrapositive of
             the claim. Which logical law do you need to form the negation
@@ -223,23 +230,19 @@
             </p>
           </proof>
         </solution>
-      </exercise>
+      </example>
 
 
     <!-- ============================================================ -->
 
-        <p>
-          <alert>Example 4: Proof by Mathematical Induction</alert>
-        </p>
-        <p>
-          <alert>Claim.</alert> For all integers <m>n \geq 1</m>,
-          <md>\sum_{k=1}^{n} (2k - 1) = n^2.</md>
-          (The left side is the sum of the first <m>n</m> odd numbers.)
-        </p>
-
-      <exercise xml:id="ex-mod1-we-4">
-        <title>Try It: Sum of Odd Numbers</title>
+      <example xml:id="ex-mod1-we-4">
+        <title>Proof by Mathematical Induction</title>
         <statement>
+          <p>
+            <alert>Claim.</alert> For all integers <m>n \geq 1</m>,
+            <md>\sum_{k=1}^{n} (2k - 1) = n^2.</md>
+            (The left side is the sum of the first <m>n</m> odd numbers.)
+          </p>
           <p>
             Before reading the solution, verify the formula for
             <m>n = 1, 2, 3</m>. Then attempt the induction proof,
@@ -312,19 +315,15 @@
             </p>
           </proof>
         </solution>
-      </exercise>
+      </example>
 
-        <p>
-          <alert>Example 5: An Iff Proof (Two Directions)</alert>
-        </p>
-        <p>
-          <alert>Claim.</alert> An integer <m>n</m> is even if and only if
-          <m>n^2</m> is even.
-        </p>
-
-      <exercise xml:id="ex-mod1-we-5">
-        <title>Try It: Even Iff Square Is Even</title>
+      <example xml:id="ex-mod1-we-5">
+        <title>An Iff Proof (Two Directions)</title>
         <statement>
+          <p>
+            <alert>Claim.</alert> An integer <m>n</m> is even if and only if
+            <m>n^2</m> is even.
+          </p>
           <p>
             An iff proof requires two separate arguments. Before reading,
             identify which strategy you expect to use for each direction,
@@ -384,7 +383,7 @@
             </p>
           </proof>
         </solution>
-      </exercise>
+      </example>
 
 
     <!-- ============================================================ -->
@@ -402,7 +401,7 @@
         <title>WLOG Justified</title>
         <statement>
           <p>
-            In Example 3, we used <q>without loss of generality</q>
+            In <xref ref="ex-mod1-we-3"/>, we used <q>without loss of generality</q>
             to handle the case that <m>n</m> is even. Write out the
             full argument for that case explicitly, to confirm that WLOG
             was justified.
@@ -414,7 +413,7 @@
         <title>Mixed Strategies in Iff Proofs</title>
         <statement>
           <p>
-            In Example 5, we used two different proof strategies for
+            In <xref ref="ex-mod1-we-5"/>, we used two different proof strategies for
             the two directions of the iff. Identify another iff statement
             (from this module or from calculus) and determine which
             strategy each direction would likely require.
@@ -426,8 +425,9 @@
         <title>Opening Line of a Convergence Proof</title>
         <statement>
           <p>
-            Look back at the convergence definition at the end of the
-            Study Guide. If you were writing a proof that
+            Look back at the
+            <xref ref="par-mod1-sg-syn" text="custom">convergence definition</xref>
+            at the end of the Study Guide. If you were writing a proof that
             <m>a_n \to L</m>, what would your opening line look like?
             (Hint: what must you produce to satisfy the definition?)
           </p>

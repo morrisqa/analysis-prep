@@ -1,28 +1,21 @@
 <section xml:id="sec-mod1-practice-set">
     <title>Practice Problem Set</title>
-    <p>Estimated time: 90 minutes.</p>
+    <p>Estimated time: 100 minutes.</p>
 
     <!-- ============================================================ -->
 
         <p>
           This problem set is scaffolded from foundational to challenging.
           Problems are labeled by difficulty:
-          <m>[\mathbf{F}]</m> Foundational (essential mechanics; every student
-          should complete these),
-          <m>[\mathbf{S}]</m> Standard (the core level for this module; most
-          students should attempt all of these), and
-          <m>[\mathbf{C}]</m> Challenge (for students looking for deeper
-          engagement; recommended for those who found the foundational
-          problems easy).
-        </p>
-        <p>
-          <alert>A note on pacing.</alert> If you are coming in with prior
-          real analysis experience, you may move through the
-          <m>[\mathbf{F}]</m> problems quickly and spend most of your time
-          on <m>[\mathbf{S}]</m> and <m>[\mathbf{C}]</m>. If analysis-style
-          proofs are new to you, work carefully through every
-          <m>[\mathbf{F}]</m> problem before moving on&#x2014;these build the
-          foundation the later problems depend on.
+          <m>[\mathbf{F}]</m> Foundational (the essential mechanics of the
+          module),
+          <m>[\mathbf{S}]</m> Standard (complete proofs at the core level for
+          this module), and
+          <m>[\mathbf{C}]</m> Challenge (problems that combine the module's
+          ideas or need one further idea of your own).
+          All of the problems are part of the module. Work the
+          <m>[\mathbf{F}]</m> problems first: the <m>[\mathbf{S}]</m> and
+          <m>[\mathbf{C}]</m> problems build on them.
         </p>
         <p>
           <alert>Write-up standard.</alert> For every proof problem, write
@@ -82,6 +75,12 @@
               <li>
                 <m>\forall x \in \R\; \forall y \in \R,\;
                 x \lt y \implies x \lt \tfrac{x+y}{2} \lt y</m>.
+                An equivalent formulation without the hypothesis
+                <m>x \lt y</m> is also correct, for example
+                <m>\forall x \in \R\; \forall y \in \R,\;
+                \min(x,y) \leq \tfrac{x+y}{2} \leq \max(x,y)</m>
+                (the inequalities are non-strict because <m>x = y</m> is
+                allowed).
               </li>
             </ol>
           </p>
@@ -165,7 +164,8 @@
               <li>
                 Negation: <m>\exists n \in \N</m> such that <m>n^2 + n</m>
                 is odd. <em>False</em>: <m>n^2 + n = n(n+1)</m> is always
-                even (product of consecutive integers).
+                even, since one of the consecutive integers <m>n</m> and
+                <m>n+1</m> is even, and a multiple of an even number is even.
               </li>
               <li>
                 Negation: <m>\forall x \in \R,\; x^2 + 1 \neq 0</m>.
@@ -412,41 +412,64 @@
       </exercise>
 
       <exercise xml:id="ex-mod1-ps-s2">
-        <title><m>[\mathbf{S}]</m> Convergence Language</title>
+        <title><m>[\mathbf{S}]</m> Negating a Definition: Cauchy Sequences</title>
         <statement>
           <p>
-            The definition of <m>\lim_{n \to \infty} a_n = L</m> is:
+            A sequence <m>(a_n)</m> of real numbers is a
+            <term>Cauchy sequence</term> if
             <md>
               \forall \varepsilon \gt 0 \;\; \exists N \in \N
-              \text{ s.t. } \forall n \in \N,\;\; n \geq N \Rightarrow |a_n - L| \lt \varepsilon.
+              \text{ s.t. } \forall m \in \N \;\; \forall n \in \N,\;\;
+              (m \geq N \wedge n \geq N) \Rightarrow |a_m - a_n| \lt \varepsilon.
             </md>
+            In words: from some point on, any two terms are within
+            <m>\varepsilon</m> of each other. (Cauchy sequences appear in
+            the definition of completeness at the end of the Bridge
+            Reading, and again in <xref ref="ch-mod4"/>.)
             <ol marker="(a)">
               <li>
                 Write the negation (i.e., the definition of
-                <m>a_n \not\to L</m>).
+                <q><m>(a_n)</m> is not a Cauchy sequence</q>), simplified
+                so that no <m>\neg</m> symbol remains.
               </li>
               <li>
-                Using your negation, state the definition of
-                <q><m>(a_n)</m> diverges</q> (does not converge to
-                any limit). (Hint: which symbol does <m>L</m> become?)
+                Use your negation to prove that the sequence
+                <m>a_n = (-1)^n</m> is not a Cauchy sequence. Say which
+                <m>\varepsilon</m> you choose and, for a given <m>N</m>,
+                which <m>m</m> and <m>n</m>.
               </li>
             </ol>
           </p>
         </statement>
+        <hint>
+          <p>
+            For (a), negate one quantifier at a time from the left, and use
+            <m>\neg(P \Rightarrow Q) \iff P \wedge \neg Q</m> on the
+            implication. For (b), consecutive terms of
+            <m>(-1)^n</m> are always 2 apart.
+          </p>
+        </hint>
         <answer>
           <p>
             <ol marker="(a)">
               <li>
                 <m>\exists \varepsilon \gt 0</m> such that
-                <m>\forall N \in \N,\; \exists n \geq N</m> with
-                <m>|a_n - L| \geq \varepsilon</m>.
+                <m>\forall N \in \N,\; \exists m \in \N \;\; \exists n \in \N</m>
+                with <m>m \geq N</m>, <m>n \geq N</m>, and
+                <m>|a_m - a_n| \geq \varepsilon</m>.
+                Each quantifier flips, the condition <m>\varepsilon \gt 0</m>
+                stays, and the implication becomes a conjunction.
               </li>
               <li>
-                <m>\forall L \in \R,\; \exists \varepsilon \gt 0</m>
-                such that <m>\forall N \in \N,\; \exists n \geq N</m>
-                with <m>|a_n - L| \geq \varepsilon</m>.
-                The formerly-free variable <m>L</m> becomes universally
-                quantified at the outermost level.
+                Let <m>\varepsilon = 1</m>, and let <m>N \in \N</m> be
+                given. Take <m>m = N</m> and <m>n = N + 1</m>. Both are at
+                least <m>N</m>, and one of them is even and the other odd,
+                so one of <m>a_m, a_n</m> is <m>1</m> and the other is
+                <m>-1</m>. Hence <m>|a_m - a_n| = 2 \geq 1 = \varepsilon</m>.
+                Since <m>N</m> was arbitrary, the negation in (a) holds, and
+                <m>(a_n)</m> is not a Cauchy sequence. (Any
+                <m>\varepsilon</m> with <m>0 \lt \varepsilon \leq 2</m>
+                works.)
               </li>
             </ol>
           </p>
@@ -634,8 +657,8 @@
               <mrow>\amp= (n^3 - n) + 3n(n+1).</mrow>
             </md>
             By the induction hypothesis, <m>6 \mid (n^3-n)</m>. Also,
-            <m>n(n+1)</m> is a product of consecutive integers, hence
-            even, so <m>6 \mid 3n(n+1)</m>. Therefore
+            one of the consecutive integers <m>n</m> and <m>n+1</m> is even,
+            so <m>n(n+1)</m> is even and <m>6 \mid 3n(n+1)</m>. Therefore
             <m>6 \mid (n+1)^3-(n+1)</m>.
           </p>
           <p>
@@ -688,37 +711,137 @@
             <ol marker="(a)">
               <li>
                 Prove that there exists a real number <m>x</m> such
-                that <m>x^3 - x = 0</m>. (You may cite the Intermediate
-                Value Theorem without proof; it will be proved in Module 6.)
+                that <m>x^3 - x = 0</m>.
               </li>
               <li>
                 Prove that this <m>x</m> is not unique (i.e., there is
                 more than one such <m>x</m>).
               </li>
+              <li>
+                Prove that for every real number <m>a</m>, the equation
+                <m>x^3 + x = a</m> has <em>at most one</em> real solution.
+              </li>
+              <li>
+                Prove that the equation <m>x^3 + x = 2</m> has exactly one
+                real solution.
+              </li>
             </ol>
           </p>
+          <p>
+            (Parts (a) and (b) are an existence claim and the failure of
+            uniqueness; part (c) is a uniqueness claim with no existence
+            claim; part (d) combines the two.)
+          </p>
         </statement>
+        <hint>
+          <p>
+            For (a), an example is a complete proof of an existence claim.
+            For (c), use the uniqueness strategy from
+            <xref ref="ex-mod1-sg-h3-1"/>:
+            suppose <m>x^3 + x = a</m> and <m>y^3 + y = a</m>, and show
+            <m>x = y</m>. Subtract the two equations and factor out
+            <m>x - y</m>; then show that the other factor is positive by
+            completing the square.
+          </p>
+        </hint>
+        <answer>
+          <p>
+            <ol marker="(a)">
+              <li>
+                <m>x = 0</m> works: <m>0^3 - 0 = 0</m>.
+              </li>
+              <li>
+                <m>x = 1</m> also works (<m>1 - 1 = 0</m>), and
+                <m>1 \neq 0</m>. In fact
+                <m>x^3 - x = x(x-1)(x+1)</m>, and a product of real numbers
+                is <m>0</m> exactly when at least one factor is <m>0</m>, so the
+                solutions are exactly <m>-1</m>, <m>0</m>, and <m>1</m>.
+              </li>
+              <li>
+                Suppose <m>x^3 + x = a</m> and <m>y^3 + y = a</m>.
+                Subtracting,
+                <md>0 = (x^3 - y^3) + (x - y) = (x - y)(x^2 + xy + y^2 + 1).</md>
+                Completing the square,
+                <m>x^2 + xy + y^2 = \bigl(x + \tfrac{y}{2}\bigr)^2 + \tfrac{3}{4}y^2 \geq 0</m>,
+                so the second factor is at least <m>1</m>, and in
+                particular not <m>0</m>. Hence <m>x - y = 0</m>, so
+                <m>x = y</m>.
+              </li>
+              <li>
+                Existence: <m>x = 1</m> gives <m>1 + 1 = 2</m>.
+                Uniqueness: by (c) with <m>a = 2</m>, there is at most one
+                solution. So <m>x = 1</m> is the only real solution.
+              </li>
+            </ol>
+          </p>
+        </answer>
       </exercise>
 
       <exercise xml:id="ex-mod1-ps-c3">
         <title><m>[\mathbf{C}]</m> Proof by Cases</title>
         <statement>
           <p>
-            Prove: for every integer <m>n</m>, <m>n^2 + n</m> is even.
+            Prove: for every integer <m>n</m>, <m>n(n+1)(n+2)</m> is
+            divisible by 6. Organize the proof in three steps.
+            <ol marker="(a)">
+              <li>
+                Prove that <m>n^2 + n = n(n+1)</m> is even. (Consider two
+                cases: <m>n</m> is even, and <m>n</m> is odd.)
+              </li>
+              <li>
+                Prove that <m>n(n+1)(n+2)</m> is divisible by 3. (Consider
+                the three possible remainders when <m>n</m> is divided by 3.)
+              </li>
+              <li>
+                Combine (a) and (b). Be careful: you must explain why an
+                integer that is divisible by 2 and by 3 is divisible by 6.
+              </li>
+            </ol>
           </p>
           <p>
-            (Consider two cases: <m>n</m> is even, and <m>n</m> is odd.
-            Also give an alternative one-line proof that avoids cases.)
+            Since <m>n^3 - n = (n-1)n(n+1)</m>, this gives a second proof of
+            <xref ref="ex-mod1-ps-s7"/>. Which proof tells you more about
+            <em>why</em> the result is true?
           </p>
         </statement>
+        <answer>
+          <p>
+            <ol marker="(a)">
+              <li>
+                If <m>n = 2k</m>, then <m>n(n+1) = 2\bigl(k(n+1)\bigr)</m>.
+                If <m>n = 2k + 1</m>, then <m>n + 1 = 2(k+1)</m> and
+                <m>n(n+1) = 2\bigl(n(k+1)\bigr)</m>. In both cases
+                <m>n(n+1)</m> is even.
+              </li>
+              <li>
+                Write <m>n = 3q + r</m> with <m>r \in \{0, 1, 2\}</m>. If
+                <m>r = 0</m>, then <m>3 \mid n</m>. If <m>r = 1</m>, then
+                <m>n + 2 = 3(q+1)</m>. If <m>r = 2</m>, then
+                <m>n + 1 = 3(q+1)</m>. In each case one factor of
+                <m>n(n+1)(n+2)</m> is a multiple of 3, so the product is.
+              </li>
+              <li>
+                Let <m>m = n(n+1)(n+2)</m>. By (a), <m>m</m> is even, since
+                it is a multiple of the even number <m>n(n+1)</m>. By (b),
+                <m>m = 3b</m> for some integer <m>b</m>. If <m>b</m> were
+                odd, say <m>b = 2j + 1</m>, then
+                <m>m = 6j + 3 = 2(3j + 1) + 1</m> would be odd, a
+                contradiction. So <m>b = 2c</m> for some integer <m>c</m>,
+                and <m>m = 6c</m>.
+              </li>
+            </ol>
+          </p>
+        </answer>
       </exercise>
 
       <exercise xml:id="ex-mod1-ps-c4">
         <title><m>[\mathbf{C}]</m> Strong Induction</title>
         <statement>
           <p>
-            Prove using strong induction: every integer <m>n \geq 2</m>
-            is either prime or can be written as a product of primes.
+            Prove using strong induction
+            (<xref ref="thm-mod1-strong-induction"/>): every integer
+            <m>n \geq 2</m> is either prime or can be written as a product
+            of primes.
           </p>
         </statement>
       </exercise>
@@ -732,7 +855,7 @@
             for all <m>n \geq 1</m>.
           </p>
           <p>
-            (This is a preview of Module 4: induction is a key tool for
+            (This is a preview of <xref ref="ch-mod4"/>: induction is a key tool for
             establishing bounds on recursively defined sequences, which
             then helps prove convergence.)
           </p>
