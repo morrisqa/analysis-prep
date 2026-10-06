@@ -162,8 +162,8 @@
           <mrow>\amp= \frac{(k+1) \cdot k!}{(k+1) \cdot (k+1)^k} \cdot \frac{k^k}{k!}</mrow>
           <mrow>\amp= \frac{k^k}{(k+1)^k} = \left(\frac{k}{k+1}\right)^k = \frac{1}{\left(1 + \frac{1}{k}\right)^k}.</mrow>
         </md>
-        It is a standard limit (proved in Zorn &#xa7;2.3 or its
-        problem set; also a limit you know from calculus) that
+        It is a standard limit (one you know from calculus; check
+        where Zorn proves it) that
         <m>\left(1 + \frac{1}{k}\right)^k \to e</m> as <m>k \to \infty</m>.
         By the quotient rule,
         <md>\lim_{k \to \infty} \frac{a_{k+1}}{a_k}

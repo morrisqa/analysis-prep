@@ -243,12 +243,15 @@
     </statement>
     <answer>
       <p>
-        The corresponding theorem in &#xa7;2.4 typically states: if
+        The standard form of this theorem is: if
         <m>f</m> is continuous on <m>[a,b]</m> and <m>\alpha</m> is
         of bounded variation on <m>[a,b]</m>, then <m>f</m> is
         Riemann<ndash/>Stieltjes integrable with respect to <m>\alpha</m>.
-        The additional hypothesis beyond the Riemann setting is that
-        <m>\alpha</m> must be of bounded variation; in the Riemann
+        Find Bauldry's version in &#xa7;2.4 and compare.
+        In the standard form, the additional hypothesis beyond the
+        Riemann setting is that <m>\alpha</m> be of bounded variation;
+        texts that work with increasing <m>\alpha</m> (as earlier in
+        this section) assume a special case of this. In the Riemann
         integral, <m>\alpha(x) = x</m> automatically has this
         property (it is monotone increasing), but a general integrator
         may not.

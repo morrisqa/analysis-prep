@@ -14,13 +14,17 @@ change the source as usual; the entry says where to look.
 |---|---|
 | [00-before-autonomy.md](00-before-autonomy.md) | Decisions Quinn delegated or that were made during migration and the Module 1 and 2 fixes, before the autonomous run |
 | [publishing.md](publishing.md) | Repository visibility, GitHub Pages, CI, license |
+| [policies.md](policies.md) | Book-wide rules adopted during the run (graded hints, exposition, proofs, names, cross-references) |
+| [mod1-alignment.md](mod1-alignment.md) | Module 1 brought in line with Modules 2 to 9 (#8) |
+| mod3.md to mod9.md | Math-review fixes, module by module |
+| [structure.md](structure.md) | The structure pass: chapters as modules, examples, theorem markup, numbering |
+| [cross-references.md](cross-references.md) | Cross-references, numbering check, neutral option guidance, Module 2 items (#5, #6) |
+| [house-style.md](house-style.md) | House style and the graded-hint audit (#7) |
+| [citations.md](citations.md) | **Every textbook citation, as a checklist to verify with the books** (#9) |
 
-More files are added as the run proceeds (one per module for math fixes, and
-one per book-wide area such as structure and house style).
 
 ## Unverified citations
 
 The textbooks (Zorn, Hirst, Bauldry) are not available to the agents, so no
 page, section, theorem, or definition number in the text has been checked
-against the books. Every such reference is listed in the file for its
-module. These are the only items that need the books in hand.
+against the books. Every such reference is listed in [citations.md](citations.md). These are the only items that need the books in hand.
