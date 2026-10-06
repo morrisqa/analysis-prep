@@ -105,29 +105,32 @@
     </p>
 
   <exercise xml:id="ex-mod9-as-2">
-    <title>The Sequence <m>f_n(x) = n^2x\,e^{-nx}</m></title>
+    <title>The Sequence <m>f_n(x) = n^2x(1-x)^n</m></title>
     <statement>
       <p>
-        Let <m>f_n(x) = n^2x\,e^{-nx}</m> for <m>x \in [0,1]</m>.
+        Let <m>f_n(x) = n^2x(1-x)^n</m> for <m>x \in [0,1]</m>.
       </p>
       <p>
         <ol marker="(i)">
           <li>
             <em>Pointwise limit.</em> Compute
             <m>\lim_{n \to \infty} f_n(x)</m> for each fixed
-            <m>x \in [0,1]</m>. (Handle <m>x = 0</m> and
-            <m>x \in (0,1]</m> separately.) Call the pointwise
+            <m>x \in [0,1]</m>. (Handle <m>x = 0</m>, <m>x = 1</m>, and
+            <m>x \in (0,1)</m> separately.) Call the pointwise
             limit <m>f(x)</m> and state it explicitly.
           </li>
           <li>
             <em>Supremum of <m>|f_n - f|</m>.</em> For each
             <m>n</m>, find the maximum of <m>|f_n(x) - f(x)|</m>
             over <m>x \in [0,1]</m>. (Use single-variable
-            calculus: differentiate, set equal to zero, check the
-            critical point.) Compute
+            calculus: differentiate, find the critical point in
+            <m>(0,1)</m>, and check that it gives the maximum.) Compute
             <m>\sup_{x \in [0,1]} |f_n(x) - f(x)|</m> and
             determine whether this supremum tends to <m>0</m>
-            as <m>n \to \infty</m>.
+            as <m>n \to \infty</m>. You may use the limit
+            <m>(1 + 1/n)^n \to e</m>, which is used in
+            <xref ref="ex-mod5-we-3" text="custom">Worked Example 3</xref>
+            of <xref ref="ch-mod5" text="custom">Module 5</xref>.
           </li>
           <li>
             <em>Uniform convergence verdict.</em> Does
@@ -138,22 +141,22 @@
             <em>Comparing integrals.</em> Compute
             <m>\displaystyle\lim_{n \to \infty} \int_0^1 f_n(x)\,dx</m>
             and <m>\displaystyle\int_0^1 f(x)\,dx</m>. Are they equal?
-            What does the discrepancy (if any) illustrate about the
-            relationship between pointwise convergence and interchange
-            of limits and integrals?
+            The term-by-term integration theorem would make them equal
+            if its hypotheses held. Which hypothesis of that theorem
+            fails for this sequence, and which hypotheses hold? Cite
+            your answers to (ii) and (iii).
           </li>
         </ol>
       </p>
     </statement>
     <hint>
       <p>
-        For part (i): for fixed <m>x \gt 0</m>, rewrite
-        <m>f_n(x)</m> in terms of <m>u = nx</m>, and bound
-        <m>e^u</m> below by a polynomial in <m>u</m> using
-        Taylor's Theorem (<xref ref="ch-mod7" text="custom">Module 7</xref>).
-        For part (ii): differentiate <m>g(x) = n^2x\,e^{-nx}</m>
-        with respect to <m>x</m> and set <m>g'(x) = 0</m>.
-        For part (iv): use integration by parts.
+        For part (i): for fixed <m>x \in (0,1)</m>, compare consecutive
+        terms <m>f_{n+1}(x)</m> and <m>f_n(x)</m>, and recall the tests
+        for series in <xref ref="ch-mod5" text="custom">Module 5</xref>.
+        For part (ii): differentiate <m>f_n</m> with respect to
+        <m>x</m> and factor the derivative.
+        For part (iv): substitute <m>u = 1 - x</m>.
       </p>
     </hint>
   </exercise>

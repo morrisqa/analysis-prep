@@ -21,11 +21,13 @@
       Bauldry's definition of uniform convergence and the
       <m>\sup</m>-norm criterion: are they identical to Zorn's
       formulation, or phrased differently? Second, Bauldry's
-      treatment of power series at the end of &#xa7;2.6: he shows
-      that a power series converges uniformly on any closed interval
+      treatment of power series. Look for the result that a power
+      series converges uniformly on any closed interval
       <m>[-r,r]</m> (a closed disk, if the variable is complex) with
-      <m>r</m> strictly less than its radius of convergence, and derives term-by-term
-      differentiation and integration as corollaries. This is the
+      <m>r</m> strictly less than the series' radius of convergence.
+      Does Bauldry derive term-by-term differentiation and integration
+      from it in &#xa7;2.6, or does he rely on the statement you met in
+      <xref ref="ex-mod5-br-6"/> (his Theorem 1.40)? This is the
       framework MAT 5610 will use throughout Chapter 2.
     </p>
     <p>
@@ -191,7 +193,7 @@
             Bauldry uses the <m>M</m>-Test to prove that the power
             series <m>\sum a_n x^n</m> with radius of convergence
             <m>R \gt 0</m> converges uniformly on
-            <m>[-r, r]</m> for any <m>r \lt R</m>. Sketch the
+            <m>[-r, r]</m> for any <m>0 \lt r \lt R</m>. Sketch the
             argument: what are the <m>M_n</m>'s, and why does
             <m>\sum M_n</m> converge?
           </li>
@@ -211,8 +213,8 @@
     <title>Term-by-Term Differentiation</title>
     <statement>
       <p>
-        Bauldry's treatment of power series culminates in term-by-term
-        differentiation: if <m>f(x) = \sum_{n=0}^{\infty} a_n x^n</m>
+        Look for Bauldry's statement of term-by-term differentiation
+        of power series: if <m>f(x) = \sum_{n=0}^{\infty} a_n x^n</m>
         on <m>(-R, R)</m>, then <m>f'(x) = \sum_{n=1}^{\infty} n a_n
         x^{n-1}</m> on <m>(-R, R)</m>.
       </p>
@@ -225,10 +227,10 @@
             integration?
           </li>
           <li>
-            Bauldry uses this theorem to show that the exponential
+            Does Bauldry use this theorem to show that the exponential
             function <m>e^x = \sum_{n=0}^{\infty} x^n/n!</m>
-            satisfies <m>(e^x)' = e^x</m>. Walk through the argument
-            in one or two sentences.
+            satisfies <m>(e^x)' = e^x</m>? Whether or not he does, walk
+            through the argument in one or two sentences.
           </li>
         </ol>
       </p>
@@ -256,12 +258,12 @@
       (<xref ref="ch-mod5" text="custom">Module 5</xref>), limits,
       continuity, and uniform continuity of functions
       (<xref ref="ch-mod6" text="custom">Module 6</xref>),
-      differentiation and the Mean Value Theorem
+      differentiation, the Mean Value Theorem, and Taylor polynomials
       (<xref ref="ch-mod7" text="custom">Module 7</xref>), Riemann
       integration and the Fundamental Theorem
       (<xref ref="ch-mod8" text="custom">Module 8</xref>), and now
       uniform convergence of function sequences and series
-      (Module 9).
+      (<xref ref="ch-mod9" text="custom">Module 9</xref>).
     </p>
     <p>
       Bauldry Chapter 2 is the rigorous version of all of that&#x2014;

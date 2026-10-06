@@ -354,7 +354,12 @@
         <m>M_n = r^n/(n \cdot 3^n) \leq (r/3)^n</m>, a convergent geometric
         bound). The value <m>r = 3</m> is not allowed: there
         <m>M_n = 1/n</m>, and the harmonic series diverges. (In fact the
-        series itself diverges at <m>x = 3</m>.)
+        series itself diverges at <m>x = 3</m>.) No <m>r \gt 3</m> works
+        either: for <m>|x| \gt 3</m> the ratio tends to
+        <m>|x|/3 \gt 1</m>, so the series diverges at <m>x = r</m> by the
+        Ratio Test. In particular <m>\sum M_n</m>, which is the series at
+        <m>x = r</m>, diverges, and the series cannot converge uniformly on
+        <m>[-r,r]</m>, since it does not even converge at <m>x = r</m>.
       </p>
       <p>
         (b) Ratio <m>= (n+1)|x| \to \infty</m> for any <m>x \neq 0</m>.

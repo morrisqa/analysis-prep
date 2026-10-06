@@ -16,7 +16,7 @@ Source review: [#10 Module 9 comment](https://github.com/morrisqa/analysis-prep/
 
 | Where | Decision | Why | Alternative |
 |---|---|---|---|
-| `ex-mod9-as-2` (graded) | Example changed to n²x e^(−nx) on [0, 1], which has a genuine discrepancy (∫ → 1 ≠ 0). The hint is approach-only and suggests a polynomial lower bound for eᵘ via Taylor's Theorem. | The old example had no discrepancy to explain; Module 7 proves only the 0/0 form of L'Hôpital at a point. | Keep the old function and reword the question. |
+| `ex-mod9-as-2` (graded) | Sequence changed to fₙ(x) = n²x(1 − x)ⁿ on [0, 1] (first to n²x e^(−nx), then, after review, to this). Pointwise limit 0 via the Ratio Test; maximum at x = 1/(n+1), tending to ∞ (using (1 + 1/n)ⁿ → e, cited in Module 5); ∫₀¹ fₙ = n²/((n+1)(n+2)) → 1 ≠ 0 by u = 1 − x. Part (iv) asks which hypothesis of the term-by-term theorem fails, citing the student's own (ii). Approach-only hint. | The old example had no discrepancy; the interim one was computed in visible material (sg-3(b), ps-s2) and interpreted by the new study-guide example. | Keep n²x e^(−nx). |
 | Visible example vs as-2 | Different functions (2n²x e^(−n²x²) in the study guide; n²x e^(−nx) in the assessment). | The visible example must not hand out the graded computations. | One function in both. |
 | `ex-mod9-sa-3` | Keeps xⁿ and adds a second comparison with gₙ, where the integrals do disagree. | The self-assessment now shows both outcomes. | |
 | `ex-mod9-ps-s4` | Asks for which r the M-Test (with Mₙ = \|aₙ\|rⁿ) gives uniform convergence on [−r, r], and whether r = R is allowed; (c) corrected to r ≤ 1. | "The largest set" was ill-defined; (c) understated the result. | |
@@ -24,7 +24,18 @@ Source review: [#10 Module 9 comment](https://github.com/morrisqa/analysis-prep/
 | Course summaries (orientation intro, instructor note, bridge wrap-up) | Modules 3 and 5 included; all eight earlier modules linked. The new short descriptions of Modules 1, 2, 3 and 7 are agent wording. | They omitted Modules 3 and 5 while claiming to summarize the course. | Soften "every major idea". |
 | `ex-mod9-ps-f4`(a) | Convergence by the Ratio Test; the sum e⁵ − 1 relies on eˣ = Σxⁿ/n!, which the book uses but never proves (as before). | | |
 
+## After review (PR #35 follow-ups)
+
+| Where | Decision | Why | Alternative |
+|---|---|---|---|
+| `ex-mod9-sg-5`(b) | Assumes the limit is integrable ("you will prove this in ps-c1") and proves only ∫fₙ → ∫f. | The full proof in the study guide answered ps-c1, a [C] problem. | Relabel ps-c1. |
+| Orientation intro | "too weak to preserve continuity, and too weak to guarantee that the integral of the limit equals the limit of the integrals" (was "…continuity, integrability, or the interchange…"). | No example in the module supports the integrability claim; an example would need a fact proved in graded Module 8 as-1. | Add an example. |
+| `par-mod9-pacing` | Describes the assessment as it now is (continuity theorem proof; analysis of a non-uniformly convergent sequence). | The old sentence was false after the as-2 change. | |
+| `ex-mod9-we-4` | Statement and "What to notice" say the endpoint value comes from the remainder estimate. | The term-by-term theorem covers only [0, r], r < 1. | |
+| Bridge reading | Flat claims about Bauldry's §2.6 and its use of term-by-term differentiation turned into questions. | Unverified; Module 5 places these results at Bauldry Theorem 1.40. | |
+
 ## Unverified citations
 - Rudin, *Principles of Mathematical Analysis*, 3rd ed., Theorem 8.2 (Abel's theorem); an aside only, not used in any proof.
 - Zorn §4.4 (definitions in the bridge reading, now "check them against").
-- Bauldry: claims in the bridge intro and `ex-mod9-br-4`(b) softened into questions.
+- Bauldry: claims in the bridge intro, `ex-mod9-br-4`(b) and `ex-mod9-br-7` softened into questions; `par-mod9-br-mtest` and `ex-mod9-br-6`(a) still assert what Bauldry does (unverified).
+- (1 + 1/n)ⁿ → e, used in `ex-mod9-as-2`(ii), is cited (not proved) in Module 5 to Zorn §2.3.

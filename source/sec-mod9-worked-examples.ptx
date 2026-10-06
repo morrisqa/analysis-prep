@@ -187,8 +187,8 @@
     <title>Example 4: Term-by-Term Integration</title>
     <statement>
       <p>
-        Use the geometric series and the term-by-term integration theorem
-        to show that
+        Use the geometric series, the term-by-term integration theorem,
+        and an estimate of the remainder to show that
         <md>
           \sum_{n=0}^{\infty} \frac{(-1)^n}{2n+1} = \frac{\pi}{4}.
         </md>
@@ -262,7 +262,10 @@
         The term-by-term integration theorem gives the series for
         <m>\arctan(x)</m> on any <m>[0,r]</m> with <m>r \lt 1</m>, but not at
         the endpoint <m>x = 1</m>, where the geometric series fails to
-        converge. A general result, Abel's theorem, says that whenever a
+        converge. The value <m>\pi/4</m> at <m>x = 1</m> comes from the
+        remainder estimate, not from the term-by-term integration theorem,
+        which covers only intervals <m>[0,r]</m> with <m>r \lt 1</m>.
+        A general result, Abel's theorem, says that whenever a
         power series converges at an endpoint of its interval of
         convergence, its value there is the limit of its values from inside
         (see Rudin, <pubtitle>Principles of Mathematical Analysis</pubtitle>,
