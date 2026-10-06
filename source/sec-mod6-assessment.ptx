@@ -58,7 +58,8 @@
         </ol>
       </p>
       <p>
-        (Hint: <m>|(2x + 1) - 7| = 2|x - 3|</m>; set <m>\delta = \varepsilon / 2</m>.)
+        (Hint: simplify <m>|(2x + 1) - 7|</m> until it is a constant
+        times <m>|x - 3|</m>.)
       </p>
     </statement>
   </exercise>
@@ -89,16 +90,14 @@
             <m>x, y \geq 0</m>. (Hint: it suffices to prove that the
             square of the left side is at most the square of the right
             side when both are nonnegative. Assume without loss of
-            generality <m>x \geq y \geq 0</m>; then
-            <m>|x - y| = x - y</m>, and the inequality
-            <m>(\sqrt{x} - \sqrt{y})^2 \leq x - y</m> is equivalent
-            to <m>x - 2\sqrt{xy} + y \leq x - y</m>, i.e.,
-            <m>2y \leq 2\sqrt{xy}</m>, i.e., <m>\sqrt{y} \leq \sqrt{x}</m>,
-            which holds since <m>x \geq y</m>.)
+            generality <m>x \geq y \geq 0</m>. If your argument divides
+            by <m>\sqrt{y}</m>, treat <m>y = 0</m> separately.)
           </li>
           <li>
             <em>Formal uniform continuity proof.</em> Given
-            <m>\varepsilon \gt 0</m>, set <m>\delta = \varepsilon^2</m>.
+            <m>\varepsilon \gt 0</m>, choose <m>\delta \gt 0</m>
+            depending only on <m>\varepsilon</m> (find it in your
+            scratch work from the key inequality).
             Suppose <m>x, y \in [0, \infty)</m> with
             <m>|x - y| \lt \delta</m>. Use the key inequality to
             conclude <m>|f(x) - f(y)| \lt \varepsilon</m>, and invoke
@@ -152,11 +151,10 @@
         functions are Riemann integrable (Module 8). Based on what
         you know now about uniform continuity, describe in two or
         three sentences how you expect uniform continuity to enter
-        that argument. (A partial answer is: to approximate the
-        integral, we need to control <m>|f(x) - f(y)|</m> on small
-        subintervals; uniform continuity gives us a single
-        <m>\delta</m> that works everywhere at once. Articulating
-        this connection is the point.)
+        that argument. (Hint: think about what has to be controlled on
+        each small subinterval when you approximate the integral, and
+        what a <m>\delta</m> that depends only on <m>\varepsilon</m>
+        would let you do. Articulating this connection is the point.)
       </p>
     </statement>
   </exercise>
