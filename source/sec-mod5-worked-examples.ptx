@@ -1,0 +1,276 @@
+<section xml:id="sec-mod5-worked-examples">
+  <title>Module 5: Worked Examples</title>
+  <p>Annotated Proof Walkthroughs — Estimated time: 40 minutes</p>
+
+    <p>
+      Read each example slowly. The goal is not just to see what the
+      answer is, but to internalize the proof <em>template</em>.
+      Example 1 is the archetype of a direct partial-sums argument
+      (telescoping); Example 2 shows the Limit Comparison Test in
+      action; Example 3 demonstrates the Ratio Test on a factorial
+      series; Example 4 treats conditional convergence via the
+      Alternating Series Test.
+    </p>
+
+  <!-- ============================================================
+       EXAMPLE 1: TELESCOPING FROM PARTIAL SUMS
+  ============================================================ -->
+
+  <exercise xml:id="ex-mod5-we-1">
+    <title>Example 1: A Telescoping Series from Partial Sums</title>
+    <statement>
+      <p>
+        Prove directly from the definition of series convergence that
+        <md>\sum_{k=1}^{\infty} \frac{1}{k(k+1)} = 1.</md>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <alert>Strategy.</alert>
+        To prove a series equals a specific number, we must show its
+        partial-sum sequence <m>(S_n)</m> converges to that number.
+        Here we will find an explicit closed form for <m>S_n</m> and
+        then take a limit using Module 4 tools.
+      </p>
+      <p>
+        <alert>Scratch work.</alert>
+        The summand admits the partial-fraction decomposition
+        <md>\frac{1}{k(k+1)} = \frac{1}{k} - \frac{1}{k+1},</md>
+        which one checks by combining the right-hand side over a
+        common denominator. The intermediate terms in the partial
+        sum will cancel in pairs.
+      </p>
+      <p>
+        <alert>Proof.</alert>
+      </p>
+      <p>
+        Using the partial-fraction identity, the <m>n</m>th partial sum is
+        <md>
+          <mrow>S_n = \sum_{k=1}^{n} \frac{1}{k(k+1)} \amp= \sum_{k=1}^{n} \left(\frac{1}{k} - \frac{1}{k+1}\right)</mrow>
+          <mrow>\amp= \left(1 - \frac{1}{2}\right) + \left(\frac{1}{2} - \frac{1}{3}\right) + \cdots + \left(\frac{1}{n} - \frac{1}{n+1}\right)</mrow>
+          <mrow>\amp= 1 - \frac{1}{n + 1},</mrow>
+        </md>
+        since all intermediate terms cancel. By the Algebra of Limits
+        (Module 4) together with the standard limit <m>1/(n+1) \to 0</m>,
+        <md>\lim_{n \to \infty} S_n
+        = \lim_{n \to \infty} \left(1 - \frac{1}{n + 1}\right)
+        = 1 - 0 = 1.</md>
+        By the definition of series convergence,
+        <m>\displaystyle\sum_{k=1}^{\infty} \frac{1}{k(k+1)} = 1</m>.
+        <m>\square</m>
+      </p>
+      <p>
+        <alert>What to notice.</alert>
+        This is the <em>only</em> example in the module in which the
+        sum is computed <em>exactly</em> from the definition. Two
+        features were critical: (1) a closed form for the summand
+        (partial fractions) that made the cancellation visible, and
+        (2) a closed form for <m>S_n</m> that reduced the problem to
+        a Module 4 limit. When neither is available&#x2014;which is
+        nearly always the case&#x2014;we must use convergence
+        <em>tests</em> to determine whether a limit exists, without
+        being able to identify its value.
+      </p>
+    </solution>
+  </exercise>
+
+  <!-- ============================================================
+       EXAMPLE 2: LIMIT COMPARISON TEST
+  ============================================================ -->
+
+  <exercise xml:id="ex-mod5-we-2">
+    <title>Example 2: The Limit Comparison Test</title>
+    <statement>
+      <p>
+        Determine whether
+        <md>\sum_{k=1}^{\infty} \frac{1}{k^2 + k}</md>
+        converges. Use the Limit Comparison Test. You may take as
+        known that <m>\sum 1/k^2</m> converges (this is Zorn's
+        <m>p</m>-series theorem with <m>p = 2</m>).
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <alert>Strategy.</alert>
+        For large <m>k</m>, the summand <m>1/(k^2 + k)</m> behaves
+        like <m>1/k^2</m>, so we compare to <m>\sum 1/k^2</m>. The
+        Limit Comparison Test avoids the work of producing an explicit
+        inequality <m>a_k \leq b_k</m> required by direct comparison.
+      </p>
+      <p>
+        <alert>Proof.</alert>
+      </p>
+      <p>
+        Set <m>a_k = \dfrac{1}{k^2 + k}</m> and <m>b_k = \dfrac{1}{k^2}</m>.
+        Both are positive for <m>k \geq 1</m>. We compute
+        <md>\frac{a_k}{b_k} = \frac{1/(k^2 + k)}{1/k^2}
+        = \frac{k^2}{k^2 + k} = \frac{1}{1 + 1/k}.</md>
+        By the quotient rule from the Algebra of Limits and the
+        standard limit <m>1/k \to 0</m>,
+        <md>\lim_{k \to \infty} \frac{a_k}{b_k}
+        = \frac{1}{1 + 0} = 1.</md>
+        Since the limit is finite and nonzero, the Limit Comparison
+        Test applies: <m>\sum a_k</m> and <m>\sum b_k</m> either both
+        converge or both diverge. Because <m>\sum 1/k^2</m> converges,
+        so does
+        <m>\displaystyle\sum_{k=1}^{\infty} \frac{1}{k^2 + k}</m>.
+        <m>\square</m>
+      </p>
+      <p>
+        <alert>What to notice.</alert>
+        The rhythm of the proof is standard: (1) identify a
+        <q>known</q> series with similar-looking large-<m>k</m> behavior;
+        (2) compute the ratio of summands and take its limit; (3)
+        verify the limit lies in <m>(0, \infty)</m>; (4) invoke the
+        test by name. If the ratio limit had been <m>0</m> or <m>\infty</m>,
+        a weaker conclusion would follow (see Zorn's exact statement
+        of Theorem 2.29), but the case of a finite nonzero limit is
+        the most commonly useful. The hypothesis of <em>positive
+        terms</em> must be checked: Limit Comparison is a test for
+        positive series, so we note explicitly that <m>a_k, b_k \gt 0</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <!-- ============================================================
+       EXAMPLE 3: RATIO TEST
+  ============================================================ -->
+
+  <exercise xml:id="ex-mod5-we-3">
+    <title>Example 3: The Ratio Test on a Factorial Series</title>
+    <statement>
+      <p>
+        Determine whether
+        <md>\sum_{k=1}^{\infty} \frac{k!}{k^k}</md>
+        converges. Use the Ratio Test.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <alert>Strategy.</alert>
+        Series involving factorials are almost always attacked with
+        the Ratio Test, because the factorial and exponential ratios
+        simplify cleanly. We compute <m>\lim_{k \to \infty} a_{k+1}/a_k</m>.
+      </p>
+      <p>
+        <alert>Proof.</alert>
+      </p>
+      <p>
+        Let <m>a_k = k!/k^k \gt 0</m>. Then
+        <md>
+          <mrow>\frac{a_{k+1}}{a_k} \amp= \frac{(k+1)!}{(k+1)^{k+1}} \cdot \frac{k^k}{k!}</mrow>
+          <mrow>\amp= \frac{(k+1) \cdot k!}{(k+1) \cdot (k+1)^k} \cdot \frac{k^k}{k!}</mrow>
+          <mrow>\amp= \frac{k^k}{(k+1)^k} = \left(\frac{k}{k+1}\right)^k = \frac{1}{\left(1 + \frac{1}{k}\right)^k}.</mrow>
+        </md>
+        It is a standard limit (proved in Zorn &#xa7;2.3 or its
+        problem set; also a limit students know from calculus) that
+        <m>\left(1 + \frac{1}{k}\right)^k \to e</m> as <m>k \to \infty</m>.
+        By the quotient rule,
+        <md>\lim_{k \to \infty} \frac{a_{k+1}}{a_k}
+        = \frac{1}{e} \approx 0.368.</md>
+        Since <m>1/e \lt 1</m>, the Ratio Test implies
+        <m>\displaystyle\sum_{k=1}^{\infty} \frac{k!}{k^k}</m>
+        converges. <m>\square</m>
+      </p>
+      <p>
+        <alert>What to notice.</alert>
+        The algebraic simplification in the second step is the whole
+        game: <m>(k+1)!/k! = k+1</m>, and <m>(k+1)^{k+1}/(k+1)^k = k+1</m>,
+        so a single factor of <m>(k+1)</m> in numerator and denominator
+        cancels and leaves a clean ratio. Recognizing the
+        <m>(1 + 1/k)^k</m> pattern&#x2014;rather than fumbling with
+        binomial expansions&#x2014;is what makes the test feel
+        routine. The Ratio Test delivers a yes/no verdict only; it
+        does not tell you what the sum is. For <m>\sum k!/k^k</m>,
+        there is no known closed form for the sum.
+      </p>
+    </solution>
+  </exercise>
+
+  <!-- ============================================================
+       EXAMPLE 4: ALTERNATING SERIES & CONDITIONAL CONVERGENCE
+  ============================================================ -->
+
+  <exercise xml:id="ex-mod5-we-4">
+    <title>Example 4: Conditional Convergence via the Alternating Series Test</title>
+    <statement>
+      <p>
+        Prove that
+        <md>\sum_{k=1}^{\infty} \frac{(-1)^{k+1}}{\sqrt{k}}</md>
+        converges, and then show that it does <em>not</em> converge
+        absolutely. Conclude that the series converges conditionally.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <alert>Strategy.</alert>
+        Absolute convergence is the stronger condition, so we handle
+        it in stages. First, use the Alternating Series Test to get
+        convergence. Then, look at <m>\sum |a_k| = \sum 1/\sqrt{k}</m>
+        and show it diverges via comparison with the harmonic series
+        (or directly as a <m>p</m>-series with <m>p = 1/2 \lt 1</m>).
+      </p>
+      <p>
+        <alert>Step 1: Convergence via AST.</alert>
+      </p>
+      <p>
+        Write the series as <m>\sum (-1)^{k+1} b_k</m> with
+        <m>b_k = 1/\sqrt{k} \gt 0</m>. To apply the Alternating Series
+        Test we verify two conditions:
+      </p>
+      <p>
+        <em>(i) <m>(b_k)</m> is decreasing.</em> For <m>k \in \N</m>,
+        <m>\sqrt{k} \lt \sqrt{k+1}</m>, so <m>1/\sqrt{k} \gt 1/\sqrt{k+1}</m>,
+        i.e., <m>b_k \gt b_{k+1}</m>.
+      </p>
+      <p>
+        <em>(ii) <m>b_k \to 0</m>.</em> For any <m>\varepsilon \gt 0</m>,
+        by the Archimedean Property pick <m>N \gt 1/\varepsilon^2</m>.
+        Then for <m>k \geq N</m>, <m>\sqrt{k} \geq \sqrt{N} \gt 1/\varepsilon</m>,
+        so <m>b_k = 1/\sqrt{k} \lt \varepsilon</m>.
+      </p>
+      <p>
+        Both hypotheses of the Alternating Series Test are satisfied,
+        so <m>\displaystyle\sum_{k=1}^{\infty} \frac{(-1)^{k+1}}{\sqrt{k}}</m>
+        converges.
+      </p>
+      <p>
+        <alert>Step 2: Absolute divergence.</alert>
+      </p>
+      <p>
+        Consider the series of absolute values,
+        <m>\displaystyle\sum_{k=1}^{\infty} \frac{1}{\sqrt{k}}</m>.
+        We show this diverges by direct comparison with the harmonic
+        series. Since <m>\sqrt{k} \leq k</m> for all <m>k \in \N</m>,
+        <md>\frac{1}{k} \leq \frac{1}{\sqrt{k}}.</md>
+        The harmonic series <m>\sum 1/k</m> diverges
+        (Study Guide Exercise 4 of &#xa7;2.5). By the contrapositive
+        form of the Comparison Test,
+        <m>\sum 1/\sqrt{k}</m> also diverges.
+      </p>
+      <p>
+        <alert>Conclusion.</alert>
+      </p>
+      <p>
+        The series <m>\sum (-1)^{k+1}/\sqrt{k}</m> converges (Step 1)
+        but not absolutely (Step 2). By definition, it converges
+        <em>conditionally</em>. <m>\square</m>
+      </p>
+      <p>
+        <alert>What to notice.</alert>
+        The proof template for classifying an alternating series has
+        three parts: (1) apply AST to establish convergence, carefully
+        verifying both hypotheses on <m>b_k</m>; (2) check absolute
+        convergence separately, usually via comparison with a known
+        series; (3) declare whether the convergence is absolute or
+        conditional. The order matters: <em>you cannot conclude
+        conditional convergence from AST alone</em>&#x2014;you must
+        also rule out absolute convergence. Conditional convergence
+        is a delicate property: rearranging the terms of a
+        conditionally convergent series can change its sum (Riemann's
+        rearrangement theorem, a topic for MAT 5610).
+      </p>
+    </solution>
+  </exercise>
+
+</section>
