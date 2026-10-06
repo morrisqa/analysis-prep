@@ -94,8 +94,8 @@
           <li>
             Explain why <m>r^n \to 0</m> when <m>|r| \lt 1</m>. (You
             do not need to prove this rigorously, but you should be
-            able to point at the <xref ref="ch-mod4"/> tool that does the work;
-            in Zorn it appears as Theorem 2.16 or near Proposition 2.24.)
+            able to point at the <xref ref="ch-mod4"/> tool that does the work
+            and find where Zorn states it.)
           </li>
           <li>
             Conclude: when <m>|r| \lt 1</m>,
@@ -238,7 +238,7 @@
     <title>The Comparison Test</title>
     <statement>
       <p>
-        State Zorn's Comparison Test (Theorem 2.26 or its analogue):
+        State Zorn's Comparison Test:
         if <m>0 \leq a_k \leq b_k</m> for all <m>k</m>, then
         (i) <m>\sum b_k</m> converges <m>\Rightarrow</m> <m>\sum a_k</m>
         converges, and (ii) <m>\sum a_k</m> diverges <m>\Rightarrow</m>
@@ -588,12 +588,13 @@
     <title>Reading Ahead: The Integral Test</title>
     <statement>
       <p>
-        Zorn &#xa7;2.6 (or &#xa7;2.5 problem set) mentions the
-        Integral Test: if <m>f(x) \geq 0</m> is continuous and
+        The standard form of the Integral Test is: if
+        <m>f(x) \geq 0</m> is continuous and
         decreasing on <m>[1, \infty)</m>, then
         <m>\sum_{k=1}^{\infty} f(k)</m> converges if and only if
         the improper integral <m>\int_1^{\infty} f(x)\,dx</m>
-        converges.
+        converges. Check whether and where Zorn mentions it
+        (start with &#xa7;2.6).
       </p>
       <p>
         Without proving anything: use the Integral Test (informally)

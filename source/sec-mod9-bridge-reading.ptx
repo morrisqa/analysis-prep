@@ -56,7 +56,7 @@
     <statement>
       <p>
         Write out Bauldry's definition of uniform convergence
-        (&#xa7;2.6, Definition or Theorem 2.6.x). Compare it
+        (&#xa7;2.6). Compare it
         word-for-word with the definition in the module orientation.
         Are they identical? If not, identify the difference in
         phrasing or quantifier order. Which formulation do you find
@@ -72,12 +72,12 @@
         <ol marker="(a)">
           <li>
             State the sup-norm criterion as Bauldry gives it. How
-            does his statement compare to the version in the module
+            does Bauldry's statement compare to the version in the module
             study guide (<xref ref="ex-mod9-sg-2"/>)?
           </li>
           <li>
-            Bauldry may phrase the criterion as a theorem or as an
-            equivalent definition. Whichever form he uses, explain
+            Does Bauldry phrase the criterion as a theorem or as an
+            equivalent definition? Whichever form the book uses, explain
             why it is logically equivalent to the
             <m>\varepsilon</m>-<m>N</m> definition.
           </li>
@@ -116,10 +116,10 @@
             Describe any differences in presentation.
           </li>
           <li>
-            Bauldry may state a stronger version: that the limit of a
+            A stronger version says that the limit of a
             uniformly convergent sequence of continuous functions on a
-            closed interval is <em>uniformly</em> continuous.
-            Does he state this? Is any hypothesis needed beyond those
+            closed, bounded interval <m>[a,b]</m> is <em>uniformly</em> continuous.
+            Does Bauldry state this? Is any hypothesis needed beyond those
             of the continuity theorem? (Recall what
             <xref ref="ch-mod6"/> says
             about continuous functions on a closed, bounded interval.)

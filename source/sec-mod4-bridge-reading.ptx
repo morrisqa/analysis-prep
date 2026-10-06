@@ -27,8 +27,8 @@
   <paragraphs xml:id="par-mod4-br-defn">
     <title>Bauldry's Definition of Convergence</title>
     <p>
-      Bauldry's Definition 2.15 (or nearby) gives the
-      <m>\varepsilon</m>-<m>N</m> definition of convergence. Its
+      Bauldry's definition of convergence in &#xa7;2.5 is the
+      <m>\varepsilon</m>-<m>N</m> definition. Its
       symbolic content is identical to Zorn's, but Bauldry's wording
       and typographic style differ. Read it carefully.
     </p>
@@ -66,15 +66,15 @@
     <statement>
       <p>
         Bauldry states and proves the <em>uniqueness of the limit</em>
-        (Theorem 2.48 or its analogue) immediately after the definition.
+        immediately after the definition.
         <ol marker="(a)">
           <li>
             State the uniqueness theorem in your own words.
           </li>
           <li>
-            Bauldry's proof is likely a short argument using the
-            <m>\varepsilon/2</m> trick. Which <m>\varepsilon</m> does
-            he choose? Is his argument direct or by contradiction, and
+            Does Bauldry's proof use the <m>\varepsilon/2</m> trick?
+            Which <m>\varepsilon</m> does the proof choose? Is the
+            argument direct or by contradiction, and
             how does it compare with the proof of
             <xref ref="thm-mod4-limit-unique"/>?
           </li>
@@ -95,9 +95,8 @@
   <paragraphs xml:id="par-mod4-br-mct">
     <title>The Monotone Convergence Theorem in Bauldry</title>
     <p>
-      Bauldry states a version of the Monotone Convergence Theorem as
-      Theorem 2.53 (or the numbered theorem whose statement matches
-      <q>a bounded monotone sequence converges</q>). Read it and its
+      Bauldry states a version of the Monotone Convergence Theorem:
+      <q>a bounded monotone sequence converges.</q> Read it and its
       proof carefully; this is one of the key places where Bauldry
       uses the Completeness Axiom.
     </p>
@@ -140,9 +139,8 @@
     <statement>
       <p>
         Locate Bauldry's statement and proof (or sketch) of
-        Bolzano<ndash/>Weierstrass (Theorem 2.54 or the numbered
-        theorem whose statement matches <q>every bounded sequence has
-        a convergent subsequence</q>).
+        the Bolzano<ndash/>Weierstrass Theorem: <q>every bounded
+        sequence has a convergent subsequence.</q>
         <ol marker="(a)">
           <li>
             State the theorem precisely in your own words.
@@ -159,8 +157,8 @@
             completeness)?
           </li>
           <li>
-            Bauldry's proof is likely more compressed than Zorn's.
-            Name one sentence in Bauldry's proof that, if given to
+            Compare the length and level of detail of Bauldry's proof
+            with Zorn's. Name one sentence in Bauldry's proof that, if given to
             someone unfamiliar with the argument, would require them
             to fill in implicit reasoning.
           </li>
@@ -176,9 +174,8 @@
   <paragraphs xml:id="par-mod4-br-cauchy">
     <title>Cauchy Sequences in Bauldry</title>
     <p>
-      Bauldry's definition of Cauchy sequence (Definition 2.16 or its
-      analogue) and the equivalence with convergence in <m>\R</m>
-      (Theorem 2.55 or its analogue) close out his treatment of
+      Bauldry's definition of Cauchy sequence and the equivalence with
+      convergence in <m>\R</m> close out the book's treatment of
       sequences. This is the same equivalence you studied in
       Zorn &#xa7;2.4, but Bauldry's phrasing is slightly different.
     </p>

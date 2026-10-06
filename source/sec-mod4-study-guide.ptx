@@ -179,8 +179,8 @@
         performs algebraic manipulation (finding the relationship
         between <m>n</m> and <m>\varepsilon</m>) and then writes a
         formal proof. Re-read Zorn's proof that <m>1/n \to 0</m>
-        (or whichever first explicit <m>\varepsilon</m>-<m>N</m>
-        argument Zorn presents near Definition 2.1).
+        or, if &#xa7;2.1 does not give one, the first explicit
+        <m>\varepsilon</m>-<m>N</m> argument in &#xa7;2.1.
       </p>
       <p>
         Identify: where in the formal proof does the Archimedean
@@ -194,8 +194,8 @@
     <title>Boundedness</title>
     <statement>
       <p>
-        State Zorn's definition of a <em>bounded</em> sequence
-        (Definition 2.2 or nearby). Then prove Zorn's Theorem 2.4 informally:
+        State Zorn's definition of a <em>bounded</em> sequence.
+        Then prove Zorn's Theorem 2.4 informally:
         if <m>a_n \to L</m>, then <m>(a_n)</m> is bounded.
       </p>
       <p>
@@ -394,9 +394,8 @@
     <title>Where Completeness Enters the Monotone Convergence Theorem</title>
     <statement>
       <p>
-        State the Monotone Convergence Theorem as Zorn presents it
-        (Theorem 2.3, or its analogue in your text). Then re-read
-        the proof slowly.
+        State the Monotone Convergence Theorem as Zorn presents it.
+        Then re-read the proof slowly.
       </p>
       <p>
         <ol marker="(a)">
@@ -447,9 +446,11 @@
     <title>The Bolzano<ndash/>Weierstrass Theorem</title>
     <statement>
       <p>
-        State the Bolzano<ndash/>Weierstrass Theorem. Read one of
-        Zorn's proof strategies (whichever he presents; most likely
-        the monotone-subsequence approach).
+        State the Bolzano<ndash/>Weierstrass Theorem. Read Zorn's
+        proof and note which strategy it uses (for example, the
+        monotone-subsequence approach or bisection). Whatever Zorn's
+        choice, answer the questions below about the
+        monotone-subsequence strategy.
       </p>
       <p>
         <ol marker="(a)">
@@ -552,8 +553,8 @@
     <title>Convergent Implies Cauchy</title>
     <statement>
       <p>
-        Read Zorn's proof that every convergent sequence is Cauchy
-        (Proposition 2.18 or its analogue). The core identity is
+        Read Zorn's proof that every convergent sequence is Cauchy.
+        The core identity is
         <md>a_m - a_n = (a_m - L) + (L - a_n).</md>
         Explain how this identity, combined with the Triangle Inequality
         and the <m>\varepsilon/2</m>-split, delivers the Cauchy

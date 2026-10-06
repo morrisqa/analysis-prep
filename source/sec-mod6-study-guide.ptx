@@ -479,7 +479,8 @@
           </li>
           <li>
             The proof of Heine<ndash/>Cantor uses the theory of
-            compact sets and open covers. Zorn may prove it differently.
+            compact sets and open covers. Check whether Zorn's proof
+            does, or uses a different argument.
             Identify the key property of <m>[a, b]</m> that the proof
             uses, and note that this is a topic developed fully in
             MAT 5610.
