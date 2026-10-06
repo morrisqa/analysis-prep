@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ch-mod2">
+  <title>Module 2: The Real Number System</title>
+
+  <xi:include href="sec-mod2-orientation.ptx"/>
+  <xi:include href="sec-mod2-study-guide.ptx"/>
+  <xi:include href="sec-mod2-worked-examples.ptx"/>
+  <xi:include href="sec-mod2-practice-set.ptx"/>
+  <xi:include href="sec-mod2-bridge-reading.ptx"/>
+  <xi:include href="sec-mod2-assessment.ptx"/>
+
+</chapter>

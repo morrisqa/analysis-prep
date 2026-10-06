@@ -1,0 +1,294 @@
+<section xml:id="sec-mod2-assessment">
+  <title>Module 2: Assessment</title>
+  <p>Submitted Proofs and Reflection — Estimated time: 40 minutes</p>
+
+  <!-- ============================================================ -->
+
+    <p>
+      This assessment has three parts. Parts 1 and 2 ask you to write
+      complete mathematical proofs, submitted for feedback. Part 3 is
+      a short reflection. Submit all three parts together as a single
+      document (PDF or typed file) through the course management system.
+    </p>
+    <p>
+      <alert>Write-up standard.</alert> All proofs must be written in
+      complete mathematical prose. Use the style modeled in the Worked
+      Examples: include scratch work (clearly labeled) before the formal
+      proof, announce your strategy, write in complete grammatical
+      sentences, and justify every step. Work consisting only of symbolic
+      manipulations without explanation will not receive full credit.
+    </p>
+    <p>
+      <alert>A note on Part 2.</alert> All students complete all three
+      parts. For Part 2, choose the option that best matches your
+      background: if you have prior real analysis experience, challenge
+      yourself with Option B. If this is newer territory, Option A is
+      the right starting point.
+    </p>
+    <p>
+      <alert>Academic integrity.</alert> Your proofs must be your own
+      work. You may refer to your notes, the textbooks, and the worked
+      examples from this module. You may not collaborate with other
+      students on the written proofs or use AI writing tools to draft
+      your arguments.
+    </p>
+    <p>
+      <alert>Part 1: Core Proof (Required)</alert>
+      (Estimated time: 20 minutes)
+    </p>
+    <p>
+      Consider the set
+      <md>S = \{x \in \R : x^2 + x \lt 6\}.</md>
+    </p>
+
+  <exercise xml:id="ex-mod2-as-1a">
+    <title>Analyzing the Set</title>
+    <statement>
+      <p>
+        Factor the inequality <m>x^2 + x - 6 \lt 0</m> and determine
+        exactly which real numbers belong to <m>S</m>. (That is: what
+        familiar interval is <m>S</m>?)
+      </p>
+      <p>
+        Show your algebra clearly. This scratch work does not need to
+        be in formal proof style; it is the analysis step that precedes
+        the proof.
+      </p>
+    </statement>
+    <hint>
+      <p>
+        Factor as <m>(x + 3)(x - 2) \lt 0</m> and recall that a
+        product of two real numbers is negative exactly when the
+        factors have opposite signs.
+      </p>
+    </hint>
+  </exercise>
+
+  <exercise xml:id="ex-mod2-as-1b">
+    <title>Proving the Supremum</title>
+    <statement>
+      <p>
+        Using your work in the previous problem, prove that
+        <m>\sup S = 2</m>.
+      </p>
+      <p>
+        Your proof must have the following structure:
+        <ol marker="(i)">
+          <li>
+            <em>Scratch work (clearly labeled).</em> Verify that 2
+            is an upper bound. Then: given <m>\varepsilon \gt 0</m>,
+            find an explicit element of <m>S</m> greater than
+            <m>2 - \varepsilon</m> (for small enough <m>\varepsilon</m>).
+            Show the algebra.
+          </li>
+          <li>
+            <em>Formal proof.</em> Using your scratch work, write
+            a complete proof that <m>\sup S = 2</m> by verifying
+            both conditions in the definition of supremum.
+            The proof should be written in complete mathematical prose.
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <hint>
+      <p>
+        For the <m>\varepsilon</m>-characterization step: you need
+        to show that for any <m>\varepsilon \gt 0</m>, the point
+        <m>x_0 = 2 - \varepsilon/2</m> belongs to <m>S</m> (at
+        least when <m>\varepsilon</m> is small). To verify
+        <m>x_0 \in S</m>, compute <m>x_0^2 + x_0 - 6</m> and show
+        it is negative by factoring as <m>(x_0 + 3)(x_0 - 2)</m>.
+        Note that <m>x_0 + 3 \gt 0</m> (since <m>x_0 \gt -1 \gt -3</m>
+        for <m>\varepsilon \lt 6</m>) and <m>x_0 - 2 = -\varepsilon/2 \lt 0</m>.
+      </p>
+    </hint>
+  </exercise>
+
+  <exercise xml:id="ex-mod2-as-1c">
+    <title>The Infimum</title>
+    <statement>
+      <p>
+        State (without proof) the value of <m>\inf S</m>, and write
+        one sentence explaining why the Completeness Axiom guarantees
+        that <m>\inf S</m> exists in <m>\R</m>.
+      </p>
+    </statement>
+  </exercise>
+
+  <!-- ============================================================ -->
+
+    <p>
+      <alert>Part 2: Proof Choice (Required — Choose One)</alert>
+      (Estimated time: 15 minutes)
+    </p>
+    <p>
+      Choose <em>one</em> of the following two proof problems.
+      Both ask for a complete proof; they differ in difficulty and
+      the techniques required. Label your submission clearly with
+      <q>Option A</q> or <q>Option B.</q>
+    </p>
+
+  <exercise xml:id="ex-mod2-as-2a">
+    <title>Option A (Standard): Scaling a Supremum</title>
+    <statement>
+      <p>
+        Let <m>S</m> be a nonempty subset of <m>\R</m> with
+        <m>s = \sup S</m>. Let <m>c \gt 0</m> be a positive real number,
+        and define <m>cS = \{cx : x \in S\}</m>.
+      </p>
+      <p>
+        Prove that <m>\sup(cS) = cs</m>.
+      </p>
+      <p>
+        Your proof must verify both conditions in the definition of
+        supremum for the set <m>cS</m>.
+      </p>
+    </statement>
+    <hint>
+      <p>
+        For condition (i): if <m>x \in S</m> then <m>x \leq s</m>;
+        multiply both sides by <m>c \gt 0</m>.
+        For condition (ii): if <m>U</m> is an upper bound of <m>cS</m>,
+        show that <m>U/c</m> is an upper bound of <m>S</m> and use
+        <m>s \leq U/c</m>.
+      </p>
+    </hint>
+  </exercise>
+
+  <exercise xml:id="ex-mod2-as-2b">
+    <title>Option B (More Challenging): The Archimedean Property</title>
+    <statement>
+      <p>
+        Assuming the Completeness Axiom, prove the Archimedean Property:
+        for every <m>x \in \R</m>, there exists <m>n \in \N</m> such
+        that <m>n \gt x</m>.
+      </p>
+      <p>
+        Use proof by contradiction. Your proof should clearly identify:
+        what set the Completeness Axiom is applied to, what supremum
+        is obtained, and what contradiction is derived from the
+        <m>\varepsilon</m>-characterization.
+      </p>
+    </statement>
+    <hint>
+      <p>
+        Suppose no such <m>n</m> exists; then <m>x</m> is an upper
+        bound for <m>\N</m>. Let <m>\alpha = \sup \N</m>. Apply
+        the <m>\varepsilon</m>-characterization with <m>\varepsilon = 1</m>:
+        there exists <m>n \in \N</m> with <m>\alpha - 1 \lt n</m>,
+        so <m>n + 1 \gt \alpha</m>. But <m>n + 1 \in \N</m>&#x2026;
+      </p>
+    </hint>
+  </exercise>
+
+  <!-- ============================================================ -->
+
+    <p>
+      <alert>Part 3: Reflection</alert>
+      (Estimated time: 5 minutes)
+    </p>
+    <p>
+      Write 3&#x2013;5 sentences for each question. These are graded
+      for thoughtfulness, not for mathematical correctness.
+    </p>
+
+  <exercise xml:id="ex-mod2-as-r1">
+    <title>The Role of Completeness</title>
+    <statement>
+      <p>
+        In your Part 1 proof, where exactly did the Completeness
+        Axiom enter? Was it used explicitly, or did it appear
+        implicitly (for example, in a claim about what <m>\sup S</m>
+        is)?
+      </p>
+      <p>
+        Then consider: could you have written the same proof if you
+        were working in <m>\Q</m> instead of <m>\R</m>?
+        Why or why not?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod2-as-r2">
+    <title>Bauldry's Proof Structure</title>
+    <statement>
+      <p>
+        In the Bridge Reading you read Bauldry's proof of Theorem 2.3
+        (Archimedean Property). Compare its logical structure to the
+        proof you wrote in Part 2 (Option B) or the hint you read for
+        Option B. What is the same? If there are differences, where
+        did your proof and Bauldry's diverge?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod2-as-r3">
+    <title>Looking Ahead</title>
+    <statement>
+      <p>
+        In Module 4, you will prove that sequences like
+        <m>a_n = 1 - 1/n</m> converge to their limit using an
+        <m>\varepsilon</m>-<m>N</m> argument. Based on what you
+        practiced in this module, describe the connection you see
+        between the <m>\varepsilon</m>-characterization of the
+        supremum and the structure of an <m>\varepsilon</m>-<m>N</m>
+        convergence proof. What is similar? What will be new?
+      </p>
+    </statement>
+  </exercise>
+
+    <p>
+      <alert>Assessment Rubric (Informational)</alert>
+    </p>
+    <p>
+      The following rubric describes how submitted proofs will be
+      evaluated.
+    </p>
+
+  <paragraphs xml:id="par-mod2-as-rubric">
+    <title>Grading Criteria</title>
+    <tabular halign="left">
+      <col width="14%"/>
+      <col width="29%"/>
+      <col width="29%"/>
+      <col width="28%"/>
+      <row header="yes">
+        <cell><p>Criterion</p></cell>
+        <cell><p>Full credit</p></cell>
+        <cell><p>Partial credit</p></cell>
+        <cell><p>Minimal credit</p></cell>
+      </row>
+      <row>
+        <cell><p><alert>Logical correctness</alert></p></cell>
+        <cell><p>All steps are valid; the argument proves exactly the stated claim</p></cell>
+        <cell><p>Mostly correct with one fixable gap</p></cell>
+        <cell><p>Significant logical errors or wrong claim proved</p></cell>
+      </row>
+      <row>
+        <cell><p><alert>Use of definitions</alert></p></cell>
+        <cell><p>Both conditions of the supremum definition are verified explicitly</p></cell>
+        <cell><p>One condition is verified correctly; the other is sketched</p></cell>
+        <cell><p>Definition not invoked or confused with a different property</p></cell>
+      </row>
+      <row>
+        <cell><p><alert><m>\varepsilon</m>-characterization</alert></p></cell>
+        <cell><p>An explicit element of <m>S</m> in <m>(s - \varepsilon, s]</m> is exhibited with full justification</p></cell>
+        <cell><p>Correct idea but the element is not explicitly verified to be in <m>S</m></p></cell>
+        <cell><p>The <m>\varepsilon</m>-step is missing or circular</p></cell>
+      </row>
+      <row>
+        <cell><p><alert>Mathematical prose</alert></p></cell>
+        <cell><p>Complete grammatical sentences; scratch work labeled and separate from proof</p></cell>
+        <cell><p>Mostly prose with some missing connective sentences</p></cell>
+        <cell><p>Primarily symbolic with no connecting narrative</p></cell>
+      </row>
+      <row>
+        <cell><p><alert>Reflection</alert></p></cell>
+        <cell><p>Specific, thoughtful, and engages with the mathematical content</p></cell>
+        <cell><p>General but relevant observations</p></cell>
+        <cell><p>Vague or too brief to be informative</p></cell>
+      </row>
+    </tabular>
+  </paragraphs>
+
+</section>
