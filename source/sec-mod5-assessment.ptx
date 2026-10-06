@@ -38,8 +38,8 @@
     <statement>
       <p>
         Prove directly from the definition of series convergence that
-        <md>\sum_{k=1}^{\infty} \frac{1}{k(k+2)} = \frac{3}{4},</md>
-        and find the sum. Your proof must not use any of the named
+        <md>\sum_{k=1}^{\infty} \frac{1}{k(k+2)} = \frac{3}{4}.</md>
+        Your proof must not use any of the named
         convergence tests; it must instead identify a closed form for
         the partial sums <m>S_n</m> and take a limit using Module 4
         tools.
@@ -124,8 +124,7 @@
             If absolute convergence <em>fails</em>, apply the
             Alternating Series Test to check for conditional
             convergence: verify that <m>b_k = k/(k^2 + 1)</m> is
-            positive, decreasing (for all sufficiently large
-            <m>k</m>), and tends to 0.
+            positive, decreasing, and tends to 0.
           </li>
           <li>
             <em>Classification.</em> State whether the series is
@@ -143,11 +142,10 @@
         <m>\sum 1/k</m> diverges, so <m>\sum k/(k^2+1)</m> diverges.
         Hence the original series does <em>not</em> converge
         absolutely.
-        For (ii): the function <m>f(k) = k/(k^2 + 1)</m> has derivative
-        <m>f'(k) = (1 - k^2)/(k^2 + 1)^2 \lt 0</m> for <m>k \geq 2</m>
-        (computed via the quotient rule, treating <m>k</m> as a real
-        variable to check monotonicity), so <m>b_k</m> is eventually
-        decreasing. It tends to 0 by dividing numerator and denominator
+        For (ii): to show <m>b_{k+1} \leq b_k</m>, clear the (positive)
+        denominators and compare the two polynomials in <m>k</m>; the
+        inequality holds for every <m>k \geq 1</m>, so no calculus is
+        needed. The sequence tends to 0 by dividing numerator and denominator
         by <m>k^2</m>. Hence by AST the series converges.
         Classification: conditionally convergent.
       </p>
@@ -166,22 +164,27 @@
     </p>
 
   <exercise xml:id="ex-mod5-as-r1">
-    <title>Divergence Test and Sequence Uniqueness</title>
+    <title>Divergence Test and Shifted Sequences</title>
     <statement>
       <p>
-        In Module 4 you proved that a convergent sequence has a
-        <em>unique</em> limit, and you also learned to use the
-        Algebra of Limits (in particular, the difference rule) to
-        compute limits of combinations of sequences.
+        In <xref ref="ch-mod4" text="custom">Module 4</xref> you read
+        a proof that a convergent sequence has a <em>unique</em> limit,
+        and you also learned to use the Algebra of Limits (in
+        particular, the difference rule) to compute limits of
+        combinations of sequences. In <xref ref="ex-mod5-sg-25-3"/>
+        you used one more fact: shifting a sequence by one index does
+        not change its limit.
       </p>
       <p>
         In one paragraph, explain why the Divergence Test
         (<q>if <m>\sum a_k</m> converges, then <m>a_k \to 0</m></q>)
         is, in a precise sense, <q>the same theorem</q> as the
-        fact that convergent sequences have a unique limit combined
+        fact that a shifted sequence has the same limit, combined
         with the difference rule. (Hint: start from the identity
-        <m>a_n = S_n - S_{n-1}</m> and unpack what uniqueness of
-        the limit of <m>(S_n)</m> tells you about <m>(S_{n-1})</m>.)
+        <m>a_n = S_n - S_{n-1}</m> and unpack what convergence of
+        <m>(S_n)</m> to <m>S</m> tells you about <m>(S_{n-1})</m>.
+        Uniqueness of limits is what lets you speak of <em>the</em>
+        sum <m>S</m> of the series.)
       </p>
     </statement>
   </exercise>

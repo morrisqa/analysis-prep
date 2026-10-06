@@ -61,7 +61,7 @@
       </p>
       <p>
         <alert>What to notice.</alert>
-        This is the <em>only</em> example in the module in which the
+        This is the <em>only</em> worked example in which the
         sum is computed <em>exactly</em> from the definition. Two
         features were critical: (1) a closed form for the summand
         (partial fractions) that made the cancellation visible, and
@@ -93,9 +93,15 @@
       <p>
         <alert>Strategy.</alert>
         For large <m>k</m>, the summand <m>1/(k^2 + k)</m> behaves
-        like <m>1/k^2</m>, so we compare to <m>\sum 1/k^2</m>. The
-        Limit Comparison Test avoids the work of producing an explicit
-        inequality <m>a_k \leq b_k</m> required by direct comparison.
+        like <m>1/k^2</m>, so we compare to <m>\sum 1/k^2</m>. Here
+        direct comparison would also work, since
+        <m>1/(k^2 + k) \leq 1/k^2</m> for every <m>k</m>; we use the
+        Limit Comparison Test to show how it runs. Its advantage is that
+        it needs no explicit inequality <m>a_k \leq b_k</m>, which
+        matters when the natural inequality points the wrong way: for
+        <m>\sum 1/(k^2 - k + 1)</m>, every term is at least
+        <m>1/k^2</m>, so direct comparison with <m>\sum 1/k^2</m> needs
+        a new bound, while the ratio of terms still tends to 1.
       </p>
       <p>
         <alert>Proof.</alert>
@@ -181,8 +187,8 @@
         <m>(1 + 1/k)^k</m> pattern&#x2014;rather than fumbling with
         binomial expansions&#x2014;is what makes the test feel
         routine. The Ratio Test delivers a yes/no verdict only; it
-        does not tell you what the sum is. For <m>\sum k!/k^k</m>,
-        there is no known closed form for the sum.
+        does not tell you what the sum is, and nothing in this module
+        gives the value of <m>\sum k!/k^k</m>.
       </p>
     </solution>
   </exercise>
@@ -244,7 +250,7 @@
         series. Since <m>\sqrt{k} \leq k</m> for all <m>k \in \N</m>,
         <md>\frac{1}{k} \leq \frac{1}{\sqrt{k}}.</md>
         The harmonic series <m>\sum 1/k</m> diverges
-        (Study Guide Exercise 4 of &#xa7;2.5). By the contrapositive
+        (<xref ref="ex-mod5-sg-25-4"/>). By the contrapositive
         form of the Comparison Test,
         <m>\sum 1/\sqrt{k}</m> also diverges.
       </p>
@@ -268,7 +274,9 @@
         also rule out absolute convergence. Conditional convergence
         is a delicate property: rearranging the terms of a
         conditionally convergent series can change its sum (Riemann's
-        rearrangement theorem, a topic for MAT 5610).
+        rearrangement theorem, a topic for MAT 5610; see, for example,
+        Rudin, <em>Principles of Mathematical Analysis</em>, 3rd ed.,
+        Theorem 3.54).
       </p>
     </solution>
   </exercise>
