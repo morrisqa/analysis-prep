@@ -27,7 +27,7 @@
       These problems practice the basic moves of the module: computing
       partial sums by hand, deciding whether geometric series converge and
       finding their sums, applying the Divergence Test, and determining
-      convergence with the Direct Comparison Test.
+      convergence or divergence with the Direct Comparison Test.
     </p>
   </paragraphs>
 
@@ -152,8 +152,8 @@
       telescoping proof from the definition of series convergence,
       applications of the Ratio Test and the Limit Comparison Test, a proof
       using the Alternating Series Test with a classification as absolute
-      or conditional, and a pair of examples showing that the Divergence
-      Test has no converse.
+      or conditional, and a pair of examples showing that the converse of
+      the Divergence Test is false.
     </p>
   </paragraphs>
 

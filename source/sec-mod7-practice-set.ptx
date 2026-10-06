@@ -163,9 +163,9 @@
     <p>
       These problems apply the same moves to longer arguments: a proof of
       differentiability from the limit definition, a proof using the Mean
-      Value Theorem that <m>e^x \geq 1 + x</m>, a proof using the Mean
-      Value Theorem that a positive derivative makes a function strictly
-      increasing, a limit evaluated by two applications of
+      Value Theorem that <m>e^x \geq 1 + x</m>, a proof that a positive
+      derivative on an interval makes a function strictly increasing, a
+      limit evaluated by two applications of
       L'H&#xf4;pital's rule, and a second-order Taylor polynomial with its
       Lagrange remainder.
     </p>
@@ -301,8 +301,9 @@
     <p>
       These problems extend the module's ideas: a proof of the chain rule
       using an auxiliary function, and a proof using Rolle's Theorem that
-      a twice differentiable function with three zeros in <m>[a, b]</m>
-      has a second derivative that vanishes somewhere in <m>(a, b)</m>.
+      a twice differentiable function vanishing at <m>a</m>, at <m>b</m>,
+      and at a point between them has a second derivative that vanishes
+      somewhere in <m>(a, b)</m>.
     </p>
   </paragraphs>
 

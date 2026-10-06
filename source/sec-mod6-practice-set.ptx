@@ -196,8 +196,7 @@
       <m>\varepsilon</m>-<m>\delta</m> limit proof, a proof of continuity
       from the definition, a proof of uniform continuity using a Lipschitz
       condition, a proof that a function is not uniformly continuous, and a
-      proof using the sequential characterization that a composition of
-      continuous functions is continuous.
+      proof that a composition of continuous functions is continuous.
     </p>
   </paragraphs>
 
@@ -316,11 +315,10 @@
     <title>Challenge Problems</title>
     <!-- TODO(quinn): sentence added in #4 to satisfy the schema; confirm or replace. -->
     <p>
-      These problems extend the module's ideas: a proof using Cauchy
-      sequences that a uniformly continuous function on an open interval
-      has one-sided limits at both endpoints, and a proof that a
-      composition of uniformly continuous functions is uniformly
-      continuous.
+      These problems extend the module's ideas: a proof that a uniformly
+      continuous function on a bounded open interval has one-sided limits
+      at both endpoints, and a proof that a composition of uniformly
+      continuous functions is uniformly continuous.
     </p>
   </paragraphs>
 

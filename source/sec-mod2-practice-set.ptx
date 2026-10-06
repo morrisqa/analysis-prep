@@ -263,8 +263,9 @@
     <title>Challenge Problems</title>
     <!-- TODO(quinn): sentence added in #4 to satisfy the schema; confirm or replace. -->
     <p>
-      These problems extend the module's ideas: uniqueness of the supremum
-      and the Archimedean Property derived from the Completeness Axiom.
+      These problems extend the module's ideas: uniqueness of the supremum,
+      and a derivation of the Archimedean Property from the Completeness
+      Axiom.
     </p>
   </paragraphs>
 
