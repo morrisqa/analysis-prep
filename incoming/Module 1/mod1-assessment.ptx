@@ -1,0 +1,311 @@
+<section xml:id="ws-mod1-assessment">
+    <title>Module 1: Assessment</title>
+    <subtitle>Submitted Proofs and Reflection — Estimated time: 40 minutes</subtitle>
+
+    <!-- ============================================================ -->
+
+      <introduction>
+        <p>
+          This assessment has three parts. Parts 1 and 2 ask you to write
+          complete mathematical proofs, submitted for feedback. Part 3 is
+          a short reflection. Submit all three parts together as a single
+          document (PDF or typed file) through the course management system.
+        </p>
+        <p>
+          <alert>Write-up standard.</alert> All proofs must be written in
+          complete mathematical prose. Use the style modeled in the Worked
+          Examples: label your proof strategy in the opening sentence, write
+          in complete grammatical sentences, and justify every step. Work
+          that consists only of symbolic manipulations without explanation
+          will not receive full credit.
+        </p>
+        <p>
+          <alert>A note on Part 2.</alert> All students complete all three
+          parts. For Part 2, choose the option that best matches your
+          background: if you are coming in with prior real analysis
+          experience, challenge yourself with Option B. If analysis-style
+          proofs are newer territory for you, Option A is the right
+          starting point — work through it carefully before considering
+          Option B.
+        </p>
+        <p>
+          <alert>Academic integrity.</alert> Your proofs must be your own
+          work. You may refer to your notes, the textbooks, and the worked
+          examples from this module. You may not collaborate with other
+          students on the written proofs or use AI writing tools to draft
+          your arguments.
+        </p>
+        <p>
+          <alert>Part 1: Core Proof (Required)</alert>
+          (Estimated time: 20 minutes)
+        </p>
+        <p>
+          Recall the definition of sequence convergence:
+          <me>
+            \lim_{n \to \infty} a_n = L \;\;\text{means}\;\;
+            \forall \varepsilon \gt 0 \;\; \exists N \in \N
+            \text{ s.t. } n \geq N \Rightarrow |a_n - L| \lt \varepsilon.
+          </me>
+        </p>
+      </introduction>
+
+      <exercise xml:id="assess-mod1-1a">
+        <title>Negating the Convergence Definition</title>
+        <statement>
+          <p>
+            Write, in careful symbolic notation, the statement that
+            <m>a_n \not\to L</m> (the sequence does <em>not</em>
+            converge to <m>L</m>). Your answer should be the
+            formal negation of the definition above, with all
+            quantifiers written explicitly and in the correct order.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="assess-mod1-1b">
+        <title>Proving Convergence: <m>a_n = (2n+1)/n</m></title>
+        <statement>
+          <p>
+            Let <m>a_n = \dfrac{2n + 1}{n}</m>. Prove that
+            <m>\lim_{n \to \infty} a_n = 2</m>.
+          </p>
+          <p>
+            Your proof must follow this structure:
+            <ol marker="(i)">
+              <li>
+                <em>Scratch work (clearly labeled, before the proof).</em>
+                Compute <m>|a_n - 2|</m> and find, given
+                <m>\varepsilon \gt 0</m>, an explicit <m>N</m>
+                (in terms of <m>\varepsilon</m>) such that
+                <m>n \geq N</m> guarantees <m>|a_n - 2| \lt \varepsilon</m>.
+                You may use any algebraic manipulation here; this
+                is your planning stage.
+              </li>
+              <li>
+                <em>Formal proof.</em> Using the <m>N</m> you found
+                in the scratch work, write a complete
+                <m>\varepsilon</m>-<m>N</m> proof in standard
+                mathematical prose. The proof should begin:
+                <q>Let <m>\varepsilon \gt 0</m> be given.
+                Choose <m>N = \ldots</m></q>
+              </li>
+            </ol>
+          </p>
+        </statement>
+        <hint>
+          <p>
+            Note that
+            <me>|a_n - 2| = \left|\frac{2n+1}{n} - 2\right|
+            = \left|\frac{1}{n}\right| = \frac{1}{n}.</me>
+            To make <m>1/n \lt \varepsilon</m>, you need <m>n \gt 1/\varepsilon</m>.
+            The Archimedean property (Corollary 2.4, Bauldry p. 48) guarantees
+            that such an <m>N \in \N</m> exists.
+          </p>
+        </hint>
+      </exercise>
+
+      <exercise xml:id="assess-mod1-1c">
+        <title>Applying the Negation</title>
+        <statement>
+          <p>
+            Using your negation from the first problem, write out what it
+            would mean for the sequence <m>a_n = (2n+1)/n</m> to <em>not</em>
+            converge to 3. (You do not need to prove this statement;
+            just write it in symbols and translate it into a
+            clear English sentence.)
+          </p>
+        </statement>
+      </exercise>
+
+
+    <!-- ============================================================ -->
+
+      <introduction>
+        <p>
+          <alert>Part 2: Proof Choice (Required — Choose One)</alert>
+          (Estimated time: 15 minutes)
+        </p>
+        <p>
+          Choose <em>one</em> of the following two proof problems.
+          Both problems ask you to write a complete proof; they differ
+          in difficulty and which proof strategy you will use.
+          Label your submission clearly with <q>Option A</q> or
+          <q>Option B.</q>
+        </p>
+      </introduction>
+
+      <exercise xml:id="assess-mod1-2a">
+        <title>Option A (Standard): A Divisibility Proof by Induction</title>
+        <statement>
+          <p>
+            Prove by mathematical induction that for all integers
+            <m>n \geq 1</m>,
+            <me>3 \mid (n^3 + 2n).</me>
+            (Here <m>3 \mid m</m> means 3 divides <m>m</m> evenly,
+            i.e., <m>m = 3k</m> for some integer <m>k</m>.)
+          </p>
+          <p>
+            Your proof must clearly label the base case, state the
+            induction hypothesis, and complete the inductive step with
+            full justification.
+          </p>
+        </statement>
+        <hint>
+          <p>
+            In the inductive step, write out
+            <m>(n+1)^3 + 2(n+1)</m>, expand, and look for a way
+            to use both the induction hypothesis and the fact that
+            <m>3</m> divides any multiple of <m>3</m>.
+          </p>
+        </hint>
+      </exercise>
+
+      <exercise xml:id="assess-mod1-2b">
+        <title>Option B (More Challenging): Irrationality and a Contrapositive</title>
+        <statement>
+          <p>
+            <ol marker="(a)">
+              <li>
+                <p>
+                  Prove by contrapositive: for any integer <m>n</m>, if
+                  <m>n^2</m> is divisible by 5, then <m>n</m> is divisible
+                  by 5.
+                </p>
+                <p>
+                  (Hint: if <m>5 \nmid n</m>,
+                  then <m>n</m> leaves remainder 1, 2, 3, or 4 when
+                  divided by 5. Check each case to show
+                  <m>5 \nmid n^2</m>. You may use proof by cases within
+                  the contrapositive argument.)
+                </p>
+              </li>
+              <li>
+                <p>
+                  Using part (a), prove by contradiction that <m>\sqrt{5}</m>
+                  is irrational. Model your argument closely on the proof
+                  that <m>\sqrt{2}</m> is irrational; the key lemma you
+                  need is the result from part (a).
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </exercise>
+
+
+    <!-- ============================================================ -->
+
+      <introduction>
+        <p>
+          <alert>Part 3: Reflection</alert>
+          (Estimated time: 5 minutes)
+        </p>
+        <p>
+          The following questions are short-answer and are not graded for
+          mathematical correctness — they are graded for thoughtfulness
+          and specificity. Write 3&#x2013;5 sentences for each. These
+          reflections help the instructor understand where you are and
+          adapt the course accordingly.
+        </p>
+      </introduction>
+
+      <exercise xml:id="assess-mod1-r1">
+        <title>Proof Process Reflection</title>
+        <statement>
+          <p>
+            Describe the process you used to write your proof in
+            Part 1(b). Where did you get stuck, if at all? How did
+            you decide on the value of <m>N</m>? What was the
+            relationship between your scratch work and the final proof?
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="assess-mod1-r2">
+        <title>Bridge to Bauldry</title>
+        <statement>
+          <p>
+            In the Bridge Reading (Part 2), you examined Bauldry's proof
+            of Theorem 2.3 (Archimedean Order Property). The proof used
+            contradiction and the Least Upper Bound Property. Briefly
+            explain the logical structure of that proof in your own words:
+            what was assumed, what was constructed, and what contradiction
+            was reached. (You are not writing a formal proof here; you
+            are narrating the argument in plain English.)
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="assess-mod1-r3">
+        <title>Looking Ahead</title>
+        <statement>
+          <p>
+            The <m>\varepsilon</m>-<m>N</m> proof you wrote in Part 1(b)
+            is the first in a series: Module 2 will ask you to prove that
+            various sequences converge using this same definition. Based
+            on your experience with this proof, what do you anticipate
+            will be the hardest step in applying the definition to more
+            complex sequences? What would you want to practice more?
+          </p>
+        </statement>
+      </exercise>
+
+      <introduction>
+        <p>
+          <alert>Assessment Rubric (Informational)</alert>
+        </p>
+        <p>
+          The following rubric describes how your submitted proofs will
+          be evaluated. Reading it before you write will help you focus
+          your efforts.
+        </p>
+      </introduction>
+
+      <paragraphs xml:id="assess-mod1-rubric">
+        <title>Grading Criteria</title>
+        <tabular halign="left">
+          <col width="14%"/>
+          <col width="29%"/>
+          <col width="29%"/>
+          <col width="28%"/>
+          <row header="yes">
+            <cell><p>Criterion</p></cell>
+            <cell><p>Full credit</p></cell>
+            <cell><p>Partial credit</p></cell>
+            <cell><p>Minimal credit</p></cell>
+          </row>
+          <row>
+            <cell><p><alert>Logical correctness</alert></p></cell>
+            <cell><p>All steps are logically valid; the argument proves exactly the stated claim</p></cell>
+            <cell><p>Argument is mostly correct with one fixable gap</p></cell>
+            <cell><p>Argument has significant logical errors or proves the wrong statement</p></cell>
+          </row>
+          <row>
+            <cell><p><alert>Quantifier handling</alert></p></cell>
+            <cell><p>Quantifiers are written correctly, in the right order, with the right universe</p></cell>
+            <cell><p>Minor error in notation but order is correct</p></cell>
+            <cell><p>Quantifier order is wrong or domains are missing</p></cell>
+          </row>
+          <row>
+            <cell><p><alert>Proof strategy</alert></p></cell>
+            <cell><p>Strategy is named; proof follows the announced structure throughout</p></cell>
+            <cell><p>Strategy is correct but not announced, or announced but not fully followed</p></cell>
+            <cell><p>Strategy is inappropriate for the claim</p></cell>
+          </row>
+          <row>
+            <cell><p><alert>Mathematical prose</alert></p></cell>
+            <cell><p>Complete grammatical sentences; no dangling symbols; clear flow</p></cell>
+            <cell><p>Mostly prose with some notational shorthand where prose is needed</p></cell>
+            <cell><p>Primarily symbolic calculation without connecting sentences</p></cell>
+          </row>
+          <row>
+            <cell><p><alert>Reflection</alert></p></cell>
+            <cell><p>Specific, thoughtful, and shows engagement with the mathematical content</p></cell>
+            <cell><p>General but relevant observations</p></cell>
+            <cell><p>Vague or too brief to be informative</p></cell>
+          </row>
+        </tabular>
+      </paragraphs>
+
+
+  </section>

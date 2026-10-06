@@ -1,0 +1,289 @@
+<section xml:id="ws-mod4-orientation">
+  <title>Module 4: Sequences — Convergence and Key Theorems</title>
+  <subtitle>Orientation</subtitle>
+
+  <objectives xml:id="obj-mod4">
+    <ul>
+      <li>
+        <p>
+          State the <m>\varepsilon</m>-<m>N</m> definition of convergence
+          precisely, and read its quantifier structure
+          (<m>\forall \varepsilon \gt 0\ \exists N \in \N\ \forall n \geq N</m>)
+          fluently.
+        </p>
+      </li>
+      <li>
+        <p>
+          Write a complete <m>\varepsilon</m>-<m>N</m> proof that a given
+          explicit sequence converges to a proposed limit, including the
+          scratch work that produces the choice of <m>N</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Negate the definition of convergence correctly and use the
+          negation to prove that a sequence diverges.
+        </p>
+      </li>
+      <li>
+        <p>
+          Apply the Algebra of Limits (sums, products, quotients) and the
+          Squeeze Theorem to evaluate limits of combinations of sequences
+          without returning to the definition each time.
+        </p>
+      </li>
+      <li>
+        <p>
+          State the Monotone Convergence Theorem, explain precisely where
+          the Completeness Axiom enters its proof, and apply it to show
+          that a bounded monotone sequence converges.
+        </p>
+      </li>
+      <li>
+        <p>
+          State the Bolzano&#x2013;Weierstrass Theorem and describe,
+          informally, why every bounded sequence must have a convergent
+          subsequence.
+        </p>
+      </li>
+      <li>
+        <p>
+          Define a Cauchy sequence and prove that every convergent sequence
+          is Cauchy; recognize that the converse (Cauchy <m>\Rightarrow</m>
+          convergent in <m>\R</m>) again rests on completeness.
+        </p>
+      </li>
+      <li>
+        <p>
+          Read Bauldry &#xa7;2.5 carefully and identify where the results
+          above appear in his presentation, noting differences in notation
+          and compression.
+        </p>
+      </li>
+    </ul>
+  </objectives>
+
+  <!-- ============================================================ -->
+
+  <introduction>
+    <p>
+      In Module 2 you built the vocabulary of bounds and completeness;
+      in Module 3 you became fluent with sets, functions, and the kinds
+      of indexing that show up in analysis arguments. This module is
+      where those tools first pay off. A <em>sequence</em> is just a
+      function <m>a : \N \to \R</m>, but the question we ask of
+      it&#x2014;does it have a limit?&#x2014;launches the whole
+      <m>\varepsilon</m>-<m>N</m> machinery of real analysis.
+    </p>
+    <p>
+      The central definition is short: <m>a_n \to L</m> if for every
+      <m>\varepsilon \gt 0</m> there exists an index <m>N</m> beyond
+      which every term lies within <m>\varepsilon</m> of <m>L</m>.
+      Everything you have studied about absolute value as distance,
+      and everything you will study later about continuity and the
+      derivative, passes through this same quantifier pattern. Learning
+      to write, read, and negate this definition fluently is the single
+      most important technical skill in the course.
+    </p>
+    <p>
+      Beyond the definition itself, this module introduces the
+      <em>working theorems</em> of sequence convergence: the Algebra
+      of Limits (which lets you combine known limits without rewriting
+      <m>\varepsilon</m>-<m>N</m> proofs), the Squeeze Theorem, the
+      Monotone Convergence Theorem (the first major consequence of the
+      Completeness Axiom you will prove with), the Bolzano&#x2013;Weierstrass
+      Theorem, and the notion of a Cauchy sequence. These are the tools
+      on which all of Bauldry Chapter 2 rests.
+    </p>
+    <p>
+      The self-assessment questions below are <alert>not graded</alert>.
+      They are designed to help you locate yourself within the module.
+      Write informally; a sentence or two per question is fine.
+    </p>
+  </introduction>
+
+  <exercise xml:id="ex-mod4-sa-1">
+    <title>What is a Sequence?</title>
+    <statement>
+      <p>
+        In your own words, what is a sequence of real numbers? Give
+        two concrete examples, one of which you expect to have a limit
+        and one of which you expect not to.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod4-sa-2">
+    <title>Informal Limits</title>
+    <statement>
+      <p>
+        Based on intuition alone, decide whether each of the following
+        sequences converges, and if so, to what value. Do not prove
+        anything; just record your best guess.
+        <ol marker="(a)">
+          <li><m>a_n = \dfrac{1}{n}</m></li>
+          <li><m>a_n = \dfrac{n}{n+1}</m></li>
+          <li><m>a_n = (-1)^n</m></li>
+          <li><m>a_n = \dfrac{(-1)^n}{n}</m></li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod4-sa-3">
+    <title>Quantifier Reading</title>
+    <statement>
+      <p>
+        The definition of convergence begins: <q>for every <m>\varepsilon \gt 0</m>,
+        there exists <m>N \in \N</m> such that for every <m>n \geq N</m>&#x2026;</q>
+        Based on your work in Module 1 with quantifier alternation, what
+        kind of dependency do you expect between <m>\varepsilon</m> and
+        <m>N</m>? Does <m>N</m> depend on <m>\varepsilon</m>, or the
+        other way around?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod4-sa-4">
+    <title>Monotone and Bounded</title>
+    <statement>
+      <p>
+        A sequence is <em>monotone increasing</em> if each term is at
+        least as large as the previous one, and <em>bounded above</em>
+        if all terms lie below some fixed real number <m>M</m>. Do you
+        expect a monotone increasing, bounded above sequence to have
+        a limit? Why or why not? (You are not yet expected to prove
+        your answer; record your intuition.)
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod4-sa-5">
+    <title>Your Background</title>
+    <statement>
+      <p>
+        Have you seen the <m>\varepsilon</m>-<m>N</m> definition
+        of convergence in a previous course? If so, how long ago, and
+        how comfortable are you writing a proof from it? If this is
+        your first exposure, what part of the definition feels most
+        opaque right now?
+      </p>
+    </statement>
+  </exercise>
+
+  <!-- ============================================================ -->
+
+  <paragraphs xml:id="par-mod4-instructor-note">
+    <title>A Note from the Instructor</title>
+    <p>
+      This module is the pivot point of the whole course. Everything
+      before it has been setup&#x2014;logical vocabulary, the real number
+      system, sets and functions&#x2014;and everything after it
+      (continuity, differentiation, the Riemann integral) is built on the
+      same <m>\varepsilon</m>-style definitions you will write here.
+      If the <m>\varepsilon</m>-<m>N</m> pattern feels uncomfortable at
+      first, that is ordinary. The discomfort comes from the quantifier
+      alternation: <m>\varepsilon</m> comes first, <m>N</m> is chosen in
+      response. That order is the whole game. Reversing it produces
+      statements that look similar but are mathematically empty.
+    </p>
+    <p>
+      The theorems in this module have two flavors. The Algebra of Limits
+      and the Squeeze Theorem are <em>labor-saving</em>: once you prove
+      them, you rarely have to return to the <m>\varepsilon</m>-<m>N</m>
+      definition for an ordinary rational-function limit. The Monotone
+      Convergence Theorem and the Bolzano&#x2013;Weierstrass Theorem are
+      <em>structural</em>: they are the first theorems where the
+      Completeness Axiom actively does the work. When you reach those
+      theorems in MAT 5610, they will be invoked repeatedly, and you
+      will want to know not just their statements but where completeness
+      enters. Spend some time on those proofs&#x2014;in the study guide
+      and in the Bridge Reading&#x2014;even if the algebra of limits feels
+      more immediately practical.
+    </p>
+  </paragraphs>
+
+  <paragraphs xml:id="par-mod4-pacing">
+    <title>A Note on Pacing</title>
+    <p>
+      <alert>A note on pacing.</alert>
+      If you are coming in with prior real analysis experience, the
+      <m>\varepsilon</m>-<m>N</m> definition and the Algebra of Limits
+      will likely feel familiar. Run quickly through the study guide
+      for &#xa7;2.1 and &#xa7;2.2, spend careful time on the Monotone
+      Convergence and Bolzano&#x2013;Weierstrass material in &#xa7;2.3,
+      and work the Cauchy section (&#xa7;2.4) and the Bridge Reading
+      with full attention&#x2014;that is the material you are most
+      likely to have seen least recently and that MAT 5610 will build
+      on most directly. If <m>\varepsilon</m>-<m>N</m> proofs are newer
+      territory, slow down at Worked Example 1: read it two or three
+      times, reproduce the scratch-work-then-formal-proof pattern on
+      paper, and then work Practice Set problems F2&#x2013;F4 and
+      S1&#x2013;S2 before moving to the more structural theorems.
+      The single most common mistake in this module is writing a
+      proof in which <m>N</m> is chosen before <m>\varepsilon</m>; if
+      the structure of your scratch work gets that order wrong, the
+      formal proof will be wrong too.
+    </p>
+  </paragraphs>
+
+  <paragraphs xml:id="par-mod4-map">
+    <title>Module Road Map (estimated time: 5 hours)</title>
+    <tabular halign="left">
+      <col width="50%"/>
+      <col width="10%"/>
+      <col width="40%"/>
+      <row header="yes">
+        <cell><p>Component</p></cell>
+        <cell><p>Time</p></cell>
+        <cell><p>Purpose</p></cell>
+      </row>
+      <row>
+        <cell><p>Orientation (this document)</p></cell>
+        <cell><p>15 min</p></cell>
+        <cell><p>Goals, self-assessment, context</p></cell>
+      </row>
+      <row>
+        <cell><p>Video 1: The <m>\varepsilon</m>-<m>N</m> Definition and First Proofs</p></cell>
+        <cell><p>9 min</p></cell>
+        <cell><p>Core instruction via lightboard</p></cell>
+      </row>
+      <row>
+        <cell><p>Video 2: Limit Laws, Squeeze, and Monotone Convergence</p></cell>
+        <cell><p>9 min</p></cell>
+        <cell><p>Core instruction via lightboard</p></cell>
+      </row>
+      <row>
+        <cell><p>Video 3: Subsequences, Bolzano&#x2013;Weierstrass, and Cauchy Sequences</p></cell>
+        <cell><p>10 min</p></cell>
+        <cell><p>Core instruction via lightboard</p></cell>
+      </row>
+      <row>
+        <cell><p>Companion Reading and Study Guide</p></cell>
+        <cell><p>60 min</p></cell>
+        <cell><p>Zorn &#xa7;2.1&#x2013;2.4 with guided questions</p></cell>
+      </row>
+      <row>
+        <cell><p>Worked Examples</p></cell>
+        <cell><p>45 min</p></cell>
+        <cell><p>Annotated <m>\varepsilon</m>-<m>N</m> walkthroughs</p></cell>
+      </row>
+      <row>
+        <cell><p>Practice Problem Set</p></cell>
+        <cell><p>110 min</p></cell>
+        <cell><p>Scaffolded practice by difficulty</p></cell>
+      </row>
+      <row>
+        <cell><p>Bridge Reading Guide</p></cell>
+        <cell><p>40 min</p></cell>
+        <cell><p>Connecting Module 4 to Bauldry &#xa7;2.5</p></cell>
+      </row>
+      <row>
+        <cell><p>Module Assessment</p></cell>
+        <cell><p>45 min</p></cell>
+        <cell><p>Submitted proofs and reflection</p></cell>
+      </row>
+    </tabular>
+  </paragraphs>
+
+</section>

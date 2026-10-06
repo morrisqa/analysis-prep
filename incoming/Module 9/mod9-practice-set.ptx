@@ -1,0 +1,458 @@
+<section xml:id="ws-mod9-practice-set">
+  <title>Module 9: Practice Problem Set</title>
+  <subtitle>Estimated time: 100 minutes</subtitle>
+
+  <introduction>
+    <p>
+      Problems are labeled <m>[\mathbf{F}]</m> (Foundational),
+      <m>[\mathbf{S}]</m> (Standard), and <m>[\mathbf{C}]</m>
+      (Challenge). Work in order within each level; later problems
+      often build on earlier ones.
+    </p>
+    <p>
+      These problems are not submitted, but write out complete solutions.
+      For any problem asking you to <em>prove</em> something, apply the
+      standards from the Worked Examples: strategy stated up front,
+      complete sentences, every step justified, and each theorem cited
+      by name.
+    </p>
+  </introduction>
+
+  <!-- ============================================================
+       FOUNDATIONAL
+  ============================================================ -->
+
+  <paragraphs xml:id="par-mod9-ps-F">
+    <title>Foundational Problems</title>
+  </paragraphs>
+
+  <exercise xml:id="ex-mod9-ps-F1">
+    <title><m>[\mathbf{F}]</m> Pointwise Limits</title>
+    <statement>
+      <p>
+        Find the pointwise limit of each sequence of functions on the
+        given set. No proof of convergence is required; a sentence of
+        justification is enough.
+        <ol marker="(a)">
+          <li>
+            <p>
+              <m>f_n(x) = \dfrac{1}{1 + nx}</m> on <m>(0, \infty)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>f_n(x) = \dfrac{nx}{1 + nx}</m> on <m>[0, \infty)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>f_n(x) = \dfrac{\sin(nx)}{n}</m> on <m>\R</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>f_n(x) = \left(1 + \dfrac{x}{n}\right)^n</m> on
+              <m>\R</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        (a) For <m>x \gt 0</m>: <m>nx \to \infty</m>, so
+        <m>1/(1+nx) \to 0</m>. Pointwise limit: <m>f \equiv 0</m> on
+        <m>(0,\infty)</m>.
+      </p>
+      <p>
+        (b) At <m>x = 0</m>: <m>f_n(0) = 0</m> for all <m>n</m>, so
+        <m>f(0) = 0</m>. For <m>x \gt 0</m>: <m>nx/(1+nx) = 1/(1/nx + 1)
+        \to 1</m>. Pointwise limit: <m>f(0)=0</m>, <m>f(x)=1</m> for
+        <m>x \gt 0</m>.
+      </p>
+      <p>
+        (c) <m>|\sin(nx)/n| \leq 1/n \to 0</m>. Pointwise limit:
+        <m>f \equiv 0</m> on <m>\R</m>.
+      </p>
+      <p>
+        (d) Standard limit: <m>(1+x/n)^n \to e^x</m>. Pointwise limit:
+        <m>f(x) = e^x</m>.
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise xml:id="ex-mod9-ps-F2">
+    <title><m>[\mathbf{F}]</m> Sup-Norm Computations</title>
+    <statement>
+      <p>
+        For each sequence in F1, compute
+        <m>S_n = \sup_{x \in D} |f_n(x) - f(x)|</m>
+        (where <m>f</m> is the pointwise limit from F1) and determine
+        whether <m>S_n \to 0</m>.
+        <ol marker="(a)">
+          <li>
+            <p>
+              Part (a) of F1, on <m>(0, \infty)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Part (b) of F1, on <m>[0, \infty)</m> and on <m>[1, \infty)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Part (c) of F1, on <m>\R</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        (a) <m>|f_n(x) - 0| = 1/(1+nx)</m>; <m>\sup_{x \gt 0} 1/(1+nx)
+        = 1</m> (approaching as <m>x \to 0^+</m>). <m>S_n = 1</m> for
+        all <m>n</m>. <em>Not</em> uniform on <m>(0,\infty)</m>.
+      </p>
+      <p>
+        (b) On <m>[0,\infty)</m>: at <m>x=0</m>, <m>|f_n(0)-0|=0</m>;
+        for <m>x \gt 0</m>, <m>|f_n(x)-1| = 1/(1+nx) \leq 1</m>, approaching
+        <m>1</m> as <m>x \to 0^+</m>. So <m>S_n = 1</m>. Not uniform.
+        On <m>[1,\infty)</m>: <m>\sup_{x \geq 1} 1/(1+nx) = 1/(1+n)
+        \to 0</m>. Uniform on <m>[1,\infty)</m>.
+      </p>
+      <p>
+        (c) <m>S_n = \sup_\R |\sin(nx)/n| = 1/n \to 0</m>. Uniform on
+        <m>\R</m>.
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise xml:id="ex-mod9-ps-F3">
+    <title><m>[\mathbf{F}]</m> Uniform Convergence: Quick Checks</title>
+    <statement>
+      <p>
+        For each, state whether the convergence is uniform on the given
+        set, and give a one-sentence justification.
+        <ol marker="(a)">
+          <li>
+            <p>
+              <m>f_n(x) = x/n</m> on <m>[0,1]</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>f_n(x) = x/n</m> on <m>[0, \infty)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>f_n(x) = x^2/(x^2 + n)</m> on <m>\R</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>f_n(x) = e^{-nx}</m> on <m>(0, \infty)</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        (a) <m>\sup_{[0,1]} |x/n| = 1/n \to 0</m>. Uniform.
+      </p>
+      <p>
+        (b) <m>\sup_{[0,\infty)} |x/n| = \infty</m> for every <m>n</m>
+        (unbounded domain). Not uniform.
+      </p>
+      <p>
+        (c) <m>|x^2/(x^2+n)| \leq x^2/n</m>; but <m>x^2/n</m> is
+        unbounded on <m>\R</m>. More directly: <m>\sup_{x \in \R}
+        x^2/(x^2+n) = 1</m> for all <m>n</m> (limit as <m>x \to \infty</m>).
+        Not uniform on <m>\R</m>.
+      </p>
+      <p>
+        (d) Pointwise limit is <m>0</m>. <m>\sup_{x \gt 0} e^{-nx} = 1</m>
+        (as <m>x \to 0^+</m>). Not uniform on <m>(0,\infty)</m>.
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise xml:id="ex-mod9-ps-F4">
+    <title><m>[\mathbf{F}]</m> <m>M</m>-Test Warm-Up</title>
+    <statement>
+      <p>
+        Apply the Weierstrass <m>M</m>-Test to each series. State the
+        bound <m>M_n</m> and verify <m>\sum M_n \lt \infty</m>.
+        <ol marker="(a)">
+          <li>
+            <p>
+              <m>\displaystyle\sum_{n=1}^{\infty} \frac{x^n}{n!}</m>
+              on <m>[-5,5]</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\displaystyle\sum_{n=1}^{\infty} \frac{1}{n^2 + x^2}</m>
+              on <m>\R</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\displaystyle\sum_{n=0}^{\infty} \left(\frac{x}{2}\right)^n</m>
+              on <m>[-1,1]</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        (a) <m>M_n = 5^n/n!</m>; <m>\sum 5^n/n! = e^5 \lt \infty</m>.
+        Uniform on <m>[-5,5]</m>.
+      </p>
+      <p>
+        (b) <m>1/(n^2+x^2) \leq 1/n^2 =: M_n</m> for all <m>x \in \R</m>;
+        <m>\sum 1/n^2 \lt \infty</m>. Uniform on <m>\R</m>.
+      </p>
+      <p>
+        (c) <m>|(x/2)^n| \leq (1/2)^n =: M_n</m> on <m>[-1,1]</m>;
+        <m>\sum (1/2)^n = 1 \lt \infty</m>. Uniform on <m>[-1,1]</m>.
+      </p>
+    </answer>
+  </exercise>
+
+  <!-- ============================================================
+       STANDARD
+  ============================================================ -->
+
+  <paragraphs xml:id="par-mod9-ps-S">
+    <title>Standard Problems</title>
+  </paragraphs>
+
+  <exercise xml:id="ex-mod9-ps-S1">
+    <title><m>[\mathbf{S}]</m> Proving Uniform Convergence</title>
+    <statement>
+      <p>
+        Prove that <m>f_n(x) = x^n/n</m> converges uniformly to
+        <m>0</m> on <m>[0,1]</m>.
+      </p>
+      <p>
+        Your proof must: (i) identify the pointwise limit; (ii) compute
+        <m>\sup_{x \in [0,1]} |f_n(x) - 0|</m> exactly; (iii) show this
+        sup tends to <m>0</m> and invoke the sup-norm criterion.
+      </p>
+    </statement>
+    <hint>
+      <p>
+        On <m>[0,1]</m>, <m>x^n \leq 1</m>, so
+        <m>\sup_{[0,1]} x^n/n \leq 1/n</m>.
+      </p>
+    </hint>
+  </exercise>
+
+  <exercise xml:id="ex-mod9-ps-S2">
+    <title><m>[\mathbf{S}]</m> Non-Uniform: Using a Sequence</title>
+    <statement>
+      <p>
+        Prove that <m>f_n(x) = nx\,e^{-nx}</m> does <em>not</em> converge
+        uniformly to <m>0</m> on <m>(0, \infty)</m>.
+      </p>
+      <p>
+        Your proof must exhibit a sequence of points <m>x_n \in (0,\infty)</m>
+        such that <m>|f_n(x_n) - 0| \not\to 0</m>, thereby showing
+        <m>\sup_{(0,\infty)} |f_n(x)| \not\to 0</m>.
+      </p>
+    </statement>
+    <hint>
+      <p>
+        Find the maximizer of <m>nx\,e^{-nx}</m> by taking the derivative
+        in <m>x</m> and setting it to zero. The max is at <m>x = 1/n</m>
+        with value <m>e^{-1}</m>.
+      </p>
+    </hint>
+  </exercise>
+
+  <exercise xml:id="ex-mod9-ps-S3">
+    <title><m>[\mathbf{S}]</m> Term-by-Term Integration</title>
+    <statement>
+      <p>
+        Let <m>f_n(x) = \sum_{k=0}^{n} (-1)^k x^{2k}</m> be the <m>n</m>th
+        partial sum of the geometric series for <m>1/(1+x^2)</m>.
+        <ol marker="(a)">
+          <li>
+            <p>
+              Show that <m>f_n \to 1/(1+x^2)</m> uniformly on <m>[-r,r]</m>
+              for any <m>0 \lt r \lt 1</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Use term-by-term integration to compute
+              <m>\int_0^x f_n(t)\,dt</m> and take the limit as
+              <m>n \to \infty</m> to recover the formula
+              <m>\arctan(x) = \sum_{k=0}^{\infty} \frac{(-1)^k x^{2k+1}}{2k+1}</m>
+              for <m>|x| \lt 1</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod9-ps-S4">
+    <title><m>[\mathbf{S}]</m> Radius of Convergence and Uniform Convergence</title>
+    <statement>
+      <p>
+        Find the radius of convergence of each power series using the
+        Ratio Test. Then for each, state the largest set on which the
+        <m>M</m>-Test guarantees uniform convergence.
+        <ol marker="(a)">
+          <li>
+            <p>
+              <m>\displaystyle\sum_{n=1}^{\infty} \frac{x^n}{n \cdot 3^n}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\displaystyle\sum_{n=0}^{\infty} n!\,x^n</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\displaystyle\sum_{n=0}^{\infty} \frac{x^n}{n^2 + 1}</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        (a) Ratio <m>\to |x|/3</m>. <m>R = 3</m>. Uniform on
+        <m>[-r,r]</m> for any <m>r \lt 3</m> (by <m>M</m>-Test with
+        <m>M_n = r^n/(n \cdot 3^n)</m>).
+      </p>
+      <p>
+        (b) Ratio <m>= (n+1)|x| \to \infty</m> for any <m>x \neq 0</m>.
+        <m>R = 0</m>: the series converges only at <m>x = 0</m>.
+      </p>
+      <p>
+        (c) Ratio <m>\to |x|</m>. <m>R = 1</m>. Uniform on <m>[-r,r]</m>
+        for any <m>r \lt 1</m>.
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise xml:id="ex-mod9-ps-S5">
+    <title><m>[\mathbf{S}]</m> Uniform Convergence and Differentiation</title>
+    <statement>
+      <p>
+        Let <m>f_n(x) = \sin(nx)/\sqrt{n}</m> on <m>\R</m>.
+        <ol marker="(a)">
+          <li>
+            <p>
+              Show that <m>f_n \to 0</m> uniformly on <m>\R</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Compute <m>f_n'(x)</m>. Does <m>f_n'(x)</m> converge
+              pointwise to <m>0</m>?
+            </p>
+          </li>
+          <li>
+            <p>
+              What does this example show about whether uniform convergence
+              of <m>(f_n)</m> implies convergence of <m>(f_n')</m>?
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        (a) <m>\sup_\R |\sin(nx)/\sqrt{n}| \leq 1/\sqrt{n} \to 0</m>.
+        Uniform.
+      </p>
+      <p>
+        (b) <m>f_n'(x) = \sqrt{n}\cos(nx)</m>. At <m>x = 0</m>:
+        <m>f_n'(0) = \sqrt{n} \to \infty</m>. So <m>f_n'</m> does not
+        converge to <m>0</m> pointwise at <m>x = 0</m>.
+      </p>
+      <p>
+        (c) Uniform convergence of <m>(f_n)</m> does NOT imply convergence
+        of the derivatives <m>(f_n')</m>. Differentiating term by term
+        requires an additional condition (e.g., uniform convergence of the
+        derivatives; this is a theorem for MAT 5610).
+      </p>
+    </answer>
+  </exercise>
+
+  <!-- ============================================================
+       CHALLENGE
+  ============================================================ -->
+
+  <paragraphs xml:id="par-mod9-ps-C">
+    <title>Challenge Problems</title>
+  </paragraphs>
+
+  <exercise xml:id="ex-mod9-ps-C1">
+    <title><m>[\mathbf{C}]</m> Proof of the Term-by-Term Integration Theorem</title>
+    <statement>
+      <p>
+        Prove: if <m>f_n \to f</m> uniformly on <m>[a,b]</m> and each
+        <m>f_n</m> is Riemann integrable on <m>[a,b]</m>, then <m>f</m>
+        is Riemann integrable and
+        <m>\int_a^b f = \lim_{n \to \infty} \int_a^b f_n</m>.
+      </p>
+      <p>
+        Your proof must use the following steps: (i) show <m>f</m> is
+        bounded (since each <m>f_n</m> is bounded and convergence is
+        uniform); (ii) estimate
+        <m>\left|\int_a^b f_n - \int_a^b f\right| \leq
+        (b-a) \cdot \sup_x |f_n(x) - f(x)|</m>;
+        (iii) conclude by the definition of limit.
+      </p>
+    </statement>
+    <hint>
+      <p>
+        For step (ii), use
+        <m>\left|\int_a^b (f_n - f)\right| \leq \int_a^b |f_n - f|
+        \leq (b-a) \cdot \sup_x |f_n(x) - f(x)|</m>.
+        For step (i): there exists <m>N</m> such that
+        <m>|f_n(x) - f(x)| \lt 1</m> for all <m>n \geq N</m> and
+        <m>x \in [a,b]</m>; so <m>|f(x)| \leq |f_N(x)| + 1 \leq M + 1</m>
+        where <m>M</m> bounds <m>f_N</m>.
+      </p>
+    </hint>
+  </exercise>
+
+  <exercise xml:id="ex-mod9-ps-C2">
+    <title><m>[\mathbf{C}]</m> Uniform Convergence of a Power Series</title>
+    <statement>
+      <p>
+        Let <m>\sum_{n=0}^{\infty} a_n x^n</m> be a power series with
+        radius of convergence <m>R \gt 0</m>. Prove that for any
+        <m>0 \lt r \lt R</m>, the series converges uniformly on
+        <m>[-r, r]</m>.
+      </p>
+      <p>
+        Your proof must: (i) observe that <m>|a_n x^n| \leq |a_n| r^n</m>
+        for <m>x \in [-r,r]</m>; (ii) show <m>\sum |a_n| r^n \lt \infty</m>
+        (use the definition of radius of convergence: the series
+        <m>\sum a_n r^n</m> converges absolutely because <m>r \lt R</m>);
+        (iii) apply the Weierstrass <m>M</m>-Test with <m>M_n = |a_n| r^n</m>.
+      </p>
+    </statement>
+    <hint>
+      <p>
+        The key fact: since <m>r \lt R</m>, we can pick <m>r'</m> with
+        <m>r \lt r' \lt R</m> such that <m>\sum |a_n| (r')^n \lt \infty</m>.
+        Then <m>|a_n| r^n = |a_n| (r')^n \cdot (r/r')^n \leq C (r/r')^n</m>
+        for some <m>C</m>, and <m>\sum (r/r')^n \lt \infty</m>.
+      </p>
+    </hint>
+  </exercise>
+
+</section>

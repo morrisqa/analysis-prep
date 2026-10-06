@@ -1,0 +1,392 @@
+MODULE 6 VIDEO OUTLINES
+Limits, Continuity, and Uniform Continuity
+Three videos, approximately 9 minutes each
+Format: Say: / Write on board:
+
+================================================================
+VIDEO 1: epsilon-delta Limits of Functions (~9 min)
+================================================================
+
+[Slide 1: Motivation -- the sequence parallel]
+
+Say: In Modules 4 and 5 we studied limits of sequences -- discrete
+objects indexed by n. We asked: as n goes to infinity, what value
+does a_n approach? Today we lift that question to functions of a
+real variable. We ask: as x approaches a real number a, what value
+does f(x) approach?
+
+Write on board:
+  Module 4 (sequences):  lim_{n->inf} a_n = L
+  Definition: for all eps > 0, there exists N such that
+              n >= N  =>  |a_n - L| < eps
+
+Say: We are going to write an almost identical definition for
+functions. The only real change: instead of "n >= N" we will say
+"x is within delta of a." Write them side by side and stare at
+the parallel. This is the most important thing I can tell you
+about this definition.
+
+---
+
+[Slide 2: The epsilon-delta Definition]
+
+Say: Here is the definition. Read every symbol carefully.
+
+Write on board:
+  lim_{x->a} f(x) = L  means:
+  for all eps > 0, there exists delta > 0 such that
+  0 < |x - a| < delta  =>  |f(x) - L| < eps
+
+Say: The "0 < |x - a|" is crucial. It says x is near a but NOT
+EQUAL to a. The limit is about what f(x) does as x approaches a,
+not what f does AT a. In particular, f(a) need not even be defined.
+That is the whole point of limits -- we can talk about the behavior
+of f near a point without caring what happens exactly at that point.
+
+---
+
+[Slide 3: Finding delta -- scratch work]
+
+Say: Let's prove a limit from the definition. The proof has two
+phases. First: scratch work to find delta. Second: the formal
+proof. I can't emphasize this enough -- the scratch work is NOT
+optional. It is where you find delta. Let me show you.
+
+Say: We want to prove lim_{x->2} (3x - 1) = 5.
+
+Write on board:
+  SCRATCH WORK:
+  |f(x) - 5| = |(3x - 1) - 5| = |3x - 6| = 3|x - 2|
+  Want this < eps.
+  Need: 3|x - 2| < eps, i.e., |x - 2| < eps/3.
+  Set delta = eps/3.
+
+Say: That's it. The scratch work told us exactly what delta to
+use. Now we write the formal proof.
+
+---
+
+[Slide 4: The Formal Proof]
+
+Say: Now we write the proof. This is a verification -- we already
+know the answer (delta = eps/3). We just need to show it works.
+
+Write on board:
+  PROOF: Let eps > 0. Set delta = eps/3.
+  Suppose 0 < |x - 2| < delta.
+  Then |f(x) - 5| = 3|x - 2| < 3 * delta = eps.
+  By definition, lim_{x->2} (3x - 1) = 5.  []
+
+Say: Notice the structure: (1) let eps be given, (2) state delta
+explicitly, (3) assume 0 < |x - a| < delta, (4) verify the
+conclusion. Every epsilon-delta proof follows this skeleton.
+
+---
+
+[Slide 5: Sequential Characterization]
+
+Say: There is a second, equivalent way to define function limits,
+and it is the bridge between Module 4 and Module 6.
+
+Write on board:
+  Theorem (Sequential Characterization):
+  lim_{x->a} f(x) = L
+  if and only if
+  for every sequence (x_n) with x_n -> a and x_n != a for all n,
+  we have f(x_n) -> L.
+
+Say: This is powerful in two directions. To PROVE a limit: you
+could show that f(x_n) -> L for every sequence x_n -> a. To
+DISPROVE a limit: if you find two sequences approaching a along
+which f gives different values, the limit cannot exist. For
+example, sin(1/x) as x -> 0. Taking x_n = 1/(2 pi n) gives
+sin(1/x_n) = 0, while taking y_n = 1/(pi/2 + 2 pi n) gives
+sin(1/y_n) = 1. Different limits, so no limit exists.
+
+---
+
+[Slide 6: Limit Laws]
+
+Say: Just as for sequences in Module 4, limits of functions obey
+algebraic rules. These follow from the sequential characterization
+plus the Module 4 limit laws.
+
+Write on board:
+  If lim_{x->a} f(x) = L and lim_{x->a} g(x) = M, then:
+    lim (f + g)(x) = L + M
+    lim (f * g)(x) = L * M
+    lim (f/g)(x)  = L/M  (provided M != 0)
+
+Say: You don't need to prove these from scratch -- the sequential
+characterization reduces them to the Module 4 results you already
+know. This is why we built Module 4 so carefully.
+
+---
+
+[Slide 7: Wrap-Up]
+
+Say: To summarize Video 1. The epsilon-delta definition of a
+function limit is the direct analogue of epsilon-N for sequences.
+The sequential characterization is the bridge that lets you use
+all your Module 4 tools. The two-phase structure of proofs --
+scratch work first, formal proof second -- is the template for
+every epsilon-delta argument in this course. In Video 2, we use
+this foundation to define continuity.
+
+
+================================================================
+VIDEO 2: Continuity (~9 min)
+================================================================
+
+[Slide 1: Definition of Continuity]
+
+Say: We built limits so we could define continuity. A function is
+continuous at a if the limit at a equals the value at a. No gaps.
+No jumps. No oscillation.
+
+Write on board:
+  f is continuous at a if:
+  (1) f(a) is defined,
+  (2) lim_{x->a} f(x) exists, and
+  (3) lim_{x->a} f(x) = f(a).
+
+  Equivalently (epsilon-delta form):
+  for all eps > 0, there exists delta > 0 such that
+  |x - a| < delta  =>  |f(x) - f(a)| < eps.
+
+Say: Notice: in the continuity definition, the condition is
+|x - a| < delta, NOT 0 < |x - a| < delta. We do NOT exclude
+x = a. That is the difference from limits. When checking limits
+we excluded x = a; for continuity we include it -- and we need
+f(a) to be defined and equal to the limit.
+
+---
+
+[Slide 2: Sequential Characterization of Continuity]
+
+Say: The sequential version of continuity is especially clean and
+will be our main tool in this video.
+
+Write on board:
+  f is continuous at a
+  if and only if
+  for every sequence x_n -> a, we have f(x_n) -> f(a).
+
+Say: Compare with limits: there we required x_n != a. For
+continuity, we include x = a, so there is no exclusion needed.
+This version is often easier to work with, and it is what we use
+to prove the Intermediate Value Theorem.
+
+---
+
+[Slide 3: Algebra of Continuous Functions]
+
+Say: Sums, products, quotients, and compositions of continuous
+functions are continuous. These follow immediately from limit laws
+plus the sequential characterization.
+
+Write on board:
+  If f, g are continuous at a, then:
+    f + g is continuous at a
+    f * g is continuous at a
+    f/g is continuous at a (if g(a) != 0)
+  If f is continuous at a and g is continuous at f(a), then:
+    g composed with f is continuous at a.
+
+Say: This is why polynomials are continuous everywhere -- they are
+built from the continuous function x by repeated addition and
+multiplication. Rational functions are continuous wherever the
+denominator is nonzero.
+
+---
+
+[Slide 4: Intermediate Value Theorem]
+
+Say: Here is the first major payoff theorem. The intuition: if f
+is continuous and goes from negative to positive, it must cross
+zero somewhere in between. This seems obvious -- and it is, if
+you believe the real number line has no gaps. That is precisely
+the completeness of R that we established in Module 2. The IVT
+fails for functions defined only on Q.
+
+Write on board:
+  IVT: If f is continuous on [a,b]
+       and f(a) < 0 < f(b)
+       [or f(a) > 0 > f(b)],
+       then there exists c in (a,b) with f(c) = 0.
+
+  More generally: f takes every value between f(a) and f(b).
+
+Say: The proof uses the completeness of R. The set
+S = {x in [a,b] : f(x) < 0} is bounded above by b, so it has a
+supremum c. One shows f(c) = 0 using continuity. The details are
+in Zorn Section 3.3.
+
+---
+
+[Slide 5: Extreme Value Theorem]
+
+Say: The second payoff theorem: on a closed bounded interval, a
+continuous function attains its maximum and minimum. This is
+called the Extreme Value Theorem.
+
+Write on board:
+  EVT: If f is continuous on [a,b],
+       then there exist c, d in [a,b] with
+       f(c) <= f(x) <= f(d) for all x in [a,b].
+
+Say: Both the IVT and the EVT fail if the interval is not compact.
+Examples: f(x) = 1/x on (0,1] is continuous but not bounded above,
+so it has no maximum. Both results depend essentially on completeness
+and will be proved in full generality using the topology of compact
+sets in MAT 5610.
+
+---
+
+[Slide 6: Wrap-Up]
+
+Say: Continuity is the function-level analogue of convergence.
+The IVT and EVT are the first big theorems that require both
+continuity AND the completeness of R together. In Video 3, we
+ask a sharper question: can we make delta work for ALL points
+simultaneously? That is uniform continuity, and it is the key
+hypothesis we will need in Module 8 for integration.
+
+
+================================================================
+VIDEO 3: Uniform Continuity (~9 min)
+================================================================
+
+[Slide 1: The Problem with Pointwise delta]
+
+Say: In the epsilon-delta definition of continuity at a, delta is
+allowed to depend on BOTH epsilon AND the point a. Let me make
+that dependence explicit.
+
+Write on board:
+  Continuity at a:
+  for all eps > 0, there exists delta(eps, a) > 0 such that
+  |x - a| < delta  =>  |f(x) - f(a)| < eps.
+                    [emphasize: delta depends on a]
+
+Say: For f(x) = x^2, as a gets larger, you need a smaller delta
+for the same epsilon. Let me show you why. Near a = 10, the
+function is changing at rate 2a = 20, so you need delta about
+eps/20. Near a = 100, the rate is 200, so you need delta about
+eps/200. As a grows, delta shrinks. There is no single delta
+that works for ALL points simultaneously on all of R. That is
+the failure of uniform continuity for x^2 on R.
+
+---
+
+[Slide 2: Definition of Uniform Continuity]
+
+Say: Uniform continuity asks: can ONE delta work for ALL points
+simultaneously? Here is the definition.
+
+Write on board:
+  f is uniformly continuous on S if:
+  for all eps > 0, there exists delta > 0 such that
+  for ALL x, y in S with |x - y| < delta,
+  |f(x) - f(y)| < eps.
+
+  KEY: delta depends only on eps, NOT on which x and y.
+
+Say: Read that again. The "for all x, y in S" comes AFTER the
+"there exists delta." That is the quantifier order. In pointwise
+continuity, the "for all a" comes before the "there exists delta,"
+so delta can depend on a. In uniform continuity, it cannot.
+
+---
+
+[Slide 3: Quantifier Order Side by Side]
+
+Say: Let me write both definitions side by side so the difference
+is visible.
+
+Write on board:
+  CONTINUOUS on S:
+  for all a in S, for all eps > 0, there exists delta > 0,
+  for all x: |x-a| < delta  =>  |f(x)-f(a)| < eps.
+  [delta may depend on a]
+
+  UNIFORMLY CONTINUOUS on S:
+  for all eps > 0, there exists delta > 0,
+  for all x, y in S: |x-y| < delta  =>  |f(x)-f(y)| < eps.
+  [delta depends ONLY on eps]
+
+Say: Uniform continuity is strictly STRONGER. Every uniformly
+continuous function is continuous, but not vice versa.
+
+---
+
+[Slide 4: Example -- f(x) = 1/x is NOT uniformly continuous on (0,1)]
+
+Say: Here is the classic example of a function that is continuous
+everywhere on its domain but NOT uniformly continuous. f(x) = 1/x
+on (0,1).
+
+Write on board:
+  Let x_n = 1/n,   y_n = 1/(n+1).  Both in (0,1).
+  |x_n - y_n| = 1/(n(n+1)) -> 0.
+  |f(x_n) - f(y_n)| = |n - (n+1)| = 1  for all n.
+
+Say: So no matter how small delta is, we can find x and y in (0,1)
+with |x - y| < delta but |f(x) - f(y)| = 1. Take epsilon = 1/2.
+No delta works. The problem: x_n and y_n are both approaching 0,
+where 1/x blows up. Near 0, the function changes so fast that
+even tiny differences in input produce large differences in output.
+
+---
+
+[Slide 5: Lipschitz implies Uniformly Continuous]
+
+Say: The easiest sufficient condition for uniform continuity is the
+Lipschitz condition. If the function can't change too fast, it is
+uniformly continuous.
+
+Write on board:
+  Lipschitz condition: |f(x) - f(y)| <= K|x - y|  for all x,y in S
+  (K is a fixed constant, the Lipschitz constant)
+
+  Proof of uniform continuity: given eps > 0, set delta = eps/K.
+  Then |x-y| < delta  =>  |f(x)-f(y)| <= K|x-y| < K * (eps/K) = eps.
+
+Say: Example: f(x) = x^2 on [0, 2].
+|x^2 - y^2| = |x+y||x-y| <= 4|x-y|.
+So K = 4 works. But on all of R, |x+y| is unbounded, so no fixed
+K exists -- and x^2 is not uniformly continuous on R.
+
+---
+
+[Slide 6: Heine-Cantor Theorem]
+
+Say: The most important theorem in this video. It tells us when
+we get uniform continuity for free.
+
+Write on board:
+  Theorem (Heine-Cantor):
+  If f is continuous on a compact set K,
+  then f is uniformly continuous on K.
+
+  For us: K = [a,b] is the main case.
+  Continuous on [a,b]  =>  Uniformly continuous on [a,b].
+
+Say: The proof uses the topological structure of compact sets --
+specifically, the Heine-Borel theorem, which says a subset of R is
+compact if and only if it is closed and bounded. In MAT 5610 you
+will prove Heine-Cantor using open covers. We treat it here as a
+fact and use it as a tool.
+
+---
+
+[Slide 7: Wrap-Up]
+
+Say: Uniform continuity is the "right" notion for analysis. It is
+what you need to integrate continuous functions -- a uniform delta
+lets you control the function on every subinterval of a partition
+simultaneously. If f is continuous on a closed bounded interval,
+Heine-Cantor gives you uniform continuity for free. That is why
+continuity on [a,b] will be our standard hypothesis in Module 8.
+The deeper topology -- compact sets, open covers -- belongs to
+MAT 5610.

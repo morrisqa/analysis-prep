@@ -1,0 +1,265 @@
+<section xml:id="ws-mod6-orientation">
+  <title>Module 6: Limits, Continuity, and Uniform Continuity</title>
+  <subtitle>Orientation</subtitle>
+
+  <objectives xml:id="obj-mod6">
+    <ul>
+      <li>
+        <p>
+          State the <m>\varepsilon</m>-<m>\delta</m> definition of
+          <m>\lim_{x \to a} f(x) = L</m> and explain what each
+          quantifier means.
+        </p>
+      </li>
+      <li>
+        <p>
+          Use the sequential characterization of limits: <m>\lim_{x \to a} f(x) = L</m>
+          if and only if <m>f(x_n) \to L</m> for every sequence
+          <m>(x_n)</m> with <m>x_n \to a</m> and <m>x_n \neq a</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Apply limit laws for functions to compute limits.
+        </p>
+      </li>
+      <li>
+        <p>
+          Define continuity of <m>f</m> at a point <m>a</m>
+          (<m>\lim_{x \to a} f(x) = f(a)</m>) and on a set.
+        </p>
+      </li>
+      <li>
+        <p>
+          State and apply the Intermediate Value Theorem and the
+          Extreme Value Theorem.
+        </p>
+      </li>
+      <li>
+        <p>
+          Define uniform continuity and distinguish it from pointwise
+          continuity by identifying the quantifier order.
+        </p>
+      </li>
+      <li>
+        <p>
+          Apply the Lipschitz condition as a sufficient condition for
+          uniform continuity; state the Heine&#x2013;Cantor theorem
+          (continuous on a compact set implies uniformly continuous)
+          as a pointer to MAT 5610.
+        </p>
+      </li>
+    </ul>
+  </objectives>
+
+  <!-- ============================================================ -->
+
+  <introduction>
+    <p>
+      Modules 2 through 5 built a complete toolkit for sequences and
+      series of real numbers. This module lifts those ideas to functions
+      of a real variable. The central question changes from
+      <q>what does <m>a_n</m> approach as <m>n \to \infty</m>?</q> to
+      <q>what does <m>f(x)</m> approach as the real variable <m>x</m>
+      approaches a fixed value <m>a</m>?</q> The formal answer&#x2014;the
+      <m>\varepsilon</m>-<m>\delta</m> definition of a limit&#x2014;is
+      structurally identical to the <m>\varepsilon</m>-<m>N</m> definition
+      from Module 4. The only change is that the index set is now a
+      continuous interval of real numbers rather than the discrete set
+      <m>\N</m>. Writing both definitions side by side before watching
+      the videos is strongly recommended.
+    </p>
+    <p>
+      From limits we build continuity, and from continuity we reach
+      two of the most important theorems in undergraduate analysis: the
+      Intermediate Value Theorem and the Extreme Value Theorem. Both
+      theorems rely, at their core, on the completeness of <m>\R</m>
+      that was established in Module 2. The module closes with
+      <em>uniform continuity</em>&#x2014;a strengthening of pointwise
+      continuity that swaps the order of two quantifiers. This
+      quantifier swap is subtle but mathematically crucial: uniform
+      continuity is exactly the hypothesis needed to prove that
+      continuous functions are Riemann integrable (Module 8).
+    </p>
+    <p>
+      The self-assessment questions below are <alert>not graded</alert>.
+      Write informally; a sentence or two per question is fine. Their
+      purpose is to help you locate yourself within the material and
+      identify which ideas are genuinely new versus which are
+      variations on what you already know.
+    </p>
+  </introduction>
+
+  <exercise xml:id="ex-mod6-sa-1">
+    <title>Limit Intuition</title>
+    <statement>
+      <p>
+        Based on your prior calculus experience, what is
+        <m>\lim_{x \to 2} \dfrac{x^2 - 4}{x - 2}</m>?
+        What happens at <m>x = 2</m> exactly (is the function defined
+        there)? What is the <q>right</q> way to define this limit
+        rigorously?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod6-sa-2">
+    <title>The Sequence Connection</title>
+    <statement>
+      <p>
+        Write the definition of <m>\lim_{n \to \infty} a_n = L</m>
+        from Module 4. How would you modify the quantifiers and the
+        condition on the independent variable to produce a definition
+        of <m>\lim_{x \to a} f(x) = L</m>?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod6-sa-3">
+    <title>Continuity vs. Limit</title>
+    <statement>
+      <p>
+        Can <m>\lim_{x \to a} f(x)</m> exist but not equal <m>f(a)</m>?
+        Give a specific example if you think yes, or explain why you
+        think not.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod6-sa-4">
+    <title>Uniform vs. Pointwise</title>
+    <statement>
+      <p>
+        The function <m>f(x) = x^2</m> is continuous on <m>\R</m>. For
+        a given <m>\varepsilon \gt 0</m>, do you think a single
+        <m>\delta</m> can work for <em>all</em> points <m>a \in \R</m>
+        simultaneously? What about if you restrict to the interval
+        <m>[0, 1]</m>? Record your guess; you do not need to prove
+        anything yet.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod6-sa-5">
+    <title>Your Background</title>
+    <statement>
+      <p>
+        Have you seen <m>\varepsilon</m>-<m>\delta</m> proofs in a
+        previous course? Rate your comfort level from 1 (never seen
+        them) to 5 (very comfortable) and describe what feels most
+        unfamiliar about the limit definition as you currently
+        understand it.
+      </p>
+    </statement>
+  </exercise>
+
+  <!-- ============================================================ -->
+
+  <paragraphs xml:id="par-mod6-instructor-note">
+    <title>A Note from the Instructor</title>
+    <p>
+      The <m>\varepsilon</m>-<m>\delta</m> definition is the
+      notational hurdle that stops many students in their first analysis
+      course. The most important reframe is to see it as a cosmetic
+      variation on the <m>\varepsilon</m>-<m>N</m> definition from
+      Module 4. Place both side by side: in the sequence case, you need
+      <m>n \geq N</m>; in the function case, you need
+      <m>0 \lt |x - a| \lt \delta</m>. The <m>0 \lt</m> part is new
+      (it excludes <m>x = a</m> itself), but everything else is the
+      same logical structure. If the Module 4 definition felt manageable,
+      this one will too with a bit of practice.
+    </p>
+    <p>
+      The most important <em>conceptual</em> new idea in this module is
+      the distinction between uniform and pointwise continuity. The
+      quantifier order swap is genuinely subtle, and it is worth writing
+      both definitions out by hand and staring at them: in pointwise
+      continuity, <m>\delta</m> is allowed to depend on both
+      <m>\varepsilon</m> and the point <m>a</m>; in uniform continuity,
+      <m>\delta</m> must depend only on <m>\varepsilon</m>. This is the
+      kind of subtlety that separates an informal calculus course from
+      a rigorous analysis course, and understanding it deeply will make
+      Module 8 (the Riemann integral) much more transparent.
+    </p>
+  </paragraphs>
+
+  <paragraphs xml:id="par-mod6-pacing">
+    <title>A Note on Pacing</title>
+    <p>
+      <alert>A note on pacing.</alert>
+      If you are coming in with prior real analysis experience, you
+      likely know the <m>\varepsilon</m>-<m>\delta</m> definition of a
+      limit already. Skim Zorn &#xa7;3.1 quickly (confirm the definition
+      matches what you remember), and spend your time instead on the
+      Heine&#x2013;Cantor theorem sketch in &#xa7;3.4 and on the
+      uniform continuity examples in the worked examples and practice
+      set. If proof-based function limits are new to you, work slowly
+      through Worked Example 1: read the scratch work, reproduce the
+      <m>\delta</m>-finding algebra on your own paper, and only then read
+      the formal proof. The most common mistake with <m>\varepsilon</m>-<m>\delta</m>
+      proofs is writing the formal proof before doing the scratch work;
+      the scratch work is not optional, it is where you find
+      <m>\delta</m>.
+    </p>
+  </paragraphs>
+
+  <paragraphs xml:id="par-mod6-map">
+    <title>Module Road Map (estimated time: 5 hours)</title>
+    <tabular halign="left">
+      <col width="50%"/>
+      <col width="10%"/>
+      <col width="40%"/>
+      <row header="yes">
+        <cell><p>Component</p></cell>
+        <cell><p>Time</p></cell>
+        <cell><p>Purpose</p></cell>
+      </row>
+      <row>
+        <cell><p>Orientation (this document)</p></cell>
+        <cell><p>15 min</p></cell>
+        <cell><p>Goals, self-assessment, context</p></cell>
+      </row>
+      <row>
+        <cell><p>Video 1: <m>\varepsilon</m>&#x2013;<m>\delta</m> Limits of Functions</p></cell>
+        <cell><p>9 min</p></cell>
+        <cell><p>Core instruction via lightboard</p></cell>
+      </row>
+      <row>
+        <cell><p>Video 2: Continuity</p></cell>
+        <cell><p>9 min</p></cell>
+        <cell><p>Core instruction via lightboard</p></cell>
+      </row>
+      <row>
+        <cell><p>Video 3: Uniform Continuity</p></cell>
+        <cell><p>9 min</p></cell>
+        <cell><p>Core instruction via lightboard</p></cell>
+      </row>
+      <row>
+        <cell><p>Companion Reading and Study Guide</p></cell>
+        <cell><p>55 min</p></cell>
+        <cell><p>Zorn &#xa7;3.1&#x2013;3.4 with guided questions</p></cell>
+      </row>
+      <row>
+        <cell><p>Worked Examples</p></cell>
+        <cell><p>40 min</p></cell>
+        <cell><p>Four annotated proof walkthroughs</p></cell>
+      </row>
+      <row>
+        <cell><p>Practice Problem Set</p></cell>
+        <cell><p>100 min</p></cell>
+        <cell><p>Scaffolded practice by difficulty</p></cell>
+      </row>
+      <row>
+        <cell><p>Bridge Reading Guide</p></cell>
+        <cell><p>40 min</p></cell>
+        <cell><p>Bauldry &#xa7;1.2 and &#xa7;2.2 with guided questions</p></cell>
+      </row>
+      <row>
+        <cell><p>Module Assessment</p></cell>
+        <cell><p>40 min</p></cell>
+        <cell><p>Submitted proofs and reflection</p></cell>
+      </row>
+    </tabular>
+  </paragraphs>
+
+</section>

@@ -1,0 +1,411 @@
+<section xml:id="ws-mod1-bridge-reading">
+    <title>Module 1: Bridge Reading Guide</title>
+    <subtitle>Bauldry Chapter 2, pp. 45&#x2013;50 — Estimated time: 35 minutes</subtitle>
+
+    <!-- ============================================================ -->
+
+      <introduction>
+        <p>
+          This guide bridges Module 1 to the text you will be reading on
+          day one of MAT 5610. The assignment is to read the opening six
+          pages of Bauldry Chapter 2 (<q>Introduction to Real Analysis</q>),
+          specifically pages 45&#x2013;50, which cover the chapter
+          introduction and &#xa7;2.1 (Basic Topology of the Real
+          Numbers) through the end of Theorem 2.7.
+        </p>
+        <p>
+          <alert>Your goal is not to master the topology.</alert> That
+          material will be developed carefully in Modules 2 and 3. Your
+          goal here is narrower and more focused: to see how the logical
+          language you practiced in Module 1 — quantifiers, negation,
+          implication, proof strategies — appears immediately and everywhere
+          in Bauldry's text. Every definition and theorem in these pages
+          is a quantified statement. Every proof deploys one of the
+          strategies you have just practiced.
+        </p>
+        <p>
+          <alert>How to read.</alert> Read with a pencil. Before answering
+          each question below, mark up the Bauldry page: box the quantifiers,
+          underline hypotheses, circle conclusions. This active reading
+          habit is essential in MAT 5610.
+        </p>
+        <p>
+          <alert>A note on approach.</alert> If this material feels familiar
+          from a prior real analysis course, use this reading to practice
+          working at full speed with pencil in hand, focusing especially on
+          the logical structure questions rather than the content. If this
+          is your first encounter with analysis, read slowly and work every
+          question in order. It is normal for some of the topology vocabulary
+          (open, closed, accumulation point) to be unfamiliar — flag those
+          terms and continue. The questions are designed so that you can
+          answer them using the tools from Module 1 alone.
+        </p>
+        <p>
+          <alert>Part 1: The Chapter Introduction (p. 45)</alert>
+          (Suggested time: 5 minutes)
+        </p>
+        <p>
+          Read the chapter introduction on page 45 (the paragraph beginning
+          <q>We begin our study of real analysis&#x2026;</q>).
+        </p>
+      </introduction>
+
+      <exercise xml:id="ex-mod1-br-1">
+        <title>Logical Development vs. Calculation</title>
+        <statement>
+          <p>
+            Bauldry describes Chapter 2 as covering <q>essentially the same
+            topics as Chapter 1&#x2026; but now from a perspective based on
+            logical development and proof.</q> Based on what you know from
+            the Module 1 orientation, what does it mean for a mathematical
+            development to be <em>based on logical development and proof</em>
+            rather than just on calculation? What specific tools from
+            Module 1 make this shift possible?
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="ex-mod1-br-2">
+        <title>Think Deeply of Simple Things</title>
+        <statement>
+          <p> Bauldry quotes Arnold Ross: <q>think deeply of
+            simple things.</q> How does this motto connect to the proof-writing
+            advice in Zorn &#xa7;1.4 (your Study Guide Reading 1)?
+            Identify one specific rule from Zorn that exemplifies this motto.
+          </p>
+        </statement>
+      </exercise>
+
+      <introduction>
+        <p>
+          <alert>Part 2: Reading Definitions as Quantified Statements
+          (pp. 46&#x2013;49)</alert>
+          (Suggested time: 15 minutes)
+        </p>
+        <p>
+          The heart of this bridge reading is learning to parse Bauldry's
+          definitions using the quantifier machinery from Module 1. Work
+          through the questions below as you read the definitions on
+          pp. 46&#x2013;49.
+        </p>
+        <p>
+          <alert>Definition 2.1: Least Upper Bound Property (p. 47).</alert>
+          Bauldry writes: <q><m>U</m> has the least upper bound property
+          if, whenever a nonempty subset <m>E \subseteq U</m> is bounded
+          above, then <m>E</m> has a least upper bound in <m>U</m>.</q>
+          This is an implication embedded inside a universal claim.
+        </p>
+      </introduction>
+
+      <exercise xml:id="ex-mod1-br-3">
+        <title>LUB Property in Quantifier Notation</title>
+        <statement>
+          <p> Rewrite the Least Upper Bound Property in
+            explicit quantifier notation. Use the following setup:
+            let the universe be an ordered set <m>U</m>, let <m>E</m>
+            range over nonempty subsets of <m>U</m>, and let
+            <q><m>E</m> is bounded above</q> and
+            <q><m>E</m> has a least upper bound in <m>U</m></q> be
+            predicates. Your symbolic statement should have the form
+            <m>\forall E \ldots \bigl( P(E) \Rightarrow Q(E) \bigr)</m>.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="ex-mod1-br-4">
+        <title>Negating the LUB Property</title>
+        <statement>
+          <p>
+            Write the <em>negation</em> of the Least Upper Bound Property.
+            In plain English, what would it mean for a set <m>U</m>
+            to <em>fail</em> to have the least upper bound property?
+            (Bauldry says <m>\Q</m> fails to have this property.
+            Can you give a specific example?)
+          </p>
+        </statement>
+      </exercise>
+
+
+    <!-- ============================================================ -->
+
+      <introduction>
+        <p>
+          <alert>Theorem 2.3: Archimedean Order Property (p. 48).</alert>
+          Theorem 2.3 states: <em>If <m>\varepsilon</m> and <m>x</m> are
+          positive real numbers, then there is an <m>n \in \N</m>
+          such that <m>n\varepsilon \gt x</m>.</em>
+          Compare Corollary 2.4, Item 3: <em>For any positive real number
+          <m>x</m>, there is an <m>n \in \N</m> such that
+          <m>1/n \lt x</m>.</em>
+        </p>
+      </introduction>
+
+      <exercise xml:id="ex-mod1-br-5">
+        <title>Archimedean Property in Quantifier Notation</title>
+        <statement>
+          <p> Write Theorem 2.3 in full quantifier notation,
+            identifying: (a) the universal quantifiers and their domains;
+            (b) the existential quantifier and its domain; (c) the
+            predicate that must hold. Then compare your formula to the
+            statement you translated in Worked Example 1 (Archimedean
+            property). Are they the same statement?
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="ex-mod1-br-6">
+        <title>Reading Bauldry's Proof of Theorem 2.3</title>
+        <statement>
+          <p> Read Bauldry's proof of Theorem 2.3 carefully.
+            <ol marker="(a)">
+              <li>
+                What proof strategy does Bauldry use? (Direct,
+                contrapositive, or contradiction?) How do you know?
+              </li>
+              <li>
+                Identify the sentence where Bauldry assumes the
+                opposite of the conclusion. Write it out.
+              </li>
+              <li>
+                What is the contradiction Bauldry derives, and
+                which theorem does he invoke to derive it?
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="ex-mod1-br-7">
+        <title>Corollary 2.4, Item 3: Negation and Structure</title>
+        <statement>
+          <p>
+            Corollary 2.4 lists four equivalent forms of the Archimedean
+            property. For Item 3 (<m>\forall x \gt 0 \; \exists n \in
+            \N</m> s.t. <m>1/n \lt x</m>):
+            <ol marker="(a)">
+              <li>
+                Write the negation in symbols and in plain English.
+              </li>
+              <li>
+                Compare the negation to your answer in Practice Problem
+                1-3(c) (negation of the <m>\varepsilon</m>-<m>\delta</m>
+                statement). What structural similarity do you notice?
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </exercise>
+
+      <introduction>
+        <p>
+          <alert>Definitions 2.2 and 2.3: Metric Spaces and Neighborhoods
+          (pp. 48&#x2013;49).</alert>
+          Bauldry defines a <term>metric space</term> as a set <m>X</m>
+          with a distance function <m>d : X \to \R</m> satisfying
+          three properties, and then defines a <term>neighborhood</term>
+          of a point <m>x</m> as
+          <m>N_r(x) = \{y \mid d(x, y) \lt r\}</m> for some <m>r \gt 0</m>.
+        </p>
+      </introduction>
+
+      <exercise xml:id="ex-mod1-br-8">
+        <title>Metric Properties in Quantifier Notation</title>
+        <statement>
+          <p>
+            The three properties of a metric are:
+            <ol marker="(a)">
+              <li><m>d(x,y) = 0</m> if and only if <m>x = y</m></li>
+              <li><m>d(x,y) = d(y,x)</m></li>
+              <li><m>d(x,z) \leq d(x,y) + d(y,z)</m></li>
+            </ol>
+            Each of these is implicitly universally quantified over all
+            <m>x, y, z \in X</m>. Write property 1 out in full quantifier
+            notation, including the <q>if and only if</q> structure.
+            (You will need two implications; recall how iff proofs work
+            from Module 1.)
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="ex-mod1-br-9">
+        <title>Accumulation Points</title>
+        <statement>
+          <p>
+            Definition 2.3 defines a point <m>x</m> to be an
+            <term>accumulation point</term> (or limit point) of a set
+            <m>E</m> if every deleted neighborhood of <m>x</m> contains
+            a point of <m>E</m> different from <m>x</m>; that is,
+            <me>
+              \forall r \gt 0, \; N_r'(x) \cap E \neq \emptyset.
+            </me>
+            <ol marker="(a)">
+              <li>
+                Write the negation of this statement. What would it mean
+                for <m>x</m> to <em>not</em> be an accumulation point
+                of <m>E</m>?
+              </li>
+              <li>
+                Bauldry calls a point that is not an accumulation point
+                an <term>isolated point</term>. Does your negation match
+                Definition 2.3 item 8?
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </exercise>
+
+
+    <!-- ============================================================ -->
+
+      <introduction>
+        <p>
+          <alert>Part 3: Reading a Graduate-Level Proof (pp. 47&#x2013;50)</alert>
+          (Suggested time: 10 minutes)
+        </p>
+        <p>
+          In MAT 5610 you will be expected to read proofs like those in
+          Bauldry and identify their logical structure. This section
+          practices exactly that.
+        </p>
+      </introduction>
+
+      <exercise xml:id="ex-mod1-br-10">
+        <title>Theorem 2.2: Infimum Theorem</title>
+        <statement>
+          <p> Read the proof of Theorem 2.2 on page 47
+            (the infimum theorem: if <m>B \subseteq U</m> is bounded
+            below in a set with the LUB property, then <m>\inf B</m>
+            exists and is in <m>U</m>).
+            <ol marker="(a)">
+              <li>
+                State the hypothesis and conclusion of Theorem 2.2
+                as an implication in the form <m>P \Rightarrow Q</m>.
+              </li>
+              <li>
+                Bauldry's proof constructs a new set <m>L</m>. What
+                is <m>L</m>, and what role does the LUB property play
+                in the proof?
+              </li>
+              <li>
+                Is this a direct proof, a proof by contrapositive, or
+                a proof by contradiction? Justify your answer.
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="ex-mod1-br-11">
+        <title>Theorem 2.7: Open Sets Under Union</title>
+        <statement>
+          <p>
+            Theorem 2.7 (p. 50) states four results about unions and
+            intersections of open and closed sets. Consider part 1:
+            <q>For any collection of open sets <m>\{O_\alpha\}</m>,
+            the union <m>\bigcup_\alpha O_\alpha</m> is open.</q>
+            <ol marker="(a)">
+              <li>
+                Write this statement using an explicit universal
+                quantifier over points <m>x</m> in the union. (Hint:
+                a set is open iff every point is an interior point,
+                i.e., has a neighborhood contained in the set.)
+              </li>
+              <li>
+                Trace through Bauldry's one-paragraph proof.
+                Identify the moment the proof uses the definition
+                of <q>open</q> and the moment it uses the definition
+                of <q>union.</q>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="ex-mod1-br-12">
+        <title>Completeness as an Iff</title>
+        <statement>
+          <p>
+            Bauldry ends page 50 by noting that a metric space is
+            <term>complete</term> <q>if and only if every Cauchy
+            sequence converges.</q>
+            <ol marker="(a)">
+              <li>
+                This is an iff definition. Write it with the biconditional
+                arrow <m>\Leftrightarrow</m>.
+              </li>
+              <li>
+                Based on your Module 1 work: to verify that a metric
+                space <em>is</em> complete, which direction of the iff
+                would you need to prove? To show it is <em>not</em>
+                complete, what would you need to exhibit?
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </exercise>
+
+      <introduction>
+        <p>
+          <alert>Part 4: Synthesis Reflection (pp. 45&#x2013;50)</alert>
+          (Suggested time: 5 minutes)
+        </p>
+        <p>
+          After completing the guided questions, take a few minutes for
+          the following reflection. Write two to four sentences for each.
+          These reflections are not graded but will directly prepare you
+          for the Module 1 assessment.
+        </p>
+      </introduction>
+
+      <exercise xml:id="ex-mod1-br-13">
+        <title>Quantifiers Everywhere</title>
+        <statement>
+          <p> Look back at the six pages you just read.
+            Count how many times the symbols <m>\forall</m> or
+            <m>\exists</m> appear explicitly, or are implied by phrases
+            like <q>for every,</q> <q>there exists,</q> <q>for any,</q>
+            <q>whenever,</q> or <q>for some.</q> What does this count
+            tell you about the role of quantifiers in graduate-level
+            mathematics?
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="ex-mod1-br-14">
+        <title>Flag an Unfamiliar Term</title>
+        <statement>
+          <p> Identify one definition or theorem from
+            pp. 45&#x2013;50 that you could not fully parse after
+            reading Module 1 alone. What specific term or concept
+            is unfamiliar? (This is a preview of Modules 2 and 3;
+            flagging it now will help you engage with those modules
+            more deliberately.)
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="ex-mod1-br-15">
+        <title>Contradiction and Existence Claims</title>
+        <statement>
+          <p>
+            Consider the following sentence from Bauldry's proof of
+            Theorem 2.3: <q>Suppose no such <m>n</m> exists.</q>
+            <ol marker="(a)">
+              <li>
+                What proof strategy does this sentence signal?
+              </li>
+              <li>
+                Write the formal negation of the conclusion of
+                Theorem 2.3, i.e., the statement that Bauldry is
+                temporarily assuming.
+              </li>
+              <li>
+                Why is this strategy well-suited to an existence claim?
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </exercise>
+
+
+  </section>

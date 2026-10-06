@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project ptx-version="2" source=".">
+  <targets>
+    <target name="web" format="html" source="mod4-main.ptx" output-dir="compiled-output/Module4-HTML" />
+  </targets>
+</project>

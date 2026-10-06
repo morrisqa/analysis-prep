@@ -1,0 +1,379 @@
+<section xml:id="ws-mod3-study-guide">
+  <title>Module 3: Companion Reading and Study Guide</title>
+  <subtitle>Zorn &#xa7;1.2&#x2013;1.3, &#xa7;1.6 &#x2014; Estimated time: 55 minutes</subtitle>
+
+  <introduction>
+    <p>
+      This study guide is organized into four reading blocks.
+      For each block, read the assigned pages in Zorn and/or Hirst
+      before answering the reading-check questions. The questions are
+      designed to confirm comprehension and surface any notation
+      differences between sources. Write your answers in your notebook;
+      these are not submitted.
+    </p>
+    <p>
+      <alert>Reading-check questions are not graded.</alert>
+      They are checkpoints: if you cannot answer a question after reading
+      the section, re-read with that question in mind before moving on.
+    </p>
+  </introduction>
+
+  <!-- ============================================================
+       PART A: SETS
+  ============================================================ -->
+
+  <paragraphs xml:id="par-mod3-sg-A">
+    <title>Part A: Sets</title>
+    <p>
+      <alert>Read:</alert> Zorn &#xa7;1.2 (pp. 10&#x2013;18); Hirst &#xa7;5.1&#x2013;5.2.
+    </p>
+    <p>
+      Zorn &#xa7;1.2 develops set notation and operations informally but
+      rigorously, with examples drawn from analysis (intervals, number
+      systems). Hirst &#xa7;5.1&#x2013;5.2 covers the same ground using the
+      Axiom of Extensionality and the formal set-builder notation from
+      predicate logic. After reading both, you should be able to move
+      fluently between the two presentations.
+    </p>
+    <p>
+      <alert>Key definitions to identify as you read:</alert>
+      membership (<m>x \in A</m>), subset (<m>A \subseteq B</m>),
+      proper subset (<m>A \subsetneq B</m>), the empty set
+      (<m>\emptyset</m>), union (<m>A \cup B</m>), intersection
+      (<m>A \cap B</m>), set difference (<m>A \setminus B</m>),
+      Cartesian product (<m>A \times B</m>), power set
+      (<m>\mathcal{P}(A)</m>), and De Morgan's laws.
+    </p>
+  </paragraphs>
+
+  <exercise xml:id="ex-mod3-sg-A1">
+    <title>Axiom of Extensionality</title>
+    <statement>
+      <p>
+        State the Axiom of Extensionality (Hirst Theorem 47) in your
+        own words. Then explain why it implies the standard proof
+        strategy for set equality: to show <m>A = B</m>, prove
+        <m>A \subseteq B</m> and <m>B \subseteq A</m> separately.
+      </p>
+    </statement>
+    <hint>
+      <p>
+        The Axiom says two sets are equal if and only if they have
+        exactly the same elements. What does <m>A \subseteq B</m>
+        and <m>B \subseteq A</m> together guarantee about
+        membership?
+      </p>
+    </hint>
+  </exercise>
+
+  <exercise xml:id="ex-mod3-sg-A2">
+    <title>De Morgan's Laws</title>
+    <statement>
+      <p>
+        State both of De Morgan's laws for sets (Zorn p. 12 or Hirst
+        &#xa7;5.2). Then, for the law
+        <m>(A \cup B)^c = A^c \cap B^c</m>
+        (where <m>X^c</m> denotes the complement of <m>X</m> in some
+        universal set), write out the first direction of the element-chasing
+        proof: assume <m>x \in (A \cup B)^c</m> and show
+        <m>x \in A^c \cap B^c</m>. What logical connective converts
+        <m>x \notin A \cup B</m> into two separate statements?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod3-sg-A3">
+    <title>Cartesian Product Size</title>
+    <statement>
+      <p>
+        If <m>|A| = m</m> and <m>|B| = n</m> (where <m>|S|</m> denotes
+        the number of elements of a finite set <m>S</m>), how many
+        elements does <m>A \times B</m> have? How many elements does
+        <m>\mathcal{P}(A)</m> have? Verify your formulas with
+        <m>A = \{1, 2\}</m> and <m>B = \{a, b, c\}</m>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        <m>|A \times B| = mn</m> and <m>|\mathcal{P}(A)| = 2^m</m>.
+        For the given sets: <m>|A \times B| = 6</m> and
+        <m>|\mathcal{P}(A)| = 4</m>.
+      </p>
+    </answer>
+  </exercise>
+
+  <!-- ============================================================
+       PART B: FUNCTIONS
+  ============================================================ -->
+
+  <paragraphs xml:id="par-mod3-sg-B">
+    <title>Part B: Functions</title>
+    <p>
+      <alert>Read:</alert> Zorn &#xa7;1.3 (pp. 19&#x2013;31); Hirst &#xa7;5.3&#x2013;5.4.
+    </p>
+    <p>
+      Zorn &#xa7;1.3 defines functions as three-part packages (domain,
+      codomain, rule) and develops injectivity, surjectivity, bijectivity,
+      composition, and inverse functions. Hirst &#xa7;5.3&#x2013;5.4 provides
+      the set-theoretic foundation: functions as sets of ordered pairs,
+      and images and preimages as derived sets. Both presentations are
+      important; Zorn gives you the working definitions and Hirst makes
+      the underlying structure explicit.
+    </p>
+    <p>
+      <alert>Key definitions to identify:</alert>
+      function as a three-part package, range vs. codomain, injective
+      (one-to-one), surjective (onto), bijective, composition
+      <m>g \circ f</m>, inverse function <m>f^{-1}</m>, image
+      <m>f(U)</m>, preimage <m>f^{-1}(V)</m>.
+    </p>
+  </paragraphs>
+
+  <exercise xml:id="ex-mod3-sg-B1">
+    <title>Range versus Codomain</title>
+    <statement>
+      <p>
+        Let <m>f : \Z \to \Z</m> be defined by <m>f(n) = 2n</m>.
+        <ol marker="(a)">
+          <li>What is the range of <m>f</m>?</li>
+          <li>Is <m>f</m> surjective? Explain using the definition.</li>
+          <li>
+            How would you change the codomain to make <m>f</m>
+            surjective (without changing the domain or the rule)?
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        (a) The range is the set of even integers,
+        <m>\{2n : n \in \Z\}</m>.
+        (b) Not surjective: <m>1 \in \Z</m> is not in the range
+        (there is no integer <m>n</m> with <m>2n = 1</m>).
+        (c) Change the codomain to the even integers.
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise xml:id="ex-mod3-sg-B2">
+    <title>Reading the Injectivity Definition</title>
+    <statement>
+      <p>
+        Zorn defines injectivity by the implication:
+        <m>f(a_1) = f(a_2) \Rightarrow a_1 = a_2</m>.
+        <ol marker="(a)">
+          <li>
+            Write the contrapositive of this implication and explain
+            why it gives an equivalent condition for injectivity.
+          </li>
+          <li>
+            Use the original implication to prove that
+            <m>f : \R \to \R</m>, <m>f(x) = 5x - 3</m>, is injective.
+            Write every step as a complete sentence.
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod3-sg-B3">
+    <title>Inverse Functions and Bijectivity</title>
+    <statement>
+      <p>
+        State the relationship between bijectivity and the existence
+        of an inverse function (Zorn Definition 1.11 or Hirst &#xa7;5.4).
+        Then: for <m>f : \R \to \R</m>, <m>f(x) = 3x - 5</m>, find
+        <m>f^{-1}</m> explicitly and verify that
+        <m>f(f^{-1}(y)) = y</m> for all <m>y \in \R</m> and
+        <m>f^{-1}(f(x)) = x</m> for all <m>x \in \R</m>.
+      </p>
+    </statement>
+    <hint>
+      <p>
+        To find <m>f^{-1}</m>, set <m>y = 3x - 5</m> and solve for
+        <m>x</m> in terms of <m>y</m>.
+      </p>
+    </hint>
+  </exercise>
+
+  <exercise xml:id="ex-mod3-sg-B4">
+    <title>Preimage</title>
+    <statement>
+      <p>
+        Let <m>f : \R \to \R</m>, <m>f(x) = x^2</m>. Compute the
+        following preimages:
+        <ol marker="(a)">
+          <li><m>f^{-1}(\{4\})</m></li>
+          <li><m>f^{-1}([0, 9])</m></li>
+          <li><m>f^{-1}((-1, 0))</m></li>
+        </ol>
+        Notice that <m>f^{-1}</m> here denotes the preimage operator
+        (a set-valued function), not an inverse function (which does not
+        exist for this <m>f</m>). Why does the preimage of any set
+        always exist, even when the inverse function does not?
+      </p>
+    </statement>
+    <answer>
+      <p>
+        (a) <m>f^{-1}(\{4\}) = \{-2, 2\}</m>.
+        (b) <m>f^{-1}([0,9]) = [-3, 3]</m>.
+        (c) <m>f^{-1}((-1,0)) = \emptyset</m>
+        (since <m>x^2 \geq 0</m> for all <m>x \in \R</m>).
+        The preimage is defined purely in terms of which elements of the
+        domain map into the target set; it does not require the function
+        to be injective or surjective.
+      </p>
+    </answer>
+  </exercise>
+
+  <!-- ============================================================
+       PART C: EQUIVALENCE RELATIONS
+  ============================================================ -->
+
+  <paragraphs xml:id="par-mod3-sg-C">
+    <title>Part C: Equivalence Relations</title>
+    <p>
+      <alert>Read:</alert> Zorn &#xa7;1.3, the final two pages on relations
+      (following the discussion of inverse functions).
+    </p>
+    <p>
+      A <em>relation</em> on a set <m>A</m> is a subset <m>R \subseteq A \times A</m>.
+      We write <m>a \sim b</m> (or <m>aRb</m>) when <m>(a, b) \in R</m>.
+      An <em>equivalence relation</em> is a relation that is reflexive,
+      symmetric, and transitive. Equivalence relations partition a set
+      into disjoint equivalence classes; this structure reappears in
+      abstract algebra and topology. For our purposes in real analysis,
+      the most important equivalence relation is the one defining
+      cardinality in Part D: <m>A \sim B</m> iff there exists a
+      bijection <m>A \to B</m>.
+    </p>
+  </paragraphs>
+
+  <exercise xml:id="ex-mod3-sg-C1">
+    <title>Checking Equivalence Relation Axioms</title>
+    <statement>
+      <p>
+        Define a relation on <m>\Z</m> by: <m>a \sim b</m> if
+        <m>a - b</m> is even (i.e., divisible by 2).
+        <ol marker="(a)">
+          <li>
+            Is <m>\sim</m> reflexive? (Is <m>a \sim a</m> for all
+            <m>a \in \Z</m>?)
+          </li>
+          <li>
+            Is <m>\sim</m> symmetric? (If <m>a \sim b</m>, does it
+            follow that <m>b \sim a</m>?)
+          </li>
+          <li>
+            Is <m>\sim</m> transitive? (If <m>a \sim b</m> and
+            <m>b \sim c</m>, does it follow that <m>a \sim c</m>?)
+          </li>
+          <li>
+            Describe the equivalence classes of <m>\sim</m>.
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        (a) Yes: <m>a - a = 0</m> is even.
+        (b) Yes: if <m>a - b</m> is even, then <m>b - a = -(a-b)</m>
+        is also even.
+        (c) Yes: if <m>a - b = 2k</m> and <m>b - c = 2m</m>, then
+        <m>a - c = 2(k+m)</m> is even.
+        (d) There are two equivalence classes: the even integers and
+        the odd integers.
+      </p>
+    </answer>
+  </exercise>
+
+  <!-- ============================================================
+       PART D: CARDINALITY
+  ============================================================ -->
+
+  <paragraphs xml:id="par-mod3-sg-D">
+    <title>Part D: Cardinality</title>
+    <p>
+      <alert>Read:</alert> Zorn &#xa7;1.6 (pp. 52&#x2013;61); Hirst &#xa7;5.5.
+    </p>
+    <p>
+      Zorn &#xa7;1.6 defines cardinality via bijection and develops the
+      main countability results: Propositions 1.17&#x2013;1.19 (subsets
+      of countable sets; countable products; countable unions), Corollary
+      1.20 (<m>\Q</m> is countable), and Theorem 1.21 (<m>\R</m> is
+      uncountable). Read each proof carefully; the proofs of the
+      propositions use bijection constructions that are themselves
+      important techniques.
+    </p>
+    <p>
+      Hirst &#xa7;5.5 covers related material including the Cantor&#x2013;Bernstein
+      theorem (<m>A \preceq B</m> and <m>B \preceq A</m> imply
+      <m>A \sim B</m>). You are not required to prove Cantor&#x2013;Bernstein,
+      but reading its statement gives you important context for how
+      cardinality comparisons work in MAT 5610.
+    </p>
+  </paragraphs>
+
+  <exercise xml:id="ex-mod3-sg-D1">
+    <title>Same Cardinality via Bijection</title>
+    <statement>
+      <p>
+        State Definition 1.13 (Zorn) for two sets having the same
+        cardinality. Then verify: does <m>\N \sim \{2, 4, 6, 8, \ldots\}</m>
+        (the set of positive even integers)? Exhibit an explicit bijection
+        and verify it is both injective and surjective.
+      </p>
+    </statement>
+    <hint>
+      <p>
+        Consider <m>f(n) = 2n</m>.
+      </p>
+    </hint>
+  </exercise>
+
+  <exercise xml:id="ex-mod3-sg-D2">
+    <title>Countable Union</title>
+    <statement>
+      <p>
+        State Proposition 1.19 (Zorn): a countable union of countable
+        sets is countable. The proof uses the diagonal enumeration
+        argument. In one or two sentences, describe the idea of the
+        proof. You do not need to write the full proof; describe the
+        geometric picture (the grid and the diagonal path).
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod3-sg-D3">
+    <title>The Diagonal Argument</title>
+    <statement>
+      <p>
+        In Cantor's proof (Zorn Theorem 1.21) that <m>\R</m> is
+        uncountable, identify the following components:
+        <ol marker="(a)">
+          <li>What is assumed for contradiction?</li>
+          <li>How is the diagonal number <m>x</m> constructed?</li>
+          <li>
+            Why does <m>x</m> differ from every element in the
+            supposed list? Which property of <m>x</m> (at which
+            decimal place) guarantees <m>x \neq r_n</m>?
+          </li>
+          <li>What is the contradiction?</li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod3-sg-D4">
+    <title>Cantor&#x2013;Bernstein (Statement Only)</title>
+    <statement>
+      <p>
+        State the Cantor&#x2013;Bernstein theorem (Hirst Theorem 55).
+        In one sentence, explain why this theorem is useful: what
+        does it allow you to conclude about the cardinality of two
+        sets if you can find injections in both directions?
+      </p>
+    </statement>
+  </exercise>
+
+</section>

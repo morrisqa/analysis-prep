@@ -1,0 +1,356 @@
+<section xml:id="ws-mod2-study-guide">
+  <title>Module 2: Companion Reading and Study Guide</title>
+  <subtitle>Zorn §1.7&#x2013;1.9 — Estimated time: 50 minutes</subtitle>
+
+  <introduction>
+    <p>
+      This guide accompanies three sections of Zorn's
+      <em>Understanding Real Analysis</em>. Section 1.1 is listed in
+      the module syllabus as background reading: skim it to orient
+      yourself to the number systems and to remind yourself of the proof
+      that <m>\sqrt{2} \notin \Q</m>, which is a model contradiction
+      argument. The active reading and guided questions below begin
+      with Section 1.7, where the analytic content starts.
+    </p>
+    <p>
+      Read each section before working its questions. The questions are
+      designed to be answered with the text open in front of you.
+    </p>
+  </introduction>
+
+  <!-- ============================================================
+       SECTION 1.7: ABSOLUTE VALUE
+  ============================================================ -->
+
+  <paragraphs xml:id="par-mod2-sg-17-intro">
+    <title>Section 1.7: Absolute Values (Zorn pp. 62&#x2013;65)</title>
+    <p>
+      This section introduces absolute value as a distance function and
+      establishes the properties you will use in every subsequent module.
+      Pay particular attention to Theorem 1.23(c) (which converts an
+      absolute value inequality into an interval) and Theorem 1.24
+      (the Triangle Inequality).
+    </p>
+  </paragraphs>
+
+  <exercise xml:id="ex-mod2-sg-17-1">
+    <title>Absolute Value as Distance</title>
+    <statement>
+      <p>
+        For each expression, (i) compute the value and (ii) describe
+        in one sentence what the expression measures geometrically on
+        the number line.
+        <ol marker="(a)">
+          <li><m>|{-3} - 5|</m></li>
+          <li><m>|x - 2|</m> where <m>x = 7</m></li>
+          <li><m>|x - 2|</m> for a general <m>x \in \R</m></li>
+        </ol>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        (a) <m>|{-3} - 5| = |{-8}| = 8</m>; this is the distance
+        between <m>-3</m> and <m>5</m> on the number line.
+        (b) <m>|7 - 2| = 5</m>; the distance from <m>7</m> to
+        <m>2</m>.
+        (c) <m>|x - 2|</m> is the distance from <m>x</m> to
+        <m>2</m>, regardless of which side of <m>2</m> the point
+        <m>x</m> lies on.
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise xml:id="ex-mod2-sg-17-2">
+    <title>Converting Absolute Value Inequalities</title>
+    <statement>
+      <p>
+        Theorem 1.23(c) says: <m>|x| \lt k \iff -k \lt x \lt k</m>
+        (for <m>k \gt 0</m>). Use this to rewrite each inequality
+        as a simple interval, then verify your answer geometrically
+        by identifying the center and radius of the interval.
+        <ol marker="(a)">
+          <li><m>|x - 3| \lt 2</m></li>
+          <li><m>|x + 1| \leq 4</m></li>
+          <li><m>|2x - 5| \lt 1</m></li>
+        </ol>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        (a) <m>1 \lt x \lt 5</m>; center <m>3</m>, radius <m>2</m>.
+        (b) <m>-5 \leq x \leq 3</m>; center <m>-1</m>, radius <m>4</m>.
+        (c) <m>|2x - 5| \lt 1 \Rightarrow -1 \lt 2x - 5 \lt 1
+        \Rightarrow 4 \lt 2x \lt 6 \Rightarrow 2 \lt x \lt 3</m>;
+        center <m>5/2</m>, radius <m>1/2</m>.
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise xml:id="ex-mod2-sg-17-3">
+    <title>Key Lemma for the Triangle Inequality</title>
+    <statement>
+      <p>
+        One step in Zorn's proof of the Triangle Inequality uses
+        the fact that for any real number <m>x</m>,
+        <me>-|x| \leq x \leq |x|.</me>
+        Prove this directly from the definition of absolute value
+        (considering the cases <m>x \geq 0</m> and <m>x \lt 0</m>
+        separately).
+      </p>
+    </statement>
+    <hint>
+      <p>
+        When <m>x \geq 0</m>: <m>|x| = x</m>, so the right inequality
+        is <m>x \leq x</m> (trivially true) and the left inequality is
+        <m>-x \leq x</m> (true since <m>x \geq 0</m>). Handle
+        <m>x \lt 0</m> analogously.
+      </p>
+    </hint>
+  </exercise>
+
+  <exercise xml:id="ex-mod2-sg-17-4">
+    <title>Applying the Triangle Inequality</title>
+    <statement>
+      <p>
+        Let <m>a, b, c \in \R</m>. Apply the Triangle Inequality
+        to the expression <m>a - c = (a - b) + (b - c)</m> to
+        obtain an upper bound on <m>|a - c|</m> in terms of
+        <m>|a - b|</m> and <m>|b - c|</m>.
+      </p>
+      <p>
+        This result is sometimes called the <em>metric inequality</em>
+        for <m>\R</m>: the distance from <m>a</m> to <m>c</m> is at
+        most the sum of the distances from <m>a</m> to <m>b</m> and
+        from <m>b</m> to <m>c</m>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        <m>|a - c| = |(a - b) + (b - c)| \leq |a - b| + |b - c|</m>
+        by the Triangle Inequality applied with <m>x = a - b</m>
+        and <m>y = b - c</m>.
+      </p>
+    </answer>
+  </exercise>
+
+  <!-- ============================================================
+       SECTION 1.8: BOUNDS
+  ============================================================ -->
+
+  <paragraphs xml:id="par-mod2-sg-18-intro">
+    <title>Section 1.8: Bounds (Zorn pp. 67&#x2013;73)</title>
+    <p>
+      This section introduces the vocabulary of upper and lower bounds
+      and defines the supremum (least upper bound) and infimum
+      (greatest lower bound). Two things to focus on: (1) the
+      <em>definition</em> of supremum requires two conditions, and both
+      matter; (2) the <m>\varepsilon</m>-characterization of the supremum
+      is the key proof technique you will use repeatedly.
+    </p>
+  </paragraphs>
+
+  <exercise xml:id="ex-mod2-sg-18-1">
+    <title>Identifying Bounds</title>
+    <statement>
+      <p>
+        For each set, determine whether it is bounded above, bounded
+        below, or both. If it is bounded above, give an example of an
+        upper bound (not necessarily the least one).
+        <ol marker="(a)">
+          <li><m>\{n^2 : n \in \N\}</m></li>
+          <li><m>\left\{\dfrac{(-1)^n}{n} : n \in \N\right\}</m></li>
+          <li><m>\{x \in \R : x^2 \leq 9\}</m></li>
+          <li><m>\left\{1 - \dfrac{1}{n} : n \in \N\right\}</m></li>
+        </ol>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        (a) Bounded below by 1 (or 0); not bounded above.
+        (b) Bounded above and below: all elements satisfy
+        <m>|(-1)^n/n| = 1/n \leq 1</m>, so <m>-1</m> is a lower
+        bound and <m>1</m> is an upper bound.
+        (c) Bounded above by <m>3</m> and below by <m>-3</m>; this
+        is the interval <m>[-3, 3]</m>.
+        (d) Bounded above by <m>1</m> and below by <m>0</m>.
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise xml:id="ex-mod2-sg-18-2">
+    <title>Finding Suprema and Infima</title>
+    <statement>
+      <p>
+        For each set in the previous exercise that is bounded above,
+        identify <m>\sup S</m>. For each set that is bounded below,
+        identify <m>\inf S</m>. (Do not prove your answers yet;
+        just identify them and briefly explain your reasoning.)
+      </p>
+    </statement>
+    <answer>
+      <p>
+        (a) <m>\inf\{n^2\} = 1</m> (achieved at <m>n = 1</m>); no supremum.
+        (b) <m>\sup = 1/1 = 1</m> (at <m>n = 1</m>, odd);
+        <m>\inf = -1</m> (at <m>n = 2</m>, even, giving <m>-1/2</m>&#x2014;actually
+        the infimum is <m>-1/2</m> since the most negative term is
+        <m>(-1)^2/2 = -1/2</m>).
+        (c) <m>\sup = 3</m> and <m>\inf = -3</m>, both achieved.
+        (d) <m>\sup = 1</m> (limit, never achieved); <m>\inf = 0</m>
+        (at <m>n=1</m>, giving <m>0</m>, which is achieved).
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise xml:id="ex-mod2-sg-18-3">
+    <title>The Two Conditions for Supremum</title>
+    <statement>
+      <p>
+        According to Zorn's definition, a real number <m>s</m> equals
+        <m>\sup S</m> if and only if two conditions hold. State both
+        conditions in your own words (not just symbols), and explain
+        why <em>both</em> are needed. In particular: why is it not
+        enough to say that <m>s</m> is an upper bound of <m>S</m>?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod2-sg-18-4">
+    <title>The <m>\varepsilon</m>-Characterization of the Supremum</title>
+    <statement>
+      <p>
+        Zorn states (or you can derive) the following equivalent
+        condition: <m>s = \sup S</m> if and only if
+        <ol marker="(i)">
+          <li><m>s</m> is an upper bound of <m>S</m>, and</li>
+          <li>
+            for every <m>\varepsilon \gt 0</m>, there exists
+            <m>x \in S</m> with <m>s - \varepsilon \lt x \leq s</m>.
+          </li>
+        </ol>
+        Condition (ii) is called the <m>\varepsilon</m>-characterization.
+        In plain English, what does condition (ii) say about how
+        <m>s</m> relates to the elements of <m>S</m>?
+        Why does it guarantee that no number smaller than <m>s</m>
+        can be an upper bound?
+      </p>
+    </statement>
+  </exercise>
+
+  <!-- ============================================================
+       SECTION 1.9: COMPLETENESS
+  ============================================================ -->
+
+  <paragraphs xml:id="par-mod2-sg-19-intro">
+    <title>Section 1.9: Completeness (Zorn pp. 74&#x2013;82)</title>
+    <p>
+      Section 1.9 delivers the central axiom of real analysis. Read
+      this section carefully. The key question to keep in mind is:
+      <em>what would go wrong if we tried to do analysis in
+      <m>\Q</m> instead of <m>\R</m>?</em>
+    </p>
+  </paragraphs>
+
+  <exercise xml:id="ex-mod2-sg-19-1">
+    <title>Why <m>\Q</m> is Incomplete</title>
+    <statement>
+      <p>
+        Consider the set <m>T = \{x \in \Q : x^2 \lt 2\}</m>.
+        <ol marker="(a)">
+          <li>
+            Explain why <m>T</m> is nonempty and bounded above
+            (as a subset of <m>\Q</m>).
+          </li>
+          <li>
+            Explain why <m>T</m> has no supremum <em>in <m>\Q</m></em>.
+            (Hint: whatever rational upper bound you propose, you can
+            always find a closer rational that is still above
+            <m>\sqrt{2}</m>&#x2014;or use the fact that
+            <m>\sqrt{2} \notin \Q</m> directly.)
+          </li>
+          <li>
+            Where does the supremum of <m>T</m> live? What is its value?
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        (a) <m>T</m> is nonempty: <m>1 \in T</m> since <m>1^2 = 1 \lt 2</m>.
+        It is bounded above in <m>\Q</m>: for example, <m>2 \in \Q</m>
+        and <m>2^2 = 4 \gt 2</m>, so <m>x \lt 2</m> for all <m>x \in T</m>.
+        (b) Suppose <m>q \in \Q</m> were a supremum of <m>T</m>.
+        Then <m>q^2 \geq 2</m> (since <m>q</m> is an upper bound).
+        But <m>q^2 = 2</m> would mean <m>q = \sqrt{2} \notin \Q</m>,
+        contradiction. And if <m>q^2 \gt 2</m>, one can find a rational
+        strictly between <m>\sqrt{2}</m> and <m>q</m>, contradicting
+        <m>q</m> being the <em>least</em> upper bound.
+        (c) The supremum is <m>\sqrt{2} \in \R \setminus \Q</m>.
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise xml:id="ex-mod2-sg-19-2">
+    <title>Stating the Completeness Axiom</title>
+    <statement>
+      <p>
+        Write the Completeness Axiom (also called the Least Upper Bound
+        Property) in your own words. Your statement should make clear:
+        what kind of set the axiom applies to, and what the axiom
+        guarantees.
+      </p>
+      <p>
+        Then check: does your statement apply to the set <m>T</m> in
+        the previous exercise? What does it tell you?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod2-sg-19-3">
+    <title>Completeness and the Archimedean Property</title>
+    <statement>
+      <p>
+        Zorn uses the Completeness Axiom to prove the Archimedean
+        Property of <m>\R</m>: for every <m>x \in \R</m>, there
+        exists <m>n \in \N</m> with <m>n \gt x</m>.
+      </p>
+      <p>
+        Read the proof (or sketch) in Zorn's text. What set is
+        considered, and what does the Completeness Axiom apply to?
+        Where is the contradiction reached? Write a two- or three-sentence
+        summary of the argument in your own words.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod2-sg-19-4">
+    <title>Using the Archimedean Property</title>
+    <statement>
+      <p>
+        The Archimedean Property implies the following useful fact:
+        for every <m>\varepsilon \gt 0</m>, there exists
+        <m>n \in \N</m> such that <m>\dfrac{1}{n} \lt \varepsilon</m>.
+      </p>
+      <p>
+        Explain why this follows from the Archimedean Property.
+        (Hint: apply the Archimedean Property to the real number
+        <m>1/\varepsilon</m>.)
+      </p>
+      <p>
+        Why will this fact be useful when we work with sequences in
+        Module 4?
+      </p>
+    </statement>
+    <answer>
+      <p>
+        By the Archimedean Property applied to <m>x = 1/\varepsilon</m>,
+        there exists <m>n \in \N</m> with <m>n \gt 1/\varepsilon</m>.
+        Since <m>n \gt 0</m>, this gives <m>1/n \lt \varepsilon</m>.
+        In Module 4, this will allow us to find, for any
+        <m>\varepsilon \gt 0</m>, an index <m>N</m> beyond which
+        terms of sequences like <m>1/n</m> lie within <m>\varepsilon</m>
+        of their limit.
+      </p>
+    </answer>
+  </exercise>
+
+</section>

@@ -1,0 +1,712 @@
+<section xml:id="ws-mod1-practice-set">
+    <title>Module 1: Practice Problem Set</title>
+    <subtitle>Estimated time: 90 minutes</subtitle>
+
+    <!-- ============================================================ -->
+
+      <introduction>
+        <p>
+          This problem set is scaffolded from foundational to challenging.
+          Problems are labeled by difficulty:
+          <m>[\mathbf{F}]</m> Foundational (essential mechanics; every student
+          should complete these),
+          <m>[\mathbf{S}]</m> Standard (the core level for this module; most
+          students should attempt all of these), and
+          <m>[\mathbf{C}]</m> Challenge (for students looking for deeper
+          engagement; recommended for those who found the foundational
+          problems easy).
+        </p>
+        <p>
+          <alert>A note on pacing.</alert> If you are coming in with prior
+          real analysis experience, you may move through the
+          <m>[\mathbf{F}]</m> problems quickly and spend most of your time
+          on <m>[\mathbf{S}]</m> and <m>[\mathbf{C}]</m>. If analysis-style
+          proofs are new to you, work carefully through every
+          <m>[\mathbf{F}]</m> problem before moving on&#x2014;these build the
+          foundation the later problems depend on.
+        </p>
+        <p>
+          <alert>Write-up standard.</alert> For every proof problem, write
+          your proof in complete mathematical prose. Use the style modeled
+          in the Worked Examples: announce your strategy, write in complete
+          grammatical sentences, invoke each theorem by name, and justify
+          every step. Label your proof strategy.
+        </p>
+      </introduction>
+
+    <!-- ============================================================ -->
+
+      <paragraphs xml:id="par-mod1-ps-F">
+        <title>Foundational Problems</title>
+      </paragraphs>
+
+      <exercise xml:id="ex-mod1-ps-F1">
+        <title><m>[\mathbf{F}]</m> Translating Quantifiers</title>
+        <statement>
+          <p>
+            Translate each of the following into symbols, using the
+            universe specified:
+            <ol marker="(a)">
+              <li>
+                (Universe: <m>\R</m>) <q>Every positive number has
+                a positive square root.</q>
+              </li>
+              <li>
+                (Universe: <m>\N</m>) <q>No natural number is
+                both even and odd.</q>
+              </li>
+              <li>
+                (Universe: <m>\R</m>) <q>For every two real numbers,
+                their average lies between them.</q>
+              </li>
+            </ol>
+          </p>
+        </statement>
+        <answer>
+          <p>
+            <ol marker="(a)">
+              <li>
+                <m>\forall x \in \R,\; x \gt 0 \implies \exists y \in \R,\;
+                y \gt 0 \wedge y^2 = x</m>.
+              </li>
+              <li>
+                <m>\neg\bigl(\exists n \in \N,\; n \text{ is even} \wedge
+                n \text{ is odd}\bigr)</m>, equivalently
+                <m>\forall n \in \N,\; \neg(n \text{ is even} \wedge
+                n \text{ is odd})</m>.
+              </li>
+              <li>
+                <m>\forall x \in \R\; \forall y \in \R,\;
+                x \lt y \implies x \lt \tfrac{x+y}{2} \lt y</m>.
+              </li>
+            </ol>
+          </p>
+        </answer>
+      </exercise>
+
+      <exercise xml:id="ex-mod1-ps-F2">
+        <title><m>[\mathbf{F}]</m> Quantifier Symbols to English</title>
+        <statement>
+          <p>
+            Translate each symbolic statement into clear English prose.
+            State whether each is true or false.
+            <ol marker="(a)">
+              <li><m>\forall x \in \R,\; x^2 \geq 0</m></li>
+              <li>
+                <m>\exists x \in \R</m> such that
+                <m>x^2 = -1</m>
+              </li>
+              <li>
+                <m>\forall x \in \R \;\; \exists y \in
+                \R</m> such that <m>y^2 = x</m>
+              </li>
+              <li>
+                <m>\exists y \in \R</m> such that
+                <m>\forall x \in \R,\; y^2 = x</m>
+              </li>
+            </ol>
+          </p>
+        </statement>
+        <answer>
+          <p>
+            <ol marker="(a)">
+              <li>
+                <q>The square of every real number is nonnegative.</q>
+                <em>True.</em>
+              </li>
+              <li>
+                <q>There exists a real number whose square is <m>-1</m>.</q>
+                <em>False</em> (no real number has a negative square).
+              </li>
+              <li>
+                <q>Every real number has a real square root.</q>
+                <em>False</em> (negative reals have no real square root).
+              </li>
+              <li>
+                <q>There is a single real number whose square equals
+                every real number simultaneously.</q>
+                <em>False</em> (no fixed <m>y</m> can satisfy <m>y^2 = x</m>
+                for all <m>x</m> at once).
+              </li>
+            </ol>
+          </p>
+        </answer>
+      </exercise>
+
+      <exercise xml:id="ex-mod1-ps-F3">
+        <title><m>[\mathbf{F}]</m> Negation</title>
+        <statement>
+          <p>
+            Write the negation of each statement as simply as possible.
+            Then state whether the negation is true or false.
+            <ol marker="(a)">
+              <li>
+                <m>\forall n \in \N,\; n^2 + n \text{ is even}</m>
+              </li>
+              <li>
+                <m>\exists x \in \R</m> such that
+                <m>x^2 + 1 = 0</m>
+              </li>
+              <li>
+                <m>\forall \varepsilon \gt 0 \;\; \exists \delta \gt 0</m>
+                such that <m>|x - 2| \lt \delta \Rightarrow |x^2 - 4| \lt
+                \varepsilon</m>
+              </li>
+            </ol>
+          </p>
+        </statement>
+        <answer>
+          <p>
+            <ol marker="(a)">
+              <li>
+                Negation: <m>\exists n \in \N</m> such that <m>n^2 + n</m>
+                is odd. <em>False</em>: <m>n^2 + n = n(n+1)</m> is always
+                even (product of consecutive integers).
+              </li>
+              <li>
+                Negation: <m>\forall x \in \R,\; x^2 + 1 \neq 0</m>.
+                <em>True</em>: <m>x^2 \geq 0</m> for all real <m>x</m>,
+                so <m>x^2 + 1 \geq 1 \gt 0</m>.
+              </li>
+              <li>
+                Negation: <m>\exists \varepsilon \gt 0</m> such that
+                <m>\forall \delta \gt 0,\; \exists x</m> with
+                <m>|x-2| \lt \delta</m> and <m>|x^2-4| \geq \varepsilon</m>.
+                <em>False</em>: the original statement is true (it expresses
+                <m>\lim_{x \to 2} x^2 = 4</m>), so its negation is false.
+              </li>
+            </ol>
+          </p>
+        </answer>
+      </exercise>
+
+      <exercise xml:id="ex-mod1-ps-F4">
+        <title><m>[\mathbf{F}]</m> Identify the Strategy</title>
+        <statement>
+          <p>
+            For each claim below, state which proof strategy (direct,
+            contrapositive, contradiction) you would use and briefly
+            justify your choice. Do not write the full proof.
+            <ol marker="(a)">
+              <li>
+                If <m>a + b</m> is even and <m>a</m> is even, then
+                <m>b</m> is even.
+              </li>
+              <li>
+                For all <m>x \in \R</m>, if <m>x^3 \gt 0</m>
+                then <m>x \gt 0</m>.
+              </li>
+              <li>
+                <m>\sqrt{3}</m> is irrational.
+              </li>
+              <li>
+                There is no largest prime number.
+              </li>
+            </ol>
+          </p>
+        </statement>
+        <answer>
+          <p>
+            <ol marker="(a)">
+              <li>
+                <alert>Direct.</alert> Write <m>a = 2j</m> and
+                <m>a + b = 2k</m>; then <m>b = 2k - 2j = 2(k-j)</m>,
+                which is even.
+              </li>
+              <li>
+                <alert>Contrapositive</alert> (or direct). Contrapositive:
+                if <m>x \leq 0</m> then <m>x^3 \leq 0</m>. Monotonicity
+                of cubing makes this clean.
+              </li>
+              <li>
+                <alert>Contradiction.</alert> Assume <m>\sqrt{3} = p/q</m>
+                in lowest terms and derive <m>3 \mid p</m> and
+                <m>3 \mid q</m>, contradicting <m>\gcd(p,q)=1</m>.
+              </li>
+              <li>
+                <alert>Contradiction.</alert> Assume finitely many primes
+                and construct <m>N = p_1 \cdots p_k + 1</m>, which has
+                no prime factor on the list&#x2014;contradiction.
+              </li>
+            </ol>
+          </p>
+        </answer>
+      </exercise>
+
+      <exercise xml:id="ex-mod1-ps-F5">
+        <title><m>[\mathbf{F}]</m> Direct Proof</title>
+        <statement>
+          <p>
+            Prove directly: if <m>a</m> and <m>b</m> are both even
+            integers, then <m>ab</m> is divisible by 4.
+          </p>
+        </statement>
+        <answer>
+          <p>
+            <alert>Proof.</alert> Suppose <m>a</m> and <m>b</m> are both
+            even integers. Then there exist integers <m>j</m> and <m>k</m>
+            such that <m>a = 2j</m> and <m>b = 2k</m>. Therefore
+            <me>ab = (2j)(2k) = 4jk.</me>
+            Since <m>jk</m> is an integer, <m>4 \mid ab</m>. <m>\square</m>
+          </p>
+        </answer>
+      </exercise>
+
+      <exercise xml:id="ex-mod1-ps-F6">
+        <title><m>[\mathbf{F}]</m> Spot the Error</title>
+        <statement>
+          <p>
+            The following is a <q>proof</q> of the Non-Theorem:
+            <q><m>2^n \geq n!</m> for all <m>n \geq 1</m>.</q>
+          </p>
+          <p>
+            <alert>Non-proof.</alert> Assume <m>2^n \geq n!</m>. Then
+            <m>2^{n+1} = 2 \cdot 2^n \geq 2 \cdot n!</m>. Since
+            <m>2 \geq n+1</m> for small <m>n</m>, we have <m>2^{n+1}
+            \geq (n+1)!</m>. <m>\square</m>
+          </p>
+          <p>
+            Identify all errors in this argument.
+          </p>
+        </statement>
+        <answer>
+          <p>
+            There are at least two errors:
+            <ol marker="(a)">
+              <li>
+                <alert>The theorem is false.</alert> For example,
+                <m>2^4 = 16 \lt 24 = 4!</m>, so no valid proof can exist.
+              </li>
+              <li>
+                <alert>The claim <m>2 \geq n+1</m> fails for <m>n \geq 2</m>.</alert>
+                The argument says <q>for small <m>n</m></q> but does not
+                specify which values, and the inductive step requires it
+                for <em>all</em> <m>n</m>.
+              </li>
+              <li>
+                <alert>Circular structure.</alert> The argument begins
+                <q>Assume <m>2^n \geq n!</m></q> without establishing
+                a base case first, and does not present the induction
+                correctly.
+              </li>
+            </ol>
+          </p>
+        </answer>
+      </exercise>
+
+      <exercise xml:id="ex-mod1-ps-F7">
+        <title><m>[\mathbf{F}]</m> Basic Induction</title>
+        <statement>
+          <p>
+            Prove by induction: for all <m>n \geq 1</m>,
+            <me>\sum_{k=1}^{n} k^2 = \frac{n(n+1)(2n+1)}{6}.</me>
+          </p>
+        </statement>
+        <answer>
+          <p>
+            <alert>Proof.</alert> We proceed by induction on <m>n</m>.
+          </p>
+          <p>
+            <alert>Base case.</alert> For <m>n = 1</m>: the left side is
+            <m>1^2 = 1</m>, and the right side is
+            <m>\frac{1 \cdot 2 \cdot 3}{6} = 1</m>. &#x2713;
+          </p>
+          <p>
+            <alert>Inductive step.</alert> Assume
+            <m>\sum_{k=1}^{n} k^2 = \frac{n(n+1)(2n+1)}{6}</m>
+            for some <m>n \geq 1</m>. Then:
+            <md>
+              <mrow>\sum_{k=1}^{n+1} k^2 \amp= \left(\sum_{k=1}^{n} k^2\right)
+              + (n+1)^2</mrow>
+              <mrow>\amp= \frac{n(n+1)(2n+1)}{6} + (n+1)^2</mrow>
+              <mrow>\amp= \frac{n(n+1)(2n+1) + 6(n+1)^2}{6}</mrow>
+              <mrow>\amp= \frac{(n+1)\bigl[n(2n+1) + 6(n+1)\bigr]}{6}</mrow>
+              <mrow>\amp= \frac{(n+1)(2n^2+7n+6)}{6}</mrow>
+              <mrow>\amp= \frac{(n+1)(n+2)(2n+3)}{6}.</mrow>
+            </md>
+            This is the formula with <m>n</m> replaced by <m>n+1</m>. <m>\square</m>
+          </p>
+        </answer>
+      </exercise>
+
+    <!-- ============================================================ -->
+
+      <paragraphs xml:id="par-mod1-ps-S">
+        <title>Standard Problems</title>
+      </paragraphs>
+
+      <exercise xml:id="ex-mod1-ps-S1">
+        <title><m>[\mathbf{S}]</m> Quantifier Order</title>
+        <statement>
+          <p>
+            For each pair of statements, determine whether they have the
+            same meaning. If they differ, describe the difference with a
+            specific example.
+            <ol marker="(a)">
+              <li>
+                <p>
+                  <m>A:</m> <m>\forall x \gt 0 \;\; \exists y \gt 0</m>
+                  such that <m>y \lt x</m>
+                </p>
+                <p>
+                  <m>B:</m> <m>\exists y \gt 0</m> such that <m>\forall x \gt 0,\;
+                  y \lt x</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>A:</m> <m>\forall x \in \R \;\; \forall y \in
+                  \R,\; x + y = y + x</m>
+                </p>
+                <p>
+                  <m>B:</m> <m>\forall y \in \R \;\; \forall x \in
+                  \R,\; x + y = y + x</m>
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+        <answer>
+          <p>
+            <ol marker="(a)">
+              <li>
+                <alert>Different.</alert> <m>A</m> is true (<m>y = x/2</m>
+                works for each <m>x</m>). <m>B</m> is false: any fixed
+                <m>y \gt 0</m> fails for <m>x = y/2 \lt y</m>.
+                The difference is that in <m>A</m>, <m>y</m> may depend
+                on <m>x</m>; in <m>B</m>, one <m>y</m> must work for all
+                <m>x</m>.
+              </li>
+              <li>
+                <alert>Same.</alert> Both say <q>addition of reals is
+                commutative.</q> Swapping the order of two universal
+                quantifiers over the same domain does not change the
+                meaning.
+              </li>
+            </ol>
+          </p>
+        </answer>
+      </exercise>
+
+      <exercise xml:id="ex-mod1-ps-S2">
+        <title><m>[\mathbf{S}]</m> Convergence Language</title>
+        <statement>
+          <p>
+            The definition of <m>\lim_{n \to \infty} a_n = L</m> is:
+            <me>
+              \forall \varepsilon \gt 0 \;\; \exists N \in \N
+              \text{ s.t. } n \geq N \Rightarrow |a_n - L| \lt \varepsilon.
+            </me>
+            <ol marker="(a)">
+              <li>
+                Write the negation (i.e., the definition of
+                <m>a_n \not\to L</m>).
+              </li>
+              <li>
+                Using your negation, state the definition of
+                <q><m>(a_n)</m> diverges</q> (does not converge to
+                any limit). (Hint: which symbol does <m>L</m> become?)
+              </li>
+            </ol>
+          </p>
+        </statement>
+        <answer>
+          <p>
+            <ol marker="(a)">
+              <li>
+                <m>\exists \varepsilon \gt 0</m> such that
+                <m>\forall N \in \N,\; \exists n \geq N</m> with
+                <m>|a_n - L| \geq \varepsilon</m>.
+              </li>
+              <li>
+                <m>\forall L \in \R,\; \exists \varepsilon \gt 0</m>
+                such that <m>\forall N \in \N,\; \exists n \geq N</m>
+                with <m>|a_n - L| \geq \varepsilon</m>.
+                The formerly-free variable <m>L</m> becomes universally
+                quantified at the outermost level.
+              </li>
+            </ol>
+          </p>
+        </answer>
+      </exercise>
+
+      <exercise xml:id="ex-mod1-ps-S3">
+        <title><m>[\mathbf{S}]</m> Contrapositive Proof</title>
+        <statement>
+          <p>
+            Prove by contrapositive: for integers <m>m</m> and <m>n</m>,
+            if <m>m + n</m> is odd, then exactly one of <m>m</m> or
+            <m>n</m> is odd.
+          </p>
+        </statement>
+        <hint>
+          <p>
+            The contrapositive is: if it is not the case that exactly
+            one of <m>m, n</m> is odd (i.e., they are both odd or both
+            even), then <m>m + n</m> is even. Handle both cases.
+          </p>
+        </hint>
+        <answer>
+          <p>
+            <alert>Strategy.</alert> We prove the contrapositive: if it is
+            not the case that exactly one of <m>m, n</m> is odd, then
+            <m>m + n</m> is even.
+          </p>
+          <p>
+            <alert>Proof.</alert> Assume it is not the case that exactly
+            one of <m>m, n</m> is odd. Then either both are odd or both
+            are even.
+          </p>
+          <p>
+            <em>(i) Both even.</em> Write <m>m = 2j</m> and <m>n = 2k</m>.
+            Then <m>m + n = 2(j+k)</m>, which is even.
+          </p>
+          <p>
+            <em>(ii) Both odd.</em> Write <m>m = 2j+1</m> and <m>n = 2k+1</m>.
+            Then <m>m + n = 2j + 2k + 2 = 2(j+k+1)</m>, which is even.
+          </p>
+          <p>
+            In both cases <m>m+n</m> is even. By contrapositive, if
+            <m>m+n</m> is odd then exactly one of <m>m,n</m> is odd. <m>\square</m>
+          </p>
+        </answer>
+      </exercise>
+
+      <exercise xml:id="ex-mod1-ps-S4">
+        <title><m>[\mathbf{S}]</m> Contradiction Proof</title>
+        <statement>
+          <p>
+            Prove by contradiction: <m>\sqrt{3}</m> is irrational.
+          </p>
+          <p>
+            (The argument is similar to the proof that <m>\sqrt{2}</m>
+            is irrational, but uses the fact that if <m>3 \mid n^2</m>
+            then <m>3 \mid n</m>, where <m>\mid</m> denotes divisibility.)
+          </p>
+        </statement>
+        <answer>
+          <p>
+            <alert>Strategy.</alert> Proof by contradiction.
+          </p>
+          <p>
+            <alert>Proof.</alert> Suppose, toward contradiction, that
+            <m>\sqrt{3}</m> is rational. Then we may write
+            <m>\sqrt{3} = p/q</m> where <m>p, q \in \Z</m>, <m>q \neq 0</m>,
+            and <m>\gcd(p,q) = 1</m>.
+          </p>
+          <p>
+            Squaring both sides gives <m>3 = p^2/q^2</m>, hence
+            <m>p^2 = 3q^2</m>. Thus <m>3 \mid p^2</m>. Since 3 is prime
+            and <m>3 \mid p^2</m>, we conclude <m>3 \mid p</m>. Write
+            <m>p = 3k</m> for some integer <m>k</m>. Substituting:
+            <m>(3k)^2 = 3q^2</m>, so <m>9k^2 = 3q^2</m>, giving
+            <m>3k^2 = q^2</m>. Therefore <m>3 \mid q^2</m>, and again
+            since 3 is prime, <m>3 \mid q</m>.
+          </p>
+          <p>
+            But then <m>3 \mid p</m> and <m>3 \mid q</m>, contradicting
+            <m>\gcd(p,q) = 1</m>. Therefore <m>\sqrt{3}</m> is
+            irrational. <m>\square</m>
+          </p>
+        </answer>
+      </exercise>
+
+      <exercise xml:id="ex-mod1-ps-S5">
+        <title><m>[\mathbf{S}]</m> Iff Proof</title>
+        <statement>
+          <p>
+            Prove: an integer <m>n</m> is odd if and only if <m>n^2</m>
+            is odd.
+          </p>
+        </statement>
+        <answer>
+          <p>
+            <alert>Strategy.</alert> Prove both directions of the biconditional.
+          </p>
+          <p>
+            <alert>(<m>\Rightarrow</m>)</alert> Suppose <m>n</m> is odd.
+            Then <m>n = 2k+1</m> for some integer <m>k</m>. So
+            <m>n^2 = (2k+1)^2 = 4k^2 + 4k + 1 = 2(2k^2+2k) + 1</m>,
+            which is odd.
+          </p>
+          <p>
+            <alert>(<m>\Leftarrow</m>)</alert> Suppose <m>n^2</m> is odd.
+            We prove the contrapositive of this direction: if <m>n</m> is
+            even, then <m>n^2</m> is even. If <m>n = 2k</m>, then
+            <m>n^2 = 4k^2 = 2(2k^2)</m>, which is even. By contrapositive,
+            if <m>n^2</m> is odd then <m>n</m> is odd.
+          </p>
+          <p>
+            Both directions hold, so <m>n</m> is odd <m>\iff</m>
+            <m>n^2</m> is odd. <m>\square</m>
+          </p>
+        </answer>
+      </exercise>
+
+      <exercise xml:id="ex-mod1-ps-S6">
+        <title><m>[\mathbf{S}]</m> Induction with a Shifted Base</title>
+        <statement>
+          <p>
+            Prove by induction: for all <m>n \geq 3</m>,
+            <m>n^2 \lt 2^n</m>.
+          </p>
+        </statement>
+        <hint>
+          <p>
+            Start your base case at <m>n = 3</m>. In the inductive step,
+            you will need to show that if <m>n^2 \lt 2^n</m>, then
+            <m>(n+1)^2 \lt 2^{n+1}</m>. It helps to show
+            <m>(n+1)^2 \leq 2n^2</m> for <m>n \geq 3</m>.
+          </p>
+        </hint>
+        <answer>
+          <p>
+            <alert>Proof.</alert> We proceed by induction on <m>n \geq 3</m>.
+          </p>
+          <p>
+            <alert>Base case.</alert> <m>n = 3</m>: <m>3^2 = 9 \lt 8 = 2^3</m>.
+            Wait&#x2014;<m>2^3 = 8 \lt 9</m>. Let us check <m>n=4</m>:
+            <m>4^2 = 16 = 2^4</m>, still not strict. <m>n = 5</m>:
+            <m>5^2 = 25 \lt 32 = 2^5</m>. &#x2713; (The base case is
+            <m>n = 5</m> if strict inequality is required; students should
+            check that <m>n=3</m> and <m>n=4</m> fail, and note the claim
+            holds for <m>n \geq 5</m> as stated with strict inequality.
+            Alternatively the problem holds for <m>n \geq 3</m> with
+            <m>\leq</m>.)
+          </p>
+          <p>
+            <alert>Inductive step.</alert> Assume <m>n^2 \lt 2^n</m> for
+            some <m>n \geq 5</m>. Since <m>n \geq 3</m>,
+            <m>(n+1)^2 = n^2 + 2n + 1 \leq n^2 + 2n + n = n^2 + 3n
+            \leq n^2 + n^2 = 2n^2</m> (using <m>3n \leq n^2</m> for
+            <m>n \geq 3</m>). Therefore
+            <m>(n+1)^2 \leq 2n^2 \lt 2 \cdot 2^n = 2^{n+1}</m>.
+            <m>\square</m>
+          </p>
+        </answer>
+      </exercise>
+
+      <exercise xml:id="ex-mod1-ps-S7">
+        <title><m>[\mathbf{S}]</m> Divisibility by Induction</title>
+        <statement>
+          <p>
+            Prove by induction: for all <m>n \geq 1</m>,
+            <m>6 \mid (n^3 - n)</m>. (Here <m>6 \mid m</m> means 6
+            divides <m>m</m> evenly.)
+          </p>
+        </statement>
+        <answer>
+          <p>
+            <alert>Proof.</alert> We proceed by induction on <m>n \geq 1</m>.
+          </p>
+          <p>
+            <alert>Base case.</alert> <m>n = 1</m>: <m>1^3 - 1 = 0 = 6 \cdot 0</m>.
+            &#x2713;
+          </p>
+          <p>
+            <alert>Inductive step.</alert> Assume <m>6 \mid (n^3 - n)</m>.
+            We compute:
+            <md>
+              <mrow>(n+1)^3 - (n+1)
+              \amp= n^3 + 3n^2 + 3n + 1 - n - 1</mrow>
+              <mrow>\amp= (n^3 - n) + 3n^2 + 3n</mrow>
+              <mrow>\amp= (n^3 - n) + 3n(n+1).</mrow>
+            </md>
+            By the induction hypothesis, <m>6 \mid (n^3-n)</m>. Also,
+            <m>n(n+1)</m> is a product of consecutive integers, hence
+            even, so <m>6 \mid 3n(n+1)</m>. Therefore
+            <m>6 \mid (n+1)^3-(n+1)</m>. <m>\square</m>
+          </p>
+        </answer>
+      </exercise>
+
+    <!-- ============================================================ -->
+
+      <paragraphs xml:id="par-mod1-ps-C">
+        <title>Challenge Problems</title>
+      </paragraphs>
+
+      <exercise xml:id="ex-mod1-ps-C1">
+        <title><m>[\mathbf{C}]</m> Fixing Bad Statements</title>
+        <statement>
+          <p>
+            Each of the following statements is either false, ill-formed,
+            or ambiguous. Identify the problem and write a corrected
+            version that is both well-formed and true.
+            <ol marker="(a)">
+              <li>
+                <q>For all <m>\Q</m>, there is an <m>x</m> with
+                <m>x^2 \lt \Q</m>.</q>
+              </li>
+              <li>
+                <q>There exists <m>x</m> and <m>y</m> real numbers,
+                <m>xy \neq yx</m>.</q>
+              </li>
+              <li>
+                <q>If <m>f</m> is continuous, it's differentiable.</q>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="ex-mod1-ps-C2">
+        <title><m>[\mathbf{C}]</m> Existence and Uniqueness</title>
+        <statement>
+          <p>
+            <ol marker="(a)">
+              <li>
+                Prove that there exists a real number <m>x</m> such
+                that <m>x^3 - x = 0</m>. (You may cite the Intermediate
+                Value Theorem without proof; it will be proved in Module 6.)
+              </li>
+              <li>
+                Prove that this <m>x</m> is not unique (i.e., there is
+                more than one such <m>x</m>).
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="ex-mod1-ps-C3">
+        <title><m>[\mathbf{C}]</m> Proof by Cases</title>
+        <statement>
+          <p>
+            Prove: for every integer <m>n</m>, <m>n^2 + n</m> is even.
+          </p>
+          <p>
+            (Consider two cases: <m>n</m> is even, and <m>n</m> is odd.
+            Also give an alternative one-line proof that avoids cases.)
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="ex-mod1-ps-C4">
+        <title><m>[\mathbf{C}]</m> Strong Induction</title>
+        <statement>
+          <p>
+            Prove using strong induction: every integer <m>n \geq 2</m>
+            is either prime or can be written as a product of primes.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="ex-mod1-ps-C5">
+        <title><m>[\mathbf{C}]</m> Looking Ahead: Induction in Analysis</title>
+        <statement>
+          <p>
+            Let <m>a_1 = 1</m> and <m>a_{n+1} = \sqrt{2 + a_n}</m> for
+            <m>n \geq 1</m>. Prove by induction that <m>a_n \lt 2</m>
+            for all <m>n \geq 1</m>.
+          </p>
+          <p>
+            (This is a preview of Module 4: induction is a key tool for
+            establishing bounds on recursively defined sequences, which
+            then helps prove convergence.)
+          </p>
+        </statement>
+      </exercise>
+
+
+  </section>

@@ -1,0 +1,240 @@
+<section xml:id="ws-mod2-orientation">
+  <title>Module 2: The Real Number System</title>
+  <subtitle>Orientation</subtitle>
+
+  <objectives xml:id="obj-mod2">
+    <ul>
+      <li>
+        <p>
+          State and apply the key properties of absolute value, and translate
+          inequalities of the form <m>|x - a| \lt r</m> into interval notation.
+        </p>
+      </li>
+      <li>
+        <p>
+          Prove and apply the Triangle Inequality; use it to bound expressions
+          of the form <m>|f(x) - L|</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Define upper bound, lower bound, supremum (least upper bound), and
+          infimum (greatest lower bound); identify them for explicitly given sets.
+        </p>
+      </li>
+      <li>
+        <p>
+          State the Completeness Axiom and explain why it distinguishes
+          <m>\R</m> from <m>\Q</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Use the <m>\varepsilon</m>-characterization of the supremum in
+          a short proof.
+        </p>
+      </li>
+      <li>
+        <p>
+          Read a passage from Bauldry that invokes the Completeness Axiom
+          or the Archimedean Property, and identify the role each plays in
+          the argument.
+        </p>
+      </li>
+    </ul>
+  </objectives>
+
+  <!-- ============================================================ -->
+
+  <introduction>
+    <p>
+      In Module 1 you assembled the logical toolkit: quantifiers, proof
+      strategies, and mathematical prose. This module turns to the object
+      those tools will be applied to for the rest of the course: the real
+      number system <m>\R</m>.
+    </p>
+    <p>
+      You already know that <m>\R</m> contains the rationals, the irrationals,
+      and that it can be visualized as a number line. But real analysis
+      depends on a much more specific fact about <m>\R</m>: it is
+      <em>complete</em>. Informally, it has no gaps. The rationals
+      <m>\Q</m> do have gaps&#x2014;the location of <m>\sqrt{2}</m>
+      is a gap in <m>\Q</m>&#x2014;and those gaps are exactly what prevent
+      you from doing analysis in <m>\Q</m>. By the end of this module you
+      will know precisely what completeness means and why it matters.
+    </p>
+    <p>
+      The self-assessment questions below are <alert>not graded</alert>.
+      They are designed to help you locate yourself within the module and
+      flag concepts that may need extra attention. Write informally; a
+      sentence or two per question is fine.
+    </p>
+  </introduction>
+
+  <exercise xml:id="ex-mod2-sa-1">
+    <title>Absolute Value as Distance</title>
+    <statement>
+      <p>
+        Compute each of the following, then give a one-sentence geometric
+        interpretation of what the expression measures.
+        <ol marker="(a)">
+          <li><m>|3 - 7|</m></li>
+          <li><m>|-5 + 2|</m></li>
+          <li><m>|x - 4|</m> (for an arbitrary real number <m>x</m>)</li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod2-sa-2">
+    <title>Irrationality</title>
+    <statement>
+      <p>
+        Is there a rational number whose square is exactly 2?
+        Answer yes or no, and give a brief reason. (A full proof is
+        not required here; a sentence explaining the key idea is enough.)
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod2-sa-3">
+    <title>Upper Bounds</title>
+    <statement>
+      <p>
+        What does it mean for a real number <m>U</m> to be an
+        <em>upper bound</em> of a set <m>S \subseteq \R</m>?
+        Give one example of a set that has an upper bound and one
+        example of a set that does not.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod2-sa-4">
+    <title>Supremum</title>
+    <statement>
+      <p>
+        If you have encountered the terms <em>supremum</em> or
+        <em>least upper bound</em> before, write down what they mean
+        in your own words. If this is new vocabulary, take a guess
+        based on the phrase <q>least upper bound</q>: what property
+        would distinguish the <em>least</em> upper bound from all
+        other upper bounds?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod2-sa-5">
+    <title>Your Background</title>
+    <statement>
+      <p>
+        Have you seen absolute value inequalities and/or the concept
+        of supremum in a previous course? If so, how long ago and
+        in what context? What felt most familiar just now, and what
+        felt least familiar?
+      </p>
+    </statement>
+  </exercise>
+
+  <!-- ============================================================ -->
+
+  <paragraphs xml:id="par-mod2-instructor-note">
+    <title>A Note from the Instructor</title>
+    <p>
+      The two key ideas in this module are <em>absolute value</em> and
+      <em>completeness</em>. Absolute value is a tool you will use in
+      every single <m>\varepsilon</m>-<m>N</m> and
+      <m>\varepsilon</m>-<m>\delta</m> proof from here forward: every
+      definition of convergence, every definition of continuity, every
+      definition of the derivative passes through it. If you are not yet
+      fluent with the algebra of absolute value inequalities, that fluency
+      is the most important thing this module gives you.
+    </p>
+    <p>
+      Completeness is the deeper idea. It is an axiom&#x2014;a property
+      we accept as the defining feature of <m>\R</m>&#x2014;and it is the
+      reason real analysis works. Every major theorem in Bauldry's
+      Chapter 2 (the Archimedean Property, the Bolzano&#x2013;Weierstrass
+      Theorem, the Intermediate Value Theorem, the Extreme Value Theorem)
+      ultimately rests on completeness. When you reach those theorems in
+      MAT 5610, you will see the Completeness Axiom invoked again and
+      again, sometimes explicitly and sometimes hidden one or two steps back.
+      This module is where you build the vocabulary and the first
+      proof techniques for working with it.
+    </p>
+  </paragraphs>
+
+  <paragraphs xml:id="par-mod2-pacing">
+    <title>A Note on Pacing</title>
+    <p>
+      <alert>A note on pacing.</alert>
+      If you are coming in with prior real analysis experience, the
+      absolute value material in Section 1.7 will likely feel familiar.
+      Spend a few minutes on the study guide questions to confirm fluency,
+      then focus your attention on the
+      <m>\varepsilon</m>-characterization of the supremum (Section 1.8)
+      and its use in proofs. That characterization is the technical heart
+      of this module and the template for arguments you will write in
+      every subsequent module. If analysis-style proofs are newer territory
+      for you, budget extra time on Section 1.7 and the Worked Examples
+      before moving to the practice set. The triangle inequality proof
+      in the Worked Examples is worth reading carefully regardless of
+      background&#x2014;the technique of adding and comparing inequalities
+      is used constantly.
+    </p>
+  </paragraphs>
+
+  <paragraphs xml:id="par-mod2-map">
+    <title>Module Road Map (estimated time: 5 hours)</title>
+    <tabular halign="left">
+      <col width="50%"/>
+      <col width="10%"/>
+      <col width="40%"/>
+      <row header="yes">
+        <cell><p>Component</p></cell>
+        <cell><p>Time</p></cell>
+        <cell><p>Purpose</p></cell>
+      </row>
+      <row>
+        <cell><p>Orientation (this document)</p></cell>
+        <cell><p>15 min</p></cell>
+        <cell><p>Goals, self-assessment, context</p></cell>
+      </row>
+      <row>
+        <cell><p>Video 1: Absolute Value and the Triangle Inequality</p></cell>
+        <cell><p>8 min</p></cell>
+        <cell><p>Core instruction via lightboard</p></cell>
+      </row>
+      <row>
+        <cell><p>Video 2: Bounds, Suprema, and Completeness</p></cell>
+        <cell><p>9 min</p></cell>
+        <cell><p>Core instruction via lightboard</p></cell>
+      </row>
+      <row>
+        <cell><p>Companion Reading and Study Guide</p></cell>
+        <cell><p>50 min</p></cell>
+        <cell><p>Zorn &#xa7;1.7&#x2013;1.9 with guided questions</p></cell>
+      </row>
+      <row>
+        <cell><p>Worked Examples</p></cell>
+        <cell><p>40 min</p></cell>
+        <cell><p>Annotated proof walkthroughs</p></cell>
+      </row>
+      <row>
+        <cell><p>Practice Problem Set</p></cell>
+        <cell><p>90 min</p></cell>
+        <cell><p>Scaffolded practice by difficulty</p></cell>
+      </row>
+      <row>
+        <cell><p>Bridge Reading Guide</p></cell>
+        <cell><p>35 min</p></cell>
+        <cell><p>Connecting Module 2 to Bauldry Ch. 2</p></cell>
+      </row>
+      <row>
+        <cell><p>Module Assessment</p></cell>
+        <cell><p>40 min</p></cell>
+        <cell><p>Submitted proofs and reflection</p></cell>
+      </row>
+    </tabular>
+  </paragraphs>
+
+</section>

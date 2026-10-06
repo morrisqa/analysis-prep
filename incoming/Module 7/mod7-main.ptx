@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pretext xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <docinfo>
+    <macros>
+      \newcommand{\N}{\mathbb{N}}
+      \newcommand{\Z}{\mathbb{Z}}
+      \newcommand{\Q}{\mathbb{Q}}
+      \newcommand{\R}{\mathbb{R}}
+      \newcommand{\C}{\mathbb{C}}
+    </macros>
+  </docinfo>
+
+  <article xml:id="module-7">
+    <title>Module 7: Differentiation</title>
+
+    <xi:include href="mod7-orientation.ptx"/>
+    <xi:include href="mod7-study-guide.ptx"/>
+    <xi:include href="mod7-worked-examples.ptx"/>
+    <xi:include href="mod7-practice-set.ptx"/>
+    <xi:include href="mod7-bridge-reading.ptx"/>
+    <xi:include href="mod7-assessment.ptx"/>
+
+  </article>
+
+</pretext>

@@ -1,0 +1,269 @@
+<section xml:id="ws-mod5-orientation">
+  <title>Module 5: Series as Sequences of Partial Sums</title>
+  <subtitle>Orientation</subtitle>
+
+  <objectives xml:id="obj-mod5">
+    <ul>
+      <li>
+        <p>
+          Define an infinite series <m>\sum_{k=1}^{\infty} a_k</m> as
+          the limit of its sequence of partial sums <m>S_n = a_1 + a_2 + \cdots + a_n</m>,
+          and state the relation <q>the series converges</q>
+          <m>\Leftrightarrow</m> <q>the sequence <m>(S_n)</m> converges.</q>
+        </p>
+      </li>
+      <li>
+        <p>
+          Compute the sum of a geometric series <m>\sum ar^{k-1}</m>
+          (for <m>|r| \lt 1</m>) from first principles via the closed-form
+          partial sum, and evaluate telescoping series by identifying
+          cancellation in <m>S_n</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          State and apply the Divergence Test (if <m>a_k \not\to 0</m>
+          then <m>\sum a_k</m> diverges), and explain why the converse
+          is false (harmonic series as counterexample).
+        </p>
+      </li>
+      <li>
+        <p>
+          Apply the Comparison Test (direct and limit forms), the Ratio
+          Test, and the Root Test to determine convergence of a series
+          of nonnegative terms.
+        </p>
+      </li>
+      <li>
+        <p>
+          Distinguish <em>absolute</em> from <em>conditional</em>
+          convergence, state and apply the Alternating Series Test, and
+          know that absolute convergence implies convergence.
+        </p>
+      </li>
+      <li>
+        <p>
+          Read the Integral Test as a bridge between series convergence
+          and improper integrals, and recognize where it will be
+          sharpened in MAT 5610.
+        </p>
+      </li>
+      <li>
+        <p>
+          Articulate the central structural claim of this module:
+          <em>every theorem about series is a theorem about sequences</em>,
+          obtained by applying Module 4 results to the partial-sum
+          sequence <m>(S_n)</m>.
+        </p>
+      </li>
+    </ul>
+  </objectives>
+
+  <!-- ============================================================ -->
+
+  <introduction>
+    <p>
+      Module 4 built a toolkit for sequences: the
+      <m>\varepsilon</m>-<m>N</m> definition of convergence, the
+      Algebra of Limits, the Squeeze Theorem, the Monotone Convergence
+      Theorem, Bolzano&#x2013;Weierstrass, and Cauchy sequences. Module 5
+      asks you to apply that toolkit to one specific family of sequences:
+      the <em>partial sums</em> of a series. Every convergence test in
+      this module is, at its core, a statement about the partial-sum
+      sequence <m>S_n = a_1 + a_2 + \cdots + a_n</m>.
+    </p>
+    <p>
+      Keeping the partial-sums framing in view does two things. First,
+      it demystifies the named tests. The Divergence Test, for instance,
+      is just the observation that if <m>S_n</m> converges then
+      <m>S_n - S_{n-1} = a_n \to 0</m>&#x2014;an immediate corollary of
+      limit laws from Module 4. Second, it clarifies what
+      <em>absolute</em> and <em>conditional</em> convergence really mean:
+      the question is whether <m>\sum |a_k|</m> (a <em>new</em> series,
+      with its own partial-sum sequence <m>T_n = |a_1| + \cdots + |a_n|</m>)
+      also converges. The Module is organized around this structural
+      simplification.
+    </p>
+    <p>
+      The self-assessment questions below are <alert>not graded</alert>.
+      They are designed to help you locate yourself within the module.
+      Write informally; a sentence or two per question is fine.
+    </p>
+  </introduction>
+
+  <exercise xml:id="ex-mod5-sa-1">
+    <title>What Is a Series?</title>
+    <statement>
+      <p>
+        In your own words, what does it mean for the infinite series
+        <m>\sum_{k=1}^{\infty} a_k</m> to <em>equal</em> the number
+        <m>S</m>? Which previously-studied object (from Module 4) is
+        really doing the work in that definition?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod5-sa-2">
+    <title>Partial Sums</title>
+    <statement>
+      <p>
+        For the series <m>\displaystyle\sum_{k=1}^{\infty} \frac{1}{2^{k-1}}
+        = 1 + \frac{1}{2} + \frac{1}{4} + \cdots</m>, write out
+        <m>S_1, S_2, S_3, S_4</m> explicitly (as fractions). What
+        number do the partial sums appear to approach, and what closed-form
+        expression for <m>S_n</m> would you conjecture?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod5-sa-3">
+    <title>Intuition for Convergence</title>
+    <statement>
+      <p>
+        Based on intuition or prior exposure, decide whether each of
+        the following series converges or diverges. Record your best
+        guess; you are not yet expected to prove anything.
+        <ol marker="(a)">
+          <li><m>\displaystyle\sum_{k=1}^{\infty} \frac{1}{k}</m></li>
+          <li><m>\displaystyle\sum_{k=1}^{\infty} \frac{1}{k^2}</m></li>
+          <li><m>\displaystyle\sum_{k=1}^{\infty} \frac{(-1)^{k+1}}{k}</m></li>
+          <li><m>\displaystyle\sum_{k=1}^{\infty} (-1)^{k+1}</m></li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod5-sa-4">
+    <title>The Divergence Test Reversed?</title>
+    <statement>
+      <p>
+        Suppose someone tells you: <q>If <m>a_k \to 0</m>, then
+        <m>\sum a_k</m> converges.</q> Based on your answers above, is
+        this claim true? What would serve as a counterexample?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod5-sa-5">
+    <title>Your Background</title>
+    <statement>
+      <p>
+        Have you seen the Ratio Test, Root Test, or Alternating Series
+        Test in a previous course (possibly Calculus II)? If so, how
+        comfortable are you applying them? If this is your first
+        exposure in a proof-based setting, what do you already know
+        about these tests from calculation practice, and what feels
+        new about framing them as theorems to prove or justify?
+      </p>
+    </statement>
+  </exercise>
+
+  <!-- ============================================================ -->
+
+  <paragraphs xml:id="par-mod5-instructor-note">
+    <title>A Note from the Instructor</title>
+    <p>
+      The single most important habit to cultivate in this module is to
+      <em>translate every series question into a sequence question about
+      <m>(S_n)</m></em>. Most students come in having seen the named
+      tests in a calculus course, where they are presented as a list of
+      recipes to apply. The recipes are fine&#x2014;you should be able
+      to apply them fluently by the end of the module&#x2014;but what
+      makes the material feel rigorous instead of procedural is the
+      recognition that each test is a statement you could, in principle,
+      prove by using the <m>\varepsilon</m>-<m>N</m> machinery on
+      <m>(S_n)</m> or <m>(T_n)</m>. The study guide walks through this
+      translation for the Divergence Test and the Comparison Test; the
+      worked examples model it for telescoping and alternating series.
+    </p>
+    <p>
+      If your calculus recall of these tests is rusty, that is fine.
+      The reading in Zorn &#xa7;2.5&#x2013;2.6 redevelops them from the
+      ground up, and the worked examples show you what a clean written
+      argument looks like. If your recall is sharp, use this module as
+      an opportunity to strengthen your grip on the <em>underlying</em>
+      statement: for each test, be able to identify the partial-sum
+      sequence, the hypothesis you are using about that sequence, and
+      the Module 4 theorem that makes the argument go.
+    </p>
+  </paragraphs>
+
+  <paragraphs xml:id="par-mod5-pacing">
+    <title>A Note on Pacing</title>
+    <p>
+      <alert>A note on pacing.</alert>
+      If you are coming in with prior real analysis experience, the
+      definition of a series via partial sums and the standard tests
+      will likely feel familiar. Skim Zorn &#xa7;2.5 quickly, spend
+      focused time on the proofs of Comparison Test and Limit
+      Comparison Test in &#xa7;2.6, and work the Bridge Reading on
+      Bauldry &#xa7;1.5&#x2013;1.6 with full attention&#x2014;Bauldry's
+      informal Ch. 1 presentation is preparation for his rigorous
+      Ch. 2.5 treatment, which is where MAT 5610 will begin. If
+      proof-based series work is newer to you, slow down at Worked
+      Example 1 (telescoping from partial sums): read it twice,
+      reproduce the partial-sum computation on paper, and then work
+      Practice Set problems F1&#x2013;F4 before attempting the Ratio
+      and Root Tests. The single most common mistake in this module
+      is to treat a test as a black box rather than as a claim about
+      the sequence <m>(S_n)</m>; if you can always name the
+      partial-sum sequence you are secretly studying, the tests will
+      feel less like magic and more like bookkeeping.
+    </p>
+  </paragraphs>
+
+  <paragraphs xml:id="par-mod5-map">
+    <title>Module Road Map (estimated time: 5 hours)</title>
+    <tabular halign="left">
+      <col width="50%"/>
+      <col width="10%"/>
+      <col width="40%"/>
+      <row header="yes">
+        <cell><p>Component</p></cell>
+        <cell><p>Time</p></cell>
+        <cell><p>Purpose</p></cell>
+      </row>
+      <row>
+        <cell><p>Orientation (this document)</p></cell>
+        <cell><p>15 min</p></cell>
+        <cell><p>Goals, self-assessment, context</p></cell>
+      </row>
+      <row>
+        <cell><p>Video 1: Series as Sequences of Partial Sums</p></cell>
+        <cell><p>9 min</p></cell>
+        <cell><p>Core instruction via lightboard</p></cell>
+      </row>
+      <row>
+        <cell><p>Video 2: Convergence Tests for Series</p></cell>
+        <cell><p>10 min</p></cell>
+        <cell><p>Core instruction via lightboard</p></cell>
+      </row>
+      <row>
+        <cell><p>Companion Reading and Study Guide</p></cell>
+        <cell><p>55 min</p></cell>
+        <cell><p>Zorn &#xa7;2.5&#x2013;2.6 with guided questions</p></cell>
+      </row>
+      <row>
+        <cell><p>Worked Examples</p></cell>
+        <cell><p>40 min</p></cell>
+        <cell><p>Telescoping, comparison, ratio, alternating</p></cell>
+      </row>
+      <row>
+        <cell><p>Practice Problem Set</p></cell>
+        <cell><p>100 min</p></cell>
+        <cell><p>Scaffolded practice by difficulty</p></cell>
+      </row>
+      <row>
+        <cell><p>Bridge Reading Guide</p></cell>
+        <cell><p>40 min</p></cell>
+        <cell><p>Bauldry &#xa7;1.5&#x2013;1.6 and a power-series preview</p></cell>
+      </row>
+      <row>
+        <cell><p>Module Assessment</p></cell>
+        <cell><p>40 min</p></cell>
+        <cell><p>Submitted proofs and reflection</p></cell>
+      </row>
+    </tabular>
+  </paragraphs>
+
+</section>

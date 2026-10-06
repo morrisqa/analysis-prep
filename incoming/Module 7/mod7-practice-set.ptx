@@ -1,0 +1,357 @@
+<section xml:id="ws-mod7-practice-set">
+  <title>Module 7: Practice Problem Set</title>
+  <subtitle>Estimated time: 105 minutes</subtitle>
+
+  <introduction>
+    <p>
+      Problems are labeled <m>[\mathbf{F}]</m> (Foundational),
+      <m>[\mathbf{S}]</m> (Standard), and <m>[\mathbf{C}]</m>
+      (Challenge). Work in order within each level; later problems
+      often build on earlier ones.
+    </p>
+    <p>
+      These problems are not submitted, but you should write out
+      complete solutions. For any problem that asks you to
+      <em>prove</em> something, apply the standards from the Worked
+      Examples: state your strategy, write in complete sentences, invoke
+      each theorem by name, and justify every step.
+    </p>
+  </introduction>
+
+  <!-- ============================================================
+       FOUNDATIONAL
+  ============================================================ -->
+
+  <paragraphs xml:id="par-mod7-ps-F">
+    <title>Foundational Problems</title>
+  </paragraphs>
+
+  <exercise xml:id="ex-mod7-ps-F1">
+    <title><m>[\mathbf{F}]</m> Derivative by Definition</title>
+    <statement>
+      <p>
+        Compute <m>f'(a)</m> from the limit definition for each of
+        the following. Show the full difference quotient algebra in
+        each case.
+        <ol marker="(a)">
+          <li>
+            <m>f(x) = 2x + 5</m> at <m>a = 0</m>
+          </li>
+          <li>
+            <m>f(x) = x^2</m> at <m>a = 1</m>
+          </li>
+          <li>
+            <m>f(x) = \dfrac{1}{x}</m> at <m>a = 2</m>
+          </li>
+          <li>
+            <m>f(x) = \sqrt{x}</m> at <m>a = 4</m>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        (a) <m>(2(0+h)+5 - 5)/h = 2h/h = 2 \to 2</m>; so <m>f'(0) = 2</m>.
+        (b) <m>((1+h)^2 - 1)/h = (2h+h^2)/h = 2+h \to 2</m>;
+        so <m>f'(1) = 2</m>.
+        (c) <m>(1/(2+h) - 1/2)/h = (2 - (2+h))/(2h(2+h)) = -h/(2h(2+h)) = -1/(2(2+h)) \to -1/4</m>;
+        so <m>f'(2) = -1/4</m>.
+        (d) <m>(\sqrt{4+h} - 2)/h \cdot (\sqrt{4+h}+2)/(\sqrt{4+h}+2) = h/(h(\sqrt{4+h}+2)) = 1/(\sqrt{4+h}+2) \to 1/4</m>;
+        so <m>f'(4) = 1/4</m>.
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise xml:id="ex-mod7-ps-F2">
+    <title><m>[\mathbf{F}]</m> Applying Differentiation Rules</title>
+    <statement>
+      <p>
+        Differentiate each function using the differentiation rules
+        (no need to use the limit definition). State which rule you
+        use at each step.
+        <ol marker="(a)">
+          <li>
+            <m>f(x) = x^4 - 3x^2 + 7</m>
+          </li>
+          <li>
+            <m>g(x) = (x+1)^2(x-1)</m>
+          </li>
+          <li>
+            <m>h(x) = \dfrac{\sin(x)}{x}</m> for <m>x \neq 0</m>
+          </li>
+          <li>
+            <m>k(x) = (x^2 + 1)^5</m>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        (a) <m>f'(x) = 4x^3 - 6x</m> (sum and power rules).
+        (b) Product rule: <m>g'(x) = 2(x+1)(x-1) + (x+1)^2 = (x+1)(2(x-1)+(x+1)) = (x+1)(3x-1)</m>.
+        (c) Quotient rule: <m>h'(x) = (x\cos(x) - \sin(x))/x^2</m>.
+        (d) Chain rule: <m>k'(x) = 5(x^2+1)^4 \cdot 2x = 10x(x^2+1)^4</m>.
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise xml:id="ex-mod7-ps-F3">
+    <title><m>[\mathbf{F}]</m> MVT: Finding c</title>
+    <statement>
+      <p>
+        For each function and interval, verify that the hypotheses of
+        the Mean Value Theorem hold, then find all values <m>c</m>
+        guaranteed by the conclusion.
+        <ol marker="(a)">
+          <li>
+            <m>f(x) = x^2 - x</m> on <m>[0, 2]</m>
+          </li>
+          <li>
+            <m>f(x) = \sin(x)</m> on <m>[0, \pi]</m>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        (a) <m>f</m> is a polynomial, continuous on <m>[0,2]</m>,
+        differentiable on <m>(0,2)</m>. <m>(f(2)-f(0))/(2-0) = (2-0)/2 = 1</m>.
+        Set <m>f'(c) = 2c-1 = 1</m>: <m>c = 1 \in (0,2)</m>. <cmark/>
+        (b) <m>\sin(x)</m> is continuous on <m>[0,\pi]</m>,
+        differentiable on <m>(0,\pi)</m>. <m>(\sin(\pi)-\sin(0))/\pi = 0/\pi = 0</m>.
+        Set <m>f'(c) = \cos(c) = 0</m>: <m>c = \pi/2 \in (0,\pi)</m>. <cmark/>
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise xml:id="ex-mod7-ps-F4">
+    <title><m>[\mathbf{F}]</m> Rolle's Theorem</title>
+    <statement>
+      <p>
+        For <m>f(x) = x^3 - 3x</m> on <m>[-\sqrt{3},\, \sqrt{3}]</m>,
+        verify all three hypotheses of Rolle's Theorem and find all
+        values <m>c \in (-\sqrt{3}, \sqrt{3})</m> with <m>f'(c) = 0</m>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        <m>f</m> is a polynomial, hence continuous on
+        <m>[-\sqrt{3}, \sqrt{3}]</m> and differentiable on
+        <m>(-\sqrt{3}, \sqrt{3})</m>. Also
+        <m>f(-\sqrt{3}) = -3\sqrt{3} + 3\sqrt{3} = 0</m> and
+        <m>f(\sqrt{3}) = 3\sqrt{3} - 3\sqrt{3} = 0</m>, so
+        <m>f(-\sqrt{3}) = f(\sqrt{3})</m>. By Rolle's Theorem,
+        there exists <m>c \in (-\sqrt{3}, \sqrt{3})</m> with
+        <m>f'(c) = 0</m>. Since <m>f'(x) = 3x^2 - 3 = 3(x^2-1)</m>,
+        the roots are <m>c = 1</m> and <m>c = -1</m>, both in
+        <m>(-\sqrt{3}, \sqrt{3})</m>.
+      </p>
+    </answer>
+  </exercise>
+
+  <!-- ============================================================
+       STANDARD
+  ============================================================ -->
+
+  <paragraphs xml:id="par-mod7-ps-S">
+    <title>Standard Problems</title>
+  </paragraphs>
+
+  <exercise xml:id="ex-mod7-ps-S1">
+    <title><m>[\mathbf{S}]</m> Differentiability from the Definition</title>
+    <statement>
+      <p>
+        Prove from the limit definition that <m>f(x) = x^4</m> is
+        differentiable on <m>\R</m> and compute <m>f'(x)</m>.
+      </p>
+    </statement>
+    <hint>
+      <p>
+        Expand <m>(x+h)^4 = x^4 + 4x^3 h + 6x^2 h^2 + 4xh^3 + h^4</m>
+        using the binomial theorem or direct multiplication. After
+        subtracting <m>x^4</m> and dividing by <m>h</m>, each remaining
+        term still has a factor of <m>h</m> except the leading
+        <m>4x^3</m> term.
+      </p>
+    </hint>
+  </exercise>
+
+  <exercise xml:id="ex-mod7-ps-S2">
+    <title><m>[\mathbf{S}]</m> MVT Application: An Exponential Inequality</title>
+    <statement>
+      <p>
+        Use the MVT to prove that <m>e^x \geq 1 + x</m> for all
+        <m>x \in \R</m>.
+      </p>
+      <p>
+        Consider the cases <m>x \geq 0</m>, <m>x = 0</m>, and
+        <m>x \lt 0</m> separately. In each nontrivial case, apply
+        the MVT to <m>f(t) = e^t</m> on the appropriate interval and
+        use the fact that <m>e^c \geq 1</m> for <m>c \geq 0</m> and
+        <m>e^c \leq 1</m> for <m>c \leq 0</m>.
+      </p>
+    </statement>
+    <hint>
+      <p>
+        For <m>x \gt 0</m>: apply MVT on <m>[0, x]</m> to get
+        <m>e^x - 1 = e^c \cdot x</m> for some <m>c \in (0, x)</m>.
+        Since <m>c \gt 0</m>, <m>e^c \gt 1</m>, so <m>e^x - 1 \gt x</m>.
+        For <m>x \lt 0</m>: apply MVT on <m>[x, 0]</m> to get
+        <m>1 - e^x = e^c \cdot (-x)</m> for some <m>c \in (x, 0)</m>.
+        Since <m>c \lt 0</m>, <m>e^c \lt 1</m>, so
+        <m>1 - e^x \lt -x</m>, i.e., <m>e^x \gt 1 + x</m>.
+        Check <m>x = 0</m> separately: equality holds.
+      </p>
+    </hint>
+  </exercise>
+
+  <exercise xml:id="ex-mod7-ps-S3">
+    <title><m>[\mathbf{S}]</m> MVT and Monotonicity</title>
+    <statement>
+      <p>
+        Prove: if <m>f</m> is differentiable on <m>(a, b)</m> and
+        <m>f'(x) \gt 0</m> for all <m>x \in (a, b)</m>, then <m>f</m>
+        is strictly increasing on <m>(a, b)</m>. (Apply the MVT on any
+        subinterval <m>[x, y] \subset (a, b)</m> with <m>x \lt y</m>.)
+      </p>
+    </statement>
+    <hint>
+      <p>
+        Let <m>x, y \in (a, b)</m> with <m>x \lt y</m>. Apply the MVT
+        on <m>[x, y]</m> to get <m>f(y) - f(x) = f'(c)(y-x)</m> for
+        some <m>c \in (x, y)</m>. Since <m>f'(c) \gt 0</m> and
+        <m>y - x \gt 0</m>, conclude <m>f(y) \gt f(x)</m>.
+      </p>
+    </hint>
+  </exercise>
+
+  <exercise xml:id="ex-mod7-ps-S4">
+    <title><m>[\mathbf{S}]</m> A Limit via L'H&#xf4;pital</title>
+    <statement>
+      <p>
+        Evaluate
+        <me>\lim_{x \to 0} \frac{e^x - 1 - x}{x^2}</me>
+        by applying L'H&#xf4;pital's rule twice. At each application,
+        verify that the limit has the <m>0/0</m> indeterminate form and
+        that the numerator and denominator are differentiable. What is
+        the answer?
+      </p>
+    </statement>
+    <answer>
+      <p>
+        First application: as <m>x \to 0</m>, <m>e^x - 1 - x \to 0</m>
+        and <m>x^2 \to 0</m> (<m>0/0</m> form); both are differentiable.
+        Differentiate top and bottom: <m>(e^x - 1)/(2x)</m>. Second
+        application: as <m>x \to 0</m>, <m>e^x - 1 \to 0</m> and
+        <m>2x \to 0</m> (<m>0/0</m> form). Differentiate: <m>e^x / 2</m>.
+        As <m>x \to 0</m>, this tends to <m>1/2</m>. The limit is
+        <m>1/2</m>.
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise xml:id="ex-mod7-ps-S5">
+    <title><m>[\mathbf{S}]</m> Taylor Polynomial</title>
+    <statement>
+      <p>
+        Write the second-order Taylor polynomial <m>T_2(x)</m> for
+        <m>f(x) = \ln(1 + x)</m> at <m>a = 0</m>. Compute
+        <m>f(0)</m>, <m>f'(0)</m>, and <m>f''(0)</m> explicitly.
+        Then write the Lagrange form of the remainder
+        <m>R_2(x)</m> and identify what <m>c</m> represents.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        <m>f(0) = 0</m>, <m>f'(x) = 1/(1+x)</m> so <m>f'(0) = 1</m>,
+        <m>f''(x) = -1/(1+x)^2</m> so <m>f''(0) = -1</m>.
+        Thus <m>T_2(x) = 0 + 1 \cdot x + (-1/2)x^2 = x - x^2/2</m>.
+        The third derivative is <m>f'''(x) = 2/(1+x)^3</m>.
+        The Lagrange remainder is
+        <m>R_2(x) = f'''(c) x^3/3! = 2x^3/(6(1+c)^3) = x^3/(3(1+c)^3)</m>
+        for some <m>c</m> between <m>0</m> and <m>x</m>.
+        Here <m>c</m> is an unknown intermediate value; its existence
+        is guaranteed by Taylor's theorem (an iterated application of
+        the MVT).
+      </p>
+    </answer>
+  </exercise>
+
+  <!-- ============================================================
+       CHALLENGE
+  ============================================================ -->
+
+  <paragraphs xml:id="par-mod7-ps-C">
+    <title>Challenge Problems</title>
+  </paragraphs>
+
+  <exercise xml:id="ex-mod7-ps-C1">
+    <title><m>[\mathbf{C}]</m> A Proof of the Chain Rule</title>
+    <statement>
+      <p>
+        Prove the chain rule: if <m>f</m> is differentiable at
+        <m>a</m> and <m>g</m> is differentiable at <m>f(a)</m>, then
+        <m>(g \circ f)'(a) = g'(f(a)) \cdot f'(a)</m>.
+      </p>
+      <p>
+        Use the auxiliary function approach: define
+        <me>\psi(k) = \begin{cases}
+          \dfrac{g(f(a)+k) - g(f(a))}{k} - g'(f(a)) \amp k \neq 0, \\
+          0 \amp k = 0.
+        \end{cases}</me>
+        Show that <m>\psi</m> is continuous at <m>0</m>, write
+        <m>g(f(a)+k) - g(f(a)) = (g'(f(a)) + \psi(k))k</m> for all
+        <m>k</m>, substitute <m>k = f(x) - f(a)</m>, and take the
+        limit as <m>x \to a</m>.
+      </p>
+    </statement>
+    <hint>
+      <p>
+        With <m>k = f(x) - f(a)</m>, the difference quotient for
+        <m>g \circ f</m> becomes
+        <me>\frac{g(f(x)) - g(f(a))}{x - a}
+        = (g'(f(a)) + \psi(f(x) - f(a))) \cdot \frac{f(x) - f(a)}{x - a}.</me>
+        As <m>x \to a</m>: <m>(f(x)-f(a))/(x-a) \to f'(a)</m> by
+        differentiability of <m>f</m>; <m>f(x) \to f(a)</m> by
+        continuity of <m>f</m> at <m>a</m> (from differentiability);
+        so <m>\psi(f(x)-f(a)) \to \psi(0) = 0</m> by continuity of
+        <m>\psi</m> at <m>0</m>. The product limit gives
+        <m>g'(f(a)) \cdot f'(a)</m>.
+      </p>
+    </hint>
+  </exercise>
+
+  <exercise xml:id="ex-mod7-ps-C2">
+    <title><m>[\mathbf{C}]</m> MVT Applied Twice</title>
+    <statement>
+      <p>
+        Let <m>f</m> be twice differentiable on an open interval
+        containing <m>[a, b]</m>. Suppose <m>f(a) = f(b) = 0</m> and
+        there exists <m>c \in (a, b)</m> with <m>f(c) = 0</m>. Prove
+        that there exists <m>d \in (a, b)</m> with <m>f''(d) = 0</m>.
+      </p>
+      <p>
+        (Apply Rolle's Theorem to <m>f</m> on <m>[a, c]</m> and on
+        <m>[c, b]</m> to obtain points <m>e_1 \in (a, c)</m> and
+        <m>e_2 \in (c, b)</m> with <m>f'(e_1) = f'(e_2) = 0</m>. Then
+        apply Rolle's Theorem to <m>f'</m> on <m>[e_1, e_2]</m>.)
+      </p>
+    </statement>
+    <hint>
+      <p>
+        For the first application of Rolle's to <m>f</m> on
+        <m>[a, c]</m>: check that <m>f</m> is continuous on
+        <m>[a, c]</m>, differentiable on <m>(a, c)</m>
+        (both hold since <m>f</m> is twice differentiable on the larger
+        interval), and <m>f(a) = f(c) = 0</m>. The conclusion gives
+        <m>e_1 \in (a, c)</m> with <m>f'(e_1) = 0</m>. Similarly for
+        <m>[c, b]</m>. Then apply Rolle's to <m>f'</m> on
+        <m>[e_1, e_2]</m>: <m>f'(e_1) = f'(e_2) = 0</m> and
+        <m>f'</m> is differentiable (since <m>f</m> is twice
+        differentiable). The conclusion gives <m>d \in (e_1, e_2)
+        \subset (a, b)</m> with <m>f''(d) = 0</m>.
+      </p>
+    </hint>
+  </exercise>
+
+</section>

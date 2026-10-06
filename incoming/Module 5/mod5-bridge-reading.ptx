@@ -1,0 +1,296 @@
+<section xml:id="ws-mod5-bridge-reading">
+  <title>Module 5: Bridge Reading Guide</title>
+  <subtitle>Bauldry §1.5–1.6 — Estimated time: 40 minutes</subtitle>
+
+  <introduction>
+    <p>
+      Every module ends with a bridge reading in Bauldry's
+      <em>Introduction to Real Analysis</em>. For this module the
+      reading covers two sections: &#xa7;1.5 (<q>Sequences and Series
+      of Constants</q>) and &#xa7;1.6 (<q>Power Series and Taylor
+      Series</q>). Both sit in Bauldry's informal Chapter 1, which
+      reviews elementary calculus with a gentle lean toward proof.
+      The rigorous redevelopment of sequences and series happens in
+      Bauldry &#xa7;2.5&#x2014;which is the starting point of MAT 5610.
+    </p>
+    <p>
+      Treat &#xa7;1.5 as a <em>compressed review</em>: Bauldry lists
+      every test in a few pages, with examples but without full proofs.
+      Treat &#xa7;1.6 as a <em>preview</em>: power series and Taylor
+      series are topics you saw in calculus; reading them in Bauldry's
+      style sets you up for Module 9, where sequences and series of
+      functions (uniform convergence, power series) take center stage.
+    </p>
+    <p>
+      <alert>For this module, read:</alert>
+      Bauldry &#xa7;1.5 (<q>Sequences and Series of Constants</q>,
+      approximately pp. 25&#x2013;30) and &#xa7;1.6 (<q>Power Series
+      and Taylor Series</q>, approximately pp. 31&#x2013;36).
+    </p>
+  </introduction>
+
+  <!-- ============================================================
+       PART 1: SEQUENCES AND SERIES OF CONSTANTS
+  ============================================================ -->
+
+  <paragraphs xml:id="par-mod5-br-15">
+    <title>Bauldry §1.5 — Sequences and Series of Constants</title>
+    <p>
+      Bauldry's &#xa7;1.5 opens with sequences (Definition 1.13,
+      Theorem 1.32 <q>Algebra of Sequence Limits</q>) and then pivots
+      to series via partial sums. The section lists the named
+      tests&#x2014;Ratio, Root, Comparison, Integral, Alternating&#x2014;in
+      rapid succession as Theorems 1.35&#x2013;1.39. Unlike Zorn, who
+      proves each test in detail, Bauldry mostly states them and
+      refers to exercises for proofs.
+    </p>
+  </paragraphs>
+
+  <exercise xml:id="ex-mod5-br-1">
+    <title>Series as a <q>Special Sequence</q></title>
+    <statement>
+      <p>
+        Read Bauldry's definition of a series (it begins <q>A series
+        <m>\{s_n\}</m> is a special sequence&#x2026;</q> and defines
+        <m>s_n = \sum_{k=1}^{n} a_k</m>).
+        <ol marker="(a)">
+          <li>
+            Quote Bauldry's one-sentence definition precisely.
+          </li>
+          <li>
+            Notice that Bauldry treats the <em>partial-sum sequence</em>
+            as the primary object&#x2014;he writes
+            <m>\{s_n\}</m>, not <m>\sum a_k</m>, for the series. How
+            does this align with the framing of Video 1 (<q>a series
+            is a sequence in disguise</q>)?
+          </li>
+          <li>
+            Bauldry's notation <m>\{s_n\}</m> makes it typographically
+            obvious that convergence of the series <em>is</em>
+            convergence of a sequence. What does this suggest about
+            the role of &#xa7;1.5 in setting up &#xa7;2.5 (the
+            rigorous treatment)?
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod5-br-2">
+    <title>Example 1.11: Special Series</title>
+    <statement>
+      <p>
+        Read Example 1.11 (<q>Special Series of Elementary Calculus</q>),
+        which catalogs geometric, harmonic, <m>p</m>-series, and
+        telescoping series as a reference set.
+        <ol marker="(a)">
+          <li>
+            For the two telescoping series Bauldry lists
+            (<m>\sum 1/(k(k+1))</m> and <m>\sum 1/((2k-1)(2k+1))</m>),
+            are the closed-form partial sums Bauldry gives consistent
+            with your Worked Example 1 and Practice Set S1? (They
+            should be: 1 and 1/2 respectively.)
+          </li>
+          <li>
+            Bauldry credits Oresme (14th century) with the harmonic
+            series divergence argument. Reconstruct the argument from
+            Bauldry's exposition and identify the central idea. (It
+            is the grouping argument from Study Guide &#xa7;2.5 Ex. 4.)
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod5-br-3">
+    <title>The Catalog of Tests (Theorems 1.35–1.39)</title>
+    <statement>
+      <p>
+        Bauldry states five convergence tests in quick succession:
+        Ratio (Thm 1.35), Root (Thm 1.36), Comparison (Thm 1.37),
+        Integral (Thm 1.38), Alternating Series (Thm 1.39).
+      </p>
+      <p>
+        <ol marker="(a)">
+          <li>
+            For each of Ratio, Root, Comparison, and Alternating:
+            is Bauldry's statement consistent with Zorn's? Note one
+            small difference in phrasing you notice (e.g., whether
+            <m>r = \lim a_{n+1}/a_n</m> is assumed to exist, or
+            replaced by <m>\limsup</m>; whether <q>positive</q> or
+            <q>nonnegative</q> terms are assumed).
+          </li>
+          <li>
+            Bauldry's Integral Test (Thm 1.38) is the one named test
+            you have <em>not</em> seen proved in this module's Study
+            Guide or Worked Examples. State the hypotheses precisely:
+            <m>f</m> must be continuous, positive, and decreasing on
+            <m>[1, \infty)</m>. Why are each of these hypotheses
+            required?
+          </li>
+          <li>
+            Bauldry remarks that the Alternating Series Test has a
+            useful <em>remainder bound</em>: the tail
+            <m>\sum_{k > n} (-1)^{k-1} a_k</m> is bounded in absolute
+            value by <m>a_{n+1}</m>. Why is this plausible? (Think
+            about the squeezing of even and odd partial sums between
+            consecutive <m>a_k</m>.)
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <!-- ============================================================
+       PART 2: POWER SERIES (THE PREVIEW)
+  ============================================================ -->
+
+  <paragraphs xml:id="par-mod5-br-16">
+    <title>Bauldry §1.6 — Power Series and Taylor Series</title>
+    <p>
+      Section 1.6 extends the idea of a series by letting the terms
+      depend on a variable <m>x</m>: a <em>power series</em> centered
+      at <m>c</m> is an expression
+      <me>\sum_{n=0}^{\infty} a_n (x - c)^n.</me>
+      For a fixed value of <m>x</m>, this is just a series of numbers,
+      and the Module 5 tests apply. For <m>x</m> ranging over an
+      interval, we get a <em>function</em> defined wherever the series
+      converges. This is the subject of Module 9.
+    </p>
+    <p>
+      <alert>A preview, not a full treatment.</alert>
+      The questions below are designed to help you read &#xa7;1.6 for
+      orientation, not to master it. Skim for the main ideas; you
+      will return to them when power series reappear in the rigorous
+      setting.
+    </p>
+  </paragraphs>
+
+  <exercise xml:id="ex-mod5-br-4">
+    <title>Definition of a Power Series</title>
+    <statement>
+      <p>
+        Quote Bauldry's Definition 1.17 (<q>Power Series</q>).
+        <ol marker="(a)">
+          <li>
+            For a <em>fixed</em> value of <m>x</m>, what kind of
+            object is <m>\sum_{n=0}^{\infty} a_n (x - c)^n</m>, and
+            which of the Module 5 tests could you, in principle,
+            apply to decide whether it converges?
+          </li>
+          <li>
+            The <em>radius of convergence</em> (Definition 1.18) is
+            the key summary statistic for a power series. State the
+            three possibilities: <m>R = 0</m> (converges only at
+            <m>x = c</m>), <m>R = \infty</m> (converges for all
+            <m>x</m>), and <m>0 \lt R \lt \infty</m> (converges for
+            <m>|x - c| \lt R</m>, diverges for <m>|x - c| \gt R</m>).
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod5-br-5">
+    <title>Finding the Radius of Convergence via the Ratio Test</title>
+    <statement>
+      <p>
+        Bauldry's Example 1.14 uses the Ratio Test on the Maclaurin
+        series for <m>e^x</m>:
+        <me>\sum_{n=0}^{\infty} \frac{x^n}{n!}.</me>
+        <ol marker="(a)">
+          <li>
+            Reproduce the ratio-test computation: the ratio of
+            consecutive terms (in absolute value) is
+            <m>|x^{n+1}/(n+1)!| \cdot |n!/x^n| = |x|/(n+1)</m>, which
+            tends to 0 for every fixed <m>x \in \R</m>.
+          </li>
+          <li>
+            Conclude the interval of convergence: the series
+            converges for every <m>x \in \R</m>, so the radius of
+            convergence is <m>R = \infty</m>.
+          </li>
+          <li>
+            Now apply the same technique to the geometric series
+            <m>\sum_{n=0}^{\infty} x^n</m>. What ratio do you compute,
+            and what radius of convergence do you obtain? (You should
+            recover <m>R = 1</m>.)
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        (c) Ratio <m>= |x^{n+1}|/|x^n| = |x|</m>. The Ratio Test says
+        the series converges when <m>|x| \lt 1</m>, diverges when
+        <m>|x| \gt 1</m>, and is inconclusive at <m>|x| = 1</m>.
+        Hence <m>R = 1</m>. (At <m>x = \pm 1</m> the series diverges
+        for reasons outside the Ratio Test&#x2014;at <m>x = 1</m>,
+        <m>a_k = 1 \not\to 0</m>; at <m>x = -1</m>, the alternating
+        partial sums oscillate.)
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise xml:id="ex-mod5-br-6">
+    <title>What Gets Harder in the Functional Setting</title>
+    <statement>
+      <p>
+        Bauldry's Theorem 1.40 states that a convergent power series
+        can be differentiated and integrated <em>term by term</em>
+        inside its radius of convergence.
+      </p>
+      <p>
+        Read the theorem and answer, in one or two sentences each:
+        <ol marker="(a)">
+          <li>
+            Why is term-by-term differentiation of an <em>infinite</em>
+            sum a nontrivial operation? (Think about what
+            <q>sum</q> means for an infinite series.)
+          </li>
+          <li>
+            Bauldry does not prove Theorem 1.40 in &#xa7;1.6. Module 9
+            of this course (on <em>sequences and series of functions</em>)
+            will develop the tool required to prove it: <em>uniform
+            convergence</em>. Without reading ahead, make a guess: why
+            might <q>pointwise convergence for each <m>x</m></q> not
+            be enough to justify switching a derivative with an
+            infinite sum?
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <!-- ============================================================
+       PART 3: SYNTHESIS
+  ============================================================ -->
+
+  <exercise xml:id="ex-mod5-br-7">
+    <title>From Bauldry &#xa7;1.5 to Bauldry &#xa7;2.5</title>
+    <statement>
+      <p>
+        Scan the first page or two of Bauldry &#xa7;2.5 (<q>Sequences,
+        Series, and Convergence Tests</q>, starting around p. 88).
+        You are not expected to read &#xa7;2.5 in full&#x2014;this is
+        a one-paragraph orientation exercise.
+      </p>
+      <p>
+        <ol marker="(a)">
+          <li>
+            Compare the typographic density of &#xa7;2.5 with that of
+            &#xa7;1.5. Which is more compressed?
+          </li>
+          <li>
+            Bauldry &#xa7;2.5 is the starting point of MAT 5610. Based
+            on what you have built in Modules 4 and 5, what fraction
+            of &#xa7;2.5 do you expect will be <em>review</em> (at a
+            higher level of formality) versus <em>new material</em>?
+            One or two sentences of impression is enough.
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+</section>

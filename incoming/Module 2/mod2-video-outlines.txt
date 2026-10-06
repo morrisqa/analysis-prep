@@ -1,0 +1,271 @@
+MODULE 2 VIDEO LECTURE SCRIPTS
+The Real Number System
+MAT 5610 Intensive Analysis Prep — Appalachian State University
+Instructor: Quinn Morris
+
+Format note:
+  "Say:"            — narration cue (need not be read verbatim)
+  "Write on board:" — what to write on the lightboard during that segment
+  Subsection headings show suggested segment timing.
+
+========================================================================
+
+VIDEO 1: Absolute Value and the Triangle Inequality
+Target length: ~8 minutes
+Source: Zorn §1.7
+
+Core message: Absolute value measures distance. The Triangle Inequality
+is the one rule governing how distances add. You will use both every
+time you write an analysis proof.
+
+------------------------------------------------------------------------
+
+Opening (0:00–1:00)
+
+Write on board:
+  |x - a|
+
+Say: What does this expression measure? The distance between x and a
+on the number line. This is the only way to measure distance in the
+reals, and every convergence definition, every continuity definition,
+and every derivative definition will pass through it. If you can
+manipulate |x - a| fluently, you can write analysis proofs.
+
+------------------------------------------------------------------------
+
+Key Properties (1:00–3:00)
+
+Say: Here are the properties you need. I am not going to prove them
+right now — the proofs are in the Worked Examples — but you should
+know what each one says and why it is useful.
+
+Write on board:
+  (a)  -|x| ≤ x ≤ |x|
+       ("x is always sandwiched between its absolute value and its negative")
+
+  (b)  |xy| = |x| · |y|
+       ("absolute value distributes over multiplication")
+
+  (c)  |x| < k  iff  -k < x < k    (for k > 0)
+       ("an absolute value inequality is an interval")
+
+Say: Property (c) is the conversion rule. Let me do an example.
+
+Write on board:
+  |x - 3| < 2
+      ⟺  -2 < x - 3 < 2
+      ⟺   1 < x     < 5
+
+Say: Geometrically: x is within 2 units of 3. The interval (1, 5) has
+center 3 and radius 2. This geometric interpretation — center plus or
+minus radius — is worth keeping in mind. You will use it constantly
+when you write epsilon-N proofs.
+
+------------------------------------------------------------------------
+
+The Triangle Inequality (3:00–6:00)
+
+Say: The Triangle Inequality is the most important inequality in
+analysis. Here it is.
+
+Write on board:
+  |x + y| ≤ |x| + |y|    for all x, y ∈ ℝ
+
+Say: In words: the length of the sum is at most the sum of the lengths.
+Equality holds when x and y have the same sign; the inequality is
+strict when they partially cancel.
+
+Say: The proof is in the Worked Examples. What I want to show you here
+is how to USE it.
+
+Write on board:
+  Application 1 — the metric inequality:
+
+  |a - c| = |(a - b) + (b - c)| ≤ |a - b| + |b - c|
+
+Say: Write a - c as a sum of two pieces, apply the Triangle Inequality
+directly. The distance from a to c is at most the sum of the distances
+from a to b and from b to c.
+
+Write on board:
+  Application 2 — bounding a sum:
+
+  Suppose |x - 3| < 1 and |y - 3| < 1.
+  How large can |x + y - 6| be?
+
+  |x + y - 6| = |(x - 3) + (y - 3)|
+              ≤ |x - 3| + |y - 3|
+              <  1 + 1 = 2
+
+Say: Split the expression into two pieces you already control, bound
+each piece, add the bounds. This "split and bound" pattern is the
+template for most epsilon-N arguments.
+
+Write on board:
+  Application 3 — preview of epsilon-N:
+
+  To show |a_n - L| < ε, write
+    a_n - L = (a_n - M) + (M - L)
+  and bound each piece separately.
+
+Say: We will do this in full detail in Module 4. For now, just notice
+that the Triangle Inequality is what makes that strategy work.
+
+------------------------------------------------------------------------
+
+The Reverse Triangle Inequality (6:00–7:00)
+
+Say: There is a companion inequality you will occasionally need:
+
+Write on board:
+  ||x| - |y|| ≤ |x - y|
+
+Say: This says the difference in distances is at most the distance
+between the points. It comes up when you need a lower bound on an
+absolute value. The proof is also in the Worked Examples.
+
+------------------------------------------------------------------------
+
+Closing (7:00–8:00)
+
+Say: Two takeaways. First: |x - a| < δ means x is within δ of a —
+keep that picture in mind always. Second: when you need to bound a
+complicated expression, split it into pieces and apply the Triangle
+Inequality to each piece. That skill is the engine of everything we
+do from here forward.
+
+========================================================================
+
+VIDEO 2: Bounds, Suprema, and the Completeness Axiom
+Target length: ~9 minutes
+Source: Zorn §1.8–1.9
+
+Core message: The real number system is complete — every nonempty set
+bounded above has a least upper bound in ℝ. The rationals lack this
+property, and that gap is why we need ℝ for analysis.
+
+------------------------------------------------------------------------
+
+Opening: The Gap in ℚ (0:00–2:00)
+
+Write on board:
+  T = { x ∈ ℚ : x² < 2 }
+
+Say: Does this set have a least upper bound in ℚ? Let us think about
+it. T is nonempty — for example 1 ∈ T since 1² = 1 < 2. And T is
+bounded above in ℚ — for example 2 is an upper bound since 2² = 4 > 2.
+
+Say: But is there a LEAST upper bound in ℚ? Suppose q ∈ ℚ is an upper
+bound of T. Then q² ≥ 2. If q² = 2, then q = √2, which is not
+rational — contradiction. If q² > 2, we can always find a smaller
+rational that is still above √2, so q is not the LEAST upper bound.
+
+Write on board:
+  T has no supremum in ℚ.
+  There is a gap at √2.
+
+Say: The rationals have a hole exactly where √2 should be. We build ℝ
+to fill all such holes. That is the content of the Completeness Axiom.
+
+------------------------------------------------------------------------
+
+Upper Bounds and the Supremum (2:00–4:00)
+
+Say: Let me give precise definitions.
+
+Write on board:
+  U is an upper bound of S  if  x ≤ U  for all x ∈ S.
+
+  s = sup S  if:
+    (i)  s is an upper bound of S, and
+    (ii) s ≤ U  for every upper bound U.
+         (s is the SMALLEST upper bound)
+
+Say: Two conditions. Both matter. Condition (i) says s is above
+everything in S. Condition (ii) says nothing smaller is an upper bound.
+
+Write on board:
+  Example: S = { 1 - 1/n : n ∈ ℕ } = { 0, 1/2, 2/3, 3/4, ... }
+
+Say: The elements increase toward 1 but never reach it. So 1 is an
+upper bound. Is it the least? If t < 1, can I find an element of S
+larger than t? Yes — take n large enough so 1 - 1/n > t. So no number
+less than 1 is an upper bound, and sup S = 1.
+
+------------------------------------------------------------------------
+
+The ε-Characterization (4:00–6:00)
+
+Say: Condition (ii) has a more useful equivalent form for writing proofs.
+
+Write on board:
+  s = sup S  iff
+    (i)  s is an upper bound of S, and
+    (ii) for every ε > 0, there exists x ∈ S with  s - ε < x.
+
+Say: This is called the epsilon-characterization of the supremum. What
+does condition (ii) say? No matter how small a margin ε you take below
+s, there is always an element of S inside that margin. So nothing
+strictly below s can be an upper bound.
+
+Write on board:
+  Example: S = { 1 - 1/n : n ∈ ℕ }, s = 1.
+
+  Given ε > 0, need n ∈ ℕ with  1 - 1/n > 1 - ε,
+  i.e.,  1/n < ε,  i.e.,  n > 1/ε.
+
+  The Archimedean Property guarantees such n exists.
+
+Say: The full proof is the template in Worked Example 3. You will
+apply the same two-step structure — show it is an upper bound, then
+exhibit an element within ε — on the assessment.
+
+------------------------------------------------------------------------
+
+The Completeness Axiom (6:00–7:30)
+
+Write on board:
+  COMPLETENESS AXIOM:
+  Every nonempty subset of ℝ that is bounded above
+  has a supremum in ℝ.
+
+Say: This is an AXIOM — a defining property of ℝ that we accept
+without proof. It is the axiom that distinguishes ℝ from ℚ. The
+rationals satisfy every other field axiom, but they fail this one.
+
+Say: Applied to our gap example: the Completeness Axiom guarantees
+that sup T = √2 exists in ℝ, even though no rational fills that role.
+ℝ has no gaps.
+
+------------------------------------------------------------------------
+
+Consequences (7:30–8:30)
+
+Say: Two important consequences of the Completeness Axiom. You will
+read both of these in Bauldry.
+
+Write on board:
+  1. Archimedean Property:
+     For every x ∈ ℝ, there exists n ∈ ℕ with n > x.
+
+  2. Density of ℚ in ℝ:
+     Between any two distinct real numbers, there is a rational.
+
+Say: The Archimedean Property says ℕ is unbounded — no real number is
+larger than every natural number. This seems obvious but it actually
+requires proof from the Completeness Axiom. The challenge problem in
+the Practice Set asks you to work through that proof, and Bauldry's
+Theorem 2.3 gives the argument.
+
+Say: The density of ℚ in ℝ then says that even though ℝ contains
+irrational numbers that ℚ misses, the rationals are still everywhere
+in ℝ — you can always find one between any two reals.
+
+------------------------------------------------------------------------
+
+Closing (8:30–9:00)
+
+Say: Completeness is a structural fact about ℝ, and the
+epsilon-characterization is the tool for applying it in proofs.
+Read Worked Example 3 carefully — it is the template you will use on
+the assessment and in every subsequent module.

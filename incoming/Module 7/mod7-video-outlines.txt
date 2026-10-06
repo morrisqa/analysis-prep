@@ -1,0 +1,210 @@
+====================================================================
+MODULE 7: DIFFERENTIATION — VIDEO SCRIPTS
+MAT 5610 Intensive Analysis Prep Course
+Dr. Quinn Morris, Appalachian State University
+Format: Say: / Write on board:
+====================================================================
+
+
+====================================================================
+VIDEO 1: The Derivative — Definition and Rules (~9 min)
+====================================================================
+
+[Slide 1: Motivation]
+
+Say: In calculus you learned to differentiate functions using rules: the power rule, the product rule, the chain rule. Today we go back to the foundation. The derivative is a limit. Understanding the definition is what makes those rules provable theorems instead of magical recipes. Everything in this video follows from one definition.
+
+Write on board: f'(a) = lim_{h->0} [f(a+h) - f(a)] / h
+[Draw picture: graph of f, two points (a, f(a)) and (a+h, f(a+h)), secant line through both. Label the slope (f(a+h)-f(a))/h. Draw tangent line at a. As h->0, secant line approaches tangent.]
+
+---
+
+[Slide 2: The Formal Definition]
+
+Say: The derivative at a is the limit of this ratio, if the limit exists. When it does, we say f is differentiable at a, and we call the limit f'(a).
+
+Write on board: f is differentiable at a if   lim_{h->0} [f(a+h) - f(a)] / h   exists.
+We call this limit f'(a).
+
+Say: Notice: this is just a specific instance of the limit definition from Module 6. The function we are taking the limit of is (f(a+h)-f(a))/h, as a function of the variable h, as h approaches 0. Every Module 6 tool — limit laws, squeeze theorem, ε-δ arguments — applies here.
+
+---
+
+[Slide 3: Computing from the Definition]
+
+Say: Let's compute the derivative of f(x) = x-squared at a = 3, straight from the definition. Watch the algebra carefully.
+
+Write on board: [f(3+h) - f(3)] / h =
+[(3+h)^2 - 9] / h =
+
+[Leave computation blank for live work:]
+% Worked live on the lightboard:
+%   = (9 + 6h + h^2 - 9) / h
+%   = (6h + h^2) / h
+%   = 6 + h
+%   -> 6 as h -> 0.
+%   So f'(3) = 6.
+
+Say: The entire work is in expanding the numerator and factoring out h. Once you cancel that h, the limit is immediate from the limit laws. This is the template for every derivative computation from the definition: expand, factor, cancel, limit.
+
+---
+
+[Slide 4: Differentiability Implies Continuity]
+
+Say: Here is the first theorem: every differentiable function is continuous. But not every continuous function is differentiable — think about f(x) equals the absolute value of x at zero, where the graph has a corner.
+
+Write on board: Theorem: If f is differentiable at a, then f is continuous at a.
+
+Proof sketch:
+f(x) - f(a) = [(f(x)-f(a))/(x-a)] · (x-a)
+             -> f'(a) · 0 = 0   as x -> a.
+
+Say: The algebraic trick is writing f(x) minus f(a) as a product involving the difference quotient. As x approaches a, one factor tends to f'(a) — by differentiability — and the other factor, (x-a), tends to zero. Product rule for limits: the product tends to zero. So f(x) approaches f(a), and f is continuous.
+
+---
+
+[Slide 5: Sum and Product Rules]
+
+Say: The differentiation rules all come from applying limit laws to the difference quotient. Here are two:
+
+Write on board: Sum rule: (f+g)'(a) = f'(a) + g'(a)
+Proof: (f+g)(a+h) - (f+g)(a)   =   [f(a+h) - f(a)] + [g(a+h) - g(a)]
+Divide by h, take limit: sum rule for limits gives f'(a) + g'(a).
+
+Write on board: Product rule: (fg)'(a) = f'(a)g(a) + f(a)g'(a)
+Key step: add and subtract f(a+h)g(a) in the numerator.
+
+Say: The product rule proof is a one-line algebraic trick followed by limit laws — but you need to know what term to add and subtract. That insight — add and subtract a bridge term — is a technique you will see again and again in analysis.
+
+---
+
+[Slide 6: Chain Rule]
+
+Say: The chain rule is the trickiest of the standard rules, because an obvious proof attempt has a subtle gap. I'll state the rule here; the full proof with the gap filled is in the study guide.
+
+Write on board: Chain rule: if f is differentiable at a, and g is differentiable at f(a), then
+(g∘f)'(a) = g'(f(a)) · f'(a).
+
+Say: Intuition: rates of change multiply. If f is changing at rate f'(a) near a, and g is changing at rate g'(f(a)) near f(a), then the composition changes at the product of those rates. The gap in the obvious proof: the denominator f(a+h) - f(a) can be zero for nonzero h, causing division by zero. The fix uses an auxiliary function that handles that case explicitly. See the study guide for the full argument.
+
+---
+
+[Slide 7: Wrap-Up]
+
+Say: The derivative is a limit. The differentiation rules are theorems proved from limit laws using the Module 6 toolkit. In Video 2 we use all of this to prove the most important theorem in differentiation theory — the Mean Value Theorem.
+
+
+====================================================================
+VIDEO 2: The Mean Value Theorem (~10 min)
+====================================================================
+
+[Slide 1: The Statement]
+
+Say: The Mean Value Theorem is the workhorse of real analysis. It says: on any interval where f is differentiable, the function must attain its average rate of change as an instantaneous rate somewhere in the interior.
+
+Write on board: Mean Value Theorem: If f is continuous on [a,b] and differentiable on (a,b), then there exists c in (a,b) such that
+f'(c) = [f(b) - f(a)] / (b - a).
+
+[Draw picture: graph of f on [a,b], secant line from (a,f(a)) to (b,f(b)) with slope (f(b)-f(a))/(b-a). Mark c in (a,b) where the tangent line is parallel to the secant.]
+
+Say: The geometric picture: there is some interior point c where the tangent line is parallel to the secant line through the endpoints. The tangent slope equals the secant slope.
+
+---
+
+[Slide 2: Rolle's Theorem]
+
+Say: We prove the MVT from a special case: Rolle's Theorem. This is the case where f(a) equals f(b) — the secant line is horizontal, so we are looking for a horizontal tangent.
+
+Write on board: Rolle's Theorem: If f is continuous on [a,b], differentiable on (a,b), and f(a) = f(b), then there exists c in (a,b) with f'(c) = 0.
+
+Say: Intuition: if you start and end at the same height, at some moment in between you were moving neither up nor down. The proof turns this intuition into a rigorous argument using the Extreme Value Theorem from Module 6.
+
+---
+
+[Slide 3: Proof of Rolle's Theorem]
+
+Say: Here is the proof of Rolle's. There are two cases.
+
+Write on board:
+Case 1: f is constant on [a,b]. Then f'(c) = 0 for every c. Done.
+
+Case 2: f is not constant.
+
+[Leave proof of Case 2 blank for live work:]
+% Worked live on the lightboard:
+%   By EVT (Module 6), f attains its maximum at some point in [a,b].
+%   Since f is not constant and f(a) = f(b), the max is NOT at both endpoints.
+%   So the max is attained at some c in (a,b) — an interior point.
+%   At an interior maximum:
+%     left-hand difference quotient: [f(c+h)-f(c)]/h <= 0 for h < 0  -> f'(c) <= 0
+%     right-hand difference quotient: [f(c+h)-f(c)]/h >= 0 for h > 0  -> f'(c) >= 0
+%   Since f is differentiable at c, both one-sided limits equal f'(c).
+%   So f'(c) <= 0 AND f'(c) >= 0, hence f'(c) = 0. Done.
+
+Say: The key facts used: the Extreme Value Theorem gives the interior extremum; differentiability forces the derivative to be zero there, by the left/right comparison. Rolle's Theorem depends on Module 6.
+
+---
+
+[Slide 4: Proof of MVT from Rolle's]
+
+Say: To prove the MVT, we reduce to Rolle's by subtracting the secant line from f. This is the geometric idea made algebraic.
+
+Write on board: Define h(x) = f(x) - [f(a) + (f(b)-f(a))/(b-a) · (x-a)]
+
+[Leave the verification and conclusion blank for live work:]
+% Worked live:
+%   h(a) = f(a) - f(a) = 0.
+%   h(b) = f(b) - [f(a) + (f(b)-f(a))] = f(b) - f(b) = 0.
+%   h satisfies all of Rolle's hypotheses:
+%     continuous on [a,b], differentiable on (a,b), h(a) = h(b) = 0.
+%   By Rolle's: there exists c in (a,b) with h'(c) = 0.
+%   h'(x) = f'(x) - (f(b)-f(a))/(b-a).
+%   So f'(c) - (f(b)-f(a))/(b-a) = 0,
+%   i.e., f'(c) = (f(b)-f(a))/(b-a). Done.
+
+Say: The auxiliary function h is the function whose graph is f tilted so its endpoints both land at zero. With endpoints equal, Rolle's applies, and the derivative condition for h translates directly back into the MVT conclusion for f.
+
+---
+
+[Slide 5: Application 1 — Zero Derivative Implies Constant]
+
+Say: The MVT turns a statement about derivatives into a statement about function values. Here is the prototype.
+
+Write on board: Corollary: If f'(x) = 0 for all x in (a,b), then f is constant on (a,b).
+
+Proof: Let x, y in (a,b). MVT gives f(y) - f(x) = f'(c)(y-x) = 0 · (y-x) = 0.
+So f(y) = f(x) for all x, y in (a,b). Done.
+
+Say: This corollary says: the only function with zero derivative everywhere is a constant. You might think that's obvious from calculus — but here we have a proof. And the proof is literally one line once you have the MVT.
+
+---
+
+[Slide 6: Application 2 — MVT Inequality]
+
+Say: The MVT also produces inequalities. This is the template you'll use most often in MAT 5610.
+
+Write on board: Claim: |sin(x) - sin(y)| <= |x - y| for all x, y in R.
+
+Proof: MVT on [x,y] (WLOG x < y):
+sin(y) - sin(x) = cos(c)(y-x) for some c in (x,y).
+|sin(y) - sin(x)| = |cos(c)| · |y-x| <= |y-x|,
+since |cos(c)| <= 1 for all c.
+
+Say: The key move: the MVT converts "how much did sin change?" into "how large is its derivative?" — and the derivative of sine is cosine, which is bounded by 1. Whenever you need to bound |f(y)-f(x)|, think: apply the MVT, bound |f'|.
+
+---
+
+[Slide 7: Taylor's Theorem — Preview]
+
+Say: The MVT is the first in a family of results. Taylor's theorem generalizes it using higher derivatives.
+
+Write on board: Taylor's Theorem: f(x) = f(a) + f'(a)(x-a) + f''(a)(x-a)^2/2! + ... + f^{(n)}(a)(x-a)^n/n! + R_n(x)
+where R_n(x) = f^{(n+1)}(c)(x-a)^{n+1}/(n+1)! for some c between a and x.
+
+Say: The remainder term R_n has exactly the form of an MVT estimate: the error is controlled by the size of the (n+1)th derivative at some intermediate point. Taylor's theorem is proved by applying the MVT repeatedly — it is the MVT iterated n times. This is a pointer to MAT 5610, which uses Taylor's theorem throughout.
+
+---
+
+[Slide 8: Wrap-Up]
+
+Say: The MVT is the workhorse of real analysis. It will appear in the proof of the Fundamental Theorem of Calculus in Module 8, in error bounds for Taylor series in Module 9, and in dozens of results throughout MAT 5610. The key slogan: to bound how much f changes on an interval, bound f' on that interval. That's the MVT.
