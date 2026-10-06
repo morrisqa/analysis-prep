@@ -28,7 +28,8 @@ Source review: [#10 Module 8 comment](https://github.com/morrisqa/analysis-prep/
 | Where | Decision | Why | Alternative |
 |---|---|---|---|
 | `ex-mod8-as-1` (graded) | Now "A Function That Is Constant Except at an Endpoint" (c on [a, b), d at b). The steps ask students to compute U, L and U − L themselves (no formulas given). Approach-only hint: only the last subinterval can have M_k ≠ m_k; make it short. Part 1 time 15 → 20 min; assessment 40 → 45 min. | The study guide now proves the constant case, so the graded item needed new content; stated formulas would have given the answer. | Leave the formulas in the structure. |
-| `ex-mod8-ps-f2`(c) | ∫₁² (1/x) dx = ln 2. | The old integral duplicated graded `as-2`(i) with its answer shown. | |
+| `ex-mod8-ps-f2`(c) | ∫₁⁴ (1/√x) dx = 2 (after a first change to ∫₁² 1/x). | The old integral duplicated graded `as-2`(i) with its answer shown; any 1/x integral still did. | |
+| `par-mod8-as-rubric` | "Darboux mechanics" credits as-1 step (iv) explicitly. | The new as-1 step had no rubric row. | |
 | `ex-mod8-ps-f3`, graded `as-2`(ii) | Point to "FTC Part 1 with Any Base Point" where the upper limit can fall below the base point. | They needed it but did not cite it. | |
 | `ex-mod8-br-5`(a), `par-mod8-br-24` | The criterion refers to the Darboux-style definition (upper integral = lower integral) for increasing α; bounded variation reduces to it by the total-variation decomposition (Apostol, Chapter 6). | The "if and only if" depends on the definition. | |
 | Bridge reading | "Integrator" defined at first use; α (not dα) is the integrator; "the course text" replaced by questions about Bauldry. | Accuracy without claiming Bauldry's content. | |

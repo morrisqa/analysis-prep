@@ -231,7 +231,8 @@
         </md>
         So
         <m>f(x) = \dfrac{1}{h}\int_x^{x+h} f(x)\,dt</m> and, by
-        linearity,
+        linearity (which also holds for <m>h \lt 0</m>: by the orientation
+        convention, negate both sides of linearity on <m>[x+h, x]</m>),
         <md>
           \frac{F(x+h) - F(x)}{h} - f(x)
           = \frac{1}{h}\int_x^{x+h} [f(t) - f(x)]\,dt.
@@ -292,11 +293,11 @@
       interval. Suppose <m>f</m> is continuous on an interval
       <m>J</m>, <m>p \in J</m>, and <m>G(x) = \int_p^x f(t)\,dt</m> for
       <m>x \in J</m>. If <m>x</m> is an interior point of <m>J</m>,
-      choose <m>c, d \in J</m> with <m>c \leq p \leq d</m> and
-      <m>c \lt x \lt d</m>. Then
-      <m>G(x) = \int_c^x f(t)\,dt - \int_c^p f(t)\,dt</m>, and the
+      choose <m>r, s \in J</m> with <m>r \leq p \leq s</m> and
+      <m>r \lt x \lt s</m>. Then
+      <m>G(x) = \int_r^x f(t)\,dt - \int_r^p f(t)\,dt</m>, and the
       second term does not depend on <m>x</m>, so Worked Example 3 on
-      <m>[c,d]</m> gives <m>G'(x) = f(x)</m>. This is the form of
+      <m>[r,s]</m> gives <m>G'(x) = f(x)</m>. This is the form of
       FTC Part 1 to use with the chain rule when the upper limit can
       fall below the base point.
     </p>

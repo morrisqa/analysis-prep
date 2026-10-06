@@ -115,8 +115,9 @@
       the integral is defined instead through Riemann-Stieltjes sums
       <m>\sum f(t_i)\,\Delta\alpha_i</m> with sample points
       <m>t_i \in [x_{i-1}, x_i]</m>. Alternatively, the bounded-variation
-      case can be reduced to the increasing case by the total-variation
-      decomposition, which writes every function of bounded variation as
+      case can be reduced to the increasing case (with Apostol's
+      definition of the Riemann-Stieltjes integral) by the Jordan
+      decomposition (the total-variation decomposition), which writes every function of bounded variation as
       the difference of two increasing functions. (A second source for
       bounded variation and the Stieltjes integral is Apostol,
       <pubtitle>Mathematical Analysis</pubtitle>, 2nd edition,

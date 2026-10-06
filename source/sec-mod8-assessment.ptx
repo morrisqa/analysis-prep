@@ -209,7 +209,7 @@
       </row>
       <row>
         <cell><p><alert>Darboux mechanics</alert></p></cell>
-        <cell><p><m>U</m> and <m>L</m> computed correctly; integrability criterion applied by name</p></cell>
+        <cell><p><m>U</m> and <m>L</m> computed correctly; integrability criterion applied by name; in Part 1 step (iv), the integral identified as <m>c(b-a)</m> from the upper integral as an infimum and the lower integral as a supremum</p></cell>
         <cell><p>Sums set up correctly but criterion invocation incomplete</p></cell>
         <cell><p>Upper and lower sums confused, or criterion not used</p></cell>
       </row>
