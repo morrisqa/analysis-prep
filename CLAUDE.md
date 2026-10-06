@@ -14,6 +14,9 @@ decides what the text argues, approves outlines, and merges every pull request.
   in with `xi:include`.
 - `publication/publication.ptx`: publication settings.
 - `assets/`: images and other static files referenced by the source.
+- `incoming/`: the original per-module sources (`Module N/`), kept only until
+  migration into `source/` is complete (#3, #4), then removed. Read from it;
+  never edit it.
 - `output/`: build output. Never commit it; never edit it by hand.
 - `.claude/agents/`: the agent team (auditor, author, math-reviewer, copy-editor,
   publisher).
@@ -43,6 +46,10 @@ rebuild. Do not suppress warnings to make a build pass.
    single sitting (roughly one section).
 3. Never change or remove an existing `xml:id`. Published URLs and cross-references
    depend on them. If an id is wrong, flag it in the pull request instead.
+   One exception, approved by Quinn: while a module moves from `incoming/` into
+   `source/` (#3, #4), its ids are renamed once by the id mapping under "This
+   project", by script and nowhere else. Once a module is in `source/`, this
+   rule applies to it without exception.
 4. Never state a mathematical result without either a proof in the text or a
    citation. If you are unsure whether a claim is true, say so with a comment:
    `<!-- TODO(quinn): verify ... -->`. Do not guess.
@@ -69,7 +76,8 @@ rebuild. Do not suppress warnings to make a build pass.
   `\newcommand`. Use `\varepsilon`, not `\epsilon`.
 - Cross-reference with `<xref ref="id"/>`; never type "Section 3.2" by hand.
 - `xml:id` scheme: lowercase, hyphenated, prefixed by type
-  (`sec-`, `thm-`, `def-`, `ex-`, `fig-`, `eq-`), then a short topic slug.
+  (`ch-` chapter, `sec-` section, `thm-`, `def-`, `ex-` exercise, `exm-` example,
+  `fig-`, `eq-`, `par-` paragraphs, `obj-` objectives), then a short topic slug.
 - Every image needs a `<shortdescription>`; complex figures also need a
   `<description>`. HTML is the primary, accessible format; never put content
   only in the PDF.
@@ -95,10 +103,21 @@ Intensive Analysis Prep course materials (Modules 1 to 9).
   `<m>[\mathbf{S}]</m>`, `<m>[\mathbf{C}]</m>`. No stars or other importance markers.
 - Bridge readings make the connection to the MAT 5610 text explicit.
 - Video scripts are plain `.txt` files in `scripts/` and are not part of the build.
-- Open structural question for Quinn (do not decide it unilaterally): the
-  modules were built as nine separate articles. A single book with modules as
-  chapters gives one site, one table of contents, and working cross-references
-  between modules.
+- Structure (decided by Quinn, 2026-10-05): one book, each module a chapter.
+  The modules were originally nine separate articles. The book gives one site,
+  one table of contents, and working cross-references between modules. Each
+  chapter is one file in `source/` that pulls in one file per section.
+- Id mapping (approved by Quinn, 2026-10-05; applied once, at migration). The
+  old pages were never published, so these renames break no URLs:
+
+  | Old (`incoming/`) | New (`source/`) |
+  |---|---|
+  | `module-N` (article) | `ch-modN` (chapter) |
+  | `ws-modN-<component>` | `sec-modN-<component>` |
+  | `ex-...` with uppercase (`ex-mod1-ps-F1`) | lowercase (`ex-mod1-ps-f1`) |
+  | `assess-modN-<x>` (exercises) | `ex-modN-as-<x>` |
+  | `assess-modN-rubric` (paragraphs) | `par-modN-as-rubric` |
+  | `par-...`, `obj-...` | unchanged |
 - Legacy workarounds from the old `pretextbook` 0.8.3 builds (the `<executables>`
   block, the `extpfeil.sty` stub, post-build CSS injection to hide section
   numbers) should not be carried forward until the publisher confirms the
