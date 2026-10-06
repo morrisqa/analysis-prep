@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<project ptx-version="2" source=".">
-  <targets>
-    <target name="web" format="html" source="mod8-main.ptx" output-dir="compiled-output/Module8-HTML" />
-    <target name="print" format="pdf" source="mod8-main.ptx" output-dir="compiled-output" output-filename="Module8.pdf" latex-engine="pdflatex" />
-  </targets>
-</project>
