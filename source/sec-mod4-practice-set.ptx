@@ -150,8 +150,7 @@
       These problems apply the same moves to longer arguments: a direct
       <m>\varepsilon</m>-<m>N</m> proof of convergence, a proof using the
       Squeeze Theorem, a proof that a convergent sequence is bounded, and
-      a proof of divergence from the negation of the definition of
-      convergence.
+      a proof of divergence by negating the definition of convergence.
     </p>
   </paragraphs>
 

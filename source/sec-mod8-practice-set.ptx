@@ -150,14 +150,11 @@
     <!-- TODO(quinn): sentence added in #4 to satisfy the schema; confirm or replace. -->
     <p>
       These problems apply the same moves to longer arguments: a proof
-      using the integrability criterion that <m>x^2</m> is integrable on
-      <m>[0,1]</m>, a proof of integration by parts from the product rule
-      and FTC Part 2, a proof using monotonicity of the integral that an
-      integrable function bounded between <m>m</m> and <m>M</m> has
-      integral between <m>m(b-a)</m> and <m>M(b-a)</m>, a proof that an
-      increasing function on <m>[a,b]</m> is integrable, and a proof that
-      <m>|f|</m> is integrable whenever <m>f</m> is, with
-      <m>\left|\int_a^b f\right| \leq \int_a^b |f|</m>.
+      that <m>x^2</m> is integrable on <m>[0,1]</m>, a proof of integration
+      by parts, a proof that bounds on an integrand give bounds on its
+      integral, a proof that an increasing function on <m>[a,b]</m> is
+      integrable, and a proof that <m>|f|</m> is integrable whenever
+      <m>f</m> is, with <m>\left|\int_a^b f\right| \leq \int_a^b |f|</m>.
     </p>
   </paragraphs>
 

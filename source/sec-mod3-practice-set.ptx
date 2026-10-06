@@ -25,8 +25,8 @@
     <!-- TODO(quinn): sentence added in #4 to satisfy the schema; confirm or replace. -->
     <p>
       These problems practice the basic moves of the module: computing
-      intersections and set differences, deciding statements about
-      membership and subsets, testing functions for injectivity and
+      intersections and set differences, deciding whether statements about
+      membership and subsets are true, testing functions for injectivity and
       surjectivity, describing inverses of bijections, and classifying
       sets as finite, countably infinite, or uncountable.
     </p>
@@ -283,10 +283,9 @@
     <title>Challenge Problems</title>
     <!-- TODO(quinn): sentence added in #4 to satisfy the schema; confirm or replace. -->
     <p>
-      These problems extend the module's ideas: partial converses, with a
-      counterexample, to the composition results for injections and
-      surjections, and a proof by Cantor's diagonal argument that
-      <m>(0,1)</m> is uncountable.
+      These problems extend the module's ideas: partial converses to the
+      results on composing injections and surjections, and a proof by
+      Cantor's diagonal argument that <m>(0,1)</m> is uncountable.
     </p>
   </paragraphs>
 

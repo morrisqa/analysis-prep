@@ -25,10 +25,10 @@
     <!-- TODO(quinn): sentence added in #4 to satisfy the schema; confirm or replace. -->
     <p>
       These problems practice the basic moves of the module: finding
-      pointwise limits of sequences of functions, computing the supremum
-      of <m>|f_n(x) - f(x)|</m> over a set and deciding whether it tends
-      to <m>0</m>, judging whether convergence is uniform on a given set,
-      and applying the Weierstrass <m>M</m>-Test to series of functions.
+      pointwise limits of sequences of functions, computing sup-norm
+      distances to the pointwise limit, deciding whether convergence is
+      uniform on a given set, and applying the Weierstrass <m>M</m>-Test to
+      series of functions.
     </p>
   </paragraphs>
 
@@ -238,8 +238,8 @@
     <!-- TODO(quinn): sentence added in #4 to satisfy the schema; confirm or replace. -->
     <p>
       These problems apply the same moves to longer arguments: a
-      sup-norm proof of uniform convergence, a sequence of points showing
-      convergence is not uniform, uniform convergence and term-by-term
+      sup-norm proof of uniform convergence, a sequence-of-points proof
+      that convergence is not uniform, uniform convergence and term-by-term
       integration of a geometric series, radii of convergence from the
       Ratio Test followed by the <m>M</m>-Test, and an example where
       uniform convergence does not carry over to derivatives.
@@ -415,9 +415,9 @@
       These problems extend the module's ideas: a proof that a uniform
       limit of Riemann integrable functions on <m>[a,b]</m> is integrable,
       with integral equal to the limit of the integrals, and a proof using
-      the Weierstrass <m>M</m>-Test that a power series converges
-      uniformly on each interval <m>[-r,r]</m> with <m>r</m> less than its
-      radius of convergence.
+      the Weierstrass <m>M</m>-Test that a power series with positive
+      radius of convergence <m>R</m> converges uniformly on each interval
+      <m>[-r,r]</m> with <m>0 \lt r \lt R</m>.
     </p>
   </paragraphs>
 
