@@ -54,11 +54,12 @@
         <md>
           \sup_{x \in [0,1]} |f_n(x) - f(x)| = 1
         </md>
-        for every <m>n</m>. (The sup is not attained in <m>[0,1)</m> but
-        equals <m>1</m> since the function <m>x \mapsto x^n</m> approaches
-        <m>1</m> as <m>x \to 1^-</m>; at <m>x=1</m>, <m>|f_n(1)-f(1)|=0</m>,
-        so the sup over <m>[0,1]</m> is still <m>1</m> by continuity of
-        <m>x^n</m> on <m>[0,1)</m>.) Since the sup is <m>1</m> for every
+        for every <m>n</m>. (Every value <m>|f_n(x) - f(x)|</m> is at most
+        <m>1</m>: it equals <m>x^n \lt 1</m> for <m>x \in [0,1)</m> and
+        <m>0</m> at <m>x = 1</m>. So the sup is at most <m>1</m>. It is not
+        less than <m>1</m>, because <m>x^n \to 1</m> as <m>x \to 1^-</m>, so
+        the values <m>x^n</m> with <m>x \in [0,1)</m> come arbitrarily close
+        to <m>1</m>. The sup is not attained.) Since the sup is <m>1</m> for every
         <m>n</m>, it does not converge to <m>0</m>, and the convergence is
         not uniform. <m>\square</m>
       </p>
@@ -123,8 +124,9 @@
         <m>f_N</m>; (3) uniform convergence applied at <m>x_0</m>. The key
         is that <m>N</m> is chosen <em>before</em> <m>x</m>&#x2014;this is
         exactly what uniform convergence buys. With only pointwise convergence,
-        the <m>N</m> from (1) would depend on <m>x</m>, making the argument
-        circular.
+        the <m>N</m> from (1) would depend on <m>x</m>, and no single
+        <m>f_N</m> (and so no single <m>\delta</m>) would work for every
+        <m>x</m> near <m>x_0</m>.
       </p>
     </solution>
   </exercise>
@@ -170,8 +172,9 @@
         role of the known convergent series. The uniformity of the bound
         <m>|f_n(x)| \leq M_n</m> (no <m>x</m> in <m>M_n</m>) is what
         delivers uniform convergence. Notice also that we used
-        <m>|\sin(nx)| \leq 1</m>&#x2014;a global bound available precisely
-        because the domain is all of <m>\R</m>.
+        <m>|\sin(nx)| \leq 1</m>, a bound that holds for every real
+        <m>x</m>; that is why the same <m>M_n</m> works on the whole domain
+        <m>\R</m>.
       </p>
     </solution>
   </exercise>
@@ -195,8 +198,9 @@
       <p>
         <alert>Strategy.</alert>
         Start from the geometric series for <m>1/(1+t^2)</m>, integrate
-        term by term (justified by uniform convergence on a compact interval),
-        and evaluate at <m>x = 1</m>.
+        term by term (justified by uniform convergence on a compact interval)
+        to get the series for <m>\arctan(x)</m> when <m>0 \leq x \lt 1</m>,
+        and then reach <m>x = 1</m> with a direct estimate of the remainder.
       </p>
       <p>
         <alert>Proof.</alert>
@@ -213,15 +217,40 @@
         continuous functions is continuous (Example 2). By the term-by-term
         integration theorem, for <m>x \in [0,r]</m>,
         <md>
-          <mrow>\int_0^x \frac{dt}{1+t^2} \amp= \int_0^x
+          \int_0^x \frac{dt}{1+t^2} = \int_0^x
           \sum_{n=0}^{\infty} (-1)^n t^{2n}\,dt =
-          \sum_{n=0}^{\infty} (-1)^n \frac{x^{2n+1}}{2n+1}.</mrow>
+          \sum_{n=0}^{\infty} (-1)^n \frac{x^{2n+1}}{2n+1}.
         </md>
         The left side equals <m>\arctan(x)</m>.
-        Setting <m>x = 1</m>: since the series
-        <m>\sum_{n=0}^{\infty} \frac{(-1)^n}{2n+1}</m> converges by the
-        Alternating Series Test (terms positive, decreasing to <m>0</m>),
-        and <m>\arctan(1) = \pi/4</m>, we conclude
+      </p>
+      <p>
+        Setting <m>x = 1</m> is not covered by this argument: the geometric
+        series diverges at <m>t = 1</m>, so it does not converge uniformly
+        on <m>[0,1]</m>. The series
+        <m>\sum_{n=0}^{\infty} \frac{(-1)^n}{2n+1}</m> does converge, by
+        the Alternating Series Test (terms positive, decreasing to
+        <m>0</m>), but that alone does not tell us its sum. We estimate the
+        partial sums directly. For every <m>t</m> and every <m>n \geq 0</m>,
+        the finite geometric sum
+        <m>\sum_{k=0}^{n} (-t^2)^k = \bigl(1 - (-t^2)^{n+1}\bigr)/(1+t^2)</m>
+        gives
+        <md>
+          \frac{1}{1+t^2} = \sum_{k=0}^{n} (-1)^k t^{2k} + (-1)^{n+1}\frac{t^{2n+2}}{1+t^2}.
+        </md>
+        Every function here is continuous on <m>[0,1]</m>, so we may
+        integrate from <m>0</m> to <m>1</m> and use linearity and FTC Part 2
+        (<xref ref="ch-mod8" text="custom">Module 8</xref>), with
+        <m>\arctan(1) = \pi/4</m>:
+        <md>
+          \frac{\pi}{4} - \sum_{k=0}^{n} \frac{(-1)^k}{2k+1} = (-1)^{n+1}\int_0^1 \frac{t^{2n+2}}{1+t^2}\,dt.
+        </md>
+        On <m>[0,1]</m>, <m>0 \leq t^{2n+2}/(1+t^2) \leq t^{2n+2}</m>, so by
+        monotonicity of the integral
+        <md>
+          \left|\frac{\pi}{4} - \sum_{k=0}^{n} \frac{(-1)^k}{2k+1}\right| \leq \int_0^1 t^{2n+2}\,dt = \frac{1}{2n+3}.
+        </md>
+        The right side tends to <m>0</m>, so the partial sums converge to
+        <m>\pi/4</m>:
         <md>
           \sum_{n=0}^{\infty} \frac{(-1)^n}{2n+1}
           = 1 - \frac{1}{3} + \frac{1}{5} - \cdots = \frac{\pi}{4}.
@@ -230,12 +259,18 @@
       </p>
       <p>
         <alert>What to notice.</alert>
-        The passage from <m>x \in [0,r]</m> to <m>x = 1</m> uses a
-        continuity argument (Abel's theorem) that is beyond this course&#x2014;we
-        have stated the result but not proved this final step rigorously.
-        The term-by-term integration part is fully rigorous on any <m>[0,r]</m>
-        with <m>r \lt 1</m>; extending to the boundary is a topic for
-        MAT 5610. The punchline&#x2014;<m>\pi/4</m> as an alternating series
+        The term-by-term integration theorem gives the series for
+        <m>\arctan(x)</m> on any <m>[0,r]</m> with <m>r \lt 1</m>, but not at
+        the endpoint <m>x = 1</m>, where the geometric series fails to
+        converge. A general result, Abel's theorem, says that whenever a
+        power series converges at an endpoint of its interval of
+        convergence, its value there is the limit of its values from inside
+        (see Rudin, <pubtitle>Principles of Mathematical Analysis</pubtitle>,
+        3rd edition, Theorem 8.2). Here a direct estimate suffices, and it
+        even gives a rate: the <m>n</m>th partial sum is within
+        <m>1/(2n+3)</m> of <m>\pi/4</m>. The same estimate, with
+        <m>\int_0^x</m> in place of <m>\int_0^1</m>, proves the series for
+        <m>\arctan(x)</m> for every <m>x \in [0,1]</m>. The punchline&#x2014;<m>\pi/4</m> as an alternating series
         of unit fractions&#x2014;is one of the most beautiful results in
         elementary analysis.
       </p>

@@ -54,8 +54,9 @@
             Use the definition of uniform convergence to obtain
             <m>N \in \N</m> such that <m>|f_n(x) - f(x)| \lt
             \varepsilon/3</m> for all <m>n \geq N</m> and all
-            <m>x \in [a,b]</m>. Specify the value of <m>N</m>
-            you fix.
+            <m>x \in [a,b]</m>. Say explicitly that you fix one
+            such <m>N</m>, and note that it does not depend on
+            <m>x</m>.
           </li>
           <li>
             <em>Choose <m>\delta</m> from continuity of <m>f_N</m>.</em>
@@ -104,10 +105,10 @@
     </p>
 
   <exercise xml:id="ex-mod9-as-2">
-    <title>The Sequence <m>f_n(x) = nx\,e^{-nx}</m></title>
+    <title>The Sequence <m>f_n(x) = n^2x\,e^{-nx}</m></title>
     <statement>
       <p>
-        Let <m>f_n(x) = nx\,e^{-nx}</m> for <m>x \in [0,1]</m>.
+        Let <m>f_n(x) = n^2x\,e^{-nx}</m> for <m>x \in [0,1]</m>.
       </p>
       <p>
         <ol marker="(i)">
@@ -146,15 +147,13 @@
     </statement>
     <hint>
       <p>
-        For part (i): recall that <m>nx \to \infty</m> as
-        <m>n \to \infty</m> when <m>x \gt 0</m>, so you need
-        <m>u e^{-u} \to 0</m> as <m>u \to \infty</m>&#x2014;which
-        follows from L'H&#x00F4;pital's rule or the standard
-        limit <m>e^u \gg u</m>.
-        For part (ii): differentiate <m>g(x) = nx\,e^{-nx}</m>
+        For part (i): for fixed <m>x \gt 0</m>, rewrite
+        <m>f_n(x)</m> in terms of <m>u = nx</m>, and bound
+        <m>e^u</m> below by a polynomial in <m>u</m> using
+        Taylor's Theorem (<xref ref="ch-mod7" text="custom">Module 7</xref>).
+        For part (ii): differentiate <m>g(x) = n^2x\,e^{-nx}</m>
         with respect to <m>x</m> and set <m>g'(x) = 0</m>.
-        For part (iv): use integration by parts
-        <m>\int_0^1 nx\,e^{-nx}\,dx</m>.
+        For part (iv): use integration by parts.
       </p>
     </hint>
   </exercise>

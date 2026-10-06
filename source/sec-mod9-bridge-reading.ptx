@@ -22,8 +22,9 @@
       <m>\sup</m>-norm criterion: are they identical to Zorn's
       formulation, or phrased differently? Second, Bauldry's
       treatment of power series at the end of &#xa7;2.6: he shows
-      that a power series converges uniformly on any closed disk
-      strictly inside its radius of convergence, and derives term-by-term
+      that a power series converges uniformly on any closed interval
+      <m>[-r,r]</m> (a closed disk, if the variable is complex) with
+      <m>r</m> strictly less than its radius of convergence, and derives term-by-term
       differentiation and integration as corollaries. This is the
       framework MAT 5610 will use throughout Chapter 2.
     </p>
@@ -42,8 +43,9 @@
     <p>
       Bauldry opens &#xa7;2.6 by giving the definitions of pointwise
       and uniform convergence and the sup-norm criterion for uniform
-      convergence. These match Zorn &#xa7;4.4 precisely. Read the
-      definitions carefully; then answer the exercises below.
+      convergence. Read the definitions carefully, and check them
+      against Zorn &#xa7;4.4 and the module orientation; then answer the
+      exercises below.
     </p>
   </paragraphs>
 
@@ -115,7 +117,10 @@
             Bauldry may state a stronger version: that the limit of a
             uniformly convergent sequence of continuous functions on a
             closed interval is <em>uniformly</em> continuous.
-            Does he state this? What additional hypothesis is needed?
+            Does he state this? Is any hypothesis needed beyond those
+            of the continuity theorem? (Recall what
+            <xref ref="ch-mod6" text="custom">Module 6</xref> says
+            about continuous functions on a closed, bounded interval.)
           </li>
         </ol>
       </p>
@@ -139,9 +144,10 @@
             The derivation of the Leibniz formula
             <m>\pi/4 = 1 - 1/3 + 1/5 - \cdots</m> in Worked
             Example 4 used this theorem on <m>[0,r]</m> for
-            <m>r \lt 1</m>, with a continuity argument (Abel's
-            theorem) to reach <m>x = 1</m>. Does Bauldry address
-            this boundary extension? What does he say?
+            <m>r \lt 1</m>, and then a direct estimate of the
+            remainder to reach <m>x = 1</m>. Abel's theorem gives this
+            kind of boundary extension in general. Does Bauldry address
+            it? What does he say?
           </li>
         </ol>
       </p>
@@ -192,7 +198,7 @@
           <li>
             Why is the uniform convergence restricted to
             <m>[-r,r]</m> with <m>r \lt R</m>, rather than the
-            full interval of convergence <m>(-R, R)</m>? Give a
+            whole open interval <m>(-R, R)</m>? Give a
             specific example where the series converges at every
             point of <m>(-R,R)</m> but not uniformly.
           </li>
@@ -239,14 +245,23 @@
       This is the final bridge reading of the prep course. Over nine
       modules, you have built every foundational tool that MAT 5610
       will use in Bauldry Chapter 2: the logic and proof-writing
-      infrastructure (Module 1), the completeness of <m>\R</m>
-      (Module 2), the theory of sequences including Cauchy sequences
-      and subsequences (Module 4), series including absolute and
-      conditional convergence (Module 5), limits, continuity, and
-      uniform continuity of functions (Module 6), differentiation
-      and the Mean Value Theorem (Module 7), Riemann integration and
-      the Fundamental Theorem (Module 8), and now uniform convergence
-      of function sequences and series (Module 9).
+      infrastructure (<xref ref="ch-mod1" text="custom">Module 1</xref>),
+      the completeness of <m>\R</m>
+      (<xref ref="ch-mod2" text="custom">Module 2</xref>), sets,
+      functions, and cardinality
+      (<xref ref="ch-mod3" text="custom">Module 3</xref>), the theory
+      of sequences including Cauchy sequences and subsequences
+      (<xref ref="ch-mod4" text="custom">Module 4</xref>), series
+      including absolute and conditional convergence
+      (<xref ref="ch-mod5" text="custom">Module 5</xref>), limits,
+      continuity, and uniform continuity of functions
+      (<xref ref="ch-mod6" text="custom">Module 6</xref>),
+      differentiation and the Mean Value Theorem
+      (<xref ref="ch-mod7" text="custom">Module 7</xref>), Riemann
+      integration and the Fundamental Theorem
+      (<xref ref="ch-mod8" text="custom">Module 8</xref>), and now
+      uniform convergence of function sequences and series
+      (Module 9).
     </p>
     <p>
       Bauldry Chapter 2 is the rigorous version of all of that&#x2014;

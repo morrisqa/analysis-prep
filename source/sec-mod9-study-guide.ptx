@@ -242,9 +242,16 @@
       <p>
         (c) With only pointwise convergence, the <m>N</m> chosen in Step 1
         depends on <m>x</m>&#x2014;a different <m>N</m> is needed near
-        <m>x_0</m> and away from it. In particular, the <m>f_N</m> selected
-        to control Terms 1 and 3 may not be continuous <em>at</em> <m>x</m>,
-        because <m>N</m> was chosen for <m>x_0</m>, not for <m>x</m>.
+        <m>x_0</m> and away from it. The step that breaks is the choice of
+        a single <m>f_N</m> before <m>x</m> is chosen. Every <m>f_N</m> is
+        continuous, so Term 2 is never the problem. The problem is Term 1:
+        an <m>N</m> chosen so that <m>|f_N(x_0) - f(x_0)| \lt \varepsilon/3</m>
+        need not give <m>|f_N(x) - f(x)| \lt \varepsilon/3</m> at the other
+        points <m>x</m> near <m>x_0</m>, and if we enlarge <m>N</m> to suit
+        a particular <m>x</m>, the <m>\delta</m> from continuity of
+        <m>f_N</m> changes, so the set of points <m>x</m> under control
+        changes too. No single <m>N</m> and <m>\delta</m> need work for every
+        <m>x</m> with <m>|x - x_0| \lt \delta</m>.
       </p>
     </answer>
   </exercise>
@@ -261,7 +268,12 @@
           </li>
           <li>
             <p>
-              Prove it. <em>Hint:</em> estimate
+              Prove it. <em>Hint:</em> there are two things to prove.
+              First show that <m>f</m> is Riemann integrable, using the
+              integrability criterion from
+              <xref ref="ch-mod8" text="custom">Module 8</xref>: compare
+              <m>U(f,P) - L(f,P)</m> with <m>U(f_N,P) - L(f_N,P)</m> for a
+              suitable <m>N</m>. Then estimate
               <m>\left|\int_a^b f_n - \int_a^b f\right| \leq
               \int_a^b |f_n - f| \leq (b-a) \cdot \sup_{x} |f_n(x) - f(x)|</m>.
             </p>
@@ -283,9 +295,46 @@
         <m>\int_a^b f = \lim_{n \to \infty} \int_a^b f_n</m>.
       </p>
       <p>
-        (b) <m>\left|\int_a^b f_n - \int_a^b f\right| = \left|\int_a^b
-        (f_n - f)\right| \leq \int_a^b |f_n - f| \leq (b-a) \cdot
-        \sup_x |f_n(x) - f(x)| \to 0</m> by uniform convergence.
+        (b) Write <m>s_n = \sup_{x \in [a,b]} |f_n(x) - f(x)|</m>. By the
+        sup-norm criterion, <m>s_n \to 0</m>; in particular <m>s_n</m> is
+        finite for all large <m>n</m>.
+      </p>
+      <p>
+        <em><m>f</m> is bounded.</em> Choose <m>N_0</m> with
+        <m>s_{N_0} \leq 1</m>. The function <m>f_{N_0}</m> is integrable,
+        hence bounded (upper and lower sums are defined only for bounded
+        functions), say <m>|f_{N_0}(x)| \leq M</m> on <m>[a,b]</m>. Then
+        <m>|f(x)| \leq |f_{N_0}(x)| + |f(x) - f_{N_0}(x)| \leq M + 1</m>
+        for every <m>x \in [a,b]</m>.
+      </p>
+      <p>
+        <em><m>f</m> is integrable.</em> Let <m>\varepsilon \gt 0</m>, and
+        choose <m>N</m> with <m>s_N \lt \varepsilon/(3(b-a))</m>. Let
+        <m>I</m> be any subinterval of <m>[a,b]</m>. For <m>x \in I</m>,
+        <m>f(x) \leq f_N(x) + s_N \leq \sup_I f_N + s_N</m>, so
+        <m>\sup_I f \leq \sup_I f_N + s_N</m>; in the same way,
+        <m>\inf_I f \geq \inf_I f_N - s_N</m>. Subtracting,
+        <md>\sup_I f - \inf_I f \leq \left(\sup_I f_N - \inf_I f_N\right) + 2s_N.</md>
+        Apply this to each subinterval of a partition <m>P</m> of
+        <m>[a,b]</m>, multiply by the length of the subinterval, and add.
+        Since the lengths add up to <m>b - a</m>,
+        <md>U(f,P) - L(f,P) \leq U(f_N,P) - L(f_N,P) + 2s_N(b-a).</md>
+        Because <m>f_N</m> is integrable, the integrability criterion gives
+        a partition <m>P</m> with
+        <m>U(f_N,P) - L(f_N,P) \lt \varepsilon/3</m>. For this <m>P</m>,
+        <m>U(f,P) - L(f,P) \lt \varepsilon/3 + 2\varepsilon/3 = \varepsilon</m>.
+        Since <m>\varepsilon</m> was arbitrary, <m>f</m> is integrable by
+        the integrability criterion.
+      </p>
+      <p>
+        <em>The integrals converge.</em> For <m>n</m> large enough that
+        <m>s_n</m> is finite, <m>f_n - f</m> is integrable (linearity), so
+        <m>|f_n - f|</m> is integrable (<xref ref="ex-mod8-ps-s5"/>), and
+        <m>|f_n - f| \leq s_n</m> on <m>[a,b]</m>. By monotonicity of the
+        integral,
+        <md>\left|\int_a^b f_n - \int_a^b f\right| = \left|\int_a^b
+        (f_n - f)\right| \leq \int_a^b |f_n - f| \leq (b-a) \cdot s_n \to 0.</md>
+        Hence <m>\int_a^b f = \lim_{n \to \infty} \int_a^b f_n</m>.
       </p>
       <p>
         (c) <m>\int_0^1 x^n\,dx = 1/(n+1) \to 0</m>. But
@@ -299,6 +348,52 @@
       </p>
     </answer>
   </exercise>
+
+  <paragraphs xml:id="par-mod9-sg-interchange-fails">
+    <title>When the Interchange Fails</title>
+    <p>
+      In <xref ref="ex-mod9-sg-5"/>(c) the convergence is not uniform, yet
+      the limit and the integral can still be interchanged. Pointwise
+      convergence does not always cause trouble, but it can. Here is a
+      sequence for which the interchange fails. For <m>n \in \N</m> and
+      <m>x \in [0,1]</m>, let
+      <md>g_n(x) = 2n^2 x\,e^{-n^2x^2},</md>
+      the second sequence in <xref ref="ex-mod9-sa-3"/>.
+    </p>
+    <p>
+      <em>The pointwise limit is <m>0</m>.</em> First, <m>g_n(0) = 0</m> for
+      every <m>n</m>. Now fix <m>x \in (0,1]</m> and put <m>u = n^2x^2</m>,
+      so that <m>g_n(x) = (2/x)\,u\,e^{-u}</m>. By
+      <xref ref="par-mod7-sg-43-taylor" text="custom">Taylor's Theorem</xref>
+      with <m>n = 1</m> and <m>a = 0</m>, <m>e^u = 1 + u + e^c u^2/2</m>
+      for some <m>c</m> between <m>0</m> and <m>u</m>; since <m>e^c \geq 1</m>,
+      this gives <m>e^u \geq u^2/2</m> for <m>u \gt 0</m>. Hence
+      <m>0 \leq u\,e^{-u} \leq 2/u</m>, so
+      <m>0 \leq g_n(x) \leq 4/(n^2x^3)</m>, which tends to <m>0</m> as
+      <m>n \to \infty</m>.
+    </p>
+    <p>
+      <em>The integrals tend to <m>1</m>.</em> Since
+      <m>\frac{d}{dx}\left[-e^{-n^2x^2}\right] = g_n(x)</m>, FTC Part 2
+      (<xref ref="ch-mod8" text="custom">Module 8</xref>) gives
+      <md>\int_0^1 g_n(x)\,dx = 1 - e^{-n^2} \to 1.</md>
+      But the pointwise limit is the zero function, whose integral is
+      <m>0</m>. So
+      <md>\lim_{n \to \infty} \int_0^1 g_n(x)\,dx = 1 \neq 0 = \int_0^1 \lim_{n \to \infty} g_n(x)\,dx.</md>
+    </p>
+    <p>
+      The term-by-term integration theorem now tells you, with no further
+      computation, that <m>g_n \to 0</m> is not uniform on <m>[0,1]</m>:
+      if it were, the two numbers would agree. You can also see this
+      directly: <m>g_n(1/n) = 2n/e</m>, so
+      <m>\sup_{x \in [0,1]} |g_n(x) - 0| \geq 2n/e</m>, which does not
+      tend to <m>0</m>. The graph of <m>g_n</m> is a spike near
+      <m>x = 0</m> that grows taller and narrower while the area under it
+      approaches <m>1</m>. Pointwise convergence cannot detect the spike,
+      because the spike moves toward <m>0</m> and eventually passes every
+      fixed <m>x \gt 0</m>.
+    </p>
+  </paragraphs>
 
   <!-- ============================================================
        WEIERSTRASS M-TEST AND POWER SERIES
@@ -455,8 +550,20 @@
       <p>
         (c) At <m>x=1</m>: <m>\sum_{n=1}^{\infty} (-1)^{n+1}/n</m>.
         Terms decrease to 0, alternating; by the Alternating Series Test
-        (Module 5), this converges. Its sum is <m>\ln 2</m> (by continuity
-        of <m>\ln(1+x)</m>, a result proved via Abel's theorem in MAT 5610).
+        (Module 5), this converges. Its sum is <m>\ln 2</m>, but the
+        formula from (a) does not give this directly: (a) holds only for
+        <m>|x| \lt 1</m>, and what is needed is the value of the series at
+        <m>x = 1</m> itself. Abel's theorem gives results of this kind in
+        general; here a direct estimate suffices, the same one used in
+        <xref ref="ex-mod9-we-4" text="custom">Worked Example 4</xref>. For
+        <m>t \in [0,1]</m>, the finite geometric sum gives
+        <md>\frac{1}{1+t} = \sum_{k=0}^{n} (-1)^k t^k + (-1)^{n+1}\frac{t^{n+1}}{1+t}.</md>
+        Integrating from <m>0</m> to <m>1</m> (FTC Part 2),
+        <md>\ln 2 - \sum_{k=0}^{n} \frac{(-1)^k}{k+1} = (-1)^{n+1}\int_0^1 \frac{t^{n+1}}{1+t}\,dt,</md>
+        and since <m>0 \leq t^{n+1}/(1+t) \leq t^{n+1}</m> on <m>[0,1]</m>,
+        monotonicity of the integral bounds the right side in absolute value
+        by <m>\int_0^1 t^{n+1}\,dt = 1/(n+2) \to 0</m>. So the partial sums
+        converge to <m>\ln 2</m>.
       </p>
     </answer>
   </exercise>

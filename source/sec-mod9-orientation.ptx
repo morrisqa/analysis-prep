@@ -45,7 +45,8 @@
         <p>
           State and apply the term-by-term integration theorem: if
           <m>f_n \to f</m> uniformly on <m>[a,b]</m> and each <m>f_n</m>
-          is integrable, then
+          is Riemann integrable on <m>[a,b]</m>, then <m>f</m> is Riemann
+          integrable on <m>[a,b]</m> and
           <m>\int_a^b f = \lim_{n \to \infty} \int_a^b f_n</m>.
         </p>
       </li>
@@ -66,9 +67,20 @@
 
     <p>
       This module is the capstone of the course. Every major idea from the
-      preceding eight modules converges here: the <m>\varepsilon</m>-<m>N</m>
-      framework (Module 4), series as sequences of partial sums (Module 5),
-      continuity and uniform continuity (Module 6), integration (Module 8).
+      preceding eight modules converges here: the order of quantifiers
+      (<xref ref="ch-mod1" text="custom">Module 1</xref>), the supremum,
+      which now measures the worst-case distance between two functions
+      (<xref ref="ch-mod2" text="custom">Module 2</xref>), functions treated as
+      objects in their own right
+      (<xref ref="ch-mod3" text="custom">Module 3</xref>), the
+      <m>\varepsilon</m>-<m>N</m> framework
+      (<xref ref="ch-mod4" text="custom">Module 4</xref>), series as
+      sequences of partial sums
+      (<xref ref="ch-mod5" text="custom">Module 5</xref>), continuity and
+      uniform continuity (<xref ref="ch-mod6" text="custom">Module 6</xref>),
+      derivatives and Taylor polynomials
+      (<xref ref="ch-mod7" text="custom">Module 7</xref>), and integration
+      (<xref ref="ch-mod8" text="custom">Module 8</xref>).
       Sequences of functions ask a new kind of question: not <q>does this
       sequence of <em>numbers</em> converge?</q> but <q>does this sequence of
       <em>functions</em> converge, and if so, what properties does the limit
@@ -122,8 +134,16 @@
         For <m>f_n(x) = x^n</m> on <m>[0,1]</m>, compute
         <m>\int_0^1 f_n(x)\,dx = \int_0^1 x^n\,dx</m> exactly. What is
         <m>\lim_{n \to \infty} \int_0^1 f_n(x)\,dx</m>? Is this equal to
-        <m>\int_0^1 \lim_{n \to \infty} f_n(x)\,dx</m>? What does the
-        discrepancy (if any) suggest about interchanging limits and integrals?
+        <m>\int_0^1 \lim_{n \to \infty} f_n(x)\,dx</m>?
+      </p>
+      <p>
+        Now repeat the comparison for <m>g_n(x) = 2n^2 x\,e^{-n^2x^2}</m>
+        on <m>[0,1]</m>. You may take for granted that
+        <m>\lim_{n \to \infty} g_n(x) = 0</m> for every
+        <m>x \in [0,1]</m>; the integral <m>\int_0^1 g_n(x)\,dx</m> can be
+        computed with the substitution <m>u = n^2x^2</m>. What do the two
+        computations together suggest about interchanging limits and
+        integrals?
       </p>
     </statement>
   </exercise>
@@ -132,7 +152,9 @@
     <title>Power Series Radius</title>
     <statement>
       <p>
-        You have seen power series in Module 5. For
+        Power series appeared briefly, as a preview, in
+        <xref ref="ch-mod5" text="custom">Module 5</xref>, and you may have
+        met them in a calculus course. For
         <m>\sum_{n=0}^{\infty} x^n</m>, what is the radius of convergence?
         Does the series converge for <m>x = 1</m>? For <m>x = -1</m>?
         For <m>x = 0.5</m>? Record your best recollection from prior courses.
@@ -167,9 +189,16 @@
     </p>
     <p>
       This module also closes the loop on the entire prep course. The arc is:
-      we built logical and proof-writing foundations (Module 1), established
-      the real number system (Module 2), developed sequences (Module 4),
-      extended to functions (Modules 6&#x2013;8), and now we ask what happens
+      we built logical and proof-writing foundations
+      (<xref ref="ch-mod1" text="custom">Module 1</xref>), established
+      the real number system (<xref ref="ch-mod2" text="custom">Module 2</xref>),
+      made sets and functions precise
+      (<xref ref="ch-mod3" text="custom">Module 3</xref>), developed
+      sequences (<xref ref="ch-mod4" text="custom">Module 4</xref>) and
+      series (<xref ref="ch-mod5" text="custom">Module 5</xref>),
+      extended to functions (Modules
+      <xref ref="ch-mod6" text="custom">6</xref><ndash/><xref ref="ch-mod8" text="custom">8</xref>),
+      and now we ask what happens
       to all those properties&#x2014;continuity, integrability&#x2014;when
       functions themselves vary. The answer is: they survive under uniform
       convergence. This is the organizing principle of MAT 5610's treatment
