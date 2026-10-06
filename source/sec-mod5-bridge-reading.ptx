@@ -86,14 +86,17 @@
             For the two telescoping series Bauldry lists
             (<m>\sum 1/(k(k+1))</m> and <m>\sum 1/((2k-1)(2k+1))</m>),
             are the closed-form partial sums Bauldry gives consistent
-            with your Worked Example 1 and Practice Set S1? (They
-            should be: 1 and 1/2 respectively.)
+            with <xref ref="ex-mod5-we-1" text="custom">Worked Example 1</xref>
+            and <xref ref="ex-mod5-ps-s1"/>? (They should be:
+            <m>S_n = 1 - 1/(n+1)</m> and
+            <m>S_n = \frac{1}{2}\left(1 - 1/(2n+1)\right)</m>, with
+            sums 1 and 1/2 respectively.)
           </li>
           <li>
             Bauldry credits Oresme (14th century) with the harmonic
             series divergence argument. Reconstruct the argument from
             Bauldry's exposition and identify the central idea. (It
-            is the grouping argument from Study Guide &#xa7;2.5 Ex. 4.)
+            is the grouping argument from <xref ref="ex-mod5-sg-25-4"/>.)
           </li>
         </ol>
       </p>
@@ -119,20 +122,23 @@
             <q>nonnegative</q> terms are assumed).
           </li>
           <li>
-            Bauldry's Integral Test (Thm 1.38) is the one named test
-            you have <em>not</em> seen proved in this module's Study
-            Guide or Worked Examples. State the hypotheses precisely:
-            <m>f</m> must be continuous, positive, and decreasing on
-            <m>[1, \infty)</m>. Why are each of these hypotheses
-            required?
+            The Integral Test (Bauldry's Thm 1.38) is stated, but not
+            proved, in this module's Study Guide
+            (<xref ref="ex-mod5-sg-26-6"/>). State Bauldry's hypotheses
+            precisely: <m>f</m> must be continuous, positive, and
+            decreasing on <m>[1, \infty)</m>. The Study Guide's version
+            asks only for <m>f(x) \geq 0</m> in place of positivity.
+            What role does each hypothesis play? (For the decreasing
+            hypothesis, think about a continuous <m>f \geq 0</m> that
+            is 0 at every integer but has a divergent integral.)
           </li>
           <li>
             Bauldry remarks that the Alternating Series Test has a
             useful <em>remainder bound</em>: the tail
-            <m>\sum_{k > n} (-1)^{k-1} a_k</m> is bounded in absolute
+            <m>\sum_{k \gt n} (-1)^{k-1} a_k</m> is bounded in absolute
             value by <m>a_{n+1}</m>. Why is this plausible? (Think
-            about the squeezing of even and odd partial sums between
-            consecutive <m>a_k</m>.)
+            about how the sum of the series lies between consecutive
+            partial sums.)
           </li>
         </ol>
       </p>
@@ -201,7 +207,13 @@
             Reproduce the ratio-test computation: the ratio of
             consecutive terms (in absolute value) is
             <m>|x^{n+1}/(n+1)!| \cdot |n!/x^n| = |x|/(n+1)</m>, which
-            tends to 0 for every fixed <m>x \in \R</m>.
+            tends to 0 for every fixed <m>x \in \R</m>. The Ratio Test
+            of <xref ref="ex-mod5-sg-26-3"/> is stated for positive
+            terms, so for <m>x \neq 0</m> apply it to the series of
+            absolute values <m>\sum |x|^n/n!</m>, and then use
+            <xref ref="ex-mod5-sg-26-4"/>. At <m>x = 0</m> the ratio is
+            undefined, but the series is <m>1 + 0 + 0 + \cdots</m>,
+            which converges.
           </li>
           <li>
             Conclude the interval of convergence: the series
@@ -219,9 +231,16 @@
     </statement>
     <answer>
       <p>
-        (c) Ratio <m>= |x^{n+1}|/|x^n| = |x|</m>. The Ratio Test says
-        the series converges when <m>|x| \lt 1</m>, diverges when
-        <m>|x| \gt 1</m>, and is inconclusive at <m>|x| = 1</m>.
+        (c) For <m>x \neq 0</m>, the ratio is
+        <m>|x^{n+1}|/|x^n| = |x|</m>. If <m>|x| \lt 1</m>, the Ratio
+        Test shows that <m>\sum |x|^n</m> converges, so
+        <m>\sum x^n</m> converges absolutely, and hence converges. If
+        <m>|x| \gt 1</m>, then <m>|x^n| = |x|^n \geq 1</m> for every
+        <m>n</m>, so <m>x^n \not\to 0</m> and <m>\sum x^n</m> diverges
+        by the Divergence Test. (Divergence of <m>\sum |x|^n</m> alone
+        would not show that <m>\sum x^n</m> diverges.) At <m>x = 0</m>
+        the series is <m>1 + 0 + 0 + \cdots</m>, which converges.
+        The test is inconclusive at <m>|x| = 1</m>.
         Hence <m>R = 1</m>. (At <m>x = \pm 1</m> the series diverges
         for reasons outside the Ratio Test&#x2014;at <m>x = 1</m>,
         <m>a_k = 1 \not\to 0</m>; at <m>x = -1</m>, the alternating

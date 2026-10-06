@@ -114,7 +114,8 @@
         decreasing and bounded below by 0; MCT gives a limit <m>L \geq 0</m>.
         Since <m>|r|^{n+1} = |r| \cdot |r|^n</m>, passing to the limit
         on both sides gives <m>L = |r| \cdot L</m>, so
-        <m>L (1 - |r|) = 0</m>, so <m>L = 0</m>.
+        <m>L (1 - |r|) = 0</m>, so <m>L = 0</m>. Since
+        <m>|r^n - 0| = |r|^n</m>, this gives <m>r^n \to 0</m>.
         (c) Using the sum and quotient rules from the Algebra of Limits
         together with <m>r^n \to 0</m> gives
         <m>a(1 - r^n)/(1 - r) \to a \cdot 1/(1 - r)</m>.
@@ -135,17 +136,22 @@
         convergence and a Module 4 limit law of your choice.
       </p>
       <p>
-        (Hint: <m>a_n = S_n - S_{n-1}</m>.)
+        (Hint: <m>a_n = S_n - S_{n-1}</m>, where <m>S_0 = 0</m>.)
       </p>
     </statement>
     <answer>
       <p>
         Assume <m>\sum a_k</m> converges, so <m>S_n \to S</m> for
-        some <m>S \in \R</m>. The sequence <m>(S_{n-1})</m> is
-        obtained by shifting <m>(S_n)</m> back by one index; every
-        subsequence of <m>(S_n)</m> has the same limit, so
-        <m>S_{n-1} \to S</m> as well. By the difference rule (Algebra
-        of Limits), <m>a_n = S_n - S_{n-1} \to S - S = 0</m>.
+        some <m>S \in \R</m>. Set <m>S_0 = 0</m>, so that
+        <m>a_n = S_n - S_{n-1}</m> for every <m>n \geq 1</m>. The
+        sequence <m>(S_{n-1})_{n \geq 1} = (S_0, S_1, S_2, \ldots)</m> is
+        obtained by shifting <m>(S_n)</m> back by one index, and it has
+        the same limit: given <m>\varepsilon \gt 0</m>, choose <m>N</m>
+        with <m>|S_n - S| \lt \varepsilon</m> for all <m>n \geq N</m>;
+        then <m>|S_{n-1} - S| \lt \varepsilon</m> for all
+        <m>n \geq N + 1</m>. So <m>S_{n-1} \to S</m> as well. By the
+        difference rule (Algebra of Limits),
+        <m>a_n = S_n - S_{n-1} \to S - S = 0</m>.
       </p>
     </answer>
   </exercise>
@@ -160,6 +166,8 @@
         standard example.
       </p>
       <p>
+        Write <m>H_n = 1 + \frac{1}{2} + \cdots + \frac{1}{n}</m> for
+        the <m>n</m>th partial sum of the harmonic series.
         Reproduce one of the proofs that <m>\sum 1/k</m> diverges.
         The cleanest is the classical grouping argument (sometimes
         attributed to Oresme in the 14th century):
@@ -217,8 +225,12 @@
       Section 2.6 is a catalog of convergence tests. Read slowly,
       because this is where the recipes get proved. For each test,
       identify: the hypothesis on the terms, the conclusion about the
-      series, and the Module 4 fact (MCT, comparison of bounded
-      sequences, geometric decay) that drives the proof.
+      series, and the earlier fact that drives the proof: a result
+      from <xref ref="ch-mod4" text="custom">Module 4</xref> (MCT,
+      the Cauchy criterion, or the fact that
+      <xref ref="par-mod4-sg-two-facts" text="custom">limits preserve
+      non-strict inequalities</xref>) or the geometric series of
+      <xref ref="ex-mod5-sg-25-2"/>.
     </p>
   </paragraphs>
 
@@ -262,7 +274,10 @@
         (c) Without nonnegativity, <m>(S_n^{(a)})</m> need not be
         monotone, so MCT does not apply; moreover the inequality
         <m>a_k \leq b_k</m> by itself does not prevent partial sums
-        from oscillating wildly.
+        from oscillating wildly. Even (i) fails: <m>a_k = -1</m> and
+        <m>b_k = 0</m> satisfy <m>a_k \leq b_k</m>, and <m>\sum b_k</m>
+        converges (to 0), but <m>S_n^{(a)} = -n</m>, so
+        <m>\sum a_k</m> diverges.
       </p>
     </answer>
   </exercise>
@@ -326,11 +341,16 @@
       <p>
         (a) Given <m>L \lt 1</m>, choose <m>r = (L + 1)/2 \in (L, 1)</m>.
         Pick <m>N</m> with <m>a_{k+1}/a_k \lt r</m> for <m>k \geq N</m>.
-        Induction gives <m>a_{N+j} \lt a_N r^j</m>. Then
-        <m>\sum_{k \geq N} a_k \lt a_N \sum_{j \geq 0} r^j = a_N/(1-r) \lt \infty</m>.
-        Comparison with this geometric bound yields convergence of
-        <m>\sum a_k</m> (the first <m>N - 1</m> terms are a finite sum
-        and do not affect convergence).
+        Induction gives <m>a_{N+j} \leq a_N r^j</m> for all
+        <m>j \geq 0</m>. Let <m>C = a_1 + \cdots + a_{N-1}</m>
+        (<m>C = 0</m> if <m>N = 1</m>). The partial sums <m>S_n</m>
+        increase because <m>a_k \gt 0</m>, and for <m>n \geq N</m> the
+        partial-sum formula of <xref ref="ex-mod5-sg-25-2"/> gives
+        <m>S_n \leq C + a_N \sum_{j=0}^{n-N} r^j
+        = C + a_N (1 - r^{n-N+1})/(1 - r) \leq C + a_N/(1 - r)</m>.
+        So <m>(S_n)</m> is increasing and bounded above by a finite
+        constant, and the Monotone Convergence Theorem gives
+        convergence of <m>\sum a_k</m>.
         (b) Harmonic series <m>\sum 1/k</m>: ratio
         <m>k/(k+1) \to 1</m>; diverges.
         <m>p</m>-series <m>\sum 1/k^2</m>: ratio
@@ -338,6 +358,126 @@
       </p>
     </answer>
   </exercise>
+
+  <paragraphs xml:id="par-mod5-sg-26-root">
+    <title>The Root Test</title>
+    <p>
+      The Ratio Test compares each term with the one before it. The
+      Root Test compares each term <m>a_k</m> directly with a power
+      <m>r^k</m> of a fixed number. This module uses it in the two
+      forms below; the limit form is the version you may know from
+      calculus. The proofs compare with the geometric series and use
+      only results from <xref ref="ch-mod4" text="custom">Module 4</xref>
+      and from this module. Every nonnegative real number has a unique
+      nonnegative <m>k</m>th root (a consequence of the completeness of
+      <m>\R</m>; it also follows from the Intermediate Value Theorem in
+      <xref ref="ch-mod6" text="custom">Module 6</xref>), and the usual
+      exponent laws apply to these roots. For <m>a_k \geq 0</m>,
+      <m>\sqrt[k]{a_k}</m> denotes the nonnegative <m>k</m>th root of
+      <m>a_k</m>.
+    </p>
+    <p>
+      <alert>Root Test, eventual-bound form.</alert>
+      Suppose <m>a_k \geq 0</m> for all <m>k</m>, and there exist a
+      number <m>r</m> with <m>0 \leq r \lt 1</m> and an index <m>N</m>
+      such that <m>\sqrt[k]{a_k} \leq r</m> for all <m>k \geq N</m>.
+      Then <m>\sum a_k</m> converges.
+    </p>
+    <p>
+      <em>Proof.</em> Raising both sides of
+      <m>\sqrt[k]{a_k} \leq r</m> to the <m>k</m>th power (both sides
+      are nonnegative) gives <m>a_k \leq r^k</m> for all
+      <m>k \geq N</m>. Let <m>C = a_1 + \cdots + a_{N-1}</m>, with
+      <m>C = 0</m> if <m>N = 1</m>. The partial sums <m>S_n</m> are
+      increasing because <m>a_k \geq 0</m>, and <m>S_n \leq C</m> for
+      <m>n \lt N</m>. For <m>n \geq N</m>, the partial-sum formula of
+      <xref ref="ex-mod5-sg-25-2"/> (with first term <m>r^N</m> and
+      ratio <m>r</m>) gives
+      <md>
+        <mrow>S_n \amp\leq C + \sum_{k=N}^{n} r^k
+        = C + r^N \cdot \frac{1 - r^{n-N+1}}{1 - r}</mrow>
+        <mrow>\amp\leq C + \frac{r^N}{1 - r}.</mrow>
+      </md>
+      So <m>(S_n)</m> is increasing and bounded above, and the
+      Monotone Convergence Theorem says it converges. <m>\square</m>
+    </p>
+    <p>
+      <alert>Root Test, limit form.</alert>
+      Suppose <m>a_k \geq 0</m> for all <m>k</m> and
+      <m>\sqrt[k]{a_k} \to \rho</m>. Then <m>\sum a_k</m> converges if
+      <m>\rho \lt 1</m> and diverges if <m>\rho \gt 1</m>. If
+      <m>\rho = 1</m>, the test is inconclusive.
+    </p>
+    <p>
+      <em>Proof.</em> Every root <m>\sqrt[k]{a_k}</m> is at least 0, so
+      <m>\rho \geq 0</m>, because limits preserve non-strict
+      inequalities (<xref ref="par-mod4-sg-two-facts" text="custom">Module 4</xref>).
+      Suppose <m>\rho \lt 1</m>, and set <m>r = (\rho + 1)/2</m>, so
+      that <m>0 \leq \rho \lt r \lt 1</m>. The definition of
+      convergence with <m>\varepsilon = r - \rho</m> gives an
+      <m>N</m> with <m>\sqrt[k]{a_k} \lt \rho + \varepsilon = r</m> for
+      all <m>k \geq N</m>, and the eventual-bound form shows that
+      <m>\sum a_k</m> converges. Now suppose <m>\rho \gt 1</m>. The
+      definition of convergence with <m>\varepsilon = \rho - 1</m>
+      gives an <m>N</m> with
+      <m>\sqrt[k]{a_k} \gt \rho - \varepsilon = 1</m>, and hence
+      <m>a_k \gt 1</m>, for all <m>k \geq N</m>. Then
+      <m>a_k \not\to 0</m> (if <m>a_k \to 0</m>, then
+      <m>a_k \lt 1</m> for all large <m>k</m>), so <m>\sum a_k</m>
+      diverges by the Divergence Test. <m>\square</m>
+    </p>
+    <p>
+      To see that <m>\rho = 1</m> decides nothing, compare
+      <m>\sum 1/k</m>, which diverges
+      (<xref ref="ex-mod5-sg-25-4"/>), with <m>\sum 1/k^2</m>, which
+      converges (the <m>p</m>-series theorem with <m>p = 2</m>; see
+      <xref ref="ex-mod5-sg-26-6"/>). For both, <m>\sqrt[k]{a_k} \to 1</m>.
+      Once you know that <m>k^{1/k} \to 1</m>, the quotient and product
+      rules give <m>\sqrt[k]{1/k} = 1/k^{1/k} \to 1</m> and
+      <m>\sqrt[k]{1/k^2} = (1/k^{1/k})^2 \to 1</m>.
+    </p>
+    <p>
+      The limit <m>k^{1/k} \to 1</m> does not follow from the Algebra
+      of Limits alone, because the base and the exponent both change
+      with <m>k</m>. We prove it with <term>Bernoulli's inequality</term>:
+      <m>(1 + h)^k \geq 1 + kh</m> for every <m>h \geq 0</m> and every
+      <m>k \geq 1</m>. The proof is by induction on <m>k</m>. For
+      <m>k = 1</m>, both sides equal <m>1 + h</m>. If the inequality
+      holds for <m>k</m>, multiplying both sides by
+      <m>1 + h \geq 1 \gt 0</m> preserves it, so
+      <m>(1 + h)^{k+1} \geq (1 + kh)(1 + h) = 1 + (k+1)h + kh^2
+      \geq 1 + (k+1)h</m>. Now let <m>h_k = k^{1/(2k)} - 1</m>, which
+      is at least 0 because <m>k \geq 1</m>. Bernoulli's inequality
+      gives <m>\sqrt{k} = (1 + h_k)^k \geq 1 + k h_k</m>, so
+      <md>0 \leq h_k \leq \frac{\sqrt{k} - 1}{k} \lt \frac{1}{\sqrt{k}}.</md>
+      Hence <m>1 \leq k^{1/k} = (1 + h_k)^2 \lt (1 + 1/\sqrt{k})^2</m>.
+      Also <m>1/\sqrt{k} \to 0</m>: given <m>\varepsilon \gt 0</m>,
+      the Archimedean Property gives an <m>N</m> with
+      <m>N \gt 1/\varepsilon^2</m>, and then every <m>k \geq N</m>
+      satisfies <m>1/\sqrt{k} \leq 1/\sqrt{N} \lt \varepsilon</m>.
+      So the right-hand side tends to 1 by the Algebra of Limits, and
+      the Squeeze Theorem gives <m>k^{1/k} \to 1</m>.
+    </p>
+    <p>
+      The eventual-bound form asks for less than the limit form. It
+      applies even when <m>\lim \sqrt[k]{a_k}</m> does not exist, as
+      long as the roots eventually stay at or below a fixed
+      <m>r \lt 1</m>; you will meet such a series in
+      <xref ref="ex-mod5-ps-c2"/>. The bound must be a fixed number
+      less than 1; a bound of 1 is not enough: for <m>a_k = 1/k</m>,
+      every root <m>\sqrt[k]{1/k}</m> with <m>k \geq 2</m> is less than
+      1, yet <m>\sum 1/k</m> diverges.
+    </p>
+    <p>
+      Many texts state the Root Test with
+      <m>\limsup \sqrt[k]{a_k}</m> in place of
+      <m>\lim \sqrt[k]{a_k}</m>. When you meet that version, whether
+      in the MAT 5610 text or elsewhere, recognize it as a sharper form
+      of the eventual-bound form (it also decides divergence), whose
+      proof of convergence is exactly the argument above. You will
+      compare statements in <xref ref="ex-mod5-br-3"/>.
+    </p>
+  </paragraphs>
 
   <exercise xml:id="ex-mod5-sg-26-4">
     <title>Absolute Convergence</title>

@@ -79,7 +79,9 @@
         (b) First term <m>2/3</m>, ratio <m>2/3</m>;
         sum <m>= (2/3)/(1 - 2/3) = 2</m>.
         (c) <m>a = 1</m>, <m>r = -1/2</m>; sum <m>= 1/(1 - (-1/2)) = 2/3</m>.
-        (d) <m>|r| = 5/3 \gt 1</m>; diverges.
+        (d) <m>|r| = 5/3 \gt 1</m>, so <m>(5/3)^k \geq 1</m> for every
+        <m>k</m> and the terms do not tend to 0; diverges by the
+        Divergence Test.
       </p>
     </answer>
   </exercise>
@@ -107,7 +109,10 @@
         (c) <m>|a_k| = k/(k+1) \to 1</m>, so <m>a_k \not\to 0</m>
         (the terms oscillate between values close to <m>\pm 1</m>);
         diverges.
-        (d) <m>\cos(1/k) \to \cos(0) = 1 \neq 0</m>; diverges.
+        (d) <m>\cos(1/k) \to \cos(0) = 1 \neq 0</m>, because
+        <m>1/k \to 0</m> and cosine is continuous at 0 (a calculus
+        fact for now; continuity is the subject of
+        <xref ref="ch-mod6" text="custom">Module 6</xref>); diverges.
       </p>
     </answer>
   </exercise>
@@ -272,12 +277,13 @@
         Convergent with terms <m>\to 0</m>: <m>\sum 1/k^2</m>
         (<m>p</m>-series, <m>p = 2 \gt 1</m>).
         Divergent with terms <m>\to 0</m>: <m>\sum 1/k</m>
-        (harmonic; see Study Guide).
+        (harmonic; see <xref ref="ex-mod5-sg-25-4"/>).
         The pair shows that <m>a_k \to 0</m> is <em>necessary</em>
         (because convergent sequences of partial sums force their
-        differences to 0) but not <em>sufficient</em>: the rate at
-        which <m>a_k \to 0</m> determines whether the partial sums
-        stay bounded, and for <m>1/k</m> they do not.
+        differences to 0) but not <em>sufficient</em>: for a series of
+        nonnegative terms, the partial sums increase, so the rate at
+        which <m>a_k \to 0</m> determines whether they stay bounded;
+        for <m>1/k</m> they do not.
       </p>
     </answer>
   </exercise>
@@ -289,10 +295,11 @@
   <paragraphs xml:id="par-mod5-ps-c">
     <title>Challenge Problems</title>
     <p>
-      These problems extend the module's ideas: a proof using the Cauchy
-      criterion that absolute convergence implies convergence, and a
-      comparison of the Ratio and Root Tests on a series where the Ratio
-      Test is inconclusive.
+      These problems extend the module's ideas. The first asks for two
+      proofs that absolute convergence implies convergence: one using the
+      Cauchy criterion, the other using the Comparison Test. The second
+      compares the Ratio and Root Tests on a series where the Ratio Test
+      is inconclusive.
     </p>
   </paragraphs>
 
@@ -304,12 +311,21 @@
         <m>\sum_{k=1}^{\infty} a_k</m> converges.
       </p>
       <p>
-        Your proof must use the Cauchy criterion for sequences
+        Your first proof must use the Cauchy criterion for sequences
         (Module 4). Let <m>T_n = \sum_{k=1}^{n} |a_k|</m> and
         <m>S_n = \sum_{k=1}^{n} a_k</m>. Use that <m>(T_n)</m> is
         Cauchy (it converges by hypothesis) together with the
         triangle inequality on finite sums to show <m>(S_n)</m> is
         Cauchy, and invoke Cauchy completeness of <m>\R</m>.
+      </p>
+      <p>
+        This first proof writes out in full the outline of
+        <xref ref="ex-mod5-sg-26-4"/>. Then give a second proof that
+        does not use the Cauchy criterion, using the Comparison Test
+        and the algebra of convergent series
+        (<xref ref="ex-mod5-sg-25-5"/>) instead. Finally, for each
+        proof, name the <xref ref="ch-mod4" text="custom">Module 4</xref>
+        theorem through which the completeness of <m>\R</m> enters.
       </p>
     </statement>
     <hint>
@@ -322,11 +338,16 @@
         \leq \sum_{k=m+1}^{n} |a_k| = T_n - T_m \lt \varepsilon.</md>
         Hence <m>(S_n)</m> is Cauchy, hence convergent in <m>\R</m>.
       </p>
+      <p>
+        For the second proof, start from
+        <m>0 \leq a_k + |a_k| \leq 2|a_k|</m>. Apply the Comparison
+        Test, then the difference rule for convergent series.
+      </p>
     </hint>
   </exercise>
 
   <exercise xml:id="ex-mod5-ps-c2">
-    <title><m>[\mathbf{C}]</m> A Series That Needs the Root Test</title>
+    <title><m>[\mathbf{C}]</m> Ratio Test versus Root Test</title>
     <statement>
       <p>
         Consider the series
@@ -339,37 +360,56 @@
       <p>
         <ol marker="(a)">
           <li>
-            Compute <m>\lim_{k \to \infty} a_{k+1}/a_k</m> if it
-            exists. What does the Ratio Test say?
+            Compute <m>a_{k+1}/a_k</m> separately for <m>k</m> even and
+            for <m>k</m> odd. Does <m>\lim_{k \to \infty} a_{k+1}/a_k</m>
+            exist? What does the Ratio Test
+            (<xref ref="ex-mod5-sg-26-3"/>) tell you?
           </li>
           <li>
-            Compute <m>\lim_{k \to \infty} \sqrt[k]{a_k}</m>.
-            What does the Root Test say?
+            Compute <m>\sqrt[k]{a_k}</m> separately for <m>k</m> even
+            and for <m>k</m> odd. Does
+            <m>\lim_{k \to \infty} \sqrt[k]{a_k}</m> exist? Use the
+            eventual-bound form of the Root Test (in
+            <xref ref="par-mod5-sg-26-root" text="custom">the Study Guide</xref>)
+            to decide whether the
+            series converges.
           </li>
           <li>
-            Which test was decisive here, and why? What does this
-            tell you about the relative strength of the Root and
-            Ratio Tests?
+            What does this example show about the Ratio Test and the
+            two forms of the Root Test? Could the Comparison Test have
+            settled the question directly?
           </li>
         </ol>
       </p>
     </statement>
     <hint>
       <p>
-        (a) The ratio <m>a_{k+1}/a_k</m> oscillates: for <m>k</m> odd,
-        <m>a_{k+1}/a_k = 2^{-(k+1)}/3^{-k} = 3^k/2^{k+1}</m>, which
-        <em>grows without bound</em>; for <m>k</m> even,
+        (a) The ratio <m>a_{k+1}/a_k</m> oscillates: for <m>k</m> even,
         <m>a_{k+1}/a_k = 3^{-(k+1)}/2^{-k} = 2^k/3^{k+1}</m>, which
-        tends to 0. The limit does not exist; Ratio Test inconclusive.
-        (b) For <m>k</m> even, <m>\sqrt[k]{a_k} = 1/2</m>; for <m>k</m>
-        odd, <m>\sqrt[k]{a_k} = 1/3</m>. These are bounded above by
-        <m>1/2 \lt 1</m>; a more careful version of the Root Test
-        (using <m>\limsup</m>) concludes convergence. Less formally:
-        every term satisfies <m>a_k \leq 1/2^k</m>, and <m>\sum 1/2^k</m>
-        converges.
-        (c) The Root Test (with <m>\limsup</m>) is strictly more
-        powerful: it can handle series where the ratio oscillates
-        but the <m>k</m>th root still stays bounded.
+        tends to 0; for <m>k</m> odd,
+        <m>a_{k+1}/a_k = 2^{-(k+1)}/3^{-k} = 3^k/2^{k+1}</m>, which
+        <em>grows without bound</em>. The limit does not exist, so the Ratio Test, which
+        assumes the limit exists, gives no conclusion.
+        (b) For <m>k</m> even, <m>\sqrt[k]{a_k} = \sqrt[k]{2^{-k}} = 1/2</m>;
+        for <m>k</m> odd, <m>\sqrt[k]{a_k} = 1/3</m>. The even-indexed
+        and odd-indexed roots have different limits, so
+        <m>\lim \sqrt[k]{a_k}</m> does not exist and the limit form of
+        the Root Test does not apply. But <m>\sqrt[k]{a_k} \leq 1/2</m>
+        for every <m>k</m>, so the eventual-bound form with
+        <m>r = 1/2</m> shows that the series converges.
+        (c) Neither test in limit form applies; the eventual-bound form
+        of the Root Test decides the question. Nor would an eventual
+        bound on the ratios help. Such a bound is what the
+        <xref ref="ex-mod5-sg-26-3" text="custom">proof of the Ratio Test</xref>
+        actually uses, but for every odd <m>k \geq 3</m> the ratio
+        <m>3^k/2^{k+1}</m> is greater than 1, so no <m>r \lt 1</m>
+        bounds the ratios for all large <m>k</m>. The ratios compare
+        neighboring terms, which here differ wildly in size; the roots
+        compare each <m>a_k</m> with <m>r^k</m> directly, and every
+        <m>a_k</m> is at most <m>2^{-k}</m>. That same inequality
+        (<m>3^{-k} \leq 2^{-k}</m>) also settles the question by direct
+        comparison with the geometric series <m>\sum 2^{-k}</m>, so the
+        Root Test is not the only route here.
       </p>
     </hint>
   </exercise>
