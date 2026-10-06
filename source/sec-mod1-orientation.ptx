@@ -158,19 +158,33 @@
         <p>
           This module builds the foundation for that precision. The
           quantifiers <m>\forall</m> and <m>\exists</m> will appear in
-          virtually every definition we encounter this summer. The proof
+          virtually every definition we encounter in this course. The proof
           strategies covered here are the exact strategies Bauldry's proofs
-          rely on, often without naming them. If you breeze through the
-          self-assessment above, spend your time on the Bridge Reading and
-          the harder practice problems. If the self-assessment reveals gaps,
-          work through all the materials carefully. Either way, do not skip
-          the Worked Examples.
+          rely on, often without naming them.
         </p>
       </paragraphs>
 
       <paragraphs xml:id="par-mod1-pacing">
         <title>A Note on Pacing</title>
-        <p><alert>A note on pacing.</alert> This module covers material that is foundational for everything that follows, so invest time here even if the topics feel familiar. <em>If you have prior real analysis experience:</em> you may move quickly through the Study Guide and Worked Examples, but spend extra time on the Bridge Reading&#x2014;the goal is not just to recall proof strategies but to see how Bauldry deploys them in a graduate-level context. <em>If your background is in other proof-based courses (but not analysis):</em> work through all components carefully. The quantifier-negation exercises and the induction worked example are especially important; do not skip the Practice Problem Set.</p>
+        <p>
+          <alert>A note on pacing.</alert>
+          This module covers material that is foundational for everything
+          that follows, so invest time here even if the topics feel
+          familiar. Use the self-assessment above to decide where your
+          extra time should go. If you are coming in with prior real
+          analysis experience and the self-assessment went smoothly, you
+          may move quickly through the Study Guide, the Worked Examples and
+          the <m>[\mathbf{F}]</m> practice problems, and spend extra time on
+          the <m>[\mathbf{S}]</m> and <m>[\mathbf{C}]</m> problems and the
+          Bridge Reading: the goal is not just to recall proof strategies
+          but to see how Bauldry deploys them in a graduate-level context.
+          If your background is in other proof-based courses but not in
+          analysis, or if the self-assessment revealed gaps, work through
+          each component carefully and in order. Whatever your background,
+          do not skip the Worked Examples. The quantifier-negation exercises
+          in the Study Guide and the induction proof in
+          <xref ref="ex-mod1-we-4"/> deserve particular care.
+        </p>
       </paragraphs>
 
       <paragraphs xml:id="par-mod1-map">
@@ -206,7 +220,7 @@
           </row>
           <row>
             <cell><p>Companion Reading and Study Guide</p></cell>
-            <cell><p>50 min</p></cell>
+            <cell><p>55 min</p></cell>
             <cell><p>Hirst Ch. 2&#x2013;3 and Zorn &#xa7;1.4&#x2013;1.5</p></cell>
           </row>
           <row>
@@ -216,7 +230,7 @@
           </row>
           <row>
             <cell><p>Practice Problem Set</p></cell>
-            <cell><p>90 min</p></cell>
+            <cell><p>100 min</p></cell>
             <cell><p>Scaffolded practice by difficulty</p></cell>
           </row>
           <row>
