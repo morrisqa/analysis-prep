@@ -111,8 +111,8 @@
       <p>
         Use the Heine<ndash/>Cantor theorem (uniform continuity of
         continuous functions on closed bounded intervals, stated in
-        <xref ref="ch-mod6" text="custom">Module 6</xref>; its proof is
-        deferred to MAT 5610) to bound the oscillation <m>M_i - m_i</m> on each subinterval,
+        <xref ref="ch-mod6" text="custom">Module 6</xref>; see Zorn or
+        MAT 5610 for a proof) to bound the oscillation <m>M_i - m_i</m> on each subinterval,
         then sum up and apply the integrability criterion.
       </p>
       <p>
@@ -160,14 +160,14 @@
         continuity provides. Continuity at each point separately gives
         a <m>\delta</m> that depends on the point; those values could
         tend to zero, and then no single mesh would work. (This is a
-        limit of the method, not of continuous functions: on
+        limitation of the method, not of continuous functions: on
         <m>[a,b]</m>, the Heine<ndash/>Cantor theorem guarantees the
         single <m>\delta</m>.) The factor <m>2</m> in
         <m>\varepsilon/(2(b-a))</m> is there because taking a supremum
         can turn the strict inequality <m>\lt</m> into <m>\leq</m>;
         aiming for <m>\varepsilon/2</m> keeps the final inequality
         strict. The proof template is:
-        (1) invoke Heine-Cantor; (2) choose a partition with mesh
+        (1) invoke Heine<ndash/>Cantor; (2) choose a partition with mesh
         smaller than <m>\delta</m>; (3) bound <m>M_i - m_i</m>;
         (4) sum up; (5) invoke the criterion.
       </p>
@@ -206,8 +206,8 @@
         <alert>Proof.</alert>
       </p>
       <p>
-        Fix <m>x \in (a,b)</m> and consider <m>h \neq 0</m> small
-        enough that <m>x + h \in [a,b]</m>. By additivity of the integral
+        Fix <m>x \in (a,b)</m> and consider <m>h \neq 0</m> with
+        <m>x + h \in [a,b]</m>. By additivity of the integral
         and the orientation convention (<xref ref="par-mod8-sg-54-props"
         text="custom">Properties of the Integral Used in the FTC
         Proofs</xref>), for <m>h</m> of either sign,
@@ -222,8 +222,14 @@
         </md>
         Since <m>f(x)</m> is constant with respect to <m>t</m>, the
         integral of a constant gives
-        <m>\int_x^{x+h} f(x)\,dt = h f(x)</m> (for <m>h \lt 0</m>,
-        both sides change sign under the orientation convention), so
+        <m>\int_x^{x+h} f(x)\,dt = h f(x)</m>. For <m>h \gt 0</m> this
+        is the integral of a constant over <m>[x, x+h]</m>; for
+        <m>h \lt 0</m>, the orientation convention gives
+        <md>
+          \int_x^{x+h} f(x)\,dt = -\int_{x+h}^x f(x)\,dt
+          = -f(x)\bigl(x - (x+h)\bigr) = h f(x).
+        </md>
+        So
         <m>f(x) = \dfrac{1}{h}\int_x^{x+h} f(x)\,dt</m> and, by
         linearity,
         <md>
@@ -233,7 +239,10 @@
         Let <m>\varepsilon \gt 0</m>. Since <m>f</m> is continuous at
         <m>x</m>, there exists <m>\delta \gt 0</m> such that
         <m>|t - x| \lt \delta \Rightarrow |f(t) - f(x)| \lt
-        \varepsilon</m>. Let <m>0 \lt |h| \lt \delta</m>, and let
+        \varepsilon</m>. Shrinking <m>\delta</m> if necessary, we may
+        assume <m>\delta \leq \min(x - a, b - x)</m>, so that
+        <m>x + h \in [a,b]</m> whenever <m>|h| \lt \delta</m>. Let
+        <m>0 \lt |h| \lt \delta</m>, and let
         <m>I_h</m> be the closed interval with endpoints <m>x</m> and
         <m>x + h</m>, which has length <m>|h|</m>. For <m>t \in I_h</m>
         we have <m>|t - x| \leq |h| \lt \delta</m>, so

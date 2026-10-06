@@ -205,10 +205,9 @@
     </statement>
     <answer>
       <p>
-        The key tool is the Heine<ndash/>Cantor theorem (stated in
-        <xref ref="ch-mod6" text="custom">Module 6</xref>, in
-        <xref ref="ex-mod6-sg-34-3"/>, from Zorn &#xa7;3.4; its proof is
-        deferred to MAT 5610): a
+        The key tool is the Heine<ndash/>Cantor theorem
+        (<xref ref="ex-mod6-sg-34-3"/> states it; see Zorn or MAT 5610
+        for a proof): a
         continuous function on a closed bounded interval is uniformly
         continuous. Given <m>\varepsilon \gt 0</m>, apply uniform
         continuity to get <m>\delta \gt 0</m> such that
@@ -322,36 +321,40 @@
         </li>
         <li>
           <p>
-            <em>Additivity over intervals.</em> If <m>a \lt c \lt b</m>,
-            then <m>f</m> is integrable on <m>[a,c]</m> and on
-            <m>[c,b]</m>, and
-            <m>\int_a^b f = \int_a^c f + \int_c^b f</m>.
+            <em>Additivity over intervals.</em> If <m>a \lt q \lt b</m>,
+            then <m>f</m> is integrable on <m>[a,q]</m> and on
+            <m>[q,b]</m>, and
+            <m>\int_a^b f = \int_a^q f + \int_q^b f</m>.
           </p>
         </li>
       </ul>
-      Zorn's Chapter 5 is the reading for these properties; read his
-      statements and proofs. A second source is Rudin,
-      <pubtitle>Principles of Mathematical Analysis</pubtitle>
-      (3rd edition), Theorem 6.12.
+      Read Zorn's statements and proofs of these properties
+      (&#xa7;5.1&#x2013;5.4). A second source is Rudin,
+      <pubtitle>Principles of Mathematical Analysis</pubtitle>,
+      3rd edition, Theorem 6.12.
     </p>
     <p>
       <em>Constant functions.</em> If <m>f(x) = c</m> for all
       <m>x \in [a,b]</m>, then for every partition <m>P</m> of
       <m>[a,b]</m> we have <m>M_i = m_i = c</m> on every subinterval, so
       <m>U(f,P) = L(f,P) = \sum c\,\Delta x_i = c(b-a)</m>. Hence the
-      upper and lower integrals both equal <m>c(b-a)</m>, and
+      upper and lower integrals both equal <m>c(b-a)</m>, so <m>f</m> is
+      integrable and
       <md>\int_a^b c\,dx = c(b-a).</md>
     </p>
     <p>
-      <em>Orientation.</em> So far <m>\int_a^b f</m> has meant
+      <em>Orientation convention.</em> So far <m>\int_a^b f</m> has meant
       <m>a \lt b</m>. The FTC proofs also need integrals such as
       <m>\int_x^{x+h} f</m> with <m>h \lt 0</m>, and
-      <m>\int_a^a f</m>. For <m>a \lt b</m>, define
-      <md>\int_a^a f = 0 \quad\text{and}\quad \int_b^a f = -\int_a^b f.</md>
+      <m>\int_a^a f</m>. Define <m>\int_a^a f = 0</m> and, for
+      <m>a \lt b</m>,
+      <md>\int_b^a f = -\int_a^b f.</md>
       With this convention,
       <m>\int_p^q f + \int_q^r f = \int_p^r f</m> for any points
       <m>p, q, r</m>, in any order, of an interval on which <m>f</m> is
-      integrable. For example, if <m>q \lt p \lt r</m>, additivity
+      integrable. Each of these integrals is defined because, by
+      additivity, <m>f</m> is integrable on every closed subinterval of
+      that interval. For example, if <m>q \lt p \lt r</m>, additivity
       gives <m>\int_q^r f = \int_q^p f + \int_p^r f</m>, so
       <m>\int_p^q f + \int_q^r f = -\int_q^p f + \int_q^p f + \int_p^r f
       = \int_p^r f</m>. The other orders, and the cases in which two of

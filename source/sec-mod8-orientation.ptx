@@ -46,8 +46,8 @@
       <li>
         <p>
           State and prove the Fundamental Theorem of Calculus, Part 1:
-          if <m>F(x) = \int_a^x f(t)\,dt</m> and <m>f</m> is continuous,
-          then <m>F'(x) = f(x)</m>.
+          if <m>F(x) = \int_a^x f(t)\,dt</m> and <m>f</m> is continuous
+          on <m>[a,b]</m>, then <m>F'(x) = f(x)</m> for <m>x \in (a,b)</m>.
         </p>
       </li>
       <li>
@@ -252,7 +252,7 @@
       </row>
       <row>
         <cell><p>Module Assessment</p></cell>
-        <cell><p>40 min</p></cell>
+        <cell><p>45 min</p></cell>
         <cell><p>Submitted proofs and reflection</p></cell>
       </row>
     </tabular>

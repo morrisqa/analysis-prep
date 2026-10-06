@@ -1,6 +1,6 @@
 <section xml:id="sec-mod8-assessment">
   <title>Module 8: Assessment</title>
-  <p>Submitted Proofs and Reflection — Estimated time: 40 minutes</p>
+  <p>Submitted Proofs and Reflection — Estimated time: 45 minutes</p>
 
   <!-- ============================================================ -->
     <p>
@@ -29,49 +29,63 @@
     </p>
     <p>
       <alert>Part 1: Riemann Integrability from the Definition (Required)</alert>
-      (Estimated time: 15 minutes)
+      (Estimated time: 20 minutes)
     </p>
   <exercise xml:id="ex-mod8-as-1">
-    <title>Proving a Constant Function is Integrable</title>
+    <title>A Function That Is Constant Except at an Endpoint</title>
     <statement>
       <p>
-        Prove that <m>f(x) = c</m> (a constant) is Riemann integrable
-        on <m>[a,b]</m> and <m>\int_a^b c\,dx = c(b-a)</m>.
+        Let <m>a \lt b</m>, let <m>c</m> and <m>d</m> be real numbers
+        (possibly <m>d \neq c</m>), and define <m>f</m> on <m>[a,b]</m> by
+        <md>
+          f(x) = \begin{cases} c \amp a \leq x \lt b, \\ d \amp x = b. \end{cases}
+        </md>
+        Prove from the definitions of Darboux sums and of the upper and
+        lower integrals that <m>f</m> is Riemann integrable on
+        <m>[a,b]</m> and <m>\int_a^b f(x)\,dx = c(b-a)</m>.
       </p>
       <p>
         Your proof must have the following structure:
         <ol marker="(i)">
           <li>
-            <em>Setup.</em> Let <m>P</m> be any partition of
-            <m>[a,b]</m> with <m>n</m> subintervals. Compute
-            <m>M_k = \sup f</m> on <m>[x_{k-1}, x_k]</m> and
-            <m>m_k = \inf f</m> on <m>[x_{k-1}, x_k]</m>.
+            <em>Setup.</em> Let <m>P = \{x_0, x_1, \ldots, x_n\}</m> be
+            any partition of <m>[a,b]</m>. Compute
+            <m>M_k = \sup f</m> and <m>m_k = \inf f</m> on
+            <m>[x_{k-1}, x_k]</m>, treating the subintervals with
+            <m>k \lt n</m> and the last subinterval
+            <m>[x_{n-1}, b]</m> separately.
           </li>
           <li>
-            <em>Compute upper and lower sums.</em> Show that
-            <m>U(f,P) = c(b-a)</m> and <m>L(f,P) = c(b-a)</m>
-            for every partition <m>P</m>.
+            <em>Compute upper and lower sums.</em> Compute
+            <m>U(f,P)</m> and <m>L(f,P)</m> for an arbitrary partition
+            <m>P</m>, and express <m>U(f,P) - L(f,P)</m> in terms of
+            <m>c</m>, <m>d</m>, and <m>\Delta x_n = b - x_{n-1}</m>.
           </li>
           <li>
-            <em>Apply the criterion.</em> Conclude that
-            <m>U(f,P) - L(f,P) = 0 \lt \varepsilon</m> for every
-            <m>\varepsilon \gt 0</m> and every partition <m>P</m>,
-            so the integrability criterion is satisfied.
+            <em>Apply the criterion.</em> Given <m>\varepsilon \gt 0</m>,
+            exhibit a specific partition <m>P</m> of <m>[a,b]</m> with
+            <m>U(f,P) - L(f,P) \lt \varepsilon</m>, and conclude from
+            the integrability criterion that <m>f</m> is Riemann
+            integrable on <m>[a,b]</m>.
           </li>
           <li>
-            <em>Identify the integral.</em> Since all upper and lower
-            sums equal <m>c(b-a)</m>, conclude that the upper and
-            lower integrals both equal <m>c(b-a)</m>, and hence
-            <m>\int_a^b c\,dx = c(b-a)</m>.
+            <em>Identify the integral.</em> Use your formulas from (ii) to
+            show that <m>L(f,P) \leq c(b-a) \leq U(f,P)</m> for every
+            partition <m>P</m>, and that for every
+            <m>\eta \gt 0</m> there is a partition <m>P</m> with
+            <m>U(f,P) \lt c(b-a) + \eta</m> and
+            <m>L(f,P) \gt c(b-a) - \eta</m>. Conclude, from the
+            definitions of the upper integral as an infimum and the lower
+            integral as a supremum, that both equal <m>c(b-a)</m>, and
+            hence <m>\int_a^b f(x)\,dx = c(b-a)</m>.
           </li>
         </ol>
       </p>
     </statement>
     <hint>
       <p>
-        This is the simplest possible integrability proof. Work
-        directly from the definitions of <m>M_k</m> and <m>m_k</m>; no
-        limit and no special choice of partition is needed.
+        Only the last subinterval contains <m>b</m>, so it is the only
+        one on which <m>M_k</m> and <m>m_k</m> can differ. Make it short.
       </p>
     </hint>
   </exercise>
@@ -106,7 +120,11 @@
             the antiderivative function <m>G(u) = \int_1^u \sin(t^2)\,dt</m>,
             apply FTC Part 1 to find <m>G'(u)</m>, and apply the
             chain rule to compute the derivative of <m>G(x^3)</m>
-            with respect to <m>x</m>. Show every step.
+            with respect to <m>x</m>. Show every step. (The upper limit
+            <m>x^3</m> can be less than the base point <m>1</m>; state
+            and use the version of FTC Part 1 in
+            <xref ref="par-mod8-we-base-point" text="custom">FTC Part 1
+            with Any Base Point</xref>.)
           </li>
         </ol>
       </p>
