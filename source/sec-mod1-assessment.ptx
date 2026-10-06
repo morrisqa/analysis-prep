@@ -22,8 +22,8 @@
           <alert>A note on Part 2.</alert> All students complete all three
           parts. Part 2 offers two options. Option A asks for a proof by
           induction of a divisibility statement. Option B asks for a proof
-          by contrapositive (with cases) followed by a proof by
-          contradiction that <m>\sqrt{6}</m> is irrational, and is the more
+          by contrapositive (with cases) of a divisibility lemma, then a
+          proof by contradiction that <m>\sqrt{6}</m> is irrational, and is the more
           demanding. Choose the option that will stretch you.
         </p>
         <p>

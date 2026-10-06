@@ -124,7 +124,7 @@
         <ol marker="(a)">
           <li>
             Write this definition out using the set-builder and quantifier
-            notation from <xref ref="ch-mod1"/> and Module 3.
+            notation from Modules <xref ref="ch-mod1" text="custom">1</xref> and 3.
           </li>
           <li>
             Is 0 an accumulation point of the set

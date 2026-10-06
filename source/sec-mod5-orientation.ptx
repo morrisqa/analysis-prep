@@ -201,8 +201,8 @@
       proof-based series work is newer to you, slow down at
       <xref ref="ex-mod5-we-1"/> (telescoping from partial sums): read it twice,
       reproduce the partial-sum computation on paper, and then work
-      Practice Set problems <xref ref="ex-mod5-ps-f1"/> to
-      <xref ref="ex-mod5-ps-f4"/> before attempting the Ratio
+      Practice Set Exercises <xref ref="ex-mod5-ps-f1" text="custom">5.17</xref> to
+      <xref ref="ex-mod5-ps-f4" text="custom">5.20</xref> before attempting the Ratio
       and Root Tests. The single most common mistake in this module
       is to treat a test as a black box rather than as a claim about
       the sequence <m>(S_n)</m>; if you can always name the

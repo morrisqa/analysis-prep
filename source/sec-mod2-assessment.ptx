@@ -202,7 +202,7 @@
     <title>The Role of Completeness</title>
     <statement>
       <p>
-        In Part 1 you found <m>\sup S</m> and <m>\inf S</m> directly,
+        In Part 1 you identified <m>\sup S</m> and <m>\inf S</m> directly,
         without the Completeness Axiom. Where in this module is the
         Completeness Axiom genuinely needed? Name one result or
         exercise whose proof uses it, and say exactly where in that

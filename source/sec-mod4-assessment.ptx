@@ -211,7 +211,7 @@
     <title>Quantifier Alternation</title>
     <statement>
       <p>
-        In your proof for <xref ref="ex-mod4-as-1b"/>, where in the proof did you make
+        In <xref ref="ex-mod4-as-1b"/>, where did you make
         a choice that <em>depended on</em> <m>\varepsilon</m>? What
         would have broken in the proof if your choice of <m>N</m>
         had been made before seeing <m>\varepsilon</m>?

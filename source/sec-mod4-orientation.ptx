@@ -219,9 +219,8 @@
       on most directly. If <m>\varepsilon</m>-<m>N</m> proofs are newer
       territory, slow down at <xref ref="ex-mod4-we-1"/>: read it two or three
       times, reproduce the scratch-work-then-formal-proof pattern on
-      paper, and then work Practice Set problems
-      <xref ref="ex-mod4-ps-f2"/> to <xref ref="ex-mod4-ps-f4"/>,
-      <xref ref="ex-mod4-ps-s1"/>, and <xref ref="ex-mod4-ps-s2"/> before moving to the more structural theorems.
+      paper, and then work Practice Set Exercises
+      <xref ref="ex-mod4-ps-f2" text="custom">4.22</xref> to <xref ref="ex-mod4-ps-s2" text="custom">4.26</xref> before moving to the more structural theorems.
       The single most common mistake in this module is writing a
       proof in which <m>N</m> is chosen before <m>\varepsilon</m>; if
       the structure of your scratch work gets that order wrong, the

@@ -197,7 +197,7 @@
       sequences (<xref ref="ch-mod4"/>) and
       series (<xref ref="ch-mod5"/>),
       extended to functions (Modules
-      <xref ref="ch-mod6" text="custom">6</xref><ndash/><xref ref="ch-mod8" text="custom">8</xref>),
+      <xref ref="ch-mod6" text="custom">6</xref> through <xref ref="ch-mod8" text="custom">8</xref>),
       and now we ask what happens
       to all those properties&#x2014;continuity, integrability&#x2014;when
       functions themselves vary. The answer is: they survive under uniform
