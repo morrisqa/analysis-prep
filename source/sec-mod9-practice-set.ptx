@@ -22,7 +22,6 @@
 
   <paragraphs xml:id="par-mod9-ps-f">
     <title>Foundational Problems</title>
-    <!-- TODO(quinn): sentence added in #4 to satisfy the schema; confirm or replace. -->
     <p>
       These problems practice the basic moves of the module: finding
       pointwise limits of sequences of functions, computing sup-norm
@@ -235,7 +234,6 @@
 
   <paragraphs xml:id="par-mod9-ps-s">
     <title>Standard Problems</title>
-    <!-- TODO(quinn): sentence added in #4 to satisfy the schema; confirm or replace. -->
     <p>
       These problems apply the same moves to longer arguments: a
       sup-norm proof of uniform convergence, a sequence-of-points proof
@@ -410,7 +408,6 @@
 
   <paragraphs xml:id="par-mod9-ps-c">
     <title>Challenge Problems</title>
-    <!-- TODO(quinn): sentence added in #4 to satisfy the schema; confirm or replace. -->
     <p>
       These problems extend the module's ideas: a proof that a uniform
       limit of Riemann integrable functions on <m>[a,b]</m> is integrable,

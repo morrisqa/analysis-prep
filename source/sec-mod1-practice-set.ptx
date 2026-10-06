@@ -36,7 +36,6 @@
 
       <paragraphs xml:id="par-mod1-ps-f">
         <title>Foundational Problems</title>
-        <!-- TODO(quinn): sentence added in #3 (wording from copy-edit review) to satisfy the schema; confirm or replace. -->
         <p>
           These problems practice the basic moves of the module: translating
           and negating quantified statements, naming a proof strategy, finding
@@ -338,7 +337,6 @@
 
       <paragraphs xml:id="par-mod1-ps-s">
         <title>Standard Problems</title>
-        <!-- TODO(quinn): sentence added in #3 (wording from copy-edit review) to satisfy the schema; confirm or replace. -->
         <p>
           These problems apply the same moves to longer arguments: quantifier
           order, convergence language, contrapositive, contradiction,
@@ -635,7 +633,6 @@
 
       <paragraphs xml:id="par-mod1-ps-c">
         <title>Challenge Problems</title>
-        <!-- TODO(quinn): sentence added in #3 (wording from copy-edit review) to satisfy the schema; confirm or replace. -->
         <p>
           These problems extend the module's ideas: repairing ill-formed
           statements, existence and uniqueness, proof by cases, strong

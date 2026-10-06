@@ -25,7 +25,6 @@
 
   <paragraphs xml:id="par-mod6-ps-f">
     <title>Foundational Problems</title>
-    <!-- TODO(quinn): sentence added in #4 to satisfy the schema; confirm or replace. -->
     <p>
       These problems practice the basic moves of the module: evaluating
       limits or deciding that they do not exist, finding <m>\delta</m> for
@@ -190,7 +189,6 @@
 
   <paragraphs xml:id="par-mod6-ps-s">
     <title>Standard Problems</title>
-    <!-- TODO(quinn): sentence added in #4 to satisfy the schema; confirm or replace. -->
     <p>
       These problems apply the same moves to longer arguments: an
       <m>\varepsilon</m>-<m>\delta</m> limit proof, a proof of continuity
@@ -313,7 +311,6 @@
 
   <paragraphs xml:id="par-mod6-ps-c">
     <title>Challenge Problems</title>
-    <!-- TODO(quinn): sentence added in #4 to satisfy the schema; confirm or replace. -->
     <p>
       These problems extend the module's ideas: a proof that a uniformly
       continuous function on a bounded open interval has one-sided limits

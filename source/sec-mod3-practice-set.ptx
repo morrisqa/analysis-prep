@@ -22,7 +22,6 @@
 
   <paragraphs xml:id="par-mod3-ps-f">
     <title>Foundational Problems</title>
-    <!-- TODO(quinn): sentence added in #4 to satisfy the schema; confirm or replace. -->
     <p>
       These problems practice the basic moves of the module: computing
       intersections and set differences, deciding whether statements about
@@ -180,7 +179,6 @@
 
   <paragraphs xml:id="par-mod3-ps-s">
     <title>Standard Problems</title>
-    <!-- TODO(quinn): sentence added in #4 to satisfy the schema; confirm or replace. -->
     <p>
       These problems apply the same moves to longer arguments: an
       element-chasing proof of a set equality, proofs that a function is
@@ -281,7 +279,6 @@
 
   <paragraphs xml:id="par-mod3-ps-c">
     <title>Challenge Problems</title>
-    <!-- TODO(quinn): sentence added in #4 to satisfy the schema; confirm or replace. -->
     <p>
       These problems extend the module's ideas: partial converses to the
       results on composing injections and surjections, and a proof by

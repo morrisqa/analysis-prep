@@ -20,7 +20,6 @@
 
   <paragraphs xml:id="par-mod7-ps-f">
     <title>Foundational Problems</title>
-    <!-- TODO(quinn): sentence added in #4 to satisfy the schema; confirm or replace. -->
     <p>
       These problems practice the basic moves of the module: computing
       derivatives from the limit definition, applying the
@@ -159,7 +158,6 @@
 
   <paragraphs xml:id="par-mod7-ps-s">
     <title>Standard Problems</title>
-    <!-- TODO(quinn): sentence added in #4 to satisfy the schema; confirm or replace. -->
     <p>
       These problems apply the same moves to longer arguments: a proof of
       differentiability from the limit definition, a proof using the Mean
@@ -296,7 +294,6 @@
 
   <paragraphs xml:id="par-mod7-ps-c">
     <title>Challenge Problems</title>
-    <!-- TODO(quinn): sentence added in #4 to satisfy the schema; confirm or replace. -->
     <p>
       These problems extend the module's ideas: a proof of the chain rule
       using an auxiliary function, and a proof using Rolle's Theorem that
