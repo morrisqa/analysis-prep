@@ -103,6 +103,56 @@
     </answer>
   </exercise>
 
+  <paragraphs xml:id="par-mod4-sg-two-facts">
+    <title>Two Facts You Will Use Constantly</title>
+    <p>
+      Definition 2.1 says what it means for <m>L</m> to be <em>a</em>
+      limit of <m>(a_n)</m>. The first fact below justifies speaking of
+      <em>the</em> limit and writing <m>\lim_{n \to \infty} a_n</m>; the
+      second lets you carry inequalities between terms over to their
+      limits. Both follow directly from the definition of convergence
+      (the first also uses the Triangle Inequality); neither uses
+      completeness. Read the two proofs
+      now, since the worked examples and later modules cite both facts.
+    </p>
+    <p>
+      <em>Uniqueness of limits.</em> If <m>a_n \to L</m> and
+      <m>a_n \to M</m>, then <m>L = M</m>. To prove this, suppose
+      instead that <m>L \neq M</m>, and set
+      <m>\varepsilon = |L - M|/2 \gt 0</m>. We choose <m>N_1</m> with
+      <m>|a_n - L| \lt \varepsilon</m> for all <m>n \geq N_1</m>, and
+      <m>N_2</m> with <m>|a_n - M| \lt \varepsilon</m> for all
+      <m>n \geq N_2</m>. For <m>n = \max(N_1, N_2)</m>, the Triangle
+      Inequality gives
+      <md>|L - M| \leq |L - a_n| + |a_n - M| \lt \varepsilon + \varepsilon = |L - M|,</md>
+      which is impossible. Hence <m>L = M</m>. (You will compare this
+      argument with Bauldry's in <xref ref="ex-mod4-br-2"/>.)
+    </p>
+    <p>
+      <em>Limits preserve non-strict inequalities.</em> If
+      <m>a_n \to A</m>, <m>b_n \to B</m>, and <m>a_n \leq b_n</m> for
+      all <m>n \geq N_0</m>, then <m>A \leq B</m>. To prove this,
+      suppose instead that <m>A \gt B</m>, and set
+      <m>\varepsilon = (A - B)/2 \gt 0</m>. We choose <m>N_1</m> with
+      <m>|a_n - A| \lt \varepsilon</m> for all <m>n \geq N_1</m>, and
+      <m>N_2</m> with <m>|b_n - B| \lt \varepsilon</m> for all
+      <m>n \geq N_2</m>. For <m>n = \max(N_0, N_1, N_2)</m>,
+      <md>b_n \lt B + \varepsilon = \frac{A + B}{2} = A - \varepsilon \lt a_n,</md>
+      which contradicts <m>a_n \leq b_n</m>. Hence <m>A \leq B</m>.
+    </p>
+    <p>
+      The most common use takes one of the two sequences to be
+      constant. The constant sequence <m>c, c, c, \ldots</m> converges
+      to <m>c</m> (every term is at distance <m>0</m> from <m>c</m>), so
+      if <m>a_n \to A</m> and <m>a_n \leq c</m> for all sufficiently
+      large <m>n</m>, then <m>A \leq c</m>. Likewise, <m>a_n \geq c</m>
+      for all sufficiently large <m>n</m> gives <m>A \geq c</m>.
+      Strict inequalities need not survive the limit: <m>1/n \gt 0</m>
+      for every <m>n</m>, yet <m>1/n \to 0</m>. From <m>a_n \lt b_n</m>
+      you may conclude only <m>A \leq B</m>.
+    </p>
+  </paragraphs>
+
   <exercise xml:id="ex-mod4-sg-21-3">
     <title>From Scratch Work to Formal Proof</title>
     <statement>
@@ -145,7 +195,8 @@
         then <m>|a_n| \leq |L| + 1</m> for such <m>n</m>. The initial
         terms <m>a_1, \ldots, a_{N-1}</m> form a finite set, so
         <m>M = \max\{|a_1|, \ldots, |a_{N-1}|, |L| + 1\}</m> bounds
-        the entire sequence.
+        the entire sequence. (If <m>N = 1</m>, there are no initial
+        terms, and <m>M = |L| + 1</m>.)
       </p>
     </answer>
   </exercise>
@@ -242,8 +293,10 @@
     <answer>
       <p>
         Dividing gives <m>\dfrac{5 - 3/n}{2 + 1/n + 7/n^2}</m>.
-        Since <m>1/n \to 0</m> and <m>1/n^2 = (1/n)(1/n) \to 0 \cdot 0 = 0</m>
-        (product rule), we have numerator <m>\to 5 - 0 = 5</m>
+        We know <m>1/n \to 0</m>, so
+        <m>1/n^2 = (1/n)(1/n) \to 0 \cdot 0 = 0</m> by the product
+        rule. The product rule with a constant sequence also gives <m>3/n = 3 \cdot (1/n) \to 0</m> and
+        <m>7/n^2 = 7 \cdot (1/n^2) \to 0</m>. So we have numerator <m>\to 5 - 0 = 5</m>
         (sum rule) and denominator <m>\to 2 + 0 + 0 = 2</m>
         (sum rule, twice). Since the denominator's limit is
         nonzero, the quotient rule gives <m>5/2</m>.
@@ -352,7 +405,9 @@
     </statement>
     <answer>
       <p>
-        (a) <m>S = \{a_n : n \in \N\}</m>, the set of terms. It is
+        (a) For an increasing sequence (the decreasing case is
+        symmetric, using the infimum),
+        <m>S = \{a_n : n \in \N\}</m>, the set of terms. It is
         nonempty (contains <m>a_1</m>) and bounded above by the given
         bound on <m>(a_n)</m>.
         (b) Completeness is used to assert <m>L = \sup S \in \R</m>.
@@ -362,7 +417,10 @@
         (d) Monotonicity (increasingness) is used to pass from
         <m>a_N \gt L - \varepsilon</m> to <m>a_n \gt L - \varepsilon</m>
         for all <m>n \geq N</m>&#x2014;we need to know later terms do
-        not drop back below <m>a_N</m>.
+        not drop back below <m>a_N</m>. Since <m>a_n \leq L</m> as well
+        (<m>L</m> is an upper bound of <m>S</m>), this gives
+        <m>L - \varepsilon \lt a_n \leq L</m>, so
+        <m>|a_n - L| \lt \varepsilon</m> for all <m>n \geq N</m>.
       </p>
     </answer>
   </exercise>
@@ -441,7 +499,8 @@
       Section 2.4 reframes convergence without reference to a limit.
       Read Definition 2.17 and Theorem 2.20 carefully. The equivalence
       of <q>convergent</q> and <q>Cauchy</q> in <m>\R</m> is another
-      face of completeness&#x2014;in <m>\Q</m> it fails.
+      face of completeness: in <m>\Q</m> it fails, because a Cauchy
+      sequence of rationals need not converge in <m>\Q</m>.
     </p>
   </paragraphs>
 
