@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ch-mod3">
-  <title>Module 3: Sets, Functions, and Cardinality</title>
+  <title>Sets, Functions, and Cardinality</title>
 
   <xi:include href="sec-mod3-orientation.ptx"/>
   <xi:include href="sec-mod3-study-guide.ptx"/>

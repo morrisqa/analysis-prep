@@ -1,5 +1,5 @@
 <section xml:id="sec-mod1-orientation">
-    <title>Module 1: Mathematical Language and Proof Strategies</title>
+    <title>Orientation</title>
 
     <objectives xml:id="obj-mod1">
       <ul>
@@ -43,7 +43,6 @@
       </ul>
     </objectives>
 
-    <p>Orientation</p>
 
     <!-- ============================================================ -->
 
@@ -175,7 +174,7 @@
       </paragraphs>
 
       <paragraphs xml:id="par-mod1-map">
-        <title>Module Road Map (estimated time: 5 hours)</title>
+        <title>Module Road Map (estimated time: about 5 hours)</title>
         <tabular halign="left">
           <col width="50%"/>
           <col width="10%"/>
@@ -186,7 +185,7 @@
             <cell><p>Purpose</p></cell>
           </row>
           <row>
-            <cell><p>Orientation (this document)</p></cell>
+            <cell><p>Orientation (this section)</p></cell>
             <cell><p>15 min</p></cell>
             <cell><p>Goals, self-assessment, context</p></cell>
           </row>

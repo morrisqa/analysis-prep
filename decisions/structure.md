@@ -12,3 +12,12 @@ Each setting was verified with a scratch build of PreTeXt 2.55.0 before it was a
 | In HTML, **proofs, examples and exercise statements display open**; hints, answers and solutions stay collapsible (`<knowl proof="no" example="no" exercise-inline="no"/>`). | `publication/publication.ptx` | Students were having to click every exercise to read its statement, and the study guide asks them to read proofs; solutions should still wait for an attempt. | PreTeXt's defaults (all collapsed). |
 | Sections stay unnumbered (`<divisions level="1"/>`). | `publication/publication.ptx` | Decided at #3; the six components are named, not numbered. | Number sections. |
 | No `xml:lang` on the renames. | `source/main.ptx` | The document is single-language; the fallback applies. | |
+
+## Titles and section openings
+
+| Decision | Where | Why | Alternative |
+|---|---|---|---|
+| Chapter and section titles drop the "Module N:" prefix; each orientation section is titled "Orientation" (it repeated the chapter title). Module 4's chapter title is "Sequences: Convergence and Key Theorems" (no em-dash). | All `ch-modN.ptx`, `sec-modN-*.ptx` | With chapters labelled "Module", the prefix doubled ("Module 1 Module 1: …"). | Keep the prefixes and the "Chapter" label. |
+| The former subtitle line of each section has one form: "Reading: … Estimated time: N minutes." (or just the time), in full sentences, with "Chapter", "Section" and "pages" spelled out. Descriptive phrases that the opening paragraph repeats ("Annotated Proof Walkthroughs", "Submitted Proofs and Reflection") are dropped. The bare "Orientation" line is removed. | Every section | Consistent, readable openings (copy-edit recommendation from the migration). | Keep the migrated subtitles as they were. |
+| Time estimates: Module 7 study guide 55 → 75 minutes and Module 8 study guide 55 → 65 minutes (both gained proofs); Module 8 Part 1 of the assessment 15 → 20 minutes. Road-map totals recomputed: Modules 1, 2, 3, 5 "about 5 hours"; Modules 4, 6, 7, 8, 9 "about 5.5 hours". | Orientation road maps, section openings | The math fixes added material; the stated totals no longer matched the component times. | Leave Quinn's figures. |
+| "this document" → "this section" where a section was meant. | Module 1 worked examples, all road maps | Leftover from the nine separate articles. | |

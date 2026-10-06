@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ch-mod6">
-  <title>Module 6: Limits, Continuity, and Uniform Continuity</title>
+  <title>Limits, Continuity, and Uniform Continuity</title>
 
   <xi:include href="sec-mod6-orientation.ptx"/>
   <xi:include href="sec-mod6-study-guide.ptx"/>

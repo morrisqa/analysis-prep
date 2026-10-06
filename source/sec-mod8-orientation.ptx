@@ -1,5 +1,5 @@
 <section xml:id="sec-mod8-orientation">
-  <title>Module 8: The Riemann Integral</title>
+  <title>Orientation</title>
 
   <objectives xml:id="obj-mod8">
     <ul>
@@ -60,7 +60,6 @@
     </ul>
   </objectives>
 
-  <p>Orientation</p>
 
   <!-- ============================================================ -->
     <p>
@@ -200,7 +199,7 @@
   </paragraphs>
 
   <paragraphs xml:id="par-mod8-map">
-    <title>Module Road Map (estimated time: 5 hours)</title>
+    <title>Module Road Map (estimated time: about 5.5 hours)</title>
     <tabular halign="left">
       <col width="50%"/>
       <col width="10%"/>
@@ -211,7 +210,7 @@
         <cell><p>Purpose</p></cell>
       </row>
       <row>
-        <cell><p>Orientation (this document)</p></cell>
+        <cell><p>Orientation (this section)</p></cell>
         <cell><p>15 min</p></cell>
         <cell><p>Goals, self-assessment, context</p></cell>
       </row>
@@ -232,7 +231,7 @@
       </row>
       <row>
         <cell><p>Companion Reading and Study Guide</p></cell>
-        <cell><p>55 min</p></cell>
+        <cell><p>65 min</p></cell>
         <cell><p>Zorn &#xa7;5.1&#x2013;5.4 with guided questions</p></cell>
       </row>
       <row>

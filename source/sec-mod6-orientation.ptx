@@ -1,5 +1,5 @@
 <section xml:id="sec-mod6-orientation">
-  <title>Module 6: Limits, Continuity, and Uniform Continuity</title>
+  <title>Orientation</title>
 
   <objectives xml:id="obj-mod6">
     <ul>
@@ -52,7 +52,6 @@
     </ul>
   </objectives>
 
-  <p>Orientation</p>
 
   <!-- ============================================================ -->
     <p>
@@ -205,7 +204,7 @@
   </paragraphs>
 
   <paragraphs xml:id="par-mod6-map">
-    <title>Module Road Map (estimated time: 5 hours)</title>
+    <title>Module Road Map (estimated time: about 5.5 hours)</title>
     <tabular halign="left">
       <col width="50%"/>
       <col width="10%"/>
@@ -216,7 +215,7 @@
         <cell><p>Purpose</p></cell>
       </row>
       <row>
-        <cell><p>Orientation (this document)</p></cell>
+        <cell><p>Orientation (this section)</p></cell>
         <cell><p>15 min</p></cell>
         <cell><p>Goals, self-assessment, context</p></cell>
       </row>

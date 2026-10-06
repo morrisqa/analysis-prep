@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ch-mod4">
-  <title>Module 4: Sequences — Convergence and Key Theorems</title>
+  <title>Sequences: Convergence and Key Theorems</title>
 
   <xi:include href="sec-mod4-orientation.ptx"/>
   <xi:include href="sec-mod4-study-guide.ptx"/>

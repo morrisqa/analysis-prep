@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ch-mod1">
-  <title>Module 1: Mathematical Language and Proof Strategies</title>
+  <title>Mathematical Language and Proof Strategies</title>
 
   <xi:include href="sec-mod1-orientation.ptx"/>
   <xi:include href="sec-mod1-study-guide.ptx"/>
