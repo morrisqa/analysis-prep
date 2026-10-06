@@ -122,9 +122,9 @@
         at <m>x \neq a</m> anyway. The theorem is one-directional:
         continuity does <em>not</em> imply differentiability. The
         function <m>f(x) = |x|</m> is continuous at <m>0</m> but not
-        differentiable there (the left- and right-hand difference
-        quotients both exist but are <m>-1</m> and <m>+1</m>
-        respectively, so the limit does not exist).
+        differentiable there (the left-hand and right-hand limits of
+        the difference quotient both exist but are <m>-1</m> and
+        <m>+1</m> respectively, so the limit does not exist).
       </p>
     </solution>
   </exercise>
@@ -169,26 +169,63 @@
       <p>
         <em>(ii) If <m>f</m> is not constant on <m>[a, b]</m>.</em>
         By the Extreme Value Theorem (EVT, Module 6), <m>f</m> attains
-        its maximum at some point in <m>[a, b]</m>. Since <m>f</m> is
-        not constant and <m>f(a) = f(b)</m>, the maximum cannot equal
-        <m>f(a) = f(b)</m> at both endpoints simultaneously; there
-        must be some <m>x_0 \in (a, b)</m> with
-        <m>f(x_0) &gt; f(a) = f(b)</m>. Hence the maximum of <m>f</m>
-        is attained at some point <m>c \in (a, b)</m>.
+        both its maximum and its minimum on <m>[a, b]</m>. Since
+        <m>f</m> is not constant, there is some <m>x_0 \in [a, b]</m>
+        with <m>f(x_0) \neq f(a)</m>, and since <m>f(a) = f(b)</m>,
+        this <m>x_0</m> is not an endpoint, so <m>x_0 \in (a, b)</m>.
+        There are two possibilities.
       </p>
       <p>
-        <alert>Step 3: Conclude <m>f'(c) = 0</m> at the interior maximum.</alert>
+        <em>If <m>f(x_0) \gt f(a)</m>:</em> the maximum value of
+        <m>f</m> is at least <m>f(x_0)</m>, which is greater than
+        <m>f(a) = f(b)</m>, so the maximum is not attained at
+        <m>a</m> or at <m>b</m>. Hence it is attained at some point
+        <m>c \in (a, b)</m>.
       </p>
       <p>
-        At the interior maximum <m>c</m>: for <m>h \gt 0</m> small,
+        <em>If <m>f(x_0) \lt f(a)</m>:</em> the minimum value of
+        <m>f</m> is at most <m>f(x_0)</m>, which is less than
+        <m>f(a) = f(b)</m>, so the minimum is not attained at <m>a</m>
+        or at <m>b</m>. Hence it is attained at some point
+        <m>c \in (a, b)</m>.
+      </p>
+      <p>
+        In either case, <m>f</m> has an interior extremum (a maximum or
+        a minimum) at some <m>c \in (a, b)</m>.
+      </p>
+      <p>
+        <alert>Step 3: Conclude <m>f'(c) = 0</m> at the interior extremum.</alert>
+      </p>
+      <p>
+        Suppose first that <m>c</m> is an interior maximum. Choose
+        <m>\delta \gt 0</m> with <m>(c - \delta, c + \delta) \subset (a, b)</m>.
+        For <m>0 \lt h \lt \delta</m>,
         <m>f(c + h) \leq f(c)</m>, so
         <m>(f(c+h) - f(c))/h \leq 0</m>; taking the right-hand limit,
-        <m>f'(c) \leq 0</m>. For <m>h \lt 0</m> small,
+        <m>f'(c) \leq 0</m>. For <m>-\delta \lt h \lt 0</m>,
         <m>f(c + h) \leq f(c)</m>, so
         <m>(f(c+h) - f(c))/h \geq 0</m>; taking the left-hand limit,
         <m>f'(c) \geq 0</m>. Since both inequalities hold and the
-        derivative exists, <m>f'(c) = 0</m>. (A symmetric argument
-        applies if <m>f</m> attains its minimum at an interior point.)
+        derivative exists, <m>f'(c) = 0</m>.
+      </p>
+      <p>
+        Taking these limits preserves the inequalities. For instance,
+        the numbers <m>h_n = \delta/(n+1)</m> are positive, less than
+        <m>\delta</m>, and tend to <m>0</m>, so by the sequential
+        characterization of limits (<xref ref="ex-mod6-sg-31-3"/>) the
+        quotients <m>(f(c+h_n) - f(c))/h_n</m> converge to
+        <m>f'(c)</m>. Each of them is <m>\leq 0</m>, and limits of
+        sequences preserve non-strict inequalities
+        (<xref ref="par-mod4-sg-two-facts" text="custom">Two Facts You
+        Will Use Constantly</xref>), so <m>f'(c) \leq 0</m>. The
+        numbers <m>-h_n</m> give <m>f'(c) \geq 0</m> in the same way.
+      </p>
+      <p>
+        If instead <m>c</m> is an interior minimum, then <m>c</m> is an
+        interior maximum of <m>-f</m>, which is differentiable on
+        <m>(a, b)</m> with <m>(-f)'(c) = -f'(c)</m>. The argument above,
+        applied to <m>-f</m>, gives <m>-f'(c) = 0</m>, so
+        <m>f'(c) = 0</m>.
         <m>\square</m>
       </p>
       <p>
@@ -256,10 +293,17 @@
         &#x2014;and the answer is at most 1. This is the prototype
         of the <em>MVT inequality template</em>:
         <m>|f(y) - f(x)| = |f'(c)| \cdot |y - x| \leq M|y-x|</m>
-        whenever <m>|f'| \leq M</m>. This template recurs throughout
-        MAT 5610: in the proof of the Fundamental Theorem of Calculus,
-        in error bounds for Taylor polynomials, and in the definition
-        of Lipschitz continuity.
+        whenever <m>|f'| \leq M</m> on the interval between <m>x</m>
+        and <m>y</m>. In particular, a function whose derivative is
+        bounded by <m>M</m> on an interval satisfies the Lipschitz
+        condition <m>|f(x) - f(y)| \leq M|x - y|</m> there, which, by
+        <xref ref="ex-mod6-we-4" text="custom">Worked Example 4</xref>
+        of <xref ref="ch-mod6" text="custom">Module 6</xref>, makes it
+        uniformly continuous. The same idea of bounding a derivative
+        gives error bounds for Taylor polynomials. The MVT equality
+        <m>f(y) - f(x) = f'(c)(y - x)</m> itself, without the
+        inequality, is what the proof of the Fundamental Theorem of
+        Calculus in MAT 5610 uses.
       </p>
     </solution>
   </exercise>
