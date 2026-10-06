@@ -1,0 +1,274 @@
+<section xml:id="sec-mod9-bridge-reading">
+  <title>Module 9: Bridge Reading Guide</title>
+  <p>Bauldry §2.6 — Estimated time: 40 minutes</p>
+
+    <p>
+      Every module ends with a bridge reading in Bauldry's
+      <em>Introduction to Real Analysis</em>. For this final module
+      the reading is Bauldry &#xa7;2.6
+      (<q>Sequences and Series of Functions</q>,
+      approximately pp. 101&#x2013;116). This section is the graduate
+      treatment of everything you have just studied: pointwise and
+      uniform convergence, preservation of continuity and
+      integrability, the Weierstrass <m>M</m>-Test, and power series
+      as the payoff application. Reading it now, after working through
+      Zorn &#xa7;4.4 and the module exercises, should feel like
+      recognition&#x2014;you already know the ideas; Bauldry is
+      showing you how a graduate text frames them.
+    </p>
+    <p>
+      Pay particular attention to two things as you read. First,
+      Bauldry's definition of uniform convergence and the
+      <m>\sup</m>-norm criterion: are they identical to Zorn's
+      formulation, or phrased differently? Second, Bauldry's
+      treatment of power series at the end of &#xa7;2.6: he shows
+      that a power series converges uniformly on any closed disk
+      strictly inside its radius of convergence, and derives term-by-term
+      differentiation and integration as corollaries. This is the
+      framework MAT 5610 will use throughout Chapter 2.
+    </p>
+    <p>
+      <alert>For this module, read:</alert>
+      Bauldry &#xa7;2.6 (<q>Sequences and Series of Functions</q>,
+      approximately pp. 101&#x2013;116).
+    </p>
+
+  <!-- ============================================================
+       PART 1: DEFINITIONS AND CRITERIA
+  ============================================================ -->
+
+  <paragraphs xml:id="par-mod9-br-defs">
+    <title>Definitions and Sup-Norm Criterion</title>
+    <p>
+      Bauldry opens &#xa7;2.6 by giving the definitions of pointwise
+      and uniform convergence and the sup-norm criterion for uniform
+      convergence. These match Zorn &#xa7;4.4 precisely. Read the
+      definitions carefully; then answer the exercises below.
+    </p>
+  </paragraphs>
+
+  <exercise xml:id="ex-mod9-br-1">
+    <title>Comparing Definitions</title>
+    <statement>
+      <p>
+        Write out Bauldry's definition of uniform convergence
+        (&#xa7;2.6, Definition or Theorem 2.6.x). Compare it
+        word-for-word with the definition in the module orientation.
+        Are they identical? If not, identify the difference in
+        phrasing or quantifier order. Which formulation do you find
+        clearer, and why?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod9-br-2">
+    <title>The Sup-Norm Criterion in Bauldry</title>
+    <statement>
+      <p>
+        <ol marker="(a)">
+          <li>
+            State the sup-norm criterion as Bauldry gives it. How
+            does his statement compare to the version in the module
+            study guide (Exercise sg-2)?
+          </li>
+          <li>
+            Bauldry may phrase the criterion as a theorem or as an
+            equivalent definition. Whichever form he uses, explain
+            why it is logically equivalent to the
+            <m>\varepsilon</m>-<m>N</m> definition.
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <!-- ============================================================
+       PART 2: PRESERVATION THEOREMS
+  ============================================================ -->
+
+  <paragraphs xml:id="par-mod9-br-preserve">
+    <title>Preservation of Continuity and Integrability</title>
+    <p>
+      Bauldry proves (or states as theorems) that uniform convergence
+      preserves continuity and permits the interchange of limits and
+      integrals. In the module you proved the continuity theorem
+      (Worked Example 2) and applied the integration theorem (Worked
+      Example 4). Now see how a graduate text presents these results.
+    </p>
+  </paragraphs>
+
+  <exercise xml:id="ex-mod9-br-3">
+    <title>The Continuity Theorem in Bauldry</title>
+    <statement>
+      <p>
+        Locate the theorem in &#xa7;2.6 that says uniform convergence
+        of continuous functions implies the limit is continuous.
+      </p>
+      <p>
+        <ol marker="(a)">
+          <li>
+            Does Bauldry's proof use the same
+            <m>3\varepsilon</m>-trick structure as Worked Example 2
+            in this module? Describe any differences in presentation.
+          </li>
+          <li>
+            Bauldry may state a stronger version: that the limit of a
+            uniformly convergent sequence of continuous functions on a
+            closed interval is <em>uniformly</em> continuous.
+            Does he state this? What additional hypothesis is needed?
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod9-br-4">
+    <title>Term-by-Term Integration in Bauldry</title>
+    <statement>
+      <p>
+        Find the theorem in &#xa7;2.6 that justifies swapping the
+        limit and the integral under uniform convergence.
+      </p>
+      <p>
+        <ol marker="(a)">
+          <li>
+            State the theorem exactly as Bauldry gives it. What
+            hypotheses does he require beyond uniform convergence?
+          </li>
+          <li>
+            The derivation of the Leibniz formula
+            <m>\pi/4 = 1 - 1/3 + 1/5 - \cdots</m> in Worked
+            Example 4 used this theorem on <m>[0,r]</m> for
+            <m>r \lt 1</m>, with a continuity argument (Abel's
+            theorem) to reach <m>x = 1</m>. Does Bauldry address
+            this boundary extension? What does he say?
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <!-- ============================================================
+       PART 3: THE WEIERSTRASS M-TEST AND POWER SERIES
+  ============================================================ -->
+
+  <paragraphs xml:id="par-mod9-br-mtest">
+    <title>The Weierstrass <m>M</m>-Test and Power Series</title>
+    <p>
+      The second half of Bauldry &#xa7;2.6 applies the
+      <m>M</m>-Test to power series, showing that every power series
+      converges uniformly on any closed interval strictly inside its
+      radius of convergence. This result justifies term-by-term
+      differentiation and integration of power series&#x2014;one of
+      the most important tools in graduate analysis.
+    </p>
+  </paragraphs>
+
+  <exercise xml:id="ex-mod9-br-5">
+    <title>The <m>M</m>-Test in Bauldry</title>
+    <statement>
+      <p>
+        State the Weierstrass <m>M</m>-Test as Bauldry gives it.
+        Compare it to the statement in the module orientation.
+        Are the hypotheses the same? Does Bauldry include the
+        absolute convergence conclusion explicitly?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod9-br-6">
+    <title>Power Series Uniform Convergence</title>
+    <statement>
+      <p>
+        <ol marker="(a)">
+          <li>
+            Bauldry uses the <m>M</m>-Test to prove that the power
+            series <m>\sum a_n x^n</m> with radius of convergence
+            <m>R \gt 0</m> converges uniformly on
+            <m>[-r, r]</m> for any <m>r \lt R</m>. Sketch the
+            argument: what are the <m>M_n</m>'s, and why does
+            <m>\sum M_n</m> converge?
+          </li>
+          <li>
+            Why is the uniform convergence restricted to
+            <m>[-r,r]</m> with <m>r \lt R</m>, rather than the
+            full interval of convergence <m>(-R, R)</m>? Give a
+            specific example where the series converges at every
+            point of <m>(-R,R)</m> but not uniformly.
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod9-br-7">
+    <title>Term-by-Term Differentiation</title>
+    <statement>
+      <p>
+        Bauldry's treatment of power series culminates in term-by-term
+        differentiation: if <m>f(x) = \sum_{n=0}^{\infty} a_n x^n</m>
+        on <m>(-R, R)</m>, then <m>f'(x) = \sum_{n=1}^{\infty} n a_n
+        x^{n-1}</m> on <m>(-R, R)</m>.
+      </p>
+      <p>
+        <ol marker="(a)">
+          <li>
+            Does this module cover differentiation of function series?
+            (Check the orientation.) Why does the prep course omit
+            term-by-term differentiation while including term-by-term
+            integration?
+          </li>
+          <li>
+            Bauldry uses this theorem to show that the exponential
+            function <m>e^x = \sum_{n=0}^{\infty} x^n/n!</m>
+            satisfies <m>(e^x)' = e^x</m>. Walk through the argument
+            in one or two sentences.
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <!-- ============================================================
+       COURSE WRAP-UP
+  ============================================================ -->
+
+  <paragraphs xml:id="par-mod9-course-wrapup">
+    <title>Course Wrap-Up</title>
+    <p>
+      This is the final bridge reading of the prep course. Over nine
+      modules, you have built every foundational tool that MAT 5610
+      will use in Bauldry Chapter 2: the logic and proof-writing
+      infrastructure (Module 1), the completeness of <m>\R</m>
+      (Module 2), the theory of sequences including Cauchy sequences
+      and subsequences (Module 4), series including absolute and
+      conditional convergence (Module 5), limits, continuity, and
+      uniform continuity of functions (Module 6), differentiation
+      and the Mean Value Theorem (Module 7), Riemann integration and
+      the Fundamental Theorem (Module 8), and now uniform convergence
+      of function sequences and series (Module 9).
+    </p>
+    <p>
+      Bauldry Chapter 2 is the rigorous version of all of that&#x2014;
+      written at graduate speed, with proofs that assume you can fill in
+      details that would have been spelled out at the undergraduate level.
+      The prep course was designed so that when you encounter a definition
+      or theorem in MAT 5610, you will have already seen the idea
+      once: in the lightboard videos, in Zorn, and now in Bauldry.
+      The goal was never to replace the graduate course but to lower
+      the activation energy for engaging with it.
+    </p>
+    <p>
+      Before MAT 5610 begins, consider reviewing: the
+      <m>\varepsilon</m>-<m>\delta</m> definition of continuity
+      and the <m>\varepsilon</m>-<m>N</m> definition of sequence
+      convergence, the statement and proof of the
+      Bolzano-Weierstrass theorem, the proof of the Fundamental
+      Theorem of Calculus (both parts), and today's uniform convergence
+      definitions. These four clusters are the joints at which the
+      graduate course will bend. If you can write their proofs cleanly
+      from memory, you are well prepared.
+    </p>
+  </paragraphs>
+
+</section>

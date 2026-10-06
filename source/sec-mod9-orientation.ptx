@@ -1,0 +1,251 @@
+<section xml:id="sec-mod9-orientation">
+  <title>Module 9: Sequences and Series of Functions</title>
+
+  <objectives xml:id="obj-mod9">
+    <ul>
+      <li>
+        <p>
+          Define <em>pointwise convergence</em> of a sequence of functions
+          <m>(f_n)</m> to a function <m>f</m> on a set <m>S</m>: for each
+          fixed <m>x \in S</m>, the sequence of numbers <m>f_n(x)</m> converges
+          to <m>f(x)</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Define <em>uniform convergence</em>: <m>f_n \to f</m> uniformly on
+          <m>S</m> if <m>\forall \varepsilon \gt 0\ \exists N\ \forall n \geq N\
+          \forall x \in S:\ |f_n(x) - f(x)| \lt \varepsilon</m>, and explain
+          why the single <m>N</m> working for all <m>x</m> simultaneously is
+          the key distinction from pointwise convergence.
+        </p>
+      </li>
+      <li>
+        <p>
+          Use the sup-norm criterion to determine whether a sequence converges
+          uniformly: <m>f_n \to f</m> uniformly on <m>S</m> if and only if
+          <m>\sup_{x \in S} |f_n(x) - f(x)| \to 0</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Produce and analyze the canonical non-uniform example:
+          <m>f_n(x) = x^n</m> on <m>[0,1]</m> converges pointwise to a
+          discontinuous limit, demonstrating that pointwise convergence alone
+          does not preserve continuity.
+        </p>
+      </li>
+      <li>
+        <p>
+          State and prove: if <m>f_n \to f</m> uniformly on <m>[a,b]</m>
+          and each <m>f_n</m> is continuous, then <m>f</m> is continuous.
+        </p>
+      </li>
+      <li>
+        <p>
+          State and apply the term-by-term integration theorem: if
+          <m>f_n \to f</m> uniformly on <m>[a,b]</m> and each <m>f_n</m>
+          is integrable, then
+          <m>\int_a^b f = \lim_{n \to \infty} \int_a^b f_n</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          State and apply the Weierstrass <m>M</m>-Test: if
+          <m>|f_n(x)| \leq M_n</m> for all <m>x \in S</m> and
+          <m>\sum M_n \lt \infty</m>, then <m>\sum f_n</m> converges
+          absolutely and uniformly on <m>S</m>.
+        </p>
+      </li>
+    </ul>
+  </objectives>
+
+  <p>Orientation</p>
+
+  <!-- ============================================================ -->
+
+    <p>
+      This module is the capstone of the course. Every major idea from the
+      preceding eight modules converges here: the <m>\varepsilon</m>-<m>N</m>
+      framework (Module 4), series as sequences of partial sums (Module 5),
+      continuity and uniform continuity (Module 6), integration (Module 8).
+      Sequences of functions ask a new kind of question: not <q>does this
+      sequence of <em>numbers</em> converge?</q> but <q>does this sequence of
+      <em>functions</em> converge, and if so, what properties does the limit
+      function inherit?</q>
+    </p>
+    <p>
+      The central discovery of this module is that the answer depends entirely
+      on <em>how</em> the convergence happens. Pointwise convergence&#x2014;where
+      each value <m>f_n(x)</m> converges to <m>f(x)</m> separately for each
+      <m>x</m>&#x2014;is too weak to preserve continuity, integrability, or
+      the interchange of limits and integrals. Uniform convergence, where a
+      single <m>N</m> controls the approximation for <em>all</em> <m>x</m>
+      simultaneously, is strong enough. The difference between these two
+      notions is exactly a quantifier swap&#x2014;the same kind of swap that
+      distinguished continuity from uniform continuity in Module 6.
+    </p>
+    <p>
+      The self-assessment questions below are <alert>not graded</alert>.
+      They are designed to help you locate yourself within the module.
+      Write informally; a sentence or two per question is fine.
+    </p>
+
+  <exercise xml:id="ex-mod9-sa-1">
+    <title>What Does Convergence of Functions Mean?</title>
+    <statement>
+      <p>
+        Suppose someone says: <q>the sequence of functions <m>f_n(x) = x/n</m>
+        converges to <m>f(x) = 0</m> as <m>n \to \infty</m>.</q>
+        What do you think they mean? What would you need to check to verify
+        this claim?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod9-sa-2">
+    <title>The Discontinuous Limit</title>
+    <statement>
+      <p>
+        Consider <m>f_n(x) = x^n</m> for <m>x \in [0,1]</m>. Compute
+        <m>f_n(0.5)</m>, <m>f_n(0.9)</m>, <m>f_n(0.99)</m>, and
+        <m>f_n(1)</m> for <m>n = 1, 10, 100</m>. What does the pointwise
+        limit appear to be? Is the limit function continuous on <m>[0,1]</m>?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod9-sa-3">
+    <title>Interchanging Limits and Integrals</title>
+    <statement>
+      <p>
+        For <m>f_n(x) = x^n</m> on <m>[0,1]</m>, compute
+        <m>\int_0^1 f_n(x)\,dx = \int_0^1 x^n\,dx</m> exactly. What is
+        <m>\lim_{n \to \infty} \int_0^1 f_n(x)\,dx</m>? Is this equal to
+        <m>\int_0^1 \lim_{n \to \infty} f_n(x)\,dx</m>? What does the
+        discrepancy (if any) suggest about interchanging limits and integrals?
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod9-sa-4">
+    <title>Power Series Radius</title>
+    <statement>
+      <p>
+        You have seen power series in Module 5. For
+        <m>\sum_{n=0}^{\infty} x^n</m>, what is the radius of convergence?
+        Does the series converge for <m>x = 1</m>? For <m>x = -1</m>?
+        For <m>x = 0.5</m>? Record your best recollection from prior courses.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="ex-mod9-sa-5">
+    <title>Your Background</title>
+    <statement>
+      <p>
+        Have you seen uniform convergence before&#x2014;either in a real
+        analysis course or in a complex analysis or differential equations
+        course? If so, describe your prior exposure. If not, what feels most
+        unfamiliar about the definition you just read?
+      </p>
+    </statement>
+  </exercise>
+
+  <!-- ============================================================ -->
+
+  <paragraphs xml:id="par-mod9-instructor-note">
+    <title>A Note from the Instructor</title>
+    <p>
+      Uniform convergence is, by consensus, the hardest conceptual leap in
+      undergraduate real analysis. The definition looks nearly identical to
+      pointwise convergence&#x2014;the only change is a quantifier swap&#x2014;but
+      its consequences are profound. My recommendation: before watching the
+      videos, write out the two definitions side by side with the quantifiers
+      spelled out explicitly, and circle the one symbol (<m>\exists N</m>)
+      that moves. Everything else in this module flows from that observation.
+    </p>
+    <p>
+      This module also closes the loop on the entire prep course. The arc is:
+      we built logical and proof-writing foundations (Module 1), established
+      the real number system (Module 2), developed sequences (Module 4),
+      extended to functions (Modules 6&#x2013;8), and now we ask what happens
+      to all those properties&#x2014;continuity, integrability&#x2014;when
+      functions themselves vary. The answer is: they survive under uniform
+      convergence. This is the organizing principle of MAT 5610's treatment
+      of function spaces.
+    </p>
+  </paragraphs>
+
+  <paragraphs xml:id="par-mod9-pacing">
+    <title>A Note on Pacing</title>
+    <p>
+      <alert>A note on pacing.</alert>
+      If you are coming in with prior real analysis experience, the definitions
+      here will be familiar, but push yourself to prove the theorems rather
+      than just recall them&#x2014;the proofs of the continuity theorem and
+      the term-by-term integration theorem are both on the Module Assessment,
+      and writing them cleanly requires internalizing the <m>3\varepsilon</m>
+      argument structure. If this is your first encounter with uniform
+      convergence, slow down at Worked Example 1 (the <m>x^n</m> analysis)
+      and Worked Example 2 (the continuity proof): read each one twice, then
+      close the document and try to reproduce the argument on paper before
+      moving to the practice set.
+    </p>
+  </paragraphs>
+
+  <paragraphs xml:id="par-mod9-map">
+    <title>Module Road Map (estimated time: 5 hours)</title>
+    <tabular halign="left">
+      <col width="50%"/>
+      <col width="10%"/>
+      <col width="40%"/>
+      <row header="yes">
+        <cell><p>Component</p></cell>
+        <cell><p>Time</p></cell>
+        <cell><p>Purpose</p></cell>
+      </row>
+      <row>
+        <cell><p>Orientation (this document)</p></cell>
+        <cell><p>15 min</p></cell>
+        <cell><p>Goals, self-assessment, context</p></cell>
+      </row>
+      <row>
+        <cell><p>Video 1: Pointwise vs.&#xa0;Uniform Convergence</p></cell>
+        <cell><p>10 min</p></cell>
+        <cell><p>Core instruction via lightboard</p></cell>
+      </row>
+      <row>
+        <cell><p>Video 2: Consequences of Uniform Convergence</p></cell>
+        <cell><p>10 min</p></cell>
+        <cell><p>Core instruction via lightboard</p></cell>
+      </row>
+      <row>
+        <cell><p>Companion Reading and Study Guide</p></cell>
+        <cell><p>60 min</p></cell>
+        <cell><p>Zorn &#xa7;4.4 with guided questions</p></cell>
+      </row>
+      <row>
+        <cell><p>Worked Examples</p></cell>
+        <cell><p>45 min</p></cell>
+        <cell><p>Four annotated proof walkthroughs</p></cell>
+      </row>
+      <row>
+        <cell><p>Practice Problem Set</p></cell>
+        <cell><p>100 min</p></cell>
+        <cell><p>Scaffolded practice by difficulty</p></cell>
+      </row>
+      <row>
+        <cell><p>Bridge Reading Guide</p></cell>
+        <cell><p>40 min</p></cell>
+        <cell><p>Bauldry &#xa7;2.6 with guided questions</p></cell>
+      </row>
+      <row>
+        <cell><p>Module Assessment</p></cell>
+        <cell><p>40 min</p></cell>
+        <cell><p>Submitted proofs and reflection</p></cell>
+      </row>
+    </tabular>
+  </paragraphs>
+
+</section>

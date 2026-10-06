@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ch-mod9">
+  <title>Module 9: Sequences and Series of Functions</title>
+
+  <xi:include href="sec-mod9-orientation.ptx"/>
+  <xi:include href="sec-mod9-study-guide.ptx"/>
+  <xi:include href="sec-mod9-worked-examples.ptx"/>
+  <xi:include href="sec-mod9-practice-set.ptx"/>
+  <xi:include href="sec-mod9-bridge-reading.ptx"/>
+  <xi:include href="sec-mod9-assessment.ptx"/>
+
+</chapter>
