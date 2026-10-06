@@ -17,7 +17,7 @@ Source review: [#10 Module 9 comment](https://github.com/morrisqa/analysis-prep/
 | Where | Decision | Why | Alternative |
 |---|---|---|---|
 | `ex-mod9-as-2` (graded) | Sequence changed to fₙ(x) = n²x(1 − x)ⁿ on [0, 1] (first to n²x e^(−nx), then, after review, to this). Pointwise limit 0 via the Ratio Test; maximum at x = 1/(n+1), tending to ∞ (using (1 + 1/n)ⁿ → e, cited in Module 5); ∫₀¹ fₙ = n²/((n+1)(n+2)) → 1 ≠ 0 by u = 1 − x. Part (iv) asks which hypothesis of the term-by-term theorem fails, citing the student's own (ii). Approach-only hint. | The old example had no discrepancy; the interim one was computed in visible material (sg-3(b), ps-s2) and interpreted by the new study-guide example. | Keep n²x e^(−nx). |
-| Visible example vs as-2 | Different functions (2n²x e^(−n²x²) in the study guide; n²x e^(−nx) in the assessment). | The visible example must not hand out the graded computations. | One function in both. |
+| Visible example vs as-2 | Different functions (2n²x e^(−n²x²) in the study guide; n²x(1 − x)ⁿ in the assessment). | The visible example must not hand out the graded computations. | One function in both. |
 | `ex-mod9-sa-3` | Keeps xⁿ and adds a second comparison with gₙ, where the integrals do disagree. | The self-assessment now shows both outcomes. | |
 | `ex-mod9-ps-s4` | Asks for which r the M-Test (with Mₙ = \|aₙ\|rⁿ) gives uniform convergence on [−r, r], and whether r = R is allowed; (c) corrected to r ≤ 1. | "The largest set" was ill-defined; (c) understated the result. | |
 | `ex-mod9-ps-c2` | Bounds terms of a convergent series at a point x₁ with \|x₁\| > r, then compares with a geometric series. | The book never establishes absolute convergence inside the radius. | Prove absolute convergence first. |

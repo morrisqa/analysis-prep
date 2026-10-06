@@ -5,8 +5,9 @@
   <!-- ============================================================ -->
 
     <p>
-      This assessment has three parts. Parts 1 and 2 ask you to write
-      complete mathematical proofs, submitted for feedback. Part 3 is
+      This assessment has three parts. Part 1 asks you to write a
+      complete mathematical proof, and Part 2 a complete analysis with
+      every step justified; both are submitted for feedback. Part 3 is
       a short reflection. Submit all three parts together as a single
       document (PDF or typed file) through the course management system.
     </p>
@@ -156,7 +157,12 @@
         for series in <xref ref="ch-mod5" text="custom">Module 5</xref>.
         For part (ii): differentiate <m>f_n</m> with respect to
         <m>x</m> and factor the derivative.
-        For part (iv): substitute <m>u = 1 - x</m>.
+        For part (iv): find an antiderivative of <m>f_n</m> (the
+        substitution <m>u = 1 - x</m> suggests one), confirm it by
+        differentiating with the chain rule from
+        <xref ref="ch-mod7" text="custom">Module 7</xref>, and apply
+        Part 2 of the Fundamental Theorem of Calculus from
+        <xref ref="ch-mod8" text="custom">Module 8</xref>.
       </p>
     </hint>
   </exercise>
@@ -254,6 +260,12 @@
         <cell><p>Critical point found correctly in Part 2 (ii); sup computed and limit evaluated</p></cell>
         <cell><p>Maximum found with minor computational error</p></cell>
         <cell><p>Supremum not computed or wrong method used</p></cell>
+      </row>
+      <row>
+        <cell><p><alert>Part 2 analysis</alert></p></cell>
+        <cell><p>Pointwise limit in Part 2 (i) correct in all three cases; uniform-convergence verdict in (iii) justified from (ii); both integrals in (iv) computed correctly and the failed hypothesis named, with the hypotheses that hold identified</p></cell>
+        <cell><p>One of (i), (iii), (iv) incomplete or with a minor error, or the failed hypothesis named without justification</p></cell>
+        <cell><p>Pointwise limit wrong, verdict unsupported, or integrals not computed</p></cell>
       </row>
       <row>
         <cell><p><alert>Mathematical prose</alert></p></cell>
