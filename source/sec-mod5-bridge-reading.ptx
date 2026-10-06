@@ -122,7 +122,7 @@
             <q>nonnegative</q> terms are assumed).
           </li>
           <li>
-            Bauldry's Integral Test (Thm 1.38) is stated, but not
+            The Integral Test (Bauldry's Thm 1.38) is stated, but not
             proved, in this module's Study Guide
             (<xref ref="ex-mod5-sg-26-6"/>). State Bauldry's hypotheses
             precisely: <m>f</m> must be continuous, positive, and
@@ -135,7 +135,7 @@
           <li>
             Bauldry remarks that the Alternating Series Test has a
             useful <em>remainder bound</em>: the tail
-            <m>\sum_{k > n} (-1)^{k-1} a_k</m> is bounded in absolute
+            <m>\sum_{k \gt n} (-1)^{k-1} a_k</m> is bounded in absolute
             value by <m>a_{n+1}</m>. Why is this plausible? (Think
             about how the sum of the series lies between consecutive
             partial sums.)

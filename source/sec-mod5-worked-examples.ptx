@@ -96,7 +96,7 @@
         like <m>1/k^2</m>, so we compare to <m>\sum 1/k^2</m>. Here
         direct comparison would also work, since
         <m>1/(k^2 + k) \leq 1/k^2</m> for every <m>k</m>; we use the
-        Limit Comparison Test to show how it runs. Its advantage is that
+        Limit Comparison Test to show the method. Its advantage is that
         it needs no explicit inequality <m>a_k \leq b_k</m>, which
         matters when the natural inequality points the wrong way: for
         <m>\sum 1/(k^2 - k + 1)</m>, every term is at least
@@ -275,7 +275,7 @@
         is a delicate property: rearranging the terms of a
         conditionally convergent series can change its sum (Riemann's
         rearrangement theorem, a topic for MAT 5610; see, for example,
-        Rudin, <em>Principles of Mathematical Analysis</em>, 3rd ed.,
+        Rudin, <pubtitle>Principles of Mathematical Analysis</pubtitle>, 3rd ed.,
         Theorem 3.54).
       </p>
     </solution>

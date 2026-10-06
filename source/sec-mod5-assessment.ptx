@@ -75,12 +75,11 @@
     </statement>
     <hint>
       <p>
-        Partial fractions give
-        <md>\frac{1}{k(k+2)} = \frac{1}{2}\left(\frac{1}{k} - \frac{1}{k+2}\right).</md>
-        The partial sum then telescopes to
-        <md>S_n = \frac{1}{2}\left(1 + \frac{1}{2} - \frac{1}{n+1} - \frac{1}{n+2}\right)
-        = \frac{3}{4} - \frac{1}{2}\left(\frac{1}{n+1} + \frac{1}{n+2}\right).</md>
-        Take <m>n \to \infty</m>.
+        Split the summand into a difference of two simpler fractions
+        by partial fractions. Then write out the first few and the last
+        few terms of <m>S_n</m> and see which terms cancel. The two
+        fractions are two indices apart, so check carefully which terms
+        survive at each end.
       </p>
     </hint>
   </exercise>
@@ -137,17 +136,13 @@
     </statement>
     <hint>
       <p>
-        For (i): use Limit Comparison with <m>\sum 1/k</m>. The
-        ratio <m>(k/(k^2+1))/(1/k) = k^2/(k^2+1) \to 1</m>, and
-        <m>\sum 1/k</m> diverges, so <m>\sum k/(k^2+1)</m> diverges.
-        Hence the original series does <em>not</em> converge
-        absolutely.
-        For (ii): to show <m>b_{k+1} \leq b_k</m>, clear the (positive)
-        denominators and compare the two polynomials in <m>k</m>; the
-        inequality holds for every <m>k \geq 1</m>, so no calculus is
-        needed. The sequence tends to 0 by dividing numerator and denominator
-        by <m>k^2</m>. Hence by AST the series converges.
-        Classification: conditionally convergent.
+        For (i): use the Limit Comparison Test, comparing with
+        <m>\sum 1/k</m>.
+        For (ii): to compare <m>b_{k+1}</m> with
+        <m>b_k</m>, clear the (positive) denominators and compare the
+        two polynomials in <m>k</m>; no calculus is needed. For the
+        limit of <m>b_k</m>, divide numerator and denominator by
+        <m>k^2</m>.
       </p>
     </hint>
   </exercise>
@@ -167,11 +162,9 @@
     <title>Divergence Test and Shifted Sequences</title>
     <statement>
       <p>
-        In <xref ref="ch-mod4" text="custom">Module 4</xref> you read
-        a proof that a convergent sequence has a <em>unique</em> limit,
-        and you also learned to use the Algebra of Limits (in
-        particular, the difference rule) to compute limits of
-        combinations of sequences. In <xref ref="ex-mod5-sg-25-3"/>
+        In <xref ref="ch-mod4" text="custom">Module 4</xref> you learned
+        to use the Algebra of Limits (in particular, the difference
+        rule) to compute limits of combinations of sequences. In <xref ref="ex-mod5-sg-25-3"/>
         you used one more fact: shifting a sequence by one index does
         not change its limit.
       </p>
@@ -180,11 +173,8 @@
         (<q>if <m>\sum a_k</m> converges, then <m>a_k \to 0</m></q>)
         is, in a precise sense, <q>the same theorem</q> as the
         fact that a shifted sequence has the same limit, combined
-        with the difference rule. (Hint: start from the identity
-        <m>a_n = S_n - S_{n-1}</m> and unpack what convergence of
-        <m>(S_n)</m> to <m>S</m> tells you about <m>(S_{n-1})</m>.
-        Uniqueness of limits is what lets you speak of <em>the</em>
-        sum <m>S</m> of the series.)
+        with the difference rule. (Hint: if <m>S_n \to S</m>, what
+        can you say about the sequence <m>(S_{n-1})</m>?)
       </p>
     </statement>
   </exercise>

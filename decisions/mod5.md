@@ -27,9 +27,20 @@ Inconclusiveness at ρ = 1 is shown with Σ1/k and Σ1/k², which needs k^(1/k) 
 | `ex-mod5-br-3`(b) | "Why is each hypothesis required?" → "What role does each hypothesis play?", with a hint toward a counterexample for "decreasing"; notes that the study guide's version asks only f ≥ 0. | Continuity is not strictly required, so "required" misleads. | |
 | `ex-mod5-ps-f3`(d) | Continuity of cosine flagged as a calculus fact, with a pointer to Module 6. | Not yet proved at this point. | |
 
+## After review (PR #30 follow-ups)
+
+| Where | Decision | Why | Alternative |
+|---|---|---|---|
+| Root Test block | 1/√k → 0 proved inline (Archimedean Property); Bernoulli's base case stated; existence of kth roots noted (completeness; also the IVT in Module 6); the k^(1/k) proof split into its own paragraph; Module 4 links point at `par-mod4-sg-two-facts`. | The math review found a forward reference to Worked Example 4 and two unstated assumptions. | |
+| Root Test block, last paragraph | A bridge to the lim sup form that students will meet in other texts, worded without claiming what Bauldry does. | Helps the move to MAT 5610; Bauldry's statement is unverified. | Name Bauldry. |
+| `ex-mod5-as-1`, `-as-2`, `-as-r1` | Hints cut back to the approach (see `policies.md`). | They gave away most of the graded answer, partly before this PR. | |
+| `ex-mod5-ps-c1` | Keep [C]; hint trimmed so "where does completeness enter?" stays with the student. | That question is the challenge. | Give the answer in the hint. |
+| `ex-mod5-ps-c2` | Keep [C]. | Part (c), what the tests can and cannot decide, is challenge-level. | [S]. |
+| `ex-mod5-sg-26-3`(a) | Bound the partial sums and apply the Monotone Convergence Theorem, as the Root Test proof does. | It wrote a series bound before convergence was known. | |
+
 ## Left as is
-- The hints of `ex-mod5-as-1` and parts of `ex-mod5-as-2` already give full answers to graded items. That wasn't in the review; it is noted for the house-style and structure pass.
 - `ex-mod5-br-3`(a) mentions "lim sup" only as possible Bauldry phrasing.
+- Σ1/k² is cited to the p-series theorem via `ex-mod5-sg-26-6`, which recovers it informally through the Integral Test; the module relies on Zorn for the p-series theorem (unverified).
 
 ## Unverified citations
 - **Zorn:** Definition 2.22; Theorems 2.16, 2.23, 2.26 and 2.29; Proposition 2.24; §2.3; pages 119–134 and 134–146; whether §2.6 covers the Root Test and the Integral Test.
