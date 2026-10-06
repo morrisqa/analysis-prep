@@ -16,3 +16,5 @@ logs/
 compiled-output/
 mod*-main_html/
 .fuse_hidden*
+incoming/
+.claude/worktrees/

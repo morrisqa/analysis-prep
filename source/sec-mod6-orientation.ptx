@@ -186,7 +186,6 @@
   <paragraphs xml:id="par-mod6-pacing">
     <title>A Note on Pacing</title>
     <p>
-      <alert>A note on pacing.</alert>
       If you are coming in with prior real analysis experience, you
       likely know the <m>\varepsilon</m>-<m>\delta</m> definition of a
       limit already. Skim Zorn &#xa7;3.1 quickly (confirm the definition
