@@ -36,10 +36,12 @@
 
       <paragraphs xml:id="par-mod1-ps-f">
         <title>Foundational Problems</title>
-        <!-- TODO(quinn): new sentence added in #3 to satisfy the schema; confirm or replace wording. -->
+        <!-- TODO(quinn): sentence added in #3 (wording from copy-edit review) to satisfy the schema; confirm or replace. -->
         <p>
-          These problems cover the essential mechanics, and they build the
-          foundation the later problems depend on.
+          These problems practice the basic moves of the module: translating
+          and negating quantified statements, naming a proof strategy, finding
+          errors in a flawed proof, and writing short direct and induction
+          proofs.
         </p>
       </paragraphs>
 
@@ -336,9 +338,11 @@
 
       <paragraphs xml:id="par-mod1-ps-s">
         <title>Standard Problems</title>
-        <!-- TODO(quinn): new sentence added in #3 to satisfy the schema; confirm or replace wording. -->
+        <!-- TODO(quinn): sentence added in #3 (wording from copy-edit review) to satisfy the schema; confirm or replace. -->
         <p>
-          These problems are the core level for this module.
+          These problems apply the same moves to longer arguments: quantifier
+          order, convergence language, contrapositive, contradiction,
+          biconditional, and induction proofs.
         </p>
       </paragraphs>
 
@@ -631,10 +635,11 @@
 
       <paragraphs xml:id="par-mod1-ps-c">
         <title>Challenge Problems</title>
-        <!-- TODO(quinn): new sentence added in #3 to satisfy the schema; confirm or replace wording. -->
+        <!-- TODO(quinn): sentence added in #3 (wording from copy-edit review) to satisfy the schema; confirm or replace. -->
         <p>
-          These problems ask for deeper engagement with the ideas of the
-          module.
+          These problems extend the module's ideas: repairing ill-formed
+          statements, existence and uniqueness, proof by cases, strong
+          induction, and a first look at induction in analysis.
         </p>
       </paragraphs>
 
