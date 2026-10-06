@@ -18,6 +18,7 @@
     <title>Intensive Analysis Prep</title>
 
     <xi:include href="ch-mod1.ptx"/>
+    <xi:include href="ch-mod2.ptx"/>
 
   </book>
 
