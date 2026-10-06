@@ -1,0 +1,302 @@
+<section xml:id="sec-mod8-worked-examples">
+  <title>Module 8: Worked Examples</title>
+  <p>Annotated Proof Walkthroughs — Estimated time: 40 minutes</p>
+    <p>
+      Read each example slowly. The goal is to internalize the proof
+      template, not just to see the answer. Example 1 is the archetype
+      of a direct Darboux argument; Example 2 shows the proof that
+      continuous implies integrable; Example 3 proves FTC Part 1 in full;
+      Example 4 shows FTC Part 2 in a computation.
+    </p>
+  <!-- ============================================================
+       EXAMPLE 1: f(x)=x IS RIEMANN INTEGRABLE
+  ============================================================ -->
+
+  <exercise xml:id="ex-mod8-we-1">
+    <title>Example 1: <m>f(x) = x</m> is Riemann Integrable on <m>[0,1]</m> and <m>\int = 1/2</m></title>
+    <statement>
+      <p>
+        Prove from the Darboux definition that <m>f(x) = x</m> is
+        Riemann integrable on <m>[0,1]</m> and
+        <m>\int_0^1 x\,dx = 1/2</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <alert>Strategy.</alert>
+      </p>
+      <p>
+        Use uniform partitions <m>P_n</m> with <m>n</m> equal
+        subintervals, compute upper and lower sums explicitly, show their
+        difference tends to zero, and use the integrability criterion.
+        The common limit of <m>U(f,P_n)</m> and <m>L(f,P_n)</m> will
+        identify the integral.
+      </p>
+      <p>
+        <alert>Proof.</alert>
+      </p>
+      <p>
+        Let <m>P_n</m> be the uniform partition with points
+        <m>x_k = k/n</m> for <m>k = 0, 1, \ldots, n</m>, so each
+        subinterval has width <m>\Delta x = 1/n</m>. Since <m>f(x) = x</m>
+        is increasing, on the <m>k</m>th subinterval
+        <m>[(k-1)/n, k/n]</m>:
+        <md>
+          M_k = \sup f = \frac{k}{n}, \qquad
+          m_k = \inf f = \frac{k-1}{n}.
+        </md>
+        The upper and lower sums are:
+        <md>
+          <mrow>
+            U(f,P_n)
+            \amp= \sum_{k=1}^{n} \frac{k}{n} \cdot \frac{1}{n}
+             = \frac{1}{n^2} \sum_{k=1}^{n} k
+             = \frac{1}{n^2} \cdot \frac{n(n+1)}{2}
+             = \frac{n+1}{2n},
+          </mrow>
+          <mrow>
+            L(f,P_n)
+            \amp= \sum_{k=1}^{n} \frac{k-1}{n} \cdot \frac{1}{n}
+             = \frac{1}{n^2} \sum_{k=1}^{n} (k-1)
+             = \frac{1}{n^2} \cdot \frac{n(n-1)}{2}
+             = \frac{n-1}{2n}.
+          </mrow>
+        </md>
+        Therefore
+        <md>
+          U(f,P_n) - L(f,P_n) = \frac{n+1}{2n} - \frac{n-1}{2n}
+          = \frac{2}{2n} = \frac{1}{n} \to 0.
+        </md>
+        By the integrability criterion, <m>f</m> is Riemann integrable
+        on <m>[0,1]</m>. Moreover, since the upper and lower integrals
+        are equal (both squeezed between <m>U</m> and <m>L</m>), and
+        <md>
+          \lim_{n \to \infty} U(f,P_n) = \lim_{n \to \infty} \frac{n+1}{2n} = \frac{1}{2},
+          \qquad
+          \lim_{n \to \infty} L(f,P_n) = \lim_{n \to \infty} \frac{n-1}{2n} = \frac{1}{2},
+        </md>
+        the common value of the upper and lower integrals is
+        <m>1/2</m>. Hence <m>\int_0^1 x\,dx = 1/2</m>. <m>\square</m>
+      </p>
+      <p>
+        <alert>What to notice.</alert>
+        This is the simplest possible integrability proof from the
+        definition: the function is increasing, so <m>M_k</m> and
+        <m>m_k</m> are just the values at the right and left endpoints.
+        The difference <m>U - L = 1/n</m> has a beautifully transparent
+        form. In Worked Example 2, the same strategy &#x2014; bound
+        <m>M_i - m_i</m> on each subinterval &#x2014; is applied to
+        continuous functions, where uniform continuity does the
+        bounding.
+      </p>
+    </solution>
+  </exercise>
+
+  <!-- ============================================================
+       EXAMPLE 2: CONTINUOUS IMPLIES INTEGRABLE
+  ============================================================ -->
+
+  <exercise xml:id="ex-mod8-we-2">
+    <title>Example 2: Continuous Functions are Riemann Integrable</title>
+    <statement>
+      <p>
+        Prove that if <m>f</m> is continuous on <m>[a,b]</m>, then
+        <m>f</m> is Riemann integrable on <m>[a,b]</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <alert>Strategy.</alert>
+      </p>
+      <p>
+        Use the Heine-Cantor theorem (uniform continuity of continuous
+        functions on closed bounded intervals, proved in Module 6) to
+        bound the oscillation <m>M_i - m_i</m> on each subinterval,
+        then sum up and apply the integrability criterion.
+      </p>
+      <p>
+        <alert>Proof.</alert>
+      </p>
+      <p>
+        Since <m>f</m> is continuous on the closed bounded interval
+        <m>[a,b]</m>, the Heine-Cantor theorem (Module 6) gives that
+        <m>f</m> is uniformly continuous on <m>[a,b]</m>. Let
+        <m>\varepsilon \gt 0</m> be given. By uniform continuity,
+        there exists <m>\delta \gt 0</m> such that for all
+        <m>x, y \in [a,b]</m> with <m>|x - y| \lt \delta</m>,
+        <md>|f(x) - f(y)| \lt \frac{\varepsilon}{b - a}.</md>
+        Choose any partition <m>P = \{x_0, x_1, \ldots, x_n\}</m> of
+        <m>[a,b]</m> with <m>\|P\| \lt \delta</m> (such a partition
+        exists; take, for instance, a uniform partition with
+        <m>n \gt (b-a)/\delta</m>).
+      </p>
+      <p>
+        On each subinterval <m>[x_{i-1}, x_i]</m>, any two points
+        <m>x, y</m> satisfy <m>|x - y| \leq \|P\| \lt \delta</m>,
+        so <m>|f(x) - f(y)| \lt \varepsilon/(b-a)</m>. Taking the
+        supremum over <m>x</m> and infimum over <m>y</m> (or vice
+        versa) gives <m>M_i - m_i \leq \varepsilon/(b-a)</m>.
+        Therefore:
+        <md>
+          U(f,P) - L(f,P)
+          = \sum_{i=1}^{n} (M_i - m_i)\,\Delta x_i
+          \leq \frac{\varepsilon}{b-a} \sum_{i=1}^{n} \Delta x_i
+          = \frac{\varepsilon}{b-a} \cdot (b-a)
+          = \varepsilon.
+        </md>
+        Since <m>\varepsilon \gt 0</m> was arbitrary and we exhibited
+        a partition <m>P</m> with <m>U(f,P) - L(f,P) \lt \varepsilon</m>,
+        the integrability criterion is satisfied. Hence <m>f</m> is
+        Riemann integrable on <m>[a,b]</m>. <m>\square</m>
+      </p>
+      <p>
+        <alert>What to notice.</alert>
+        Uniform continuity is indispensable: the same <m>\delta</m>
+        must work at every point of <m>[a,b]</m> simultaneously, which
+        is exactly the guarantee uniform continuity provides.
+        Pointwise continuity gives a different <m>\delta</m> at each
+        point, which could tend to zero and prevent us from finding a
+        single partition that works. The proof template is:
+        (1) invoke Heine-Cantor; (2) choose a partition with mesh
+        smaller than <m>\delta</m>; (3) bound <m>M_i - m_i</m>;
+        (4) sum up; (5) invoke the criterion.
+      </p>
+    </solution>
+  </exercise>
+
+  <!-- ============================================================
+       EXAMPLE 3: FTC PART 1
+  ============================================================ -->
+
+  <exercise xml:id="ex-mod8-we-3">
+    <title>Example 3: FTC Part 1</title>
+    <statement>
+      <p>
+        Prove FTC Part 1: if <m>f</m> is continuous on <m>[a,b]</m>
+        and <m>F(x) = \int_a^x f(t)\,dt</m> for <m>x \in [a,b]</m>,
+        then <m>F</m> is differentiable and <m>F'(x) = f(x)</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <alert>Strategy.</alert>
+      </p>
+      <p>
+        Compute <m>(F(x+h) - F(x))/h</m> using the additivity of
+        the integral, and show that it approaches <m>f(x)</m> as
+        <m>h \to 0</m>. The key is that <m>f(x)</m> can be written as
+        the average value of the constant <m>f(x)</m> over
+        <m>[x, x+h]</m>, so the difference quotient minus <m>f(x)</m>
+        is controlled by how close <m>f(t)</m> is to <m>f(x)</m>
+        for <m>t</m> near <m>x</m> &#x2014; which is exactly what
+        continuity of <m>f</m> at <m>x</m> gives.
+      </p>
+      <p>
+        <alert>Proof.</alert>
+      </p>
+      <p>
+        Fix <m>x \in (a,b)</m> and consider <m>h \neq 0</m> small
+        enough that <m>x + h \in [a,b]</m>. By the additivity of
+        the integral,
+        <md>
+          F(x+h) - F(x)
+          = \int_a^{x+h} f(t)\,dt - \int_a^x f(t)\,dt
+          = \int_x^{x+h} f(t)\,dt
+        </md>
+        (for <m>h \gt 0</m>; the case <m>h \lt 0</m> is analogous).
+        Dividing by <m>h</m>:
+        <md>
+          \frac{F(x+h) - F(x)}{h} = \frac{1}{h}\int_x^{x+h} f(t)\,dt.
+        </md>
+        Since <m>f(x)</m> is constant with respect to <m>t</m>,
+        <m>f(x) = \dfrac{1}{h}\int_x^{x+h} f(x)\,dt</m>, so
+        <md>
+          \frac{F(x+h) - F(x)}{h} - f(x)
+          = \frac{1}{h}\int_x^{x+h} [f(t) - f(x)]\,dt.
+        </md>
+        Let <m>\varepsilon \gt 0</m>. Since <m>f</m> is continuous at
+        <m>x</m>, there exists <m>\delta \gt 0</m> such that
+        <m>|t - x| \lt \delta \Rightarrow |f(t) - f(x)| \lt
+        \varepsilon</m>. For <m>|h| \lt \delta</m> and <m>t</m>
+        between <m>x</m> and <m>x + h</m>, we have
+        <m>|t - x| \leq |h| \lt \delta</m>, so
+        <m>|f(t) - f(x)| \lt \varepsilon</m>. Therefore:
+        <md>
+          \left|\frac{F(x+h) - F(x)}{h} - f(x)\right|
+          = \left|\frac{1}{h}\int_x^{x+h}[f(t) - f(x)]\,dt\right|
+          \leq \frac{1}{|h|} \cdot |h| \cdot \varepsilon
+          = \varepsilon.
+        </md>
+        Since <m>\varepsilon \gt 0</m> was arbitrary, the limit of
+        the difference quotient is <m>f(x)</m>, i.e.,
+        <m>F'(x) = f(x)</m>. <m>\square</m>
+      </p>
+      <p>
+        <alert>What to notice.</alert>
+        The proof has two moving parts: the additivity identity
+        <m>\int_a^{x+h} - \int_a^x = \int_x^{x+h}</m>, and the
+        continuity estimate that makes <m>|f(t) - f(x)|</m> small
+        when <m>|t - x|</m> is small. The bound
+        <m>|(1/h)\int_x^{x+h} g\,dt| \leq \sup|g|</m> (averaging
+        an estimate over a small interval preserves the estimate) is
+        the analytic core of the argument.
+      </p>
+    </solution>
+  </exercise>
+
+  <!-- ============================================================
+       EXAMPLE 4: COMPUTATION USING FTC
+  ============================================================ -->
+
+  <exercise xml:id="ex-mod8-we-4">
+    <title>Example 4: A Computation Using FTC</title>
+    <statement>
+      <p>
+        Compute <m>\int_0^{\pi} \sin(x)\,dx</m> using FTC Part 2.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <alert>Strategy.</alert>
+      </p>
+      <p>
+        Find an antiderivative <m>F</m> with <m>F'(x) = \sin(x)</m>,
+        verify that <m>f(x) = \sin(x)</m> is continuous on
+        <m>[0, \pi]</m>, and apply FTC Part 2.
+      </p>
+      <p>
+        <alert>Proof.</alert>
+      </p>
+      <p>
+        Take <m>F(x) = -\cos(x)</m>. We verify: <m>F'(x) = \sin(x)</m>
+        (by the standard differentiation formula, proved in Module 7
+        or calculus). The function <m>f(x) = \sin(x)</m> is continuous
+        on <m>[0, \pi]</m> (it is continuous everywhere). Since
+        <m>F'(x) = \sin(x) = f(x)</m> on <m>[0, \pi]</m>, FTC Part 2
+        applies:
+        <md>
+          \int_0^{\pi} \sin(x)\,dx
+          = F(\pi) - F(0)
+          = -\cos(\pi) - (-\cos(0))
+          = -(-1) - (-1)
+          = 1 + 1
+          = 2.
+        </md>
+        <m>\square</m>
+      </p>
+      <p>
+        <alert>What to notice.</alert>
+        The proof template for applying FTC Part 2 has three steps:
+        (1) exhibit an antiderivative <m>F</m> and verify
+        <m>F' = f</m>; (2) check that <m>f</m> is continuous on
+        <m>[a,b]</m> (the hypothesis of FTC Part 2); (3) compute
+        <m>F(b) - F(a)</m>. Step (2) is often omitted in calculus
+        courses but is essential for the theorem to apply. In this
+        example, <m>\sin</m> is continuous everywhere, so there is
+        nothing to check, but for a piecewise-defined function the
+        continuity condition would require verification.
+      </p>
+    </solution>
+  </exercise>
+
+</section>

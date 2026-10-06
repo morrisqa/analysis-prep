@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ch-mod8">
+  <title>Module 8: The Riemann Integral</title>
+
+  <xi:include href="sec-mod8-orientation.ptx"/>
+  <xi:include href="sec-mod8-study-guide.ptx"/>
+  <xi:include href="sec-mod8-worked-examples.ptx"/>
+  <xi:include href="sec-mod8-practice-set.ptx"/>
+  <xi:include href="sec-mod8-bridge-reading.ptx"/>
+  <xi:include href="sec-mod8-assessment.ptx"/>
+
+</chapter>

@@ -1,0 +1,380 @@
+<section xml:id="sec-mod8-practice-set">
+  <title>Module 8: Practice Problem Set</title>
+  <p>Estimated time: 100 minutes</p>
+    <p>
+      Problems are labeled <m>[\mathbf{F}]</m> (Foundational),
+      <m>[\mathbf{S}]</m> (Standard), and <m>[\mathbf{C}]</m>
+      (Challenge). Work in order within each level.
+    </p>
+    <p>
+      These problems are not submitted, but you should write out
+      complete solutions. For any problem that asks you to
+      <em>prove</em> something, apply the standards from the Worked
+      Examples: strategy stated up front, complete sentences, every
+      step justified, and every theorem invoked by name.
+    </p>
+  <!-- ============================================================
+       FOUNDATIONAL
+  ============================================================ -->
+
+  <paragraphs xml:id="par-mod8-ps-f">
+    <title>Foundational Problems</title>
+    <!-- TODO(quinn): sentence added in #4 to satisfy the schema; confirm or replace. -->
+    <p>
+      These problems practice the basic moves of the module: computing
+      upper and lower sums for a given partition, evaluating integrals
+      with FTC Part 2, differentiating functions defined by integrals with
+      FTC Part 1 and the chain rule, and computing integrals of linear
+      combinations from given integrals.
+    </p>
+  </paragraphs>
+
+  <exercise xml:id="ex-mod8-ps-f1">
+    <title><m>[\mathbf{F}]</m> Darboux Sums by Hand</title>
+    <statement>
+      <p>
+        For <m>f(x) = x^2</m> on <m>[0,1]</m> with partition
+        <m>P = \{0, 1/2, 1\}</m>:
+        <ol marker="(a)">
+          <li>
+            Compute <m>M_1 = \sup f</m> on <m>[0, 1/2]</m> and
+            <m>M_2 = \sup f</m> on <m>[1/2, 1]</m>.
+          </li>
+          <li>
+            Compute <m>m_1 = \inf f</m> on <m>[0, 1/2]</m> and
+            <m>m_2 = \inf f</m> on <m>[1/2, 1]</m>.
+          </li>
+          <li>
+            Compute <m>U(f,P)</m> and <m>L(f,P)</m>.
+          </li>
+          <li>
+            Compute <m>U(f,P) - L(f,P)</m>.
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        Since <m>f(x) = x^2</m> is increasing on <m>[0,1]</m>, the
+        supremum on each subinterval is at the right endpoint and the
+        infimum at the left.
+        (a) <m>M_1 = (1/2)^2 = 1/4</m>; <m>M_2 = 1^2 = 1</m>.
+        (b) <m>m_1 = 0^2 = 0</m>; <m>m_2 = (1/2)^2 = 1/4</m>.
+        (c) Each subinterval has width <m>1/2</m>, so
+        <m>U(f,P) = (1/4)(1/2) + (1)(1/2) = 1/8 + 1/2 = 5/8</m>
+        and <m>L(f,P) = (0)(1/2) + (1/4)(1/2) = 0 + 1/8 = 1/8</m>.
+        (d) <m>U(f,P) - L(f,P) = 5/8 - 1/8 = 1/2</m>.
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise xml:id="ex-mod8-ps-f2">
+    <title><m>[\mathbf{F}]</m> FTC Evaluations</title>
+    <statement>
+      <p>
+        Use FTC Part 2 to evaluate each integral. For each one, state
+        the antiderivative <m>F</m>, verify <m>F' = f</m>, and compute
+        <m>F(b) - F(a)</m>.
+        <ol marker="(a)">
+          <li><m>\displaystyle\int_0^1 x^3\,dx</m></li>
+          <li><m>\displaystyle\int_0^{\pi/2} \cos(x)\,dx</m></li>
+          <li><m>\displaystyle\int_1^e \frac{1}{x}\,dx</m></li>
+          <li><m>\displaystyle\int_0^1 e^x\,dx</m></li>
+        </ol>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        (a) <m>F(x) = x^4/4</m>; <m>F'(x) = x^3</m>;
+        <m>F(1) - F(0) = 1/4 - 0 = 1/4</m>.
+        (b) <m>F(x) = \sin(x)</m>; <m>F'(x) = \cos(x)</m>;
+        <m>F(\pi/2) - F(0) = 1 - 0 = 1</m>.
+        (c) <m>F(x) = \ln(x)</m>; <m>F'(x) = 1/x</m>;
+        <m>F(e) - F(1) = 1 - 0 = 1</m>.
+        (d) <m>F(x) = e^x</m>; <m>F'(x) = e^x</m>;
+        <m>F(1) - F(0) = e - 1</m>.
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise xml:id="ex-mod8-ps-f3">
+    <title><m>[\mathbf{F}]</m> FTC Part 1 Application</title>
+    <statement>
+      <p>
+        Use FTC Part 1 to compute
+        <m>\dfrac{d}{dx}\int_0^x (t^2 + \sin t)\,dt</m>. Then use
+        FTC Part 1 and the chain rule to compute
+        <m>\dfrac{d}{dx}\int_0^{x^2} e^t\,dt</m>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        By FTC Part 1 (since <m>t^2 + \sin t</m> is continuous),
+        <m>\dfrac{d}{dx}\int_0^x (t^2 + \sin t)\,dt = x^2 + \sin x</m>.
+        For the second integral, write <m>G(u) = \int_0^u e^t\,dt</m>,
+        so the integral equals <m>G(x^2)</m>. By FTC Part 1,
+        <m>G'(u) = e^u</m>. By the chain rule:
+        <md>\frac{d}{dx} G(x^2) = G'(x^2) \cdot 2x = e^{x^2} \cdot 2x.</md>
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise xml:id="ex-mod8-ps-f4">
+    <title><m>[\mathbf{F}]</m> Linearity</title>
+    <statement>
+      <p>
+        Given <m>\int_0^1 f = 3</m> and <m>\int_0^1 g = -1</m>,
+        compute:
+        <ol marker="(a)">
+          <li><m>\displaystyle\int_0^1 (2f + 3g)</m></li>
+          <li><m>\displaystyle\int_0^1 (f - g)</m></li>
+          <li><m>\displaystyle\int_0^1 5f</m></li>
+        </ol>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        (a) By linearity: <m>2(3) + 3(-1) = 6 - 3 = 3</m>.
+        (b) <m>3 - (-1) = 4</m>.
+        (c) <m>5(3) = 15</m>.
+      </p>
+    </answer>
+  </exercise>
+
+  <!-- ============================================================
+       STANDARD
+  ============================================================ -->
+
+  <paragraphs xml:id="par-mod8-ps-s">
+    <title>Standard Problems</title>
+    <!-- TODO(quinn): sentence added in #4 to satisfy the schema; confirm or replace. -->
+    <p>
+      These problems apply the same moves to longer arguments: a proof
+      using the integrability criterion that <m>x^2</m> is integrable on
+      <m>[0,1]</m>, a proof of integration by parts from the product rule
+      and FTC Part 2, a proof using monotonicity of the integral that an
+      integrable function bounded between <m>m</m> and <m>M</m> has
+      integral between <m>m(b-a)</m> and <m>M(b-a)</m>, a proof that an
+      increasing function on <m>[a,b]</m> is integrable, and a proof that
+      <m>|f|</m> is integrable whenever <m>f</m> is, with
+      <m>\left|\int_a^b f\right| \leq \int_a^b |f|</m>.
+    </p>
+  </paragraphs>
+
+  <exercise xml:id="ex-mod8-ps-s1">
+    <title><m>[\mathbf{S}]</m> Integrability of <m>f(x) = x^2</m></title>
+    <statement>
+      <p>
+        Prove that <m>f(x) = x^2</m> is Riemann integrable on
+        <m>[0,1]</m> using the integrability criterion. Use the
+        uniform partition <m>P_n</m> and show that
+        <m>U(f,P_n) - L(f,P_n) \to 0</m> as <m>n \to \infty</m>.
+      </p>
+      <p>
+        Your proof should: (i) compute <m>U(f,P_n)</m> and
+        <m>L(f,P_n)</m> using the formula
+        <m>\sum_{k=1}^n k^2 = n(n+1)(2n+1)/6</m>; (ii) compute
+        the difference; (iii) invoke the integrability criterion.
+      </p>
+    </statement>
+    <hint>
+      <p>
+        For <m>P_n</m> with <m>x_k = k/n</m>: since <m>f</m> is
+        increasing, <m>M_k = k^2/n^2</m> and <m>m_k = (k-1)^2/n^2</m>.
+        Then
+        <md>
+          <mrow>U(f,P_n) \amp= \frac{1}{n^3}\sum_{k=1}^n k^2
+                          = \frac{(n+1)(2n+1)}{6n^2},</mrow>
+          <mrow>L(f,P_n) \amp= \frac{1}{n^3}\sum_{k=1}^n (k-1)^2
+                          = \frac{(n-1)(2n-1)}{6n^2}.</mrow>
+        </md>
+        Compute the difference and take <m>n \to \infty</m>.
+      </p>
+    </hint>
+  </exercise>
+
+  <exercise xml:id="ex-mod8-ps-s2">
+    <title><m>[\mathbf{S}]</m> Integration by Parts</title>
+    <statement>
+      <p>
+        Prove integration by parts from FTC: if <m>u</m> and <m>v</m>
+        are differentiable on <m>[a,b]</m> with <m>u'</m> and <m>v'</m>
+        continuous, then
+        <md>
+          \int_a^b u(x)\,v'(x)\,dx
+          = \bigl[u(x)v(x)\bigr]_a^b - \int_a^b u'(x)\,v(x)\,dx.
+        </md>
+      </p>
+      <p>
+        Your proof must start from the product rule for derivatives
+        and apply FTC Part 2 to <m>(uv)'</m>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        By the product rule, <m>(uv)' = u'v + uv'</m>. Since
+        <m>u', v'</m> are continuous and <m>u, v</m> are differentiable,
+        <m>(uv)'</m> is continuous on <m>[a,b]</m>. Integrating both
+        sides using FTC Part 2 (with antiderivative <m>uv</m> for
+        <m>(uv)'</m>):
+        <md>
+          \int_a^b (uv)'\,dx = [u(x)v(x)]_a^b.
+        </md>
+        By linearity of the integral:
+        <md>
+          \int_a^b u'v\,dx + \int_a^b uv'\,dx = [uv]_a^b.
+        </md>
+        Rearranging:
+        <md>
+          \int_a^b u\,v'\,dx = [uv]_a^b - \int_a^b u'\,v\,dx.
+        </md>
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise xml:id="ex-mod8-ps-s3">
+    <title><m>[\mathbf{S}]</m> Bounding Integrals</title>
+    <statement>
+      <p>
+        Prove: if <m>f</m> is Riemann integrable on <m>[a,b]</m> and
+        <m>m \leq f(x) \leq M</m> for all <m>x \in [a,b]</m>, then
+        <md>m(b-a) \leq \int_a^b f(x)\,dx \leq M(b-a).</md>
+      </p>
+      <p>
+        Use the monotonicity of the Riemann integral (if <m>f \leq g</m>
+        on <m>[a,b]</m> then <m>\int f \leq \int g</m>) and the
+        computation <m>\int_a^b M\,dx = M(b-a)</m> for a constant.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        Since <m>m \leq f(x) \leq M</m> for all <m>x \in [a,b]</m>,
+        monotonicity of the integral gives
+        <md>
+          \int_a^b m\,dx \leq \int_a^b f(x)\,dx \leq \int_a^b M\,dx.
+        </md>
+        Since <m>m</m> and <m>M</m> are constants, their integrals
+        are <m>m(b-a)</m> and <m>M(b-a)</m> respectively (by the
+        assessment, constant functions are integrable with
+        <m>\int_a^b c\,dx = c(b-a)</m>). Hence
+        <m>m(b-a) \leq \int_a^b f \leq M(b-a)</m>.
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise xml:id="ex-mod8-ps-s4">
+    <title><m>[\mathbf{S}]</m> Monotone Implies Integrable</title>
+    <statement>
+      <p>
+        Prove: if <m>f</m> is increasing on <m>[a,b]</m>, then
+        <m>f</m> is Riemann integrable on <m>[a,b]</m>. Follow the
+        strategy of Study Guide Exercise sg-53-2.
+      </p>
+    </statement>
+    <hint>
+      <p>
+        For the uniform partition <m>P_n</m> with subinterval width
+        <m>(b-a)/n</m>, note that <m>M_k = f(x_k)</m> and
+        <m>m_k = f(x_{k-1})</m> (since <m>f</m> is increasing).
+        Then
+        <md>
+          U(f,P_n) - L(f,P_n)
+          = \frac{b-a}{n}\sum_{k=1}^n[f(x_k) - f(x_{k-1})]
+          = \frac{(b-a)[f(b) - f(a)]}{n} \to 0.
+        </md>
+      </p>
+    </hint>
+  </exercise>
+
+  <exercise xml:id="ex-mod8-ps-s5">
+    <title><m>[\mathbf{S}]</m> An Integral Inequality</title>
+    <statement>
+      <p>
+        Prove: if <m>f</m> is Riemann integrable on <m>[a,b]</m>,
+        then <m>|f|</m> is also Riemann integrable on <m>[a,b]</m>
+        and
+        <md>\left|\int_a^b f(x)\,dx\right| \leq \int_a^b |f(x)|\,dx.</md>
+      </p>
+      <p>
+        For the inequality, use <m>-|f(x)| \leq f(x) \leq |f(x)|</m>
+        and apply monotonicity of the integral twice.
+      </p>
+    </statement>
+    <hint>
+      <p>
+        From <m>-|f(x)| \leq f(x) \leq |f(x)|</m>, monotonicity gives
+        <m>-\int|f| \leq \int f \leq \int|f|</m>, which is equivalent
+        to <m>|\int f| \leq \int|f|</m>. (The integrability of <m>|f|</m>
+        follows from the integrability criterion applied to
+        <m>|f|</m>, using the fact that the oscillation of <m>|f|</m>
+        on any interval is bounded by the oscillation of <m>f</m>:
+        <m>|\,|f(x)| - |f(y)|\,| \leq |f(x) - f(y)|</m> by the
+        reverse triangle inequality.)
+      </p>
+    </hint>
+  </exercise>
+
+  <!-- ============================================================
+       CHALLENGE
+  ============================================================ -->
+
+  <paragraphs xml:id="par-mod8-ps-c">
+    <title>Challenge Problems</title>
+    <!-- TODO(quinn): sentence added in #4 to satisfy the schema; confirm or replace. -->
+    <p>
+      These problems extend the module's ideas: a proof of FTC Part 2
+      using FTC Part 1 and the Module 7 corollary that a function with
+      zero derivative on an open interval is constant, and a proof that
+      the Dirichlet function is not Riemann integrable on <m>[0,1]</m>.
+    </p>
+  </paragraphs>
+
+  <exercise xml:id="ex-mod8-ps-c1">
+    <title><m>[\mathbf{C}]</m> FTC Part 2 from First Principles</title>
+    <statement>
+      <p>
+        Prove FTC Part 2 in full, using FTC Part 1 as a lemma and
+        the Module 7 corollary that a function with zero derivative
+        on an open interval is constant on that interval.
+      </p>
+      <p>
+        Your proof must have the following steps: (i) define
+        <m>G(x) = \int_a^x f</m> and invoke FTC Part 1 to conclude
+        <m>G' = f = F'</m>; (ii) apply the Module 7 corollary to
+        <m>G - F</m>; (iii) evaluate at <m>x = a</m> to determine
+        the constant; (iv) evaluate at <m>x = b</m> to conclude.
+      </p>
+    </statement>
+    <hint>
+      <p>
+        At step (iii): <m>G(a) = \int_a^a f = 0</m> and
+        <m>(G - F)(a) = G(a) - F(a) = -F(a)</m>. So the constant
+        is <m>C = -F(a)</m>, giving <m>G(x) = F(x) - F(a)</m>.
+        At step (iv): <m>\int_a^b f = G(b) = F(b) - F(a)</m>.
+      </p>
+    </hint>
+  </exercise>
+
+  <exercise xml:id="ex-mod8-ps-c2">
+    <title><m>[\mathbf{C}]</m> A Non-Integrable Function</title>
+    <statement>
+      <p>
+        Prove that the Dirichlet function
+        <md>
+          f(x) = \begin{cases} 1 \amp x \in \Q \\ 0 \amp x \notin \Q \end{cases}
+        </md>
+        is <em>not</em> Riemann integrable on <m>[0,1]</m>.
+      </p>
+      <p>
+        Your proof must: (i) show that <m>M_k = 1</m> and
+        <m>m_k = 0</m> for every subinterval of every partition,
+        citing density of <m>\Q</m> and <m>\R \setminus \Q</m> in
+        <m>\R</m>; (ii) conclude that <m>U(f,P) = 1</m> and
+        <m>L(f,P) = 0</m> for every partition <m>P</m>; (iii) state
+        that the upper integral equals 1 and the lower integral equals
+        0, so they are unequal and <m>f</m> is not integrable.
+      </p>
+    </statement>
+  </exercise>
+
+</section>
