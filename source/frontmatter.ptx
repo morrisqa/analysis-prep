@@ -101,9 +101,12 @@
       The study guides follow Zorn's <pubtitle>Understanding Real
       Analysis</pubtitle> and, in <xref ref="ch-mod1"/> and
       <xref ref="ch-mod3"/>, Hirst. The bridge readings connect each module
-      to Bauldry, the text for MAT 5610. This text cites these books and,
-      apart from a few short quotations, does not reproduce them, so you
-      will need your own copies.
+      to Bauldry, the text for MAT 5610 at Appalachian State University.
+      This text cites these books and, apart from a few short quotations,
+      does not reproduce them, so you will need your own copies. Page,
+      section, and item numbers refer to the editions used in the course.
+      If your edition differs, or a reference does not match what you find,
+      locate the material by the name of the section or result.
     </p>
 
     <p>
@@ -117,6 +120,11 @@
       <url href="https://morrisqa.github.io/analysis-prep/" visual="morrisqa.github.io/analysis-prep">web version of this text</url>
       or download the
       <url href="https://morrisqa.github.io/analysis-prep/book.pdf" visual="morrisqa.github.io/analysis-prep/book.pdf">PDF version of this text</url>.
+    </p>
+
+    <p>
+      To report an error, open an issue in the
+      <url href="https://github.com/morrisqa/analysis-prep/issues" visual="github.com/morrisqa/analysis-prep/issues">issue tracker for this text</url>.
     </p>
   </preface>
 </frontmatter>

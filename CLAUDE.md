@@ -103,7 +103,8 @@ Intensive Analysis Prep course materials (Modules 1 to 9).
 - Audience: incoming graduate students, some refreshing real analysis and some
   meeting analysis-style proof for the first time. All students do all work.
   Express the difference with one neutral pacing note per module
-  (`<alert>A note on pacing.</alert>`), never as labeled tracks.
+  (the `<paragraphs>` block titled "A Note on Pacing", `par-modN-pacing`, in
+  the orientation), never as labeled tracks.
 - Each module has six student-facing components, each a `<section>`:
   orientation, study guide, worked examples, practice set, bridge reading,
   assessment. No nested sections or `<exercises>` wrappers inside them.
