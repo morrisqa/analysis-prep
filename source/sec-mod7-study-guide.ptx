@@ -1,0 +1,337 @@
+<section xml:id="sec-mod7-study-guide">
+  <title>Module 7: Companion Reading and Study Guide</title>
+  <p>Zorn §4.1–4.3 — Estimated time: 55 minutes</p>
+    <p>
+      This guide accompanies three sections of Zorn's <em>Understanding
+      Real Analysis</em>. Section 4.1 (<q>Derivatives</q>) introduces
+      the formal limit definition and establishes differentiability as
+      a condition stronger than continuity. Section 4.2
+      (<q>Differentiation Rules</q>) develops the standard rules as
+      theorems proved from the definition. Section 4.3 (<q>The Mean
+      Value Theorem</q>) builds from Rolle's Theorem to the MVT and
+      applies it to prove monotonicity results and Taylor's theorem.
+    </p>
+    <p>
+      Read each section before working its questions. The theme running
+      through all three sections is that <em>every statement about
+      derivatives is ultimately a statement about limits</em>, and every
+      proof uses the limit machinery from Modules 5 and 6. When you
+      encounter a rule you learned mechanically in calculus, ask: which
+      limit law is doing the work here?
+    </p>
+  <!-- ============================================================
+       SECTION 4.1: THE DERIVATIVE
+  ============================================================ -->
+
+  <paragraphs xml:id="par-mod7-sg-41-intro">
+    <title>Section 4.1: The Derivative (Zorn pp. 163&#x2013;172)</title>
+    <p>
+      Read Zorn's definition of differentiability at a point carefully.
+      The difference quotient <m>(f(x) - f(a))/(x - a)</m> is a
+      function of <m>x</m>; the derivative is the limit of this function
+      as <m>x \to a</m>. Make sure you can translate between the
+      <m>x \to a</m> form and the <m>h \to 0</m> form:
+      <m>f'(a) = \lim_{h \to 0} (f(a+h) - f(a))/h</m>.
+    </p>
+  </paragraphs>
+
+  <exercise xml:id="ex-mod7-sg-41-1">
+    <title>The Difference Quotient</title>
+    <statement>
+      <p>
+        Write the difference quotient for <m>f</m> at a point <m>a</m>
+        in both the <m>h \to 0</m> and the <m>x \to a</m> form. Then,
+        for <m>f(x) = x^2</m>, compute the difference quotient at
+        <m>a = 3</m> in simplified form and evaluate its limit.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        The two forms are <m>(f(a+h) - f(a))/h</m> as <m>h \to 0</m>
+        and <m>(f(x) - f(a))/(x - a)</m> as <m>x \to a</m>. For
+        <m>f(x) = x^2</m> at <m>a = 3</m>:
+        <md>\frac{(3+h)^2 - 9}{h} = \frac{9 + 6h + h^2 - 9}{h}
+        = \frac{6h + h^2}{h} = 6 + h \to 6 \quad \text{as } h \to 0.</md>
+        So <m>f'(3) = 6</m>.
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise xml:id="ex-mod7-sg-41-2">
+    <title>Differentiability Implies Continuity</title>
+    <statement>
+      <p>
+        <ol marker="(a)">
+          <li>
+            State the definition of differentiability of <m>f</m> at
+            a point <m>a</m>.
+          </li>
+          <li>
+            Prove: if <m>f</m> is differentiable at <m>a</m>, then
+            <m>f</m> is continuous at <m>a</m>. Write the proof in
+            full. The key algebraic step is to write
+            <m>f(x) - f(a) = \dfrac{f(x) - f(a)}{x - a} \cdot (x - a)</m>
+            and apply the product rule for limits as <m>x \to a</m>.
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        (a) <m>f</m> is differentiable at <m>a</m> if
+        <m>\lim_{h \to 0} (f(a+h) - f(a))/h</m> exists (as a finite
+        real number); its value is called <m>f'(a)</m>.
+      </p>
+      <p>
+        (b) Suppose <m>f</m> is differentiable at <m>a</m>. For
+        <m>x \neq a</m>, write
+        <md>f(x) - f(a) = \frac{f(x) - f(a)}{x - a} \cdot (x - a).</md>
+        As <m>x \to a</m>, the first factor tends to <m>f'(a)</m>
+        (by differentiability) and the second factor tends to <m>0</m>.
+        By the product rule for limits,
+        <m>f(x) - f(a) \to f'(a) \cdot 0 = 0</m>,
+        so <m>\lim_{x \to a} f(x) = f(a)</m>, confirming continuity.
+        <m>\square</m>
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise xml:id="ex-mod7-sg-41-3">
+    <title>The Sum Rule from the Definition</title>
+    <statement>
+      <p>
+        Prove from the limit definition that
+        <m>(f + g)'(a) = f'(a) + g'(a)</m> (the sum rule), assuming
+        both <m>f</m> and <m>g</m> are differentiable at <m>a</m>.
+        Your proof must explicitly write the difference quotient for
+        <m>f + g</m>, split it into two separate difference quotients,
+        and invoke the sum rule for limits.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        The difference quotient for <m>f + g</m> at <m>a</m> is
+        <md>
+          <mrow>\frac{(f+g)(a+h) - (f+g)(a)}{h}
+          \amp= \frac{[f(a+h) - f(a)] + [g(a+h) - g(a)]}{h}</mrow>
+          <mrow>\amp= \frac{f(a+h) - f(a)}{h} + \frac{g(a+h) - g(a)}{h}.</mrow>
+        </md>
+        As <m>h \to 0</m>, the first term tends to <m>f'(a)</m> and
+        the second tends to <m>g'(a)</m>, by differentiability of
+        <m>f</m> and <m>g</m> at <m>a</m>. By the sum rule for limits,
+        <m>(f+g)'(a) = f'(a) + g'(a)</m>. <m>\square</m>
+      </p>
+    </answer>
+  </exercise>
+
+  <!-- ============================================================
+       SECTION 4.2: DIFFERENTIATION RULES
+  ============================================================ -->
+
+  <paragraphs xml:id="par-mod7-sg-42-intro">
+    <title>Section 4.2: Differentiation Rules (Zorn pp. 172&#x2013;182)</title>
+    <p>
+      Section 4.2 develops the product rule, quotient rule, and chain
+      rule as theorems. The product rule proof is a model of the
+      <q>add and subtract a clever term</q> technique that appears
+      repeatedly in analysis. The chain rule proof requires more care
+      because of a subtle division-by-zero issue.
+    </p>
+  </paragraphs>
+
+  <exercise xml:id="ex-mod7-sg-42-1">
+    <title>The Product Rule</title>
+    <statement>
+      <p>
+        State the product rule: <m>(fg)'(a) = f'(a)g(a) + f(a)g'(a)</m>.
+        Then prove it from the limit definition. The key step is to
+        add and subtract the term <m>f(a+h)g(a)</m> in the numerator
+        of the difference quotient for <m>fg</m>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        The difference quotient for <m>fg</m> at <m>a</m> is
+        <md>\frac{f(a+h)g(a+h) - f(a)g(a)}{h}.</md>
+        Add and subtract <m>f(a+h)g(a)</m>:
+        <md>
+          <mrow>\amp= \frac{f(a+h)g(a+h) - f(a+h)g(a) + f(a+h)g(a) - f(a)g(a)}{h}</mrow>
+          <mrow>\amp= f(a+h) \cdot \frac{g(a+h) - g(a)}{h}
+                   + g(a) \cdot \frac{f(a+h) - f(a)}{h}.</mrow>
+        </md>
+        As <m>h \to 0</m>: <m>f(a+h) \to f(a)</m> (since <m>f</m> is
+        continuous at <m>a</m>, by differentiability), the second factor
+        tends to <m>g'(a)</m>, and <m>g(a)</m> is a constant times a
+        factor tending to <m>f'(a)</m>. By the sum and product rules
+        for limits, <m>(fg)'(a) = f(a)g'(a) + g(a)f'(a)</m>.
+        <m>\square</m>
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise xml:id="ex-mod7-sg-42-2">
+    <title>The Chain Rule and Its Proof</title>
+    <statement>
+      <p>
+        <ol marker="(a)">
+          <li>
+            State the chain rule: if <m>f</m> is differentiable at
+            <m>a</m> and <m>g</m> is differentiable at <m>f(a)</m>,
+            then <m>(g \circ f)'(a) = g'(f(a)) \cdot f'(a)</m>.
+          </li>
+          <li>
+            Explain in words why the <q>obvious</q> proof attempt&#x2014;multiply
+            and divide by <m>f(a+h) - f(a)</m>&#x2014;has a gap.
+          </li>
+          <li>
+            Describe the auxiliary function approach that fixes the gap.
+            Define <m>\psi(k) = (g(f(a)+k) - g(f(a)))/k - g'(f(a))</m>
+            for <m>k \neq 0</m> and <m>\psi(0) = 0</m>, and explain
+            why this function is continuous at <m>0</m>.
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        (a) The chain rule statement is given. (b) The obvious approach
+        writes
+        <md>\frac{g(f(a+h)) - g(f(a))}{h}
+        = \frac{g(f(a+h)) - g(f(a))}{f(a+h) - f(a)}
+          \cdot \frac{f(a+h) - f(a)}{h},</md>
+        intending to take limits to get <m>g'(f(a)) \cdot f'(a)</m>.
+        The gap: <m>f(a+h) - f(a)</m> might equal <m>0</m> for
+        arbitrarily small <m>h \neq 0</m>, making the first fraction
+        undefined at those values of <m>h</m>. (c) The auxiliary
+        function <m>\psi</m> rewrites <m>g(f(a)+k) - g(f(a)) =
+        (g'(f(a)) + \psi(k)) k</m> for all <m>k</m>, including
+        <m>k = 0</m>. Substituting <m>k = f(a+h) - f(a)</m> gives
+        a valid expression with no division by zero. Since <m>g</m>
+        is differentiable at <m>f(a)</m>, <m>\psi(k) \to 0</m> as
+        <m>k \to 0</m>, and <m>\psi</m> is continuous at <m>0</m>.
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise xml:id="ex-mod7-sg-42-3">
+    <title>Applying the Rules</title>
+    <statement>
+      <p>
+        Apply the product and chain rules to differentiate each function.
+        State which rule you use at each step.
+        <ol marker="(a)">
+          <li>
+            <m>f(x) = x^2 \sin(x)</m>
+          </li>
+          <li>
+            <m>g(x) = (x^2 + 1)^{10}</m>
+          </li>
+          <li>
+            <m>h(x) = \ln(x^2 + 1)</m>, assuming <m>\dfrac{d}{dx}\ln(x) = \dfrac{1}{x}</m>.
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        (a) Product rule: <m>f'(x) = 2x\sin(x) + x^2\cos(x)</m>.
+        (b) Chain rule: <m>g'(x) = 10(x^2+1)^9 \cdot 2x = 20x(x^2+1)^9</m>.
+        (c) Chain rule: <m>h'(x) = \dfrac{1}{x^2+1} \cdot 2x = \dfrac{2x}{x^2+1}</m>.
+      </p>
+    </answer>
+  </exercise>
+
+  <!-- ============================================================
+       SECTION 4.3: THE MEAN VALUE THEOREM
+  ============================================================ -->
+
+  <paragraphs xml:id="par-mod7-sg-43-intro">
+    <title>Section 4.3: The Mean Value Theorem (Zorn pp. 182&#x2013;196)</title>
+    <p>
+      Section 4.3 is the heart of Module 7. Read the proof of Rolle's
+      Theorem carefully: it uses the Extreme Value Theorem (Module 6)
+      in an essential way. The MVT proof derives from Rolle's by a
+      geometric trick (subtracting the secant line) that you should
+      be able to reconstruct from memory by the end of this module.
+    </p>
+  </paragraphs>
+
+  <exercise xml:id="ex-mod7-sg-43-1">
+    <title>Rolle's Theorem</title>
+    <statement>
+      <p>
+        State Rolle's Theorem in full (all three hypotheses and the
+        conclusion). Then, for <m>f(x) = x^2 - 4x</m> on
+        <m>[0, 4]</m>, verify that all three hypotheses hold and find
+        the value <m>c \in (0, 4)</m> guaranteed by the conclusion.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        Rolle's Theorem: if <m>f</m> is continuous on <m>[a, b]</m>,
+        differentiable on <m>(a, b)</m>, and <m>f(a) = f(b)</m>, then
+        there exists <m>c \in (a, b)</m> with <m>f'(c) = 0</m>.
+        For <m>f(x) = x^2 - 4x</m> on <m>[0, 4]</m>: (i) <m>f</m>
+        is a polynomial, hence continuous on <m>[0, 4]</m> and
+        differentiable on <m>(0, 4)</m>. (ii) <m>f(0) = 0</m> and
+        <m>f(4) = 16 - 16 = 0</m>, so <m>f(0) = f(4)</m>. By
+        Rolle's, there exists <m>c \in (0,4)</m> with <m>f'(c) = 0</m>.
+        Since <m>f'(x) = 2x - 4</m>, we get <m>c = 2 \in (0, 4)</m>.
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise xml:id="ex-mod7-sg-43-2">
+    <title>Proof of the MVT from Rolle's Theorem</title>
+    <statement>
+      <p>
+        State the Mean Value Theorem. Then prove it using Rolle's
+        Theorem by defining the auxiliary function
+        <md>h(x) = f(x) - \left[f(a) + \frac{f(b) - f(a)}{b - a}(x - a)\right].</md>
+        Verify that <m>h(a) = h(b) = 0</m>, apply Rolle's Theorem to
+        <m>h</m>, and interpret the conclusion for <m>f</m>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        MVT: If <m>f</m> is continuous on <m>[a, b]</m> and
+        differentiable on <m>(a, b)</m>, then there exists
+        <m>c \in (a, b)</m> such that <m>f'(c) = (f(b) - f(a))/(b - a)</m>.
+      </p>
+      <p>
+        Proof: Define <m>h(x) = f(x) - [f(a) + \frac{f(b)-f(a)}{b-a}(x-a)]</m>.
+        Then <m>h</m> is continuous on <m>[a, b]</m> and differentiable
+        on <m>(a, b)</m> (being a difference of such functions), and
+        <m>h(a) = f(a) - f(a) = 0</m>, <m>h(b) = f(b) - [f(a) + (f(b)-f(a))] = 0</m>.
+        By Rolle's Theorem, there exists <m>c \in (a, b)</m> with
+        <m>h'(c) = 0</m>. Since <m>h'(x) = f'(x) - (f(b)-f(a))/(b-a)</m>,
+        we get <m>f'(c) = (f(b)-f(a))/(b-a)</m>. <m>\square</m>
+      </p>
+    </answer>
+  </exercise>
+
+  <exercise xml:id="ex-mod7-sg-43-3">
+    <title>MVT Application: Zero Derivative</title>
+    <statement>
+      <p>
+        Use the MVT to prove: if <m>f'(x) = 0</m> for all
+        <m>x \in (a, b)</m>, then <m>f</m> is constant on <m>(a, b)</m>.
+        (Hint: take any two points <m>x, y \in (a, b)</m> with
+        <m>x \lt y</m>, apply the MVT on <m>[x, y]</m>, and use
+        <m>f'(c) = 0</m> for the resulting <m>c</m>.)
+      </p>
+    </statement>
+    <answer>
+      <p>
+        Let <m>x, y \in (a, b)</m> with <m>x \lt y</m>. Since
+        <m>f</m> is differentiable on <m>(a, b)</m>, it is continuous
+        on <m>[x, y]</m> and differentiable on <m>(x, y)</m>. By the
+        MVT, there exists <m>c \in (x, y) \subset (a, b)</m> such that
+        <m>f(y) - f(x) = f'(c)(y - x) = 0 \cdot (y - x) = 0</m>.
+        Hence <m>f(y) = f(x)</m>. Since <m>x, y \in (a, b)</m> were
+        arbitrary, <m>f</m> is constant on <m>(a, b)</m>. <m>\square</m>
+      </p>
+    </answer>
+  </exercise>
+
+</section>
