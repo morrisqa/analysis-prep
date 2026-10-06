@@ -67,8 +67,9 @@
     <title>The Archimedean Order Property</title>
     <p>
       Theorem 2.3 in Bauldry is the Archimedean Order Property. In
-      the Module 1 assessment you were asked to describe its proof
-      structure in retrospect; now you will read it carefully.
+      <xref ref="ch-mod1" text="custom">Module 1</xref> you read its
+      proof for its logical structure; now you will read it again, with
+      attention to how it uses the Completeness Axiom.
     </p>
   </paragraphs>
 
@@ -133,8 +134,9 @@
     <p>
       Immediately following the Archimedean Property, Bauldry proves
       that <m>\Q</m> is <em>dense</em> in <m>\R</m>: between any two
-      distinct real numbers there is a rational number. This result
-      requires both the Archimedean Property and the Completeness Axiom.
+      distinct real numbers there is a rational number. Its proof uses
+      the Archimedean Property, which holds in <m>\R</m> because of the
+      Completeness Axiom.
     </p>
   </paragraphs>
 
@@ -150,13 +152,13 @@
             are the hypotheses?
           </li>
           <li>
-            Why does this result require the Archimedean Property
-            (and not just the Completeness Axiom alone)?
+            Which step of the proof uses the Archimedean Property?
+            Explain how that step depends, through the Archimedean
+            Property, on the Completeness Axiom.
           </li>
           <li>
-            In plain English, why does density of <m>\Q</m> imply
-            that <m>\Q</m> is not a <q>thin</q> or <q>sparse</q>
-            subset of <m>\R</m>, even though <m>\R \setminus \Q</m>
+            In plain English, in what sense is <m>\Q</m> dense in
+            <m>\R</m>, even though <m>\R \setminus \Q</m>
             is uncountable?
           </li>
         </ol>

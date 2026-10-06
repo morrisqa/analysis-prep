@@ -111,14 +111,17 @@
         </md>
         Adding these inequalities gives
         <md>-(|x| + |y|) \leq x + y \leq |x| + |y|.</md>
-        This says <m>|x + y| \leq |x| + |y|</m> by Theorem 1.23(c)
-        (with <m>k = |x| + |y|</m>). <m>\square</m>
+        This says <m>|x + y| \leq |x| + |y|</m> by the non-strict form
+        of Theorem 1.23(c), <m>|u| \leq k \iff -k \leq u \leq k</m>
+        for <m>k \geq 0</m> (stated in <xref ref="ex-mod2-sg-17-2"/>),
+        with <m>u = x + y</m> and <m>k = |x| + |y|</m>. <m>\square</m>
       </p>
       <p>
         <alert>What to notice.</alert>
         The proof has three moves: (1) establish the lemma by cases,
         (2) apply the lemma to each variable separately, (3) add the
-        inequalities and convert back using Theorem 1.23(c). Each step
+        inequalities and convert back using the non-strict form of
+        Theorem 1.23(c). Each step
         is short; the proof works because we set up the right lemma first.
       </p>
       <p>
@@ -200,13 +203,14 @@
       </p>
       <p>
         We show that <m>1 = \sup S</m> by verifying the two conditions
-        in the definition.
+        of the <m>\varepsilon</m>-characterization
+        (<xref ref="ex-mod2-sg-18-4"/>).
       </p>
       <p>
         <alert>Condition (i): 1 is an upper bound of <m>S</m>.</alert>
         Let <m>x \in S</m>. Then <m>x = 1 - 1/n</m> for some
-        <m>n \in \N</m>. Since <m>n \geq 1</m>, we have
-        <m>1/n \leq 1</m>, so <m>1/n \gt 0</m>, and therefore
+        <m>n \in \N</m>. Since <m>n \geq 1 \gt 0</m>, we have
+        <m>1/n \gt 0</m>, and therefore
         <m>x = 1 - 1/n \lt 1</m>.
         Since <m>x</m> was arbitrary, <m>1</m> is an upper bound of <m>S</m>.
       </p>
