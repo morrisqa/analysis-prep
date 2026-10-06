@@ -1,5 +1,5 @@
 <section xml:id="sec-mod8-orientation">
-  <title>Module 8: The Riemann Integral</title>
+  <title>Orientation</title>
 
   <objectives xml:id="obj-mod8">
     <ul>
@@ -60,7 +60,6 @@
     </ul>
   </objectives>
 
-  <p>Orientation</p>
 
   <!-- ============================================================ -->
     <p>
@@ -186,11 +185,11 @@
       If you are coming in with prior real analysis experience,
       move quickly through Zorn &#xa7;5.1&#x2013;5.2 (you have likely
       seen Darboux sums before) and focus your attention on the proof
-      of FTC Part 1 in Worked Example 3 and the Bridge Reading on
+      of FTC Part 1 in <xref ref="ex-mod8-we-3"/> and the Bridge Reading on
       Bauldry &#xa7;2.4, which introduces the Riemann-Stieltjes integral
       &#x2014; material that will be central in MAT 5610. If you are new
-      to analysis, work carefully through the computation in Worked
-      Example 1 (<m>f(x) = x</m> on <m>[0,1]</m>) before tackling the
+      to analysis, work carefully through the computation in
+      <xref ref="ex-mod8-we-1"/> (<m>f(x) = x</m> on <m>[0,1]</m>) before tackling the
       integrability proofs; it shows the integrability criterion in its
       simplest possible form. The most common mistake in this module is
       confusing upper sums (from the sup) with Riemann sums (from a
@@ -200,7 +199,7 @@
   </paragraphs>
 
   <paragraphs xml:id="par-mod8-map">
-    <title>Module Road Map (estimated time: 5 hours)</title>
+    <title>Module Road Map (estimated time: about 5.5 hours)</title>
     <tabular halign="left">
       <col width="50%"/>
       <col width="10%"/>
@@ -211,7 +210,7 @@
         <cell><p>Purpose</p></cell>
       </row>
       <row>
-        <cell><p>Orientation (this document)</p></cell>
+        <cell><p>Orientation (this section)</p></cell>
         <cell><p>15 min</p></cell>
         <cell><p>Goals, self-assessment, context</p></cell>
       </row>
@@ -232,7 +231,7 @@
       </row>
       <row>
         <cell><p>Companion Reading and Study Guide</p></cell>
-        <cell><p>55 min</p></cell>
+        <cell><p>65 min</p></cell>
         <cell><p>Zorn &#xa7;5.1&#x2013;5.4 with guided questions</p></cell>
       </row>
       <row>
@@ -251,7 +250,7 @@
         <cell><p>Bauldry &#xa7;1.4 and &#xa7;2.4 with guided questions</p></cell>
       </row>
       <row>
-        <cell><p>Module Assessment</p></cell>
+        <cell><p>Assessment</p></cell>
         <cell><p>45 min</p></cell>
         <cell><p>Submitted proofs and reflection</p></cell>
       </row>

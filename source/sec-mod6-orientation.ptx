@@ -1,5 +1,5 @@
 <section xml:id="sec-mod6-orientation">
-  <title>Module 6: Limits, Continuity, and Uniform Continuity</title>
+  <title>Orientation</title>
 
   <objectives xml:id="obj-mod6">
     <ul>
@@ -52,7 +52,6 @@
     </ul>
   </objectives>
 
-  <p>Orientation</p>
 
   <!-- ============================================================ -->
     <p>
@@ -195,7 +194,7 @@
       Heine&#x2013;Cantor theorem sketch in &#xa7;3.4 and on the
       uniform continuity examples in the worked examples and practice
       set. If proof-based function limits are new to you, work slowly
-      through Worked Example 1: read the scratch work, reproduce the
+      through <xref ref="ex-mod6-we-1"/>: read the scratch work, reproduce the
       <m>\delta</m>-finding algebra on your own paper, and only then read
       the formal proof. The most common mistake with <m>\varepsilon</m>-<m>\delta</m>
       proofs is writing the formal proof before doing the scratch work;
@@ -205,7 +204,7 @@
   </paragraphs>
 
   <paragraphs xml:id="par-mod6-map">
-    <title>Module Road Map (estimated time: 5 hours)</title>
+    <title>Module Road Map (estimated time: about 5.5 hours)</title>
     <tabular halign="left">
       <col width="50%"/>
       <col width="10%"/>
@@ -216,7 +215,7 @@
         <cell><p>Purpose</p></cell>
       </row>
       <row>
-        <cell><p>Orientation (this document)</p></cell>
+        <cell><p>Orientation (this section)</p></cell>
         <cell><p>15 min</p></cell>
         <cell><p>Goals, self-assessment, context</p></cell>
       </row>
@@ -256,7 +255,7 @@
         <cell><p>Bauldry &#xa7;1.2 and &#xa7;2.2 with guided questions</p></cell>
       </row>
       <row>
-        <cell><p>Module Assessment</p></cell>
+        <cell><p>Assessment</p></cell>
         <cell><p>40 min</p></cell>
         <cell><p>Submitted proofs and reflection</p></cell>
       </row>

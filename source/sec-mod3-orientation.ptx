@@ -1,5 +1,5 @@
 <section xml:id="sec-mod3-orientation">
-  <title>Module 3: Sets, Functions, and Cardinality</title>
+  <title>Orientation</title>
 
   <objectives xml:id="obj-mod3">
     <ul>
@@ -62,7 +62,6 @@
     </ul>
   </objectives>
 
-  <p>Orientation</p>
 
   <!-- ============================================================ -->
 
@@ -211,14 +210,14 @@
       structure of the contradiction. If analysis-style proofs are newer
       territory for you, work through all four parts of the Study Guide
       in order, doing the reading-check questions before moving on.
-      Prioritize the element-chasing examples (Worked Example 1) and the
-      bijectivity proof (Worked Example 2) before attempting the practice
+      Prioritize the element-chasing examples (<xref ref="ex-mod3-we-1"/>) and the
+      bijectivity proof (<xref ref="ex-mod3-we-2"/>) before attempting the practice
       problems; those two techniques underlie everything else in the module.
     </p>
   </paragraphs>
 
   <paragraphs xml:id="par-mod3-map">
-    <title>Module Road Map (estimated time: 5 hours)</title>
+    <title>Module Road Map (estimated time: about 5 hours)</title>
     <tabular halign="left">
       <col width="50%"/>
       <col width="10%"/>
@@ -229,7 +228,7 @@
         <cell><p>Purpose</p></cell>
       </row>
       <row>
-        <cell><p>Orientation (this document)</p></cell>
+        <cell><p>Orientation (this section)</p></cell>
         <cell><p>15 min</p></cell>
         <cell><p>Goals, self-assessment, context</p></cell>
       </row>
@@ -264,7 +263,7 @@
         <cell><p>Connecting Module 3 to Bauldry &#xa7;2.1</p></cell>
       </row>
       <row>
-        <cell><p>Module Assessment</p></cell>
+        <cell><p>Assessment</p></cell>
         <cell><p>40 min</p></cell>
         <cell><p>Submitted proofs and reflection</p></cell>
       </row>

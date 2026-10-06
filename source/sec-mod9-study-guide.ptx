@@ -1,6 +1,6 @@
 <section xml:id="sec-mod9-study-guide">
-  <title>Module 9: Companion Reading and Study Guide</title>
-  <p>Zorn §4.4 — Estimated time: 60 minutes</p>
+  <title>Companion Reading and Study Guide</title>
+  <p>Reading: Zorn, Section 4.4. Estimated time: 60 minutes.</p>
 
     <p>
       This guide accompanies Zorn's &#xa7;4.4 (<q>Sequences and Series of
@@ -334,7 +334,7 @@
       <em>The pointwise limit is <m>0</m>.</em> First, <m>g_n(0) = 0</m> for
       every <m>n</m>. Now fix <m>x \in (0,1]</m> and put <m>u = n^2x^2</m>,
       so that <m>g_n(x) = (2/x)\,u\,e^{-u}</m>. By
-      <xref ref="par-mod7-sg-43-taylor" text="custom">Taylor's Theorem</xref>
+      Taylor's Theorem (<xref ref="thm-mod7-taylor"/>)
       applied to the Taylor polynomial of order <m>1</m> of <m>e^u</m> at
       <m>0</m>, <m>e^u = 1 + u + e^c u^2/2</m>
       for some <m>c</m> between <m>0</m> and <m>u</m>; since <m>e^c \geq 1</m>,
@@ -526,7 +526,7 @@
         <m>|x| \lt 1</m>, and what is needed is the value of the series at
         <m>x = 1</m> itself. Abel's theorem gives results of this kind in
         general; here a direct estimate suffices, the same one used in
-        <xref ref="ex-mod9-we-4" text="custom">Worked Example 4</xref>. For
+        <xref ref="ex-mod9-we-4"/>. For
         <m>t \in [0,1]</m>, the finite geometric sum gives
         <md>\frac{1}{1+t} = \sum_{k=0}^{n} (-1)^k t^k + (-1)^{n+1}\frac{t^{n+1}}{1+t}.</md>
         Integrating from <m>0</m> to <m>1</m> (FTC Part 2),

@@ -1,6 +1,6 @@
 <section xml:id="sec-mod3-assessment">
-  <title>Module 3: Assessment</title>
-  <p>Submitted Proofs and Reflection &#x2014; Estimated time: 40 minutes</p>
+  <title>Assessment</title>
+  <p>Estimated time: 40 minutes.</p>
 
   <!-- ============================================================ -->
 
@@ -38,7 +38,7 @@
     </p>
     <p>
       The following set equality is one of De Morgan's laws for set
-      difference. It is structurally similar to Worked Example 1,
+      difference. It is structurally similar to <xref ref="ex-mod3-we-1"/>,
       but involves a different operation and requires a different
       case analysis.
     </p>
@@ -96,7 +96,7 @@
           <li>
             Construct an explicit bijection <m>f : \N \to T</m>.
             (Use the bijection <m>\varphi : \N \to \Z</m> from
-            <xref ref="ex-mod3-we-4" text="custom">Worked Example 4</xref>
+            <xref ref="ex-mod3-we-4"/>
             as a guide, or construct a direct bijection by interleaving
             positive and negative multiples of 3.)
           </li>
@@ -117,7 +117,7 @@
         One approach: define <m>f : \N \to T</m> by
         <m>f(n) = 3 \cdot \varphi(n)</m>, where <m>\varphi : \N \to \Z</m>
         is the bijection from
-        <xref ref="ex-mod3-we-4" text="custom">Worked Example 4</xref>. Then verify that
+        <xref ref="ex-mod3-we-4"/>. Then verify that
         <m>f</m> is a bijection <m>\N \to T</m>.
       </p>
     </hint>
@@ -152,7 +152,7 @@
             into a known countable set.
           </li>
           <li>
-            Use Proposition 1.17 to conclude.
+            Use Zorn's Proposition 1.17 to conclude.
           </li>
         </ol>
       </p>
@@ -202,7 +202,7 @@
     <title>Element-Chasing as a Proof Template</title>
     <statement>
       <p>
-        In Part 1 and Worked Example 1, you used the element-chasing
+        In Part 1 and <xref ref="ex-mod3-we-1"/>, you used the element-chasing
         method. Describe the template in your own words: what is the
         general structure of an element-chasing proof of a set equality?
         Then reflect: was there a step in your Part 1 proof where you

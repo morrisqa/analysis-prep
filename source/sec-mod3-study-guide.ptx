@@ -1,6 +1,6 @@
 <section xml:id="sec-mod3-study-guide">
-  <title>Module 3: Companion Reading and Study Guide</title>
-  <p>Zorn &#xa7;1.2&#x2013;1.3, &#xa7;1.6 &#x2014; Estimated time: 55 minutes</p>
+  <title>Companion Reading and Study Guide</title>
+  <p>Reading: Zorn, Sections 1.2<ndash/>1.3 and 1.6; Hirst, Sections 5.1<ndash/>5.5. Estimated time: 55 minutes.</p>
 
     <p>
       This study guide is organized into four reading blocks.
@@ -253,7 +253,7 @@
       inverse is <m>f</m>), and
       transitive (if <m>f : A \to B</m> and <m>g : B \to C</m> are
       bijections, then <m>g \circ f</m> is injective by
-      <xref ref="ex-mod3-we-3" text="custom">Worked Example 3</xref>,
+      <xref ref="ex-mod3-we-3"/>,
       and surjective because each <m>c \in C</m> is <m>g(b)</m> for some
       <m>b \in B</m>, which is <m>f(a)</m> for some <m>a \in A</m>).
       So it behaves like an equivalence relation, although it is not a

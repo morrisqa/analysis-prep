@@ -1,6 +1,6 @@
 <section xml:id="sec-mod4-assessment">
-  <title>Module 4: Assessment</title>
-  <p>Submitted Proofs and Reflection — Estimated time: 45 minutes</p>
+  <title>Assessment</title>
+  <p>Estimated time: 45 minutes.</p>
 
   <!-- ============================================================ -->
 
@@ -139,7 +139,7 @@
       </p>
       <p>
         Write a complete solution using the Algebra of Limits
-        (Theorem 2.5) and the known limit <m>1/n \to 0</m>. Do not
+        (Zorn's Theorem 2.5) and the known limit <m>1/n \to 0</m>. Do not
         write an <m>\varepsilon</m>-<m>N</m> proof.
       </p>
       <p>

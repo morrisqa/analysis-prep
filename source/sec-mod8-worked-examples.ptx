@@ -1,19 +1,19 @@
 <section xml:id="sec-mod8-worked-examples">
-  <title>Module 8: Worked Examples</title>
-  <p>Annotated Proof Walkthroughs — Estimated time: 40 minutes</p>
+  <title>Worked Examples</title>
+  <p>Estimated time: 40 minutes.</p>
     <p>
       Read each example slowly. The goal is to internalize the proof
-      template, not just to see the answer. Example 1 is the archetype
-      of a direct Darboux argument; Example 2 shows the proof that
-      continuous implies integrable; Example 3 proves FTC Part 1 in full;
-      Example 4 shows FTC Part 2 in a computation.
+      template, not just to see the answer. <xref ref="ex-mod8-we-1"/> is the archetype
+      of a direct Darboux argument; <xref ref="ex-mod8-we-2"/> shows the proof that
+      continuous implies integrable; <xref ref="ex-mod8-we-3"/> proves FTC Part 1 in full;
+      <xref ref="ex-mod8-we-4"/> shows FTC Part 2 in a computation.
     </p>
   <!-- ============================================================
        EXAMPLE 1: f(x)=x IS RIEMANN INTEGRABLE
   ============================================================ -->
 
-  <exercise xml:id="ex-mod8-we-1">
-    <title>Example 1: <m>f(x) = x</m> is Riemann Integrable on <m>[0,1]</m> and <m>\int = 1/2</m></title>
+  <example xml:id="ex-mod8-we-1">
+    <title><m>f(x) = x</m> Is Riemann Integrable on <m>[0,1]</m> and <m>\int = 1/2</m></title>
     <statement>
       <p>
         Prove from the Darboux definition that <m>f(x) = x</m> is
@@ -84,20 +84,20 @@
         definition: the function is increasing, so <m>M_k</m> and
         <m>m_k</m> are just the values at the right and left endpoints.
         The difference <m>U - L = 1/n</m> has a beautifully transparent
-        form. In Worked Example 2, the same strategy &#x2014; bound
+        form. In <xref ref="ex-mod8-we-2"/>, the same strategy &#x2014; bound
         <m>M_i - m_i</m> on each subinterval &#x2014; is applied to
         continuous functions, where uniform continuity does the
         bounding.
       </p>
     </solution>
-  </exercise>
+  </example>
 
   <!-- ============================================================
        EXAMPLE 2: CONTINUOUS IMPLIES INTEGRABLE
   ============================================================ -->
 
-  <exercise xml:id="ex-mod8-we-2">
-    <title>Example 2: Continuous Functions are Riemann Integrable</title>
+  <example xml:id="ex-mod8-we-2">
+    <title>Continuous Functions Are Riemann Integrable</title>
     <statement>
       <p>
         Prove that if <m>f</m> is continuous on <m>[a,b]</m>, then
@@ -172,14 +172,14 @@
         (4) sum up; (5) invoke the criterion.
       </p>
     </solution>
-  </exercise>
+  </example>
 
   <!-- ============================================================
        EXAMPLE 3: FTC PART 1
   ============================================================ -->
 
-  <exercise xml:id="ex-mod8-we-3">
-    <title>Example 3: FTC Part 1</title>
+  <example xml:id="ex-mod8-we-3">
+    <title>FTC Part 1</title>
     <statement>
       <p>
         Prove FTC Part 1: if <m>f</m> is continuous on <m>[a,b]</m>
@@ -249,8 +249,7 @@
         we have <m>|t - x| \leq |h| \lt \delta</m>, so
         <m>-\varepsilon \lt f(t) - f(x) \lt \varepsilon</m>. The
         function <m>f(t) - f(x)</m> is continuous, hence integrable, on
-        <m>I_h</m> (<xref ref="ex-mod8-we-2" text="custom">Worked
-        Example 2</xref>), so monotonicity and the integral of a constant
+        <m>I_h</m> (<xref ref="ex-mod8-we-2"/>), so monotonicity and the integral of a constant
         give
         <md>
           -\varepsilon |h| \leq \int_{I_h} [f(t) - f(x)]\,dt \leq \varepsilon |h|,
@@ -282,12 +281,12 @@
         the analytic core of the argument.
       </p>
     </solution>
-  </exercise>
+  </example>
 
   <paragraphs xml:id="par-mod8-we-base-point">
     <title>FTC Part 1 with Any Base Point</title>
     <p>
-      <xref ref="ex-mod8-we-3" text="custom">Worked Example 3</xref>
+      <xref ref="ex-mod8-we-3"/>
       measures the integral from the left endpoint <m>a</m>. With the
       orientation convention, the base point can be any point of the
       interval. Suppose <m>f</m> is continuous on an interval
@@ -296,7 +295,7 @@
       choose <m>r, s \in J</m> with <m>r \leq p \leq s</m> and
       <m>r \lt x \lt s</m>. Then
       <m>G(x) = \int_r^x f(t)\,dt - \int_r^p f(t)\,dt</m>, and the
-      second term does not depend on <m>x</m>, so Worked Example 3 on
+      second term does not depend on <m>x</m>, so <xref ref="ex-mod8-we-3"/> on
       <m>[r,s]</m> gives <m>G'(x) = f(x)</m>. This is the form of
       FTC Part 1 to use with the chain rule when the upper limit can
       fall below the base point.
@@ -307,8 +306,8 @@
        EXAMPLE 4: COMPUTATION USING FTC
   ============================================================ -->
 
-  <exercise xml:id="ex-mod8-we-4">
-    <title>Example 4: A Computation Using FTC</title>
+  <example xml:id="ex-mod8-we-4">
+    <title>A Computation Using FTC</title>
     <statement>
       <p>
         Compute <m>\int_0^{\pi} \sin(x)\,dx</m> using FTC Part 2.
@@ -362,6 +361,6 @@
         continuity condition would require verification.
       </p>
     </solution>
-  </exercise>
+  </example>
 
 </section>

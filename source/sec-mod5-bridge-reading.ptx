@@ -1,6 +1,6 @@
 <section xml:id="sec-mod5-bridge-reading">
-  <title>Module 5: Bridge Reading Guide</title>
-  <p>Bauldry §1.5–1.6 — Estimated time: 40 minutes</p>
+  <title>Bridge Reading Guide</title>
+  <p>Reading: Bauldry, Sections 1.5<ndash/>1.6. Estimated time: 40 minutes.</p>
 
     <p>
       Every module ends with a bridge reading in Bauldry's
@@ -78,7 +78,7 @@
     <title>Example 1.11: Special Series</title>
     <statement>
       <p>
-        Read Example 1.11 (<q>Special Series of Elementary Calculus</q>),
+        Read Bauldry's Example 1.11 (<q>Special Series of Elementary Calculus</q>),
         which catalogs geometric, harmonic, <m>p</m>-series, and
         telescoping series as a reference set.
         <ol marker="(a)">
@@ -86,7 +86,7 @@
             For the two telescoping series Bauldry lists
             (<m>\sum 1/(k(k+1))</m> and <m>\sum 1/((2k-1)(2k+1))</m>),
             are the closed-form partial sums Bauldry gives consistent
-            with <xref ref="ex-mod5-we-1" text="custom">Worked Example 1</xref>
+            with <xref ref="ex-mod5-we-1"/>
             and <xref ref="ex-mod5-ps-s1"/>? (They should be:
             <m>S_n = 1 - 1/(n+1)</m> and
             <m>S_n = \frac{1}{2}\left(1 - 1/(2n+1)\right)</m>, with
@@ -183,7 +183,7 @@
             apply to decide whether it converges?
           </li>
           <li>
-            The <em>radius of convergence</em> (Definition 1.18) is
+            The <em>radius of convergence</em> (Bauldry's Definition 1.18) is
             the key summary statistic for a power series. State the
             three possibilities: <m>R = 0</m> (converges only at
             <m>x = c</m>), <m>R = \infty</m> (converges for all

@@ -1,14 +1,14 @@
 <section xml:id="sec-mod4-worked-examples">
-  <title>Module 4: Worked Examples</title>
-  <p>Annotated Proof Walkthroughs — Estimated time: 45 minutes</p>
+  <title>Worked Examples</title>
+  <p>Estimated time: 45 minutes.</p>
 
     <p>
       Read each example slowly. The goal is not just to see what the
-      answer is, but to internalize the proof <em>template</em>. Example
-      1 is the basic <m>\varepsilon</m>-<m>N</m> pattern you will
-      reproduce on the assessment. Example 2 shows how the Algebra of
+      answer is, but to internalize the proof <em>template</em>.
+      <xref ref="ex-mod4-we-1"/> is the basic <m>\varepsilon</m>-<m>N</m> pattern you will
+      reproduce on the assessment. <xref ref="ex-mod4-we-2"/> shows how the Algebra of
       Limits replaces direct <m>\varepsilon</m>-<m>N</m> work for
-      rational expressions. Example 3 shows the Monotone Convergence
+      rational expressions. <xref ref="ex-mod4-we-3"/> shows the Monotone Convergence
       Theorem in its most common use: a recursively defined sequence
       whose limit is not visible at a glance.
     </p>
@@ -17,8 +17,8 @@
        EXAMPLE 1: DIRECT EPSILON-N PROOF
   ============================================================ -->
 
-  <exercise xml:id="ex-mod4-we-1">
-    <title>Example 1: A Direct <m>\varepsilon</m>-<m>N</m> Proof</title>
+  <example xml:id="ex-mod4-we-1">
+    <title>A Direct <m>\varepsilon</m>-<m>N</m> Proof</title>
     <statement>
       <p>
         Prove directly from the definition that
@@ -77,20 +77,20 @@
         too.
       </p>
     </solution>
-  </exercise>
+  </example>
 
   <!-- ============================================================
        EXAMPLE 2: ALGEBRA OF LIMITS
   ============================================================ -->
 
-  <exercise xml:id="ex-mod4-we-2">
-    <title>Example 2: A Rational Limit via the Algebra of Limits</title>
+  <example xml:id="ex-mod4-we-2">
+    <title>A Rational Limit via the Algebra of Limits</title>
     <statement>
       <p>
         Evaluate
         <md>\lim_{n \to \infty} \frac{3n^2 + 2n - 1}{4n^2 + 5}.</md>
         Do not use an <m>\varepsilon</m>-<m>N</m> argument; use the
-        Algebra of Limits (Theorem 2.5) directly.
+        Algebra of Limits (Zorn's Theorem 2.5) directly.
       </p>
     </statement>
     <solution>
@@ -142,7 +142,7 @@
       </p>
       <p>
         <alert>What to notice.</alert>
-        Once the basic limit <m>1/n \to 0</m> is established (Example 1
+        Once the basic limit <m>1/n \to 0</m> is established (<xref ref="ex-mod4-we-1"/>
         covers <m>1/n^2</m>; <m>1/n</m> is the classical case), every
         rational expression in <m>n</m> reduces to a short sequence of
         limit-law applications. The only subtle point is the nonvanishing
@@ -154,14 +154,14 @@
         the limit is always the ratio of leading coefficients.
       </p>
     </solution>
-  </exercise>
+  </example>
 
   <!-- ============================================================
        EXAMPLE 3: MONOTONE CONVERGENCE FOR A RECURSIVE SEQUENCE
   ============================================================ -->
 
-  <exercise xml:id="ex-mod4-we-3">
-    <title>Example 3: A Recursive Sequence and the Monotone Convergence Theorem</title>
+  <example xml:id="ex-mod4-we-3">
+    <title>A Recursive Sequence and the Monotone Convergence Theorem</title>
     <statement>
       <p>
         Define the sequence <m>(a_n)</m> recursively by
@@ -215,7 +215,7 @@
         <m>a_1 = 1</m> and the sequence is increasing), so the limit
         satisfies
         <m>1 \leq L \leq 2</m> (limits preserve non-strict
-        inequalities; see the <xref ref="par-mod4-sg-two-facts" text="custom">study guide</xref>).
+        inequalities; see <xref ref="thm-mod4-limit-order"/>).
         The strict bound <m>a_n \lt 2</m> yields only <m>L \leq 2</m>
         in the limit.
       </p>
@@ -230,11 +230,11 @@
         works for <m>(a_n)</m>; if <m>n \geq N</m>, then
         <m>n + 1 \geq N</m>, so <m>|a_{n+1} - L| \lt \varepsilon</m>.
         Letting <m>n \to \infty</m>, we use the Algebra of Limits
-        (Theorem 2.5): the left side converges to
+        (Zorn's Theorem 2.5): the left side converges to
         <m>L \cdot L = L^2</m> by the product rule, and the right side
         converges to <m>2 + L</m> by the sum rule. The two sides are
-        the same sequence, so by uniqueness of limits (see the
-        <xref ref="par-mod4-sg-two-facts" text="custom">study guide</xref>),
+        the same sequence, so by uniqueness of limits
+        (<xref ref="thm-mod4-limit-unique"/>),
         <m>L^2 = 2 + L</m>, i.e.,
         <m>L^2 - L - 2 = 0</m>,
         which factors as <m>(L - 2)(L + 1) = 0</m>. So
@@ -273,6 +273,6 @@
         square root informally.
       </p>
     </solution>
-  </exercise>
+  </example>
 
 </section>

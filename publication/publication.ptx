@@ -19,9 +19,20 @@
     <!-- Number chapters (modules) only; sections (the six components)  -->
     <!-- are unnumbered.  This replaces the post-build CSS injection the -->
     <!-- old pretextbook 0.8.3 builds used to hide section numbers.      -->
-    <!-- Exercises are then numbered within the chapter (1.1, 1.2, ...). -->
-    <!-- Quinn to confirm; set level="2" to number sections as well.     -->
+    <!-- Blocks are numbered within the chapter (1.1, 1.2, ...).         -->
+    <!-- Inline exercises get their own counter (distinct="yes"), so      -->
+    <!-- theorems, definitions and examples share one sequence and        -->
+    <!-- exercises another.  Choice logged in decisions/structure.md.     -->
     <divisions level="1" />
+    <exercises distinct="yes" />
   </numbering>
+
+  <html>
+    <!-- Proofs, examples and inline exercise statements display open,   -->
+    <!-- not as click-to-open knowls.  Hints, answers and solutions (of  -->
+    <!-- exercises and of examples) stay collapsible, hidden until       -->
+    <!-- opened; example-solution keeps its default, "yes".              -->
+    <knowl proof="no" example="no" exercise-inline="no" />
+  </html>
 
 </publication>

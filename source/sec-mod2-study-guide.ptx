@@ -1,6 +1,6 @@
 <section xml:id="sec-mod2-study-guide">
-  <title>Module 2: Companion Reading and Study Guide</title>
-  <p>Zorn §1.7&#x2013;1.9 — Estimated time: 50 minutes</p>
+  <title>Companion Reading and Study Guide</title>
+  <p>Reading: Zorn, Sections 1.7<ndash/>1.9. Estimated time: 50 minutes.</p>
 
     <p>
       This guide accompanies three sections of Zorn's
@@ -25,8 +25,8 @@
     <p>
       This section introduces absolute value as a distance function and
       establishes the properties you will use in every subsequent module.
-      Pay particular attention to Theorem 1.23(c) (which converts an
-      absolute value inequality into an interval) and Theorem 1.24
+      Pay particular attention to Zorn's Theorem 1.23(c) (which converts an
+      absolute value inequality into an interval) and Zorn's Theorem 1.24
       (the Triangle Inequality).
     </p>
   </paragraphs>
@@ -62,7 +62,7 @@
     <title>Converting Absolute Value Inequalities</title>
     <statement>
       <p>
-        Theorem 1.23(c) says: <m>|x| \lt k \iff -k \lt x \lt k</m>
+        Zorn's Theorem 1.23(c) says: <m>|x| \lt k \iff -k \lt x \lt k</m>
         (for <m>k \gt 0</m>).
         The non-strict form <m>|x| \leq k \iff -k \leq x \leq k</m>
         (for <m>k \geq 0</m>) also holds, since <m>|x|</m> is the larger

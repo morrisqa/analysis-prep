@@ -1,12 +1,12 @@
 <section xml:id="sec-mod9-worked-examples">
-  <title>Module 9: Worked Examples</title>
-  <p>Annotated Proof Walkthroughs — Estimated time: 45 minutes</p>
+  <title>Worked Examples</title>
+  <p>Estimated time: 45 minutes.</p>
 
     <p>
-      Read each example slowly. Example 1 dissects the canonical non-uniform
-      example <m>f_n(x) = x^n</m>. Example 2 proves the uniform-limit
-      continuity theorem using the <m>3\varepsilon</m> trick. Example 3
-      applies the Weierstrass <m>M</m>-Test. Example 4 uses term-by-term
+      Read each example slowly. <xref ref="ex-mod9-we-1"/> dissects the canonical non-uniform
+      example <m>f_n(x) = x^n</m>. <xref ref="ex-mod9-we-2"/> proves the uniform-limit
+      continuity theorem using the <m>3\varepsilon</m> trick. <xref ref="ex-mod9-we-3"/>
+      applies the Weierstrass <m>M</m>-Test. <xref ref="ex-mod9-we-4"/> uses term-by-term
       integration to derive a classical series identity.
     </p>
 
@@ -14,8 +14,8 @@
        EXAMPLE 1
   ============================================================ -->
 
-  <exercise xml:id="ex-mod9-we-1">
-    <title>Example 1: Pointwise but Not Uniform Convergence</title>
+  <example xml:id="ex-mod9-we-1">
+    <title>Pointwise but Not Uniform Convergence</title>
     <statement>
       <p>
         Let <m>f_n(x) = x^n</m> for <m>x \in [0,1]</m>. Show that
@@ -66,20 +66,20 @@
       <p>
         <alert>What to notice.</alert>
         The failure of uniform convergence here has a visible consequence:
-        the pointwise limit is discontinuous. The theorem in Example 2 says
+        the pointwise limit is discontinuous. The theorem in <xref ref="ex-mod9-we-2"/> says
         this cannot happen under uniform convergence of continuous functions.
         The non-uniform behavior of <m>x^n</m> on <m>[0,1]</m> is the
         prototypical counterexample for this entire module.
       </p>
     </solution>
-  </exercise>
+  </example>
 
   <!-- ============================================================
        EXAMPLE 2
   ============================================================ -->
 
-  <exercise xml:id="ex-mod9-we-2">
-    <title>Example 2: Uniform Convergence Preserves Continuity</title>
+  <example xml:id="ex-mod9-we-2">
+    <title>Uniform Convergence Preserves Continuity</title>
     <statement>
       <p>
         Prove: if <m>f_n \to f</m> uniformly on <m>[a,b]</m> and each
@@ -129,14 +129,14 @@
         <m>x</m> near <m>x_0</m>.
       </p>
     </solution>
-  </exercise>
+  </example>
 
   <!-- ============================================================
        EXAMPLE 3
   ============================================================ -->
 
-  <exercise xml:id="ex-mod9-we-3">
-    <title>Example 3: The Weierstrass <m>M</m>-Test</title>
+  <example xml:id="ex-mod9-we-3">
+    <title>The Weierstrass <m>M</m>-Test</title>
     <statement>
       <p>
         Show that <m>\displaystyle\sum_{n=1}^{\infty} \frac{\sin(nx)}{n^2}</m>
@@ -177,14 +177,14 @@
         <m>\R</m>.
       </p>
     </solution>
-  </exercise>
+  </example>
 
   <!-- ============================================================
        EXAMPLE 4
   ============================================================ -->
 
-  <exercise xml:id="ex-mod9-we-4">
-    <title>Example 4: Term-by-Term Integration</title>
+  <example xml:id="ex-mod9-we-4">
+    <title>Term-by-Term Integration</title>
     <statement>
       <p>
         Use the geometric series, the term-by-term integration theorem,
@@ -214,7 +214,7 @@
         <m>[-r, r]</m> by the Weierstrass <m>M</m>-Test (with
         <m>M_n = r^{2n}</m> and <m>\sum r^{2n} = 1/(1-r^2) \lt \infty</m>).
         Each partial-sum function is continuous, and the uniform limit of
-        continuous functions is continuous (Example 2). By the term-by-term
+        continuous functions is continuous (<xref ref="ex-mod9-we-2"/>). By the term-by-term
         integration theorem, for <m>x \in [0,r]</m>,
         <md>
           \int_0^x \frac{dt}{1+t^2} = \int_0^x
@@ -278,6 +278,6 @@
         elementary analysis.
       </p>
     </solution>
-  </exercise>
+  </example>
 
 </section>

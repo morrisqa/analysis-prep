@@ -1,6 +1,6 @@
 <section xml:id="sec-mod5-study-guide">
-  <title>Module 5: Companion Reading and Study Guide</title>
-  <p>Zorn §2.5–2.6 — Estimated time: 55 minutes</p>
+  <title>Companion Reading and Study Guide</title>
+  <p>Reading: Zorn, Sections 2.5<ndash/>2.6. Estimated time: 55 minutes.</p>
 
     <p>
       This guide accompanies two sections of Zorn's <em>Understanding
@@ -29,7 +29,7 @@
   <paragraphs xml:id="par-mod5-sg-25-intro">
     <title>Section 2.5: Series 101 — Basic Ideas (Zorn pp. 119&#x2013;134)</title>
     <p>
-      Read Definition 2.22 (series convergence) very carefully. This
+      Read Zorn's Definition 2.22 (series convergence) very carefully. This
       is the definition on which all of Module 5 rests. Notice that it
       is not a new kind of limit&#x2014;it is the old Module 4 limit,
       applied to the partial-sum sequence.
@@ -376,58 +376,70 @@
       <m>\sqrt[k]{a_k}</m> denotes the nonnegative <m>k</m>th root of
       <m>a_k</m>.
     </p>
+    <theorem xml:id="thm-mod5-root-test-bound">
+      <title>Root Test, Eventual-Bound Form</title>
+      <statement>
+        <p>
+          Suppose <m>a_k \geq 0</m> for all <m>k</m>, and there exist a
+          number <m>r</m> with <m>0 \leq r \lt 1</m> and an index <m>N</m>
+          such that <m>\sqrt[k]{a_k} \leq r</m> for all <m>k \geq N</m>.
+          Then <m>\sum a_k</m> converges.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Raising both sides of
+          <m>\sqrt[k]{a_k} \leq r</m> to the <m>k</m>th power (both sides
+          are nonnegative) gives <m>a_k \leq r^k</m> for all
+          <m>k \geq N</m>. Let <m>C = a_1 + \cdots + a_{N-1}</m>, with
+          <m>C = 0</m> if <m>N = 1</m>. The partial sums <m>S_n</m> are
+          increasing because <m>a_k \geq 0</m>, and <m>S_n \leq C</m> for
+          <m>n \lt N</m>. For <m>n \geq N</m>, the partial-sum formula of
+          <xref ref="ex-mod5-sg-25-2"/> (with first term <m>r^N</m> and
+          ratio <m>r</m>) gives
+          <md>
+            <mrow>S_n \amp\leq C + \sum_{k=N}^{n} r^k
+            = C + r^N \cdot \frac{1 - r^{n-N+1}}{1 - r}</mrow>
+            <mrow>\amp\leq C + \frac{r^N}{1 - r}.</mrow>
+          </md>
+          So <m>(S_n)</m> is increasing and bounded above, and the
+          Monotone Convergence Theorem says it converges.
+        </p>
+      </proof>
+    </theorem>
+    <theorem xml:id="thm-mod5-root-test-limit">
+      <title>Root Test, Limit Form</title>
+      <statement>
+        <p>
+          Suppose <m>a_k \geq 0</m> for all <m>k</m> and
+          <m>\sqrt[k]{a_k} \to \rho</m>. Then <m>\sum a_k</m> converges if
+          <m>\rho \lt 1</m> and diverges if <m>\rho \gt 1</m>.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Every root <m>\sqrt[k]{a_k}</m> is at least 0, so
+          <m>\rho \geq 0</m>, because limits preserve non-strict
+          inequalities (<xref ref="thm-mod4-limit-order"/>).
+          Suppose <m>\rho \lt 1</m>, and set <m>r = (\rho + 1)/2</m>, so
+          that <m>0 \leq \rho \lt r \lt 1</m>. The definition of
+          convergence with <m>\varepsilon = r - \rho</m> gives an
+          <m>N</m> with <m>\sqrt[k]{a_k} \lt \rho + \varepsilon = r</m> for
+          all <m>k \geq N</m>, and the eventual-bound form shows that
+          <m>\sum a_k</m> converges. Now suppose <m>\rho \gt 1</m>. The
+          definition of convergence with <m>\varepsilon = \rho - 1</m>
+          gives an <m>N</m> with
+          <m>\sqrt[k]{a_k} \gt \rho - \varepsilon = 1</m>, and hence
+          <m>a_k \gt 1</m>, for all <m>k \geq N</m>. Then
+          <m>a_k \not\to 0</m> (if <m>a_k \to 0</m>, then
+          <m>a_k \lt 1</m> for all large <m>k</m>), so <m>\sum a_k</m>
+          diverges by the Divergence Test.
+        </p>
+      </proof>
+    </theorem>
     <p>
-      <alert>Root Test, eventual-bound form.</alert>
-      Suppose <m>a_k \geq 0</m> for all <m>k</m>, and there exist a
-      number <m>r</m> with <m>0 \leq r \lt 1</m> and an index <m>N</m>
-      such that <m>\sqrt[k]{a_k} \leq r</m> for all <m>k \geq N</m>.
-      Then <m>\sum a_k</m> converges.
-    </p>
-    <p>
-      <em>Proof.</em> Raising both sides of
-      <m>\sqrt[k]{a_k} \leq r</m> to the <m>k</m>th power (both sides
-      are nonnegative) gives <m>a_k \leq r^k</m> for all
-      <m>k \geq N</m>. Let <m>C = a_1 + \cdots + a_{N-1}</m>, with
-      <m>C = 0</m> if <m>N = 1</m>. The partial sums <m>S_n</m> are
-      increasing because <m>a_k \geq 0</m>, and <m>S_n \leq C</m> for
-      <m>n \lt N</m>. For <m>n \geq N</m>, the partial-sum formula of
-      <xref ref="ex-mod5-sg-25-2"/> (with first term <m>r^N</m> and
-      ratio <m>r</m>) gives
-      <md>
-        <mrow>S_n \amp\leq C + \sum_{k=N}^{n} r^k
-        = C + r^N \cdot \frac{1 - r^{n-N+1}}{1 - r}</mrow>
-        <mrow>\amp\leq C + \frac{r^N}{1 - r}.</mrow>
-      </md>
-      So <m>(S_n)</m> is increasing and bounded above, and the
-      Monotone Convergence Theorem says it converges. <m>\square</m>
-    </p>
-    <p>
-      <alert>Root Test, limit form.</alert>
-      Suppose <m>a_k \geq 0</m> for all <m>k</m> and
-      <m>\sqrt[k]{a_k} \to \rho</m>. Then <m>\sum a_k</m> converges if
-      <m>\rho \lt 1</m> and diverges if <m>\rho \gt 1</m>. If
-      <m>\rho = 1</m>, the test is inconclusive.
-    </p>
-    <p>
-      <em>Proof.</em> Every root <m>\sqrt[k]{a_k}</m> is at least 0, so
-      <m>\rho \geq 0</m>, because limits preserve non-strict
-      inequalities (<xref ref="par-mod4-sg-two-facts" text="custom">Module 4</xref>).
-      Suppose <m>\rho \lt 1</m>, and set <m>r = (\rho + 1)/2</m>, so
-      that <m>0 \leq \rho \lt r \lt 1</m>. The definition of
-      convergence with <m>\varepsilon = r - \rho</m> gives an
-      <m>N</m> with <m>\sqrt[k]{a_k} \lt \rho + \varepsilon = r</m> for
-      all <m>k \geq N</m>, and the eventual-bound form shows that
-      <m>\sum a_k</m> converges. Now suppose <m>\rho \gt 1</m>. The
-      definition of convergence with <m>\varepsilon = \rho - 1</m>
-      gives an <m>N</m> with
-      <m>\sqrt[k]{a_k} \gt \rho - \varepsilon = 1</m>, and hence
-      <m>a_k \gt 1</m>, for all <m>k \geq N</m>. Then
-      <m>a_k \not\to 0</m> (if <m>a_k \to 0</m>, then
-      <m>a_k \lt 1</m> for all large <m>k</m>), so <m>\sum a_k</m>
-      diverges by the Divergence Test. <m>\square</m>
-    </p>
-    <p>
-      To see that <m>\rho = 1</m> decides nothing, compare
+      If <m>\rho = 1</m>, the test is inconclusive. To see this,
+      compare
       <m>\sum 1/k</m>, which diverges
       (<xref ref="ex-mod5-sg-25-4"/>), with <m>\sum 1/k^2</m>, which
       converges (the <m>p</m>-series theorem with <m>p = 2</m>; see
@@ -439,14 +451,30 @@
     <p>
       The limit <m>k^{1/k} \to 1</m> does not follow from the Algebra
       of Limits alone, because the base and the exponent both change
-      with <m>k</m>. We prove it with <term>Bernoulli's inequality</term>:
-      <m>(1 + h)^k \geq 1 + kh</m> for every <m>h \geq 0</m> and every
-      <m>k \geq 1</m>. The proof is by induction on <m>k</m>. For
-      <m>k = 1</m>, both sides equal <m>1 + h</m>. If the inequality
-      holds for <m>k</m>, multiplying both sides by
-      <m>1 + h \geq 1 \gt 0</m> preserves it, so
-      <m>(1 + h)^{k+1} \geq (1 + kh)(1 + h) = 1 + (k+1)h + kh^2
-      \geq 1 + (k+1)h</m>. Now let <m>h_k = k^{1/(2k)} - 1</m>, which
+      with <m>k</m>. We prove it with <term>Bernoulli's inequality</term>
+      (<xref ref="thm-mod5-bernoulli"/>).
+    </p>
+    <lemma xml:id="thm-mod5-bernoulli">
+      <title>Bernoulli's Inequality</title>
+      <statement>
+        <p>
+          For every <m>h \geq 0</m> and every integer <m>k \geq 1</m>,
+          <m>(1 + h)^k \geq 1 + kh</m>.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          The proof is by induction on <m>k</m>. For
+          <m>k = 1</m>, both sides equal <m>1 + h</m>. If the inequality
+          holds for <m>k</m>, multiplying both sides by
+          <m>1 + h \geq 1 \gt 0</m> preserves it, so
+          <m>(1 + h)^{k+1} \geq (1 + kh)(1 + h) = 1 + (k+1)h + kh^2
+          \geq 1 + (k+1)h</m>.
+        </p>
+      </proof>
+    </lemma>
+    <p>
+      Now let <m>h_k = k^{1/(2k)} - 1</m>, which
       is at least 0 because <m>k \geq 1</m>. Bernoulli's inequality
       gives <m>\sqrt{k} = (1 + h_k)^k \geq 1 + k h_k</m>, so
       <md>0 \leq h_k \leq \frac{\sqrt{k} - 1}{k} \lt \frac{1}{\sqrt{k}}.</md>

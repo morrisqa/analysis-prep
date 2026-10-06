@@ -1,6 +1,6 @@
 <section xml:id="sec-mod9-assessment">
-  <title>Module 9: Assessment</title>
-  <p>Submitted Proofs and Reflection — Estimated time: 40 minutes</p>
+  <title>Assessment</title>
+  <p>Estimated time: 40 minutes.</p>
 
   <!-- ============================================================ -->
 
@@ -130,8 +130,7 @@
             determine whether this supremum tends to <m>0</m>
             as <m>n \to \infty</m>. You may use the limit
             <m>(1 + 1/n)^n \to e</m>, which is used in
-            <xref ref="ex-mod5-we-3" text="custom">Worked Example 3</xref>
-            of <xref ref="ch-mod5" text="custom">Module 5</xref>.
+            <xref ref="ex-mod5-we-3"/>.
           </li>
           <li>
             <em>Uniform convergence verdict.</em> Does

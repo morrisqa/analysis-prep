@@ -1,6 +1,6 @@
 <section xml:id="sec-mod7-practice-set">
-  <title>Module 7: Practice Problem Set</title>
-  <p>Estimated time: 105 minutes</p>
+  <title>Practice Problem Set</title>
+  <p>Estimated time: 105 minutes.</p>
     <p>
       Problems are labeled <m>[\mathbf{F}]</m> (Foundational),
       <m>[\mathbf{S}]</m> (Standard), and <m>[\mathbf{C}]</m>
@@ -243,9 +243,8 @@
         Evaluate
         <md>\lim_{x \to 0} \frac{e^x - 1 - x}{x^2}</md>
         by applying L'H&#xf4;pital's rule twice. At each application,
-        verify every hypothesis of
-        <xref ref="par-mod7-sg-43-lhopital" text="custom">L'H&#xf4;pital's
-        rule</xref>: on an open interval around <m>0</m>, except
+        verify every hypothesis of L'H&#xf4;pital's rule
+        (<xref ref="thm-mod7-lhopital"/>): on an open interval around <m>0</m>, except
         possibly at <m>0</m>, the numerator and denominator are
         differentiable and the derivative of the denominator is nonzero;
         both numerator and denominator tend to <m>0</m>; and the limit
@@ -291,8 +290,7 @@
         <m>f(0)</m>, <m>f'(0)</m>, and <m>f''(0)</m> explicitly.
         Then, for <m>x \gt -1</m> (where <m>f</m> is defined), write
         the Lagrange form of the remainder <m>R_2(x)</m> given by
-        <xref ref="par-mod7-sg-43-taylor" text="custom">Taylor's
-        Theorem</xref> and identify what <m>c</m> represents.
+        Taylor's Theorem (<xref ref="thm-mod7-taylor"/>) and identify what <m>c</m> represents.
       </p>
     </statement>
     <answer>

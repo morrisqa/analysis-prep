@@ -1,6 +1,6 @@
 <section xml:id="sec-mod6-bridge-reading">
-  <title>Module 6: Bridge Reading Guide</title>
-  <p>Bauldry §1.2 and §2.2 — Estimated time: 40 minutes</p>
+  <title>Bridge Reading Guide</title>
+  <p>Reading: Bauldry, Sections 1.2 and 2.2. Estimated time: 40 minutes.</p>
     <p>
       Every module ends with a bridge reading in Bauldry's
       <em>Introduction to Real Analysis</em>. For Module 6 the reading
@@ -151,9 +151,8 @@
             statement.
           </li>
           <li>
-            Does the proof strategy in Bauldry match the proof in
-            <xref ref="par-mod6-sg-32-seq-cont" text="custom">Sequential Characterization of Continuity</xref>
-            in the Module 6 study guide? Identify the main step in the
+            Does the proof strategy in Bauldry match the proof of
+            <xref ref="thm-mod6-seq-cont"/>? Identify the main step in the
             proof of the forward direction (from
             <m>\varepsilon</m>-<m>\delta</m> continuity to the
             sequential property).

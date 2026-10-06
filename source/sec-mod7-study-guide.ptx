@@ -1,6 +1,6 @@
 <section xml:id="sec-mod7-study-guide">
-  <title>Module 7: Companion Reading and Study Guide</title>
-  <p>Zorn §4.1–4.3 — Estimated time: 75 minutes</p>
+  <title>Companion Reading and Study Guide</title>
+  <p>Reading: Zorn, Sections 4.1<ndash/>4.3. Estimated time: 75 minutes.</p>
     <p>
       This guide accompanies three sections of Zorn's <em>Understanding
       Real Analysis</em>. Section 4.1 (<q>Derivatives</q>) introduces
@@ -363,81 +363,95 @@
       Theorem to a well-chosen auxiliary function, the same idea as the
       proof of the MVT in <xref ref="ex-mod7-sg-43-2"/>.
     </p>
+    <definition xml:id="def-mod7-taylor-poly">
+      <title>Taylor Polynomial</title>
+      <statement>
+        <p>
+          Let <m>n \geq 0</m> be an integer, and suppose <m>f</m> has
+          derivatives <m>f', f'', \ldots, f^{(n)}</m> at <m>a</m> (with
+          <m>f^{(0)} = f</m>). The <term>Taylor polynomial of order
+          <m>n</m></term> of <m>f</m> at <m>a</m> is
+          <md>T_n(x) = \sum_{k=0}^{n} \frac{f^{(k)}(a)}{k!}(x - a)^k
+          = f(a) + f'(a)(x - a) + \frac{f''(a)}{2!}(x - a)^2 + \cdots
+          + \frac{f^{(n)}(a)}{n!}(x - a)^n,</md>
+          and the <term>remainder</term> is <m>R_n(x) = f(x) - T_n(x)</m>.
+        </p>
+      </statement>
+    </definition>
+    <theorem xml:id="thm-mod7-taylor">
+      <title>Taylor's Theorem (Lagrange Form of the Remainder)</title>
+      <statement>
+        <p>
+          Let
+          <m>n \geq 0</m> be an integer and let <m>I</m> be an open
+          interval. Suppose <m>f</m> is <m>n + 1</m> times differentiable on
+          <m>I</m>; that is, <m>f, f', \ldots, f^{(n)}</m> are all
+          differentiable at every point of <m>I</m>. Let <m>a, x \in I</m>.
+          Then there is a point <m>c</m> between <m>a</m> and <m>x</m> such
+          that
+          <md>R_n(x) = \frac{f^{(n+1)}(c)}{(n+1)!}(x - a)^{n+1}.</md>
+          If <m>x \neq a</m>, then <m>c</m> lies strictly between <m>a</m>
+          and <m>x</m>.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          If <m>x = a</m>, then <m>T_n(a) = f(a)</m>, so
+          <m>R_n(a) = 0</m> and <m>c = a</m> works. Suppose
+          <m>x \neq a</m>, and let <m>J</m> be the closed interval with
+          endpoints <m>a</m> and <m>x</m> (that is, <m>[a, x]</m> or
+          <m>[x, a]</m>); since <m>I</m> is an interval, <m>J \subset I</m>.
+          We hold <m>x</m> fixed and let the expansion point vary: for
+          <m>t \in I</m>, define
+          <md>F(t) = f(x) - \sum_{k=0}^{n} \frac{f^{(k)}(t)}{k!}(x - t)^k,</md>
+          the error made when <m>f(x)</m> is approximated by the Taylor
+          polynomial of order <m>n</m> of <m>f</m> at <m>t</m>. Then
+          <m>F(x) = f(x) - f(x) = 0</m>, since every term with
+          <m>k \geq 1</m> contains the factor <m>(x - x)^k = 0</m>, and
+          <m>F(a) = f(x) - T_n(x) = R_n(x)</m>.
+        </p>
+        <p>
+          Each <m>f^{(k)}</m> with <m>k \leq n</m> is differentiable on
+          <m>I</m>, so <m>F</m> is differentiable on <m>I</m>. For
+          <m>k \geq 1</m>, the product and chain rules give
+          <md>\frac{d}{dt}\left[\frac{f^{(k)}(t)}{k!}(x - t)^k\right]
+          = \frac{f^{(k+1)}(t)}{k!}(x - t)^k
+          - \frac{f^{(k)}(t)}{(k-1)!}(x - t)^{k-1}</md>
+          (for <m>k = 1</m>, read <m>(x - t)^0</m> as <m>1</m>), and for <m>k = 0</m> the derivative of <m>f(t)</m> is
+          <m>f'(t)</m>. Since <m>f(x)</m> does not depend on <m>t</m>,
+          <md>F'(t) = -\left[\sum_{k=0}^{n} \frac{f^{(k+1)}(t)}{k!}(x - t)^k
+          - \sum_{k=1}^{n} \frac{f^{(k)}(t)}{(k-1)!}(x - t)^{k-1}\right]
+          = -\frac{f^{(n+1)}(t)}{n!}(x - t)^n,</md>
+          because the second sum, after the change of index
+          <m>j = k - 1</m>, is the first sum without its last term.
+        </p>
+        <p>
+          The function <m>F</m> does not satisfy the hypothesis
+          <m>F(a) = F(x)</m> of Rolle's Theorem unless <m>R_n(x) = 0</m>, so
+          we correct it by a multiple of a function that equals <m>1</m> at
+          <m>a</m> and <m>0</m> at <m>x</m>. For <m>t \in I</m>, define
+          <md>G(t) = F(t) - \left(\frac{x - t}{x - a}\right)^{n+1} F(a).</md>
+          Then <m>G(a) = F(a) - F(a) = 0</m> and
+          <m>G(x) = F(x) - 0 = 0</m>. The function <m>G</m> is
+          differentiable on <m>I</m>, so it is continuous on <m>J</m> and
+          differentiable at every point strictly between <m>a</m> and
+          <m>x</m>. By Rolle's Theorem, applied on <m>J</m>, there is a
+          point <m>c</m> strictly between <m>a</m> and <m>x</m> with
+          <m>G'(c) = 0</m>. Since
+          <md>G'(t) = -\frac{f^{(n+1)}(t)}{n!}(x - t)^n
+          + \frac{(n+1)(x - t)^n}{(x - a)^{n+1}} F(a),</md>
+          the equation <m>G'(c) = 0</m>, divided by <m>(x - c)^n</m> (which
+          is nonzero because <m>c \neq x</m>), gives
+          <md>F(a) = \frac{(x - a)^{n+1}}{(n+1) \cdot n!} f^{(n+1)}(c)
+          = \frac{f^{(n+1)}(c)}{(n+1)!}(x - a)^{n+1}.</md>
+          Since <m>F(a) = R_n(x)</m>, this is the claimed formula.
+        </p>
+      </proof>
+    </theorem>
     <p>
-      Let <m>n \geq 0</m> be an integer, and suppose <m>f</m> has
-      derivatives <m>f', f'', \ldots, f^{(n)}</m> at <m>a</m> (with
-      <m>f^{(0)} = f</m>). The <term>Taylor polynomial of order
-      <m>n</m></term> of <m>f</m> at <m>a</m> is
-      <md>T_n(x) = \sum_{k=0}^{n} \frac{f^{(k)}(a)}{k!}(x - a)^k
-      = f(a) + f'(a)(x - a) + \frac{f''(a)}{2!}(x - a)^2 + \cdots
-      + \frac{f^{(n)}(a)}{n!}(x - a)^n,</md>
-      and the <term>remainder</term> is <m>R_n(x) = f(x) - T_n(x)</m>.
-    </p>
-    <p>
-      <em>Taylor's Theorem (Lagrange form of the remainder).</em> Let
-      <m>n \geq 0</m> be an integer and let <m>I</m> be an open
-      interval. Suppose <m>f</m> is <m>n + 1</m> times differentiable on
-      <m>I</m>; that is, <m>f, f', \ldots, f^{(n)}</m> are all
-      differentiable at every point of <m>I</m>. Let <m>a, x \in I</m>.
-      Then there is a point <m>c</m> between <m>a</m> and <m>x</m> such
-      that
-      <md>R_n(x) = \frac{f^{(n+1)}(c)}{(n+1)!}(x - a)^{n+1}.</md>
-      If <m>x \neq a</m>, then <m>c</m> lies strictly between <m>a</m>
-      and <m>x</m>. For <m>n = 0</m> the theorem gives the conclusion of
+      For <m>n = 0</m>, Taylor's Theorem gives the conclusion of
       the MVT (under slightly stronger hypotheses):
       <m>f(x) = f(a) + f'(c)(x - a)</m>.
-    </p>
-    <p>
-      <em>Proof.</em> If <m>x = a</m>, then <m>T_n(a) = f(a)</m>, so
-      <m>R_n(a) = 0</m> and <m>c = a</m> works. Suppose
-      <m>x \neq a</m>, and let <m>J</m> be the closed interval with
-      endpoints <m>a</m> and <m>x</m> (that is, <m>[a, x]</m> or
-      <m>[x, a]</m>); since <m>I</m> is an interval, <m>J \subset I</m>.
-      We hold <m>x</m> fixed and let the expansion point vary: for
-      <m>t \in I</m>, define
-      <md>F(t) = f(x) - \sum_{k=0}^{n} \frac{f^{(k)}(t)}{k!}(x - t)^k,</md>
-      the error made when <m>f(x)</m> is approximated by the Taylor
-      polynomial of order <m>n</m> of <m>f</m> at <m>t</m>. Then
-      <m>F(x) = f(x) - f(x) = 0</m>, since every term with
-      <m>k \geq 1</m> contains the factor <m>(x - x)^k = 0</m>, and
-      <m>F(a) = f(x) - T_n(x) = R_n(x)</m>.
-    </p>
-    <p>
-      Each <m>f^{(k)}</m> with <m>k \leq n</m> is differentiable on
-      <m>I</m>, so <m>F</m> is differentiable on <m>I</m>. For
-      <m>k \geq 1</m>, the product and chain rules give
-      <md>\frac{d}{dt}\left[\frac{f^{(k)}(t)}{k!}(x - t)^k\right]
-      = \frac{f^{(k+1)}(t)}{k!}(x - t)^k
-      - \frac{f^{(k)}(t)}{(k-1)!}(x - t)^{k-1}</md>
-      (for <m>k = 1</m>, read <m>(x - t)^0</m> as <m>1</m>), and for <m>k = 0</m> the derivative of <m>f(t)</m> is
-      <m>f'(t)</m>. Since <m>f(x)</m> does not depend on <m>t</m>,
-      <md>F'(t) = -\left[\sum_{k=0}^{n} \frac{f^{(k+1)}(t)}{k!}(x - t)^k
-      - \sum_{k=1}^{n} \frac{f^{(k)}(t)}{(k-1)!}(x - t)^{k-1}\right]
-      = -\frac{f^{(n+1)}(t)}{n!}(x - t)^n,</md>
-      because the second sum, after the change of index
-      <m>j = k - 1</m>, is the first sum without its last term.
-    </p>
-    <p>
-      The function <m>F</m> does not satisfy the hypothesis
-      <m>F(a) = F(x)</m> of Rolle's Theorem unless <m>R_n(x) = 0</m>, so
-      we correct it by a multiple of a function that equals <m>1</m> at
-      <m>a</m> and <m>0</m> at <m>x</m>. For <m>t \in I</m>, define
-      <md>G(t) = F(t) - \left(\frac{x - t}{x - a}\right)^{n+1} F(a).</md>
-      Then <m>G(a) = F(a) - F(a) = 0</m> and
-      <m>G(x) = F(x) - 0 = 0</m>. The function <m>G</m> is
-      differentiable on <m>I</m>, so it is continuous on <m>J</m> and
-      differentiable at every point strictly between <m>a</m> and
-      <m>x</m>. By Rolle's Theorem, applied on <m>J</m>, there is a
-      point <m>c</m> strictly between <m>a</m> and <m>x</m> with
-      <m>G'(c) = 0</m>. Since
-      <md>G'(t) = -\frac{f^{(n+1)}(t)}{n!}(x - t)^n
-      + \frac{(n+1)(x - t)^n}{(x - a)^{n+1}} F(a),</md>
-      the equation <m>G'(c) = 0</m>, divided by <m>(x - c)^n</m> (which
-      is nonzero because <m>c \neq x</m>), gives
-      <md>F(a) = \frac{(x - a)^{n+1}}{(n+1) \cdot n!} f^{(n+1)}(c)
-      = \frac{f^{(n+1)}(c)}{(n+1)!}(x - a)^{n+1}.</md>
-      Since <m>F(a) = R_n(x)</m>, this is the claimed formula.
-      <m>\square</m>
     </p>
     <p>
       You rarely know <m>c</m>. What you can use is a bound: if
@@ -455,27 +469,32 @@
       L'H&#xf4;pital's rule compares two functions at once. The tool
       for that is a version of the MVT for two functions.
     </p>
-    <p>
-      <em>Cauchy Mean Value Theorem.</em> If <m>f</m> and <m>g</m> are
-      continuous on <m>[a, b]</m> and differentiable on <m>(a, b)</m>,
-      then there exists <m>c \in (a, b)</m> such that
-      <md>(f(b) - f(a))\, g'(c) = (g(b) - g(a))\, f'(c).</md>
-    </p>
-    <p>
-      <em>Proof.</em> For <m>t \in [a, b]</m>, define
-      <md>h(t) = (f(b) - f(a))\, g(t) - (g(b) - g(a))\, f(t).</md>
-      As a combination of <m>f</m> and <m>g</m> with constant
-      coefficients, <m>h</m> is continuous on <m>[a, b]</m> and
-      differentiable on <m>(a, b)</m>. Expanding,
-      <md>
-        <mrow>h(a) \amp= f(b)g(a) - f(a)g(a) - g(b)f(a) + g(a)f(a) = f(b)g(a) - g(b)f(a),</mrow>
-        <mrow>h(b) \amp= f(b)g(b) - f(a)g(b) - g(b)f(b) + g(a)f(b) = f(b)g(a) - g(b)f(a),</mrow>
-      </md>
-      so <m>h(a) = h(b)</m>. By Rolle's Theorem, there is
-      <m>c \in (a, b)</m> with
-      <m>0 = h'(c) = (f(b) - f(a))\, g'(c) - (g(b) - g(a))\, f'(c)</m>.
-      <m>\square</m>
-    </p>
+    <theorem xml:id="thm-mod7-cauchy-mvt">
+      <statement>
+        <p>
+          If <m>f</m> and <m>g</m> are
+          continuous on <m>[a, b]</m> and differentiable on <m>(a, b)</m>,
+          then there exists <m>c \in (a, b)</m> such that
+          <md>(f(b) - f(a))\, g'(c) = (g(b) - g(a))\, f'(c).</md>
+        </p>
+      </statement>
+      <proof>
+        <p>
+          For <m>t \in [a, b]</m>, define
+          <md>h(t) = (f(b) - f(a))\, g(t) - (g(b) - g(a))\, f(t).</md>
+          As a combination of <m>f</m> and <m>g</m> with constant
+          coefficients, <m>h</m> is continuous on <m>[a, b]</m> and
+          differentiable on <m>(a, b)</m>. Expanding,
+          <md>
+            <mrow>h(a) \amp= f(b)g(a) - f(a)g(a) - g(b)f(a) + g(a)f(a) = f(b)g(a) - g(b)f(a),</mrow>
+            <mrow>h(b) \amp= f(b)g(b) - f(a)g(b) - g(b)f(b) + g(a)f(b) = f(b)g(a) - g(b)f(a),</mrow>
+          </md>
+          so <m>h(a) = h(b)</m>. By Rolle's Theorem, there is
+          <m>c \in (a, b)</m> with
+          <m>0 = h'(c) = (f(b) - f(a))\, g'(c) - (g(b) - g(a))\, f'(c)</m>.
+        </p>
+      </proof>
+    </theorem>
     <p>
       Taking <m>g(t) = t</m> recovers the MVT. If in addition
       <m>g'(t) \neq 0</m> for every <m>t \in (a, b)</m>, then
@@ -488,80 +507,87 @@
 
   <paragraphs xml:id="par-mod7-sg-43-lhopital">
     <title>L'H&#xf4;pital's Rule</title>
+    <theorem xml:id="thm-mod7-lhopital">
+      <title>L'H&#xf4;pital's Rule (the <m>0/0</m> Form at a Point)</title>
+      <statement>
+        <p>
+          Let <m>a \in \R</m>, and suppose there is an open interval
+          <m>I</m> containing <m>a</m> such that
+          <ol marker="(i)">
+            <li>
+              <m>f</m> and <m>g</m> are differentiable at every
+              <m>x \in I</m> with <m>x \neq a</m>;
+            </li>
+            <li>
+              <m>g'(x) \neq 0</m> for every <m>x \in I</m> with
+              <m>x \neq a</m>;
+            </li>
+            <li>
+              <m>\lim_{x \to a} f(x) = 0</m> and
+              <m>\lim_{x \to a} g(x) = 0</m>;
+            </li>
+            <li>
+              <m>\lim_{x \to a} f'(x)/g'(x) = L</m> for some
+              <m>L \in \R</m>.
+            </li>
+          </ol>
+          Then <m>g(x) \neq 0</m> for every <m>x \in I</m> with
+          <m>x \neq a</m>, and
+          <md>\lim_{x \to a} \frac{f(x)}{g(x)} = L.</md>
+          Nothing is assumed about <m>f</m> or <m>g</m> at <m>a</m> itself;
+          they need not be defined there.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Define <m>\varphi(x) = f(x)</m> and
+          <m>\psi(x) = g(x)</m> for <m>x \in I</m> with <m>x \neq a</m>, and
+          <m>\varphi(a) = \psi(a) = 0</m>. Then <m>\varphi</m> and <m>\psi</m> are
+          continuous on <m>I</m>: at a point <m>x \neq a</m> because they
+          agree with <m>f</m> and <m>g</m> on an open interval around
+          <m>x</m>, where <m>f</m> and <m>g</m> are differentiable and
+          hence continuous (<xref ref="ex-mod7-sg-41-2"/>), and at <m>a</m>
+          by (iii). Fix <m>x \in I</m> with <m>x \neq a</m>, and let
+          <m>K</m> be the closed interval with endpoints <m>a</m> and
+          <m>x</m>; then <m>K \subset I</m>, and <m>\varphi</m> and <m>\psi</m> are
+          continuous on <m>K</m> and differentiable at every point strictly
+          between <m>a</m> and <m>x</m>, with <m>\varphi' = f'</m> and
+          <m>\psi' = g'</m> there.
+        </p>
+        <p>
+          First, <m>g(x) \neq 0</m>: otherwise <m>\psi(x) = 0 = \psi(a)</m>, and
+          Rolle's Theorem applied to <m>\psi</m> on <m>K</m> would give a point
+          strictly between <m>a</m> and <m>x</m> where <m>g'</m> is
+          <m>0</m>, contrary to (ii). Next, the Cauchy Mean Value Theorem
+          (<xref ref="thm-mod7-cauchy-mvt"/>) applied to <m>\varphi</m> and <m>\psi</m> on <m>K</m> gives a point
+          <m>c_x</m> strictly between <m>a</m> and <m>x</m> with
+          <md>\varphi(x)\, \psi'(c_x) = \psi(x)\, \varphi'(c_x), \quad \text{that is,} \quad
+          f(x)\, g'(c_x) = g(x)\, f'(c_x).</md>
+          (When <m>x \lt a</m>, the theorem on <m>[x, a]</m> gives
+          <m>(\varphi(a) - \varphi(x))\, \psi'(c_x) = (\psi(a) - \psi(x))\, \varphi'(c_x)</m>, which
+          is the same equation multiplied by <m>-1</m>.) Dividing by
+          <m>g(x)\, g'(c_x)</m>, which is nonzero by (ii) and the first
+          step,
+          <md>\frac{f(x)}{g(x)} = \frac{f'(c_x)}{g'(c_x)}.</md>
+        </p>
+        <p>
+          Now let <m>\varepsilon \gt 0</m>. By (iv), and because <m>I</m>
+          is open, we can choose <m>\delta \gt 0</m> small enough that
+          <m>(a - \delta, a + \delta) \subset I</m> and
+          <m>|f'(t)/g'(t) - L| \lt \varepsilon</m> whenever
+          <m>0 \lt |t - a| \lt \delta</m>. If
+          <m>0 \lt |x - a| \lt \delta</m>, then <m>c_x</m> lies strictly
+          between <m>a</m> and <m>x</m>, so
+          <m>0 \lt |c_x - a| \lt |x - a| \lt \delta</m>, and therefore
+          <md>\left|\frac{f(x)}{g(x)} - L\right|
+          = \left|\frac{f'(c_x)}{g'(c_x)} - L\right| \lt \varepsilon.</md>
+          Hence <m>\lim_{x \to a} f(x)/g(x) = L</m>.
+        </p>
+      </proof>
+    </theorem>
     <p>
-      <em>L'H&#xf4;pital's rule (the <m>0/0</m> form at a point).</em>
-      Let <m>a \in \R</m>, and suppose there is an open interval
-      <m>I</m> containing <m>a</m> such that
-      <ol marker="(i)">
-        <li>
-          <m>f</m> and <m>g</m> are differentiable at every
-          <m>x \in I</m> with <m>x \neq a</m>;
-        </li>
-        <li>
-          <m>g'(x) \neq 0</m> for every <m>x \in I</m> with
-          <m>x \neq a</m>;
-        </li>
-        <li>
-          <m>\lim_{x \to a} f(x) = 0</m> and
-          <m>\lim_{x \to a} g(x) = 0</m>;
-        </li>
-        <li>
-          <m>\lim_{x \to a} f'(x)/g'(x) = L</m> for some
-          <m>L \in \R</m>.
-        </li>
-      </ol>
-      Then <m>g(x) \neq 0</m> for every <m>x \in I</m> with
-      <m>x \neq a</m>, and
-      <md>\lim_{x \to a} \frac{f(x)}{g(x)} = L.</md>
-      Nothing is assumed about <m>f</m> or <m>g</m> at <m>a</m> itself;
-      they need not be defined there. This module needs only this form
-      of the rule.
-    </p>
-    <p>
-      <em>Proof.</em> Define <m>\varphi(x) = f(x)</m> and
-      <m>\psi(x) = g(x)</m> for <m>x \in I</m> with <m>x \neq a</m>, and
-      <m>\varphi(a) = \psi(a) = 0</m>. Then <m>\varphi</m> and <m>\psi</m> are
-      continuous on <m>I</m>: at a point <m>x \neq a</m> because they
-      agree with <m>f</m> and <m>g</m> on an open interval around
-      <m>x</m>, where <m>f</m> and <m>g</m> are differentiable and
-      hence continuous (<xref ref="ex-mod7-sg-41-2"/>), and at <m>a</m>
-      by (iii). Fix <m>x \in I</m> with <m>x \neq a</m>, and let
-      <m>K</m> be the closed interval with endpoints <m>a</m> and
-      <m>x</m>; then <m>K \subset I</m>, and <m>\varphi</m> and <m>\psi</m> are
-      continuous on <m>K</m> and differentiable at every point strictly
-      between <m>a</m> and <m>x</m>, with <m>\varphi' = f'</m> and
-      <m>\psi' = g'</m> there.
-    </p>
-    <p>
-      First, <m>g(x) \neq 0</m>: otherwise <m>\psi(x) = 0 = \psi(a)</m>, and
-      Rolle's Theorem applied to <m>\psi</m> on <m>K</m> would give a point
-      strictly between <m>a</m> and <m>x</m> where <m>g'</m> is
-      <m>0</m>, contrary to (ii). Next, <xref ref="par-mod7-sg-43-cauchy" text="custom">the Cauchy
-      Mean Value Theorem</xref> applied to <m>\varphi</m> and <m>\psi</m> on <m>K</m> gives a point
-      <m>c_x</m> strictly between <m>a</m> and <m>x</m> with
-      <md>\varphi(x)\, \psi'(c_x) = \psi(x)\, \varphi'(c_x), \quad \text{that is,} \quad
-      f(x)\, g'(c_x) = g(x)\, f'(c_x).</md>
-      (When <m>x \lt a</m>, the theorem on <m>[x, a]</m> gives
-      <m>(\varphi(a) - \varphi(x))\, \psi'(c_x) = (\psi(a) - \psi(x))\, \varphi'(c_x)</m>, which
-      is the same equation multiplied by <m>-1</m>.) Dividing by
-      <m>g(x)\, g'(c_x)</m>, which is nonzero by (ii) and the first
-      step,
-      <md>\frac{f(x)}{g(x)} = \frac{f'(c_x)}{g'(c_x)}.</md>
-    </p>
-    <p>
-      Now let <m>\varepsilon \gt 0</m>. By (iv), and because <m>I</m>
-      is open, we can choose <m>\delta \gt 0</m> small enough that
-      <m>(a - \delta, a + \delta) \subset I</m> and
-      <m>|f'(t)/g'(t) - L| \lt \varepsilon</m> whenever
-      <m>0 \lt |t - a| \lt \delta</m>. If
-      <m>0 \lt |x - a| \lt \delta</m>, then <m>c_x</m> lies strictly
-      between <m>a</m> and <m>x</m>, so
-      <m>0 \lt |c_x - a| \lt |x - a| \lt \delta</m>, and therefore
-      <md>\left|\frac{f(x)}{g(x)} - L\right|
-      = \left|\frac{f'(c_x)}{g'(c_x)} - L\right| \lt \varepsilon.</md>
-      Hence <m>\lim_{x \to a} f(x)/g(x) = L</m>. <m>\square</m>
-    </p>
-    <p>
+      <xref ref="thm-mod7-lhopital"/> is the only form of the rule this
+      module needs.
       Notice the direction of the argument: hypothesis (iv) asks you to
       know that <m>f'/g'</m> has a limit <em>before</em> the rule says
       anything about <m>f/g</m>. If <m>f'/g'</m> has no limit, the rule

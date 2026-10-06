@@ -1,6 +1,6 @@
 <section xml:id="sec-mod3-practice-set">
-  <title>Module 3: Practice Problem Set</title>
-  <p>Estimated time: 90 minutes</p>
+  <title>Practice Problem Set</title>
+  <p>Estimated time: 90 minutes.</p>
 
     <p>
       Problems are labeled <m>[\mathbf{F}]</m> (Foundational),
@@ -161,12 +161,12 @@
         Euclid's theorem).
         (b) Uncountable (if it were countable, then
         <m>\R = \Q \cup (\R \setminus \Q)</m> would be a countable
-        union of countable sets, contradicting Theorem 1.21).
+        union of countable sets, contradicting Zorn's Theorem 1.21).
         (c) Countably infinite (in bijection with <m>\N</m> via
         <m>n \mapsto 1/n</m>).
         (d) Uncountable. It is in bijection with <m>\R</m> via, e.g.,
         <m>x \mapsto \tan(\pi x - \pi/2)</m>, and <m>\R</m> is
-        uncountable by Theorem 1.21. Cantor's diagonal argument in
+        uncountable by Zorn's Theorem 1.21. Cantor's diagonal argument in
         <xref ref="ex-mod3-ps-c2"/> also proves it directly.
         (e) Countably infinite (product of two countable sets by
         Prop. 1.18).
@@ -267,7 +267,7 @@
     <hint>
       <p>
         Use the bijection <m>\varphi : \N \to \Z</m> from
-        <xref ref="ex-mod3-we-4" text="custom">Worked Example 4</xref>, then
+        <xref ref="ex-mod3-we-4"/>, then
         compose with <m>n \mapsto 2n</m>. Alternatively, define a direct
         bijection by interleaving positive and negative even integers.
       </p>

@@ -1,6 +1,6 @@
 <section xml:id="sec-mod6-study-guide">
-  <title>Module 6: Companion Reading and Study Guide</title>
-  <p>Zorn §3.1–3.4 — Estimated time: 55 minutes</p>
+  <title>Companion Reading and Study Guide</title>
+  <p>Reading: Zorn, Sections 3.1<ndash/>3.4. Estimated time: 55 minutes.</p>
     <p>
       This guide accompanies four sections of Zorn's <em>Understanding
       Real Analysis</em>. Section 3.1 (<q>Limits of Functions</q>)
@@ -15,8 +15,8 @@
       <m>\varepsilon</m>-<m>\delta</m> definition is a direct analogue
       of the <m>\varepsilon</m>-<m>N</m> definition from Module 4.
       Every theorem about limits of functions has a counterpart for
-      sequences, and the sequential characterization (Theorem 3.3 or
-      its analogue in Zorn) is the bridge that lets you use Module 4
+      sequences, and the sequential characterization (Zorn's Theorem 3.3 or
+      its analogue) is the bridge that lets you use Module 4
       tools here.
     </p>
   <!-- ============================================================
@@ -224,14 +224,52 @@
       such that <m>|f(x) - f(a)| \lt \varepsilon</m> for every
       <m>x \in D</m> with <m>|x - a| \lt \delta</m>.
     </p>
+    <theorem xml:id="thm-mod6-seq-cont">
+      <statement>
+        <p>
+          Let <m>f</m> be defined on a set <m>D</m> and let
+          <m>a \in D</m>. Then <m>f</m> is continuous at <m>a</m> if and
+          only if
+          <m>f(x_n) \to f(a)</m> for every sequence <m>(x_n)</m> in
+          <m>D</m> with <m>x_n \to a</m>.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Suppose first that <m>f</m> is continuous at
+          <m>a</m>, and let <m>(x_n)</m> be a sequence in <m>D</m> with
+          <m>x_n \to a</m>. Let <m>\varepsilon \gt 0</m>. By continuity, there
+          is a <m>\delta \gt 0</m> such that
+          <m>|f(x) - f(a)| \lt \varepsilon</m> for every <m>x \in D</m> with
+          <m>|x - a| \lt \delta</m>. Since <m>x_n \to a</m>, the definition
+          of convergence, applied with <m>\delta</m> in the role of
+          <m>\varepsilon</m>, gives an <m>N</m> such that
+          <m>|x_n - a| \lt \delta</m> for all <m>n \geq N</m>. For each such
+          <m>n</m>, the point <m>x_n</m> lies in <m>D</m> and satisfies
+          <m>|x_n - a| \lt \delta</m>, so <m>|f(x_n) - f(a)| \lt \varepsilon</m>.
+          Hence <m>f(x_n) \to f(a)</m>.
+        </p>
+        <p>
+          For the converse, we prove the contrapositive. Suppose <m>f</m> is
+          not continuous at <m>a</m>. Negating the definition, there is an
+          <m>\varepsilon_0 \gt 0</m> such that for every <m>\delta \gt 0</m>
+          some <m>x \in D</m> satisfies <m>|x - a| \lt \delta</m> but
+          <m>|f(x) - f(a)| \geq \varepsilon_0</m>. For each <m>n \in \N</m>,
+          apply this with <m>\delta = 1/n</m> and call the resulting point
+          <m>x_n</m>. Then <m>(x_n)</m> is a sequence in <m>D</m> with
+          <m>|x_n - a| \lt 1/n</m>, so <m>x_n \to a</m>: given
+          <m>\varepsilon \gt 0</m>, the Archimedean Property gives
+          <m>N \in \N</m> with <m>N \gt 1/\varepsilon</m>, and then
+          <m>|x_n - a| \lt 1/n \leq 1/N \lt \varepsilon</m> for all
+          <m>n \geq N</m>. But <m>|f(x_n) - f(a)| \geq \varepsilon_0</m> for
+          every <m>n</m>, so no term of <m>(f(x_n))</m> is within
+          <m>\varepsilon_0</m> of <m>f(a)</m>, and <m>(f(x_n))</m> does not
+          converge to <m>f(a)</m>.
+        </p>
+      </proof>
+    </theorem>
     <p>
-      <alert>Sequential characterization of continuity.</alert>
-      <m>f</m> is continuous at <m>a</m> if and only if
-      <m>f(x_n) \to f(a)</m> for every sequence <m>(x_n)</m> in
-      <m>D</m> with <m>x_n \to a</m>.
-    </p>
-    <p>
-      Compare this with the version for limits. In both, the sequences
+      Compare <xref ref="thm-mod6-seq-cont"/> with the version for limits. In both, the sequences
       lie in the domain of <m>f</m>. There are two differences. First,
       the sequences here may take the value <m>a</m> (there is no
       condition <m>x_n \neq a</m>). Second, <m>a</m> must lie in
@@ -239,37 +277,6 @@
       number <m>L</m>. Both differences mirror the definitions: the
       condition <m>0 \lt |x - a|</m> does not appear in the definition
       of continuity, and <m>f(a)</m> plays the role of <m>L</m>.
-    </p>
-    <p>
-      <em>Proof.</em> Suppose first that <m>f</m> is continuous at
-      <m>a</m>, and let <m>(x_n)</m> be a sequence in <m>D</m> with
-      <m>x_n \to a</m>. Let <m>\varepsilon \gt 0</m>. By continuity, there
-      is a <m>\delta \gt 0</m> such that
-      <m>|f(x) - f(a)| \lt \varepsilon</m> for every <m>x \in D</m> with
-      <m>|x - a| \lt \delta</m>. Since <m>x_n \to a</m>, the definition
-      of convergence, applied with <m>\delta</m> in the role of
-      <m>\varepsilon</m>, gives an <m>N</m> such that
-      <m>|x_n - a| \lt \delta</m> for all <m>n \geq N</m>. For each such
-      <m>n</m>, the point <m>x_n</m> lies in <m>D</m> and satisfies
-      <m>|x_n - a| \lt \delta</m>, so <m>|f(x_n) - f(a)| \lt \varepsilon</m>.
-      Hence <m>f(x_n) \to f(a)</m>.
-    </p>
-    <p>
-      For the converse, we prove the contrapositive. Suppose <m>f</m> is
-      not continuous at <m>a</m>. Negating the definition, there is an
-      <m>\varepsilon_0 \gt 0</m> such that for every <m>\delta \gt 0</m>
-      some <m>x \in D</m> satisfies <m>|x - a| \lt \delta</m> but
-      <m>|f(x) - f(a)| \geq \varepsilon_0</m>. For each <m>n \in \N</m>,
-      apply this with <m>\delta = 1/n</m> and call the resulting point
-      <m>x_n</m>. Then <m>(x_n)</m> is a sequence in <m>D</m> with
-      <m>|x_n - a| \lt 1/n</m>, so <m>x_n \to a</m>: given
-      <m>\varepsilon \gt 0</m>, the Archimedean Property gives
-      <m>N \in \N</m> with <m>N \gt 1/\varepsilon</m>, and then
-      <m>|x_n - a| \lt 1/n \leq 1/N \lt \varepsilon</m> for all
-      <m>n \geq N</m>. But <m>|f(x_n) - f(a)| \geq \varepsilon_0</m> for
-      every <m>n</m>, so no term of <m>(f(x_n))</m> is within
-      <m>\varepsilon_0</m> of <m>f(a)</m>, and <m>(f(x_n))</m> does not
-      converge to <m>f(a)</m>. <m>\square</m>
     </p>
   </paragraphs>
 

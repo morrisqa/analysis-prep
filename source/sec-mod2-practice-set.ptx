@@ -1,6 +1,6 @@
 <section xml:id="sec-mod2-practice-set">
-  <title>Module 2: Practice Problem Set</title>
-  <p>Estimated time: 90 minutes</p>
+  <title>Practice Problem Set</title>
+  <p>Estimated time: 90 minutes.</p>
 
     <p>
       Problems are labeled <m>[\mathbf{F}]</m> (Foundational),
@@ -180,7 +180,7 @@
         Suppose <m>|x - 3| \lt 1</m>.
         <ol marker="(a)">
           <li>
-            Use the Triangle Inequality (or Theorem 1.23(c)) to show that
+            Use the Triangle Inequality (or Zorn's Theorem 1.23(c)) to show that
             <m>|x + 3| \lt 7</m>. (Hint: write
             <m>x + 3 = (x - 3) + 6</m>.)
           </li>
@@ -212,8 +212,8 @@
         Prove that <m>\sup T = 1</m>.
       </p>
       <p>
-        Your proof must follow the two-step structure from Worked
-        Example 3: first show 1 is an upper bound, then use the
+        Your proof must follow the two-step structure from
+        <xref ref="ex-mod2-we-3"/>: first show 1 is an upper bound, then use the
         <m>\varepsilon</m>-characterization to show that no smaller
         number is an upper bound. Include scratch work before the
         formal proof.

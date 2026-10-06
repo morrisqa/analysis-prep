@@ -1,6 +1,6 @@
 <section xml:id="sec-mod4-practice-set">
-  <title>Module 4: Practice Problem Set</title>
-  <p>Estimated time: 110 minutes</p>
+  <title>Practice Problem Set</title>
+  <p>Estimated time: 110 minutes.</p>
 
     <p>
       Problems are labeled <m>[\mathbf{F}]</m> (Foundational),
@@ -164,7 +164,7 @@
         <md>a_n = \frac{5n + 3}{2n + 1} \longrightarrow \frac{5}{2}.</md>
       </p>
       <p>
-        Your proof must follow the template from Worked Example 1:
+        Your proof must follow the template from <xref ref="ex-mod4-we-1"/>:
         explicit scratch work, clearly labeled, that derives the
         relationship between <m>n</m> and <m>\varepsilon</m>; followed
         by the formal proof written in complete sentences, with every
@@ -189,7 +189,7 @@
       <p>
         Prove that
         <md>b_n = \frac{\sin(n)}{n} \longrightarrow 0.</md>
-        Use the Squeeze Theorem (Theorem 2.6). Your proof should
+        Use the Squeeze Theorem (Zorn's Theorem 2.6). Your proof should
         (i) explicitly identify two bounding sequences
         <m>a_n \leq b_n \leq c_n</m>, (ii) state what each of those
         sequences converges to (and why), and (iii) invoke the

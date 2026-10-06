@@ -1,6 +1,6 @@
 <section xml:id="sec-mod9-bridge-reading">
-  <title>Module 9: Bridge Reading Guide</title>
-  <p>Bauldry §2.6 — Estimated time: 40 minutes</p>
+  <title>Bridge Reading Guide</title>
+  <p>Reading: Bauldry, Section 2.6. Estimated time: 40 minutes.</p>
 
     <p>
       Every module ends with a bridge reading in Bauldry's
@@ -96,8 +96,8 @@
       Bauldry proves (or states as theorems) that uniform convergence
       preserves continuity and permits the interchange of limits and
       integrals. In the module you proved the continuity theorem
-      (Worked Example 2) and applied the integration theorem (Worked
-      Example 4). Now see how a graduate text presents these results.
+      (<xref ref="ex-mod9-we-2"/>) and applied the integration theorem
+      (<xref ref="ex-mod9-we-4"/>). Now see how a graduate text presents these results.
     </p>
   </paragraphs>
 
@@ -112,8 +112,8 @@
         <ol marker="(a)">
           <li>
             Does Bauldry's proof use the same
-            <m>3\varepsilon</m>-trick structure as Worked Example 2
-            in this module? Describe any differences in presentation.
+            <m>3\varepsilon</m>-trick structure as <xref ref="ex-mod9-we-2"/>?
+            Describe any differences in presentation.
           </li>
           <li>
             Bauldry may state a stronger version: that the limit of a
@@ -144,8 +144,8 @@
           </li>
           <li>
             The derivation of the Leibniz formula
-            <m>\pi/4 = 1 - 1/3 + 1/5 - \cdots</m> in Worked
-            Example 4 used this theorem on <m>[0,r]</m> for
+            <m>\pi/4 = 1 - 1/3 + 1/5 - \cdots</m> in
+            <xref ref="ex-mod9-we-4"/> used this theorem on <m>[0,r]</m> for
             <m>r \lt 1</m>, and then a direct estimate of the
             remainder to reach <m>x = 1</m>. Abel's theorem gives this
             kind of boundary extension in general. Does Bauldry address
