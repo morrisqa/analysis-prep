@@ -42,24 +42,25 @@
         Your proof must have the following structure:
         <ol marker="(i)">
           <li>
-            <em>Set up the difference quotient.</em> Write
+            <em>Set up the difference quotient.</em> Fix
+            <m>x \gt 0</m>. For <m>h</m> with <m>0 \lt |h| \lt x</m>
+            (so that <m>h \neq 0</m> and <m>x + h \gt 0</m> lies in the
+            domain), write
             <md>\frac{f(x+h) - f(x)}{h}
             = \frac{\dfrac{1}{x+h} - \dfrac{1}{x}}{h}</md>
             and simplify the numerator by combining the two fractions
-            over a common denominator, showing that
-            <m>\dfrac{1}{x+h} - \dfrac{1}{x} = \dfrac{-h}{x(x+h)}</m>.
+            over a common denominator.
           </li>
           <li>
             <em>Simplify the difference quotient.</em> Cancel the factor
-            of <m>h</m> to obtain the simplified form
-            <m>\dfrac{-1}{x(x+h)}</m>.
+            of <m>h</m> that the numerator and denominator have in
+            common.
           </li>
           <li>
-            <em>Take the limit.</em> As <m>h \to 0</m>, the expression
-            <m>-1/(x(x+h))</m> tends to <m>-1/x^2</m>. Justify using
-            the limit laws: <m>x + h \to x</m> as <m>h \to 0</m>, and
-            the quotient and product rules for limits apply since
-            <m>x \neq 0</m>.
+            <em>Take the limit.</em> Show that, as <m>h \to 0</m>, your
+            simplified form tends to <m>-1/x^2</m>. Justify each step
+            with the limit laws, and say why the quotient rule for
+            limits applies.
           </li>
           <li>
             <em>State the conclusion.</em> By the definition of the
@@ -97,15 +98,16 @@
             <m>g'(x) \lt 0</m>.
           </li>
           <li>
-            <em>Apply monotonicity (an application of the MVT).</em>
-            For <m>x \gt 0</m>: <m>g'(x) \gt 0</m>, so by the MVT,
-            <m>g</m> is strictly increasing on <m>(0, \infty)</m>;
-            hence <m>g(x) \gt g(0) = 0</m>, i.e., <m>x \gt \ln(1+x)</m>.
-            For <m>-1 \lt x \lt 0</m>: <m>g'(x) \lt 0</m>, so <m>g</m>
-            is strictly decreasing on <m>(-1, 0)</m>; hence
-            <m>g(x) \gt g(0) = 0</m>, i.e., <m>x \gt \ln(1+x)</m>.
-            State and invoke the MVT by name in at least one of these
-            cases.
+            <em>Apply the MVT on an interval with endpoint 0.</em>
+            For <m>x \gt 0</m>, apply the MVT to <m>g</m> on
+            <m>[0, x]</m> and use the sign of <m>g'</m> on
+            <m>(0, x)</m> to show that <m>g(x) \gt g(0) = 0</m>, i.e.,
+            <m>x \gt \ln(1+x)</m>. For <m>-1 \lt x \lt 0</m>, apply
+            the MVT to <m>g</m> on <m>[x, 0]</m> and use the sign of
+            <m>g'</m> on <m>(x, 0)</m> to show again that
+            <m>g(x) \gt g(0) = 0</m>. In each case, state the MVT,
+            invoke it by name, and verify its hypotheses on the
+            interval you use.
           </li>
           <li>
             <em>State the conclusion.</em> Combine the cases to conclude
@@ -200,7 +202,7 @@
       </row>
       <row>
         <cell><p><alert>MVT application</alert></p></cell>
-        <cell><p>Hypotheses of MVT (or monotonicity corollary) verified explicitly; conclusion correctly drawn and connected to the inequality</p></cell>
+        <cell><p>In each case, MVT stated, invoked by name, and its hypotheses verified explicitly on the interval used; conclusion correctly drawn and connected to the inequality</p></cell>
         <cell><p>MVT cited but one hypothesis unchecked, or conclusion not connected clearly</p></cell>
         <cell><p>MVT not cited by name, or applied in a setting where its hypotheses fail</p></cell>
       </row>

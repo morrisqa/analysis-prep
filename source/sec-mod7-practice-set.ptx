@@ -195,7 +195,7 @@
         <m>x \in \R</m>.
       </p>
       <p>
-        Consider the cases <m>x \geq 0</m>, <m>x = 0</m>, and
+        Consider the cases <m>x \gt 0</m>, <m>x = 0</m>, and
         <m>x \lt 0</m> separately. In each nontrivial case, apply
         the MVT to <m>f(t) = e^t</m> on the appropriate interval and
         use the fact that <m>e^c \geq 1</m> for <m>c \geq 0</m> and
@@ -243,19 +243,40 @@
         Evaluate
         <md>\lim_{x \to 0} \frac{e^x - 1 - x}{x^2}</md>
         by applying L'H&#xf4;pital's rule twice. At each application,
-        verify that the limit has the <m>0/0</m> indeterminate form and
-        that the numerator and denominator are differentiable. What is
-        the answer?
+        verify every hypothesis of
+        <xref ref="par-mod7-sg-43-lhopital" text="custom">L'H&#xf4;pital's
+        rule</xref>: on an open interval around <m>0</m>, except
+        possibly at <m>0</m>, the numerator and denominator are
+        differentiable and the derivative of the denominator is nonzero;
+        both numerator and denominator tend to <m>0</m>; and the limit
+        of the ratio of their derivatives exists. What is the answer?
       </p>
     </statement>
     <answer>
       <p>
-        First application: as <m>x \to 0</m>, <m>e^x - 1 - x \to 0</m>
-        and <m>x^2 \to 0</m> (<m>0/0</m> form); both are differentiable.
-        Differentiate top and bottom: <m>(e^x - 1)/(2x)</m>. Second
-        application: as <m>x \to 0</m>, <m>e^x - 1 \to 0</m> and
-        <m>2x \to 0</m> (<m>0/0</m> form). Differentiate: <m>e^x / 2</m>.
-        As <m>x \to 0</m>, this tends to <m>1/2</m>. The limit is
+        Differentiating top and bottom of the original ratio gives
+        <m>(e^x - 1)/(2x)</m>, and differentiating again gives
+        <m>e^x / 2</m>. Because the rule needs the limit of the ratio of
+        derivatives to exist first, the justification runs from the
+        second application back to the first.
+      </p>
+      <p>
+        Second application, to <m>(e^x - 1)/(2x)</m>: the functions
+        <m>e^x - 1</m> and <m>2x</m> are differentiable on <m>\R</m>;
+        the derivative of <m>2x</m> is <m>2 \neq 0</m>; as
+        <m>x \to 0</m>, <m>e^x - 1 \to 0</m> and <m>2x \to 0</m>
+        (<m>0/0</m> form); and the ratio of derivatives
+        <m>e^x/2 \to 1/2</m>. Hence
+        <m>\lim_{x \to 0} (e^x - 1)/(2x) = 1/2</m>.
+      </p>
+      <p>
+        First application, to <m>(e^x - 1 - x)/x^2</m>: the functions
+        <m>e^x - 1 - x</m> and <m>x^2</m> are differentiable on
+        <m>\R</m>; the derivative of <m>x^2</m> is <m>2x</m>, which is
+        nonzero for <m>x \neq 0</m>; as <m>x \to 0</m>,
+        <m>e^x - 1 - x \to 0</m> and <m>x^2 \to 0</m> (<m>0/0</m>
+        form); and the ratio of derivatives <m>(e^x - 1)/(2x)</m> tends
+        to <m>1/2</m> by the second application. Hence the limit is
         <m>1/2</m>.
       </p>
     </answer>
@@ -268,8 +289,10 @@
         Write the second-order Taylor polynomial <m>T_2(x)</m> for
         <m>f(x) = \ln(1 + x)</m> at <m>a = 0</m>. Compute
         <m>f(0)</m>, <m>f'(0)</m>, and <m>f''(0)</m> explicitly.
-        Then write the Lagrange form of the remainder
-        <m>R_2(x)</m> and identify what <m>c</m> represents.
+        Then, for <m>x \gt -1</m> (where <m>f</m> is defined), write
+        the Lagrange form of the remainder <m>R_2(x)</m> given by
+        <xref ref="par-mod7-sg-43-taylor" text="custom">Taylor's
+        Theorem</xref> and identify what <m>c</m> represents.
       </p>
     </statement>
     <answer>
@@ -282,8 +305,12 @@
         <m>R_2(x) = f'''(c) x^3/3! = 2x^3/(6(1+c)^3) = x^3/(3(1+c)^3)</m>
         for some <m>c</m> between <m>0</m> and <m>x</m>.
         Here <m>c</m> is an unknown intermediate value; its existence
-        is guaranteed by Taylor's theorem (an iterated application of
-        the MVT).
+        is guaranteed by Taylor's Theorem. The theorem applies because
+        <m>f</m> is three times differentiable on the open interval
+        <m>(-1, \infty)</m>, and this interval contains <m>0</m> and
+        <m>x</m>. (Its proof applies Rolle's Theorem to an auxiliary
+        function; for <m>n = 0</m> the theorem gives the MVT's
+        conclusion.)
       </p>
     </answer>
   </exercise>
@@ -340,7 +367,7 @@
   </exercise>
 
   <exercise xml:id="ex-mod7-ps-c2">
-    <title><m>[\mathbf{C}]</m> MVT Applied Twice</title>
+    <title><m>[\mathbf{C}]</m> Rolle's Theorem Applied Three Times</title>
     <statement>
       <p>
         Let <m>f</m> be twice differentiable on an open interval
@@ -365,8 +392,8 @@
         <m>e_1 \in (a, c)</m> with <m>f'(e_1) = 0</m>. Similarly for
         <m>[c, b]</m>. Then apply Rolle's to <m>f'</m> on
         <m>[e_1, e_2]</m>: <m>f'(e_1) = f'(e_2) = 0</m> and
-        <m>f'</m> is differentiable (since <m>f</m> is twice
-        differentiable). The conclusion gives <m>d \in (e_1, e_2)
+        <m>f'</m> is differentiable, hence continuous (since <m>f</m> is
+        twice differentiable). The conclusion gives <m>d \in (e_1, e_2)
         \subset (a, b)</m> with <m>f''(d) = 0</m>.
       </p>
     </hint>
